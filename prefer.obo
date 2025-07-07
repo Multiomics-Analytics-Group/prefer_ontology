@@ -87,7 +87,7 @@ is_a: CHEBI:24431 ! chemical entity
 id: PREFER:0000011
 name: medium
 def: "A solution containing macronutrients, micronutrients and buffering agents."
-
+relationship: has_ingredient PREFER:0000010 ! compound
 
 [Term]
 id: PREFER:0000012
@@ -162,37 +162,38 @@ relationship: PREFER_RE:related_to PREFER:0000040 ! pH
 
 [Term]
 id: PREFER:0000023
-name: Culture
+name: culture
 def: "Starter culture id or initial culture referring to the strain ID."
 is_a: PREFER:0000008 ! Cultivation condition
 
 [Term]
 id: PREFER:0000024
-name: Seed
+name: seed
 def: "Starter culture or initial culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain concentration is reached. The starter culture is also referred as a seed culture, pre-culture or inoculum."
 is_a: PREFER:0000008 ! Cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000022 ! Culture 
 
 [Term]
 id: PREFER:0000025
-name: DO Control Setpoint (%)
+name: DO control setpoint (%)
 def: "The target value for dissolved oxygen (DO), in percent."
 is_a: PREFER:0000008 ! Cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000026
-name: DO Control Cascade Level 1
+name: DO control cascade level 1
 def: "First level of the cascade control system for dissolved oxygen. Level 1 involves adjusting the stirrer_speed parameter to ahcieve the desired DO level."
 is_a: PREFER:0000008 ! Cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000027
-name: Maximum Stirring or Shaking Speed
+name: maximum stirring
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer."
 is_a: PREFER:0000008 ! Cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+synonym: "maximum shaking speed" EXACT []
+relationship: related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000028
@@ -273,7 +274,7 @@ is_a: PREFER:0000008 ! Cultivation condition
 [Term]
 id: PREFER:0000039
 name: DO
-def: "Level of free, non-compound oxygen ions present in an aqueous solution."
+def: "Dissolved oxygen (DO) refers to the concentration of oxygen molecules (O₂) dissolved in a liquid medium, typically measured in bioreactors or aquatic systems."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! Inline measurement
 
