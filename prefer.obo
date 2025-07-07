@@ -21,8 +21,8 @@ name: fermentation run
 def: "An individual instance of a precision fermentation process carried out under defined experimental conditions (e.g., temperature, pH, agitation) using a single bioreactor system."
 synonym: "run" EXACT []
 is_a: PREFER:0000001 ! precision fermentation process
-relationship: has_cultivation_condition PREFER:0000008 ! cultivation condition
-relationship: has_process_variable PREFER:0000009 ! process variable
+relationship: has_measured_cultivation_condition PREFER:0000008 ! cultivation condition
+relationship: has_measured_process_variable PREFER:0000009 ! process variable
 
 [Term]
 id: PREFER:0000003
@@ -53,7 +53,7 @@ is_a: PREFER:0000001 ! precision fermentation process
 [Term]
 id: PREFER:0000006
 name: Institution
-def: "The public or private reserch center, university, or organization that hosts or supports the execution of the project."
+def: "The public or private research center, university, or organization that hosts or supports the execution of the project."
 
 
 [Term]
@@ -91,15 +91,18 @@ def: "A solution containing macronutrients, micronutrients and buffering agents.
 
 [Term]
 id: PREFER:0000012
-name: Strain
+name: strain
 def: "A distinct microbial strain within the database."
-is_a: PREFER:0000001 ! precision fermentation process
+xref: NCBI_Taxon:Strain
+is_a: NCBI_Taxon:taxonomic rank
 
 [Term]
 id: PREFER:0000013
-name: Taxon
+name: taxon
 def: "A specific taxa within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain."
 is_a: PREFER:0000001 ! precision fermentation process
+xref: NCBITaxon:1 ! root
+is_a: NCBITaxon:131567 ! cellular organisms
 
 [Term]
 id: PREFER:0000014
@@ -107,7 +110,7 @@ name: fermenter
 def: "Concrete type of bioreactor environment where the fermentation occurs."
 synonym: "Bioreactor" EXACT []
 synonym: "Bioreactor system" EXACT []
-is_a: PREFER:0000001 ! precision fermentation process
+is_a: BAO:0003118 ! instrument
 
 [Term]
 id: PREFER:0000015
@@ -127,11 +130,6 @@ name: iModulon
 def: "An iModulon unit symbolizes a distinct iModulon activity from the iModulon database. An iModulon is an independently modulated group of genes, often representing the effect of a transcriptional regulator."
 is_a: PREFER:0000001 ! precision fermentation process
 
-[Term]
-id: PREFER:0000018
-name: Computed variable
-def: "A computed variable includes intermediate measured results and final results, both of them calculated implementing bioprocess data: initial parameters from cultivation conditions and process variables (online and offline measurements)."
-is_a: PREFER:0000001 ! precision fermentation process
 
 [Term]
 id: PREFER:0000019
