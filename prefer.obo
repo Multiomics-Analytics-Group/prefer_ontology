@@ -1,87 +1,93 @@
 format-version: 1.2
 data-version: prefer/releases/v0_2025-09-01
-default-namespace: precision_fermentation
+default-namespace: precisionfermentation
 ontology: prefer.obo
 
 [Term]
 id: PREFER:0000001
 name: precision fermentation process
-def: "A biotechnological method that employs genetically engineered microorganisms (such as 
+def: "A biotechnological method used in industrial or research settings that employs genetically engineered microorganisms (such as 
 bacteria, yeast, or fungi) to produce specific, high-value compounds with precise molecular structures. This process involves controlled 
-environments where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often 
+environments (e.g., controlled bioreactors, environmental conditions) where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often 
 with greater efficiency and specificity than traditional fermentation methods."
 comment: "Root of all fermentation terms in the Precision Fermentation Ontology."
-xref: GO:0006113
+xref: GO:0006113 ! fermentation
 xref: Wikipedia: Industrial fermentation#Precision fermentation
+xref: OBI_0000011 ! planned process
 
 [Term]
 id: PREFER:0000002
 name: fermentation run
-def: "An individual instance of a precision fermentation process carried out under defined experimental conditions using a single bioreactor system."
+def: "An individual instance of a precision fermentation process carried out under defined experimental conditions (e.g., temperature, pH, agitation) using a single bioreactor system."
 synonym: "run" EXACT []
 is_a: PREFER:0000001 ! precision fermentation process
+relationship: has_cultivation_condition PREFER:0000008 ! cultivation condition
+relationship: has_process_variable PREFER:0000009 ! process variable
 
 [Term]
 id: PREFER:0000003
 name: fermentation experiment
 def: "A set of fermentation runs conducted within the same project, all following a shared experimental approach or protocol."
 synonym: "experiment" EXACT []
-has_part: PREFER:0000002
+has_part: PREFER:0000002 ! fermentation run
 is_a: PREFER:0000001 ! precision fermentation process
+xref: OBI_0000070 ! assay
 
 [Term]
 id: PREFER:0000004
-name: Project
+name: fermentation project
 def: "A single fermentation experiment or multiple related experiments conducted within a research group."
+synonym: "project" EXACT []
+has_part: PREFER:0000003 ! fermentation experiment
 is_a: PREFER:0000001 ! precision fermentation process
+xref: OBI_0000066 ! investigation
 
+/*
 [Term]
 id: PREFER:0000005
 name: User
 def: "The individual assigned as the project manager."
 is_a: PREFER:0000001 ! precision fermentation process
 
+
 [Term]
 id: PREFER:0000006
 name: Institution
 def: "The public or private reserch center, university, or organization that hosts or supports the execution of the project."
-is_a: PREFER:0000001 ! precision fermentation process
+
 
 [Term]
 id: PREFER:0000007
 name: Country
 def: "The state or nation where the project is carried out."
 is_a: PREFER:0000001 ! precision fermentation process
+*/
 
 [Term]
 id: PREFER:0000008
-name: Cultivation condition
-def: "An initial experimental parameter or environmental setting established prior to or at the start of a fermentation process. This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature (Tº), initial volume, and optical density (OD) of the seed culture"
-synonym: "process_var"
-is_a: PREFER:0000001 ! precision fermentation process
-
-
-
-
+name: cultivation condition
+def: "An initial experimental parameter or environmental setting established prior to or at the start of a fermentation process. This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture"
+synonym: "process variable" RELATED []
 
 
 [Term]
 id: PREFER:0000009
-name: Process variable
+name: process variable
 def: "A technical parameter measured during a bioprocess, either through real-time (online, inline) or delayed (offline, atline) measurements, depending on the bioreactor setup. These variables are typically time-series data and are crucial for controlling and adjusting the initial parameters from cultivation conditions."
-is_a: PREFER:0000001 ! precision fermentation process
+synonym: "variable" RELATED []
+xref: BAO_0002070 ! measured value
 
 [Term]
 id: PREFER:0000010
-name: Compound
-def:  "An offline bioprocess data refers to measurements obtained using instruments external to the bioreactor, such as High-Performance Liquid Chromatography (HPLC). These data typically include compound groups categorized as substrates, products, by-products, and chemical elements."
-is_a: PREFER:0000001 ! precision fermentation process
+name: compound
+def:  "A chemical substance produced, consumed, or measured during fermentation."
+is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: PREFER:0000011
-name: Medium
+name: medium
 def: "A solution containing macronutrients, micronutrients and buffering agents."
-is_a: PREFER:0000001 ! precision fermentation process
+
 
 [Term]
 id: PREFER:0000012
@@ -97,7 +103,7 @@ is_a: PREFER:0000001 ! precision fermentation process
 
 [Term]
 id: PREFER:0000014
-name: Fermenter
+name: fermenter
 def: "Concrete type of bioreactor environment where the fermentation occurs."
 synonym: "Bioreactor" EXACT []
 synonym: "Bioreactor system" EXACT []
