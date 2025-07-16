@@ -1110,18 +1110,8 @@ name: Respiratory metrics
 def: ""
 is_a: PREFER:0000156 ! Performance variable
 
-[Typedef]
-id: PREFER_RE:has_data_acquisition_mode
-name: data acquisition mode
 
-[Typedef]
-id: PREFER_RE:related_to
-name: related to
-xref: ????????
 
-[Typedef]
-id: PREFER_RE:is_performance_variable
-name: Performance variable
 
 
 

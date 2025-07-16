@@ -53,3 +53,16 @@ name: has_measured_compound
 def: "Indicates compounds measured during a run."
 domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000010 ! compound
+
+[Typedef]
+id: PREFER_RE:has_data_acquisition_mode
+name: data acquisition mode
+
+[Typedef]
+id: PREFER_RE:related_to
+name: related to
+xref: ????????
+
+[Typedef]
+id: PREFER_RE:is_performance_variable
+name: Performance variable
