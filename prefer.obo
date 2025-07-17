@@ -363,6 +363,7 @@ name: Feed amount
 def: "The quantity or total mass of feed added to the bioprocess, measured in kg."
 is_a: PREFER:0000017 ! Computed variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! Feed profile
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000052
@@ -477,12 +478,14 @@ id: PREFER:0000066
 name: Formed CO2
 def: "Amount of CO2 generated during the bioprocess. Ambr records it as unnormalized, integrated, in moles."
 is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! Respiratory metrics
 
 [Term]
 id: PREFER:0000067
 name: Consumed CO2
 def: "Amount of O2 consumed during the bioprocess. Ambr records it as unnormalized, integrated, in moles."
 is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! Respiratory metrics
 
 [Term]
 id: PREFER:0000068
@@ -551,7 +554,9 @@ relationship: PREFER_RE:related_to REFER:0000043 ! Volume
 id: PREFER:0000077
 name: Dilution rate (D)
 def: "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted, measured in 1/h."
+synonym: D EXACT []
 is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000078
@@ -559,6 +564,7 @@ name: Carbon balance
 def: "Balance which compares the total amount of carbon entering the fermenter (through the substrate) to the total carbon leaving the fermenter (in products, biomass or by.products like CO2), expressed in percentage."
 synonym: C balance EXACT []
 is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! Respiratory metrics
 
 [Term]
 id: PREFER:0000079
@@ -566,6 +572,7 @@ name: Carbon balance using carbon mols
 def: "The carbon balance calculated using carbon moles (c-mols), providing more molecular level view of the carbon flow, no units."
 synonym: C balance (c-mols) EXACT []
 is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! Respiratory metrics
 
 [Term]
 id: PREFER:0000080
@@ -573,6 +580,7 @@ name: Carbon balance with reference to substrate
 def: "The carbon balance specifically referenced to the substrate usedin the bioprocess, to asses substrate utilization efficiency. No units."
 synonym: carbon balance to substrate EXACT []
 is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! Respiratory metrics
 
 [Term]
 id: PREFER:0000081
@@ -1123,5 +1131,11 @@ is_a: PREFER:0000155 ! Performance variable
 [Term]
 id: PREFER:0000158
 name: Respiratory metrics
+def: ""
+is_a: PREFER:0000155 ! Performance variable
+
+[Term]
+id: PREFER:0000159
+name: Balance metrics
 def: ""
 is_a: PREFER:0000155 ! Performance variable
