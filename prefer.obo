@@ -132,13 +132,9 @@ is_a: PREFER:0000001 ! precision fermentation process
 
 [Term]
 id: PREFER:0000018
-name: 
-
-
-
-
-
-
+name: input variable
+def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
+synonym: "input var" EXACT []
 
 [Term]
 id: PREFER:0000019
@@ -1112,48 +1108,53 @@ is_a: PREFER:0000150 ! Data acquisition mode
 
 [Term]
 id: PREFER:0000152
-name: Online measurement
-def: "extract representative sample from the bioreactor and introduce it into the measurement zone. Sample can either be discarded or returned to the bioreactor."
-is_a: PREFER:0000150 ! Data acquisition mode
+name: online measurement
+def: "Quantification of a sample extracted from the bioreactor and introduced it into the measurement zone. Sample can either be discarded or returned to the bioreactor."
+is_a: PREFER:0000150 ! sata acquisition mode
 
 [Term]
 id: PREFER:0000153
-name: Atline measurement
-def: "extract a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment."
-is_a: PREFER:0000150 ! Data acquisition mode
+name: atline measurement
+def: "SMextract a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment."
+is_a: PREFER:0000150 ! sata acquisition mode
 
 [Term]
 id: PREFER:0000154
-name: Offline measurement
+name: offline measurement
 def: "Method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line"
-is_a: PREFER:0000150 ! Data acquisition mode
+is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000155
-name: Performance variable
-def: "Variables evaluating process efficiency. Type of performance variable: yield, rate, respiratory metrics, and balance metrics."
+name: performance variable
+def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratory metrics, and balance metrics."
 
 [Term]
 id: PREFER:0000156
-name: Yield
-def: ""
-is_a: PREFER:0000155 ! Performance variable
+name: yield
+def: "Computed variable that quantifies the efficiency of converting substrates into desired outputs, expressed as the ratio of the output formed per unit of substrate consumed."
+is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000157
-name: Rate
-def: ""
-is_a: PREFER:0000155 ! Performance variable
+name: rate
+def: "Computed variable that quantifies the speed of bioprocess activities, measuring the change of a process variable over time."
+is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000158
-name: Respiratory metrics
-def: ""
-is_a: PREFER:0000155 ! Performance variable
+name: respiratory metric
+def: "Computed variable that quantifies respiratory activity in the bioprocess, providing indications of metabolic states and gas exchange efficiency."
+is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000159
-name: Balance metrics
-def: ""
-is_a: PREFER:0000155 ! Performance variable
+name: balance metric
+def: "Computed variable that assesses the consistency of material balances in the bioprocess, by comparing the total inputs and outoputs of specific compounds."
+is_a: PREFER:0000155 ! performance variable
 
+[Term]
+id: PREFER:0000160
+name: output variable
+def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass."
+synonym: "output var" EXACT []
