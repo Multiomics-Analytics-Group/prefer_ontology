@@ -966,79 +966,113 @@ is_a: PREFER:0000017 ! Computed variable
 id: PREFER:0000137
 name: Biomass production
 def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in g."
-synonym: 
+synonym: "Biomass formed" EXACT []
+is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000138
 name: Biomass production molar
 def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in moles (mol)."
-synonym: 
+synonym: "Biomass formed molar" EXACT []
+is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000139
 name: Biomass production carbon molar
 def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in carbon moles (c-mol)."
-synonym: 
+synonym: "Biomass formed carbon molar" EXACT []
+synonym: "Biomass formed c-molar" EXACT []
+is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000140
 name: Biomass production rate
 def: " The rate at which the biomass is produced over time. expressed in grams per hour (g/h)."
 synonym: "Rx" EXACT []
+synonym: "Biomass formation rate" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000141
 name: Biomass production rate molar
 def:  "The rate at which the biomass is produced over time. expressed in c-mols per hour (c-mols/h)."
-synonym: Rx molar
+synonym: "Rx molar" EXACT []
+synonym: "Biomass formation rate molar" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000142
 name: Biomass specific growth rate
 def: "The specific growth rate at which the biomass(X) grows per unit of biomass. Units: 1/h."
-synonym: μ
+synonym: "μ" EXACT []
+synonym: "Growth rate" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000143
 name: Average biomass specific growth rate in feed phase
 def: "The average specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
-synonym: 
+synonym: "μ mean in feed" EXACT []
+synonym: "μ mean in feed phase" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000144
 name: Average biomass specific growth rate in batch phase
 def: "The average specific growth rate of biomass during the batch phase, expressed in per hour (1/h)."
-synonym: 
+synonym: "μ mean in batch" EXACT []
+synonym: "μ mean in batch phase" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000145
 name: Maximum biomass specific growth rate in feed phase
 def: "The maximum specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
-synonym: 
+synonym: "μ max in feed" EXACT []
+synonym: "μ max in feed phase" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000146
 name: Minimum biomass specific growth rate in feed phase
 def: "The minimum specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
-synonym: 
+synonym: "μ min in feed" EXACT []
+synonym: "μ min in feed phase" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
 
 [Term]
 id: PREFER:0000147
 name: Biomass yield (S)
 def: "The grams of biomass produced per grams of substrate consumed, describing the efficiency of substrate conversion into biomass, expressed in g/g.""
-synonym: Ysx
+synonym: "Ysx" EXACT []
+synonym: "S" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
 
 [Term]
 id: PREFER:0000148
 name: Biomass yield molar (S)
-def: "The biomass produced per mole of substrate consumed, expressed in c-mol/mol(S)"
-synonym: 
+def: "The biomass produced per mole of substrate consumed, expressed in c-mol/mol"
+synonym: "Ysx molar" EXACT []
+synonym: "S molar" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
 
 [Term]
 id: PREFER:0000149
 name: Biomass yield carbon molar (S)
-def: "The biomass produced per carbon mole of substrate, considering the carbon efficiency of biomass formation relative to substrate, expressed in c-mol/c-mol(S)",
-is_a: 
+def: "The biomass produced per carbon mole of substrate, considering the carbon efficiency of biomass formation relative to substrate, expressed in c-mol/c-mol",
+synonym: "Ysx c-molar" EXACT []
+synonym: "S c-molar" EXACT []
+is_a: PREFER:0000017 ! Computed variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
 
 [Term]
 id: PREFER:0000150
@@ -1072,7 +1106,7 @@ is_a: PREFER:0000150 ! Data acquisition mode
 [Term]
 id: PREFER:0000155
 name: Performance variable
-def: "Variables evaluating process efficiency. Type of performance variable: yield, rate, and respiratory_metrics"
+def: "Variables evaluating process efficiency. Type of performance variable: yield, rate, and respiratory metrics"
 
 [Term]
 id: PREFER:0000156
