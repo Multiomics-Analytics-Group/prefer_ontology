@@ -21,8 +21,8 @@ name: fermentation run
 def: "An individual instance of a precision fermentation process carried out under defined experimental conditions (e.g., temperature, pH, agitation) using a single bioreactor system."
 synonym: "run" EXACT []
 is_a: PREFER:0000001 ! precision fermentation process
-relationship: has_measured_cultivation_condition PREFER:0000008 ! cultivation condition
-relationship: has_measured_process_variable PREFER:0000009 ! process variable
+relationship: PREFER_RE:has_measured_cultivation_condition PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:has_measured_process_variable PREFER:0000009 ! process variable
 
 [Term]
 id: PREFER:0000003
@@ -87,7 +87,7 @@ is_a: CHEBI:24431 ! chemical entity
 id: PREFER:0000011
 name: medium
 def: "A solution containing macronutrients, micronutrients and buffering agents."
-relationship: has_ingredient PREFER:0000010 ! compound
+relationship: PREFER_RE:has_ingredient PREFER:0000010 ! compound
 
 [Term]
 id: PREFER:0000012
@@ -114,13 +114,13 @@ is_a: BAO:0003118 ! instrument
 
 [Term]
 id: PREFER:0000015
-name: Phase
+name: phase
 def: "A fermentation phase."
 is_a: PREFER:0000001 ! precision fermentation process
 
 [Term]
 id: PREFER:0000016
-name: Event
+name: event
 def: "A fermentation event that triggers the fermentation phase to start or end."
 is_a: PREFER:0000001 ! precision fermentation process
 
@@ -140,21 +140,21 @@ synonym: "input var" EXACT []
 id: PREFER:0000019
 name: temperature setpoint (C)
 def: "The target temperature value to be maintained within the fermenter, expressed in degrees Celsius (ºC)."
-is_a: PREFER:0000008 ! Cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000041 ! Temperature 
+is_a: PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:related_to PREFER:0000041 ! temperature 
 
 [Term]
 id: PREFER:0000020
 name: pH setpoint
 def: "Target pH value to be maintained within the fermenter throught the process."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 
 [Term]
 id: PREFER:0000021
 name: pH control base solution
 def: "The alkaline (base) solution used to control and maintain the pH within the fermenter, when it reaches below the setpoint."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 
 [Term]
@@ -162,158 +162,159 @@ id: PREFER:0000022
 name: pH control acid solution
 def: "The acidic solution used to control and maintain the pH within the fermenter, when it rises above the setpoint."
 synonym:
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 
 [Term]
 id: PREFER:0000023
 name: culture
 def: "Starter culture id or initial culture referring to the strain ID."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000024
 name: seed
 def: "Starter culture or initial culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain concentration is reached. The starter culture is also referred as a seed culture, pre-culture or inoculum."
-is_a: PREFER:0000008 ! Cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000022 ! Culture 
+is_a: PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:related_to PREFER:0000022 ! culture 
 
 [Term]
 id: PREFER:0000025
 name: DO control setpoint (%)
 def: "The target value for dissolved oxygen (DO), in percent."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000026
 name: DO control cascade level 1
 def: "First level of the cascade control system for dissolved oxygen. Level 1 involves adjusting the stirrer_speed parameter to ahcieve the desired DO level."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000027
 name: maximum stirring
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 synonym: "maximum shaking speed" EXACT []
 relationship: related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000028
-name: Minimum Stirring or Shaking Speed (rpm)
+name: minimum stirring
 def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
+synonym: "minimum shaking speed" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000029
-name: DO Control Cascade Level 2
+name: DO control cascade level 2
 def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air_flow parameter to ahcieve the desired DO level."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000030
-name: Aeration Gas Type
+name: aeration gas type
 def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000031
-name: Maximum Aeration (slpm)
+name: maximum aeration
 def: "Maximum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000032
-name: Minimum Aeration (slpm)
+name: minimum aeration
 def: "Minimum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000033
-name: DO Control Cascade Level 3
+name: DO control cascade level 3
 def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the o2_flow parameter to ahcieve the desired DO level."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000034
-name: Starting OD
+name: starting OD
 def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
 
 [Term]
 id: PREFER:0000035
-name: Final Seed OD
+name: final seed OD
 def: "The cell density of the seed culturre at the time it is inoculated to the main fermenter."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
 
 [Term]
 id: PREFER:0000036
-name: Initial Culture Volume
+name: initial culture volume
 def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum, no units."
-is_a: PREFER:0000008 ! Cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000022 ! Culture 
+is_a: PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:related_to PREFER:0000022 ! culture 
 
 [Term]
 id: PREFER:0000037
-name: Culture Volume Unit
+name: culture volume unit
 def: "The unit of measurement for the culture volume, in mL."
-is_a: PREFER:0000008 ! Cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000022 ! Culture 
+is_a: PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:related_to PREFER:0000022 ! culture 
 
 [Term]
 id: PREFER:0000038
-name: Feed profile
+name: feed profile
 def: "Feeding strategies typically found in a fed-batch fermentation. 1. Constant feeding rate, 2. Linear feeding rate and 3. Exponential feeding rate, 4. Combination of 1-2, 3-2 or 3-1 . The type of feeding profiles applied is process specific."
-is_a: PREFER:0000008 ! Cultivation condition
+is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000039
 name: DO
 def: "Dissolved oxygen (DO) refers to the concentration of oxygen molecules (O₂) dissolved in a liquid medium, typically measured in bioreactors or aquatic systems."
 is_a: PREFER:0000009 ! Process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
 [Term]
 id: PREFER:0000040
 name: pH
 def: "Bioreactor Potential of Hydrogen (pH) reading. Logarithmic scale used to specify the acidity or basicity of aqueous solutions."
 is_a: PREFER:0000009 ! Process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
 [Term]
 id: PREFER:0000041
-name: Temperature
+name: temperature
 def: "Bioreactor temperature reading. Pyhsical quantity that quantitatively expresses the attribute of hotness or coldness, reflecting the average kinetic energy of the vibrating and colliding atoms making up a substance."
 is_a: PREFER:0000009 ! Process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
 [Term]
 id: PREFER:0000042
-name: Pressure
+name: pressure
 def: "Bioreactor pressure reading."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
 
 [Term]
 id: PREFER:0000043
-name: Volume
+name: volume
 def: "Total volume of liquid in the fermenter, measured in L."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
 
 [Term]
 id: PREFER:0000044
-name: Sample mass
+name: sample mass
 def: "The mass of the sample taken from the run, measured in grams. Implemented for quantifying the amount of biomass, product, other compounds."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! Offline measurement
@@ -321,20 +322,20 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! Offline measu
 /*
 [Term]
 id: PREFER:0000045
-name: Sample volume
+name: sample volume
 def: "The volume of the sample taken from the bioprocess/run, measured in mL. Implemented for calculating concentrations, dilutions, etc."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000046
-name: Accumulated sample volume
+name: accumulated sample volume
 def: "Total volume of all samples taken from the bioprocess/run up to a certain point in time, measured in mL."
 is_a: PREFER:0000017 ! Computed variable
 /*
 
 [Term]
 id: PREFER:0000047
-name: Acid volume
+name: acid volume
 def: "Volume of the acidic solution pumped into the fermenter, measured  in L."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
@@ -342,7 +343,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000048
-name: Base volume
+name: base volume
 def: "Volume of the concentration base solution pumped into the fermenter to maintain the pH of cultivation at a constant level, measured  in L."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
@@ -350,7 +351,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000049
-name: Acid rate
+name: acid rate
 def: "The flow rate at which the acid solution is pumped into the fermenter, measured in L/h."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! Feed profile
@@ -358,7 +359,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000050
-name: Base rate
+name: base rate
 def: "The flow rate at which the base solution is pumped into the fermenter, measured in L/h."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! Feed profile
@@ -366,15 +367,15 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000051
-name: Feed amount
+name: feed amount
 def: "The quantity or total mass of feed added to the bioprocess, measured in kg."
 is_a: PREFER:0000017 ! Computed variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! Feed profile
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000052
-name: Feed volume
+name: feed volume
 def: "The volume of the feed solution pumped to the bioprocess at a certain time point, measured in L."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! Feed profile
@@ -382,7 +383,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000053
-name: Feed rate volumetric 
+name: feed rate volumetric 
 def: "Rate at which the feed (based on its volume) is added to the bioprocess, measured in L/h."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! Feed profile
@@ -390,7 +391,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000054
-name: Stirrer speed 
+name: stirrer speed 
 def: "Speed at which the impeller shaft rotates, measured in rpm (revolutions per minute)."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -398,7 +399,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000055
-name: Air flow
+name: air flow
 def: "Rate at which air is supplied to the fermnter, measured in lpm (liters per minute)"
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -406,7 +407,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000056
-name: Nitrogen flow
+name: nitrogen flow
 def: "Rate at which nitrogen is supplied to the fermenter, measured in lpm (liters per minute)."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -414,7 +415,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000057
-name: Oxygen flow
+name: oxygen flow
 def: "Rate at which oxygen is supplied to the fermenter, measured in lpm (liters per minute)."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -422,7 +423,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000058
-name: Inlet air O2
+name: inlet air o2
 def: "Percentaje of oxygen in the gas mixture that is being supplied into the fermenter."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -430,7 +431,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000059
-name: Inlet air CO2
+name: inlet air co2
 def: "Percentaje of carbon dioxide in the gas mixture that is being supplied into the fermenter."
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -445,7 +446,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! Offline measu
 
 [Term]
 id: PREFER:0000061
-name: O2 uptake rate
+name: o2 uptake rate
 def: "Oxygen Uptake Rate: Online determination of the rate at which O2 is consumed by cells. Ambr records it as unnormalized in mmol/h, with factor 0.001"
 synonym: "OUR" EXACT []
 is_a: PREFER:0000009 ! Process variable
@@ -453,7 +454,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measur
 
 [Term]
 id: PREFER:0000062
-name: CO2 evolution rate
+name: co2 evolution rate
 def: "Online determination of the rate at which CO2 is produced by cells. Ambr records it as unnormalized in mmol/h, with factor 0.001."
 synonym: "CER" EXACT []
 is_a: PREFER:0000009 ! Process variable
@@ -464,96 +465,116 @@ id: PREFER:0000063
 name: OTR
 def: "Oxygen Transfer Rate (mol/h): rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a fermenter."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000064
 name: CTR
 def: "Carbon dioxide Transfer Rate (mol/h): rate at which CO2 is transferred out of the fermenter. Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000065
 name: RQ
 def: "Respiratory Quotient: Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/run, dimensionless number. Used to assess the metabolic state of cells."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! Respiratory metrics
+relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! respiratory metrics
+
+
+
+
+
 
 [Term]
 id: PREFER:0000066
-name: Formed CO2
-def: "Amount of CO2 generated during the bioprocess. Ambr records it as unnormalized, integrated, in moles."
-is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! Respiratory metrics
+name: produced co2
+def: "Amount of CO2 generated during the bioprocess, unnormalized, integrated, in moles."
+synonym: "formed co2" EXACT []
+is_a: PREFER:0000155 ! performance variable
+relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! respiratory metric
+
+[Term]
+id: PREFER:0000066
+name: produced co2
+def: "Amount of CO2 generated during the bioprocess, unnormalized, integrated, in moles."
+synonym: "formed co2" EXACT []
+is_a: PREFER:0000158 ! respiratory metric
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000067
-name: Consumed CO2
-def: "Amount of O2 consumed during the bioprocess. Ambr records it as unnormalized, integrated, in moles."
+name: consumed co2
+def: "Amount of CO2 consumed during the bioprocess. Ambr records it as unnormalized, integrated, in moles."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! Respiratory metrics
+relationship: PREFER_RE:is_performance_variable PREFER:0000158 ! respiratory metrics
 
 [Term]
 id: PREFER:0000068
-name: Offgas CO2
+name: offgas co2
 def: "The percentage of CO2 present in the exhaust stream leaving the fermenter, indicating the amount of CO2 produced."
 is_a: PREFER:0000009 ! Process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
 [Term]
 id: PREFER:0000069
-name: Offgas O2
+name: offgas o2
 def: "The percentage of O2 present in the exhaust stream leaving of the fermenter, indicating how much oxygen has been consumed."
 is_a: PREFER:0000009 ! Process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! Inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
 [Term]
 id: PREFER:0000070
-name: Compound
+name: compound
 def: "Concentration of the compound(substrate (ingredient), product or by-product) in the bioprocess, measured in g/L. Gases such as O2 and CO2 are considered compounds but independently."
 is_a: PREFER:0000010 ! Compound
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! Offline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 
 [Term]
 id: PREFER:0000071
-name: Biomass concentration
+name: biomass concentration
 def: "Concentration of the biomass, measured in g/L."
 is_a: PREFER:0000009 ! Process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! Offline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 
 /*
 [Term]
 id: PREFER:0000072
-name: Volume Added
+name: volume Added
 def: "It is the actual final volume that has been added." 
 is_a: PREFER:0000017 ! Computed variable
 relationship: PREFER_RE:related_to REFER:0000043 ! Volume
 
 [Term]
 id: PREFER:0000073
-name: Liquid volume downscaled
+name: liquid volume downscaled
 def: "It is the actual volume at a certain time point where sampling was performed."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+relationship: PREFER_RE:related_to REFER:0000043 ! volume
 
 [Term]
 id: PREFER:0000074
-name: Liquid volume (without corrected samples)
+name: liquid volume (without corrected samples)
 def: "Total volume of liquid in the fermenter without subtracting the sample volume extracted, measured in L."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+relationship: PREFER_RE:related_to REFER:0000043 ! volume
 
 [Term]
 id: PREFER:0000075
-name: Volume Unit
+name: volume unit
 def: "The unit for the additional volume added, categorical variable normally in mL."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+relationship: PREFER_RE:related_to REFER:0000043 ! volume
 
 [Term]
 id: PREFER:0000076
-name: Volume to Add None 
+name: volume to add none 
 def: "The volume that must be added ro reach a certain starting OD in the reactor, scalar variable pre-calculated."
 is_a: PREFER:0000017 ! Computed variable
 relationship: PREFER_RE:related_to REFER:0000043 ! Volume
@@ -561,234 +582,234 @@ relationship: PREFER_RE:related_to REFER:0000043 ! Volume
 
 [Term]
 id: PREFER:0000077
-name: Dilution rate (D)
+name: dilution rate
 def: "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted, measured in 1/h."
-synonym: D EXACT []
+synonym: "D" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000078
-name: Carbon balance
+name: carbon balance
 def: "Balance which compares the total amount of carbon entering the fermenter (through the substrate) to the total carbon leaving the fermenter (in products, biomass or by.products like CO2), expressed in percentage."
 synonym: C balance EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! Respiratory metrics
+relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! respiratory metric
 
 [Term]
 id: PREFER:0000079
-name: Carbon balance using carbon mols
+name: carbon balance using carbon mols
 def: "The carbon balance calculated using carbon moles (c-mols), providing more molecular level view of the carbon flow, no units."
-synonym: C balance (c-mols) EXACT []
+synonym: "C balance (c-mols)" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! Respiratory metrics
+relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! respiratory metric
 
 [Term]
 id: PREFER:0000080
-name: Carbon balance with reference to substrate
+name: carbon balance with reference to substrate
 def: "The carbon balance specifically referenced to the substrate usedin the bioprocess, to asses substrate utilization efficiency. No units."
-synonym: carbon balance to substrate EXACT []
+synonym: "carbon balance to substrate" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! Respiratory metrics
+relationship: PREFER_RE:is_performance_variable PREFER:0000159 ! respiratory metric
 
 [Term]
 id: PREFER:0000081
-name: Degree of reduction balance
+name: degree of reduction balance
 def: "Degree of Reduction (DoR) balance, important for understanding the redox balance in the bioprocess. The balance ensures that the electrons entering the bioprocess are equal to the electrons leaving it. It is expressed in percentage."
-synonym: DoR balance EXACT []
+synonym: "DoR balance" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000082
-name: Degree of reduction yields
+name: degree of reduction yields
 def: "The degree of reduction calculated based on the yields of different products. This helps understand how efficiently the system is converting substrate into desired products, taking into account the redox state of each component.  No units."
-synonym: DoR yields EXACT []
+synonym: "DoR yields" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000083
-name: Substrate consumed
+name: substrate consumed
 def: "The total amount of substrate consumed by the cells during the bioprocess, expressed in g."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000084
-name: Substrate consumed molar
+name: substrate consumed molar
 def: "The total amount of substrate consumed by the cells during the bioprocess, expressed in moles."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000085
-name: Substrate consumed carbon molar
+name: substrate consumed carbon molar
 def: "The total amount of substrate consumed by the cells during the bioprocess, expressed in c-mols."
 is_a: PREFER:0000017 ! Computed variable
 
 /*
 [Term]
 id: PREFER:0000086
-name: Substrate lost in sampling
+name: substrate lost in sampling
 def: "The amount of substrate removed from the run durning sampling, expressed in g."
 is_a: PREFER:0000017 ! Computed variable
 /*
 
 [Term]
 id: PREFER:0000087
-name: Substrate uptake rate
+name: substrate uptake rate
 def: "Substrate uptake rate (qs). The rate at which substrate is consumed by the cells, expressed in g/h."
-synonym: QS EXACT []
+synonym: "QS" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000088
-name: Substrate uptake rate molar
+name: substrate uptake rate molar
 def: "The rate at which substrate is consumed by the cells, expressed in mol/h."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000089
-name: Substrate specific uptake rate
+name: substrate specific uptake rate
 def: "The rate of substrate uptake per unit of biomass, expressed in grams of substrate per grams of dry biomass per hour (g/g(DW)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000090
-name: Substrate specific uptake rate molar
+name: substrate specific uptake rate molar
 def: "The rate of substrate uptake per unit of biomass, expressed in mols of substrate per carbon mols of substrate per hour (mol/cmol(X)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate 
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate 
 
 [Term]
 id: PREFER:0000091
-name: Average substrate specific uptake rate in feed phase
+name: average substrate specific uptake rate in feed phase
 def: "The average specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000092
-name: Maximum substrate specific uptake rate in feed phase
+name: maximum substrate specific uptake rate in feed phase
 def: "The maximum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000093
 name: Minimum substrate specific uptake rate in feed phase
 def: "The minimum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000094
-name: Substrate yield (X)
+name: substrate yield (X)
 def: "The amount of biomass produced per gram of substrate consumed, expressed in grams of biomass per gramsg/g(DW)"
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000095
-name: Substrate yield molar
+name: substrate yield molar
 def: "The amount of biomass produced in mols per carbon mols of substrate consumed, expressed in mol/c-mol(X)"
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000096
-name: Substrate yield carbon molar
+name: substrate yield carbon molar
 def: "The amount of biomass produced in carbon mols per carbon mols of substrate consumed,expressed in c-mol/c-mol(X)"
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000097
-name: O2 decimal
+name: o2 decimal
 def: "The decimal fraction of O2 in a gas stream, representing the proportion of O2 in the exhaust gas relative to the total gas volume, no units."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000098
-name: Oxygen partial integration
+name: oxygen partial integration
 def: "A time-based integration of O2 production, often calculated for specific time intervals??????, no units."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000099
-name: Oxygen accumulated
+name: oxygen accumulated
 def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value, no units"
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000100
-name: Oxygen accumulated downscaled
+name: oxygen accumulated downscaled
 def: "The total molar quantity of O2 generated, expressed in mol"
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000101
-name: Oxygen Q
+name: oxygen (Q)
 def: "The volumetric rate of O2 consumed by the bioprocess over time, expressed in L/h."
-synonym: Oxygen volumetric rate EXACT []
+synonym: "Oxygen volumetric rate" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000102
-name: Oxygen molar
+name: oxygen molar
 def: "The molar rate of O2 production, measuring the quantity of O2 generated by the bioprocess in terms of moles, expressed in mol/h."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000103
-name: Oxygen specific uptake rate
+name: oxygen specific uptake rate
 def: "The specific rate at which O2 is produced per unit of biomass (X), expressed in moles of O2 per carbon mole of biomass per hour (mol/c-mol(X)*h). Reflecting how efficiently O2 is consumed in relation to biomass production."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000104
-name: Oxygen yield (S)
+name: oxygen yield (S)
 def: "The yield of O2 consumed per mole of substrate consumed (S), expressed in moles of O2 per mole of substrate (mol/mol(S)), quantifying how much O2 is consumed relative to the substrate used in the bioprocess."
-synonym: O2 yield (S) EXACT []
+synonym: "O2 yield (S)" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000105
-name: Oxygen yield carbon molar (S)
+name: oxygen yield carbon molar (S)
 def: "The yield of O2 consumed per carbon mole of substrate consumed (S), expressed in moles of O2 per carbon mole of substrate (mol/c-mol(S)). More detailed yield accounting for the carbon content of the substrate."
 synonym: O2 yield c-molar (S) EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000106
-name: Oxygen yield (X)
+name: oxygen yield (X)
 def: "The yield of O2 consumed per carbon mole of biomass (X), expressed in moles of O2 per carbon mole of biomass (mol/c-mol(X)), describing how much O2 is consumed relative to the amount of biomass generated."
 synonym: O2 yield (X)
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000107
-name: Compound produced
+name: compound produced
 def: "Total amount of compound produced in the bioprocess, representing the cumulative production of the compound over time, measured in g."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000108
-name: Compound produced molar
+name: compound produced molar
 def: "Total amount of compound produced in the bioprocess, expressed in moles(mol), providing molecular level quantification."
 is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000109
-name: Compound produced carbon molar
+name: compound produced carbon molar
 def: "Total amount of compound produced in the bioprocess, expressed in cmol, which is related with the carbon content of the compound."
 is_a: PREFER:0000017 ! Computed variable
 
@@ -815,9 +836,9 @@ is_a: PREFER:0000017 ! Computed variable
 [Term]
 id: PREFER:0000113
 name: Compound production rate
-def: "Rate at which the compound is produced over time, indicating the speed of compound production, expressed in g/h."
+def: "rate at which the compound is produced over time, indicating the speed of compound production, expressed in g/h."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 
 [Term]
@@ -825,63 +846,63 @@ id: PREFER:0000114
 name: Compound production rate molar
 def: "Rate at which the compound is produced over time, expressed in mol/h."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000115
 name: Compound specific production rate 
 def: "The rate of compound production per unit of biomass (dry weight), providing the efficiency of compound production relative to biomass. It is expressed in grams per gram of dry weight per hour (g/g(DW)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000116
 name: Compound specific production rate molar
 def: "The rate of acetic acid production per unit of biomass, expressed in moles per carbon mole of biomass per hour (mol/cmol(X)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000117
 name: Compound yield (S)
 def: "The yield of compound produced per gram of substrate consumed, quantifying how much compound id produced relative to substrate consumption, expressed in g/g."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000118
 name: Compound yield molar (S)
 def: "The yield of compound produced per mole of substrate consumed, expressed in mol/mol (S)",
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000119
 name: Compound yield carbon molar (S)
 def: "The yield of compound produced per carbon mole of substrate consumed, taking into account the carbon content of both the substrate and the compound, expressed in c-mol/c-mol(S)"
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield 
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield 
 
 [Term]
 id: PREFER:0000120
 name: Compound yield (X)
 def: "The yield of 'compound' produced per gram of biomass (dry weight), measuring how efficiently compound is produced relative to biomass generation, expressed in grams per gram of dry weight (g/g(DW))."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield 
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield 
 
 [Term]
 id: PREFER:0000121
 name: Compound yield molar (X)
 def: "The yield of 'compound' produced per carbon mole of biomass, expressed in moles per carbon mole of biomass per hour (mol/cmol(X)*h)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000122
 name: Compound yield carbon molar (X)
 def: "The yield of 'compound' produced per carbon mole of biomass, expressed in c-mol/c-mol(X)."
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000123
@@ -923,7 +944,7 @@ name: Carbon dioxide Q
 def: "The volumetric rate of CO2 produced by the bioprocess over time, expressed in L/h."
 synonym: "CO2 Q" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000129
@@ -931,7 +952,7 @@ name: Carbon dioxide evolution rate
 def: "The rate at which CO2 is produced per unit of biomass (X), expressed in moles of CO2 per carbon mole of biomass per hour (mol/c-mol(X)*h). Reflecting how efficiently CO2 is released in relation to biomass production."
 synonym: "CO2 evolution rate" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000130
@@ -939,7 +960,7 @@ name: Carbon dioxide specific evolution rate
 def: "The specific rate at which CO2 is produced per unit of biomass (X), expressed in moles of CO2 per carbon mole of biomass per hour (mol/c-mol(X)*h). Reflecting how efficiently CO2 is released in relation to biomass production."
 synonym: "CO2 specific evolution rate" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000131
@@ -947,7 +968,7 @@ name: Carbon dioxide yield (S)
 def: "The yield of CO2 produced per mole of substrate consumed (S), expressed in moles of CO2 per mole of substrate (mol/mol(S)), quantifying how much CO2 is produced relative to the substrate used in the bioprocess."
 synonym: "CO2 yield (S)" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000132
@@ -955,7 +976,7 @@ name: Carbon dioxide yield carbon molar (S)
 def: "The yield of CO2 produced per carbon mole of substrate consumed (S), expressed in moles of CO2 per carbon mole of substrate (mol/c-mol(S)). More detailed yield accounting for the carbon content of the substrate."
 synonym: "CO2 yield c-molar (S)" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000133
@@ -963,7 +984,7 @@ name: Carbon dioxide yield (X)
 def: "The yield of CO2 produced per carbon mole of biomass (X), expressed in moles of CO2 per carbon mole of biomass (mol/c-mol(X)), describing how much CO2 is produced relative to the amount of biomass generated."
 synonym: CO2 yield (X) EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000134
@@ -999,7 +1020,7 @@ is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000139
-name: Biomass production carbon molar
+name: biomass production carbon molar
 def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in carbon moles (c-mol)."
 synonym: "Biomass formed carbon molar" EXACT []
 synonym: "Biomass formed c-molar" EXACT []
@@ -1007,84 +1028,84 @@ is_a: PREFER:0000017 ! Computed variable
 
 [Term]
 id: PREFER:0000140
-name: Biomass production rate
+name: biomass production rate
 def: " The rate at which the biomass is produced over time. expressed in grams per hour (g/h)."
 synonym: "Rx" EXACT []
 synonym: "Biomass formation rate" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000141
-name: Biomass production rate molar
+name: biomass production rate molar
 def:  "The rate at which the biomass is produced over time. expressed in c-mols per hour (c-mols/h)."
 synonym: "Rx molar" EXACT []
 synonym: "Biomass formation rate molar" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000142
-name: Biomass specific growth rate
+name: biomass specific growth rate
 def: "The specific growth rate at which the biomass(X) grows per unit of biomass. Units: 1/h."
 synonym: "μ" EXACT []
 synonym: "Growth rate" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000143
-name: Average biomass specific growth rate in feed phase
+name: average biomass specific growth rate in feed phase
 def: "The average specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
 synonym: "μ mean in feed" EXACT []
 synonym: "μ mean in feed phase" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000144
-name: Average biomass specific growth rate in batch phase
+name: average biomass specific growth rate in batch phase
 def: "The average specific growth rate of biomass during the batch phase, expressed in per hour (1/h)."
 synonym: "μ mean in batch" EXACT []
 synonym: "μ mean in batch phase" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000145
-name: Maximum biomass specific growth rate in feed phase
+name: maximum biomass specific growth rate in feed phase
 def: "The maximum specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
 synonym: "μ max in feed" EXACT []
 synonym: "μ max in feed phase" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000146
-name: Minimum biomass specific growth rate in feed phase
+name: minimum biomass specific growth rate in feed phase
 def: "The minimum specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
 synonym: "μ min in feed" EXACT []
 synonym: "μ min in feed phase" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! Rate
+relationship: PREFER_RE:is_performance_variable PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000147
-name: Biomass yield (S)
+name: biomass yield (S)
 def: "The grams of biomass produced per grams of substrate consumed, describing the efficiency of substrate conversion into biomass, expressed in g/g.""
 synonym: "Ysx" EXACT []
 synonym: "S" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000148
-name: Biomass yield molar (S)
+name: biomass yield molar (S)
 def: "The biomass produced per mole of substrate consumed, expressed in c-mol/mol"
 synonym: "Ysx molar" EXACT []
 synonym: "S molar" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000149
@@ -1093,41 +1114,41 @@ def: "The biomass produced per carbon mole of substrate, considering the carbon 
 synonym: "Ysx c-molar" EXACT []
 synonym: "S c-molar" EXACT []
 is_a: PREFER:0000017 ! Computed variable
-relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! Yield
+relationship: PREFER_RE:is_performance_variable PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000150
-name: Data acquisition mode
-def: "How where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline."
+name: data acquisition mode
+def: "How, where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline."
 
 [Term]
 id: PREFER:0000151
-name: Inline measurement
+name: inline measurement
 def: "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control."
-is_a: PREFER:0000150 ! Data acquisition mode
+is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000152
 name: online measurement
-def: "Quantification of a sample extracted from the bioreactor and introduced it into the measurement zone. Sample can either be discarded or returned to the bioreactor."
-is_a: PREFER:0000150 ! sata acquisition mode
+def: "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor."
+is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000153
 name: atline measurement
-def: "SMextract a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment."
-is_a: PREFER:0000150 ! sata acquisition mode
+def: "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment."
+is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000154
 name: offline measurement
-def: "Method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line"
+def: "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line"
 is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000155
 name: performance variable
-def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratory metrics, and balance metrics."
+def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratorymetrics, and balance metrics."
 
 [Term]
 id: PREFER:0000156
@@ -1144,7 +1165,7 @@ is_a: PREFER:0000155 ! performance variable
 [Term]
 id: PREFER:0000158
 name: respiratory metric
-def: "Computed variable that quantifies respiratory activity in the bioprocess, providing indications of metabolic states and gas exchange efficiency."
+def: "Computed variable that quantifies respiratoryactivity in the bioprocess, providing indications of metabolic states and gas exchange efficiency."
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
