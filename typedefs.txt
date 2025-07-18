@@ -6,8 +6,8 @@ domain: PREFER:0000004 ! fermentation project
 range: PREFER:0000003 ! fermentation experiment
 
 [Typedef]
-id: has_run
-name: PREFER_RE:has_run
+id: PREFER_RE:has_run
+name: has_run
 def: "Indicates which run(s) are part of an experiment."
 domain: PREFER:0000003 ! fermentation experiment
 range: PREFER:0000002 ! fermentation run
@@ -56,13 +56,14 @@ range: PREFER:0000010 ! compound
 
 [Typedef]
 id: PREFER_RE:has_data_acquisition_mode
-name: data acquisition mode
+name: has_data_acquisition_mode
+def: ""
+domain:
+range:
 
 [Typedef]
 id: PREFER_RE:related_to
-name: related to
-xref: ????????
-
-[Typedef]
-id: PREFER_RE:is_performance_variable
-name: Performance variable
+name: related_to
+def: ""
+domain:
+range:
