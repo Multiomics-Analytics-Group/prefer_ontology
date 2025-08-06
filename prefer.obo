@@ -1018,26 +1018,13 @@ is_a: PREFER:0000157 ! rate
 [Term]
 id: PREFER:0000147
 name: biomass yield (S)
-def: "The grams of biomass produced per grams of substrate consumed, describing the efficiency of substrate conversion into biomass, expressed in g/g.""
+def: "The biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass.""
 synonym: "Ysx" EXACT []
 synonym: "S" EXACT []
 is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000148
-name: biomass yield molar (S)
-def: "The biomass produced per mole of substrate consumed, expressed in c-mol/mol"
-synonym: "Ysx molar" EXACT []
-synonym: "S molar" EXACT []
-is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000149
-name: biomass yield carbon molar (S)
-def: "The biomass produced per carbon mole of substrate, considering the carbon efficiency of biomass formation relative to substrate, expressed in c-mol/c-mol",
-synonym: "Ysx c-molar" EXACT []
-synonym: "S c-molar" EXACT []
-is_a: PREFER:0000156 ! yield
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
 
 [Term]
 id: PREFER:0000150
@@ -1102,3 +1089,31 @@ id: PREFER:0000160
 name: output variable
 def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass."
 synonym: "output var" EXACT []
+
+
+! ============================
+! Custom Units for PREFER
+! These unit terms extend UO for use in PREFER
+! ============================
+
+[Term]
+id: PREFER_UNIT:0000161
+name: gram per gram
+comment: "A unit representing a mass ratio, typically used to express biomass yield as grams of biomass per gram of substrate consumed." [PREFER]
+synonym: "g/g" EXACT []
+is_a: UO:0000190 ! ratio unit
+
+[Term]
+id: PREFER_UNIT:0000162
+name: carbon mole per gram
+comment: "A unit which represents the amount of substance in carbon moles per gram of material. Commonly used to express biomass yield on a carbon basis." [PREFER]
+synonym: "cmol/g" EXACT []
+is_a: UO:0000190 ! ratio unit
+
+[Term]
+id: PREFER_UNIT:0000163
+name: carbon mole per carbon mole
+comment: "A unit which expresses the ratio of carbon moles in biomass to carbon moles in substrate consumed. Used for carbon yield measurements." [PREFER]
+synonym: "cmol/cmol" EXACT []
+is_a: UO:0000190 ! ratio unit
+

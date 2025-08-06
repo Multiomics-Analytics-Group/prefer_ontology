@@ -1,69 +1,77 @@
 [Typedef]
 id: PREFER_RE:has_experiment
-name: has_experiment
-def: "Links a project to its experiment(s)."
+name: has experiment
+def: "Links a project to its experiment(s)." [PREFER]
 domain: PREFER:0000004 ! fermentation project
 range: PREFER:0000003 ! fermentation experiment
 
 [Typedef]
 id: PREFER_RE:has_run
-name: has_run
-def: "Indicates which run(s) are part of an experiment."
+name: has run
+def: "Indicates which run(s) are part of an experiment." [PREFER]
 domain: PREFER:0000003 ! fermentation experiment
 range: PREFER:0000002 ! fermentation run
 
 [Typedef]
 id: PREFER_RE:has_medium
-name: has_medium
-def: "Specifies the medium used in a run."
+name: has medium
+def: "Specifies the medium used in a run." [PREFER]
 domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000011 ! medium
 
 [Typedef]
 id: PREFER_RE:has_ingredient
-name: has_ingredient
-def: "Lists ingredients (compounds) in a medium."
+name: has ingredient
+def: "Lists ingredients (compounds) in a medium." [PREFER]
 domain: PREFER:0000011 ! medium
 range: PREFER:0000010 ! compound
 
 [Typedef]
 id: PREFER_RE:uses_fermenter
-name: uses_fermenter
-def: "Indicates the fermenter used in a run."
+name: uses fermenter
+def: "Indicates the fermenter used in a run." [PREFER]
 domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000014 ! fermenter
 
 [Typedef]
 id: PREFER_RE:has_measured_cultivation_condition
 name: has cultivation condition
-def: "Links a fermentation run to a cultivation parameter applied at its initiation."
+def: "Links a fermentation run to a cultivation parameter applied at its initiation." [PREFER]
 domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000008 ! cultivation condition
 
 [Typedef]
 id: PREFER_RE:has_measured_process_variable
 name: has process variable
-def: "Links a fermentation run to process variable measured during fermentation."
+def: "Links a fermentation run to process variable measured during fermentation." [PREFER]
 domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000009 ! process variable
 
 [Typedef]
 id: PREFER_RE:has_measured_compound
-name: has_measured_compound
-def: "Indicates compounds measured during a run."
+name: has measured compound
+def: "Indicates compounds measured during a run." [PREFER]
 domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000010 ! compound
 
 [Typedef]
 id: PREFER_RE:has_data_acquisition_mode
-name: has_data_acquisition_mode
-def: ""
+name: has data acquisition mode
+def: "" [PREFER]
 domain:
 range:
 
 [Typedef]
 id: PREFER_RE:related_to
-name: related_to
-def: ""
+name: related to
+def: "" [PREFER]
 domain:
 range:
+
+[Typedef]
+id: PREFER_RE:has_possible_unit
+name: has possible unit
+def: "Relates a derived or calculated quantity to the units in which it can be expressed." [PREFER]
+domain: PREFER:0000156 ! yield
+range: UO:0000000 ! unit
+
