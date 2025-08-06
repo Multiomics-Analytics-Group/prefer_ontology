@@ -809,31 +809,26 @@ is_a: PREFER:0000157 ! rate
 [Term]
 id: PREFER:0000117
 name: compound yield (S)
-def: "The yield of compound produced per substrate consumed, quantifying how much compound is produced relative to substrate consumption."
+def: "The yield of compound produced per substrate consumed, quantifying how efficiently compound is produced relative to substrate consumption." [PREFER]
 is_a: PREFER:0000156 ! yield
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram(S)
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram(S)
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole(S)
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000120
 name: compound yield (X)
-def: "The yield of 'compound' produced per gram of biomass (dry weight), measuring how efficiently compound is produced relative to biomass generation, expressed in grams per gram of dry weight (g/g(DW))."
+def: "The yield of compound produced per biomass (dry weight), quantifying how efficiently compound is produced relative to biomass generation." [PREFER]
 is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000121
-name: compound yield molar (X)
-def: "The yield of 'compound' produced per carbon mole of biomass, expressed in moles per carbon mole of biomass per hour (mol/cmol(X)*h)."
-is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000122
-name: compound yield carbon molar (X)
-def: "The yield of 'compound' produced per carbon mole of biomass, expressed in c-mol/c-mol(X)."
-is_a: PREFER:0000156 ! yield
-
-
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000164 ! gram per gram(X)
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole(X) per hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000166 ! carbon mole per carbon mole (X)
 
 
 
@@ -1097,25 +1092,52 @@ synonym: "output var" EXACT []
 
 [Term]
 id: PREFER_UNIT:0000161
-name: gram per gram
+name: gram per gram(S)
 comment: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material or input substrate consumed." [PREFER]
 synonym: "g/g" EXACT []
 is_a: UO:0000190 ! ratio unit
 
 [Term]
 id: PREFER_UNIT:0000162
-name: carbon mole per gram
+name: carbon mole per gram(S)
 comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound - in carbon moles per gram of initial material or input substrate consumed." [PREFER]
 synonym: "cmol/g" EXACT []
+synonym: "c-mol/g" EXACT []
 is_a: UO:0000190 ! ratio unit
 
 [Term]
 id: PREFER_UNIT:0000163
-name: carbon mole per carbon mole
+name: carbon mole per carbon mole(S)
 comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound -  in carbon moles per carbon mole of initial material or input substrate consumed." [PREFER]
 synonym: "cmol/cmol" EXACT []
+synonym: "c-mol/c-mol" EXACT []
+is_a: UO:0000190 ! ratio unit
+
+[Term]
+id: PREFER_UNIT:0000164
+name: gram per gram(X)
+comment: "A unit representing a mass ratio, typically used to express product or output substance - such as compound -  in grams per gram of biomass generated(dry weight)." [PREFER]
+synonym: "g/g" EXACT []
+synonym: "g/g(X)" EXACT []
+synonym: "g/g(DW)" EXACT []
+is_a: UO:0000190 ! ratio unit
+
+[Term]
+id: PREFER_UNIT:0000165
+name: mole per carbon mole(X) per hour
+comment: "A unit representing a mol-based ratio, typically used to express product or output substance - such as compound -  in moles per carbon mole of biomass generated per hour." [PREFER]
+synonym: "mol/cmol(X)*h" EXACT []
+synonym: "mol/c-mol(X)*h" EXACT []
+synonym: "mol/cmol(X)*hour" EXACT []
+synonym: "mol/c-mol(X)*hour" EXACT []
+is_a: UO:0000190 ! ratio unit
+
+[Term]
+id: PREFER_UNIT:0000166
+name: carbon mole per carbon mole (X)
+comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as compound -  in carbon moles per carbon mole of biomass generated." [PREFER]
+synonym: "cmol/cmol(X)" EXACT []
+synonym: "c-mol/c-mol(X)" EXACT []
 is_a: UO:0000190 ! ratio unit
 
 ! ============================
-
-
