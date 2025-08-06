@@ -45,20 +45,20 @@ xref: OBI_0000066 ! investigation
 /*
 [Term]
 id: PREFER:0000005
-name: User
+name: user
 def: "The individual assigned as the project manager."
 is_a: PREFER:0000001 ! precision fermentation process
 
 
 [Term]
 id: PREFER:0000006
-name: Institution
+name: institution
 def: "The public or private research center, university, or organization that hosts or supports the execution of the project."
 
 
 [Term]
 id: PREFER:0000007
-name: Country
+name: country
 def: "The state or nation where the project is carried out."
 is_a: PREFER:0000001 ! precision fermentation process
 */
@@ -809,20 +809,11 @@ is_a: PREFER:0000157 ! rate
 [Term]
 id: PREFER:0000117
 name: compound yield (S)
-def: "The yield of compound produced per gram of substrate consumed, quantifying how much compound id produced relative to substrate consumption, expressed in g/g."
+def: "The yield of compound produced per substrate consumed, quantifying how much compound is produced relative to substrate consumption."
 is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000118
-name: compound yield molar (S)
-def: "The yield of compound produced per mole of substrate consumed, expressed in mol/mol (S)",
-is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000119
-name: compound yield carbon molar (S)
-def: "The yield of compound produced per carbon mole of substrate consumed, taking into account the carbon content of both the substrate and the compound, expressed in c-mol/c-mol(S)"
-is_a: PREFER:0000156 ! yield
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
 
 [Term]
 id: PREFER:0000120
@@ -841,6 +832,14 @@ id: PREFER:0000122
 name: compound yield carbon molar (X)
 def: "The yield of 'compound' produced per carbon mole of biomass, expressed in c-mol/c-mol(X)."
 is_a: PREFER:0000156 ! yield
+
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000123
@@ -900,7 +899,7 @@ is_a: PREFER:0000156 ! yield
 
 [Term]
 id: PREFER:0000131
-name: arbon dioxide yield (S)
+name: carbon dioxide yield (S)
 def: "The yield of CO2 produced per mole of substrate consumed (S), expressed in moles of CO2 per mole of substrate (mol/mol(S)), quantifying how much CO2 is produced relative to the substrate used in the bioprocess."
 synonym: "co2 yield (S)" EXACT []
 is_a: PREFER:0000156 ! yield
@@ -1099,21 +1098,24 @@ synonym: "output var" EXACT []
 [Term]
 id: PREFER_UNIT:0000161
 name: gram per gram
-comment: "A unit representing a mass ratio, typically used to express biomass yield as grams of biomass per gram of substrate consumed." [PREFER]
+comment: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material or input substrate consumed." [PREFER]
 synonym: "g/g" EXACT []
 is_a: UO:0000190 ! ratio unit
 
 [Term]
 id: PREFER_UNIT:0000162
 name: carbon mole per gram
-comment: "A unit which represents the amount of substance in carbon moles per gram of material. Commonly used to express biomass yield on a carbon basis." [PREFER]
+comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound - in carbon moles per gram of initial material or input substrate consumed." [PREFER]
 synonym: "cmol/g" EXACT []
 is_a: UO:0000190 ! ratio unit
 
 [Term]
 id: PREFER_UNIT:0000163
 name: carbon mole per carbon mole
-comment: "A unit which expresses the ratio of carbon moles in biomass to carbon moles in substrate consumed. Used for carbon yield measurements." [PREFER]
+comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound -  in carbon moles per carbon mole of initial material or input substrate consumed." [PREFER]
 synonym: "cmol/cmol" EXACT []
 is_a: UO:0000190 ! ratio unit
+
+! ============================
+
 
