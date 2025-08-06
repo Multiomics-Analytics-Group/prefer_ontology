@@ -1103,8 +1103,8 @@ is_a: UO:0000190 ! ratio unit
 
 [Term]
 id: PREFER_UNIT:0000165
-name: mole per carbon mole(X) per hour
-comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass generated per hour." [PREFER]
+name: mole per carbon mole(X)
+comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass generated." [PREFER]
 synonym: "mol/cmol(X)" EXACT []
 synonym: "mol/c-mol(X)" EXACT []
 is_a: UO:0000190 ! ratio unit
