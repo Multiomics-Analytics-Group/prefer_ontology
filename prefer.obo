@@ -18,7 +18,7 @@ xref: OBI_0000011 ! planned process
 [Term]
 id: PREFER:0000002
 name: fermentation run
-def: "An individual instance of a precision fermentation process carried out under defined experimental conditions (e.g., temperature, pH, agitation) using a single bioreactor system."
+def: "An individual instance of a precision fermentation process carried out under defined experimental conditions (e.g., temperature, pH, agitation) using a single bioreactor system." [PREFER]
 synonym: "run" EXACT []
 part_of: PREFER:0000003 ! fermentation experiment
 relationship: PREFER_RE:has_measured_cultivation_condition PREFER:0000008 ! cultivation condition
@@ -27,7 +27,7 @@ relationship: PREFER_RE:has_measured_process_variable PREFER:0000009 ! process v
 [Term]
 id: PREFER:0000003
 name: fermentation experiment
-def: "A set of fermentation runs conducted within the same project, all following a shared experimental approach or protocol."
+def: "A set of fermentation runs conducted within the same project, all following a shared experimental approach or protocol." [PREFER]
 synonym: "experiment" EXACT []
 has_part: PREFER:0000002 ! fermentation run
 is_a: PREFER:0000001 ! precision fermentation process
@@ -812,7 +812,7 @@ name: compound yield (X)
 def: "The yield of compound produced per biomass (dry weight), quantifying how efficiently compound is produced relative to biomass generation." [PREFER]
 is_a: PREFER:0000156 ! yield
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000164 ! gram per gram(X)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole(X) per hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole(X)
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000166 ! carbon mole per carbon mole (X)
 
 [Term]
