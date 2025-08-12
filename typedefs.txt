@@ -55,6 +55,13 @@ domain: PREFER:0000002 ! fermentation run
 range: PREFER:0000010 ! compound
 
 [Typedef]
+id: PREFER_RE:has_measured_imodulon
+name: has measured imodulon
+def: "Indicates compounds measured during a run." [PREFER]
+domain: PREFER:0000002 ! fermentation run
+range: PREFER:0000017 ! iModulon
+
+[Typedef]
 id: PREFER_RE:has_data_acquisition_mode
 name: has data acquisition mode
 def: "Relates a bioprocess variable or measurement to the mode of data acquisition used to obtain it (e.g., inline, online, atline, or offline)." [PREFER]
