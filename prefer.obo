@@ -24,6 +24,11 @@ synonym: "run" EXACT []
 part_of: PREFER:0000003 ! fermentation experiment
 relationship: PREFER_RE:has_measured_cultivation_condition PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:has_measured_process_variable PREFER:0000009 ! process variable
+relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
+relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
+relationship: PREFER_RE:uses_fermenter PREFER:0000014 ! fermenter
+relationship: PREFER_RE:has_measured_compound PREFER:0000010 ! compound
+relationship: PREFER_RE:has_measured_imodulon PREFER:0000017 ! iModulon
 
 [Term]
 id: PREFER:0000003
@@ -50,12 +55,10 @@ name: user
 def: "The individual assigned as the project manager."
 is_a: PREFER:0000001 ! precision fermentation process
 
-
 [Term]
 id: PREFER:0000006
 name: institution
 def: "The public or private research center, university, or organization that hosts or supports the execution of the project."
-
 
 [Term]
 id: PREFER:0000007
@@ -68,7 +71,7 @@ is_a: PREFER:0000001 ! precision fermentation process
 id: PREFER:0000008
 name: cultivation condition
 def: "An initial experimental parameter or environmental setting established prior to or at the start of a fermentation process. This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture"
-synonym: "process variable" RELATED []
+synonym: "variable" RELATED []
 xref: BAO_0002070 ! measured value
 
 [Term]
@@ -87,43 +90,42 @@ is_a: CHEBI:24431 ! chemical entity
 [Term]
 id: PREFER:0000011
 name: medium
-def: "A solution containing macronutrients, micronutrients and buffering agents."
+def: "A solution containing macronutrients, micronutrients and buffering agents." [PREFER]
 relationship: PREFER_RE:has_ingredient PREFER:0000010 ! compound
+xref: EFO:0000579 media
 
 [Term]
 id: PREFER:0000012
 name: strain
 def: "A distinct microbial strain within the database."
-xref: NCBI_Taxon:Strain
-is_a: NCBI_Taxon:taxonomic rank
+is_a: NCBITaxon:taxonomic rank
+xref: NCBITaxon:Strain
 
 [Term]
 id: PREFER:0000013
 name: taxon
 def: "A specific taxa within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain."
-is_a: PREFER:0000001 ! precision fermentation process
-xref: NCBITaxon:1 ! root
 is_a: NCBITaxon:131567 ! cellular organisms
+xref: NCBITaxon:1 ! root
 
 [Term]
 id: PREFER:0000014
 name: fermenter
 def: "Concrete type of bioreactor environment where the fermentation occurs."
-synonym: "Bioreactor" EXACT []
-synonym: "Bioreactor system" EXACT []
+synonym: "bioreactor" EXACT []
+synonym: "bioreactor system" EXACT []
 is_a: BAO:0003118 ! instrument
+xref: OBI:0001046 ! bioreactor
 
 [Term]
 id: PREFER:0000015
 name: phase
 def: "A fermentation phase."
-is_a: PREFER:0000001 ! precision fermentation process
 
 [Term]
 id: PREFER:0000016
 name: event
 def: "A fermentation event that triggers the fermentation phase to start or end."
-is_a: PREFER:0000001 ! precision fermentation process
 
 [Term]
 id: PREFER:0000017
