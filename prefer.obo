@@ -1,15 +1,16 @@
 format-version: 1.2
-data-version: prefer/releases/v0_2025-09-01
+data-version: prefer/releases/v0_2025-08-28
 default-namespace: precisionfermentation
 ontology: prefer.obo
 
 [Term]
 id: PREFER:0000001
 name: precision fermentation process
-def: "A biotechnological method used in industrial or research settings that employs genetically engineered microorganisms (such as 
+def: "A biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively evolved(ALE) microorganisms (such as 
 bacteria, yeast, or fungi) to produce specific, high-value compounds with precise molecular structures. This process involves controlled 
-environments (e.g., controlled bioreactors, environmental conditions) where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often 
-with greater efficiency and specificity than traditional fermentation methods."
+environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., 
+pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, 
+or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods."
 comment: "Root of all fermentation terms in the Precision Fermentation Ontology."
 xref: GO:0006113 ! fermentation
 xref: Wikipedia: Industrial fermentation#Precision fermentation
