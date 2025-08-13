@@ -141,17 +141,20 @@ synonym: "input var" EXACT []
 
 [Term]
 id: PREFER:0000019
-name: temperature setpoint (C)
-def: "The target temperature value to be maintained within the fermenter, expressed in degrees Celsius (ºC)."
+name: temperature setpoint
+def: "The target temperature value to be maintained within the fermenter." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000041 ! temperature 
+relationship: PREFER_RE:has_possible_unit: UO:0000027 ! degree Celsius
+relationship: PREFER_RE:has_possible_unit: UO:0000195 ! degree Fahrenheit
 
 [Term]
 id: PREFER:0000020
 name: pH setpoint
-def: "Target pH value to be maintained within the fermenter throught the process."
+def: "Target pH value to be maintained within the fermenter throught the process." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
+relationship: PREFER_RE:related_to PREFER:0000040 ! pH
+relationship: PREFER_RE:has_possible_unit: UO:0000196 ! pH  
 
 [Term]
 id: PREFER:0000021
@@ -183,10 +186,13 @@ relationship: PREFER_RE:related_to PREFER:0000022 ! culture
 
 [Term]
 id: PREFER:0000025
-name: DO control setpoint (%)
-def: "The target value for dissolved oxygen (DO), in percent."
+name: DO control setpoint
+def: "The target value for dissolved oxygen." [PREFER]
+synonym: "dissolved oxygen control setpoint" EXACT []
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
+
 
 [Term]
 id: PREFER:0000026
@@ -198,18 +204,20 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 [Term]
 id: PREFER:0000027
 name: maximum stirring
-def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer."
+def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 synonym: "maximum shaking speed" EXACT []
-relationship: related_to PREFER:0000039 ! DO 
+relationship: related_to PREFER:0000039 ! DO
+relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second 
 
 [Term]
 id: PREFER:0000028
 name: minimum stirring
-def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer."
+def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 synonym: "minimum shaking speed" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second 
 
 [Term]
 id: PREFER:0000029
@@ -242,7 +250,7 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 [Term]
 id: PREFER:0000033
 name: DO control cascade level 3
-def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the o2_flow parameter to ahcieve the desired DO level."
+def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level."
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
@@ -252,228 +260,278 @@ name: starting OD
 def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)."
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
+relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density units
 
 [Term]
 id: PREFER:0000035
 name: final seed OD
-def: "The cell density of the seed culturre at the time it is inoculated to the main fermenter."
+def: "The cell density of the seed culturre at the time it is inoculated to the main fermenter." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
+relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density units
 
 [Term]
 id: PREFER:0000036
 name: initial culture volume
-def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum, no units."
+def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000022 ! culture 
-
-[Term]
-id: PREFER:0000037
-name: culture volume unit
-def: "The unit of measurement for the culture volume, in mL."
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000022 ! culture 
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter 
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter 
 
 [Term]
 id: PREFER:0000038
 name: feed profile
-def: "Feeding strategies typically found in a fed-batch fermentation. 1. Constant feeding rate, 2. Linear feeding rate and 3. Exponential feeding rate, 4. Combination of 1-2, 3-2 or 3-1 . The type of feeding profiles applied is process specific."
+def: "Feeding strategies typically found in a fed-batch fermentation. 1. Constant feeding rate, 2. Linear feeding rate and 3. Exponential feeding rate, 4. Combination of 1-2, 3-2 or 3-1 . The type of feeding profiles applied is process specific." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
+
+
+
+
 
 [Term]
 id: PREFER:0000039
 name: DO
-def: "Dissolved oxygen (DO) refers to the concentration of oxygen molecules (O₂) dissolved in a liquid medium, typically measured in bioreactors or aquatic systems."
+def: "Concentration of oxygen molecules (O₂) dissolved in a liquid medium."
+synonym: "dissolved oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
 [Term]
 id: PREFER:0000040
 name: pH
-def: "Bioreactor Potential of Hydrogen (pH) reading. Logarithmic scale used to specify the acidity or basicity of aqueous solutions."
+def: "Bioreactor Potential of Hydrogen (pH) reading. Logarithmic scale used to specify the acidity or basicity of aqueous solutions." [REFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000196 ! pH
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000041
 name: temperature
-def: "Bioreactor temperature reading. Pyhsical quantity that quantitatively expresses the attribute of hotness or coldness, reflecting the average kinetic energy of the vibrating and colliding atoms making up a substance."
+def: "Bioreactor temperature reading." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000027 ! degree Celsius
+relationship: PREFER_RE:has_possible_unit: UO:0000195 ! degree Fahrenheit
 
 [Term]
 id: PREFER:0000042
 name: pressure
-def: "Bioreactor pressure reading."
+def: "Bioreactor pressure reading." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit QUDT:BAR ! bar
+relationship: PREFER_RE:has_possible_unit: UO:0000110 ! pascal
 
 [Term]
 id: PREFER:0000043
 name: volume
-def: "Total volume of liquid in the fermenter, measured in L."
+def: "Total volume of liquid in the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000044
 name: sample mass
-def: "The mass of the sample taken from the run, measured in grams. Implemented for quantifying the amount of biomass, product, other compounds."
+def: "The mass of the sample taken from the run. Implemented for quantifying the amount of biomass, product, other compounds." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+relationship: PREFER_RE:has_possible_unit: UO:0000022 ! milligram
 
 /*
 [Term]
 id: PREFER:0000045
 name: sample volume
-def: "The volume of the sample taken from the bioprocess/run, measured in mL. Implemented for calculating concentrations, dilutions, etc."
+def: "The volume of the sample taken from a single run. Implemented for calculating concentrations, dilutions, etc." [PREFER]
 is_a: PREFER:00000XX ! intermediate variable
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000046
 name: accumulated sample volume
-def: "Total volume of all samples taken from the bioprocess/run up to a certain point in time, measured in mL."
+def: "Total volume of all samples taken from a single run up to a certain point in time." [PREFER]
 is_a: PREFER:00000XX ! intermediate variable
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 /*
 
 [Term]
 id: PREFER:0000047
 name: acid volume
-def: "Volume of the acidic solution pumped into the fermenter, measured  in L."
+def: "Volume of the acidic solution added into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000048
 name: base volume
-def: "Volume of the concentration base solution pumped into the fermenter to maintain the pH of cultivation at a constant level, measured  in L."
+def: "Volume of the concentration base solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000049
 name: acid rate
-def: "The flow rate at which the acid solution is added into the fermenter, measured in L/h." [PREFER]
+def: "The flow rate at which the acid solution is added into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
 id: PREFER:0000050
 name: base rate
-def: "The flow rate at which the base solution is pumped into the fermenter, measured in L/h."
+def: "The flow rate at which the base solution is added into the fermenter." [REFER]
 is_a: PREFER:0000009 ! Process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
 id: PREFER:0000051
 name: feed amount
-def: "The quantity or total mass of feed added to the bioprocess, measured in kg."
+def: "The quantity or total mass of feed added to the bioprocess" [PREFER]
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
+relationship: PREFER_RE:has_possible_unit: UO:0000009 ! kilogram
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 
 [Term]
 id: PREFER:0000052
 name: feed volume
-def: "The volume of the feed solution pumped to the bioprocess at a certain time point, measured in L."
+def: "The volume of the feed solution added to the bioprocess at a certain time point." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000053
 name: feed rate volumetric 
-def: "Rate at which the feed (based on its volume) is added to the bioprocess, measured in L/h."
+def: "Rate at which the feed (based on its volume) is added to the bioprocess." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
 id: PREFER:0000054
 name: stirrer speed 
-def: "Speed at which the impeller shaft rotates, measured in rpm (revolutions per minute)."
+def: "Speed at which the impeller shaft rotates." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second 
 
 [Term]
 id: PREFER:0000055
 name: air flow
-def: "Rate at which air is supplied to the fermnter, measured in lpm (liters per minute)"
+def: "Rate at which air is supplied to the fermnter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! online measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
 id: PREFER:0000056
 name: nitrogen flow
-def: "Rate at which nitrogen is supplied to the fermenter, measured in lpm (liters per minute)."
+def: "Rate at which nitrogen is supplied to the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
 id: PREFER:0000057
 name: oxygen flow
-def: "Rate at which oxygen is supplied to the fermenter, measured in lpm (liters per minute)."
+def: "Rate at which oxygen is supplied to the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
 id: PREFER:0000058
 name: inlet air o2
 def: "Percentaje of oxygen in the gas mixture that is being supplied into the fermenter."
 is_a: PREFER:0000009 ! process variable
+synonym: "inlet air oxygen" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000059
 name: inlet air co2
-def: "Percentaje of carbon dioxide in the gas mixture that is being supplied into the fermenter."
+def: "Percentaje of carbon dioxide in the gas mixture that is being supplied into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
+synonym: "inlet air carbon dioxide" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000060
 name: OD
-def: "OD600. Optical density to measure biomass. Absorbance is the logarithm of the ratio of incident to transmitted radiant power through a sample (excluding the effects on cell walls)"
+def: "Optical density to measure biomass. Absorbance is the logarithm of the ratio of incident to transmitted radiant power through a sample (excluding the effects on cell walls)"
+synonym: "optical density" EXACT []
+synonym: "OD600" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 
 [Term]
 id: PREFER:0000061
-name: o2 uptake rate
-def: "Oxygen Uptake Rate: Online determination of the rate at which O2 is consumed by cells. Ambr records it as unnormalized in mmol/h, with factor 0.001"
-synonym: "OUR" EXACT []
+name: OUR
+def: "Inline determination of the rate at which O2 is consumed by cells." [PREFER]
+synonym: "o2 uptake rate" EXACT []
+synonym: "oxygen uptake rate" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000171 ! millimole per hour
 
 [Term]
 id: PREFER:0000062
-name: co2 evolution rate
-def: "Online determination of the rate at which CO2 is produced by cells. Ambr records it as unnormalized in mmol/h, with factor 0.001."
-synonym: "CER" EXACT []
+name: CER
+def: "Inline determination of the rate at which CO2 is produced by cells." [PREFER]
+synonym: "co2 evolution rate" EXACT []
+synonym: "carbon dioxide evolution rate" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000171 ! millimole per hour
 
 [Term]
 id: PREFER:0000063
 name: OTR
-def: "Oxygen Transfer Rate (mol/h): rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a fermenter."
+def: "Rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a fermenter." [PREFER] 
+synonym: "oxygen transfer rate" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
 [Term]
 id: PREFER:0000064
 name: CTR
-def: "Carbon dioxide Transfer Rate (mol/h): rate at which CO2 is transferred out of the fermenter. Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds."
-synonym: "Carbon dioxide transfer rate" EXACT []
+def: "Rate at which CO2 is transferred out of the fermenter." [PREFER]
+comment: "Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds." [PREFER]
+synonym: "carbon dioxide transfer rate" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
 [Term]
 id: PREFER:0000065
@@ -484,115 +542,141 @@ is_a: PREFER:0000159 ! respiratory metric
 [Term]
 id: PREFER:0000066
 name: produced co2
-def: "Amount of CO2 generated during the bioprocess, unnormalized, integrated, in moles."
+def: "Amount of CO2 generated during the bioprocess." [PREFER]
+synonym: "produced carbon dioxide" EXACT []
 synonym: "formed co2" EXACT []
+synonym: "formed carbon dioxide" EXACT []
 is_a: PREFER:0000158 ! respiratory metric
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 
 [Term]
 id: PREFER:0000067
 name: consumed co2
-def: "Amount of CO2 consumed during the bioprocess. Ambr records it as unnormalized, integrated, in moles."
+def: "Amount of CO2 consumed during the bioprocess." [PREFER]
+synonym: "consumed oxygen" EXACT []
 is_a: PREFER:0000158 ! respiratory metric
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 
 [Term]
 id: PREFER:0000068
 name: offgas co2
-def: "The percentage of CO2 present in the exhaust stream leaving the fermenter, indicating the amount of CO2 produced."
+def: "The percentage of CO2 present in the exhaust stream leaving the fermenter, indicating the amount of CO2 produced." [PREFER]
+synonym: "offgas carbon dioxide" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000069
 name: offgas o2
-def: "The percentage of O2 present in the exhaust stream leaving of the fermenter, indicating how much oxygen has been consumed."
+def: "The percentage of O2 present in the exhaust stream leaving of the fermenter, indicating how much oxygen has been consumed." [PREFER]
+synonym: "offgas oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000070
 name: compound
-def: "Concentration of the compound(substrate (ingredient), product or by-product) in the bioprocess, measured in g/L. Gases such as O2 and CO2 are considered compounds but independently."
+def: "Concentration of the compound(substrate (ingredient), product or by-product) in the bioprocess." [PREFER]
+comment: "Gases such as O2 and CO2 are considered compounds but independently."
 is_a: PREFER:0000010 ! compound
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000175 ! gram per liter
 
 [Term]
 id: PREFER:0000071
 name: biomass concentration
-def: "Concentration of the biomass, measured in g/L."
+def: "Concentration of the biomass" [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
+relationship: PREFER_RE:has_possible_unit: UO:0000175 ! gram per liter
 
 /*
 [Term]
 id: PREFER:0000072
 name: volume Added
-def: "It is the actual final volume that has been added." 
+def: "It is the actual final volume that has been added." [PREFER]
 is_a: PREFER:00000XX ! Intermediate variable
 relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000073
 name: liquid volume downscaled
-def: "It is the actual volume at a certain time point where sampling was performed."
+def: "It is the actual volume at a certain time point where sampling was performed." [PREFER]
 is_a: PREFER:00000XX ! Intermediate variable
 relationship: PREFER_RE:related_to REFER:0000043 ! volume
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000074
 name: liquid volume (without corrected samples)
-def: "Total volume of liquid in the fermenter without subtracting the sample volume extracted, measured in L."
+def: "Total volume of liquid in the fermenter without subtracting the sample volume extracted." [PREFER]
 is_a: PREFER:00000XX ! Intermediate variable
 relationship: PREFER_RE:related_to REFER:0000043 ! volume
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000075
 name: volume unit
-def: "The unit for the additional volume added, categorical variable normally in mL."
+def: "The unit for the additional volume added." [PREFER]
 is_a: PREFER:00000XX ! Intermediate variable
 relationship: PREFER_RE:related_to REFER:0000043 ! volume
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000076
 name: volume to add none 
-def: "The volume that must be added ro reach a certain starting OD in the reactor, scalar variable pre-calculated."
+def: "The volume that must be added to reach a certain starting OD in the reactor." [PREFER]
 is_a: PREFER:00000XX ! Intermediate variable
 relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 /*
 
 [Term]
 id: PREFER:0000077
 name: dilution rate
-def: "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted, measured in 1/h."
+def: "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted." [PREFER]
+comment: "Rate expressed in reciprocal hours (h⁻¹ or 1/h)."
 synonym: "D" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: QUDT:PER-HR ! per hour
 
 [Term]
 id: PREFER:0000078
 name: carbon balance
-def: "Balance which compares the total amount of carbon entering the fermenter (through the substrate) to the total carbon leaving the fermenter (in products, biomass or by.products like CO2), expressed in percentage."
+def: "Balance which compares the total amount of carbon entering the fermenter (through the substrate) to the total carbon leaving the fermenter (in products, biomass or by-products like CO2)." [PREFER]
 synonym: C balance EXACT []
 is_a: PREFER:0000158 ! respiratory metric
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000079
 name: carbon balance using carbon mols
-def: "The carbon balance calculated using carbon moles (c-mols), providing more molecular level view of the carbon flow, no units."
+def: "The carbon balance calculated using carbon moles (c-mols), providing more molecular level view of the carbon flow, no units." [PREFER]
 synonym: "C balance (c-mols)" EXACT []
 is_a: PREFER:0000158 ! respiratory metric
 
 [Term]
 id: PREFER:0000080
 name: carbon balance with reference to substrate
-def: "The carbon balance specifically referenced to the substrate usedin the bioprocess, to asses substrate utilization efficiency. No units."
+def: "The carbon balance specifically referenced to the substrate usedin the bioprocess, to asses substrate utilization efficiency. No units." [PREFER]
 synonym: "carbon balance to substrate" EXACT []
 is_a: PREFER:0000158 ! respiratory metric
 
 [Term]
 id: PREFER:0000081
 name: degree of reduction balance
-def: "Degree of Reduction (DoR) balance, important for understanding the redox balance in the bioprocess. The balance ensures that the electrons entering the bioprocess are equal to the electrons leaving it. It is expressed in percentage."
+def: Balance that quantifies the redox state in a bioprocess by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation." [PREFER]
 synonym: "DoR balance" EXACT []
 is_a: PREFER:0000156 ! yield
+relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000082
@@ -604,41 +688,29 @@ is_a: PREFER:0000156 ! yield
 [Term]
 id: PREFER:0000083
 name: substrate consumed
-def: "The total amount of substrate consumed by the cells during the bioprocess, expressed in g."
+def: "The total amount of substrate consumed by the cells during the bioprocess." [PREFER]
 is_a: PREFER:0000018 ! input variable
-
-[Term]
-id: PREFER:0000084
-name: substrate consumed molar
-def: "The total amount of substrate consumed by the cells during the bioprocess, expressed in moles."
-is_a: PREFER:0000018 ! input variable
-
-[Term]
-id: PREFER:0000085
-name: substrate consumed carbon molar
-def: "The total amount of substrate consumed by the cells during the bioprocess, expressed in c-mols."
-is_a: PREFER:0000018 ! input variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
 /*
 [Term]
 id: PREFER:0000086
 name: substrate lost in sampling
-def: "The amount of substrate removed from the run durning sampling, expressed in g."
+def: "The amount of substrate removed from the run durning sampling." [PREFER]
 is_a: PREFER:00000XX ! intermediate variable or input variable 
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 /*
 
 [Term]
 id: PREFER:0000087
 name: substrate uptake rate
-def: "Substrate uptake rate (qs). The rate at which substrate is consumed by the cells, expressed in g/h."
+def: "The rate at which substrate is consumed by the cells." [PREFER]
 synonym: "QS" EXACT []
 is_a: PREFER:0000157 ! rate
-
-[Term]
-id: PREFER:0000088
-name: substrate uptake rate molar
-def: "The rate at which substrate is consumed by the cells, expressed in mol/h."
-is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
 [Term]
 id: PREFER:0000089
@@ -682,8 +754,14 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000166 ! carbon mole per
 [Term]
 id: PREFER:0000097
 name: o2 decimal
-def: "The decimal fraction of O2 in a gas stream, representing the proportion of O2 in the exhaust gas relative to the total gas volume, no units."
+def: "The decimal fraction of O2 in a gas stream, representing the proportion of O2 in the exhaust gas relative to the total gas volume, no units." [PREFER]
 is_a: PREFER:0000018 ! input variable
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000098
@@ -691,30 +769,41 @@ name: oxygen partial integration
 def: "A time-based integration of O2 production, often calculated for specific time intervals??????, no units."
 is_a: PREFER:0000018 ! input variable
 
+
+
+
+
+
+
+
+
 [Term]
 id: PREFER:0000099
 name: oxygen accumulated
-def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value, no units"
+def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value, no units" [PREFER]
 is_a: PREFER:0000018 ! input variable
 
 [Term]
 id: PREFER:0000100
 name: oxygen accumulated downscaled
-def: "The total molar quantity of O2 generated, expressed in mol"
+def: "The total molar quantity of O2 generated." [PREFER]
 is_a: PREFER:0000018 ! input variable
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 
 [Term]
 id: PREFER:0000101
 name: oxygen (Q)
-def: "The volumetric rate of O2 consumed by the bioprocess over time, expressed in L/h."
+def: "The volumetric rate of O2 consumed by the bioprocess over time." [PREFER]
 synonym: "Oxygen volumetric rate" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
 id: PREFER:0000102
 name: oxygen molar
-def: "The molar rate of O2 production, measuring the quantity of O2 generated by the bioprocess in terms of moles, expressed in mol/h."
+def: "The molar rate of O2 production, measuring the quantity of O2 generated by the bioprocess in terms of moles." [PREFER]
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mol per hour
 
 [Term]
 id: PREFER:0000103
@@ -746,47 +835,36 @@ is_a: PREFER:0000156 ! yield
 [Term]
 id: PREFER:0000107
 name: compound produced
-def: "Total amount of compound produced in the bioprocess, representing the cumulative production of the compound over time, measured in g."
+def: "Total amount of compound produced in the bioprocess, representing the cumulative production of the compound over time." [PREFER]
 is_a: PREFER:0000160 ! output variable
-
-[Term]
-id: PREFER:0000108
-name: compound produced molar
-def: "Total amount of compound produced in the bioprocess, expressed in moles(mol), providing molecular level quantification."
-is_a: PREFER:0000160 ! output variable
-
-[Term]
-id: PREFER:0000109
-name: compound produced carbon molar
-def: "Total amount of compound produced in the bioprocess, expressed in cmol, which is related with the carbon content of the compound."
-is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
 /*
 [Term]
 id: PREFER:0000110
 name: compound lost in sample
-def: "The amount of compound lost or removed from the fermenter during sampling, expressed in g."
+def: "The amount of compound lost or removed from the fermenter during sampling." [PREFER]
 is_a: PREFER:0000017 ! intermediate variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 /*
 
 [Term]
 id: PREFER:0000111
 name: residual compound amount
-def: "The remaining amount of 'compound' left in the fermenter, expressed in g. It is calculated substracting the compound concentration measured offline, multiplied by the liquid_volume_downscaled to get the amount."
+def: "The remaining amount of 'compound' left in the fermenter. It is calculated substracting the compound concentration measured offline, multiplied by the liquid volume downscaled to get the amount." [PREFER]
 is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 
 [Term]
 id: PREFER:0000113
 name: compound production rate
-def: "rate at which the compound is produced over time, indicating the speed of compound production, expressed in g/h."
+def: "rate at which the compound is produced over time, indicating the speed of compound production." [PREFER]
 synonym: "compound formation rate" []
 is_a: PREFER:0000157 ! rate
-
-[Term]
-id: PREFER:0000114
-name: compound production rate molar
-def: "Rate at which the compound is produced over time, expressed in mol/h."
-is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! gram per hour
 
 [Term]
 id: PREFER:0000115
@@ -828,9 +906,11 @@ is_a: PREFER:0000160 ! output variable
 [Term]
 id: PREFER:0000124
 name: carbon dioxide molar
-def: "The molar rate of CO2 production, measuring the quantity of CO2 generated by the bioprocess in terms of moles, expressed in mol/h."
+def: "The molar rate of CO2 production, measuring the quantity of CO2 generated by the bioprocess in terms of moles."
 synonym: "CO2 molar" EXACT []
 is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: id: PREFER_UNIT:0000170 ! mole per hour
+
 
 [Term]
 id: PREFER:0000125
@@ -849,16 +929,22 @@ is_a: PREFER:0000160 ! output variable
 [Term]
 id: PREFER:0000127
 name: carbon dioxide accumulated downscaled
-def: "The total molar quantity of CO2 generated, expressed in mol."
+def: "The total molar quantity of CO2 generated." [PREFER]
 synonym: "co2 accumulated downscaled" EXACT []
 is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 
 [Term]
 id: PREFER:0000128
 name: carbon dioxide Q
-def: "The volumetric rate of CO2 produced by the bioprocess over time, expressed in L/h."
+def: "The volumetric rate of CO2 produced by the bioprocess over time." [PREFER]
 synonym: "co2 Q" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
+
+
+
+
 
 [Term]
 id: PREFER:0000129
@@ -895,53 +981,52 @@ def: "The yield of CO2 produced per carbon mole of biomass (X), expressed in mol
 synonym: co2 yield (X) EXACT []
 is_a: PREFER:0000156 ! yield
 
+
+
+
+
+
+
+
 [Term]
 id: PREFER:0000134
 name: biomass amount
-def: "Total mass of biomass or total amount of cellular growth , measured in g."
+def: "Total mass of biomass or total amount of cellular growth." [PREFER]
 is_a: PREFER:0000160 ! output variable
-
-[Term]
-id: PREFER:0000135
-name: biomass amount molar
-def: "The total number (or amount) of biomass,  measured in moles."
-is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 
 [Term]
 id: PREFER:0000136
 name: biomass lost in sampling
-def: "The amount of biomass removed from the bioreactor during sampling, expressed in grams (g)."
+def: "The amount of biomass removed from the bioreactor during sampling." [PREFER]
 is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 
 [Term]
 id: PREFER:0000137
 name: biomass production
-def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in g."
+def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess." [PREFER]
 synonym: "biomass formed" EXACT []
 is_a: PREFER:0000160 ! output variable
-
-[Term]
-id: PREFER:0000138
-name: biomass production molar
-def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in moles (mol)."
-synonym: "Biomass formed molar" EXACT []
-is_a: PREFER:0000160 ! output variable
-
-[Term]
-id: PREFER:0000139
-name: biomass production carbon molar
-def: "The total amount of biomass, cumulative biomass production, formed during the bioprocess, expressed in carbon moles (c-mol)."
-synonym: "Biomass formed carbon molar" EXACT []
-synonym: "Biomass formed c-molar" EXACT []
-is_a: PREFER:0000160 ! output variable
+relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
 [Term]
 id: PREFER:0000140
 name: biomass production rate
-def: " The rate at which the biomass is produced over time. expressed in grams per hour (g/h)."
+def: " The rate at which the biomass is produced over time." [PREFER]
 synonym: "Rx" EXACT []
 synonym: "Biomass formation rate" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000141
@@ -951,45 +1036,58 @@ synonym: "Rx molar" EXACT []
 synonym: "Biomass formation rate molar" EXACT []
 is_a: PREFER:0000157 ! rate
 
+
+
+
+
+
+
+
+
 [Term]
 id: PREFER:0000142
 name: biomass specific growth rate
-def: "The specific growth rate at which the biomass(X) grows per unit of biomass. Units: 1/h."
+def: "The specific growth rate at which the biomass(X) grows per unit of biomass." [PREFER]
 synonym: "μ" EXACT []
 synonym: "growth rate" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit QUDT:PER-HR ! per hour
 
 [Term]
 id: PREFER:0000143
 name: average biomass specific growth rate in feed phase
-def: "The average specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
+def: "The average specific growth rate of biomass during the feeding phase." [PREFER]
 synonym: "μ mean in feed" EXACT []
 synonym: "μ mean in feed phase" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit QUDT:PER-HR ! per hour
 
 [Term]
 id: PREFER:0000144
 name: average biomass specific growth rate in batch phase
-def: "The average specific growth rate of biomass during the batch phase, expressed in per hour (1/h)."
+def: "The average specific growth rate of biomass during the batch phase." [PREFER]
 synonym: "μ mean in batch" EXACT []
 synonym: "μ mean in batch phase" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit QUDT:PER-HR ! per hour
 
 [Term]
 id: PREFER:0000145
 name: maximum biomass specific growth rate in feed phase
-def: "The maximum specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
+def: "The maximum specific growth rate of biomass during the feeding phase." [PREFER]
 synonym: "μ max in feed" EXACT []
 synonym: "μ max in feed phase" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit QUDT:PER-HR ! per hour
 
 [Term]
 id: PREFER:0000146
 name: minimum biomass specific growth rate in feed phase
-def: "The minimum specific growth rate of biomass during the feeding phase, expressed in per hour (1/h)."
+def: "The minimum specific growth rate of biomass during the feeding phase." [PREFER]
 synonym: "μ min in feed" EXACT []
 synonym: "μ min in feed phase" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit QUDT:PER-HR ! per hour
 
 [Term]
 id: PREFER:0000147
@@ -1119,5 +1217,47 @@ comment: "A unit representing a carbon-based ratio, typically used to express pr
 synonym: "cmol/cmol(X)" EXACT []
 synonym: "c-mol/c-mol(X)" EXACT []
 is_a: UO:0000190 ! ratio unit
+
+[Term]
+id: PREFER_UNIT:0000167
+name: liters per hour
+comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in one hour." [adapted from UOC:GVG]
+synonym: "litres per hour" EXACT []
+synonym: "L/h" EXACT []
+is_a: UO:0000270 ! volumetric flow rate unit
+
+[Term]
+id: PREFER_UNIT:0000168
+name: carbon mole 
+comment: "Semantically equivalent in magnitude to the SI mole (1 C-mol = 1 mol) but used to indicate 'mole of carbon atoms' (elemental basis)." [PREFER]
+synonym: "c-mol" EXACT []
+synonym: "cmol" EXACT []
+is_a: UO:0000013 ! mole
+
+[Term]
+id: PREFER_UNIT:0000169
+name: gram per hour
+comment: "A unit of mass flow rate represenitn one gram of substance passing through a given surface or system in one hour." [PREFER]
+synonym: "g/h" EXACT []
+
+[Term]
+id: PREFER_UNIT:0000170
+name: mole per hour
+comment: "A unit of mass flow rate represenitn one mole of substance passing through a given surface or system in one hour." [PREFER]
+synonym: "mol/h" EXACT []
+
+[Term]
+id: PREFER_UNIT:0000171
+name: millimole per hour
+comment: "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour." [PREFER]
+synonym: "mmol/h" EXACT []
+
+[Term]
+id: PREFER_UNIT:0000172
+name: liters per minute
+comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in a minute." [adapted from UOC:GVG]
+synonym: "litres per minute" EXACT []
+synonym: "L/min" EXACT []
+is_a: UO:0000270 ! volumetric flow rate unit
 
 ! ============================
