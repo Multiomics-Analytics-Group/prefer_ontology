@@ -9,7 +9,7 @@ name: precision fermentation process
 def: "A biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively evolved(ALE) microorganisms (such as bacteria, yeast, or fungi) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods." [PREFER]
 comment: "Root of all fermentation terms in the Precision Fermentation Ontology."
 xref: GO:0006113 ! fermentation
-xref: Wikipedia: Industrial fermentation#Precision fermentation
+xref: Wikipedia:Industrial_fermentation#Precision_fermentation
 xref: OBI_0000011 ! planned process
 
 [Term]
@@ -44,24 +44,24 @@ has_part: PREFER:0000003 ! fermentation experiment
 is_a: PREFER:0000001 ! precision fermentation process
 xref: OBI_0000066 ! investigation
 
-/*
-[Term]
-id: PREFER:0000005
-name: user
-def: "The individual assigned as the project manager."
-is_a: PREFER:0000001 ! precision fermentation process
+! ============================
+![Term]
+!id: PREFER:0000005
+!name: user
+!def: "The individual assigned as the project manager."
+!is_a: PREFER:0000001 ! precision fermentation process
 
-[Term]
-id: PREFER:0000006
-name: institution
-def: "The public or private research center, university, or organization that hosts or supports the execution of the project."
+![Term]
+!id: PREFER:0000006
+!name: institution
+!def: "The public or private research center, university, or organization that hosts or supports the execution of the project."
 
-[Term]
-id: PREFER:0000007
-name: country
-def: "The state or nation where the project is carried out."
-is_a: PREFER:0000001 ! precision fermentation process
-*/
+![Term]
+!id: PREFER:0000007
+!name: country
+!def: "The state or nation where the project is carried out."
+!is_a: PREFER:0000001 ! precision fermentation process
+! ============================
 
 [Term]
 id: PREFER:0000008
@@ -88,14 +88,14 @@ id: PREFER:0000011
 name: medium
 def: "A solution containing macronutrients, micronutrients and buffering agents." [PREFER]
 relationship: PREFER_RE:has_ingredient PREFER:0000010 ! compound
-xref: EFO:0000579 media
+xref: EFO:0000579 ! media
 
 [Term]
 id: PREFER:0000012
 name: strain
 def: "A distinct microbial strain within the database." [PREFER]
-is_a: NCBITaxon:taxonomic rank
-xref: NCBITaxon:Strain
+is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
+xref: NCBITaxon:strain
 
 [Term]
 id: PREFER:0000013
@@ -163,7 +163,6 @@ relationship: PREFER_RE:related_to PREFER:0000040 ! pH
 id: PREFER:0000022
 name: pH control acid solution
 def: "The acidic solution used to control and maintain the pH within the fermenter, when it rises above the setpoint."
-synonym:
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 
@@ -188,7 +187,6 @@ synonym: "dissolved oxygen control setpoint" EXACT []
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
-
 
 [Term]
 id: PREFER:0000026
@@ -343,23 +341,23 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measu
 relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000022 ! milligram
 
-/*
-[Term]
-id: PREFER:0000045
-name: sample volume
-def: "The volume of the sample taken from a single run. Implemented for calculating concentrations, dilutions, etc." [PREFER]
-is_a: PREFER:00000XX ! intermediate variable
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-
-[Term]
-id: PREFER:0000046
-name: accumulated sample volume
-def: "Total volume of all samples taken from a single run up to a certain point in time." [PREFER]
-is_a: PREFER:00000XX ! intermediate variable
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-/*
+! ============================
+![Term]
+!id: PREFER:0000045
+!name: sample volume
+!def: "The volume of the sample taken from a single run. Implemented for calculating concentrations, dilutions, etc." [PREFER]
+!is_a: PREFER:00000XX ! intermediate variable
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+!
+![Term]
+!id: PREFER:0000046
+!name: accumulated sample volume
+!def: "Total volume of all samples taken from a single run up to a certain point in time." [PREFER]
+!is_a: PREFER:00000XX ! intermediate variable
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+! ============================
 
 [Term]
 id: PREFER:0000047
@@ -588,52 +586,52 @@ is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000175 ! gram per liter
 
-/*
-[Term]
-id: PREFER:0000072
-name: volume Added
-def: "It is the actual final volume that has been added." [PREFER]
-is_a: PREFER:00000XX ! Intermediate variable
-relationship: PREFER_RE:related_to REFER:0000043 ! Volume
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-
-[Term]
-id: PREFER:0000073
-name: liquid volume downscaled
-def: "It is the actual volume at a certain time point where sampling was performed." [PREFER]
-is_a: PREFER:00000XX ! Intermediate variable
-relationship: PREFER_RE:related_to REFER:0000043 ! volume
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-
-[Term]
-id: PREFER:0000074
-name: liquid volume (without corrected samples)
-def: "Total volume of liquid in the fermenter without subtracting the sample volume extracted." [PREFER]
-is_a: PREFER:00000XX ! Intermediate variable
-relationship: PREFER_RE:related_to REFER:0000043 ! volume
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-
-[Term]
-id: PREFER:0000075
-name: volume unit
-def: "The unit for the additional volume added." [PREFER]
-is_a: PREFER:00000XX ! Intermediate variable
-relationship: PREFER_RE:related_to REFER:0000043 ! volume
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-
-[Term]
-id: PREFER:0000076
-name: volume to add none 
-def: "The volume that must be added to reach a certain starting OD in the reactor." [PREFER]
-is_a: PREFER:00000XX ! Intermediate variable
-relationship: PREFER_RE:related_to REFER:0000043 ! Volume
-relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-/*
+! ============================
+![Term]
+!id: PREFER:0000072
+!name: volume Added
+!def: "It is the actual final volume that has been added." [PREFER]
+!is_a: PREFER:00000XX ! Intermediate variable
+!relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+!
+![Term]
+!id: PREFER:0000073
+!name: liquid volume downscaled
+!def: "It is the actual volume at a certain time point where sampling was performed." [PREFER]
+!is_a: PREFER:00000XX ! Intermediate variable
+!relationship: PREFER_RE:related_to REFER:0000043 ! volume
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+!
+![Term]
+!id: PREFER:0000074
+!name: liquid volume (without corrected samples)
+!def: "Total volume of liquid in the fermenter without subtracting the sample volume extracted." [PREFER]
+!is_a: PREFER:00000XX ! Intermediate variable
+!relationship: PREFER_RE:related_to REFER:0000043 ! volume
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+!
+![Term]
+!id: PREFER:0000075
+!name: volume unit
+!def: "The unit for the additional volume added." [PREFER]
+!is_a: PREFER:00000XX ! Intermediate variable
+!relationship: PREFER_RE:related_to REFER:0000043 ! volume
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+!
+![Term]
+!id: PREFER:0000076
+!name: volume to add none 
+!def: "The volume that must be added to reach a certain starting OD in the reactor." [PREFER]
+!is_a: PREFER:00000XX ! Intermediate variable
+!relationship: PREFER_RE:related_to REFER:0000043 ! Volume
+!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+! ============================
 
 [Term]
 id: PREFER:0000077
@@ -648,7 +646,7 @@ relationship: PREFER_RE:has_possible_unit: QUDT:PER-HR ! per hour
 id: PREFER:0000078
 name: carbon balance
 def: "Balance which compares the total amount of carbon entering the fermenter (through the substrate) to the total carbon leaving the fermenter (in products, biomass or by-products like CO2)." [PREFER]
-synonym: C balance EXACT []
+synonym: "C balance" EXACT []
 is_a: PREFER:0000158 ! respiratory metric
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
@@ -669,7 +667,7 @@ is_a: PREFER:0000158 ! respiratory metric
 [Term]
 id: PREFER:0000081
 name: degree of reduction balance
-def: Balance that quantifies the redox state in a bioprocess by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation." [PREFER]
+def: "Balance that quantifies the redox state in a bioprocess by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation." [PREFER]
 synonym: "DoR balance" EXACT []
 is_a: PREFER:0000156 ! yield
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
@@ -690,14 +688,14 @@ relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
-/*
-[Term]
-id: PREFER:0000086
-name: substrate lost in sampling
-def: "The amount of substrate removed from the run durning sampling." [PREFER]
-is_a: PREFER:00000XX ! intermediate variable or input variable 
-relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
-/*
+! ============================
+![Term]
+!id: PREFER:0000086
+!name: substrate lost in sampling
+!def: "The amount of substrate removed from the run durning sampling." [PREFER]
+!is_a: PREFER:00000XX ! intermediate variable or input variable 
+!relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+! ============================
 
 [Term]
 id: PREFER:0000087
@@ -825,7 +823,7 @@ is_a: PREFER:0000156 ! yield
 id: PREFER:0000106
 name: oxygen yield (X)
 def: "The yield of O2 consumed per carbon mole of biomass (X), expressed in moles of O2 per carbon mole of biomass (mol/c-mol(X)), describing how much O2 is consumed relative to the amount of biomass generated."
-synonym: "o2 yield" (X)
+synonym: "o2 yield (X)" EXACT []
 is_a: PREFER:0000156 ! yield
 
 [Term]
@@ -837,14 +835,14 @@ relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
-/*
-[Term]
-id: PREFER:0000110
-name: compound lost in sample
-def: "The amount of compound lost or removed from the fermenter during sampling." [PREFER]
-is_a: PREFER:0000017 ! intermediate variable
-relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
-/*
+! ============================
+![Term]
+!id: PREFER:0000110
+!name: compound lost in sample
+!def: "The amount of compound lost or removed from the fermenter during sampling." [PREFER]
+!is_a: PREFER:0000017 ! intermediate variable
+!relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
+! ============================
 
 [Term]
 id: PREFER:0000111
