@@ -742,7 +742,7 @@ is_a: PREFER:0000157 ! rate
 [Term]
 id: PREFER:0000094
 name: substrate yield (X)
-def: "The amount of substrate consumed per biomass produced."
+def: "The amount of substrate consumed per biomass produced." [PREFER]
 is_a: PREFER:0000156 ! yield
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000164 ! gram per gram(X)
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole(X)
@@ -751,34 +751,23 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000166 ! carbon mole per
 [Term]
 id: PREFER:0000097
 name: o2 decimal
-def: "The decimal fraction of O2 in a gas stream, representing the proportion of O2 in the exhaust gas relative to the total gas volume, no units." [PREFER]
+def: "The decimal fraction of O2 in a gas stream, representing the proportion of O2 in the exhaust gas relative to the total gas volume." [PREFER]
 is_a: PREFER:0000018 ! input variable
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000098
 name: oxygen partial integration
-def: "A time-based integration of O2 production, often calculated for specific time intervals??????, no units."
+def: "A time-based integration of O2 production, often calculated for specific time intervals." [PREFER]
 is_a: PREFER:0000018 ! input variable
-
-
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000099
 name: oxygen accumulated
-def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value, no units" [PREFER]
+def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value." [PREFER]
 is_a: PREFER:0000018 ! input variable
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000100
