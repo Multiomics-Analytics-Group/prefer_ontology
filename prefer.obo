@@ -571,8 +571,8 @@ relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000070
-name: compound
-def: "Concentration of the compound(substrate (ingredient), product or by-product) in the bioprocess." [PREFER]
+name: gas concentration
+def: "Concentration of the gas compound(substrate (ingredient), product or by-product) in the bioprocess." [PREFER]
 comment: "Gases such as O2 and CO2 are considered compounds but independently."
 is_a: PREFER:0000010 ! compound
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
