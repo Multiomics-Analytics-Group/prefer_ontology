@@ -2,6 +2,9 @@ format-version: 1.2
 data-version: prefer/releases/v0_2025-08-28
 default-namespace: precisionfermentation
 ontology: prefer.obo
+property_value: dc:title "PREFER_Ontology"
+property_value: dc:description "An_ontology_for_PREcision_FERmentation"
+property_value: dc:license "https://creativecommons.org/licenses/by/4.0/"
 
 [Term]
 id: PREFER:0000001
