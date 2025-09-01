@@ -709,17 +709,19 @@ is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
+
+
+
+
+
 [Term]
 id: PREFER:0000089
 name: substrate specific uptake rate
-def: "The rate of substrate uptake per unit of biomass, expressed in grams of substrate per grams of dry biomass per hour (g/g(DW)*h)."
-is_a: PREFER:0000157 ! rate
-
-[Term]
-id: PREFER:0000090
-name: substrate specific uptake rate molar
+def: "The rate of substrate uptake per unit of biomass, expressed in grams of substrate per grams of dry biomass per hour (g/g(DW)*h)." [PREFER]
 def: "The rate of substrate uptake per unit of biomass, expressed in mols of substrate per carbon mols of substrate per hour (mol/cmol(X)*h)."
 is_a: PREFER:0000157 ! rate
+relatioship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! gram per gram(X)
+relatioship: PREFER_RE:has_denominator_unit: UO:0000032 ! hour
 
 [Term]
 id: PREFER:0000091
@@ -738,6 +740,9 @@ id: PREFER:0000093
 name: minimum substrate specific uptake rate in feed phase
 def: "The minimum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
 is_a: PREFER:0000157 ! rate
+
+
+
 
 [Term]
 id: PREFER:0000094

@@ -81,3 +81,17 @@ def: "Relates a derived or calculated quantity — referred to as a performance 
 domain: PREFER:0000155 ! performance variable
 range: UO:0000000 ! unit
 
+[Typedef]
+id: PREFER_RE:has_numerator_unit
+name: has numerator unit
+def: "A relation between a compound rate unit and the unit that occurs in the numerator of its expression." [PREFER]
+domain: PREFER:0000157 ! rate
+range: UO:0000000 ! unit
+
+[Typedef]
+id: PREFER_RE:has_denominator_unit
+name: has denominator unit
+def: "A relation between a compound rate unit and the unit that occurs in the denominator of its expression." [PREFER]
+domain: PREFER:0000157 ! rate
+range: UO:0000000 ! unit
+
