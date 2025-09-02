@@ -1072,14 +1072,6 @@ relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
-
-
-
-
-
-
-
-
 [Term]
 id: PREFER:0000140
 name: biomass production rate
@@ -1088,16 +1080,8 @@ synonym: "Rx" EXACT []
 synonym: "Biomass formation rate" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
-
-
-!relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
-relationship: PREFER_RE:has_numerator_unit: PREFER_UNIT:0000168 ! carbon mole
-relatioship: PREFER_RE:has_denominator_unit: UO:0000032 ! hour
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
+relationship: PREFER_RE:has_numerator_unit: PREFER_UNIT:0000175 ! carbon mole per hour
 
 [Term]
 id: PREFER:0000142
@@ -1164,65 +1148,65 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per
 [Term]
 id: PREFER:0000150
 name: data acquisition mode
-def: "How, where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline."
+def: "How, where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline." [PREFER]
 
 [Term]
 id: PREFER:0000151
 name: inline measurement
-def: "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control."
+def: "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control." [PREFER]
 is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000152
 name: online measurement
-def: "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor."
+def: "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor." [PREFER]
 is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000153
 name: atline measurement
-def: "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment."
+def: "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment." [PREFER]
 is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000154
 name: offline measurement
-def: "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line"
+def: "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line." [PREFER]
 is_a: PREFER:0000150 ! data acquisition mode
 
 [Term]
 id: PREFER:0000155
 name: performance variable
-def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratorymetrics, and balance metrics."
+def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratorymetrics, and balance metrics." [PREFER]
 
 [Term]
 id: PREFER:0000156
 name: yield
-def: "Computed variable that quantifies the efficiency of converting substrates into desired outputs, expressed as the ratio of the output formed per unit of substrate consumed."
+def: "Computed variable that quantifies the efficiency of converting substrates into desired outputs, expressed as the ratio of the output formed per unit of substrate consumed." [PREFER]
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000157
 name: rate
-def: "Computed variable that quantifies the speed of bioprocess activities, measuring the change of a process variable over time."
+def: "Computed variable that quantifies the speed of bioprocess activities, measuring the change of a process variable over time." [PREFER]
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000158
 name: respiratory metric
-def: "Computed variable that quantifies respiratoryactivity in the bioprocess, providing indications of metabolic states and gas exchange efficiency."
+def: "Computed variable that quantifies respiratoryactivity in the bioprocess, providing indications of metabolic states and gas exchange efficiency." [PREFER]
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000159
 name: balance metric
-def: "Computed variable that assesses the consistency of material balances in the bioprocess, by comparing the total inputs and outoputs of specific compounds."
+def: "Computed variable that assesses the consistency of material balances in the bioprocess, by comparing the total inputs and outoputs of specific compounds." [PREFER]
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000160
 name: output variable
-def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass."
+def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass." [PREFER]
 synonym: "output var" EXACT []
 
 
@@ -1365,6 +1349,16 @@ synonym: "(g/g(DW))/h" EXACT []
 synonym: "(g/g(X))/h" EXACT []
 is_a: UO:0000051 ! rate unit
 relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! gram per gram(X)
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+
+[Term]
+id: PREFER_UNIT:0000175
+name: carbon mole per hour
+comment: "A unit of mass flow rate representing a carbon mole of substance passing through a given surface or system in one hour." [PREFER]
+synonym: "c-mol/h" EXACT []
+synonym: "cmol/h" EXACT []
+is_a: PATO:0002244 ! mass flow rate
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 ! ============================
