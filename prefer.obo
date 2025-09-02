@@ -1,10 +1,10 @@
 format-version: 1.2
 data-version: prefer/releases/v0_2025-08-28
-default-namespace: precisionfermentation
+default-namespace: precision_fermentation
 ontology: prefer.obo
-property_value: dc:title "PREFER_Ontology"
-property_value: dc:description "An_ontology_for_PREcision_FERmentation"
-property_value: dc:license "https://creativecommons.org/licenses/by/4.0/"
+property_value: dc:title "PREFER_Ontology" xsd:string
+property_value: dc:description "An_ontology_for_PREcision_FERmentation" xsd:string
+property_value: terms:license "https://creativecommons.org/licenses/by/4.0/"
 
 [Term]
 id: PREFER:0000001
@@ -129,14 +129,16 @@ def: "A fermentation event that triggers the fermentation phase to start or end.
 [Term]
 id: PREFER:0000017
 name: iModulon
-def: "An iModulon unit symbolizes a distinct iModulon activity from the iModulon database. An iModulon is an independently modulated group of genes, often representing the effect of a transcriptional regulator."
+def: "An iModulon unit symbolizes a distinct iModulon activity from the iModulon database. An iModulon is an independently modulated group of genes, often representing the effect of a transcriptional regulator." [PREFER]
 is_a: PREFER:0000001 ! precision fermentation process
 
-[Term]
-id: PREFER:0000018
-name: input variable
-def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
-synonym: "input var" EXACT []
+! ============================
+![Term]
+!id: PREFER:0000018
+!name: input variable
+!def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
+!synonym: "input var" EXACT []
+! ============================
 
 [Term]
 id: PREFER:0000019
@@ -285,7 +287,6 @@ is_a: PREFER:0000008 ! cultivation condition
 
 
 
-
 [Term]
 id: PREFER:0000039
 name: DO
@@ -294,6 +295,13 @@ synonym: "dissolved oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 
+
+
+
+
+
+
+
 [Term]
 id: PREFER:0000040
 name: pH
@@ -301,12 +309,6 @@ def: "Bioreactor Potential of Hydrogen (pH) reading. Logarithmic scale used to s
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000196 ! pH
-
-
-
-
-
-
 
 [Term]
 id: PREFER:0000041
@@ -467,12 +469,19 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000172 ! liters per minu
 [Term]
 id: PREFER:0000058
 name: inlet air o2
-def: "Percentaje of oxygen in the gas mixture that is being supplied into the fermenter."
+def: "Percentaje of oxygen in the gas mixture that is being supplied into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 synonym: "inlet air oxygen" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000059
@@ -484,6 +493,12 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
+
+
+
+
+
+
 [Term]
 id: PREFER:0000060
 name: OD
@@ -492,6 +507,11 @@ synonym: "optical density" EXACT []
 synonym: "OD600" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
+
+
+
+
+
 
 [Term]
 id: PREFER:0000061
@@ -530,11 +550,23 @@ synonym: "carbon dioxide transfer rate" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
+
+
+
+
+
+
 [Term]
 id: PREFER:0000065
 name: RQ
 def: "Respiratory Quotient: Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/run, dimensionless number. Used to assess the metabolic state of cells."
 is_a: PREFER:0000159 ! respiratory metric
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000066
@@ -675,12 +707,23 @@ synonym: "DoR balance" EXACT []
 is_a: PREFER:0000156 ! yield
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
+
+
+
+
+
 [Term]
 id: PREFER:0000082
 name: degree of reduction yields
 def: "The degree of reduction calculated based on the yields of different products. This helps understand how efficiently the system is converting substrate into desired products, taking into account the redox state of each component.  No units."
 synonym: "DoR yields" EXACT []
 is_a: PREFER:0000156 ! yield
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000083
@@ -709,40 +752,32 @@ is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
-
-
-
-
-
 [Term]
 id: PREFER:0000089
 name: substrate specific uptake rate
-def: "The rate of substrate uptake per unit of biomass, expressed in grams of substrate per grams of dry biomass per hour (g/g(DW)*h)." [PREFER]
-def: "The rate of substrate uptake per unit of biomass, expressed in mols of substrate per carbon mols of substrate per hour (mol/cmol(X)*h)."
+def: "The rate of substrate uptake per unit of biomass." [PREFER]
 is_a: PREFER:0000157 ! rate
 relatioship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! gram per gram(X)
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000165 ! mole per carbon mole(X)
 relatioship: PREFER_RE:has_denominator_unit: UO:0000032 ! hour
 
 [Term]
 id: PREFER:0000091
 name: average substrate specific uptake rate in feed phase
-def: "The average specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
+def: "The average specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)." [PREFER]
 is_a: PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000092
 name: maximum substrate specific uptake rate in feed phase
-def: "The maximum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
+def: "The maximum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)." [PREFER]
 is_a: PREFER:0000157 ! rate
 
 [Term]
 id: PREFER:0000093
 name: minimum substrate specific uptake rate in feed phase
-def: "The minimum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)."
+def: "The minimum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)." [PREFER]
 is_a: PREFER:0000157 ! rate
-
-
-
 
 [Term]
 id: PREFER:0000094
