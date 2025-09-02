@@ -797,41 +797,22 @@ def: "The specific rate at which O2 is produced per unit of biomass (X), reflect
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000173 ! mole per carbon mole per hour
 
-
-
-
-
-
-
 [Term]
 id: PREFER:0000104
 name: oxygen yield (S)
-def: "The yield of O2 consumed per mole of substrate consumed (S), expressed in moles of O2 per mole of substrate (mol/mol(S)), quantifying how much O2 is consumed relative to the substrate used in the bioprocess."
+def: "The yield of O2 consumed per substrate consumed (S), quantifying how much O2 is consumed relative to the substrate used in the bioprocess." [PREFER]
 synonym: "o2 yield (S)" EXACT []
 is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000105
-name: oxygen yield carbon molar (S)
-def: "The yield of O2 consumed per carbon mole of substrate consumed (S), expressed in moles of O2 per carbon mole of substrate (mol/c-mol(S)). More detailed yield accounting for the carbon content of the substrate."
-synonym: "o2 yield c-molar (S)" EXACT []
-is_a: PREFER:0000156 ! yield
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000176 ! mole per mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole
 
 [Term]
 id: PREFER:0000106
 name: oxygen yield (X)
-def: "The yield of O2 consumed per carbon mole of biomass (X), expressed in moles of O2 per carbon mole of biomass (mol/c-mol(X)), describing how much O2 is consumed relative to the amount of biomass generated."
+def: "The yield of O2 consumed per carbon mole of biomass (X), describing how much O2 is consumed relative to the amount of biomass generated." [PREFER]
 synonym: "o2 yield (X)" EXACT []
 is_a: PREFER:0000156 ! yield
-
-
-
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole
 
 [Term]
 id: PREFER:0000107
@@ -962,42 +943,22 @@ synonym: "specific CER" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: has_unit PREFER_UNIT:0000173 ! mole per carbon mole per hour
 
-
-
-
-
-
-
-
-
-
 [Term]
 id: PREFER:0000131
 name: carbon dioxide yield (S)
-def: "The yield of CO2 produced per mole of substrate consumed (S), expressed in moles of CO2 per mole of substrate (mol/mol(S)), quantifying how much CO2 is produced relative to the substrate used in the bioprocess."
+def: "The yield of CO2 produced per mole of substrate consumed (S), quantifying how much CO2 is produced relative to the substrate consumed in the bioprocess."
 synonym: "co2 yield (S)" EXACT []
 is_a: PREFER:0000156 ! yield
-
-[Term]
-id: PREFER:0000132
-name: carbon dioxide yield carbon molar (S)
-def: "The yield of CO2 produced per carbon mole of substrate consumed (S), expressed in moles of CO2 per carbon mole of substrate (mol/c-mol(S)). More detailed yield accounting for the carbon content of the substrate."
-synonym: "co2 yield c-molar (S)" EXACT []
-is_a: PREFER:0000156 ! yield
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000176 ! mole per mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole
 
 [Term]
 id: PREFER:0000133
 name: carbon dioxide yield (X)
-def: "The yield of CO2 produced per carbon mole of biomass (X), expressed in moles of CO2 per carbon mole of biomass (mol/c-mol(X)), describing how much CO2 is produced relative to the amount of biomass generated."
+def: "The yield of CO2 produced per carbon mole of biomass (X), describing how much CO2 is produced relative to the amount of biomass generated."
 synonym: "co2 yield (X)" EXACT []
 is_a: PREFER:0000156 ! yield
-
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole
 
 [Term]
 id: PREFER:0000134
@@ -1208,10 +1169,10 @@ relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000165
-name: mole per carbon mole(X)
-comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass generated." [PREFER]
-synonym: "mol/cmol(X)" EXACT []
-synonym: "mol/c-mol(X)" EXACT []
+name: mole per carbon mole
+comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass(X) generated or substrate(S) consumed." [PREFER]
+synonym: "mol/cmol" EXACT []
+synonym: "mol/c-mol" EXACT []
 is_a: UO:0000190 ! ratio unit
 relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
 relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
@@ -1290,7 +1251,7 @@ def: "A unit representing a compound rate, expressed as moles per carbon mole(X)
 synonym: "(mol/c-mol)/h" EXACT []
 synonym: "(mol/cmol)/h" EXACT []
 is_a: UO:0000051 ! rate unit
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000165 ! mole per carbon mole(X)
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000165 ! mole per carbon mole
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
@@ -1312,5 +1273,15 @@ synonym: "cmol/h" EXACT []
 is_a: PATO:0002244 ! mass flow rate
 relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+
+[Term]
+id: PREFER_UNIT:0000176
+name: mole per mole
+comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per mole of substrate(S) consumed." [PREFER]
+synonym: "mol/mol" EXACT []
+synonym: "mol/mol" EXACT []
+is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
+relationship: PREFER_RE:has_denominator_unit UO:0000013 ! mole 
 
 ! ============================
