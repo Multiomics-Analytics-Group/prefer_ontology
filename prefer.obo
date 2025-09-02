@@ -894,18 +894,39 @@ def: "rate at which the compound is produced over time, indicating the speed of 
 synonym: "compound formation rate" []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! gram per hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
+
+
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000115
-name: compound specific production rate 
-def: "The rate of compound production per unit of biomass (dry weight), providing the efficiency of compound production relative to biomass. It is expressed in grams per gram of dry weight per hour (g/g(DW)*h)."
+name: specific compound production rate 
+def: "The rate of compound production per unit of biomass, providing the efficiency of compound production relative to biomass." [PREFER]
 is_a: PREFER:0000157 ! rate
+
+relationship: has_unit PREFER_UNIT:0000173 ! mole per carbon mole per hour
+! (g/g(DW)*h)
+
+
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000116
 name: compound specific production rate molar
-def: "The rate of acetic acid production per unit of biomass, expressed in moles per carbon mole of biomass per hour (mol/cmol(X)*h)."
+def: "The rate of compound production per unit of biomass." [PREFER]
 is_a: PREFER:0000157 ! rate
 
 [Term]
@@ -971,23 +992,32 @@ synonym: "co2 Q" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
 
-
-
-
-
 [Term]
 id: PREFER:0000129
 name: carbon dioxide evolution rate
-def: "The rate at which CO2 is produced per unit of biomass (X), expressed in moles of CO2 per carbon mole of biomass per hour (mol/c-mol(X)*h). Reflecting how efficiently CO2 is released in relation to biomass production."
+def: "The total rate at which CO2 is produced per unit of biomass (X), reflecting overall process performance, how efficiently CO2 is released from a fermenter system." [PREFER]
 synonym: "co2 evolution rate" EXACT []
+synonym: "CER" EXACT []
 is_a: PREFER:0000157 ! rate
+relationship: has_unit PREFER_UNIT:0000173 ! mole per carbon mole per hour
 
 [Term]
 id: PREFER:0000130
-name: carbon dioxide specific evolution rate
-def: "The specific rate at which CO2 is produced per unit of biomass (X), expressed in moles of CO2 per carbon mole of biomass per hour (mol/c-mol(X)*h). Reflecting how efficiently CO2 is released in relation to biomass production."
-synonym: "co2 specific evolution rate" EXACT []
-is_a: PREFER:0000156 ! yield
+name: specific carbon dioxide evolution rate
+def: "The specific rate at which CO2 is produced normalized per unit of biomass (X), allowing metabolic efficiency comparisions between cultures." [PREFER]
+synonym: "specific co2 evolution rate" EXACT []
+synonym: "specific CER" EXACT []
+is_a: PREFER:0000157 ! rate
+relationship: has_unit PREFER_UNIT:0000173 ! mole per carbon mole per hour
+
+
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000131
@@ -1042,6 +1072,14 @@ relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 
+
+
+
+
+
+
+
+
 [Term]
 id: PREFER:0000140
 name: biomass production rate
@@ -1052,21 +1090,9 @@ is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
 
 
-
-
-
-
-
-[Term]
-id: PREFER:0000141
-name: biomass production rate molar
-def:  "The rate at which the biomass is produced over time. expressed in c-mols per hour (c-mols/h)."
-synonym: "Rx molar" EXACT []
-synonym: "Biomass formation rate molar" EXACT []
-is_a: PREFER:0000157 ! rate
-
-
-
+!relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
+relationship: PREFER_RE:has_numerator_unit: PREFER_UNIT:0000168 ! carbon mole
+relatioship: PREFER_RE:has_denominator_unit: UO:0000032 ! hour
 
 
 
@@ -1121,13 +1147,19 @@ relationship: PREFER_RE:has_possible_unit QUDT:PER-HR ! per hour
 [Term]
 id: PREFER:0000147
 name: biomass yield (S)
-def: "The biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass."
+def: "The biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass." [PREFER]
 synonym: "Ysx" EXACT []
 synonym: "S" EXACT []
 is_a: PREFER:0000156 ! yield
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
+
+
+! ============================
+! New Terms for PREFER
+! These terms are needed for relationships in PREFER
+! ============================
 
 [Term]
 id: PREFER:0000150
@@ -1203,8 +1235,10 @@ synonym: "output var" EXACT []
 id: PREFER_UNIT:0000161
 name: gram per gram(S)
 comment: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material or input substrate consumed." [PREFER]
-synonym: "g/g" EXACT []
+synonym: "g/g(S)" EXACT []
 is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
+relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000162
@@ -1213,6 +1247,8 @@ comment: "A unit representing a carbon-based ratio, typically used to express pr
 synonym: "cmol/g" EXACT []
 synonym: "c-mol/g" EXACT []
 is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole 
+relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram 
 
 [Term]
 id: PREFER_UNIT:0000163
@@ -1221,15 +1257,18 @@ comment: "A unit representing a carbon-based ratio, typically used to express pr
 synonym: "cmol/cmol" EXACT []
 synonym: "c-mol/c-mol" EXACT []
 is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole
+relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
 
 [Term]
 id: PREFER_UNIT:0000164
 name: gram per gram(X)
 comment: "A unit representing a mass ratio, typically used to express product, output substance or input - such as compound and substrate -  in grams per gram of biomass generated(dry weight)." [PREFER]
-synonym: "g/g" EXACT []
 synonym: "g/g(X)" EXACT []
 synonym: "g/g(DW)" EXACT []
 is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
+relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000165
@@ -1238,6 +1277,8 @@ comment: "A unit representing a mol-based ratio, typically used to express produ
 synonym: "mol/cmol(X)" EXACT []
 synonym: "mol/c-mol(X)" EXACT []
 is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
+relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
 
 [Term]
 id: PREFER_UNIT:0000166
@@ -1246,6 +1287,8 @@ comment: "A unit representing a carbon-based ratio, typically used to express pr
 synonym: "cmol/cmol(X)" EXACT []
 synonym: "c-mol/c-mol(X)" EXACT []
 is_a: UO:0000190 ! ratio unit
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole 
+relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
 
 [Term]
 id: PREFER_UNIT:0000167
@@ -1253,7 +1296,10 @@ name: liters per hour
 comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in one hour." [adapted from UOC:GVG]
 synonym: "litres per hour" EXACT []
 synonym: "L/h" EXACT []
+synonym: "l/h" EXACT []
 is_a: UO:0000270 ! volumetric flow rate unit
+relationship: PREFER_RE:has_numerator_unit UO:0000099 ! liter
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
 id: PREFER_UNIT:0000168
@@ -1266,20 +1312,29 @@ is_a: UO:0000013 ! mole
 [Term]
 id: PREFER_UNIT:0000169
 name: gram per hour
-comment: "A unit of mass flow rate represenitn one gram of substance passing through a given surface or system in one hour." [PREFER]
+comment: "A unit of mass flow rate representing one gram of substance passing through a given surface or system in one hour." [PREFER]
 synonym: "g/h" EXACT []
+is_a: PATO:0002244 ! mass flow rate
+relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
 id: PREFER_UNIT:0000170
 name: mole per hour
 comment: "A unit of mass flow rate represenitn one mole of substance passing through a given surface or system in one hour." [PREFER]
 synonym: "mol/h" EXACT []
+is_a: PATO:0002244 ! mass flow rate
+relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
 id: PREFER_UNIT:0000171
 name: millimole per hour
 comment: "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour." [PREFER]
 synonym: "mmol/h" EXACT []
+is_a: PATO:0002244 ! mass flow rate
+relationship: PREFER_RE:has_numerator_unit SNOMED:258718000 ! millimole
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
 id: PREFER_UNIT:0000172
@@ -1287,6 +1342,29 @@ name: liters per minute
 comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in a minute." [adapted from UOC:GVG]
 synonym: "litres per minute" EXACT []
 synonym: "L/min" EXACT []
+synonym: "l/min" EXACT []
 is_a: UO:0000270 ! volumetric flow rate unit
+relationship: PREFER_RE:has_numerator_unit UO:0000099 ! liter
+relationship: PREFER_RE:has_denominator_unit UO:0000031 ! minute
+
+[Term]
+id: PREFER_UNIT:0000173
+name: mole per carbon mole per hour
+def: "A unit representing a compound rate, expressed as moles per carbon mole(X) per hour." [PREFER]
+synonym: "(mol/c-mol)/h" EXACT []
+synonym: "(mol/cmol)/h" EXACT []
+is_a: UO:0000051 ! rate unit
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000165 ! mole per carbon mole(X)
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+
+[Term]
+id: PREFER_UNIT:0000174
+name: gramp per gram per hour
+def: "A unit representing a compound rate, expressed as moles per carbon mole(X) per hour." [PREFER]
+synonym: "(g/g(DW))/h" EXACT []
+synonym: "(g/g(X))/h" EXACT []
+is_a: UO:0000051 ! rate unit
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! gram per gram(X)
+relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 ! ============================
