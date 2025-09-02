@@ -224,42 +224,42 @@ relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second
 [Term]
 id: PREFER:0000029
 name: DO control cascade level 2
-def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air_flow parameter to ahcieve the desired DO level."
+def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air_flow parameter to ahcieve the desired DO level." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000030
 name: aeration gas type
-def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen."
+def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000031
 name: maximum aeration
-def: "Maximum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)."
+def: "Maximum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000032
 name: minimum aeration
-def: "Minimum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)."
+def: "Minimum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000033
 name: DO control cascade level 3
-def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level."
+def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000034
 name: starting OD
-def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)."
+def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
 relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density units
@@ -287,23 +287,14 @@ name: feed profile
 def: "Feeding strategies typically found in a fed-batch fermentation. 1. Constant feeding rate, 2. Linear feeding rate and 3. Exponential feeding rate, 4. Combination of 1-2, 3-2 or 3-1 . The type of feeding profiles applied is process specific." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 
-
-
-
 [Term]
 id: PREFER:0000039
 name: DO
-def: "Concentration of oxygen molecules (O₂) dissolved in a liquid medium."
+def: "Concentration of oxygen molecules (O₂) dissolved in a liquid medium." [PREFER]
 synonym: "dissolved oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
-
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000040
@@ -480,13 +471,6 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
-
-
-
-
-
-
-
 [Term]
 id: PREFER:0000059
 name: inlet air co2
@@ -497,25 +481,15 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
-
-
-
-
-
-
 [Term]
 id: PREFER:0000060
 name: OD
-def: "Optical density to measure biomass. Absorbance is the logarithm of the ratio of incident to transmitted radiant power through a sample (excluding the effects on cell walls)"
+def: "Optical density to measure biomass. Absorbance is the logarithm of the ratio of incident to transmitted radiant power through a sample (excluding the effects on cell walls)" [PREFER]
 synonym: "optical density" EXACT []
 synonym: "OD600" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000061
@@ -554,23 +528,12 @@ synonym: "carbon dioxide transfer rate" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
-
-
-
-
-
-
 [Term]
 id: PREFER:0000065
 name: RQ
-def: "Respiratory Quotient: Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/run, dimensionless number. Used to assess the metabolic state of cells."
+def: "Respiratory Quotient: Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/run. Used to assess the metabolic state of cells." [PREFER]
 is_a: PREFER:0000159 ! respiratory metric
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000066
@@ -711,23 +674,13 @@ synonym: "DoR balance" EXACT []
 is_a: PREFER:0000156 ! yield
 relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 
-
-
-
-
-
 [Term]
 id: PREFER:0000082
 name: degree of reduction yields
-def: "The degree of reduction calculated based on the yields of different products. This helps understand how efficiently the system is converting substrate into desired products, taking into account the redox state of each component.  No units."
+def: "The degree of reduction calculated based on the yields of different products. This helps understand how efficiently the system is converting substrate into desired products, taking into account the redox state of each component." [PREFER]
 synonym: "DoR yields" EXACT []
 is_a: PREFER:0000156 ! yield
-
-
-
-
-
-
+relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
 [Term]
 id: PREFER:0000083
@@ -761,27 +714,29 @@ id: PREFER:0000089
 name: substrate specific uptake rate
 def: "The rate of substrate uptake per unit of biomass." [PREFER]
 is_a: PREFER:0000157 ! rate
-relatioship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! gram per gram(X)
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000165 ! mole per carbon mole(X)
-relatioship: PREFER_RE:has_denominator_unit: UO:0000032 ! hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000173 ! mole per carbon mole per hour
 
 [Term]
 id: PREFER:0000091
 name: average substrate specific uptake rate in feed phase
-def: "The average specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)." [PREFER]
+def: "The average specific uptake rate of substrate during the feeding phase." [PREFER]
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
 
 [Term]
 id: PREFER:0000092
 name: maximum substrate specific uptake rate in feed phase
-def: "The maximum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)." [PREFER]
+def: "The maximum specific uptake rate of substrate during the feeding phase." [PREFER]
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
 
 [Term]
 id: PREFER:0000093
 name: minimum substrate specific uptake rate in feed phase
-def: "The minimum specific uptake rate of substrate during the feeding phase, expressed in grams of substrate per gram of biomass per hour (g/g(DW)*h)." [PREFER]
+def: "The minimum specific uptake rate of substrate during the feeding phase." [PREFER]
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
 
 [Term]
 id: PREFER:0000094
@@ -838,8 +793,15 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mol per hour
 [Term]
 id: PREFER:0000103
 name: oxygen specific uptake rate
-def: "The specific rate at which O2 is produced per unit of biomass (X), expressed in moles of O2 per carbon mole of biomass per hour (mol/c-mol(X)*h). Reflecting how efficiently O2 is consumed in relation to biomass production."
+def: "The specific rate at which O2 is produced per unit of biomass (X), reflecting how efficiently O2 is consumed in relation to biomass production."
 is_a: PREFER:0000157 ! rate
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000173 ! mole per carbon mole per hour
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000104
@@ -861,6 +823,15 @@ name: oxygen yield (X)
 def: "The yield of O2 consumed per carbon mole of biomass (X), expressed in moles of O2 per carbon mole of biomass (mol/c-mol(X)), describing how much O2 is consumed relative to the amount of biomass generated."
 synonym: "o2 yield (X)" EXACT []
 is_a: PREFER:0000156 ! yield
+
+
+
+
+
+
+
+
+
 
 [Term]
 id: PREFER:0000107
@@ -896,32 +867,13 @@ is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
-
-
-
-
-
-
-
-
-
 [Term]
 id: PREFER:0000115
 name: specific compound production rate 
 def: "The rate of compound production per unit of biomass, providing the efficiency of compound production relative to biomass." [PREFER]
 is_a: PREFER:0000157 ! rate
-
+relationship: has_unit PREFER_UNIT:0000174 ! gram per gram per hour
 relationship: has_unit PREFER_UNIT:0000173 ! mole per carbon mole per hour
-! (g/g(DW)*h)
-
-
-
-
-
-
-
-
-
 
 [Term]
 id: PREFER:0000116
@@ -1343,7 +1295,7 @@ relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
 id: PREFER_UNIT:0000174
-name: gramp per gram per hour
+name: gram per gram per hour
 def: "A unit representing a compound rate, expressed as moles per carbon mole(X) per hour." [PREFER]
 synonym: "(g/g(DW))/h" EXACT []
 synonym: "(g/g(X))/h" EXACT []
