@@ -4,7 +4,6 @@ default-namespace: precision_fermentation
 ontology: prefer.obo
 property_value: dc:creator "Alberto Santos" xsd:string
 property_value: dc:creator "Txell Amigó" xsd:string
-property_value: dc:creator "Albeto Santos" xsd:string
 property_value: dc:title "PREFER Ontology" xsd:string
 property_value: dc:description "An ontology for PREcision FERmentation" xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/"
