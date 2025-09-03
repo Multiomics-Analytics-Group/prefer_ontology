@@ -72,7 +72,8 @@ xref: OBI_0000066 ! investigation
 [Term]
 id: PREFER:0000008
 name: cultivation condition
-def: "An initial experimental parameter or environmental setting established prior to or at the start of a fermentation process. This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture" [PREFER]
+def: "An initial experimental parameter or environmental setting established prior to or at the start of a fermentation process." [PREFER]
+comment: "This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture, as well as operational parameters like dissolved oxygen (DO) control setpoints and feeding strategies."
 synonym: "variable" RELATED []
 xref: BAO_0002070 ! measured value
 
@@ -80,19 +81,20 @@ xref: BAO_0002070 ! measured value
 id: PREFER:0000009
 name: process variable
 def: "A technical parameter measured during a bioprocess, either through real-time (online, inline) or delayed (offline, atline) measurements, depending on the bioreactor setup. These variables are typically time-series data and are crucial for controlling and adjusting the initial parameters from cultivation conditions." [PREFER]
+comment: "These data typically include compound groups categorized as substrates, products, by-products, and chemical ingredients from the medium."
 synonym: "variable" RELATED []
 xref: BAO_0002070 ! measured value
 
 [Term]
 id: PREFER:0000010
 name: compound
-def:  "A chemical substance produced, consumed, or measured during fermentation." [PREFER]
+def:  "A chemical substance produced or consumed, whose concentration is monitored during the course of the fermentation, typically by withdrawing samples from the culture broth and culture broth and measuring it using offline instrumentation, such as High-Performance Liquid Chromatography (HPLC)." [PREFER]
 is_a: CHEBI:24431 ! chemical entity
 
 [Term]
 id: PREFER:0000011
 name: medium
-def: "A solution containing macronutrients, micronutrients and buffering agents." [PREFER]
+def: "An aqueous solution containing macronutrients, micronutrients and buffering agents." [PREFER]
 relationship: PREFER_RE:has_ingredient PREFER:0000010 ! compound
 xref: EFO:0000579 ! media
 
@@ -122,7 +124,7 @@ xref: OBI:0001046 ! bioreactor
 [Term]
 id: PREFER:0000015
 name: phase
-def: "A fermentation phase." [PREFER]
+def: "A time interval of a fermentation process." [PREFER]
 
 [Term]
 id: PREFER:0000016
@@ -224,7 +226,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second
 [Term]
 id: PREFER:0000029
 name: DO control cascade level 2
-def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air_flow parameter to ahcieve the desired DO level." [PREFER]
+def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air flow parameter to ahcieve the desired DO level." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
@@ -259,7 +261,7 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 [Term]
 id: PREFER:0000034
 name: starting OD
-def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
+def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600 nm) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
 relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density units
@@ -290,7 +292,7 @@ is_a: PREFER:0000008 ! cultivation condition
 [Term]
 id: PREFER:0000039
 name: DO
-def: "Concentration of oxygen molecules (O₂) dissolved in a liquid medium." [PREFER]
+def: "Concentration of oxygen molecules (O₂) dissolved in the aqueous fermentation medium." [PREFER]
 synonym: "dissolved oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
@@ -299,7 +301,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 [Term]
 id: PREFER:0000040
 name: pH
-def: "Bioreactor Potential of Hydrogen (pH) reading. Logarithmic scale used to specify the acidity or basicity of aqueous solutions." [REFER]
+def: "Bioreactor Potential of Hydrogen (pH) reading. pH is the negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium." [REFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000196 ! pH
@@ -326,7 +328,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000110 ! pascal
 [Term]
 id: PREFER:0000043
 name: volume
-def: "Total volume of liquid in the fermenter." [PREFER]
+def: "Total volume of aqueous solution in the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
@@ -335,34 +337,32 @@ relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 [Term]
 id: PREFER:0000044
 name: sample mass
-def: "The mass of the sample taken from the run. Implemented for quantifying the amount of biomass, product, other compounds." [PREFER]
+def: "The mass of the sample taken from a single run to quantify the amount of biomass, product, and other compounds." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000022 ! milligram
 
-! ============================
-![Term]
-!id: PREFER:0000045
-!name: sample volume
-!def: "The volume of the sample taken from a single run. Implemented for calculating concentrations, dilutions, etc." [PREFER]
-!is_a: PREFER:00000XX ! intermediate variable
-!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-!
-![Term]
-!id: PREFER:0000046
-!name: accumulated sample volume
-!def: "Total volume of all samples taken from a single run up to a certain point in time." [PREFER]
-!is_a: PREFER:00000XX ! intermediate variable
-!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-! ============================
+[Term]
+id: PREFER:0000045
+name: sample volume
+def: "The volume of the sample taken from a single run to calculate concentrations, dilutions, etc." [PREFER]
+is_a: PREFER:00000XX ! intermediate variable
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
+
+[Term]
+id: PREFER:0000046
+name: accumulated sample volume
+def: "Total volume of all samples taken from a single run up to a certain point in time." [PREFER]
+is_a: PREFER:00000XX ! intermediate variable
+relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
+relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 
 [Term]
 id: PREFER:0000047
 name: acid volume
-def: "Volume of the acidic solution added into the fermenter." [PREFER]
+def: "Volume of the acidic solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
@@ -372,7 +372,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 [Term]
 id: PREFER:0000048
 name: base volume
-def: "Volume of the concentration base solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
+def: "Volume of the basic solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
@@ -400,7 +400,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000167 ! liters per hour
 [Term]
 id: PREFER:0000051
 name: feed amount
-def: "The quantity or total mass of feed added to the bioprocess" [PREFER]
+def: "The quantity of feed added to the bioprocess at a certain time point." [PREFER]
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
 relationship: PREFER_RE:has_possible_unit: UO:0000009 ! kilogram
@@ -437,7 +437,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second
 [Term]
 id: PREFER:0000055
 name: air flow
-def: "Rate at which air is supplied to the fermnter." [PREFER]
+def: "Rate at which air is supplied to the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! online measurement
@@ -446,7 +446,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000172 ! liters per minu
 [Term]
 id: PREFER:0000056
 name: nitrogen flow
-def: "Rate at which nitrogen is supplied to the fermenter." [PREFER]
+def: "Rate at which nitrogen is supplied into the fermenter in form of a ammonium solution." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
