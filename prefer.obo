@@ -71,7 +71,7 @@ xref: OBI_0000066 ! investigation
 id: PREFER:0000008
 name: cultivation condition
 def: "An initial experimental parameter or environmental setting established prior to or at the start of a fermentation process." [PREFER]
-comment: "This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture, as well as operational parameters like dissolved oxygen (DO) control setpoints and feeding strategies."
+comment: "This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture."
 synonym: "variable" RELATED []
 xref: BAO_0002070 ! measured value
 
@@ -100,7 +100,7 @@ xref: EFO:0000579 ! media
 id: PREFER:0000012
 name: strain
 def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics."
+comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
 synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
 is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
 xref: NCBITaxon:strain
@@ -123,11 +123,19 @@ xref: OBI:0001046 ! bioreactor
 
 [Term]
 id: PREFER:0000015
+name: operation parameter
+def: "An operational setting related to the operational mode of the fermenter and the type of fermentation carried out." [PREFER]
+comment: "Thissuch as dissolved oxygen (DO) control setpoints and feeding strategies." [PREFER]
+synonym: "variable" RELATED []
+xref: BAO_0002070 ! measured value
+
+[Term]
+id: PREFER:0000016
 name: phase
 def: "A time interval of a fermentation process." [PREFER]
 
 [Term]
-id: PREFER:0000016
+id: PREFER:0000017
 name: event
 def: "A fermentation event that triggers the fermentation phase to start or end." [PREFER]
 
