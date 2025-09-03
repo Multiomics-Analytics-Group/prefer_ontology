@@ -131,12 +131,6 @@ id: PREFER:0000016
 name: event
 def: "A fermentation event that triggers the fermentation phase to start or end." [PREFER]
 
-[Term]
-id: PREFER:0000017
-name: iModulon
-def: "An iModulon unit symbolizes a distinct iModulon activity from the iModulon database. An iModulon is an independently modulated group of genes, often representing the effect of a transcriptional regulator." [PREFER]
-is_a: PREFER:0000001 ! precision fermentation process
-
 ! ============================
 ![Term]
 !id: PREFER:0000018
