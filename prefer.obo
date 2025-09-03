@@ -29,7 +29,6 @@ relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
 relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
 relationship: PREFER_RE:uses_fermenter PREFER:0000014 ! fermenter
 relationship: PREFER_RE:has_measured_compound PREFER:0000010 ! compound
-relationship: PREFER_RE:has_measured_imodulon PREFER:0000017 ! iModulon
 
 [Term]
 id: PREFER:0000003
@@ -100,7 +99,9 @@ xref: EFO:0000579 ! media
 [Term]
 id: PREFER:0000012
 name: strain
-def: "A distinct microbial strain within the database." [PREFER]
+def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics."
+synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
 is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
 xref: NCBITaxon:strain
 
@@ -736,9 +737,9 @@ id: PREFER:0000094
 name: substrate yield (X)
 def: "The amount of substrate consumed per biomass produced." [PREFER]
 is_a: PREFER:0000156 ! yield
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000164 ! gram per gram(X)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole(X)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000166 ! carbon mole per carbon mole (X)
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
 
 [Term]
 id: PREFER:0000097
@@ -854,18 +855,18 @@ id: PREFER:0000117
 name: compound yield (S)
 def: "The yield of compound produced per substrate consumed, quantifying how efficiently compound is produced relative to substrate consumption." [PREFER]
 is_a: PREFER:0000156 ! yield
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram(S)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram(S)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole(S)
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000162 ! carbon mole per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
 
 [Term]
 id: PREFER:0000120
 name: compound yield (X)
 def: "The yield of compound produced per biomass (dry weight), quantifying how efficiently compound is produced relative to biomass generation." [PREFER]
 is_a: PREFER:0000156 ! yield
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000164 ! gram per gram(X)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole(X)
-relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000166 ! carbon mole per carbon mole (X)
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000161 ! gram per gram
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000165 ! mole per carbon mole
+relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per carbon mole
 
 [Term]
 id: PREFER:0000123
@@ -1120,16 +1121,16 @@ synonym: "output var" EXACT []
 
 [Term]
 id: PREFER_UNIT:0000161
-name: gram per gram(S)
-comment: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material or input substrate consumed." [PREFER]
-synonym: "g/g(S)" EXACT []
+name: gram per gram
+comment: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material, input substrate consumed(S), or biomass(X) generated(dry weight(DW)) ." [PREFER]
+synonym: "g/g" EXACT []
 is_a: UO:0000190 ! ratio unit
 relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
 relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000162
-name: carbon mole per gram(S)
+name: carbon mole per gram
 comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound - in carbon moles per gram of initial material or input substrate consumed." [PREFER]
 synonym: "cmol/g" EXACT []
 synonym: "c-mol/g" EXACT []
@@ -1139,23 +1140,13 @@ relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000163
-name: carbon mole per carbon mole(S)
-comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound -  in carbon moles per carbon mole of initial material or input substrate consumed." [PREFER]
+name: carbon mole per carbon mole
+comment: "A unit representing a carbon-based ratio, typically used to express product, output substance or input - such as biomass, compound and substrate -  in carbon moles per carbon mole of biomass generated, initial material consumed or input substrate consumed." [PREFER]
 synonym: "cmol/cmol" EXACT []
 synonym: "c-mol/c-mol" EXACT []
 is_a: UO:0000190 ! ratio unit
 relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole
 relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
-
-[Term]
-id: PREFER_UNIT:0000164
-name: gram per gram(X)
-comment: "A unit representing a mass ratio, typically used to express product, output substance or input - such as compound and substrate -  in grams per gram of biomass generated(dry weight)." [PREFER]
-synonym: "g/g(X)" EXACT []
-synonym: "g/g(DW)" EXACT []
-is_a: UO:0000190 ! ratio unit
-relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
-relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000165
@@ -1165,16 +1156,6 @@ synonym: "mol/cmol" EXACT []
 synonym: "mol/c-mol" EXACT []
 is_a: UO:0000190 ! ratio unit
 relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
-relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
-
-[Term]
-id: PREFER_UNIT:0000166
-name: carbon mole per carbon mole (X)
-comment: "A unit representing a carbon-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in carbon moles per carbon mole of biomass generated." [PREFER]
-synonym: "cmol/cmol(X)" EXACT []
-synonym: "c-mol/c-mol(X)" EXACT []
-is_a: UO:0000190 ! ratio unit
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole 
 relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
 
 [Term]
@@ -1247,11 +1228,11 @@ relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 [Term]
 id: PREFER_UNIT:0000174
 name: gram per gram per hour
-def: "A unit representing a compound rate, expressed as moles per carbon mole(X) per hour." [PREFER]
+def: "A unit representing a compound rate, expressed as grams per grams(X) per hour." [PREFER]
 synonym: "(g/g(DW))/h" EXACT []
 synonym: "(g/g(X))/h" EXACT []
 is_a: UO:0000051 ! rate unit
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! gram per gram(X)
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000161 ! gram per gram
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
