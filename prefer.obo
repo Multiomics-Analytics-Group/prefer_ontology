@@ -29,6 +29,7 @@ relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
 relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
 relationship: PREFER_RE:uses_fermenter PREFER:0000014 ! fermenter
 relationship: PREFER_RE:has_measured_compound PREFER:0000010 ! compound
+xref: CHMO:0001624 ! fermentation
 
 [Term]
 id: PREFER:0000003
@@ -114,12 +115,13 @@ xref: NCBITaxon:1 ! root
 
 [Term]
 id: PREFER:0000014
-name: fermenter
-def: "Concrete type of bioreactor environment where the fermentation occurs." [PREFER]
-synonym: "bioreactor" EXACT []
+name: bioreactor
+def: "A device or system that supports a biologically active environemnt to run a bioprocess, including lab-scale, pre-pilot plant, and industrial-scale systems." [PREFER, adapted from OBI:0001046]
+synonym: "fermenter" NARROW []
 synonym: "bioreactor system" EXACT []
 is_a: BAO:0003118 ! instrument
-xref: OBI:0001046 ! bioreactor
+equivalent_to: OBI:0001046 ! bioreactor
+xref: NARROW MSIO:0000167 ! fermenter
 
 [Term]
 id: PREFER:0000015
