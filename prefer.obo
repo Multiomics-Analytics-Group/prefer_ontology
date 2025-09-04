@@ -265,7 +265,7 @@ relationship: PREFER_RE:related_to PREFER:0000039 ! DO
 [Term]
 id: PREFER:0000034
 name: starting OD
-def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600 nm) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
+def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600nm or 900nm wavelength) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
 relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density units
