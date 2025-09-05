@@ -129,6 +129,7 @@ name: operation parameter
 def: "An operational setting related to the operational mode of the bioreactor and the type of fermentation or cultivation carried out." [PREFER]
 comment: "Such as dissolved oxygen (DO) control setpoints and feeding strategies." [PREFER]
 synonym: "variable" RELATED []
+is_a: PREFER:0000008 ! cultivation condition
 xref: BAO_0002070 ! measured value
 
 [Term]
@@ -141,13 +142,12 @@ id: PREFER:0000017
 name: event
 def: "An operational intervention set by user that triggers the start or end of the fermentation phase." [PREFER]
 
-! ============================
-![Term]
-!id: PREFER:0000018
-!name: input variable
-!def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
-!synonym: "input var" EXACT []
-! ============================
+[Term]
+id: PREFER:0000018
+name: input variable
+def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
+synonym: "input var" EXACT []
+is_a: PREFER:0000010 ! compound
 
 [Term]
 id: PREFER:0000019
@@ -205,15 +205,15 @@ relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 [Term]
 id: PREFER:0000026
 name: DO control cascade level 1
-def: "First level of the cascade control system for dissolved oxygen. Level 1 involves adjusting the stirrer_speed parameter to ahcieve the desired DO level." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+def: "First level of the cascade control system for dissolved oxygen. Level 1 involves adjusting the stirrer speed parameter to ahcieve the desired DO level." [PREFER]
+is_a: PREFER:0000015 ! operation parameter
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000027
 name: maximum stirring
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 synonym: "maximum shaking speed" EXACT []
 relationship: related_to PREFER:0000039 ! DO
 relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second 
@@ -222,7 +222,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second
 id: PREFER:0000028
 name: minimum stirring
 def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 synonym: "minimum shaking speed" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second 
@@ -231,35 +231,35 @@ relationship: PREFER_RE:has_possible_unit: UO:0000079 ! radian per second
 id: PREFER:0000029
 name: DO control cascade level 2
 def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air flow parameter to ahcieve the desired DO level." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000030
 name: aeration gas type
 def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000031
 name: maximum aeration
 def: "Maximum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000032
 name: minimum aeration
 def: "Minimum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000033
 name: DO control cascade level 3
 def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operation parameter
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
@@ -273,7 +273,7 @@ relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density un
 [Term]
 id: PREFER:0000035
 name: final seed OD
-def: "The cell density of the seed culturre at the time it is inoculated to the main fermenter." [PREFER]
+def: "The cell density of the seed culture at the time it is inoculated to the main fermenter." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
 relationship: PREFER_RE:has_possible_unit: SNOMED:258743006 ! optical density units
@@ -290,8 +290,9 @@ relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
 [Term]
 id: PREFER:0000038
 name: feed profile
-def: "Feeding strategies typically found in a fed-batch fermentation. 1. Constant feeding rate, 2. Linear feeding rate and 3. Exponential feeding rate, 4. Combination of 1-2, 3-2 or 3-1 . The type of feeding profiles applied is process specific." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+def: "Feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific." [PREFER]
+comment: "Feed profile types: 1. Constant feeding rate, 2. Linear feeding rate, 3. Exponential feeding rate, and 4. Combination of 1-2, 3-2 or 3-1 feeding profiles." [PREFER]
+is_a: PREFER:0000015 ! operation parameter
 
 [Term]
 id: PREFER:0000039
@@ -699,7 +700,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 ![Term]
 !id: PREFER:0000086
 !name: substrate lost in sampling
-!def: "The amount of substrate removed from the run durning sampling." [PREFER]
+!def: "The amount of substrate removed from the run during sampling." [PREFER]
 !is_a: PREFER:00000XX ! intermediate variable or input variable 
 !relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 ! ============================
@@ -1122,6 +1123,7 @@ id: PREFER:0000160
 name: output variable
 def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass." [PREFER]
 synonym: "output var" EXACT []
+is_a: PREFER:0000010 ! compound
 
 
 ! ============================
