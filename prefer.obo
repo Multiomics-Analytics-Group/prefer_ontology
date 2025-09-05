@@ -491,7 +491,7 @@ xref: NCIT:C85776 ! optical density measurement
 [Term]
 id: PREFER:0000061
 name: OUR
-def: "Determination of the rate at which O2 is consumed by cells." [PREFER]
+def: "Determination of the rate at which O2 is consumed by the cell culture." [PREFER]
 synonym: "o2 uptake rate" EXACT []
 synonym: "oxygen uptake rate" EXACT []
 is_a: PREFER:0000009 ! process variable
@@ -501,7 +501,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000171 ! millimole per h
 [Term]
 id: PREFER:0000062
 name: CER
-def: "Inline determination of the rate at which CO2 is produced by cells." [PREFER]
+def: "Determination of the rate at which CO2 is released by the cell culture." [PREFER]
 synonym: "co2 evolution rate" EXACT []
 synonym: "carbon dioxide evolution rate" EXACT []
 is_a: PREFER:0000009 ! process variable
@@ -511,7 +511,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000171 ! millimole per h
 [Term]
 id: PREFER:0000063
 name: OTR
-def: "Rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a fermenter." [PREFER] 
+def: "Rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor." [PREFER] 
 synonym: "oxygen transfer rate" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
@@ -528,7 +528,8 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 [Term]
 id: PREFER:0000065
 name: RQ
-def: "Respiratory Quotient: Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/run. Used to assess the metabolic state of cells." [PREFER]
+def: "Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/fermentation run, commmonly used to assess the metabolic state of cells." [PREFER]
+synonym: "respiratory quotient" EXACT []
 is_a: PREFER:0000159 ! respiratory metric
 relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 
@@ -546,7 +547,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 id: PREFER:0000067
 name: consumed co2
 def: "Amount of CO2 consumed during the bioprocess." [PREFER]
-synonym: "consumed oxygen" EXACT []
+synonym: "consumed carbon dioxide" EXACT []
 is_a: PREFER:0000158 ! respiratory metric
 relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
 
@@ -614,15 +615,6 @@ relationship: PREFER_RE:has_possible_unit: UO:0000175 ! gram per liter
 !relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
 !
 ![Term]
-!id: PREFER:0000075
-!name: volume unit
-!def: "The unit for the additional volume added." [PREFER]
-!is_a: PREFER:00000XX ! Intermediate variable
-!relationship: PREFER_RE:related_to REFER:0000043 ! volume
-!relationship: PREFER_RE:has_possible_unit: UO:0000099 ! liter
-!relationship: PREFER_RE:has_possible_unit: UO:0000098 ! milliliter
-!
-![Term]
 !id: PREFER:0000076
 !name: volume to add none 
 !def: "The volume that must be added to reach a certain starting OD in the reactor." [PREFER]
@@ -682,7 +674,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
 [Term]
 id: PREFER:0000083
 name: substrate consumed
-def: "The total amount of substrate consumed by the cells during the bioprocess." [PREFER]
+def: "The total amount of substrate taken up by the cells during the bioprocess." [PREFER]
 is_a: PREFER:0000018 ! input variable
 relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 relationship: PREFER_RE:has_possible_unit: UO:0000013 ! mole
@@ -692,15 +684,15 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000168 ! carbon mole
 ![Term]
 !id: PREFER:0000086
 !name: substrate lost in sampling
-!def: "The amount of substrate removed from the run during sampling." [PREFER]
-!is_a: PREFER:00000XX ! intermediate variable or input variable 
+!def: "The amount of substrate removed from the fermentation run during sampling." [PREFER]
+!is_a: PREFER:00000XX ! intermediate variable 
 !relationship: PREFER_RE:has_possible_unit: UO:0000021 ! gram
 ! ============================
 
 [Term]
 id: PREFER:0000087
 name: substrate uptake rate
-def: "The rate at which substrate is consumed by the cells." [PREFER]
+def: "The rate at which substrate is taken up by the cells during the bioprocess." [PREFER]
 synonym: "QS" EXACT []
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000169 ! gram per hour
@@ -708,7 +700,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000170 ! mole per hour
 
 [Term]
 id: PREFER:0000089
-name: substrate specific uptake rate
+name: specific substrate uptake rate
 def: "The rate of substrate uptake per unit of biomass." [PREFER]
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
@@ -716,21 +708,21 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000173 ! mole per carbon
 
 [Term]
 id: PREFER:0000091
-name: average substrate specific uptake rate in feed phase
+name: average specific substrate uptake rate in feed phase
 def: "The average specific uptake rate of substrate during the feeding phase." [PREFER]
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
 
 [Term]
 id: PREFER:0000092
-name: maximum substrate specific uptake rate in feed phase
+name: maximum specific substrate uptake rate in feed phase
 def: "The maximum specific uptake rate of substrate during the feeding phase." [PREFER]
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
 
 [Term]
 id: PREFER:0000093
-name: minimum substrate specific uptake rate in feed phase
+name: minimum specific substrate uptake rate in feed phase
 def: "The minimum specific uptake rate of substrate during the feeding phase." [PREFER]
 is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000174 ! gram per gram per hour
