@@ -49,25 +49,6 @@ has_part: PREFER:0000003 ! fermentation experiment
 is_a: PREFER:0000001 ! precision fermentation process
 xref: OBI_0000066 ! investigation
 
-! ============================
-![Term]
-!id: PREFER:0000005
-!name: user
-!def: "The individual assigned as the project manager."
-!is_a: PREFER:0000001 ! precision fermentation process
-
-![Term]
-!id: PREFER:0000006
-!name: institution
-!def: "The public or private research center, university, or organization that hosts or supports the execution of the project."
-
-![Term]
-!id: PREFER:0000007
-!name: country
-!def: "The state or nation where the project is carried out."
-!is_a: PREFER:0000001 ! precision fermentation process
-! ============================
-
 [Term]
 id: PREFER:0000008
 name: cultivation condition
@@ -169,14 +150,14 @@ relationship: PREFER_RE:has_possible_unit: UO:0000196 ! pH
 [Term]
 id: PREFER:0000021
 name: pH control base solution
-def: "The alkaline (base) solution used to control and maintain the pH within the fermenter, when it reaches below the setpoint." [PREFER]
+def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 
 [Term]
 id: PREFER:0000022
 name: pH control acid solution
-def: "The acidic solution used to control and maintain the pH within the fermenter, when it rises above the setpoint." [PREFER]
+def: "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
 
