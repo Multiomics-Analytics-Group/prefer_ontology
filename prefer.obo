@@ -460,7 +460,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000172 ! liters per minu
 [Term]
 id: PREFER:0000058
 name: inlet air o2
-def: "Percentaje of oxygen in the gas mixture that is being supplied into the fermenter." [PREFER]
+def: "Percentage of oxygen in the gas mixture that is being supplied into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 synonym: "inlet air oxygen" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -470,7 +470,7 @@ relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 [Term]
 id: PREFER:0000059
 name: inlet air co2
-def: "Percentaje of carbon dioxide in the gas mixture that is being supplied into the fermenter." [PREFER]
+def: "Percentage of carbon dioxide in the gas mixture that is being supplied into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 synonym: "inlet air carbon dioxide" EXACT []
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
@@ -480,17 +480,18 @@ relationship: PREFER_RE:has_possible_unit: UO:0000187 ! percent
 [Term]
 id: PREFER:0000060
 name: OD
-def: "Optical density to measure biomass. Absorbance is the logarithm of the ratio of incident to transmitted radiant power through a sample (excluding the effects on cell walls)" [PREFER]
+def: "Absorbance measurement of a culture's turbidity at a specified wavelength, commonly used as a proxy for biomass concentration." [PREFER, adapted from NCIT:C85776]
 synonym: "optical density" EXACT []
-synonym: "OD600" EXACT []
+synonym: "OD" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_possible_unit: UO:0000189 ! dimensionless unit
+xref: NCIT:C85776 ! optical density measurement
 
 [Term]
 id: PREFER:0000061
 name: OUR
-def: "Inline determination of the rate at which O2 is consumed by cells." [PREFER]
+def: "Determination of the rate at which O2 is consumed by cells." [PREFER]
 synonym: "o2 uptake rate" EXACT []
 synonym: "oxygen uptake rate" EXACT []
 is_a: PREFER:0000009 ! process variable
