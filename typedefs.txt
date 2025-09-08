@@ -102,3 +102,10 @@ def: "A relation indicating the possible operational modes applicable to a biore
 domain: PREFER:0000014 ! bioreactor
 range: PREFER:0000180 ! operational mode
 
+[Typedef]
+id: PREFER_RE:has_scale
+name: has scale
+def: "A relation indicating the bioreactor scale." [PREFER]
+domain: PREFER:0000014 ! bioreactor
+range: PREFER:0000185 ! bioreactor scale
+
