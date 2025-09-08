@@ -103,6 +103,10 @@ synonym: "bioreactor system" EXACT []
 is_a: BAO:0003118 ! instrument
 equivalent_to: OBI:0001046 ! bioreactor
 xref: NARROW MSIO:0000167 ! fermenter
+relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000181 ! batch
+relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000182 ! fed-batch
+relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000183 ! continuous-chemostat
+relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000184 ! continuous-turbidostat
 
 [Term]
 id: PREFER:0000015
@@ -135,7 +139,7 @@ id: PREFER:0000019
 name: temperature setpoint
 def: "The target temperature value to be maintained within the fermenter." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000041 ! temperature 
+relationship: PREFER_RE:related_to: PREFER:0000041 ! temperature 
 relationship: PREFER_RE:has_possible_unit: UO:0000027 ! degree Celsius
 relationship: PREFER_RE:has_possible_unit: UO:0000195 ! degree Fahrenheit
 
@@ -1043,7 +1047,7 @@ relationship: PREFER_RE:has_possible_unit: PREFER_UNIT:0000163 ! carbon mole per
 
 
 ! ============================
-! New Terms for PREFER
+! 1. New Terms for PREFER
 ! These terms are needed for relationships in PREFER
 ! ============================
 
@@ -1254,4 +1258,38 @@ is_a: UO:0000190 ! ratio unit
 relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
 relationship: PREFER_RE:has_denominator_unit UO:0000013 ! mole 
 
+
 ! ============================
+! 2. New Terms for PREFER
+! These terms are needed for relationships in PREFER
+! ============================
+
+[Term]
+id: PREFER:0000180
+name: operational mode
+def: "A defined strategy of operating a bioreactor that specifies how culture medium and biomass are introduced, maintained, and removed over time." [PREFER]
+
+[Term]
+id: PREFER:0000181
+name: batch
+def: "An operational mode in which all nutrients are supplied at the start of cultivation, with no further input or removal of medium until the end of the process." [PREFER]
+is_a: PREFER:0000180 ! operational mode
+
+[Term]
+id: PREFER:0000182
+name: fed-batch
+def: "An operational mode in which additional nutrients are intermittently or continuously supplied to the culture during cultivation, without removal of culture fluid, until termination of the process." [PREFER]
+is_a: PREFER:0000180 ! operational mode
+
+[Term]
+id: PREFER:0000183
+name: continuous-chemostat
+def: "A continuous operational mode in which fresh medium is supplied and culture fluid removed at a constant rate, such that the specific growth rate of the biomass is controlled by the limiting nutrient concentration and equals the dilution rate." [PREFER]
+is_a: PREFER:0000180 ! operational mode
+
+[Term]
+id: PREFER:0000184
+name: continuous-turbidostat
+def: "A continuous operational mode in which fresh medium is supplied and culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density." [PREFER]
+is_a: PREFER:0000180 ! operational mode
+
