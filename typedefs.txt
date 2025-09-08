@@ -95,3 +95,10 @@ def: "A relation between a compound rate unit and the unit that occurs in the de
 domain: PREFER:0000157 ! rate
 range: UO:0000000 ! unit
 
+[Typedef]
+id: PREFER_RE:has_possible_operational_mode
+name: has denominator unit
+def: "A relation indicating the possible operational modes applicable to a bioreactor setup." [PREFER]
+domain: PREFER:0000014 ! bioreactor
+range: PREFER:0000180 ! operational mode
+
