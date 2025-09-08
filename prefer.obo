@@ -107,6 +107,9 @@ relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000181 ! batch
 relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000182 ! fed-batch
 relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000183 ! continuous-chemostat
 relationship: PREFER_RE:has_possible_operational_mode: PREFER:0000184 ! continuous-turbidostat
+relationship: PREFER_RE:has_scale: PREFER:0000186 ! lab-scale
+relationship: PREFER_RE:has_scale: PREFER:0000187 ! pilot-scale
+relationship: PREFER_RE:has_scale: PREFER:0000188 ! industrial-scale
 
 [Term]
 id: PREFER:0000015
@@ -1293,3 +1296,26 @@ name: continuous-turbidostat
 def: "A continuous operational mode in which fresh medium is supplied and culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density." [PREFER]
 is_a: PREFER:0000180 ! operational mode
 
+[Term]
+id: PREFER:0000185
+name: bioreactor scale
+def: "A classification of bioreactors based on culture volume and intended application, ranging from laboratory research to industrial production." [PREFER]
+
+[Term]
+id: PREFER:0000186
+name: lab-scale
+def: "A bioreactor scale typically used for small-scale experiments and research, ranging from a few milliliters to several liters in volume." [PREFER]
+comment: "For instance, minibioreactors (50-500 mL) such as Ambr or Pioreactors, or micro bioreactors (< 10 mL) fall within this category." [PREFER]   
+is_a: PREFER:0000185 ! bioreactor scale
+
+[Term]
+id: PREFER:0000187
+name: pilot-scale
+def: "A bioreactor scale that serves as an intermediate step between lab-scale and industrial-scale, typically ranging from several liters to a few hundred liters in volume." [PREFER]
+is_a: PREFER:0000185 ! bioreactor scale
+
+[Term]
+id: PREFER:0000188
+name: industrial-scale
+def: "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in volume." [PREFER]
+is_a: PREFER:0000185 ! bioreactor scale
