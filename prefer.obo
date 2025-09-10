@@ -437,19 +437,20 @@ relationship: PREFER_RE:has_possible_unit NCIT:C73681 ! unit of optical density
 [Term]
 id: PREFER:0000035
 name: final seed OD
-def: "The cell density of the seed culture at the time it is inoculated to the main fermenter." [PREFER]
+def: "The cell density of the seed culture at the time it is inoculated to the bioreactor." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000060 ! OD 
+relationship: PREFER_RE:setpoint_of PREFER:0000023 ! culture id
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
 relationship: PREFER_RE:has_possible_unit SNOMED:258743006 ! optical density units
 relationship: PREFER_RE:has_possible_unit UO:0000189 ! dimensionless unit
 relationship: PREFER_RE:has_possible_unit NCIT:C73681 ! unit of optical density
 
 [Term]
 id: PREFER:0000036
-name: initial culture
+name: initial culture volume
 def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:refers_to_variable PREFER:0000022 ! culture 
+relationship: PREFER_RE:setpoint_of PREFER:0000023 ! culture id
 relationship: PREFER_RE:has_possible_unit UO:0000098 ! milliliter 
 relationship: PREFER_RE:has_possible_unit UO:0000099 ! liter 
 
@@ -458,7 +459,8 @@ id: PREFER:0000038
 name: feed profile
 def: "Feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific." [PREFER]
 comment: "Feed profile types: 1. Constant feeding rate, 2. Linear feeding rate, 3. Exponential feeding rate, and 4. Combination of 1-2, 3-2 or 3-1 feeding profiles." [PREFER]
-is_a: PREFER:0000015 ! operation parameter
+!is_a: PREFER:0000015 ! operation parameter
+is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000039
@@ -468,6 +470,9 @@ synonym: "dissolved oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit UO:0000189 ! dimensionless unit
+xref: MIXS:0000119 ! dissolved oxygen
+xref: PRIDE:0000788 ! dissolved oxygen
+xref: GENEPIO:0000035 ! dissolved oxygen concentration
 
 [Term]
 id: PREFER:0000040
