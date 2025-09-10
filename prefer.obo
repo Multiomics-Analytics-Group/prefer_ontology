@@ -1274,21 +1274,27 @@ is_a: PREFER:0000155 ! performance variable
 [Term]
 id: PREFER:0000158
 name: respiratory metric
-def: "Computed variable that quantifies respiratoryactivity in the bioprocess, providing indications of metabolic states and gas exchange efficiency." [PREFER]
+def: "Computed variable that quantifies respiratory activity in the bioprocess, providing indications of metabolic states and gas exchange efficiency." [PREFER]
+comment: "For instance, oxygen uptake rate (OUR), carbon dioxide evolution rate (CER), respiratory quotient (RQ), and related metrics."
+synonym: "metabolic metric" EXACT []
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000159
-name: balance metric
-def: "Computed variable that assesses the consistency of material balances in the bioprocess, by comparing the total inputs and outoputs of specific compounds." [PREFER]
+name: production metric
+!def: "Computed variable that assesses the consistency of material balances in the bioprocess, by comparing the total inputs and outoputs of specific compounds." [PREFER]
+comment: "For instance, product yields, productivity rates"
 is_a: PREFER:0000155 ! performance variable
 
 [Term]
 id: PREFER:0000160
-name: output variable
-def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass." [PREFER]
-synonym: "output var" EXACT []
-is_a: PREFER:0000010 ! compound
+name: growth metric
+!def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass." [PREFER]
+comment: "For instance, specific growth rate, biomass yields."
+is_a: phenomics
+is_a: omics output
+is_a: output variable
+
 
 
 ! ============================
