@@ -85,9 +85,18 @@ domain: PREFER:0000009 ! process variable
 range: PREFER:0000150 ! data acquisition mode
 
 [Typedef]
-id: PREFER_RE:related_to
-name: related to
-def: "Relates two terms that are conceptually connected within the fermentation process, such as cultivation conditions and process variables." [PREFER]
+id: PREFER_RE:setpoint_of
+name: setpoint of
+def: "Relates a cultivation condition representing a target or control value(setpoint) to the process variable it constrains." [PREFER]
+domain: PREFER:0000008 ! cultivation condition
+range: PREFER:0000009 ! process variable
+
+[Typedef]
+id: PREFER_RE:refers_to_variable
+name: refers to variable
+def: "Relates a cultivation condition expressed as an identifier, string, or categorical value to the process variable it describes." [PREFER]
+domain: PREFER:0000008 ! cultivation condition
+range: PREFER:0000009 ! process variable
 
 [Typedef]
 id: PREFER_RE:has_possible_unit
@@ -275,11 +284,7 @@ id: PREFER:0000019
 name: temperature setpoint
 def: "The target temperature value to be maintained within the fermenter." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-!===========================
-!relationship: PREFER_RE:related_to PREFER:0000041 ! temperature 
-relationship: PREFER_RE:initial_value_of PREFER:0000041 ! temperature
-!===========================
-relationship: PREFER_RE:related_to PREFER:0000041 ! temperature 
+relationship: PREFER_RE:setpoint_of PREFER:0000041 ! temperature
 relationship: PREFER_RE:has_possible_unit UO:0000027 ! degree Celsius
 relationship: PREFER_RE:has_possible_unit UO:0000195 ! degree Fahrenheit
 
@@ -288,7 +293,7 @@ id: PREFER:0000020
 name: pH setpoint
 def: "Target pH value to be maintained within the fermenter throught the process." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000040 ! pH
+relationship: PREFER_RE:setpoint_of PREFER:0000040 ! pH
 relationship: PREFER_RE:has_possible_unit UO:0000196 ! pH  
 
 [Term]
@@ -296,14 +301,14 @@ id: PREFER:0000021
 name: pH control base solution
 def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 
 [Term]
 id: PREFER:0000022
 name: pH control acid solution
 def: "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 
 [Term]
 id: PREFER:0000023
@@ -313,7 +318,7 @@ synonym: "initial culture id" EXACT []
 synonym: "main culture id" EXACT []
 synonym: "stock culture id" EXACT []
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to OBI:0100060 ! cultured cell population 
+relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
 
 [Term]
 id: PREFER:0000024
@@ -326,7 +331,7 @@ synonym: "initial culture" EXACT []
 synonym: "pre-culture" EXACT []
 synonym: "inoculum" EXACT []
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to OBI:0100060 ! cultured cell population 
+relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
 
 [Term]
 id: PREFER:0000025
@@ -334,91 +339,117 @@ name: DO control setpoint
 def: "The target value for dissolved oxygen." [PREFER]
 synonym: "dissolved oxygen control setpoint" EXACT []
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:setpoint_of PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_possible_unit UO:0000187 ! percent
+
+!============================
+![Term]
+!id: PREFER:0000026
+!name: DO control cascade level 1
+!def: "First level of the cascade control system for dissolved oxygen. Level 1 involves adjusting the stirrer speed parameter to ahcieve the desired DO level." [PREFER]
+!is_a: PREFER:0000015 ! operation parameter
+!relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+!============================
 
 [Term]
 id: PREFER:0000026
-name: DO control cascade level 1
-def: "First level of the cascade control system for dissolved oxygen. Level 1 involves adjusting the stirrer speed parameter to ahcieve the desired DO level." [PREFER]
+name: DO control cascade
+def: "The cascade control system for dissolved oxygen linked to a parameter to achieve the desired DO level." [PREFER]
+comment: "In Fed-batch operation mode there are 3 different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter." [PREFER]
 is_a: PREFER:0000015 ! operation parameter
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000027
 name: maximum stirring
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
-is_a: PREFER:0000015 ! operation parameter
 synonym: "maximum shaking speed" EXACT []
-relationship: related_to PREFER:0000039 ! DO
+is_a: PREFER:0000015 ! operation parameter
+relationship: refers_to_variable PREFER:0000039 ! DO
+relationship: setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_possible_unit UO:0000079 ! radian per second 
 
 [Term]
 id: PREFER:0000028
 name: minimum stirring
 def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
+    synonym: "minimum shaking speed" EXACT []
 is_a: PREFER:0000015 ! operation parameter
-synonym: "minimum shaking speed" EXACT []
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+relationship: setpoint_of PREFER:0000054 ! stirrer spee
 relationship: PREFER_RE:has_possible_unit UO:0000079 ! radian per second 
 
-[Term]
-id: PREFER:0000029
-name: DO control cascade level 2
-def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air flow parameter to ahcieve the desired DO level." [PREFER]
-is_a: PREFER:0000015 ! operation parameter
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+!============================
+![Term]
+!id: PREFER:0000029
+!name: DO control cascade level 2
+!def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air flow parameter to ahcieve the desired DO level." [PREFER]
+!is_a: PREFER:0000015 ! operation parameter
+!relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+!============================
 
 [Term]
 id: PREFER:0000030
 name: aeration gas type
 def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen." [PREFER]
-is_a: PREFER:0000015 ! operation parameter
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
 
 [Term]
 id: PREFER:0000031
 name: maximum aeration
-def: "Maximum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)." [PREFER]
+def: "Maximum rate of at which gas can be supplied to the bioreactor." [PREFER]
 is_a: PREFER:0000015 ! operation parameter
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
+relationship: PREFER_RE:refers_to_variable PREFER:0000030 ! aeration gas type 
+relationship: PREFER_RE:setpoint_of PREFER:0000055 ! air flow
+relationship: PREFER_RE:has_possible_unit PREFER_UNIT:0000172 ! liters per minute 
 
 [Term]
 id: PREFER:0000032
 name: minimum aeration
-def: "Minimum rate of at which gas can be supplied to the fermenter, measured in slpm (standard liters per minute)." [PREFER]
+def: "Minimum rate of at which gas can be supplied to the bioreactor." [PREFER]
 is_a: PREFER:0000015 ! operation parameter
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
+relationship: PREFER_RE:refers_to_variable PREFER:0000030 ! aeration gas type 
+relationship: PREFER_RE:setpoint_of PREFER:0000055 ! air flow 
+relationship: PREFER_RE:has_possible_unit PREFER_UNIT:0000172 ! liters per minute
 
-[Term]
-id: PREFER:0000033
-name: DO control cascade level 3
-def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level." [PREFER]
-is_a: PREFER:0000015 ! operation parameter
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+!============================
+![Term]
+!id: PREFER:0000033
+!name: DO control cascade level 3
+!def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level." [PREFER]
+!is_a: PREFER:0000015 ! operation parameter
+!relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+!============================
 
 [Term]
 id: PREFER:0000034
 name: starting OD
 def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600nm or 900nm wavelength) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
+relationship: PREFER_RE:setpoint_of PREFER:0000060 ! OD 
 relationship: PREFER_RE:has_possible_unit SNOMED:258743006 ! optical density units
+relationship: PREFER_RE:has_possible_unit UO:0000189 ! dimensionless unit
+relationship: PREFER_RE:has_possible_unit NCIT:C73681 ! unit of optical density
 
 [Term]
 id: PREFER:0000035
 name: final seed OD
 def: "The cell density of the seed culture at the time it is inoculated to the main fermenter." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000060 ! OD 
+relationship: PREFER_RE:setpoint_of PREFER:0000060 ! OD 
 relationship: PREFER_RE:has_possible_unit SNOMED:258743006 ! optical density units
+relationship: PREFER_RE:has_possible_unit UO:0000189 ! dimensionless unit
+relationship: PREFER_RE:has_possible_unit NCIT:C73681 ! unit of optical density
 
 [Term]
 id: PREFER:0000036
 name: initial culture
 def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:related_to PREFER:0000022 ! culture 
+relationship: PREFER_RE:refers_to_variable PREFER:0000022 ! culture 
 relationship: PREFER_RE:has_possible_unit UO:0000098 ! milliliter 
 relationship: PREFER_RE:has_possible_unit UO:0000099 ! liter 
 
@@ -572,7 +603,7 @@ id: PREFER:0000054
 name: stirrer speed 
 def: "Speed at which the impeller shaft rotates." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit UO:0000079 ! radian per second 
 
@@ -581,8 +612,8 @@ id: PREFER:0000055
 name: air flow
 def: "Rate at which air is supplied to the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! online measurement
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
@@ -590,36 +621,36 @@ id: PREFER:0000056
 name: nitrogen flow
 def: "Rate at which nitrogen is supplied into the fermenter in form of a ammonium solution." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
 id: PREFER:0000057
 name: oxygen flow
-def: "Rate at which oxygen is supplied to the fermenter." [PREFER]
+def: "Rate at which oxygen is supplied to the bioreactor." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
 id: PREFER:0000058
 name: inlet air o2
-def: "Percentage of oxygen in the gas mixture that is being supplied into the fermenter." [PREFER]
+def: "Percentage of oxygen in the gas mixture that is being supplied into the bioreactor." [PREFER]
 is_a: PREFER:0000009 ! process variable
 synonym: "inlet air oxygen" EXACT []
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000059
 name: inlet air co2
-def: "Percentage of carbon dioxide in the gas mixture that is being supplied into the fermenter." [PREFER]
+def: "Percentage of carbon dioxide in the gas mixture that is being supplied into the bioreactor." [PREFER]
 is_a: PREFER:0000009 ! process variable
 synonym: "inlet air carbon dioxide" EXACT []
-relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_possible_unit UO:0000187 ! percent
 
@@ -633,6 +664,7 @@ equivalent_to: NCIT:C85776 ! optical density measurement
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_possible_unit UO:0000189 ! dimensionless unit
 relationship: PREFER_RE:has_possible_unit NCIT:C73681 ! unit of optical density
+relationship: PREFER_RE:has_possible_unit SNOMED:258743006 ! optical density units
 
 [Term]
 id: PREFER:0000061
