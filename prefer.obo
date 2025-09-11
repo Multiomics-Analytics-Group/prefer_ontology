@@ -436,8 +436,6 @@ def: "The cell density of the seed culture at the time it is inoculated to the b
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:setpoint_of PREFER:0000023 ! culture id
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
-relationship: PREFER_RE:has_unit SNOMED:258743006 ! optical density units
-relationship: PREFER_RE:has_unit UO:0000189 ! dimensionless unit
 relationship: PREFER_RE:has_unit NCIT:C73681 ! unit of optical density
 
 [Term]
@@ -1388,7 +1386,7 @@ name: millimole per hour
 comment: "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour (mmol/h)." [PREFER]
 synonym: "mmol/h" EXACT []
 is_a: PATO:0002244 ! mass flow rate
-relationship: PREFER_RE:has_numerator_unit SNOMED:258718000 ! millimole
+relationship: PREFER_RE:has_numerator_unit UO:0000040! millimole
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
