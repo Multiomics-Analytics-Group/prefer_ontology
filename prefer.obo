@@ -1348,11 +1348,13 @@ id: PREFER_UNIT:0000167
 name: liters per hour
 comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in one hour." [adapted from UOC:GVG]
 synonym: "litres per hour" EXACT []
+synonym: "Litres per Hour" EXACT []
+synonym: "Liters per Hour" EXACT []
 synonym: "L/h" EXACT []
 synonym: "l/h" EXACT []
 is_a: UO:0000270 ! volumetric flow rate unit
-relationship: PREFER_RE:has_numerator_unit UO:0000099 ! liter
-relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+is_a: NCIT:C48568 ! unit of volumetric flow rate
+xref: NCIT:C69160 ! Liter per Hour
 
 [Term]
 id: PREFER_UNIT:0000168
@@ -1366,28 +1368,22 @@ is_a: UO:0000013 ! mole
 id: PREFER_UNIT:0000169
 name: gram per hour
 comment: "A unit of mass flow rate representing one gram of substance passing through a given surface or system in one hour." [PREFER]
-synonym: "g/h" EXACT []
-is_a: PATO:0002244 ! mass flow rate
-relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
-relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+synonym: "g/h" EXACT [NCIT:C85601]
+xref: NCIT:C85601 ! gram per hour
 
 [Term]
 id: PREFER_UNIT:0000170
 name: mole per hour
 comment: "A unit of mass flow rate represenitn one mole of substance passing through a given surface or system in one hour." [PREFER]
-synonym: "mol/h" EXACT []
-is_a: PATO:0002244 ! mass flow rate
-relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole
-relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+synonym: "mol/h" EXACT [NCIT]
+xref: NCIT:C85738 ! mole per hour
 
 [Term]
 id: PREFER_UNIT:0000171
 name: millimole per hour
 comment: "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour (mmol/h)." [PREFER]
-synonym: "mmol/h" EXACT []
-is_a: PATO:0002244 ! mass flow rate
-relationship: PREFER_RE:has_numerator_unit UO:0000040! millimole
-relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
+synonym: "mmol/h" EXACT [NCIT]
+xref: NCIT:C85720 ! millimole per hour
 
 [Term]
 id: PREFER_UNIT:0000172
@@ -1437,10 +1433,11 @@ relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 id: PREFER_UNIT:0000176
 name: mole per mole
 def: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per mole of substrate(S) consumed (mol/mol)." [PREFER]
-synonym: "mol/mol" EXACT []
-is_a: UO:0000190 ! ratio unit
-relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
-relationship: PREFER_RE:has_denominator_unit UO:0000013 ! mole 
+synonym: "mol/mol" EXACT [NCIT]
+synonym: "Mole/Mole" EXACT [NCIT]
+synonym: "Mole per Mole" EXACT [NCIT]
+is_a: UO:0000076 ! mole fraction
+xref: NCIT:C70455 ! Mole per Mole
 
 
 ! ============================
