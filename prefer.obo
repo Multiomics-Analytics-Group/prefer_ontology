@@ -1178,107 +1178,117 @@ comment: "For instance, specific growth rate, biomass yields."
 [Term]
 id: PREFER_UNIT:0000161
 name: gram per gram
-comment: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material, input substrate consumed(S), or biomass(X) generated(cell dry weight(CDW)) ." [PREFER]
+def: "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material, input substrate consumed(S), or biomass(X) generated(cell dry weight(CDW))(g/g)." [PREFER]
+synonym: "Gram per Gram" EXACT []
 synonym: "g/g" EXACT []
+xref: NCIT:C70453 ! Gram per Gram {source:"NCI Thesaurus OBO Edition"}
 is_a: UO:0000190 ! ratio unit
-relationship: PREFER_RE:has_numerator_unit UO:0000021 ! gram
-relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram
 
 [Term]
 id: PREFER_UNIT:0000162
 name: carbon mole per gram
-comment: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound - in carbon moles per gram of initial material or input substrate consumed." [PREFER]
+def: "A unit representing a carbon-based ratio, typically used to express product or output substance - such as biomass or compound - in carbon moles per gram of initial material or input substrate consumed (cmol/g)." [PREFER]
 synonym: "cmol/g" EXACT []
 synonym: "c-mol/g" EXACT []
 is_a: UO:0000190 ! ratio unit
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole 
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! carbon mole 
 relationship: PREFER_RE:has_denominator_unit UO:0000021 ! gram 
 
 [Term]
 id: PREFER_UNIT:0000163
 name: carbon mole per carbon mole
-comment: "A unit representing a carbon-based ratio, typically used to express product, output substance or input - such as biomass, compound and substrate -  in carbon moles per carbon mole of biomass generated, initial material consumed or input substrate consumed." [PREFER]
+def: "A unit representing a carbon-based ratio, typically used to express product, output substance or input - such as biomass, compound and substrate -  in carbon moles per carbon mole of biomass generated, initial material consumed or input substrate consumed (cmol/cmol)." [PREFER]
 synonym: "cmol/cmol" EXACT []
 synonym: "c-mol/c-mol" EXACT []
 is_a: UO:0000190 ! ratio unit
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole
-relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! carbon mole
+relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000164 ! carbon mole 
+
+[Term]
+id: PREFER_UNIT:0000164
+name: carbon mole
+def: "Semantically equivalent in magnitude to the SI mole (1 C-mol = 1 mol) but used to indicate mole of carbon atoms (cmol)." [PREFER]
+synonym: "mole of carbon atoms" EXACT []
+synonym: "C-mol" EXACT []
+synonym: "cmol" EXACT []
+is_a: CHEBI:64708 ! one-carbon compound {source:"ChEBI"}
+relationship: PREFER_RE:has_unit UO:0000013 ! mole 
 
 [Term]
 id: PREFER_UNIT:0000165
 name: mole per carbon mole
-comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass(X) generated or substrate(S) consumed." [PREFER]
+comment: "A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass(X) generated or substrate(S) consumed (mol/cmol)." [PREFER]
 synonym: "mol/cmol" EXACT []
 synonym: "mol/c-mol" EXACT []
 is_a: UO:0000190 ! ratio unit
 relationship: PREFER_RE:has_numerator_unit UO:0000013 ! mole 
-relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000168 ! carbon mole 
+relationship: PREFER_RE:has_denominator_unit PREFER_UNIT:0000164 ! carbon mole 
 
 [Term]
 id: PREFER_UNIT:0000167
 name: liters per hour
-comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in one hour." [adapted from UOC:GVG]
+def: "A volumetric flow rate unit which is equal to one liter volume through a given surface in one hour (L/h)." [PREFER, UOC:GVG]
 synonym: "litres per hour" EXACT []
 synonym: "Litres per Hour" EXACT []
 synonym: "Liters per Hour" EXACT []
 synonym: "L/h" EXACT []
 synonym: "l/h" EXACT []
-is_a: UO:0000270 ! volumetric flow rate unit
-is_a: NCIT:C48568 ! unit of volumetric flow rate
 xref: NCIT:C69160 ! Liter per Hour
-
-[Term]
-id: PREFER_UNIT:0000168
-name: carbon mole 
-comment: "Semantically equivalent in magnitude to the SI mole (1 C-mol = 1 mol) but used to indicate 'mole of carbon atoms' (elemental basis)." [PREFER]
-synonym: "c-mol" EXACT []
-synonym: "cmol" EXACT []
-is_a: UO:0000013 ! mole
+is_a: UO:0000270 ! volumetric flow rate unit
 
 [Term]
 id: PREFER_UNIT:0000169
 name: gram per hour
-comment: "A unit of mass flow rate representing one gram of substance passing through a given surface or system in one hour." [PREFER]
+def: "A unit of mass flow rate representing one gram of substance passing through a given surface or system in one hour (g/h)." [PREFER]
 synonym: "g/h" EXACT [NCIT:C85601]
 xref: NCIT:C85601 ! gram per hour
+is_a: NCIT:C48569 ! unit of mass flow rate
 
 [Term]
 id: PREFER_UNIT:0000170
 name: mole per hour
-comment: "A unit of mass flow rate represenitn one mole of substance passing through a given surface or system in one hour." [PREFER]
+def: "A unit of mass flow rate represenitn one mole of substance passing through a given surface or system in one hour (mol/h)." [PREFER]
 synonym: "mol/h" EXACT [NCIT]
 xref: NCIT:C85738 ! mole per hour
+is_a: NCIT:C179816 ! molar rate
 
 [Term]
 id: PREFER_UNIT:0000171
 name: millimole per hour
-comment: "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour (mmol/h)." [PREFER]
+def: "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour (mmol/h)." [PREFER]
 synonym: "mmol/h" EXACT [NCIT]
 xref: NCIT:C85720 ! millimole per hour
+is_a: NCIT:C179816 ! molar rate
 
 [Term]
 id: PREFER_UNIT:0000172
 name: liters per minute
-comment: "A volumetric flow rate unit which is equal to one liter volume through a given surface in a minute (l/min)." [adapted from UOC:GVG]
+def: "A volumetric flow rate unit which is equal to one liter volume through a given surface in a minute (L/min)." [PREFER, UOC:GVG]
 synonym: "litres per minute" EXACT []
-synonym: "L/min" EXACT []
-synonym: "l/min" EXACT []
-is_a: UO:0000270 ! volumetric flow rate unit
+synonym: "Litres per minute" EXACT []
+synonym: "Litres per Minute" EXACT [NCIT]
+synonym: "Liters per minute" EXACT []
+synonym: "Liters per Minute" EXACT []
+synonym: "Liter per minute" EXACT []
+synonym: "Liter per Minute" EXACT [NCIT]
+synonym: "L/min" EXACT [NCIT]
+synonym: "l/min" EXACT [NCIT]
+synonym: "Liter/Minute" EXACT [NCIT]
+synonym: "liter/minute" EXACT [NCIT]
 xref: NCIT:C67388 ! liter per minute
-relationship: PREFER_RE:has_numerator_unit UO:0000099 ! liter
-relationship: PREFER_RE:has_denominator_unit UO:0000031 ! minute
+is_a: UO:0000270 ! volumetric flow rate unit
+
 
 [Term]
 id: PREFER_UNIT:0000173
 name: mole per carbon mole per hour
-def: "A unit representing a compound rate, expressed as moles per carbon mole(X) per hour ((mol/c-mol)/h)." [PREFER]
+def: "A unit representing a compound rate, expressed as moles per carbon mole(X) per hour ((mol/cmol)/h)." [PREFER]
 synonym: "(mol/c-mol)/h" EXACT []
 synonym: "(mol/cmol)/h" EXACT []
 is_a: UO:0000051 ! rate unit
 relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000165 ! mole per carbon mole
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
-!***************************
 [Term]
 id: PREFER_UNIT:0000174
 name: gram per gram per hour
@@ -1293,11 +1303,11 @@ relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 [Term]
 id: PREFER_UNIT:0000175
 name: carbon mole per hour
-def: "A unit of mass flow rate representing a carbon mole of substance passing through a given surface or system in one hour (c-mol/h)." [PREFER]
+def: "A unit of mass flow rate representing a carbon mole of substance passing through a given surface or system in one hour (cmol/h)." [PREFER]
 synonym: "c-mol/h" EXACT []
 synonym: "cmol/h" EXACT []
-is_a: PATO:0002244 ! mass flow rate
-relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000168 ! carbon mole
+is_a: NCIT:C48569 ! unit of mass flow rate
+relationship: PREFER_RE:has_numerator_unit PREFER_UNIT:0000164 ! carbon mole
 relationship: PREFER_RE:has_denominator_unit UO:0000032 ! hour
 
 [Term]
@@ -1307,9 +1317,8 @@ def: "A unit representing a mol-based ratio, typically used to express product, 
 synonym: "mol/mol" EXACT [NCIT]
 synonym: "Mole/Mole" EXACT [NCIT]
 synonym: "Mole per Mole" EXACT [NCIT]
-is_a: UO:0000076 ! mole fraction
 xref: NCIT:C70455 ! Mole per Mole
-
+is_a: UO:0000076 ! mole fraction
 
 ! ============================
 ! 2. New Terms for PREFER
