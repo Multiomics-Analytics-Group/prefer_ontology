@@ -163,3 +163,7 @@ cython_debug/
 
 # These are my custom lines
 doubts.txt
+prefer_report.tsv
+external_ontologies/
+
+
