@@ -10,135 +10,6 @@ property_value: terms:license "https://creativecommons.org/licenses/by/4.0/"
 imports: imports/chebi_import.obo
 !import: http://purl.obolibrary.org/obo/chebi_import.obo
 
-! ============================
-! Type definitions
-! ============================
-
-[Typedef]
-id: PREFER_RE:has_experiment
-name: has experiment
-def: "Links a project to its experiment(s)." [PREFER]
-domain: PREFER:0000004 ! fermentation project
-range: PREFER:0000003 ! fermentation experiment
-
-[Typedef]
-id: PREFER_RE:has_run
-name: has run
-def: "Indicates which run(s) are part of an experiment." [PREFER]
-domain: PREFER:0000003 ! fermentation experiment
-range: PREFER:0000004 ! fermentation run
-
-[Typedef]
-id: PREFER_RE:has_medium
-name: has medium
-def: "Specifies the medium used in a run." [PREFER]
-domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000011 ! medium
-
-[Typedef]
-id: PREFER_RE:has_ingredient
-name: has ingredient
-def: "Lists ingredients (compounds) in a medium." [PREFER]
-domain: PREFER:0000011 ! medium
-range: PREFER:0000010 ! compound
-
-[Typedef]
-id: PREFER_RE:uses_bioreactor
-name: uses fermenter
-def: "Indicates the fermenter used in a run." [PREFER]
-domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000014 ! bioreactor
-
-[Typedef]
-id: PREFER_RE:has_measured_cultivation_condition
-name: has cultivation condition
-def: "Links a fermentation run to a cultivation parameter applied at its initiation." [PREFER]
-domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000008 ! cultivation condition
-
-[Typedef]
-id: PREFER_RE:has_measured_process_variable
-name: has process variable
-def: "Links a fermentation run to process variable measured during fermentation." [PREFER]
-domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000009 ! process variable
-
-[Typedef]
-id: PREFER_RE:has_measured_compound
-name: has measured compound
-def: "Indicates compounds measured during a run." [PREFER]
-domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000010 ! compound
-
-!============================
-![Typedef]
-!id: PREFER_RE:has_measured_imodulon
-!name: has measured imodulon
-!def: "Indicates compounds measured during a run." [PREFER]
-!domain: PREFER:0000004 ! fermentation run
-!range: PREFER:0000017 ! iModulon
-!============================
-
-[Typedef]
-id: PREFER_RE:has_data_acquisition_mode
-name: has data acquisition mode
-def: "Relates a bioprocess variable or measurement to the mode of data acquisition used to obtain it (e.g., inline, online, atline, or offline)." [PREFER]
-domain: PREFER:0000009 ! process variable
-range: PREFER:0000150 ! data acquisition mode
-
-[Typedef]
-id: PREFER_RE:setpoint_of
-name: setpoint of
-def: "Relates a cultivation condition representing a target or control value(setpoint) to the process variable it constrains." [PREFER]
-domain: PREFER:0000008 ! cultivation condition
-range: PREFER:0000009 ! process variable
-
-[Typedef]
-id: PREFER_RE:refers_to_variable
-name: refers to variable
-def: "Relates a cultivation condition expressed as an identifier, string, or categorical value to the process variable it describes." [PREFER]
-domain: PREFER:0000008 ! cultivation condition
-range: PREFER:0000009 ! process variable
-
-[Typedef]
-id: PREFER_RE:has_unit
-name: has possible unit
-def: "Relates a derived or calculated quantity — referred to as a performance variable in PREFER — to the units in which it can be expressed." [PREFER]
-domain: PREFER:0000155 ! performance variable
-range: UO:0000000 ! unit
-
-[Typedef]
-id: PREFER_RE:has_numerator_unit
-name: has numerator unit
-def: "A relation between a compound rate unit and the unit that occurs in the numerator of its expression." [PREFER]
-domain: PREFER:0000157 ! rate
-range: UO:0000000 ! unit
-
-[Typedef]
-id: PREFER_RE:has_denominator_unit
-name: has denominator unit
-def: "A relation between a compound rate unit and the unit that occurs in the denominator of its expression." [PREFER]
-domain: PREFER:0000157 ! rate
-range: UO:0000000 ! unit
-
-[Typedef]
-id: PREFER_RE:has_possible_operational_mode
-name: has denominator unit
-def: "A relation indicating the possible operational modes applicable to a bioreactor setup." [PREFER]
-domain: PREFER:0000014 ! bioreactor
-range: PREFER:0000180 ! operational mode
-
-[Typedef]
-id: PREFER_RE:has_scale
-name: has scale
-def: "A relation indicating the bioreactor scale." [PREFER]
-domain: PREFER:0000014 ! bioreactor
-range: PREFER:0000185 ! bioreactor scale
-
-! ============================
-! ============================
-! ============================
-
 [Term]
 id: PREFER:0000001
 name: precision fermentation process
@@ -191,9 +62,9 @@ synonym: "incoulation condition" RELATED []
 synonym: "target variable" RELATED []
 synonym: "reference value" RELATED []
 synonym: "setpoint value" RELATED []
-is_a: XCO:0000000 ! experimental condition
+is_a: XCO:0000000 ! experimental condition {source="Experimental Condition Ontology"}
+xref: EDAM:3724 ! cultivation parameter {source="Ontology of data analysis and management"}
 has_part: PREFER:0000015 ! operational parameter
-xref: NARROW EDAM:3724 ! cultivation parameter
 
 [Term]
 id: PREFER:0000009
@@ -242,14 +113,14 @@ xref: NCBITaxon:1 ! root
 [Term]
 id: PREFER:0000014
 name: bioreactor
-def: "A device or system that supports a biologically active environemnt to run a bioprocess, including lab-scale, pilot plant, and industrial-scale systems." [PREFER, adapted from OBI:0001046]
-synonym: "fermenter" NARROW []
+def: "A device or system that supports a biologically active environemnt to run a bioprocess, including lab-scale, pilot plant, and industrial-scale systems." [PREFER, OBI:0001046]
+synonym: "fermenter" NARROW [MSIO:0000167]
 synonym: "bioreactor system" EXACT [] 
 is_a: BAO:0003118 ! instrument
 equivalent_to: OBI:0001046 ! bioreactor
 !============================
-xref: EXACT OBI:0001046 ! bioreactor
-xref: NARROW MSIO:0000167 ! fermenter
+xref: OBI:0001046 ! bioreactor
+
 !============================
 relationship: PREFER_RE:has_possible_operational_mode PREFER:0000181 ! batch
 relationship: PREFER_RE:has_possible_operational_mode PREFER:0000182 ! fed-batch
@@ -264,8 +135,8 @@ id: PREFER:0000015
 name: operational parameter
 def: "An operational setting related to the operational mode of the bioreactor and the type of fermentation or cultivation carried out." [PREFER]
 comment: "Such as dissolved oxygen (DO) control setpoints and feeding strategies." [PREFER]
-synonym: "setting" RELATED [] {AFR:0001505}
-synonym: "parameter" RELATED [] {NCIT:C44175} {REPR:Parameter}
+synonym: "setting" RELATED [AFR:0001505]
+synonym: "parameter" RELATED [NCIT:C44175, REPR:Parameter]
 xref: REPR:InstrumentSetting ! instrument setting
 
 [Term]
@@ -657,7 +528,7 @@ relationship: PREFER_RE:has_unit UO:0000187 ! percent
 [Term]
 id: PREFER:0000060
 name: OD
-def: "Absorbance measurement of a culture's turbidity at a specified wavelength, commonly used as a proxy for biomass concentration." [PREFER, adapted from NCIT:C85776]
+def: "Absorbance measurement of a culture's turbidity at a specified wavelength, commonly used as a proxy for biomass concentration." [PREFER, NCIT:C85776]
 synonym: "optical density" EXACT []
 is_a: PREFER:0000009 ! process variable
 equivalent_to: NCIT:C85776 ! optical density measurement
@@ -1293,9 +1164,9 @@ id: PREFER:0000160
 name: growth metric
 !def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the outputs of the bioprocess, including products, by-products, and biomass." [PREFER]
 comment: "For instance, specific growth rate, biomass yields."
-is_a: phenomics
-is_a: omics output
-is_a: output variable
+!is_a: phenomics
+!is_a: omics output
+!is_a: output variable
 
 
 
@@ -1455,9 +1326,9 @@ id: PREFER:0000181
 name: batch
 def: "An operational mode in which all nutrients are supplied at the start of cultivation, with no further input or removal of medium until the end of the process." [PREFER]
 synonym: "batch culture" EXACT []
-synonym: "batch cell culture" EXACT [] {MSIO:0000181}
+synonym: "batch cell culture" EXACT [MSIO:0000181]
 is_a: PREFER:0000180 ! operational mode
-xref: MSIO:0000181 ! batch cell culture
+xref: MSIO:0000181 ! batch cell culture {source "MSIO:0000181"}
 
 [Term]
 id: PREFER:0000182

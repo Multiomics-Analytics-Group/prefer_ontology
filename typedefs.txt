@@ -1,3 +1,7 @@
+! ============================
+! Type definitions
+! ============================
+
 [Typedef]
 id: PREFER_RE:has_experiment
 name: has experiment
@@ -10,13 +14,13 @@ id: PREFER_RE:has_run
 name: has run
 def: "Indicates which run(s) are part of an experiment." [PREFER]
 domain: PREFER:0000003 ! fermentation experiment
-range: PREFER:0000002 ! fermentation run
+range: PREFER:0000004 ! fermentation run
 
 [Typedef]
 id: PREFER_RE:has_medium
 name: has medium
 def: "Specifies the medium used in a run." [PREFER]
-domain: PREFER:0000002 ! fermentation run
+domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000011 ! medium
 
 [Typedef]
@@ -27,39 +31,41 @@ domain: PREFER:0000011 ! medium
 range: PREFER:0000010 ! compound
 
 [Typedef]
-id: PREFER_RE:uses_fermenter
+id: PREFER_RE:uses_bioreactor
 name: uses fermenter
 def: "Indicates the fermenter used in a run." [PREFER]
-domain: PREFER:0000002 ! fermentation run
-range: PREFER:0000014 ! fermenter
+domain: PREFER:0000004 ! fermentation run
+range: PREFER:0000014 ! bioreactor
 
 [Typedef]
 id: PREFER_RE:has_measured_cultivation_condition
 name: has cultivation condition
 def: "Links a fermentation run to a cultivation parameter applied at its initiation." [PREFER]
-domain: PREFER:0000002 ! fermentation run
+domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000008 ! cultivation condition
 
 [Typedef]
 id: PREFER_RE:has_measured_process_variable
 name: has process variable
 def: "Links a fermentation run to process variable measured during fermentation." [PREFER]
-domain: PREFER:0000002 ! fermentation run
+domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000009 ! process variable
 
 [Typedef]
 id: PREFER_RE:has_measured_compound
 name: has measured compound
 def: "Indicates compounds measured during a run." [PREFER]
-domain: PREFER:0000002 ! fermentation run
+domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000010 ! compound
 
-[Typedef]
-id: PREFER_RE:has_measured_imodulon
-name: has measured imodulon
-def: "Indicates compounds measured during a run." [PREFER]
-domain: PREFER:0000002 ! fermentation run
-range: PREFER:0000017 ! iModulon
+!============================
+![Typedef]
+!id: PREFER_RE:has_measured_imodulon
+!name: has measured imodulon
+!def: "Indicates compounds measured during a run." [PREFER]
+!domain: PREFER:0000004 ! fermentation run
+!range: PREFER:0000017 ! iModulon
+!============================
 
 [Typedef]
 id: PREFER_RE:has_data_acquisition_mode
@@ -69,13 +75,21 @@ domain: PREFER:0000009 ! process variable
 range: PREFER:0000150 ! data acquisition mode
 
 [Typedef]
-id: PREFER_RE:related_to
-name: related to
-def: "Relates two terms that are conceptually connected within the fermentation process, such as cultivation conditions and process variables." [PREFER]
-
+id: PREFER_RE:setpoint_of
+name: setpoint of
+def: "Relates a cultivation condition representing a target or control value(setpoint) to the process variable it constrains." [PREFER]
+domain: PREFER:0000008 ! cultivation condition
+range: PREFER:0000009 ! process variable
 
 [Typedef]
-id: PREFER_RE:has_possible_unit
+id: PREFER_RE:refers_to_variable
+name: refers to variable
+def: "Relates a cultivation condition expressed as an identifier, string, or categorical value to the process variable it describes." [PREFER]
+domain: PREFER:0000008 ! cultivation condition
+range: PREFER:0000009 ! process variable
+
+[Typedef]
+id: PREFER_RE:has_unit
 name: has possible unit
 def: "Relates a derived or calculated quantity — referred to as a performance variable in PREFER — to the units in which it can be expressed." [PREFER]
 domain: PREFER:0000155 ! performance variable
@@ -108,4 +122,8 @@ name: has scale
 def: "A relation indicating the bioreactor scale." [PREFER]
 domain: PREFER:0000014 ! bioreactor
 range: PREFER:0000185 ! bioreactor scale
+
+! ============================
+! ============================
+! ============================
 
