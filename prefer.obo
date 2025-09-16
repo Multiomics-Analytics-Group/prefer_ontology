@@ -116,12 +116,8 @@ name: bioreactor
 def: "A device or system that supports a biologically active environemnt to run a bioprocess, including lab-scale, pilot plant, and industrial-scale systems." [PREFER, OBI:0001046]
 synonym: "fermenter" NARROW [MSIO:0000167]
 synonym: "bioreactor system" EXACT [] 
-is_a: BAO:0003118 ! instrument
-equivalent_to: OBI:0001046 ! bioreactor
-!============================
 xref: OBI:0001046 ! bioreactor
-
-!============================
+is_a: BAO:0003118 ! instrument
 relationship: PREFER_RE:has_possible_operational_mode PREFER:0000181 ! batch
 relationship: PREFER_RE:has_possible_operational_mode PREFER:0000182 ! fed-batch
 relationship: PREFER_RE:has_possible_operational_mode PREFER:0000183 ! continuous-chemostat
