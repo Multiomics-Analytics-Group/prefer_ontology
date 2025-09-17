@@ -56,7 +56,7 @@ id: PREFER_RE:has_measured_compound
 name: has measured compound
 def: "Indicates compounds measured during a run." [PREFER]
 domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000010 ! chemical entity
+range: CHEBI:24431 ! chemical entity
 
 !============================
 ![Typedef]
