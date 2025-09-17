@@ -259,15 +259,6 @@ relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
 relationship: setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
 
-!============================
-![Term]
-!id: PREFER:0000029
-!name: DO control cascade level 2
-!def: "Second level of the cascade control system for dissolved oxygen. Level 2 involves adjusting the air flow parameter to ahcieve the desired DO level." [PREFER]
-!is_a: PREFER:0000015 ! operational parameter
-!relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
-!============================
-
 [Term]
 id: PREFER:0000030
 name: aeration gas type
@@ -295,15 +286,6 @@ relationship: PREFER_RE:refers_to_variable PREFER:0000030 ! aeration gas type
 relationship: PREFER_RE:setpoint_of PREFER:0000055 ! air flow 
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000172 ! liters per minute
 
-!============================
-![Term]
-!id: PREFER:0000033
-!name: DO control cascade level 3
-!def: "Third level of the cascade control system for dissolved oxygen. Level 3 involves adjusting the oxygen flow parameter to ahcieve the desired DO level." [PREFER]
-!is_a: PREFER:0000015 ! operational parameter
-!relationship: PREFER_RE:related_to PREFER:0000039 ! DO 
-!============================
-
 [Term]
 id: PREFER:0000034
 name: starting OD
@@ -317,8 +299,8 @@ id: PREFER:0000035
 name: final seed OD
 def: "The cell density of the seed culture at the time it is inoculated to the bioreactor." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000023 ! culture id
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
+relationship: PREFER_RE:setpoint_of PREFER:0000010 ! culture
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! OD
 relationship: PREFER_RE:has_unit NCIT:C73681 ! unit of optical density
 
 [Term]
@@ -326,17 +308,23 @@ id: PREFER:0000036
 name: initial culture volume
 def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000023 ! culture id
+relationship: PREFER_RE:setpoint_of PREFER:0000010 ! culture
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter 
 relationship: PREFER_RE:has_unit UO:0000099 ! liter 
 
 [Term]
-id: PREFER:0000038
-name: feed profile
-def: "Feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific." [PREFER]
-comment: "Feed profile types: 1. Constant feeding rate, 2. Linear feeding rate, 3. Exponential feeding rate, and 4. Combination of 1-2, 3-2 or 3-1 feeding profiles." [PREFER]
-!is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000008 ! cultivation condition
+id: PREFER:0000037
+name: feed 
+def: "The input stream of fresh media supplied into the bioreactor" [PREFER]
+synonym: "feed solution" EXACT []
+synonym: "feed stream" EXACT []
+is_a: PREFER:0000015 ! operational parameter
+relationship: PREFER_RE:has_feed_profile_type PREFER:0000190 ! constant feeding rate
+relationship: PREFER_RE:has_feed_profile_type PREFER:0000191 ! linear feeding rate
+relationship: PREFER_RE:has_feed_profile_type PREFER:0000192 ! exponential feeding rate
+relationship: PREFER_RE:has_feed_profile_type PREFER:0000193 ! constant-linear feeding rate
+relationship: PREFER_RE:has_feed_profile_type PREFER:0000194 ! constant-exponential feeding rate
+relationship: PREFER_RE:has_feed_profile_type PREFER:0000195 ! exponential-linear feeding rate
 
 [Term]
 id: PREFER:0000039
@@ -388,6 +376,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measur
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
+************ 
 [Term]
 id: PREFER:0000044
 name: sample mass
@@ -420,7 +409,7 @@ id: PREFER:0000047
 name: acid volume
 def: "Volume of the acidic solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
@@ -430,7 +419,7 @@ id: PREFER:0000048
 name: base volume
 def: "Volume of the basic solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000040 ! pH 
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
@@ -440,7 +429,7 @@ id: PREFER:0000049
 name: acid rate
 def: "The flow rate at which the acid solution is added into the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
@@ -449,7 +438,7 @@ id: PREFER:0000050
 name: base rate
 def: "The flow rate at which the base solution is added into the fermenter." [REFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
+relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
@@ -457,8 +446,8 @@ relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 id: PREFER:0000051
 name: feed amount
 def: "The quantity of feed added to the bioprocess at a certain time point." [PREFER]
-is_a: PREFER:0000157 ! rate
-relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
 relationship: PREFER_RE:has_unit UO:0000009 ! kilogram
 relationship: PREFER_RE:has_unit UO:0000021 ! gram
 
@@ -467,7 +456,7 @@ id: PREFER:0000052
 name: feed volume
 def: "The volume of the feed solution added to the bioprocess at a certain time point." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
+relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
@@ -477,7 +466,7 @@ id: PREFER:0000053
 name: feed rate volumetric 
 def: "Rate at which the feed (based on its volume) is added to the bioprocess." [PREFER]
 is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:related_to PREFER:0000038 ! feed profile
+relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
@@ -1392,3 +1381,46 @@ id: PREFER:0000188
 name: industrial-scale
 def: "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in volume." [PREFER]
 is_a: PREFER:0000185 ! bioreactor scale
+
+[Term]
+id: PREFER:0000189
+name: feed profile
+def: "Feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific." [PREFER]
+synonym: "feeding profile" EXACT []
+synonym: "feeding strategy" EXACT []
+
+[Term]
+id: PREFER:0000190
+name: constant feeding rate
+def: "" [PREFER]
+is_a: PREFER:0000189 ! feed profile
+
+[Term]
+id: PREFER:0000191
+name: linear feeding rate
+def: "" [PREFER]
+is_a: PREFER:0000189 ! feed profile
+
+[Term]
+id: PREFER:0000192
+name: exponential feeding rate
+def: "" [PREFER]
+is_a: PREFER:0000189 ! feed profile
+
+[Term]
+id: PREFER:0000193
+name: constant-linear feeding rate
+def: "" [PREFER]
+is_a: PREFER:0000189 ! feed profile
+
+[Term]
+id: PREFER:0000194
+name: constant-exponential feeding rate
+def: "" [PREFER]
+is_a: PREFER:0000189 ! feed profile
+
+[Term]
+id: PREFER:0000195
+name: exponential-linear feeding rate
+def: "" [PREFER]
+is_a: PREFER:0000189 ! feed profile
