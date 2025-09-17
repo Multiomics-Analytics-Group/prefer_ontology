@@ -32,21 +32,21 @@ range: PREFER:0000010 ! compound
 
 [Typedef]
 id: PREFER_RE:uses_bioreactor
-name: uses fermenter
+name: uses bioreactor
 def: "Indicates the fermenter used in a run." [PREFER]
 domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000014 ! bioreactor
 
 [Typedef]
 id: PREFER_RE:has_measured_cultivation_condition
-name: has cultivation condition
+name: has measured cultivation condition
 def: "Links a fermentation run to a cultivation parameter applied at its initiation." [PREFER]
 domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000008 ! cultivation condition
 
 [Typedef]
 id: PREFER_RE:has_measured_process_variable
-name: has process variable
+name: has measured process variable
 def: "Links a fermentation run to process variable measured during fermentation." [PREFER]
 domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000009 ! process variable
@@ -90,7 +90,7 @@ range: PREFER:0000009 ! process variable
 
 [Typedef]
 id: PREFER_RE:has_unit
-name: has possible unit
+name: has unit
 def: "Relates a derived or calculated quantity — referred to as a performance variable in PREFER — to the units in which it can be expressed." [PREFER]
 domain: PREFER:0000155 ! performance variable
 range: UO:0000000 ! unit
