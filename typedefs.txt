@@ -6,7 +6,7 @@
 id: PREFER_RE:has_experiment
 name: has experiment
 def: "Links a project to its experiment(s)." [PREFER]
-domain: PREFER:0000004 ! fermentation project
+domain: PREFER:0000002 ! fermentation project
 range: PREFER:0000003 ! fermentation experiment
 
 [Typedef]
@@ -28,7 +28,7 @@ id: PREFER_RE:has_ingredient
 name: has ingredient
 def: "Lists ingredients (compounds) in a medium." [PREFER]
 domain: PREFER:0000011 ! medium
-range: PREFER:0000010 ! compound
+range: CHEBI:24431 ! chemical entity
 
 [Typedef]
 id: PREFER_RE:uses_bioreactor
@@ -134,8 +134,15 @@ range: PREFER:0000189 ! feed profile
 id: PREFER_RE:cultures_strain
 name: cultures strain
 def: "A relation indicating the strain culture in a fermentation run." [PREFER]
-domain: PREFER:0000037 ! fermentation run
-range: PREFER:0000189 ! strain
+domain: PREFER:0000004 ! fermentation run
+range: PREFER:0000012 ! strain
+
+[Typedef]
+id: PREFER_RE:has_collected
+name: has collected
+def: "A relation indicating the sample collected from a fermentation run." [PREFER]
+domain: PREFER:0000004 ! fermentation run
+range: PREFER:0000018 ! offline sample
 
 ! ============================
 ! ============================
