@@ -51,6 +51,7 @@ relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
 relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
 relationship: PREFER_RE:uses_bioreactor PREFER:0000014 ! bioreactor
 relationship: PREFER_RE:has_measured_compound CHEBI:24431 ! chemical entity
+relationship: PREFER_RE:has_collected PREFER:0000018 ! offline sample
 xref: CHMO:0001624 ! fermentation
 
 [Term]
@@ -148,10 +149,19 @@ def: "An operational intervention set by user that triggers the start or end of 
 
 [Term]
 id: PREFER:0000018
-name: input variable
-def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
-synonym: "input var" EXACT []
-is_a: PREFER:0000010 ! compound
+name: offline sample
+def: "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as biomass, substrates, products, and by-products." [PREFER]
+synonym: "sample" EXACT []
+xref: SIO:001050 ! sample
+
+!============================
+![Term]
+!id: PREFER:0000018
+!name: input variable
+!def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
+!synonym: "input var" EXACT []
+!is_a: PREFER:0000010 ! compound
+!===========================
 
 [Term]
 id: PREFER:0000019
@@ -224,18 +234,20 @@ relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell populatio
 
 [Term]
 id: PREFER:0000025
-name: DO control setpoint
+name: DO setpoint
 def: "The target value for dissolved oxygen." [PREFER]
 synonym: "dissolved oxygen control setpoint" EXACT []
+synonym: "dissolved oxygen setpoint" EXACT []
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:setpoint_of PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_unit UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000026
-name: DO control cascade level
+name: DO cascade level
 def: "The cascade control system for dissolved oxygen linked to a parameter to achieve the desired DO level." [PREFER]
 comment: "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter." [PREFER]
+synonym: "DO control cascade level" EXACT []
 is_a: PREFER:0000015 ! operational parameter
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 
@@ -345,9 +357,9 @@ def: "Bioreactor Potential of Hydrogen (pH) reading. pH is the negative decadic 
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_unit UO:0000196 ! pH
-relationship: PREFER_RE:has_unit UO:0000189 ! dimensionless unit
 xref: UO:0000196 ! pH
 xref: NCIT:C205029 ! pH measurement
+
 
 [Term]
 id: PREFER:0000041
@@ -640,7 +652,6 @@ relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 !name: volume Added
 !def: "It is the actual final volume that has been added." [PREFER]
 !is_a: PREFER:00000XX ! Intermediate variable
-!relationship: PREFER_RE:related_to REFER:0000043 ! Volume
 !relationship: PREFER_RE:has_unit UO:0000099 ! liter
 !relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 !
@@ -649,7 +660,6 @@ relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 !name: liquid volume downscaled
 !def: "It is the actual volume at a certain time point where sampling was performed." [PREFER]
 !is_a: PREFER:00000XX ! Intermediate variable
-!relationship: PREFER_RE:related_to REFER:0000043 ! volume
 !relationship: PREFER_RE:has_unit UO:0000099 ! liter
 !relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 !
@@ -658,7 +668,6 @@ relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 !name: liquid volume (without corrected samples)
 !def: "Total volume of liquid in the fermenter without subtracting the sample volume extracted." [PREFER]
 !is_a: PREFER:00000XX ! Intermediate variable
-!relationship: PREFER_RE:related_to REFER:0000043 ! volume
 !relationship: PREFER_RE:has_unit UO:0000099 ! liter
 !relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 !
@@ -667,7 +676,6 @@ relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 !name: volume to add none 
 !def: "The volume that must be added to reach a certain starting OD in the reactor." [PREFER]
 !is_a: PREFER:00000XX ! Intermediate variable
-!relationship: PREFER_RE:related_to REFER:0000043 ! Volume
 !relationship: PREFER_RE:has_unit UO:0000099 ! liter
 !relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 ! ============================
@@ -1127,6 +1135,7 @@ name: offline measurement
 def: "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line." [PREFER]
 is_a: PREFER:0000150 ! data acquisition mode
 
+***********************************
 [Term]
 id: PREFER:0000155
 name: performance variable
@@ -1168,7 +1177,7 @@ comment: "For instance, specific growth rate, biomass yields."
 !is_a: phenomics
 !is_a: omics output
 !is_a: output variable
-
+***************************
 
 
 ! ============================
