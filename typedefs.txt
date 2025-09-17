@@ -123,6 +123,13 @@ def: "A relation indicating the bioreactor scale." [PREFER]
 domain: PREFER:0000014 ! bioreactor
 range: PREFER:0000185 ! bioreactor scale
 
+[Typedef]
+id: PREFER_RE:has_feed_profile_type
+name: has feed profile type
+def: "A relation indicating the feeding profile type in a fed-batch fermentation run." [PREFER]
+domain: PREFER:0000037 ! feed
+range: PREFER:0000189 ! feed profile 
+
 ! ============================
 ! ============================
 ! ============================
