@@ -56,7 +56,7 @@ id: PREFER_RE:has_measured_compound
 name: has measured compound
 def: "Indicates compounds measured during a run." [PREFER]
 domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000010 ! compound
+range: PREFER:0000010 ! chemical entity
 
 !============================
 ![Typedef]
@@ -129,6 +129,13 @@ name: has feed profile type
 def: "A relation indicating the feeding profile type in a fed-batch fermentation run." [PREFER]
 domain: PREFER:0000037 ! feed
 range: PREFER:0000189 ! feed profile 
+
+[Typedef]
+id: PREFER_RE:cultures_strain
+name: cultures strain
+def: "A relation indicating the strain culture in a fermentation run." [PREFER]
+domain: PREFER:0000037 ! fermentation run
+range: PREFER:0000189 ! strain
 
 ! ============================
 ! ============================
