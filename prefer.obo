@@ -64,8 +64,9 @@ synonym: "incoulation condition" RELATED []
 synonym: "target variable" RELATED []
 synonym: "reference value" RELATED []
 synonym: "setpoint value" RELATED []
-is_a: XCO:0000000 ! experimental condition {source="Experimental Condition Ontology"}
 xref: EDAM:3724 ! cultivation parameter {source="Ontology of data analysis and management"}
+xref: AFO_/property#AFX:0001732 ! reference value {source="Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"}
+is_a: XCO:0000000 ! experimental condition {source="Experimental Condition Ontology"}
 has_part: PREFER:0000015 ! operational parameter
 
 [Term]
@@ -166,7 +167,14 @@ xref: SIO:001050 ! sample
 [Term]
 id: PREFER:0000019
 name: temperature setpoint
-def: "The target temperature value to be maintained within the fermenter." [PREFER]
+def: "The target temperature value to be maintained within the bioreactor." [PREFER]
+synonym: "Tº setpoint" EXACT [PREFER]
+synonym: "temperature control setpoint" EXACT [PREFER]
+synonym: "temperature reference point" EXACT [PREFER]
+synonym: "temperature reference value" EXACT [PREFER]
+synonym: "target temperature value" EXACT [PREFER]
+synonym: "target temperature" EXACT [PREFER]
+xref: AFO_/result#AFR:0001255 ! temperature setting {source="Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"}
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:setpoint_of PREFER:0000041 ! temperature
 relationship: PREFER_RE:has_unit UO:0000027 ! degree Celsius
@@ -176,20 +184,25 @@ relationship: PREFER_RE:has_unit UO:0000195 ! degree Fahrenheit
 id: PREFER:0000020
 name: pH setpoint
 def: "Target pH value to be maintained within the fermenter throught the process." [PREFER]
+synonym: "ph setpoint" EXACT [PREFER]
+synonym: "pH control setpoint" EXACT [PREFER]
+synonym: "ph control setpoint" EXACT [PREFER]
+synonym: "target pH" EXACT [PREFER]
+synonym: "target ph" EXACT [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:setpoint_of PREFER:0000040 ! pH
 relationship: PREFER_RE:has_unit UO:0000196 ! pH  
 
 [Term]
 id: PREFER:0000021
-name: pH control base solution
+name: pH base solution
 def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 
 [Term]
 id: PREFER:0000022
-name: pH control acid solution
+name: pH acid solution
 def: "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
@@ -203,6 +216,7 @@ synonym: "main culture" EXACT []
 synonym: "stock culture" EXACT []
 synonym: "cell culture sample" EXACT [OBI:0100060]
 synonym: "cell culture" EXACT [OBI:0001876]
+synonym: "fermentation starter" RELATED [ENVO:03600040]
 xref: OBI:0100060 ! cultured cell population
 property_value: http://purl.obolibrary.org/obo/prefer/culture_id " " xsd:string
 !property_value: PREFER_RE:has_culture_id "culture id" xsd:string
@@ -258,17 +272,17 @@ def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREF
 synonym: "maximum shaking speed" EXACT []
 is_a: PREFER:0000015 ! operational parameter
 relationship: refers_to_variable PREFER:0000039 ! DO
-relationship: setpoint_of PREFER:0000054 ! stirrer speed
+relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
 
 [Term]
 id: PREFER:0000028
 name: minimum stirring
 def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
-    synonym: "minimum shaking speed" EXACT []
+synonym: "minimum shaking speed" EXACT []
 is_a: PREFER:0000015 ! operational parameter
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
-relationship: setpoint_of PREFER:0000054 ! stirrer speed
+relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
 
 [Term]
