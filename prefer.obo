@@ -21,8 +21,6 @@ xref: Wikipedia:Industrial_fermentation#Precision_fermentation
 xref: OBI_0000011 ! planned process
 xref: SRAO_/SRAO:0000223 ! biological process engineering {source= "FAIRsharing Subject Ontology"}
 relationship: has_part PREFER:0000002 ! fermentation project
-
-
 [Term]
 id: PREFER:0000002
 name: fermentation project
@@ -155,8 +153,8 @@ def: "An operational intervention set by user that triggers the start or end of 
 id: PREFER:0000018
 name: offline sample
 def: "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as biomass, substrates, products, and by-products." [PREFER]
-synonym: "sample" EXACT []
-xref: SIO:001050 ! sample
+synonym: "sample" EXACT [SIO]
+is_a: SIO:001050 ! sample
 
 !============================
 ![Term]
@@ -410,10 +408,13 @@ relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 id: PREFER:0000044
 name: sample mass
 def: "The mass of the sample taken from a single run to quantify the amount of biomass, product, and other compounds." [PREFER]
-is_a: PREFER:0000009 ! process variable
+is_a: PREFER:0000018 ! offline sample
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_unit UO:0000021 ! gram
 relationship: PREFER_RE:has_unit UO:0000022 ! milligram
+*************
+
+
 
 ! ============================
 ![Term]
