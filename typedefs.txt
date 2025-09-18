@@ -144,6 +144,20 @@ def: "A relation indicating the sample collected from a fermentation run." [PREF
 domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000018 ! offline sample
 
+[Typedef]
+id: part_of
+name: part of
+def: "A core relation that holds between a part and its whole. " [BFO]
+is_transitive: true
+xref: BFO:0000050 ! part of 
+
+[Typedef]
+id: has_part
+name: has part
+def: "A core relation that holds between a whole and its part. " [BFO]
+is_transitive: true
+xref: BFO:0000051 ! hast part
+
 ! ============================
 ! ============================
 ! ============================
