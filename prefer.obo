@@ -47,7 +47,7 @@ synonym: "run" EXACT []
 xref: CHMO:0001624 ! fermentation
 is_a: PREFER:0000003 ! fermentation experiment
 relationship: part_of PREFER:0000003 ! fermentation experiment
-relationship: PREFER_RE:has_measured_cultivation_condition PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:has_controlled_cultivation_condition PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:has_measured_process_variable PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
 relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
@@ -75,9 +75,11 @@ id: PREFER:0000009
 name: process variable
 def: "A technical parameter measured during a bioprocess, either through real-time (online, inline) or delayed (offline, atline) measurements, depending on the bioreactor setup. These variables are typically time-series data and are crucial for controlling and adjusting the initial parameters from cultivation conditions." [PREFER]
 comment: "These data typically include compound groups categorized as substrates, products, by-products, and chemical ingredients from the medium."
-synonym: "variable" RELATED []
-synonym: "measured variable" RELATED []
-synonym: "bioprocess measured variable" RELATED []
+synonym: "variable" BROADER []
+synonym: "measured variable" BROADER []
+synonym: "observed variable" BROADER []
+synonym: "bioprocess measured variable" EXACT []
+synonym: "bioprocess variable" EXACT []
 xref: BAO:0002070 ! measured value
 
 !*************
@@ -191,22 +193,23 @@ synonym: "ph control setpoint" EXACT [PREFER]
 synonym: "target pH" EXACT [PREFER]
 synonym: "target ph" EXACT [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000040 ! pH
 relationship: PREFER_RE:has_unit UO:0000196 ! pH  
+relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH
+relationship: PREFER_RE:setpoint_of PREFER:0000040 ! ph measurement
 
 [Term]
 id: PREFER:0000021
 name: pH base solution
 def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
+relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH 
 
 [Term]
 id: PREFER:0000022
 name: pH acid solution
 def: "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
+relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH
 
 [Term]
 id: PREFER:0000010
@@ -354,26 +357,41 @@ relationship: PREFER_RE:has_feed_profile_type PREFER:0000194 ! constant-exponent
 relationship: PREFER_RE:has_feed_profile_type PREFER:0000195 ! exponential-linear feeding rate
 
 [Term]
+id: PREFER:0000038
+name: pH
+def: "The negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium." [PREFER, NCIT]
+synonym: "ph" EXACT []
+synonym: "PH" EXACT []
+synonym: "potential of hydrogen" EXACT []
+synonym: "potential of Hydrogen" EXACT []
+xref: UO:0000196 ! pH
+xref: NCIT:C45997 ! pH
+
+[Term]
 id: PREFER:0000039
 name: DO
 def: "Concentration of oxygen molecules (O₂) dissolved in the aqueous fermentation medium." [PREFER]
 synonym: "dissolved oxygen" EXACT []
-is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
-relationship: PREFER_RE:has_unit UO:0000189 ! dimensionless unit
 xref: MIXS:0000119 ! dissolved oxygen
 xref: PRIDE:0000788 ! dissolved oxygen
 xref: GENEPIO:0000035 ! dissolved oxygen concentration
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:has_unit UO:0000189 ! dimensionless unit
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! atline measurement
 
 [Term]
 id: PREFER:0000040
-name: pH
-def: "Bioreactor Potential of Hydrogen (pH) reading. pH is the negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium." [REFER]
-is_a: PREFER:0000009 ! process variable
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
-relationship: PREFER_RE:has_unit UO:0000196 ! pH
-xref: UO:0000196 ! pH
+name: pH measurement
+def: "Bioreactor Potential of Hydrogen (pH) reading." [REFER]
 xref: NCIT:C205029 ! pH measurement
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH
+relationship: PREFER_RE:has_unit UO:0000196 ! pH
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! atline measurement
 
 
 [Term]
@@ -382,6 +400,7 @@ name: temperature
 def: "Bioreactor temperature reading." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000027 ! degree Celsius
 relationship: PREFER_RE:has_unit UO:0000195 ! degree Fahrenheit
 
@@ -391,6 +410,7 @@ name: pressure
 def: "Bioreactor pressure reading." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit QUDT:BAR ! bar
 relationship: PREFER_RE:has_unit UO:0000110 ! pascal
 
@@ -400,6 +420,7 @@ name: volume
 def: "Total volume of aqueous solution in the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
