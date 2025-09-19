@@ -38,7 +38,7 @@ domain: PREFER:0000004 ! fermentation run
 range: PREFER:0000014 ! bioreactor
 
 [Typedef]
-id: PREFER_RE:has_measured_cultivation_condition
+id: PREFER_RE:has_controlled_cultivation_condition
 name: has measured cultivation condition
 def: "Links a fermentation run to a cultivation parameter applied at its initiation." [PREFER]
 domain: PREFER:0000004 ! fermentation run
