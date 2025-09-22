@@ -158,6 +158,23 @@ def: "A core relation that holds between a whole and its part. " [BFO]
 is_transitive: true
 xref: BFO:0000051 ! hast part
 
+[Typedef]
+id: has_cultured_id
+name: has cultured id
+def: "" [PREFER]
+domain: fermentation culture
+range: culture id
+
+[Typedef]
+id: has_cultured_type
+name: has cultured type
+def: "" [PREFER]
+domain: fermentation culture
+range: fermentation culture type
+
+
+
+
 ! ============================
 ! ============================
 ! ============================
