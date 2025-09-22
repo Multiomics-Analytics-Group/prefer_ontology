@@ -21,6 +21,7 @@ xref: Wikipedia:Industrial_fermentation#Precision_fermentation
 xref: OBI_0000011 ! planned process
 xref: SRAO_/SRAO:0000223 ! biological process engineering {source= "FAIRsharing Subject Ontology"}
 relationship: has_part PREFER:0000002 ! fermentation project
+
 [Term]
 id: PREFER:0000002
 name: fermentation project
@@ -47,7 +48,7 @@ synonym: "run" EXACT []
 xref: CHMO:0001624 ! fermentation
 is_a: PREFER:0000003 ! fermentation experiment
 relationship: part_of PREFER:0000003 ! fermentation experiment
-relationship: PREFER_RE:has_controlled_cultivation_condition PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:has_cultivation_condition PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:has_measured_process_variable PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
 relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
@@ -76,10 +77,11 @@ name: process variable
 def: "A technical parameter measured during a bioprocess, either through real-time (online, inline) or delayed (offline, atline) measurements, depending on the bioreactor setup. These variables are typically time-series data and are crucial for controlling and adjusting the initial parameters from cultivation conditions." [PREFER]
 comment: "These data typically include compound groups categorized as substrates, products, by-products, and chemical ingredients from the medium."
 synonym: "variable" BROADER []
-synonym: "measured variable" BROADER []
-synonym: "observed variable" BROADER []
-synonym: "bioprocess measured variable" EXACT []
 synonym: "bioprocess variable" EXACT []
+synonym: "measured variable" BROADER []
+synonym: "bioprocess measured variable" EXACT []
+synonym: "observed variable" BROADER []
+synonym: "bioprocess observed variable" BROADER []
 xref: BAO:0002070 ! measured value
 
 !*************
@@ -154,18 +156,10 @@ def: "An operational intervention set by user that triggers the start or end of 
 [Term]
 id: PREFER:0000018
 name: offline sample
-def: "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as biomass, substrates, products, and by-products." [PREFER]
+def: "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as substrates, products, and by-products, and biomass." [PREFER]
 synonym: "sample" EXACT [SIO]
+synonym: "collected sample" EXACT []
 is_a: SIO:001050 ! sample
-
-!============================
-![Term]
-!id: PREFER:0000018
-!name: input variable
-!def: "Computed variable, typically derived from cultivation conditions and process variables, that quantifies the inputs of the bioprocess, including substrates, and gases such as oxygen or hydrogen."
-!synonym: "input var" EXACT []
-!is_a: PREFER:0000010 ! compound
-!===========================
 
 [Term]
 id: PREFER:0000019
@@ -178,7 +172,7 @@ synonym: "temperature reference value" EXACT [PREFER]
 synonym: "target temperature value" EXACT [PREFER]
 synonym: "target temperature" EXACT [PREFER]
 xref: AFO_/result#AFR:0001255 ! temperature setting {source="Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"}
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operational parameter
 relationship: PREFER_RE:setpoint_of PREFER:0000041 ! temperature
 relationship: PREFER_RE:has_unit UO:0000027 ! degree Celsius
 relationship: PREFER_RE:has_unit UO:0000195 ! degree Fahrenheit
@@ -192,40 +186,45 @@ synonym: "pH control setpoint" EXACT [PREFER]
 synonym: "ph control setpoint" EXACT [PREFER]
 synonym: "target pH" EXACT [PREFER]
 synonym: "target ph" EXACT [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+is_a: PREFER:0000015 ! operational parameter
 relationship: PREFER_RE:has_unit UO:0000196 ! pH  
 relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH
-relationship: PREFER_RE:setpoint_of PREFER:0000040 ! ph measurement
+relationship: PREFER_RE:setpoint_of PREFER:0000040 ! pH measurement
 
 [Term]
 id: PREFER:0000021
 name: pH base solution
 def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+synonym: "pH control base solution" EXACT []
 relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH 
 
 [Term]
 id: PREFER:0000022
 name: pH acid solution
 def: "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
+synonym: "pH control acid solution" EXACT []
 relationship: PREFER_RE:refers_to_variable PREFER:0000038 ! pH
 
 [Term]
 id: PREFER:0000010
-name: culture
-def: "Cultured cell population, used to link a starter culture or initial culture to its strain." [PREFER]
+name: fermentation culture
+def: "Cultured cell population." [PREFER, OBI]
 synonym: "initial culture" EXACT []
-synonym: "main culture" EXACT []
-synonym: "stock culture" EXACT []
-synonym: "cell culture sample" EXACT [OBI:0100060]
-synonym: "cell culture" EXACT [OBI:0001876]
-synonym: "fermentation starter" RELATED [ENVO:03600040]
+synonym: "starter culture" EXACT []
+synonym: "inoculum culture" EXACT []
+synonym: "culture" BROAD [ENVO:03600040]
+synonym: "cell culture" BROAD [OBI:0001876]
+synonym: "pre-culture" BROAD []
+synonym: "stock culture" BROAD []
+synonym: "cell culture sample" NARROW [OBI:0100060]
 xref: OBI:0100060 ! cultured cell population
 property_value: http://purl.obolibrary.org/obo/prefer/culture_id " " xsd:string
 !property_value: PREFER_RE:has_culture_id "culture id" xsd:string
 !property_value: PREFER_RE:has_culture_id PREFER:0000023 ! culture id
 is_a: PREFER:0000008 ! cultivation condition
+relationship: PREFER_RE:has_culture_type PREFER:0000201 ! pre-optional culture
+relationship: PREFER_RE:has_culture_type PREFER:0000202 ! pre-final culture
+relationship: PREFER_RE:has_culture_type PREFER:0000203 ! main culture
 
 # [Term]
 # id: PREFER:0000023
@@ -237,18 +236,19 @@ is_a: PREFER:0000008 ! cultivation condition
 # is_a: PREFER:0000008 ! cultivation condition
 # relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
 
-[Term]
-id: PREFER:0000024
-name: seed id
-def: "Identifier assigned to a cultured cell population, used to link the fermentation run to a seed culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain biomass concentration/optical density(OD) is reached." [PREFER]
-def: "Seed culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain biomass concentration/optical density(OD) is reached." [PREFER]
-synonym: "seed culture" EXACT []
-synonym: "starter culture" EXACT []
-synonym: "initial culture" EXACT []
-synonym: "pre-culture" EXACT []
-synonym: "inoculum" EXACT []
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
+# [Term]
+# id: PREFER:0000024
+# name: seed id 
+# def: "Identifier assigned to a cultured cell population, used to link the fermentation run to a seed culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain biomass concentration/optical density(OD) is reached." [PREFER]
+# def: "Seed culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain biomass concentration/optical density(OD) is reached." [PREFER]
+# synonym: "seed culture" EXACT []
+# synonym: "starter culture" EXACT []
+# synonym: "main culture" EXACT []
+# synonym: "inoculum culture" EXACT []
+#!property_value: PREFER_RE:has_culture_seed_id "seed id" xsd:string
+#!property_value: PREFER_RE:has_culture_seed_id PREFER:0000024 ! seed id
+# is_a: PREFER:0000008 ! cultivation condition
+# relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
 
 [Term]
 id: PREFER:0000025
@@ -256,8 +256,9 @@ name: DO setpoint
 def: "The target value for dissolved oxygen." [PREFER]
 synonym: "dissolved oxygen control setpoint" EXACT []
 synonym: "dissolved oxygen setpoint" EXACT []
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000039 ! DO 
+is_a: PREFER:0000015 ! operational parameter
+relationship: PREFER_RE:refers_to_variable PREFER:0000033 ! DO # It is needed? is_a operational parameter is enough?
+relationship: PREFER_RE:setpoint_of PREFER:0000039 ! DO measurement
 relationship: PREFER_RE:has_unit UO:0000187 ! percent
 
 [Term]
@@ -266,26 +267,35 @@ name: DO cascade level
 def: "The cascade control system for dissolved oxygen linked to a parameter to achieve the desired DO level." [PREFER]
 comment: "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter." [PREFER]
 synonym: "DO control cascade level" EXACT []
-is_a: PREFER:0000015 ! operational parameter
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+synonym: "dissolved oxygen cascade control strategy" EXACT []
+!is_a: PREFER:0000015 ! operational parameter # Should it be an operational parameter? It is a scalar setting?! 1, 2, 3....
+relationship: PREFER_RE:refers_to_variable PREFER:0000033 ! DO 
 
 [Term]
 id: PREFER:0000027
-name: maximum stirring
+name: maximum stirring setpoint
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
+synonym: "maximum stirring" EXACT []
 synonym: "maximum shaking speed" EXACT []
+synonym: "maximum stirring speed setpoint" EXACT []
+synonym: "maximum shaking speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: refers_to_variable PREFER:0000039 ! DO
+!relationship: refers_to_variable PREFER:0000033 ! DO # No need?
+relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
 
 [Term]
 id: PREFER:0000028
-name: minimum stirring
+name: minimum stirring setpoint
 def: "The minimum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
+synonym: "minimum stirring" EXACT []
 synonym: "minimum shaking speed" EXACT []
+synonym: "minimum stirring speed setpoint" EXACT []
+synonym: "minimum shaking speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+!relationship: refers_to_variable PREFER:0000033 ! DO # No need?
+relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
 
@@ -293,62 +303,80 @@ relationship: PREFER_RE:has_unit UO:0000079 ! radian per second
 id: PREFER:0000030
 name: aeration gas type
 def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+synonym: "aeration gas" EXACT []
+!relationship: refers_to_variable PREFER:0000033 ! DO # No need?
+relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 
 [Term]
 id: PREFER:0000031
-name: maximum aeration
+name: maximum aeration setpoint
 def: "Maximum rate of at which gas can be supplied to the bioreactor." [PREFER]
+synonym: "maximum aeration" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
+!relationship: PREFER_RE:refers_to_variable PREFER:0000033 ! DO # No need right?
 relationship: PREFER_RE:refers_to_variable PREFER:0000030 ! aeration gas type 
 relationship: PREFER_RE:setpoint_of PREFER:0000055 ! air flow
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000172 ! liters per minute 
 
 [Term]
 id: PREFER:0000032
-name: minimum aeration
+name: minimum aeration setpoint
 def: "Minimum rate of at which gas can be supplied to the bioreactor." [PREFER]
+synonym: "maximum aeration" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO
+!relationship: PREFER_RE:refers_to_variable PREFER:0000033 ! DO # No need right?
 relationship: PREFER_RE:refers_to_variable PREFER:0000030 ! aeration gas type 
 relationship: PREFER_RE:setpoint_of PREFER:0000055 ! air flow 
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
+id: PREFER:0000033
+name: DO
+def: "Concentration of oxygen molecules (O₂) dissolved in the aqueous fermentation medium." [PREFER]
+synonym: "dissolved oxygen" EXACT []
+xref: MIXS:0000119 ! dissolved oxygen
+xref: PRIDE:0000788 ! dissolved oxygen
+xref: GENEPIO:0000035 ! dissolved oxygen concentration
+is_a: PREFER:0000008 ! cultivation condition
+
+[Term]
 id: PREFER:0000034
 name: starting OD
 def: "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600nm or 900nm wavelength) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume)." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000060 ! OD 
+is_a: PREFER:0000009 ! process variable
+!is_a: PREFER:000000X ! output variable # Can be calculated from process variables
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! OD # or Biomass?
 relationship: PREFER_RE:has_unit NCIT:C73681 ! unit of optical density
 
 [Term]
 id: PREFER:0000035
 name: final seed OD
-def: "The cell density of the seed culture at the time it is inoculated to the bioreactor." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000010 ! culture
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! OD
+def: "The cell density of the seed culture for the actual experiment at the time it is inoculated to the bioreactor." [PREFER]
+synonym: "final seed culture OD" EXACT []
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:0000010 ! fermentation culture # or seed term?
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! OD # or Biomass?
 relationship: PREFER_RE:has_unit NCIT:C73681 ! unit of optical density
 
 [Term]
 id: PREFER:0000036
 name: initial culture volume
 def: "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum." [PREFER]
-is_a: PREFER:0000008 ! cultivation condition
-relationship: PREFER_RE:setpoint_of PREFER:0000010 ! culture
+synonym: "starting culture volume" EXACT []
+synonym: "initial volume" EXACT []
+synonym: "starting volume" EXACT []
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:00000XX ! volume #?
+!relationship: PREFER_RE:refers_to_variable PREFER:0000010 ! fermentation culture # volume or culture?
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter 
 relationship: PREFER_RE:has_unit UO:0000099 ! liter 
 
 [Term]
 id: PREFER:0000037
 name: feed 
-def: "The input stream of fresh media supplied into the bioreactor" [PREFER]
+def: "The input of fresh media supplied into the bioreactor." [PREFER]
 synonym: "feed solution" EXACT []
-synonym: "feed stream" EXACT []
-is_a: PREFER:0000015 ! operational parameter
+is_a: PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:has_feed_profile_type PREFER:0000190 ! constant feeding rate
 relationship: PREFER_RE:has_feed_profile_type PREFER:0000191 ! linear feeding rate
 relationship: PREFER_RE:has_feed_profile_type PREFER:0000192 ! exponential feeding rate
@@ -366,16 +394,15 @@ synonym: "potential of hydrogen" EXACT []
 synonym: "potential of Hydrogen" EXACT []
 xref: UO:0000196 ! pH
 xref: NCIT:C45997 ! pH
+is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000039
-name: DO
-def: "Concentration of oxygen molecules (O₂) dissolved in the aqueous fermentation medium." [PREFER]
-synonym: "dissolved oxygen" EXACT []
-xref: MIXS:0000119 ! dissolved oxygen
-xref: PRIDE:0000788 ! dissolved oxygen
-xref: GENEPIO:0000035 ! dissolved oxygen concentration
+name: DO measurement
+def: "Measurement of the concentration of oxygen molecules (O₂) dissolved in the aqueous fermentation medium." [PREFER]
+synonym: "dissolved oxygen measurement" EXACT []
 is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:0000033 ! DO
 relationship: PREFER_RE:has_unit UO:0000189 ! dimensionless unit
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
@@ -396,7 +423,7 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! atline measur
 
 [Term]
 id: PREFER:0000041
-name: temperature
+name: temperature measurement
 def: "Bioreactor temperature reading." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
@@ -406,7 +433,7 @@ relationship: PREFER_RE:has_unit UO:0000195 ! degree Fahrenheit
 
 [Term]
 id: PREFER:0000042
-name: pressure
+name: pressure measurement
 def: "Bioreactor pressure reading." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
@@ -416,7 +443,7 @@ relationship: PREFER_RE:has_unit UO:0000110 ! pascal
 
 [Term]
 id: PREFER:0000043
-name: volume
+name: volume measurement
 def: "Total volume of aqueous solution in the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
@@ -424,25 +451,24 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measur
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
-************ 
 [Term]
 id: PREFER:0000044
 name: sample mass
 def: "The mass of the sample taken from a single run to quantify the amount of biomass, product, and other compounds." [PREFER]
 is_a: PREFER:0000018 ! offline sample
+relationship: PREFER_RE:refers_to_variable PREFER:00000XX ! biomass # not sure the classification
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_unit UO:0000021 ! gram
 relationship: PREFER_RE:has_unit UO:0000022 ! milligram
-*************
 
-
-
-! ============================
+!============================
 ![Term]
 !id: PREFER:0000045
 !name: sample volume
 !def: "The volume of the sample taken from a single run to calculate concentrations, dilutions, etc." [PREFER]
-!is_a: PREFER:00000XX ! intermediate variable
+!is_a: PREFER:0000018 ! offline sample
+!is_a: PREFER:00000XX ! intermediate variable # calculated not measured
+relationship: PREFER_RE:refers_to_variable PREFER:00000XX ! volume # not sure the classification
 !relationship: PREFER_RE:has_unit UO:0000099 ! liter
 !relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
@@ -450,7 +476,9 @@ relationship: PREFER_RE:has_unit UO:0000022 ! milligram
 !id: PREFER:0000046
 !name: accumulated sample volume
 !def: "Total volume of all samples taken from a single run up to a certain point in time." [PREFER]
-!is_a: PREFER:00000XX ! intermediate variable
+!is_a: PREFER:0000018 ! offline sample
+!is_a: PREFER:00000XX ! intermediate variable # calculated not measured
+!relationship: PREFER_RE:refers_to_variable PREFER:00000XX ! volume # not sure the classification
 !relationship: PREFER_RE:has_unit UO:0000099 ! liter
 !relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 ! ============================
@@ -459,9 +487,14 @@ relationship: PREFER_RE:has_unit UO:0000022 ! milligram
 id: PREFER:0000047
 name: acid volume
 def: "Volume of the acidic solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
+synonym: "acid added volume" EXACT []
+synonym: "acid solution volume" EXACT []
+synonym: "acid used volume" EXACT []
+synonym: "acid consumption volume" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
@@ -469,9 +502,14 @@ relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 id: PREFER:0000048
 name: base volume
 def: "Volume of the basic solution added into the fermenter to maintain the pH of cultivation at a constant level." [PREFER]
+synonym: "base added volume" EXACT []
+synonym: "base solution volume" EXACT []
+synonym: "base used volume" EXACT []
+synonym: "base consumption volume" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
@@ -482,6 +520,7 @@ def: "The flow rate at which the acid solution is added into the fermenter." [PR
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
@@ -491,6 +530,7 @@ def: "The flow rate at which the base solution is added into the fermenter." [RE
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
@@ -499,6 +539,8 @@ name: feed amount
 def: "The quantity of feed added to the bioprocess at a certain time point." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000009 ! kilogram
 relationship: PREFER_RE:has_unit UO:0000021 ! gram
 
@@ -509,6 +551,7 @@ def: "The volume of the feed solution added to the bioprocess at a certain time 
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000099 ! liter
 relationship: PREFER_RE:has_unit UO:0000098 ! milliliter
 
@@ -519,6 +562,7 @@ def: "Rate at which the feed (based on its volume) is added to the bioprocess." 
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
 [Term]
@@ -528,6 +572,7 @@ def: "Speed at which the impeller shaft rotates." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
 
 [Term]
@@ -537,6 +582,7 @@ def: "Rate at which air is supplied to the fermenter." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
@@ -546,6 +592,7 @@ def: "Rate at which nitrogen is supplied into the fermenter in form of a ammoniu
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000172 ! liters per minute
 
 [Term]
@@ -555,36 +602,44 @@ def: "Rate at which oxygen is supplied to the bioreactor." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000172 ! liters per minute
+
+
+***********
+***********
+***********
 
 [Term]
 id: PREFER:0000058
 name: inlet air o2
 def: "Percentage of oxygen in the gas mixture that is being supplied into the bioreactor." [PREFER]
-is_a: PREFER:0000009 ! process variable
 synonym: "inlet air oxygen" EXACT []
-relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO # or the 3r DO cascade level?
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000059
 name: inlet air co2
 def: "Percentage of carbon dioxide in the gas mixture that is being supplied into the bioreactor." [PREFER]
-is_a: PREFER:0000009 ! process variable
 synonym: "inlet air carbon dioxide" EXACT []
+is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000040 ! pH 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000187 ! percent
 
 [Term]
 id: PREFER:0000060
-name: OD
-def: "Absorbance measurement of a culture's turbidity at a specified wavelength, commonly used as a proxy for biomass concentration." [PREFER, NCIT:C85776]
-synonym: "optical density" EXACT []
-is_a: PREFER:0000009 ! process variable
-equivalent_to: NCIT:C85776 ! optical density measurement
-relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
+name: OD measurement
+def: "Absorbance measurement of the culture's turbidity at a specified wavelength, commonly used as a proxy for biomass concentration." [PREFER, NCIT:C85776]
+synonym: "optical density measurement" EXACT []
+xref: NCIT:C85776 ! optical density measurement
+is_a: PREFER:0000018 ! offline sample
+!relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_unit NCIT:C73681 ! unit of optical density
 
 [Term]
@@ -594,7 +649,9 @@ def: "Determination of the rate at which O2 is consumed by the cell culture." [P
 synonym: "o2 uptake rate" EXACT []
 synonym: "oxygen uptake rate" EXACT []
 is_a: PREFER:0000009 ! process variable
+is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000171 ! millimole per hour
 
 [Term]
@@ -604,7 +661,9 @@ def: "Determination of the rate at which CO2 is released by the cell culture." [
 synonym: "co2 evolution rate" EXACT []
 synonym: "carbon dioxide evolution rate" EXACT []
 is_a: PREFER:0000009 ! process variable
+is_a: PREFER:0000157 ! rate
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000171 ! millimole per hour
 
 [Term]
@@ -657,6 +716,7 @@ def: "The percentage of CO2 present in the exhaust stream leaving the fermenter,
 synonym: "offgas carbon dioxide" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000187 ! percent
 
 [Term]
@@ -666,6 +726,7 @@ def: "The percentage of O2 present in the exhaust stream leaving of the fermente
 synonym: "offgas oxygen" EXACT []
 is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit UO:0000187 ! percent
 
 [Term]
@@ -673,7 +734,8 @@ id: PREFER:0000070
 name: gas concentration
 def: "Concentration of the gas compound(substrate (ingredient), product or by-product) in the bioprocess." [PREFER]
 comment: "Gases such as O2 and CO2 are considered compounds but independently."
-is_a: PREFER:0000010 ! compound
+!is_a: PREFER:0000010 ! compound
+is_a: PREFER:0000018 ! offline sample
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 
@@ -681,7 +743,7 @@ relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 id: PREFER:0000071
 name: biomass concentration
 def: "Concentration of the biomass" [PREFER]
-is_a: PREFER:0000009 ! process variable
+is_a: PREFER:0000018 ! offline sample
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: PREFER_RE:has_unit UO:0000175 ! gram per liter
 
@@ -772,7 +834,7 @@ relationship: PREFER_RE:has_unit UO:0000189 ! dimensionless unit
 id: PREFER:0000083
 name: substrate consumed
 def: "The total amount of substrate taken up by the cells during the bioprocess." [PREFER]
-is_a: PREFER:0000018 ! input variable
+is_a: PREFER:00000XX ! computed omics
 relationship: PREFER_RE:has_unit UO:0000021 ! gram
 relationship: PREFER_RE:has_unit UO:0000013 ! mole
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000168 ! carbon mole
@@ -1179,7 +1241,7 @@ is_a: PREFER:0000150 ! data acquisition mode
 id: PREFER:0000155
 name: performance variable
 def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratorymetrics, and balance metrics." [PREFER]
-!is_a: PREFER:000000X ! computed variable
+!is_a: PREFER:000000X ! computed variable # derived omic output
 
 [Term]
 id: PREFER:0000156
@@ -1433,9 +1495,11 @@ is_a: PREFER:0000185 ! bioreactor scale
 [Term]
 id: PREFER:0000189
 name: feed profile
-def: "Feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific." [PREFER]
+def: "The feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific." [PREFER]
 synonym: "feeding profile" EXACT []
+synonym: "feed stream profile" NARROW []
 synonym: "feeding strategy" EXACT []
+relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
 
 [Term]
 id: PREFER:0000190
@@ -1472,3 +1536,26 @@ id: PREFER:0000195
 name: exponential-linear feeding rate
 def: "" [PREFER]
 is_a: PREFER:0000189 ! feed profile
+
+[Term]
+id: PREFER:0000200
+name: fermentation culture type
+def: "" [PREFER]
+
+[Term]
+id: PREFER:0000201
+name: pre-optional culture
+def: "The first ssed, optional, usually cultivated in a flask." [PREFER]
+is_a: PREFER:0000200 ! culture type
+
+[Term]
+id: PREFER:0000202
+name: pre-final culture
+def: "The second seed, usually cultivated in a flask but it could also be in a bioreactor." [PREFER]
+is_a: PREFER:0000200 ! culture type
+
+[Term]
+id: PREFER:0000203
+name: main culture
+def: "The culture seed used for the actual experiment, usually in a bioreactor." [PREFER]
+is_a: PREFER:0000200 ! culture type
