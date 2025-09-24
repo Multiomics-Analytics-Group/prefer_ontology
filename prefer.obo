@@ -166,11 +166,12 @@ id: PREFER:0000019
 name: temperature setpoint
 def: "The target temperature value to be maintained within the bioreactor." [PREFER]
 synonym: "Tº setpoint" EXACT [PREFER]
+synonym: "target temperature" EXACT [PREFER]
+synonym: "target Tº" EXACT [PREFER]
 synonym: "temperature control setpoint" EXACT [PREFER]
 synonym: "temperature reference point" EXACT [PREFER]
 synonym: "temperature reference value" EXACT [PREFER]
 synonym: "target temperature value" EXACT [PREFER]
-synonym: "target temperature" EXACT [PREFER]
 xref: AFO_/result#AFR:0001255 ! temperature setting {source="Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"}
 is_a: PREFER:0000015 ! operational parameter
 relationship: PREFER_RE:setpoint_of PREFER:0000041 ! temperature
