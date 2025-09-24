@@ -1,0 +1,32 @@
+id: prefer
+title: "PREFER Ontology"
+github_org: Multiomics-Analytics-Group
+git_main_branch: main
+repo: prefer_ontology
+release_artefacts:
+  - base
+  - full
+primary_release: full
+export_formats:
+  - owl
+  - obo
+  - json
+import_group:
+  use_base_merging: TRUE
+  products:
+    - id: ro
+      use_base: TRUE
+    - id: chebi
+      mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl
+      is_large: TRUE
+    - id: bao
+      mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
+    - id: uo
+      make_base: TRUE
+robot_java_args: "-Xmx16G"
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  custom_profile: TRUE
+  report_on:
+    - edit
