@@ -172,6 +172,13 @@ def: "" [PREFER]
 domain: fermentation culture
 range: fermentation culture type
 
+[Typedef]
+id: is_cell_culture_type
+name: is_cell_culture_type
+def: "" [PREFER]
+domain: cell biocatalyst
+range: cell culture type
+
 
 
 
