@@ -104,17 +104,24 @@ relationship: PREFER_RE:has_ingredient CHEBI:24431 ! chemical entity
 
 [Term]
 id: PREFER:0000012
-name: strain
-def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
-is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
-xref: NCBITaxon:strain
+name: cell biocatalyst
+def: "A living cell used as a catalyst for bioproduction. In a biotransformation process or bioprocess, it converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintencance." [PREFER]
+synonym: "whole-cell biocatalyst" EXACT [DOI: 10.1186/s12934-017-0724-7]
+synonym: "WCB" EXACT [DOI: 10.1201/9781003413134]
+synonym: "biological catalyst" EXACT [PREFER]
+synonym: "biocatalyst" EXACT [PREFER]
+synonym: "cell factory" EXACT [PREFER]
+synonym: "cell catalyst" EXACT [PREFER]
+synonym: "microbial cell factory" NARROW [PREFER]
+synonym: "catalyst" BROAD [PREFER]
+!is_a: PREFER:0000013 ! taxon
+relationship: PREFER_RE:is_cell_culture_type PREFER:0000206 ! microbial culture
+relationship: PREFER_RE:is_cell_culture_type PREFER:0000207 ! tissue culture
 
 [Term]
 id: PREFER:0000013
 name: taxon
-def: "A specific taxa within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain." [PREFER]
+def: "A specific biological classification(taxonomy) within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain." [PREFER]
 is_a: NCBITaxon:131567 ! cellular organisms
 xref: NCBITaxon:1 ! root
 
@@ -1574,3 +1581,34 @@ id: PREFER:0000203
 name: main culture
 def: "The culture seed used for the actual experiment, usually in a bioreactor." [PREFER]
 is_a: PREFER:0000200 ! culture type
+
+[Term]
+id: PREFER:0000204
+name: strain
+def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
+is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
+xref: NCBITaxon:strain ! strain {source:"NCBI Taxonomy"}
+
+[Term]
+id: PREFER:0000205
+name: cell culture
+def: 
+xref: ENVO:02000008 ! cell culture {source:"The Environment Ontology, Version 2025-08-19"}
+
+[Term]
+id: PREFER:0000206
+name: microbial culture
+def: "A culture consisting of live microbial cells or microorganisms, such as bacteria, yeast, or fungi, used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals." [PREFER]
+synonym: "microbiological culture" EXACT []
+!is_a: PREFER:0000205 ! cell culture
+!xref: NCBITaxon:2 ! Bacteria {source:"NCBI Taxonomy"}
+!xref: NCBITaxon:strain ! strain {source:"NCBI Taxonomy"}
+
+[Term]
+id: PREFER:0000207
+name: tissue culture
+def: "A culture consisting of live plant or animal cells (including mammalian cells), used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals." [PREFER]
+!is_a: PREFER:0000205 ! cell culture
+!xref: NCBITaxon:33208 ! Metazoa {source:"NCBI Taxonomy"}
