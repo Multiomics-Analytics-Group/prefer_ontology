@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2025-09-24
+data-version: releases/2025-10-01
 date: 28:08:2025 11:11
 default-namespace: precision_fermentation
 idspace: dc http://purl.org/dc/elements/1.1/ 
@@ -8,28 +8,21 @@ idspace: terms http://purl.org/dc/terms/
 ontology: prefer
 property_value: dc:description "An ontology for PREcision FERmentation." xsd:string
 property_value: dc:title "PREFER Ontology" xsd:string
-property_value: owl:versionInfo "2025-09-24" xsd:string
+property_value: owl:versionInfo "2025-10-01" xsd:string
 property_value: terms:contributor "Alberto Santos" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0001-7258-9596
 property_value: terms:contributor "Txell Amigó" xsd:string
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
-id: BAO_0000077
-name: unit of measurement
-def: "It is the definite magnitude of a physical quantity or of time. It has a quantity and a unit associated with it." []
-is_a: BAO_0003115 ! assay endpoint component
-
-[Term]
 id: BAO_0002753
 name: assay method component
+is_a: SIO:000000 ! entity
 
 [Term]
 id: BAO_0002929
 name: role
-
-[Term]
-id: BAO_0003115
-name: assay endpoint component
+is_a: SIO:000000 ! entity
 
 [Term]
 id: BAO_0003116
@@ -43,12 +36,18 @@ is_a: BAO_0002753 ! assay method component
 
 [Term]
 id: BFO:0000004
+is_a: SIO:000000 ! entity
 disjoint_from: BFO:0000020
 relationship: BFO:0000050 BFO:0000004 {all_only="true"} ! part of
 
 [Term]
 id: BFO:0000020
+is_a: SIO:000000 ! entity
 relationship: BFO:0000050 BFO:0000020 {all_only="true"} ! part of
+
+[Term]
+id: BFO:0000023
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:10545
@@ -72,6 +71,7 @@ id: CHEBI:24431
 name: chemical entity
 namespace: chebi_ontology
 def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:24432
@@ -216,6 +216,7 @@ name: subatomic particle
 namespace: chebi_ontology
 def: "A particle smaller than an atom." []
 xref: Wikipedia:Subatomic_particle
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:36343
@@ -251,6 +252,7 @@ id: CHEBI:50906
 name: role
 namespace: chebi_ontology
 def: "A role is particular behaviour which a material entity may exhibit." []
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:52211
@@ -273,6 +275,30 @@ def: "A physiological role played by any substance that is distributed in foodst
 is_a: CHEBI:52211 ! physiological role
 
 [Term]
+id: NCBITaxon:131567
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCBITaxon_:taxonomic_rank
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C179816
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C48569
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C70469
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C73681
+is_a: SIO:000000 ! entity
+
+[Term]
 id: PREFER:0000001
 name: precision fermentation process
 def: "A biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively evolved(ALE) microorganisms (such as bacteria, yeast, fungi or microalgae) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods." [PREFER]
@@ -281,6 +307,7 @@ xref: GO:0006113
 xref: OBI_0000011
 xref: SRAO_/SRAO:0000223
 xref: Wikipedia:Industrial_fermentation#Precision_fermentation
+is_a: SIO:000000 ! entity
 relationship: has_part PREFER:0000002 ! fermentation project
 
 [Term]
@@ -308,7 +335,7 @@ def: "An individual instance of a precision fermentation process carried out und
 synonym: "run" EXACT []
 xref: CHMO:0001624
 is_a: PREFER:0000003 ! fermentation experiment
-relationship: cultures_strain PREFER:0000012 ! strain
+relationship: cultures_cell PREFER:0000012 ! cell biocatalyst
 relationship: has_collected PREFER:0000018 ! offline sample
 relationship: has_cultivation_condition PREFER:0000008 ! cultivation condition
 relationship: has_measured_compound CHEBI:24431 ! chemical entity
@@ -358,6 +385,7 @@ comment: "These data typically include compound groups categorized as substrates
 synonym: "bioprocess measured variable" EXACT []
 synonym: "bioprocess variable" EXACT []
 xref: BAO:0002070
+is_a: SIO:000000 ! entity
 property_value: BROADER "bioprocess observed variable" xsd:string
 property_value: BROADER "measured variable" xsd:string
 property_value: BROADER "observed variable" xsd:string
@@ -378,6 +406,7 @@ synonym: "culture medium" EXACT [OBI:0000079]
 xref: BAO:0000114
 xref: EFO:0000579
 xref: OBI:0000079
+is_a: SIO:000000 ! entity
 relationship: has_ingredient CHEBI:24431 ! chemical entity
 
 [Term]
@@ -423,11 +452,13 @@ relationship: has_scale PREFER:0000188 ! industrial-scale
 id: PREFER:0000016
 name: phase
 def: "A time interval of a fermentation process." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000017
 name: event
 def: "An operational intervention set by user that triggers the start or end of the fermentation phase." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000018
@@ -435,7 +466,7 @@ name: offline sample
 def: "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as substrates, products, and by-products, and biomass." [PREFER]
 synonym: "collected sample" EXACT []
 synonym: "sample" EXACT [SIO]
-is_a: SIO:001050
+is_a: SIO:001050 ! sample
 
 [Term]
 id: PREFER:0000019
@@ -473,6 +504,7 @@ id: PREFER:0000021
 name: pH base solution
 def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 synonym: "pH control base solution" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000038 ! pH
 
 [Term]
@@ -546,6 +578,7 @@ def: "The cascade control system for dissolved oxygen linked to a parameter to a
 comment: "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter." [PREFER]
 synonym: "dissolved oxygen cascade control strategy" EXACT []
 synonym: "DO control cascade level" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000033 ! DO
 
 [Term]
@@ -554,10 +587,9 @@ name: maximum stirring setpoint
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
 synonym: "maximum stirring speed setpoint" EXACT []
 synonym: "maximum shaking speed setpoint" EXACT []
-synonym: "maximum stirring" EXACT []
 synonym: "maximum stirring speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: has_unit UO:0000079 ! radian per second
+relationship: has_unit NCIT:C70469
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit NCIT:C70469 ! revolution per minute
@@ -571,7 +603,7 @@ synonym: "minimum shaking speed setpoint" EXACT []
 synonym: "minimum stirring" EXACT []
 synonym: "minimum stirring speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: has_unit UO:0000079 ! radian per second
+relationship: has_unit NCIT:C70469
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
 relationship: PREFER_RE:has_unit NCIT:C70469 ! revolution per minute
@@ -581,6 +613,7 @@ id: PREFER:0000030
 name: aeration gas type
 def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen." [PREFER]
 synonym: "aeration gas" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 
 [Term]
@@ -1000,6 +1033,17 @@ relationship: has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: has_unit UO:0000175 ! gram per liter
 
 [Term]
+id: PREFER:0000075
+name: feed rate gravimetric
+def: "Rate at which the feed (based on its weight) is added to the bioprocess." [PREFER]
+synonym: "gravimetric feed rate" EXACT []
+is_a: PREFER:0000009 ! process variable
+relationship: has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: has_data_acquisition_mode PREFER:0000152 ! online measurement
+relationship: has_unit SNOMED:414559001
+relationship: refers_to_variable PREFER:0000037 ! feed
+
+[Term]
 id: PREFER:0000077
 name: dilution rate
 def: "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted." [PREFER]
@@ -1124,6 +1168,10 @@ name: oxygen accumulated
 def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value." [PREFER]
 is_a: PREFER:0000018 ! offline sample
 relationship: has_unit UO:0000189 ! count unit
+
+[Term]
+id: PREFER:00000XX
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000100
@@ -1405,6 +1453,7 @@ relationship: has_unit PREFER_UNIT:0000163 ! carbon mole per carbon mole
 id: PREFER:0000150
 name: data acquisition mode
 def: "How, where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000151
@@ -1434,6 +1483,7 @@ is_a: PREFER:0000150 ! data acquisition mode
 id: PREFER:0000155
 name: performance variable
 def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratorymetrics, and balance metrics." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000156
@@ -1465,6 +1515,7 @@ is_a: PREFER:0000155 ! performance variable
 id: PREFER:0000160
 name: growth metric
 comment: "For instance, specific growth rate, biomass yields."
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000180
@@ -1473,6 +1524,10 @@ synonym: "cultivation mode" EXACT [PREFER]
 synonym: "mode of cultivation" EXACT [PREFER]
 synonym: "mode of operation" EXACT [PREFER] 
 def: "A defined strategy of operating a bioreactor that specifies how culture medium and biomass are introduced, maintained, and removed over time." [PREFER]
+synonym: "cultivation mode" EXACT [PREFER]
+synonym: "mode of cultivation" EXACT [PREFER]
+synonym: "mode of operation" EXACT [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000181
@@ -1504,6 +1559,7 @@ is_a: PREFER:0000180 ! operational mode
 id: PREFER:0000185
 name: bioreactor scale
 def: "A classification of bioreactors based on culture volume and intended application, ranging from laboratory research to industrial production." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000186
@@ -1531,6 +1587,7 @@ def: "The feeding strategies typically found in a fed-batch fermentation type. T
 synonym: "feed stream profile" NARROW []
 synonym: "feeding profile" EXACT []
 synonym: "feeding strategy" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000037 ! feed
 
 [Term]
@@ -1566,6 +1623,7 @@ is_a: PREFER:0000189 ! feed profile
 [Term]
 id: PREFER:0000200
 name: fermentation culture type
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000201
