@@ -24,3 +24,10 @@ $(ONT)-full.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 # ----------------------------------------
+
+
+## changing base iri for bao 
+.PHONY: mirror-bao
+.PRECIOUS: $(MIRRORDIR)/bao.owl
+mirror-bao: | $(TMPDIR)
+	$(ROBOT) remove -I http://www.bioassayontology.org/bao/bao_complete.owl --base-iri http://www.bioassayontology.org/ --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl

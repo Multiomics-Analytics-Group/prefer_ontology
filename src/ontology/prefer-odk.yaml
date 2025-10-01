@@ -21,8 +21,16 @@ import_group:
       is_large: TRUE
     - id: bao
       mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
+      make_base: TRUE
+      base_irirs:
+        - http://www.bioassayontology.org/
     - id: uo
       make_base: TRUE
+    - id: sio
+      mirror_from: http://semanticscience.org/ontology/sio.owl
+      make_base: TRUE
+      base_iris:
+        - http://semanticscience.org/resource/SIO_
 robot_java_args: "-Xmx16G"
 robot_report:
   use_labels: TRUE
