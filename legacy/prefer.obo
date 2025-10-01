@@ -51,7 +51,7 @@ relationship: part_of PREFER:0000003 ! fermentation experiment
 relationship: PREFER_RE:has_cultivation_condition PREFER:0000008 ! cultivation condition
 relationship: PREFER_RE:has_measured_process_variable PREFER:0000009 ! process variable
 relationship: PREFER_RE:has_medium PREFER:0000011 ! medium
-relationship: PREFER_RE:cultures_strain PREFER:0000012 ! strain
+relationship: PREFER_RE:cultures_cell PREFER:0000012 ! cell biocatalyst
 relationship: PREFER_RE:uses_bioreactor PREFER:0000014 ! bioreactor
 relationship: PREFER_RE:has_measured_compound CHEBI:24431 ! chemical entity
 relationship: PREFER_RE:has_collected PREFER:0000018 ! offline sample
@@ -104,17 +104,24 @@ relationship: PREFER_RE:has_ingredient CHEBI:24431 ! chemical entity
 
 [Term]
 id: PREFER:0000012
-name: strain
-def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
-is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
-xref: NCBITaxon:strain
+name: cell biocatalyst
+def: "A living cell used as a catalyst for bioproduction. In a biotransformation process or bioprocess, it converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintencance." [PREFER]
+synonym: "whole-cell biocatalyst" EXACT [DOI: 10.1186/s12934-017-0724-7]
+synonym: "WCB" EXACT [DOI: 10.1201/9781003413134]
+synonym: "biological catalyst" EXACT [PREFER]
+synonym: "biocatalyst" EXACT [PREFER]
+synonym: "cell factory" EXACT [PREFER]
+synonym: "cell catalyst" EXACT [PREFER]
+synonym: "microbial cell factory" NARROW [PREFER]
+synonym: "catalyst" BROAD [PREFER]
+!is_a: PREFER:0000013 ! taxon
+relationship: PREFER_RE:is_cell_culture_type PREFER:0000206 ! microbial culture
+relationship: PREFER_RE:is_cell_culture_type PREFER:0000207 ! tissue culture
 
 [Term]
 id: PREFER:0000013
 name: taxon
-def: "A specific taxa within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain." [PREFER]
+def: "A specific biological classification(taxonomy) within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain." [PREFER]
 is_a: NCBITaxon:131567 ! cellular organisms
 xref: NCBITaxon:1 ! root
 
@@ -166,11 +173,12 @@ id: PREFER:0000019
 name: temperature setpoint
 def: "The target temperature value to be maintained within the bioreactor." [PREFER]
 synonym: "Tº setpoint" EXACT [PREFER]
+synonym: "target temperature" EXACT [PREFER]
+synonym: "target Tº" EXACT [PREFER]
 synonym: "temperature control setpoint" EXACT [PREFER]
 synonym: "temperature reference point" EXACT [PREFER]
 synonym: "temperature reference value" EXACT [PREFER]
 synonym: "target temperature value" EXACT [PREFER]
-synonym: "target temperature" EXACT [PREFER]
 xref: AFO_/result#AFR:0001255 ! temperature setting {source="Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"}
 is_a: PREFER:0000015 ! operational parameter
 relationship: PREFER_RE:setpoint_of PREFER:0000041 ! temperature
@@ -226,6 +234,30 @@ relationship: PREFER_RE:has_culture_type PREFER:0000201 ! pre-optional culture
 relationship: PREFER_RE:has_culture_type PREFER:0000202 ! pre-final culture
 relationship: PREFER_RE:has_culture_type PREFER:0000203 ! main culture
 
+# [Term]
+# id: PREFER:0000023
+# name: culture id
+# def: "Identifier assigned to a cultured cell population, used to link a starter culture or initial culture to its strain ID." [PREFER]
+# synonym: "initial culture id" EXACT []
+# synonym: "main culture id" EXACT []
+# synonym: "stock culture id" EXACT []
+# is_a: PREFER:0000008 ! cultivation condition
+# relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
+
+# [Term]
+# id: PREFER:0000024
+# name: seed id 
+# def: "Identifier assigned to a cultured cell population, used to link the fermentation run to a seed culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain biomass concentration/optical density(OD) is reached." [PREFER]
+# def: "Seed culture prepared from a stock culture and cultivated in smaller volume (either tubes, shake flasks or reactors) until a certain biomass concentration/optical density(OD) is reached." [PREFER]
+# synonym: "seed culture" EXACT []
+# synonym: "starter culture" EXACT []
+# synonym: "main culture" EXACT []
+# synonym: "inoculum culture" EXACT []
+#!property_value: PREFER_RE:has_culture_seed_id "seed id" xsd:string
+#!property_value: PREFER_RE:has_culture_seed_id PREFER:0000024 ! seed id
+# is_a: PREFER:0000008 ! cultivation condition
+# relationship: PREFER_RE:refers_to_variable OBI:0100060 ! cultured cell population 
+
 [Term]
 id: PREFER:0000025
 name: DO setpoint
@@ -251,15 +283,13 @@ relationship: PREFER_RE:refers_to_variable PREFER:0000033 ! DO
 id: PREFER:0000027
 name: maximum stirring setpoint
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
-synonym: "maximum stirring" EXACT []
-synonym: "maximum shaking speed" EXACT []
 synonym: "maximum stirring speed setpoint" EXACT []
 synonym: "maximum shaking speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
 !relationship: refers_to_variable PREFER:0000033 ! DO # No need?
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
-relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
+relationship: PREFER_RE:has_unit NCIT:C70469 ! revolution per minute
 
 [Term]
 id: PREFER:0000028
@@ -273,7 +303,7 @@ is_a: PREFER:0000015 ! operational parameter
 !relationship: refers_to_variable PREFER:0000033 ! DO # No need?
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: PREFER_RE:setpoint_of PREFER:0000054 ! stirrer speed
-relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
+relationship: PREFER_RE:has_unit NCIT:C70469 ! revolution per minute
 
 [Term]
 id: PREFER:0000030
@@ -541,6 +571,18 @@ relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measur
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
 relationship: PREFER_RE:has_unit PREFER_UNIT:0000167 ! liters per hour
 
+******
+[Term]
+id: PREFER:0000075
+name: feed rate gravimetric 
+def: "Rate at which the feed (based on its weight) is added to the bioprocess." [PREFER]
+synonym: "gravimetric feed rate" EXACT []
+is_a: PREFER:0000009 ! process variable
+relationship: PREFER_RE:refers_to_variable PREFER:0000037 ! feed
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
+relationship: PREFER_RE:has_unit SNOMED:414559001 ! kilogram per hour *********************
+
 [Term]
 id: PREFER:0000054
 name: stirrer speed 
@@ -549,7 +591,7 @@ is_a: PREFER:0000009 ! process variable
 relationship: PREFER_RE:refers_to_variable PREFER:0000039 ! DO 
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: PREFER_RE:has_data_acquisition_mode PREFER:0000152 ! online measurement
-relationship: PREFER_RE:has_unit UO:0000079 ! radian per second 
+relationship: PREFER_RE:has_unit NCIT:C70469 ! revolution per minute
 
 [Term]
 id: PREFER:0000055
@@ -1415,6 +1457,9 @@ is_a: UO:0000076 ! mole fraction
 [Term]
 id: PREFER:0000180
 name: operational mode
+synonym: "cultivation mode" EXACT [PREFER]
+synonym: "mode of cultivation" EXACT [PREFER]
+synonym: "mode of operation" EXACT [PREFER] 
 def: "A defined strategy of operating a bioreactor that specifies how culture medium and biomass are introduced, maintained, and removed over time." [PREFER]
 
 [Term]
@@ -1423,6 +1468,7 @@ name: batch
 def: "An operational mode in which all nutrients are supplied at the start of cultivation, with no further input or removal of medium until the end of the process." [PREFER]
 synonym: "batch culture" EXACT []
 synonym: "batch cell culture" EXACT [MSIO:0000181]
+synonym: "batch cutivation" EXACT [PMID: 38806369]
 is_a: PREFER:0000180 ! operational mode
 xref: MSIO:0000181 ! batch cell culture {source "MSIO:0000181"}
 
@@ -1535,3 +1581,34 @@ id: PREFER:0000203
 name: main culture
 def: "The culture seed used for the actual experiment, usually in a bioreactor." [PREFER]
 is_a: PREFER:0000200 ! culture type
+
+[Term]
+id: PREFER:0000204
+name: strain
+def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
+is_a: NCBITaxon:_taxonomic_rank ! taxonomic rank
+xref: NCBITaxon:strain ! strain {source:"NCBI Taxonomy"}
+
+[Term]
+id: PREFER:0000205
+name: cell culture
+def: 
+xref: ENVO:02000008 ! cell culture {source:"The Environment Ontology, Version 2025-08-19"}
+
+[Term]
+id: PREFER:0000206
+name: microbial culture
+def: "A culture consisting of live microbial cells or microorganisms, such as bacteria, yeast, or fungi, used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals." [PREFER]
+synonym: "microbiological culture" EXACT []
+!is_a: PREFER:0000205 ! cell culture
+!xref: NCBITaxon:2 ! Bacteria {source:"NCBI Taxonomy"}
+!xref: NCBITaxon:strain ! strain {source:"NCBI Taxonomy"}
+
+[Term]
+id: PREFER:0000207
+name: tissue culture
+def: "A culture consisting of live plant or animal cells (including mammalian cells), used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals." [PREFER]
+!is_a: PREFER:0000205 ! cell culture
+!xref: NCBITaxon:33208 ! Metazoa {source:"NCBI Taxonomy"}

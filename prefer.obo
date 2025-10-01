@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2025-09-24
+data-version: releases/2025-10-01
 date: 28:08:2025 11:11
 default-namespace: precision_fermentation
 idspace: dc http://purl.org/dc/elements/1.1/ 
@@ -8,28 +8,21 @@ idspace: terms http://purl.org/dc/terms/
 ontology: prefer
 property_value: dc:description "An ontology for PREcision FERmentation." xsd:string
 property_value: dc:title "PREFER Ontology" xsd:string
-property_value: owl:versionInfo "2025-09-24" xsd:string
+property_value: owl:versionInfo "2025-10-01" xsd:string
 property_value: terms:contributor "Alberto Santos" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0001-7258-9596
 property_value: terms:contributor "Txell Amigó" xsd:string
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
-id: BAO_0000077
-name: unit of measurement
-def: "It is the definite magnitude of a physical quantity or of time. It has a quantity and a unit associated with it." []
-is_a: BAO_0003115 ! assay endpoint component
-
-[Term]
 id: BAO_0002753
 name: assay method component
+is_a: SIO:000000 ! entity
 
 [Term]
 id: BAO_0002929
 name: role
-
-[Term]
-id: BAO_0003115
-name: assay endpoint component
+is_a: SIO:000000 ! entity
 
 [Term]
 id: BAO_0003116
@@ -43,12 +36,18 @@ is_a: BAO_0002753 ! assay method component
 
 [Term]
 id: BFO:0000004
+is_a: SIO:000000 ! entity
 disjoint_from: BFO:0000020
 relationship: BFO:0000050 BFO:0000004 {all_only="true"} ! part of
 
 [Term]
 id: BFO:0000020
+is_a: SIO:000000 ! entity
 relationship: BFO:0000050 BFO:0000020 {all_only="true"} ! part of
+
+[Term]
+id: BFO:0000023
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:10545
@@ -72,6 +71,7 @@ id: CHEBI:24431
 name: chemical entity
 namespace: chebi_ontology
 def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:24432
@@ -216,6 +216,7 @@ name: subatomic particle
 namespace: chebi_ontology
 def: "A particle smaller than an atom." []
 xref: Wikipedia:Subatomic_particle
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:36343
@@ -251,6 +252,7 @@ id: CHEBI:50906
 name: role
 namespace: chebi_ontology
 def: "A role is particular behaviour which a material entity may exhibit." []
+is_a: SIO:000000 ! entity
 
 [Term]
 id: CHEBI:52211
@@ -273,6 +275,30 @@ def: "A physiological role played by any substance that is distributed in foodst
 is_a: CHEBI:52211 ! physiological role
 
 [Term]
+id: NCBITaxon:131567
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCBITaxon_:taxonomic_rank
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C179816
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C48569
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C70469
+is_a: SIO:000000 ! entity
+
+[Term]
+id: NCIT:C73681
+is_a: SIO:000000 ! entity
+
+[Term]
 id: PREFER:0000001
 name: precision fermentation process
 def: "A biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively evolved(ALE) microorganisms (such as bacteria, yeast, fungi or microalgae) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods." [PREFER]
@@ -281,6 +307,7 @@ xref: GO:0006113
 xref: OBI_0000011
 xref: SRAO_/SRAO:0000223
 xref: Wikipedia:Industrial_fermentation#Precision_fermentation
+is_a: SIO:000000 ! entity
 relationship: has_part PREFER:0000002 ! fermentation project
 
 [Term]
@@ -308,7 +335,7 @@ def: "An individual instance of a precision fermentation process carried out und
 synonym: "run" EXACT []
 xref: CHMO:0001624
 is_a: PREFER:0000003 ! fermentation experiment
-relationship: cultures_strain PREFER:0000012 ! strain
+relationship: cultures_cell PREFER:0000012 ! cell biocatalyst
 relationship: has_collected PREFER:0000018 ! offline sample
 relationship: has_cultivation_condition PREFER:0000008 ! cultivation condition
 relationship: has_measured_compound CHEBI:24431 ! chemical entity
@@ -340,6 +367,7 @@ comment: "These data typically include compound groups categorized as substrates
 synonym: "bioprocess measured variable" EXACT []
 synonym: "bioprocess variable" EXACT []
 xref: BAO:0002070
+is_a: SIO:000000 ! entity
 property_value: BROADER "bioprocess observed variable" xsd:string
 property_value: BROADER "measured variable" xsd:string
 property_value: BROADER "observed variable" xsd:string
@@ -372,21 +400,29 @@ synonym: "culture medium" EXACT [OBI:0000079]
 xref: BAO:0000114
 xref: EFO:0000579
 xref: OBI:0000079
+is_a: SIO:000000 ! entity
 relationship: has_ingredient CHEBI:24431 ! chemical entity
 
 [Term]
 id: PREFER:0000012
-name: strain
-def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
-synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
-xref: NCBITaxon:strain
-is_a: NCBITaxon_:taxonomic_rank
+name: cell biocatalyst
+def: "A living cell used as a catalyst for bioproduction. In a biotransformation process or bioprocess, it converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintencance." [PREFER]
+synonym: "biocatalyst" EXACT [PREFER]
+synonym: "biological catalyst" EXACT [PREFER]
+synonym: "catalyst" BROAD [PREFER]
+synonym: "cell catalyst" EXACT [PREFER]
+synonym: "cell factory" EXACT [PREFER]
+synonym: "microbial cell factory" NARROW [PREFER]
+synonym: "WCB" EXACT [DOI: 10.1201/9781003413134]
+synonym: "whole-cell biocatalyst" EXACT [DOI: 10.1186/s12934-017-0724-7]
+is_a: SIO:000000 ! entity
+relationship: is_cell_culture_type PREFER:0000206 ! microbial culture
+relationship: is_cell_culture_type PREFER:0000207 ! tissue culture
 
 [Term]
 id: PREFER:0000013
 name: taxon
-def: "A specific taxa within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain." [PREFER]
+def: "A specific biological classification(taxonomy) within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain." [PREFER]
 xref: NCBITaxon:1
 is_a: NCBITaxon:131567
 
@@ -414,16 +450,19 @@ comment: "Such as dissolved oxygen (DO) control setpoints and feeding strategies
 synonym: "parameter" RELATED [NCIT:C44175, REPR:Parameter]
 synonym: "setting" RELATED [AFR:0001505]
 xref: REPR:InstrumentSetting
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000016
 name: phase
 def: "A time interval of a fermentation process." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000017
 name: event
 def: "An operational intervention set by user that triggers the start or end of the fermentation phase." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000018
@@ -431,7 +470,7 @@ name: offline sample
 def: "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as substrates, products, and by-products, and biomass." [PREFER]
 synonym: "collected sample" EXACT []
 synonym: "sample" EXACT [SIO]
-is_a: SIO:001050
+is_a: SIO:001050 ! sample
 
 [Term]
 id: PREFER:0000019
@@ -439,6 +478,7 @@ name: temperature setpoint
 def: "The target temperature value to be maintained within the bioreactor." [PREFER]
 synonym: "target temperature" EXACT [PREFER]
 synonym: "target temperature value" EXACT [PREFER]
+synonym: "target Tº" EXACT [PREFER]
 synonym: "temperature control setpoint" EXACT [PREFER]
 synonym: "temperature reference point" EXACT [PREFER]
 synonym: "temperature reference value" EXACT [PREFER]
@@ -468,6 +508,7 @@ id: PREFER:0000021
 name: pH base solution
 def: "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 synonym: "pH control base solution" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000038 ! pH
 
 [Term]
@@ -475,6 +516,7 @@ id: PREFER:0000022
 name: pH acid solution
 def: "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint." [PREFER]
 synonym: "pH control acid solution" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000038 ! pH
 
 [Term]
@@ -495,18 +537,17 @@ def: "The cascade control system for dissolved oxygen linked to a parameter to a
 comment: "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter." [PREFER]
 synonym: "dissolved oxygen cascade control strategy" EXACT []
 synonym: "DO control cascade level" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000033 ! DO
 
 [Term]
 id: PREFER:0000027
 name: maximum stirring setpoint
 def: "The maximum revolutions per minute (rpm) of the bioreactor stirrer." [PREFER]
-synonym: "maximum shaking speed" EXACT []
 synonym: "maximum shaking speed setpoint" EXACT []
-synonym: "maximum stirring" EXACT []
 synonym: "maximum stirring speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: has_unit UO:0000079 ! radian per second
+relationship: has_unit NCIT:C70469
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: setpoint_of PREFER:0000054 ! stirrer speed
 
@@ -519,7 +560,7 @@ synonym: "minimum shaking speed setpoint" EXACT []
 synonym: "minimum stirring" EXACT []
 synonym: "minimum stirring speed setpoint" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-relationship: has_unit UO:0000079 ! radian per second
+relationship: has_unit NCIT:C70469
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 relationship: setpoint_of PREFER:0000054 ! stirrer speed
 
@@ -528,6 +569,7 @@ id: PREFER:0000030
 name: aeration gas type
 def: "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen." [PREFER]
 synonym: "aeration gas" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000026 ! DO cascade level
 
 [Term]
@@ -766,7 +808,7 @@ def: "Speed at which the impeller shaft rotates." [PREFER]
 is_a: PREFER:0000009 ! process variable
 relationship: has_data_acquisition_mode PREFER:0000151 ! inline measurement
 relationship: has_data_acquisition_mode PREFER:0000152 ! online measurement
-relationship: has_unit UO:0000079 ! radian per second
+relationship: has_unit NCIT:C70469
 relationship: refers_to_variable PREFER:0000039 ! DO measurement
 
 [Term]
@@ -935,6 +977,17 @@ relationship: has_data_acquisition_mode PREFER:0000154 ! offline measurement
 relationship: has_unit UO:0000175 ! gram per liter
 
 [Term]
+id: PREFER:0000075
+name: feed rate gravimetric
+def: "Rate at which the feed (based on its weight) is added to the bioprocess." [PREFER]
+synonym: "gravimetric feed rate" EXACT []
+is_a: PREFER:0000009 ! process variable
+relationship: has_data_acquisition_mode PREFER:0000151 ! inline measurement
+relationship: has_data_acquisition_mode PREFER:0000152 ! online measurement
+relationship: has_unit SNOMED:414559001
+relationship: refers_to_variable PREFER:0000037 ! feed
+
+[Term]
 id: PREFER:0000077
 name: dilution rate
 def: "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted." [PREFER]
@@ -1059,6 +1112,10 @@ name: oxygen accumulated
 def: "The total amount of O2 consumed and measured over the course of the bioprocess, tracked as an accumulated value." [PREFER]
 is_a: PREFER:0000018 ! offline sample
 relationship: has_unit UO:0000189 ! count unit
+
+[Term]
+id: PREFER:00000XX
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000100
@@ -1340,6 +1397,7 @@ relationship: has_unit PREFER_UNIT:0000163 ! carbon mole per carbon mole
 id: PREFER:0000150
 name: data acquisition mode
 def: "How, where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000151
@@ -1369,6 +1427,7 @@ is_a: PREFER:0000150 ! data acquisition mode
 id: PREFER:0000155
 name: performance variable
 def: "Computed variables that assess bioprocess efficiency, suchas as yields, rates, respiratorymetrics, and balance metrics." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000156
@@ -1400,11 +1459,16 @@ is_a: PREFER:0000155 ! performance variable
 id: PREFER:0000160
 name: growth metric
 comment: "For instance, specific growth rate, biomass yields."
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000180
 name: operational mode
 def: "A defined strategy of operating a bioreactor that specifies how culture medium and biomass are introduced, maintained, and removed over time." [PREFER]
+synonym: "cultivation mode" EXACT [PREFER]
+synonym: "mode of cultivation" EXACT [PREFER]
+synonym: "mode of operation" EXACT [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000181
@@ -1412,6 +1476,7 @@ name: batch
 def: "An operational mode in which all nutrients are supplied at the start of cultivation, with no further input or removal of medium until the end of the process." [PREFER]
 synonym: "batch cell culture" EXACT [MSIO:0000181]
 synonym: "batch culture" EXACT []
+synonym: "batch cutivation" EXACT [PMID: 38806369]
 xref: MSIO:0000181
 is_a: PREFER:0000180 ! operational mode
 
@@ -1437,6 +1502,7 @@ is_a: PREFER:0000180 ! operational mode
 id: PREFER:0000185
 name: bioreactor scale
 def: "A classification of bioreactors based on culture volume and intended application, ranging from laboratory research to industrial production." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000186
@@ -1464,6 +1530,7 @@ def: "The feeding strategies typically found in a fed-batch fermentation type. T
 synonym: "feed stream profile" NARROW []
 synonym: "feeding profile" EXACT []
 synonym: "feeding strategy" EXACT []
+is_a: SIO:000000 ! entity
 relationship: refers_to_variable PREFER:0000037 ! feed
 
 [Term]
@@ -1499,6 +1566,7 @@ is_a: PREFER:0000189 ! feed profile
 [Term]
 id: PREFER:0000200
 name: fermentation culture type
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER:0000201
@@ -1517,6 +1585,34 @@ id: PREFER:0000203
 name: main culture
 def: "The culture seed used for the actual experiment, usually in a bioreactor." [PREFER]
 is_a: PREFER:0000200 ! fermentation culture type
+
+[Term]
+id: PREFER:0000204
+name: strain
+def: "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+comment: "Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics." [doi:10.1093/jaoac/85.2.524, PREFER]
+synonym: "subtype" EXACT [doi:10.1093/jaoac/85.2.524]
+xref: NCBITaxon:strain
+is_a: NCBITaxon_:taxonomic_rank
+
+[Term]
+id: PREFER:0000205
+name: cell culture
+xref: ENVO:02000008
+is_a: SIO:000000 ! entity
+
+[Term]
+id: PREFER:0000206
+name: microbial culture
+def: "A culture consisting of live microbial cells or microorganisms, such as bacteria, yeast, or fungi, used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals." [PREFER]
+synonym: "microbiological culture" EXACT []
+is_a: SIO:000000 ! entity
+
+[Term]
+id: PREFER:0000207
+name: tissue culture
+def: "A culture consisting of live plant or animal cells (including mammalian cells), used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals." [PREFER]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER_UNIT:0000161
@@ -1578,6 +1674,10 @@ synonym: "Litres per Hour" EXACT []
 synonym: "litres per hour" EXACT []
 xref: NCIT:C69160
 is_a: UO:0000270 ! volumetric flow rate unit
+
+[Term]
+id: PREFER_UNIT:0000168
+is_a: SIO:000000 ! entity
 
 [Term]
 id: PREFER_UNIT:0000169
@@ -1663,9 +1763,153 @@ xref: NCIT:C70455
 is_a: UO:0000076 ! mole fraction
 
 [Term]
+id: QUDT:BAR
+is_a: SIO:000000 ! entity
+
+[Term]
+id: QUDT:PER-HR
+is_a: SIO:000000 ! entity
+
+[Term]
+id: SIO:000000
+name: entity
+
+[Term]
+id: SIO:000004
+name: material entity
+is_a: SIO:000776 ! object
+relationship: SIO:000008 SIO:000279 ! has attribute mass
+
+[Term]
+id: SIO:000015
+name: information content entity
+is_a: SIO:000776 ! object
+
+[Term]
+id: SIO:000037
+name: spatial quantity
+is_a: SIO:000258 ! dimensional quantity
+relationship: SIO:000011 SIO:000776 ! is attribute of object
+relationship: SIO:000216 SIO:000052 ! has measurement value quantity
+
+[Term]
+id: SIO:000052
+name: quantity
+is_a: SIO:000070 ! measurement value
+union_of: SIO:000257 ! dimensionless quantity
+union_of: SIO:000258 ! dimensional quantity
+relationship: SIO:000215 SIO:000000 ! is measurement value of entity
+
+[Term]
+id: SIO:000070
+name: measurement value
+is_a: SIO:000366 ! number
+
+[Term]
+id: SIO:000074
+name: unit of measurement
+is_a: SIO:000052 ! quantity
+
+[Term]
+id: SIO:000075
+name: mathematical entity
+is_a: SIO:000015 ! information content entity
+
+[Term]
+id: SIO:000257
+name: dimensionless quantity
+is_a: SIO:000052 ! quantity
+disjoint_from: SIO:000258 ! dimensional quantity
+
+[Term]
+id: SIO:000258
+name: dimensional quantity
+is_a: SIO:000052 ! quantity
+relationship: SIO:000221 SIO:000074 ! has unit unit of measurement
+
+[Term]
+id: SIO:000279
+name: mass
+is_a: SIO:000037 ! spatial quantity
+relationship: SIO:000011 SIO:000004 ! is attribute of material entity
+
+[Term]
+id: SIO:000289
+name: set
+is_a: SIO:000075 ! mathematical entity
+relationship: SIO:000059 SIO:000000 {all_only="true"} ! has member entity
+
+[Term]
+id: SIO:000366
+name: number
+is_a: SIO:001431 ! scalar
+
+[Term]
+id: SIO:000616
+name: collection
+is_a: SIO:000289 ! set
+relationship: SIO:000059 SIO:000000 ! has member entity
+
+[Term]
+id: SIO:000776
+name: object
+is_a: SIO:000000 ! entity
+
+[Term]
+id: SIO:001050
+name: sample
+is_a: SIO:010462 ! heterogeneous substance
+
+[Term]
+id: SIO:001428
+name: ingredient
+is_a: SIO:011126 ! chemical substance
+intersection_of: SIO:011126 ! chemical substance
+intersection_of: SIO:000245 SIO:011126 ! derives into chemical substance
+relationship: SIO:000245 SIO:011126 ! derives into chemical substance
+
+[Term]
+id: SIO:001429
+name: tensor
+is_a: SIO:000075 ! mathematical entity
+
+[Term]
+id: SIO:001431
+name: scalar
+is_a: SIO:001429 ! tensor
+
+[Term]
+id: SIO:010004
+name: chemical entity
+is_a: SIO:000004 ! material entity
+
+[Term]
+id: SIO:010462
+name: heterogeneous substance
+is_a: SIO:011126 ! chemical substance
+disjoint_from: SIO:010463 ! homogeneous substance
+
+[Term]
+id: SIO:010463
+name: homogeneous substance
+is_a: SIO:011126 ! chemical substance
+
+[Term]
+id: SIO:011126
+name: chemical substance
+is_a: SIO:010004 ! chemical entity
+union_of: SIO:010462 ! heterogeneous substance
+union_of: SIO:010463 ! homogeneous substance
+
+[Term]
+id: SNOMED:414559001
+is_a: SIO:000000 ! entity
+
+[Term]
 id: UO:0000000
 name: unit
 comment: "A unit of measurement is a standardized quantity of a physical quality." [Wikipedia:Wikipedia]
+is_a: SIO:000000 ! entity
 
 [Term]
 id: UO:0000001
@@ -1673,7 +1917,6 @@ name: length unit
 namespace: unit.ontology
 def: "A unit which is a standard measure of the distance between two points." []
 comment: "A unit which is a standard measure of the distance between two points." [Wikipedia:Wikipedia]
-is_a: BAO_0000077 ! unit of measurement
 is_a: UO:0000000 ! unit
 
 [Term]
@@ -1689,7 +1932,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the dimension in which events occur in sequence." []
 comment: "A unit which is a standard measure of the dimension in which events occur in sequence." [Wikipedia:Wikipedia]
 synonym: "time derived unit" EXACT []
-is_a: BAO_0000077 ! unit of measurement
 is_a: UO:0000000 ! unit
 
 [Term]
@@ -1705,7 +1947,6 @@ namespace: unit.ontology
 def: "A unit which is a standard measure of the average kinetic energy of the particles in a sample of matter." []
 comment: "A unit which is a standard measure of the average kinetic energy of the particles in a sample of matter." [Wikipedia:Wikipedia]
 synonym: "temperature derived unit" EXACT []
-is_a: BAO_0000077 ! unit of measurement
 is_a: UO:0000000 ! unit
 
 [Term]
@@ -2103,6 +2344,7 @@ is_a: UO:0000000 ! unit
 [Term]
 id: UO:0000046
 name: prefix
+is_a: SIO:000000 ! entity
 
 [Term]
 id: UO:0000047
@@ -2134,7 +2376,6 @@ name: concentration unit
 namespace: unit.ontology
 def: "A unit which represents a standard measurement of how much of a given substance there is mixed with another substance." []
 comment: "A unit which represents a standard measurement of how much of a given substance there is mixed with another substance." [UOC:GVG]
-is_a: BAO_0000077 ! unit of measurement
 is_a: UO:0000000 ! unit
 
 [Term]
@@ -2597,7 +2838,6 @@ name: frequency unit
 namespace: unit.ontology
 def: "A unit which is a standard measure of the number of repetitive actions in a particular time." []
 comment: "A unit which is a standard measure of the number of repetitive actions in a particular time." [NIST:NIST]
-is_a: BAO_0000077 ! unit of measurement
 is_a: UO:0000000 ! unit
 
 [Term]
@@ -3194,7 +3434,6 @@ name: dimensionless unit
 namespace: unit.ontology
 def: "A unit which is a standard measure of physical quantity consisting of only a numerical number without any units." []
 comment: "A unit which is a standard measure of physical quantity consisting of only a numerical number without any units." [Wikipedia:Wikipedia]
-is_a: BAO_0000077 ! unit of measurement
 is_a: UO:0000000 ! unit
 
 [Term]
@@ -5419,6 +5658,10 @@ id: UO:1010060
 name: gray per minute based unit
 is_a: UO:0000129 ! absorbed dose unit
 
+[Term]
+id: XCO:0000000
+is_a: SIO:000000 ! entity
+
 [Typedef]
 id: BFO:0000050
 name: part of
@@ -5495,4 +5738,138 @@ def: "A mereological relationship or a topological relationship" []
 [Typedef]
 id: RO:0002502
 name: depends on
+
+[Typedef]
+id: SIO:000001
+name: is related to
+domain: SIO:000000 ! entity
+range: SIO:000000 ! entity
+is_symmetric: true
+
+[Typedef]
+id: SIO:000008
+name: has attribute
+domain: SIO:000000 ! entity
+is_a: SIO:000001 ! is related to
+inverse_of: SIO:000011 ! is attribute of
+
+[Typedef]
+id: SIO:000011
+name: is attribute of
+is_a: SIO:000001 ! is related to
+
+[Typedef]
+id: SIO:000028
+name: has part
+is_reflexive: true
+is_transitive: true
+is_a: SIO:000145 ! is location of
+inverse_of: SIO:000068 ! is part of
+
+[Typedef]
+id: SIO:000059
+name: has member
+domain: SIO:000616 ! collection
+is_a: SIO:000008 ! has attribute
+inverse_of: SIO:000095 ! is member of
+
+[Typedef]
+id: SIO:000061
+name: is located in
+is_transitive: true
+is_a: SIO:000322 ! is spatiotemporally related to
+inverse_of: SIO:000145 ! is location of
+
+[Typedef]
+id: SIO:000068
+name: is part of
+is_reflexive: true
+is_transitive: true
+is_a: SIO:000061 ! is located in
+
+[Typedef]
+id: SIO:000095
+name: is member of
+is_a: SIO:000011 ! is attribute of
+
+[Typedef]
+id: SIO:000145
+name: is location of
+is_transitive: true
+is_a: SIO:000322 ! is spatiotemporally related to
+
+[Typedef]
+id: SIO:000215
+name: is measurement value of
+domain: SIO:000070 ! measurement value
+is_a: SIO:000011 ! is attribute of
+inverse_of: SIO:000216 ! has measurement value
+
+[Typedef]
+id: SIO:000216
+name: has measurement value
+range: SIO:000070 ! measurement value
+is_a: SIO:000008 ! has attribute
+
+[Typedef]
+id: SIO:000221
+name: has unit
+domain: SIO:000075 ! mathematical entity
+range: SIO:000074 ! unit of measurement
+is_functional: true
+is_a: SIO:000008 ! has attribute
+inverse_of: SIO:000222 ! is unit of
+
+[Typedef]
+id: SIO:000222
+name: is unit of
+domain: SIO:000074 ! unit of measurement
+is_a: SIO:000011 ! is attribute of
+
+[Typedef]
+id: SIO:000243
+name: is causally related with
+is_symmetric: true
+is_transitive: true
+is_a: SIO:000322 ! is spatiotemporally related to
+
+[Typedef]
+id: SIO:000244
+name: is derived from
+is_transitive: true
+is_a: SIO:000352 ! is causally related from
+inverse_of: SIO:000245 ! derives into
+
+[Typedef]
+id: SIO:000245
+name: derives into
+domain: SIO:000776 ! object
+range: SIO:000776 ! object
+is_transitive: true
+is_a: SIO:000294 ! is causally related to
+
+[Typedef]
+id: SIO:000294
+name: is causally related to
+is_a: SIO:000243 ! is causally related with
+inverse_of: SIO:000352 ! is causally related from
+
+[Typedef]
+id: SIO:000322
+name: is spatiotemporally related to
+is_symmetric: true
+is_a: SIO:000001 ! is related to
+
+[Typedef]
+id: SIO:000325
+name: overlaps with
+is_reflexive: true
+is_symmetric: true
+is_a: SIO:000322 ! is spatiotemporally related to
+transitive_over: SIO:000068 ! is part of
+
+[Typedef]
+id: SIO:000352
+name: is causally related from
+is_a: SIO:000243 ! is causally related with
 

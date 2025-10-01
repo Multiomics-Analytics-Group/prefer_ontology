@@ -131,11 +131,11 @@ domain: PREFER:0000037 ! feed
 range: PREFER:0000189 ! feed profile 
 
 [Typedef]
-id: PREFER_RE:cultures_strain
-name: cultures strain
-def: "A relation indicating the strain culture in a fermentation run." [PREFER]
+id: PREFER_RE:cultures_cell
+name: cultures cell
+def: "A relation indicating the cell culture in a fermentation run." [PREFER]
 domain: PREFER:0000004 ! fermentation run
-range: PREFER:0000012 ! strain
+range: PREFER:0000012 ! cell biocatalyst
 
 [Typedef]
 id: PREFER_RE:has_collected
@@ -171,6 +171,13 @@ name: has cultured type
 def: "" [PREFER]
 domain: fermentation culture
 range: fermentation culture type
+
+[Typedef]
+id: is_cell_culture_type
+name: is_cell_culture_type
+def: "" [PREFER]
+domain: cell biocatalyst
+range: cell culture type
 
 
 
