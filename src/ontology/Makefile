@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                363aad4c9a9a7767f420b0cdc2883e85f629f2732319a6e07ee61718d3429529
+CONFIG_HASH=                f9944880a9c2f2a5a4c496429a1fe57a0b0ac458d52b38e77de460f9d0469c3f
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro chebi bao uo
+IMPORTS =  ro chebi bao uo sio
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -466,7 +466,7 @@ endif
 .PHONY: mirror-bao
 .PRECIOUS: $(MIRRORDIR)/bao.owl
 mirror-bao: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.bioassayontology.org/bao/bao_complete.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I http://www.bioassayontology.org/bao/bao_complete.owl --base-iri http://purl.obolibrary.org/obo/BAO  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: uo
@@ -475,6 +475,13 @@ mirror-bao: | $(TMPDIR)
 mirror-uo: | $(TMPDIR)
 	curl -L $(OBOBASE)/uo.owl --create-dirs -o $(TMPDIR)/uo-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) remove -i $(TMPDIR)/uo-download.owl --base-iri http://purl.obolibrary.org/obo/UO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: sio
+.PHONY: mirror-sio
+.PRECIOUS: $(MIRRORDIR)/sio.owl
+mirror-sio: | $(TMPDIR)
+	$(ROBOT) remove -I http://semanticscience.org/ontology/sio.owl --base-iri http://semanticscience.org/resource/SIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true
