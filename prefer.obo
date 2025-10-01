@@ -57,22 +57,34 @@ relationship: PREFER_RE:has_measured_compound CHEBI:24431 ! chemical entity
 relationship: PREFER_RE:has_collected PREFER:0000018 ! offline sample
 
 [Term]
-id: PREFER:0000008
+id: PREFER:0000005
 name: cultivation condition
-def: "An environmental setting or an initial experimental condition related to inoculation established prior to or at the start of a fermentation process." [PREFER]
-comment: "This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture."
-synonym: "environmental setting" RELATED []
-synonym: "incoulation condition" RELATED []
+def: ""
+synonym: "fermentation condition" BROADER [DOI: 10.15252/embr.202152680]
+xref: EDAM:3724 ! cultivation parameter {source="Ontology of data analysis and management"}
+is_a: XCO:0000000 ! experimental condition {source="Experimental Condition Ontology"}
+relationship: has_part PREFER:0000006 ! operational parameter
+
+[Term]
+id: PREFER:0000006
+name: operational parameter
+!def: "An environmental setting or an initial experimental condition related to inoculation established prior to the start of a fermentation process." [PREFER]
+!comment: "This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture."
+def: "An operational setting related to the operational mode of the bioreactor and the type of fermentation or cultivation carried out." [PREFER]
+comment: "Such as dissolved oxygen (DO) control setpoints and feeding strategies." [PREFER]
+synonym: "operational setting" RELATED []
+synonym: "bioreactor control setting" RELATED []
 synonym: "target variable" RELATED []
 synonym: "reference value" RELATED []
 synonym: "setpoint value" RELATED []
-xref: EDAM:3724 ! cultivation parameter {source="Ontology of data analysis and management"}
+synonym: "setting" RELATED [AFR:0001505]
+synonym: "parameter" RELATED [NCIT:C44175, REPR:Parameter]
+xref: REPR:InstrumentSetting ! instrument setting
 xref: AFO_/property#AFX:0001732 ! reference value {source="Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"}
-is_a: XCO:0000000 ! experimental condition {source="Experimental Condition Ontology"}
-relationship: has_part PREFER:0000015 ! operational parameter
+
 
 [Term]
-id: PREFER:0000009
+id: PREFER:0000007
 name: process variable
 def: "A technical parameter measured during a bioprocess, either through real-time (online, inline) or delayed (offline, atline) measurements, depending on the bioreactor setup. These variables are typically time-series data and are crucial for controlling and adjusting the initial parameters from cultivation conditions." [PREFER]
 comment: "These data typically include compound groups categorized as substrates, products, by-products, and chemical ingredients from the medium."
@@ -88,8 +100,8 @@ xref: BAO:0002070 ! measured value
 [Term]
 id: CHEBI:24431 
 name: chemical entity
-synonym: "compound" EXACT []
 def:  "A chemical substance produced or consumed, whose concentration is monitored during the course of the fermentation, typically by withdrawing samples from the culture broth and measuring it using offline instrumentation, such as High-Performance Liquid Chromatography (HPLC)." [PREFER]
+synonym: "compound" EXACT []
 !*************
 
 [Term]
@@ -140,15 +152,6 @@ relationship: PREFER_RE:has_operational_mode PREFER:0000184 ! continuous-turbido
 relationship: PREFER_RE:has_scale PREFER:0000186 ! lab-scale
 relationship: PREFER_RE:has_scale PREFER:0000187 ! pilot-scale
 relationship: PREFER_RE:has_scale PREFER:0000188 ! industrial-scale
-
-[Term]
-id: PREFER:0000015
-name: operational parameter
-def: "An operational setting related to the operational mode of the bioreactor and the type of fermentation or cultivation carried out." [PREFER]
-comment: "Such as dissolved oxygen (DO) control setpoints and feeding strategies." [PREFER]
-synonym: "setting" RELATED [AFR:0001505]
-synonym: "parameter" RELATED [NCIT:C44175, REPR:Parameter]
-xref: REPR:InstrumentSetting ! instrument setting
 
 [Term]
 id: PREFER:0000016
@@ -218,12 +221,13 @@ id: PREFER:0000010
 name: fermentation culture
 def: "Cultured cell population." [PREFER, OBI]
 synonym: "initial culture" EXACT []
-synonym: "starter culture" EXACT []
+synonym: "starter culture" EXACT [ONS:0000158]
 synonym: "inoculum culture" EXACT []
 synonym: "culture" BROAD [ENVO:03600040]
 synonym: "cell culture" BROAD [OBI:0001876]
 synonym: "pre-culture" BROAD []
 synonym: "stock culture" BROAD []
+synonym: "microbial inoculum" BROAD [ONS:0000125]
 synonym: "cell culture sample" NARROW [OBI:0100060]
 xref: OBI:0100060 ! cultured cell population
 property_value: http://purl.obolibrary.org/obo/prefer/culture_id " " xsd:string
