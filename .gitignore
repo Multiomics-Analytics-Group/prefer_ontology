@@ -67,6 +67,11 @@ src/patterns/pattern_owl_seed.txt
 src/patterns/all_pattern_terms.txt
 
 # End of ODK-managed rules
+
+# These are my custom lines
+notes.txt
+# End of custom lines
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -230,9 +235,4 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# These are my custom lines
-doubts.txt
-prefer_report.tsv
-external_ontologies/
-prefer_protege.obo
 
