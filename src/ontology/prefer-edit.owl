@@ -239,6 +239,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_cu
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_bioreactor>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002536/PREFER_7747cc8e_ff0a_4377_a863_ea40712a994a>))
 Declaration(ObjectProperty(prefer1:has_part))
 Declaration(ObjectProperty(prefer1:has_unit))
 Declaration(ObjectProperty(prefer1:part_of))
@@ -269,7 +271,7 @@ Declaration(AnnotationProperty(rdfs:label))
 #   Annotation Properties
 ############################
 
-# Annotation Property: obo:IAO_0000115 (textual definition)
+# Annotation Property: obo:IAO_0000115 (definition)
 
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
@@ -277,15 +279,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (alternative_term)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -305,6 +307,19 @@ AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:id "id")
 
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> (<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit>)
+
+EquivalentObjectProperties(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> <http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78> (measurement property has unit)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78> "measurement property has unit"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78> <http://purl.obolibrary.org/obo/PREFER_RE_#has_unit>)
 
 
 
@@ -742,7 +757,7 @@ SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "REFER") obo:IAO_0000115 obo:PREFER_0000040 "Bioreactor Potential of Hydrogen (pH) reading.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000040 "NCIT:C205029")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000040 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000040 "PREFER:0000040")
+AnnotationAssertion(oboInOwl:id obo:PREFER_0000040 <https://w3id.org/uom/ph>)
 AnnotationAssertion(rdfs:label obo:PREFER_0000040 "pH measurement")
 SubClassOf(obo:PREFER_0000040 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
