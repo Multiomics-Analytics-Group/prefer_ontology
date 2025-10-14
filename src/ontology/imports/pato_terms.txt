@@ -1,1 +1,1 @@
-PATO:0001842 #acidity
+PATO:0001842 # acidity
