@@ -11,6 +11,10 @@ export_formats:
   - owl
   - obo
   - json
+sssom_mappingset_group:
+  products:
+    - id: prefer-external
+      maintainance: manual
 import_group:
   use_base_merging: TRUE
   products:
@@ -26,6 +30,8 @@ import_group:
         - http://www.bioassayontology.org/
     - id: uo
       make_base: TRUE
+    - id: pato
+      use_base: TRUE
     - id: sio
       mirror_from: http://semanticscience.org/ontology/sio.owl
       make_base: TRUE

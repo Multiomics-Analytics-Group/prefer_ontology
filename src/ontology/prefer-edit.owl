@@ -418,16 +418,13 @@ SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000202))
 SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000203))
 
-# Class: obo:PREFER_0000011 (medium)
+# Class: obo:PREFER_0000011 (fermentation medium)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000011 "An aqueous solution containing macronutrients, micronutrients and buffering agents.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000011 "BAO:0000114")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000011 "EFO:0000579")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000011 "OBI:0000079")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000079") oboInOwl:hasExactSynonym obo:PREFER_0000011 "culture medium")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000011 "An aqueous solution used for ferementation containing macronutrients, micronutrients and buffering agents.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000011 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000011 "PREFER:0000011")
-AnnotationAssertion(rdfs:label obo:PREFER_0000011 "medium")
+AnnotationAssertion(rdfs:label obo:PREFER_0000011 "fermentation medium")
+EquivalentClasses(obo:PREFER_0000011 ObjectIntersectionOf(<http://www.bioassayontology.org/bao#BAO_0000596> ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000004)))
 SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_ingredient> obo:CHEBI_24431))
 
 # Class: obo:PREFER_0000012 (cell biocatalyst)
@@ -710,19 +707,15 @@ SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000194))
 SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000195))
 
-# Class: obo:PREFER_0000038 (pH)
+# Class: obo:PREFER_0000038 (fermentation medium pH)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000038 "The negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000038 "NCIT:C45997")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000038 "UO:0000196")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000038 "PH")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000038 "ph")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000038 "potential of Hydrogen")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000038 "potential of hydrogen")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000038 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
-AnnotationAssertion(rdfs:label obo:PREFER_0000038 "pH")
+AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH")
+EquivalentClasses(obo:PREFER_0000038 ObjectIntersectionOf(obo:PATO_0001842 ObjectSomeValuesFrom(obo:RO_0000052 obo:PREFER_0000011)))
 SubClassOf(obo:PREFER_0000038 obo:PREFER_0000008)
+SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
 # Class: obo:PREFER_0000039 (DO measurement)
 
