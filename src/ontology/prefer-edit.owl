@@ -234,17 +234,15 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_medium
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_scale>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_bioreactor>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002536/PREFER_7747cc8e_ff0a_4377_a863_ea40712a994a>))
 Declaration(ObjectProperty(prefer1:has_part))
 Declaration(ObjectProperty(prefer1:has_unit))
 Declaration(ObjectProperty(prefer1:part_of))
 Declaration(ObjectProperty(prefer1:refers_to_variable))
+Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:dc_creator))
 Declaration(AnnotationProperty(obo:dc_description))
@@ -312,14 +310,9 @@ AnnotationAssertion(rdfs:label oboInOwl:id "id")
 #   Object Properties
 ############################
 
-# Object Property: <http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> (<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit>)
+# Object Property: <http://www.bioassayontology.org/bao#BAO_0002874> (has unit)
 
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> <http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78>)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78> (measurement property has unit)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78> "measurement property has unit"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002536/PREFER_41a21baf_dcf7_4a1f_9a36_e394cee3ec78> <http://purl.obolibrary.org/obo/PREFER_RE_#has_unit>)
+SubObjectPropertyOf(<http://www.bioassayontology.org/bao#BAO_0002874> <http://www.bioassayontology.org/bao#BAO_0002874>)
 
 
 
@@ -539,9 +532,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000019 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000019 "PREFER:0000019")
 AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint")
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000027))
-SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000195))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000041))
+SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000027))
+SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000195))
 
 # Class: obo:PREFER_0000020 (pH setpoint)
 
@@ -555,9 +548,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000020 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000020 "PREFER:0000020")
 AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint")
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000196))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000038))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000040))
+SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
 # Class: obo:PREFER_0000021 (pH base solution)
 
@@ -586,9 +579,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000025 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000025 "PREFER:0000025")
 AnnotationAssertion(rdfs:label obo:PREFER_0000025 "DO setpoint")
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000033))
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000026 (DO cascade level)
 
@@ -610,9 +603,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000027 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000027 "PREFER:0000027")
 AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint")
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:NCIT_C70469))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(prefer1:refers_to_variable obo:PREFER_0000026))
+SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000028 (minimum stirring setpoint)
 
@@ -625,9 +618,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000028 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000028 "PREFER:0000028")
 AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint")
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:NCIT_C70469))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(prefer1:refers_to_variable obo:PREFER_0000026))
+SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000030 (aeration gas type)
 
@@ -646,9 +639,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000031 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000031 "PREFER:0000031")
 AnnotationAssertion(rdfs:label obo:PREFER_0000031 "maximum aeration setpoint")
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000172))
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000030))
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000055))
+SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000032 (minimum aeration setpoint)
 
@@ -658,9 +651,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000032 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000032 "PREFER:0000032")
 AnnotationAssertion(rdfs:label obo:PREFER_0000032 "minimum aeration setpoint")
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000172))
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000030))
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000055))
+SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000033 (DO)
 
@@ -681,8 +674,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000034 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000034 "PREFER:0000034")
 AnnotationAssertion(rdfs:label obo:PREFER_0000034 "starting OD")
 SubClassOf(obo:PREFER_0000034 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:NCIT_C73681))
 SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000035 (final seed OD)
 
@@ -692,9 +685,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000035 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000035 "PREFER:0000035")
 AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed OD")
 SubClassOf(obo:PREFER_0000035 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:NCIT_C73681))
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000010))
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000036 (initial culture volume)
 
@@ -706,9 +699,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000036 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000036 "PREFER:0000036")
 AnnotationAssertion(rdfs:label obo:PREFER_0000036 "initial culture volume")
 SubClassOf(obo:PREFER_0000036 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000098))
-SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000099))
 SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_00000XX))
+SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
+SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
 # Class: obo:PREFER_0000037 (feed)
 
@@ -749,8 +742,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000039 "DO measurement")
 SubClassOf(obo:PREFER_0000039 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
 SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000033))
+SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000040 (pH measurement)
 
@@ -762,8 +755,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000040 "pH measurement")
 SubClassOf(obo:PREFER_0000040 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000196))
 SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000038))
+SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
 # Class: obo:PREFER_0000041 (temperature measurement)
 
@@ -774,8 +767,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000041 "temperature measurement")
 SubClassOf(obo:PREFER_0000041 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000027))
-SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000195))
+SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000027))
+SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000195))
 
 # Class: obo:PREFER_0000042 (pressure measurement)
 
@@ -786,8 +779,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000042 "pressure measurement")
 SubClassOf(obo:PREFER_0000042 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_BAR))
-SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000110))
+SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_BAR))
+SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000110))
 
 # Class: obo:PREFER_0000043 (volume measurement)
 
@@ -798,8 +791,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000043 "volume measurement")
 SubClassOf(obo:PREFER_0000043 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000098))
-SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000099))
+SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
+SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
 # Class: obo:PREFER_0000044 (sample mass)
 
@@ -809,9 +802,9 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000044 "PREFER:0000044")
 AnnotationAssertion(rdfs:label obo:PREFER_0000044 "sample mass")
 SubClassOf(obo:PREFER_0000044 obo:PREFER_0000018)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000154))
-SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
-SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000022))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_00000XX))
+SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000022))
 
 # Class: obo:PREFER_0000047 (acid volume)
 
@@ -826,9 +819,9 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000047 "acid volume")
 SubClassOf(obo:PREFER_0000047 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000098))
-SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000099))
 SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000040))
+SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
+SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
 # Class: obo:PREFER_0000048 (base volume)
 
@@ -843,9 +836,9 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000048 "base volume")
 SubClassOf(obo:PREFER_0000048 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000098))
-SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000099))
 SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000040))
+SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
+SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
 # Class: obo:PREFER_0000049 (acid rate)
 
@@ -856,8 +849,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000049 "acid rate")
 SubClassOf(obo:PREFER_0000049 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000167))
 SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000040))
+SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000167))
 
 # Class: obo:PREFER_0000050 (base rate)
 
@@ -868,8 +861,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000050 "base rate")
 SubClassOf(obo:PREFER_0000050 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000167))
 SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000040))
+SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000167))
 
 # Class: obo:PREFER_0000051 (feed amount)
 
@@ -880,9 +873,9 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000051 "feed amount")
 SubClassOf(obo:PREFER_0000051 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000009))
-SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
 SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000037))
+SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000009))
+SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000052 (feed volume)
 
@@ -893,9 +886,9 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000052 "feed volume")
 SubClassOf(obo:PREFER_0000052 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000098))
-SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000099))
 SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000037))
+SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
+SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
 # Class: obo:PREFER_0000053 (feed rate volumetric)
 
@@ -906,8 +899,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000053 "feed rate volumetric")
 SubClassOf(obo:PREFER_0000053 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000167))
 SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000037))
+SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000167))
 
 # Class: obo:PREFER_0000054 (stirrer speed)
 
@@ -918,8 +911,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000054 "stirrer speed")
 SubClassOf(obo:PREFER_0000054 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:NCIT_C70469))
 SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000055 (air flow)
 
@@ -930,8 +923,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000055 "air flow")
 SubClassOf(obo:PREFER_0000055 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000172))
 SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000056 (nitrogen flow)
 
@@ -942,8 +935,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000056 "nitrogen flow")
 SubClassOf(obo:PREFER_0000056 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000172))
 SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000057 (oxygen flow)
 
@@ -954,8 +947,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000057 "oxygen flow")
 SubClassOf(obo:PREFER_0000057 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000172))
 SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000058 (inlet air o2)
 
@@ -967,8 +960,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000058 "inlet air o2")
 SubClassOf(obo:PREFER_0000058 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
 SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000059 (inlet air co2)
 
@@ -980,8 +973,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000059 "inlet air co2")
 SubClassOf(obo:PREFER_0000059 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
 SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000040))
+SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000060 (OD measurement)
 
@@ -992,7 +985,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000060 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000060 "PREFER:0000060")
 AnnotationAssertion(rdfs:label obo:PREFER_0000060 "OD measurement")
 SubClassOf(obo:PREFER_0000060 obo:PREFER_0000018)
-SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:NCIT_C73681))
+SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000061 (OUR)
 
@@ -1006,7 +999,7 @@ SubClassOf(obo:PREFER_0000061 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000061 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000171))
+SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000171))
 
 # Class: obo:PREFER_0000062 (CER)
 
@@ -1020,7 +1013,7 @@ SubClassOf(obo:PREFER_0000062 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000062 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000171))
+SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000171))
 
 # Class: obo:PREFER_0000063 (OTR)
 
@@ -1030,7 +1023,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000063 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000063 "PREFER:0000063")
 AnnotationAssertion(rdfs:label obo:PREFER_0000063 "OTR")
 SubClassOf(obo:PREFER_0000063 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000064 (CTR)
 
@@ -1041,7 +1034,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "\"Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.\" [PREFER]")
 AnnotationAssertion(rdfs:label obo:PREFER_0000064 "CTR")
 SubClassOf(obo:PREFER_0000064 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000065 (RQ)
 
@@ -1051,7 +1044,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000065 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000065 "PREFER:0000065")
 AnnotationAssertion(rdfs:label obo:PREFER_0000065 "RQ")
 SubClassOf(obo:PREFER_0000065 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000066 (produced co2)
 
@@ -1063,7 +1056,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000066 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000066 "PREFER:0000066")
 AnnotationAssertion(rdfs:label obo:PREFER_0000066 "produced co2")
 SubClassOf(obo:PREFER_0000066 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000066 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000066 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_0000067 (consumed co2)
 
@@ -1073,7 +1066,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000067 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000067 "PREFER:0000067")
 AnnotationAssertion(rdfs:label obo:PREFER_0000067 "consumed co2")
 SubClassOf(obo:PREFER_0000067 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000067 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000067 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_0000068 (offgas co2)
 
@@ -1085,7 +1078,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000068 "offgas co2")
 SubClassOf(obo:PREFER_0000068 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
+SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000069 (offgas o2)
 
@@ -1097,7 +1090,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000069 "offgas o2")
 SubClassOf(obo:PREFER_0000069 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
+SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000070 (gas concentration)
 
@@ -1108,7 +1101,7 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000070 "\"Gases such as O2 and CO2 
 AnnotationAssertion(rdfs:label obo:PREFER_0000070 "gas concentration")
 SubClassOf(obo:PREFER_0000070 obo:PREFER_0000018)
 SubClassOf(obo:PREFER_0000070 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000154))
-SubClassOf(obo:PREFER_0000070 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000175))
+SubClassOf(obo:PREFER_0000070 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000175))
 
 # Class: obo:PREFER_0000071 (biomass concentration)
 
@@ -1118,7 +1111,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000071 "PREFER:0000071")
 AnnotationAssertion(rdfs:label obo:PREFER_0000071 "biomass concentration")
 SubClassOf(obo:PREFER_0000071 obo:PREFER_0000018)
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000154))
-SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000175))
+SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000175))
 
 # Class: obo:PREFER_0000075 (feed rate gravimetric)
 
@@ -1130,8 +1123,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000075 "feed rate gravimetric")
 SubClassOf(obo:PREFER_0000075 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode> obo:PREFER_0000152))
-SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:SNOMED_414559001))
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000037))
+SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:SNOMED_414559001))
 
 # Class: obo:PREFER_0000077 (dilution rate)
 
@@ -1142,7 +1135,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000077 "\"Rate expressed in reciprocal hours (h⁻¹ or 1/h).\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution rate")
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_PER-HR))
+SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_PER-HR))
 
 # Class: obo:PREFER_0000078 (carbon balance)
 
@@ -1152,7 +1145,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000078 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000078 "PREFER:0000078")
 AnnotationAssertion(rdfs:label obo:PREFER_0000078 "carbon balance")
 SubClassOf(obo:PREFER_0000078 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
+SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols)
 
@@ -1162,7 +1155,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000079 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000079 "PREFER:0000079")
 AnnotationAssertion(rdfs:label obo:PREFER_0000079 "carbon balance using carbon mols")
 SubClassOf(obo:PREFER_0000079 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000080 (carbon balance with reference to substrate)
 
@@ -1172,7 +1165,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000080 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000080 "PREFER:0000080")
 AnnotationAssertion(rdfs:label obo:PREFER_0000080 "carbon balance with reference to substrate")
 SubClassOf(obo:PREFER_0000080 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000081 (degree of reduction balance)
 
@@ -1182,7 +1175,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000081 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000081 "PREFER:0000081")
 AnnotationAssertion(rdfs:label obo:PREFER_0000081 "degree of reduction balance")
 SubClassOf(obo:PREFER_0000081 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000187))
+SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000082 (degree of reduction yields)
 
@@ -1192,7 +1185,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000082 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000082 "PREFER:0000082")
 AnnotationAssertion(rdfs:label obo:PREFER_0000082 "degree of reduction yields")
 SubClassOf(obo:PREFER_0000082 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000082 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000082 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000083 (substrate consumed)
 
@@ -1201,9 +1194,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000083 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000083 "PREFER:0000083")
 AnnotationAssertion(rdfs:label obo:PREFER_0000083 "substrate consumed")
 SubClassOf(obo:PREFER_0000083 obo:PREFER_00000XX)
-SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000168))
-SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
-SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000168))
+SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000087 (substrate uptake rate)
 
@@ -1213,8 +1206,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000087 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000087 "PREFER:0000087")
 AnnotationAssertion(rdfs:label obo:PREFER_0000087 "substrate uptake rate")
 SubClassOf(obo:PREFER_0000087 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000169))
-SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000169))
+SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000089 (specific substrate uptake rate)
 
@@ -1223,8 +1216,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000089 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000089 "PREFER:0000089")
 AnnotationAssertion(rdfs:label obo:PREFER_0000089 "specific substrate uptake rate")
 SubClassOf(obo:PREFER_0000089 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000173))
-SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000174))
+SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000173))
+SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000174))
 
 # Class: obo:PREFER_0000091 (average specific substrate uptake rate in feed phase)
 
@@ -1233,7 +1226,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000091 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000091 "PREFER:0000091")
 AnnotationAssertion(rdfs:label obo:PREFER_0000091 "average specific substrate uptake rate in feed phase")
 SubClassOf(obo:PREFER_0000091 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000091 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000174))
+SubClassOf(obo:PREFER_0000091 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000174))
 
 # Class: obo:PREFER_0000092 (maximum specific substrate uptake rate in feed phase)
 
@@ -1242,7 +1235,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000092 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000092 "PREFER:0000092")
 AnnotationAssertion(rdfs:label obo:PREFER_0000092 "maximum specific substrate uptake rate in feed phase")
 SubClassOf(obo:PREFER_0000092 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000092 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000174))
+SubClassOf(obo:PREFER_0000092 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000174))
 
 # Class: obo:PREFER_0000093 (minimum specific substrate uptake rate in feed phase)
 
@@ -1251,7 +1244,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000093 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000093 "PREFER:0000093")
 AnnotationAssertion(rdfs:label obo:PREFER_0000093 "minimum specific substrate uptake rate in feed phase")
 SubClassOf(obo:PREFER_0000093 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000093 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000174))
+SubClassOf(obo:PREFER_0000093 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000174))
 
 # Class: obo:PREFER_0000094 (substrate yield (X))
 
@@ -1260,9 +1253,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000094 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000094 "PREFER:0000094")
 AnnotationAssertion(rdfs:label obo:PREFER_0000094 "substrate yield (X)")
 SubClassOf(obo:PREFER_0000094 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000161))
-SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000163))
-SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000161))
+SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000163))
+SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
 
 # Class: obo:PREFER_0000097 (o2 decimal)
 
@@ -1271,7 +1264,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000097 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000097 "PREFER:0000097")
 AnnotationAssertion(rdfs:label obo:PREFER_0000097 "o2 decimal")
 SubClassOf(obo:PREFER_0000097 obo:PREFER_0000018)
-SubClassOf(obo:PREFER_0000097 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000097 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000098 (oxygen partial integration)
 
@@ -1280,7 +1273,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000098 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000098 "PREFER:0000098")
 AnnotationAssertion(rdfs:label obo:PREFER_0000098 "oxygen partial integration")
 SubClassOf(obo:PREFER_0000098 obo:PREFER_0000018)
-SubClassOf(obo:PREFER_0000098 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000098 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000099 (oxygen accumulated)
 
@@ -1289,7 +1282,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000099 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000099 "PREFER:0000099")
 AnnotationAssertion(rdfs:label obo:PREFER_0000099 "oxygen accumulated")
 SubClassOf(obo:PREFER_0000099 obo:PREFER_0000018)
-SubClassOf(obo:PREFER_0000099 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000099 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000100 (oxygen accumulated downscaled)
 
@@ -1298,7 +1291,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000100 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000100 "PREFER:0000100")
 AnnotationAssertion(rdfs:label obo:PREFER_0000100 "oxygen accumulated downscaled")
 SubClassOf(obo:PREFER_0000100 obo:PREFER_0000018)
-SubClassOf(obo:PREFER_0000100 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000100 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_0000101 (oxygen (Q))
 
@@ -1308,7 +1301,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000101 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000101 "PREFER:0000101")
 AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen (Q)")
 SubClassOf(obo:PREFER_0000101 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000167))
+SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000167))
 
 # Class: obo:PREFER_0000102 (oxygen molar)
 
@@ -1317,7 +1310,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000102 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000102 "PREFER:0000102")
 AnnotationAssertion(rdfs:label obo:PREFER_0000102 "oxygen molar")
 SubClassOf(obo:PREFER_0000102 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000102 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000102 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000103 (specific oxygen uptake rate)
 
@@ -1326,7 +1319,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000103 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000103 "PREFER:0000103")
 AnnotationAssertion(rdfs:label obo:PREFER_0000103 "specific oxygen uptake rate")
 SubClassOf(obo:PREFER_0000103 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000103 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000173))
+SubClassOf(obo:PREFER_0000103 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000173))
 
 # Class: obo:PREFER_0000104 (oxygen yield (S))
 
@@ -1336,8 +1329,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000104 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000104 "PREFER:0000104")
 AnnotationAssertion(rdfs:label obo:PREFER_0000104 "oxygen yield (S)")
 SubClassOf(obo:PREFER_0000104 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000165))
-SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000176))
+SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000176))
 
 # Class: obo:PREFER_0000106 (oxygen yield (X))
 
@@ -1347,7 +1340,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000106 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000106 "PREFER:0000106")
 AnnotationAssertion(rdfs:label obo:PREFER_0000106 "oxygen yield (X)")
 SubClassOf(obo:PREFER_0000106 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000106 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_0000106 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
 
 # Class: obo:PREFER_0000107 (compound produced)
 
@@ -1356,9 +1349,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000107 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000107 "PREFER:0000107")
 AnnotationAssertion(rdfs:label obo:PREFER_0000107 "compound produced")
 SubClassOf(obo:PREFER_0000107 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000168))
-SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
-SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000168))
+SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000111 (residual compound amount)
 
@@ -1367,7 +1360,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000111 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000111 "PREFER:0000111")
 AnnotationAssertion(rdfs:label obo:PREFER_0000111 "residual compound amount")
 SubClassOf(obo:PREFER_0000111 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000113 (compound production rate)
 
@@ -1377,8 +1370,8 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound form
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000113 "PREFER:0000113")
 AnnotationAssertion(rdfs:label obo:PREFER_0000113 "compound production rate")
 SubClassOf(obo:PREFER_0000113 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000169))
-SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000169))
+SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000115 (specific compound production rate)
 
@@ -1398,9 +1391,9 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000117 "PREFER:0000117")
 AnnotationAssertion(oboInOwl:synoymn obo:PREFER_0000117 "\"compound yield (S)\" EXACT []")
 AnnotationAssertion(rdfs:label obo:PREFER_0000117 "compound yield (substrate)")
 SubClassOf(obo:PREFER_0000117 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000161))
-SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000162))
-SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000163))
+SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000161))
+SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000162))
+SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000163))
 
 # Class: obo:PREFER_0000120 (compound yield (biomass))
 
@@ -1411,9 +1404,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000120 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000120 "PREFER:0000120")
 AnnotationAssertion(rdfs:label obo:PREFER_0000120 "compound yield (biomass)")
 SubClassOf(obo:PREFER_0000120 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000161))
-SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000163))
-SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000161))
+SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000163))
+SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
 
 # Class: obo:PREFER_0000123 (carbon dioxide decimal)
 
@@ -1423,7 +1416,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000123 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000123 "PREFER:0000123")
 AnnotationAssertion(rdfs:label obo:PREFER_0000123 "carbon dioxide decimal")
 SubClassOf(obo:PREFER_0000123 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000123 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000123 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000124 (carbon dioxide molar)
 
@@ -1433,7 +1426,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000124 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000124 "PREFER:0000124")
 AnnotationAssertion(rdfs:label obo:PREFER_0000124 "carbon dioxide molar")
 SubClassOf(obo:PREFER_0000124 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000124 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000124 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000125 (carbon dioxide partial integration)
 
@@ -1443,7 +1436,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000125 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000125 "PREFER:0000125")
 AnnotationAssertion(rdfs:label obo:PREFER_0000125 "carbon dioxide partial integration")
 SubClassOf(obo:PREFER_0000125 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000125 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000125 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000126 (carbon dioxide accumulated)
 
@@ -1453,7 +1446,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000126 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000126 "PREFER:0000126")
 AnnotationAssertion(rdfs:label obo:PREFER_0000126 "carbon dioxide accumulated")
 SubClassOf(obo:PREFER_0000126 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000126 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000189))
+SubClassOf(obo:PREFER_0000126 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000189))
 
 # Class: obo:PREFER_0000127 (carbon dioxide accumulated downscaled)
 
@@ -1463,7 +1456,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000127 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000127 "PREFER:0000127")
 AnnotationAssertion(rdfs:label obo:PREFER_0000127 "carbon dioxide accumulated downscaled")
 SubClassOf(obo:PREFER_0000127 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000127 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000127 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_0000128 (carbon dioxide Q)
 
@@ -1473,7 +1466,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000128 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000128 "PREFER:0000128")
 AnnotationAssertion(rdfs:label obo:PREFER_0000128 "carbon dioxide Q")
 SubClassOf(obo:PREFER_0000128 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000167))
+SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000167))
 
 # Class: obo:PREFER_0000129 (carbon dioxide evolution rate)
 
@@ -1505,8 +1498,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000131 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000131 "PREFER:0000131")
 AnnotationAssertion(rdfs:label obo:PREFER_0000131 "carbon dioxide yield (S)")
 SubClassOf(obo:PREFER_0000131 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000165))
-SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000176))
+SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000176))
 
 # Class: obo:PREFER_0000133 (carbon dioxide yield (X))
 
@@ -1516,7 +1509,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000133 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000133 "PREFER:0000133")
 AnnotationAssertion(rdfs:label obo:PREFER_0000133 "carbon dioxide yield (X)")
 SubClassOf(obo:PREFER_0000133 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000133 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_0000133 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
 
 # Class: obo:PREFER_0000134 (biomass amount)
 
@@ -1525,8 +1518,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000134 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000134 "PREFER:0000134")
 AnnotationAssertion(rdfs:label obo:PREFER_0000134 "biomass amount")
 SubClassOf(obo:PREFER_0000134 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
-SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000136 (biomass lost in sampling)
 
@@ -1535,7 +1528,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000136 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000136 "PREFER:0000136")
 AnnotationAssertion(rdfs:label obo:PREFER_0000136 "biomass lost in sampling")
 SubClassOf(obo:PREFER_0000136 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000136 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000136 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000137 (biomass production)
 
@@ -1545,9 +1538,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000137 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000137 "PREFER:0000137")
 AnnotationAssertion(rdfs:label obo:PREFER_0000137 "biomass production")
 SubClassOf(obo:PREFER_0000137 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000168))
-SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
-SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000021))
+SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000168))
+SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
+SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000140 (biomass production rate)
 
@@ -1559,8 +1552,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000140 "PREFER:0000140")
 AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass production rate")
 SubClassOf(obo:PREFER_0000140 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000175))
-SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000169))
-SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000170))
+SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000169))
+SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000142 (specific growth rate)
 
@@ -1572,7 +1565,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000142 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
 AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific growth rate")
 SubClassOf(obo:PREFER_0000142 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_PER-HR))
+SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_PER-HR))
 
 # Class: obo:PREFER_0000143 (average specific biomass growth rate in feed phase)
 
@@ -1583,7 +1576,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000143 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000143 "PREFER:0000143")
 AnnotationAssertion(rdfs:label obo:PREFER_0000143 "average specific biomass growth rate in feed phase")
 SubClassOf(obo:PREFER_0000143 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000143 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_PER-HR))
+SubClassOf(obo:PREFER_0000143 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_PER-HR))
 
 # Class: obo:PREFER_0000144 (average specific biomass growth rate in batch phase)
 
@@ -1594,7 +1587,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000144 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000144 "PREFER:0000144")
 AnnotationAssertion(rdfs:label obo:PREFER_0000144 "average specific biomass growth rate in batch phase")
 SubClassOf(obo:PREFER_0000144 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000144 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_PER-HR))
+SubClassOf(obo:PREFER_0000144 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_PER-HR))
 
 # Class: obo:PREFER_0000145 (maximum specific biomass growth rate in feed phase)
 
@@ -1605,7 +1598,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000145 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000145 "PREFER:0000145")
 AnnotationAssertion(rdfs:label obo:PREFER_0000145 "maximum specific biomass growth rate in feed phase")
 SubClassOf(obo:PREFER_0000145 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000145 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_PER-HR))
+SubClassOf(obo:PREFER_0000145 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_PER-HR))
 
 # Class: obo:PREFER_0000146 (minimum specific biomass growth rate in feed phase)
 
@@ -1616,7 +1609,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000146 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000146 "PREFER:0000146")
 AnnotationAssertion(rdfs:label obo:PREFER_0000146 "minimum specific biomass growth rate in feed phase")
 SubClassOf(obo:PREFER_0000146 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000146 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:QUDT_PER-HR))
+SubClassOf(obo:PREFER_0000146 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:QUDT_PER-HR))
 
 # Class: obo:PREFER_0000147 (biomass yield (S))
 
@@ -1627,9 +1620,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000147 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000147 "PREFER:0000147")
 AnnotationAssertion(rdfs:label obo:PREFER_0000147 "biomass yield (S)")
 SubClassOf(obo:PREFER_0000147 obo:PREFER_0000156)
-SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000161))
-SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000162))
-SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:PREFER_UNIT_0000163))
+SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000161))
+SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000162))
+SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000163))
 
 # Class: obo:PREFER_0000150 (data acquisition mode)
 
@@ -1965,7 +1958,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000164 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000164 "PREFER_UNIT:0000164")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000164 "carbon mole")
 SubClassOf(obo:PREFER_UNIT_0000164 obo:CHEBI_64708)
-SubClassOf(obo:PREFER_UNIT_0000164 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_unit> obo:UO_0000013))
+SubClassOf(obo:PREFER_UNIT_0000164 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_UNIT_0000165 (mole per carbon mole)
 
