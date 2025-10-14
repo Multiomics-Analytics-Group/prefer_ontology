@@ -306,14 +306,6 @@ AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 AnnotationAssertion(rdfs:label oboInOwl:id "id")
 
 
-############################
-#   Object Properties
-############################
-
-# Object Property: <http://www.bioassayontology.org/bao#BAO_0002874> (has unit)
-
-SubObjectPropertyOf(<http://www.bioassayontology.org/bao#BAO_0002874> <http://www.bioassayontology.org/bao#BAO_0002874>)
-
 
 
 ############################
