@@ -12,8 +12,7 @@ Prefix(prefer1:=<http://purl.obolibrary.org/obo/prefer.obo#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/prefer.obo.owl>
-<http://purl.obolibrary.org/obo/prefer.obo/prefer/releases/v0_2025-08-28/prefer.obo.owl>
+Ontology(<http://purl.obolibrary.org/obo/prefer.owl>
 Import(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>)
 Annotation(dc:description "An ontology for PREcision FERmentation.")
 Annotation(dc:title "PREFER Ontology")
