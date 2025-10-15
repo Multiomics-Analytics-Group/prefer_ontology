@@ -220,6 +220,8 @@ Declaration(Class(obo:XCO_0000000))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001050>))
 Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0003118>))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_cultivation_condition>))
@@ -237,8 +239,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_cu
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_bioreactor>))
-Declaration(ObjectProperty(prefer1:has_part))
-Declaration(ObjectProperty(prefer1:part_of))
 Declaration(ObjectProperty(prefer1:refers_to_variable))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
@@ -322,7 +322,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000001 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000001 "PREFER:0000001")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "\"Root of all fermentation terms in the Precision Fermentation Ontology.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000001 "precision fermentation process")
-SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(prefer1:has_part obo:PREFER_0000002))
+SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000002))
 
 # Class: obo:PREFER_0000002 (fermentation project)
 
@@ -333,7 +333,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000002 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000002 "PREFER:0000002")
 AnnotationAssertion(rdfs:label obo:PREFER_0000002 "fermentation project")
 SubClassOf(obo:PREFER_0000002 obo:PREFER_0000001)
-SubClassOf(obo:PREFER_0000002 ObjectSomeValuesFrom(prefer1:has_part obo:PREFER_0000003))
+SubClassOf(obo:PREFER_0000002 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000003))
 
 # Class: obo:PREFER_0000003 (fermentation experiment)
 
@@ -344,7 +344,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000003 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000003 "PREFER:0000003")
 AnnotationAssertion(rdfs:label obo:PREFER_0000003 "fermentation experiment")
 SubClassOf(obo:PREFER_0000003 obo:PREFER_0000002)
-SubClassOf(obo:PREFER_0000003 ObjectSomeValuesFrom(prefer1:has_part obo:PREFER_0000004))
+SubClassOf(obo:PREFER_0000003 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000004))
 
 # Class: obo:PREFER_0000004 (fermentation run)
 
@@ -355,13 +355,13 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000004 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000004 "PREFER:0000004")
 AnnotationAssertion(rdfs:label obo:PREFER_0000004 "fermentation run")
 SubClassOf(obo:PREFER_0000004 obo:PREFER_0000003)
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000003))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell> obo:PREFER_0000012))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected> obo:PREFER_0000018))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_cultivation_condition> obo:PREFER_0000008))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_compound> obo:CHEBI_24431))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable> obo:PREFER_0000009))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_bioreactor> obo:PREFER_0000014))
-SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(prefer1:part_of obo:PREFER_0000003))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
 
 # Class: obo:PREFER_0000008 (cultivation condition)
@@ -379,7 +379,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000008 "PREFER:0000008")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000008 "\"This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "cultivation condition")
 SubClassOf(obo:PREFER_0000008 obo:XCO_0000000)
-SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(prefer1:has_part obo:PREFER_0000015))
+SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
 
 # Class: obo:PREFER_0000009 (process variable)
 
