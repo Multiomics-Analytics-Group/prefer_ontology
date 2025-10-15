@@ -195,6 +195,7 @@ Declaration(Class(obo:PREFER_UNIT_0000173))
 Declaration(Class(obo:PREFER_UNIT_0000174))
 Declaration(Class(obo:PREFER_UNIT_0000175))
 Declaration(Class(obo:PREFER_UNIT_0000176))
+Declaration(Class(obo:PREFER_a302e12e_bf00_4326_9cf0_914fe847e7ed))
 Declaration(Class(obo:QUDT_BAR))
 Declaration(Class(obo:QUDT_PER-HR))
 Declaration(Class(obo:SNOMED_414559001))
@@ -2068,6 +2069,11 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000176 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000176 "PREFER_UNIT:0000176")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000176 "mole per mole")
 SubClassOf(obo:PREFER_UNIT_0000176 obo:UO_0000076)
+
+# Class: obo:PREFER_a302e12e_bf00_4326_9cf0_914fe847e7ed (test-term)
+
+AnnotationAssertion(rdfs:label obo:PREFER_a302e12e_bf00_4326_9cf0_914fe847e7ed "test-term"@en)
+SubClassOf(obo:PREFER_a302e12e_bf00_4326_9cf0_914fe847e7ed obo:PREFER_0000038)
 
 
 )
