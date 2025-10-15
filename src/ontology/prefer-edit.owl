@@ -20,7 +20,6 @@ Annotation(terms:contributor <https://orcid.org/0000-0001-7258-9596>)
 Annotation(terms:contributor "Alberto Santos")
 Annotation(terms:contributor "Txell Amigó")
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
-Annotation(oboInOwl:default-namespace "precision_fermentation")
 
 Declaration(Class(obo:CHEBI_24431))
 Declaration(Class(obo:CHEBI_64708))
