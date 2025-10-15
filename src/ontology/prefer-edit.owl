@@ -180,7 +180,6 @@ Declaration(Class(obo:PREFER_0000204))
 Declaration(Class(obo:PREFER_0000205))
 Declaration(Class(obo:PREFER_0000206))
 Declaration(Class(obo:PREFER_0000207))
-Declaration(Class(obo:PREFER_3896ac3f_1d8d_477a_8139_e8a8f38bcab3))
 Declaration(Class(obo:PREFER_UNIT_0000161))
 Declaration(Class(obo:PREFER_UNIT_0000162))
 Declaration(Class(obo:PREFER_UNIT_0000163))
@@ -1897,11 +1896,6 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000207 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000207 "PREFER:0000207")
 AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
-
-# Class: obo:PREFER_3896ac3f_1d8d_477a_8139_e8a8f38bcab3 (test term)
-
-AnnotationAssertion(rdfs:label obo:PREFER_3896ac3f_1d8d_477a_8139_e8a8f38bcab3 "test term"@en)
-SubClassOf(obo:PREFER_3896ac3f_1d8d_477a_8139_e8a8f38bcab3 obo:PREFER_0000038)
 
 # Class: obo:PREFER_UNIT_0000161 (gram per gram)
 
