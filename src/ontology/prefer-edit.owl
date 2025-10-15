@@ -238,7 +238,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_bioreactor>))
 Declaration(ObjectProperty(prefer1:has_part))
-Declaration(ObjectProperty(prefer1:has_unit))
 Declaration(ObjectProperty(prefer1:part_of))
 Declaration(ObjectProperty(prefer1:refers_to_variable))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
@@ -1365,8 +1364,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000115 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000115 "PREFER:0000115")
 AnnotationAssertion(rdfs:label obo:PREFER_0000115 "specific compound production rate")
 SubClassOf(obo:PREFER_0000115 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(prefer1:has_unit obo:PREFER_UNIT_0000173))
-SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(prefer1:has_unit obo:PREFER_UNIT_0000174))
+SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000173))
+SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000174))
 
 # Class: obo:PREFER_0000117 (compound yield (substrate))
 
@@ -1462,7 +1461,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000129 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000129 "PREFER:0000129")
 AnnotationAssertion(rdfs:label obo:PREFER_0000129 "carbon dioxide evolution rate")
 SubClassOf(obo:PREFER_0000129 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000129 ObjectSomeValuesFrom(prefer1:has_unit obo:PREFER_UNIT_0000173))
+SubClassOf(obo:PREFER_0000129 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000173))
 
 # Class: obo:PREFER_0000130 (specific carbon dioxide evolution rate)
 
@@ -1473,7 +1472,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000130 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000130 "PREFER:0000130")
 AnnotationAssertion(rdfs:label obo:PREFER_0000130 "specific carbon dioxide evolution rate")
 SubClassOf(obo:PREFER_0000130 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000130 ObjectSomeValuesFrom(prefer1:has_unit obo:PREFER_UNIT_0000173))
+SubClassOf(obo:PREFER_0000130 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000173))
 
 # Class: obo:PREFER_0000131 (carbon dioxide yield (S))
 
