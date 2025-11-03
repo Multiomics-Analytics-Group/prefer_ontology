@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                f42fce72dff7c4a4ed1843f11376d5011f73d36fa8197e6511e9f0e0b814b2b2
+CONFIG_HASH=                838af7b1c133dddddf0eedd4a32e1aa14e4438d6bc0aa30e4d87b66484dc2871
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 
+OTHER_SRC =                 $(COMPONENTSDIR)/iao.owl $(COMPONENTSDIR)/foundation.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -438,6 +438,65 @@ no-mirror-refresh-%:
 	$(MAKE) --assume-new=$(SRC) --assume-new=$(IMPORTDIR)/$*_terms.txt \
 		IMP=true IMP_LARGE=true MIR=false PAT=false $(IMPORTDIR)/$*_import.owl
 
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+ifeq ($(COMP),true)
+.PHONY: all_components
+all_components: $(OTHER_SRC)
+
+.PHONY: recreate-components
+recreate-components:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-iao.owl \
+		--assume-new=$(TMPDIR)/stamp-component-foundation.owl \
+		COMP=true IMP=false MIR=true PAT=true all_components
+
+.PHONY: no-mirror-recreate-components
+no-mirror-recreate-components:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-iao.owl \
+		--assume-new=$(TMPDIR)/stamp-component-foundation.owl \
+		COMP=true IMP=false MIR=false PAT=true all_components
+
+.PHONY: recreate-%
+recreate-%:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-$*.owl \
+		COMP=true IMP=false MIR=true PAT=true $(COMPONENTSDIR)/$*.owl
+
+.PHONY: no-mirror-recreate-%
+no-mirror-recreate-%:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-$*.owl \
+		COMP=true IMP=false MIR=false PAT=true $(COMPONENTSDIR)/$*.owl
+
+$(COMPONENTSDIR)/%.owl: $(TMPDIR)/stamp-component-%.owl | $(COMPONENTSDIR)
+	test -f $@ || touch $@
+.PRECIOUS: $(COMPONENTSDIR)/%.owl
+
+$(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
+	touch $@
+.PRECIOUS: $(TMPDIR)/stamp-component-%.owl
+
+ifeq ($(MIR),true)
+.PHONY: component-download-iao.owl
+component-download-iao.owl: | $(TMPDIR)
+	$(ROBOT) merge -I http://purl.obolibrary.org/obo/iao.owl \
+		 annotate --annotation owl:versionInfo $(VERSION) --output $(TMPDIR)/$@.owl
+
+$(COMPONENTSDIR)/iao.owl: component-download-iao.owl $(TMPDIR)/stamp-component-iao.owl
+	@if cmp -s $(TMPDIR)/component-download-iao.owl.owl $(TMPDIR)/component-download-iao.owl.tmp.owl ; then \
+	        echo "Component identical." ; \
+	else \
+	        echo "Component different, updating." && \
+	        cp $(TMPDIR)/component-download-iao.owl.owl $(TMPDIR)/component-download-iao.owl.tmp.owl && \
+	        $(ROBOT) annotate --input $(TMPDIR)/component-download-iao.owl.owl \
+	                          --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+	                          --output $@ ; \
+	fi
+.PRECIOUS: $(COMPONENTSDIR)/iao.owl
+endif # MIR=true
+
+endif # COMP=true
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
