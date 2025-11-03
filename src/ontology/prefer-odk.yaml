@@ -17,12 +17,11 @@ sssom_mappingset_group:
       maintainance: manual
 components:
   products:
-      - filename: iao.owl
-        source: http://purl.obolibrary.org/obo/iao.owl
       - filename: foundation.owl
 import_group:
   use_base_merging: TRUE
   products:
+    - id: iao
     - id: ro
       use_base: TRUE
     - id: chebi
