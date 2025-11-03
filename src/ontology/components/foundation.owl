@@ -71,9 +71,10 @@
     <!-- http://purl.obolibrary.org/obo/PREFER_9000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PREFER_9000000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:IAO_0000115>A realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, such that it affects or determines the behavior, operation, or outcome of that process.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a process, thereby affecting the behavior, operation, or outcome of that process.</obo:IAO_0000115>
         <dc:contributor>https://orcid.org/0000-0001-7258-9596</dc:contributor>
+        <rdfs:comment>A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.</rdfs:comment>
         <rdfs:label xml:lang="en">process control variable</rdfs:label>
     </owl:Class>
     
