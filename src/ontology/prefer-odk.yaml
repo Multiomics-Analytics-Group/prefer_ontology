@@ -15,9 +15,13 @@ sssom_mappingset_group:
   products:
     - id: prefer-external
       maintainance: manual
+components:
+  products:
+      - filename: foundation.owl
 import_group:
   use_base_merging: TRUE
   products:
+    - id: iao
     - id: ro
       use_base: TRUE
     - id: chebi
