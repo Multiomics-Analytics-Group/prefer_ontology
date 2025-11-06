@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/prefer.obo.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/prefer.owl#>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -13,7 +13,16 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/prefer.owl>
+Import(<http://purl.obolibrary.org/obo/prefer/components/foundation.owl>)
 Import(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>)
+Annotation(obo:IAO_0000700 obo:BFO_0000019)
+Annotation(obo:IAO_0000700 obo:BFO_0000023)
+Annotation(obo:IAO_0000700 obo:BFO_0000040)
+Annotation(obo:IAO_0000700 obo:IAO_0000003)
+Annotation(obo:IAO_0000700 obo:PREFER_9000000)
+Annotation(obo:IAO_0000700 obo:PREFER_9000001)
+Annotation(obo:IAO_0000700 obo:PREFER_9000002)
+Annotation(obo:IAO_0000700 obo:PREFER_9000003)
 Annotation(dc:description "An ontology for PREcision FERmentation.")
 Annotation(dc:title "PREFER Ontology")
 Annotation(terms:contributor <https://orcid.org/0000-0001-7258-9596>)
@@ -239,6 +248,7 @@ Declaration(ObjectProperty(prefer1:refers_to_variable))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
 Declaration(AnnotationProperty(obo:dc_description))
 Declaration(AnnotationProperty(obo:dc_title))
@@ -272,15 +282,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (alternative_term)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
