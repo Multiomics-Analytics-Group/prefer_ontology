@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                0954bb26628b8d207b5a71e65e095ca6e471ed4dcf3a72dc9b527ea560c50c08
+CONFIG_HASH=                30e3a29e5e165bfb51499fa78e12a8b5f9bdb089d653c7f3c825b92611c01788
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao ro chebi bao uo pato sio
+IMPORTS =  iao ro chebi bao uo pato sio go
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -536,6 +536,14 @@ mirror-pato: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/sio.owl
 mirror-sio: | $(TMPDIR)
 	$(ROBOT) remove -I http://semanticscience.org/ontology/sio.owl --base-iri http://semanticscience.org/resource/SIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: go
+.PHONY: mirror-go
+.PRECIOUS: $(MIRRORDIR)/go.owl
+mirror-go: | $(TMPDIR)
+	curl -L $(OBOBASE)/go/go-base.owl --create-dirs -o $(TMPDIR)/go-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/go-download.owl -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true

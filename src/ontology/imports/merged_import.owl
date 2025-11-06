@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/prefer/releases/2025-11-03/imports/merged_import.owl>
-Annotation(owl:versionInfo "2025-11-03")
+<http://purl.obolibrary.org/obo/prefer/releases/2025-11-06/imports/merged_import.owl>
+Annotation(owl:versionInfo "2025-11-06")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -53,6 +53,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_50906>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_52211>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_64708>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_78295>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006091>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006113>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008152>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009987>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015980>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
@@ -61,6 +67,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000102>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000225>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000409>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_10239>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000070>))
@@ -663,6 +674,7 @@ Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000294>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000322>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000325>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000352>))
+Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002009>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002872>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
@@ -1343,6 +1355,10 @@ ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000325>)
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000352> "is causally related from"@en)
 SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000352> <http://semanticscience.org/resource/SIO_000243>)
 
+# Object Property: <http://www.bioassayontology.org/bao#BAO_0002009> (involves biological process)
+
+AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0002009> "involves biological process")
+
 # Object Property: <http://www.bioassayontology.org/bao#BAO_0002872> (is unit of)
 
 AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0002872> "is unit of"@en)
@@ -1480,6 +1496,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_24431> "chebi_ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_24431> "CHEBI:24431")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24431> "chemical entity")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24431> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/CHEBI_24432> (biological role)
 
@@ -1706,6 +1723,68 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_78295> "food component")
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_78295> <http://purl.obolibrary.org/obo/CHEBI_52211>)
 
+# Class: <http://purl.obolibrary.org/obo/GO_0006091> (generation of precursor metabolites and energy)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0006091> "energy pathways")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006091> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0006091> "metabolic energy generation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006091> "GO:0006091")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006091> "generation of precursor metabolites and energy")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0006091> <http://purl.obolibrary.org/obo/GO_0008152>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0006113> (fermentation)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0006113> "MetaCyc:Fermentation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0006113> "Wikipedia:Fermentation_(biochemistry)")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006113> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006113> "GO:0006113")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0006113> "PMID:38821505 mentions exceptions regarding organic compounds and ETC. Fermentation sub-processes exclude glycolysis to prevent redundancy with the glycolytic pathway.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006113> "fermentation")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0006113> <http://purl.obolibrary.org/obo/GO_0015980>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0008150> (biological_process)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008150> "Wikipedia:Biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0008150> "biological process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0008150> "physiological process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0008150> "single organism process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0008150> "single-organism process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0008150> "GO:0008150")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0008152> (metabolic process)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008152> "Wikipedia:Metabolism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0008152> "metabolism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0008152> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0008152> "GO:0008152")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008152> "Note that metabolic processes do not include single functions or processes such as protein-protein interactions, protein-nucleic acids, nor receptor-ligand interactions.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008152> "metabolic process")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0008152> <http://purl.obolibrary.org/obo/GO_0009987>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0009987> (cellular process)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009987> "cell physiology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009987> "cellular physiological process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0009987> "cell growth and/or maintenance")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0009987> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0009987> "single-organism cellular process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0009987> "GO:0009987")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0009987> "This term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0009987> "cellular process")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009987> <http://purl.obolibrary.org/obo/GO_0008150>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0015980> (energy derivation by oxidation of organic compounds)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0015980> "chemoorganotrophy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0015980> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015980> "GO:0015980")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015980> "energy derivation by oxidation of organic compounds")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0015980> <http://purl.obolibrary.org/obo/GO_0006091>)
+
 # Class: <http://purl.obolibrary.org/obo/IAO_0000003> (measurement unit label)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000003> "A measurement unit label is as a label that is part of a scalar measurement datum and denotes a unit of measure."@en)
@@ -1757,6 +1836,16 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000409> "denotator type"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000409> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000410> <http://purl.obolibrary.org/obo/IAO_0000420> <http://purl.obolibrary.org/obo/IAO_0000421>))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000409> <http://purl.obolibrary.org/obo/IAO_0000102>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_1> (<http://purl.obolibrary.org/obo/NCBITaxon_1>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_1> <http://purl.obolibrary.org/obo/OBI_0100026>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030> (cellular organisms or viruses)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030> "cellular organisms or viruses")
+EquivalentClasses(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030> ObjectUnionOf(<http://purl.obolibrary.org/obo/NCBITaxon_10239> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030> <http://purl.obolibrary.org/obo/NCBITaxon_1>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000001> (quality)
 
