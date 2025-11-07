@@ -483,6 +483,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000016 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000016 "PREFER:0000016")
 AnnotationAssertion(rdfs:label obo:PREFER_0000016 "phase")
 SubClassOf(obo:PREFER_0000016 obo:PREFER_9000003)
+SubClassOf(obo:PREFER_0000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000004))
 
 # Class: obo:PREFER_0000017 (event)
 
