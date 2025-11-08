@@ -1,1 +1,1 @@
-GO:0006113 # ferementation
+GO:0006113 # fermentation
