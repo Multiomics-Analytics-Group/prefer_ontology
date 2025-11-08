@@ -322,7 +322,7 @@ AnnotationAssertion(rdfs:label oboInOwl:id "id")
 
 # Class: obo:PREFER_0000002 (fermentation project)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments conducted within a research group.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000002 "OBI_0000066")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000002 "project")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000002 "precision_fermentation")
