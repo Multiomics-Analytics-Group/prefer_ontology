@@ -1,118 +1,67 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/prefer/components/foundation.owl#"
-     xml:base="http://purl.obolibrary.org/obo/prefer/components/foundation.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/prefer/components/foundation.owl"/>
-    
+Prefix(:=<http://purl.obolibrary.org/obo/prefer/components/foundation.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(BAO:=<http://www.bioassayontology.org/bao#BAO_>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+Ontology(<http://purl.obolibrary.org/obo/prefer/components/foundation.owl>
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PREFER_9000000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PREFER_9000000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a process, thereby affecting the behavior, operation, or outcome of that process.</obo:IAO_0000115>
-        <dc:contributor>https://orcid.org/0000-0001-7258-9596</dc:contributor>
-        <rdfs:comment>A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.</rdfs:comment>
-        <rdfs:label xml:lang="en">process control variable</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PREFER_9000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PREFER_9000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>An information content entity about a process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.</obo:IAO_0000115>
-        <dc:contributor>https://orcid.org/0000-0001-7258-9596</dc:contributor>
-        <rdfs:label xml:lang="en">process measurement variable</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PREFER_9000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PREFER_9000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the process.</obo:IAO_0000115>
-        <dc:contributor>https://orcid.org/0000-0001-7258-9596</dc:contributor>
-        <rdfs:label xml:lang="en">process calculated variable</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PREFER_9000003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PREFER_9000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115>A process that involves precision fermentation.</obo:IAO_0000115>
-        <rdfs:comment>Precision fermentation is a biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively evolved(ALE) microorganisms (such as bacteria, yeast, fungi or microalgae) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods.</rdfs:comment>
-        <rdfs:label xml:lang="en">precision fermentation process</rdfs:label>
-    </owl:Class>
-</rdf:RDF>
+Declaration(Class(obo:BFO_0000015))
+Declaration(Class(obo:BFO_0000017))
+Declaration(Class(obo:GO_0006113))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:PREFER_9000000))
+Declaration(Class(obo:PREFER_9000001))
+Declaration(Class(obo:PREFER_9000002))
+Declaration(Class(obo:PREFER_9000003))
+Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002009>))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(dc:contributor))
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+############################
+#   Classes
+############################
 
+# Class: obo:PREFER_9000000 (process control variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a process, thereby affecting the behavior, operation, or outcome of that process.")
+AnnotationAssertion(dc:contributor obo:PREFER_9000000 "https://orcid.org/0000-0001-7258-9596")
+AnnotationAssertion(rdfs:comment obo:PREFER_9000000 "A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.")
+AnnotationAssertion(rdfs:label obo:PREFER_9000000 "process control variable"@en)
+SubClassOf(obo:PREFER_9000000 obo:IAO_0000030)
+
+# Class: obo:PREFER_9000001 (process measurement variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000001 "An information content entity about a process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.")
+AnnotationAssertion(dc:contributor obo:PREFER_9000001 "https://orcid.org/0000-0001-7258-9596")
+AnnotationAssertion(rdfs:label obo:PREFER_9000001 "process measurement variable"@en)
+SubClassOf(obo:PREFER_9000001 obo:IAO_0000030)
+
+# Class: obo:PREFER_9000002 (process calculated variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the process.")
+AnnotationAssertion(dc:contributor obo:PREFER_9000002 "https://orcid.org/0000-0001-7258-9596")
+AnnotationAssertion(rdfs:label obo:PREFER_9000002 "process calculated variable"@en)
+SubClassOf(obo:PREFER_9000002 obo:IAO_0000030)
+
+# Class: obo:PREFER_9000003 (precision fermentation process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000003 "A process that involves precision fermentation.")
+AnnotationAssertion(rdfs:comment obo:PREFER_9000003 "Precision fermentation is a biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively laboratory-evolved (ALE) microorganisms (such as bacteria, yeast, fungi or microalgae) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods.")
+AnnotationAssertion(rdfs:label obo:PREFER_9000003 "precision fermentation process"@en)
+SubClassOf(obo:PREFER_9000003 obo:BFO_0000015)
+SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002009> obo:GO_0006113))
+
+
+)

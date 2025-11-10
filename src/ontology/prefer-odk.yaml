@@ -41,6 +41,8 @@ import_group:
       make_base: TRUE
       base_iris:
         - http://semanticscience.org/resource/SIO_
+    - id: go
+      use_base: TRUE
 robot_java_args: "-Xmx16G"
 robot_report:
   use_labels: TRUE
