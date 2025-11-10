@@ -363,8 +363,8 @@ InverseObjectProperties(obo:PREFER_8000004 obo:PREFER_8000005)
 
 # Object Property: obo:PREFER_8000005 (is medium ingredient of)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000005 "x is_medium_ingredient_of y iff x is a chemical entity, y is a assay medium, and x is part of y.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000005 "is medium ingredient of"@en)
-AnnotationAssertion(rdfs:label obo:PREFER_8000005 "x is_medium_ingredient_of y iff x is a chemical entity, y is a assay medium, and x is part of y.")
 SubObjectPropertyOf(obo:PREFER_8000005 obo:BFO_0000050)
 ObjectPropertyDomain(obo:PREFER_8000005 obo:CHEBI_24431)
 ObjectPropertyRange(obo:PREFER_8000005 <http://www.bioassayontology.org/bao#BAO_0000596>)
