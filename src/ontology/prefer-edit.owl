@@ -227,6 +227,12 @@ Declaration(Class(<http://semanticscience.org/resource/SIO_001050>))
 Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0003118>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:PREFER_8000000))
+Declaration(ObjectProperty(obo:PREFER_8000001))
+Declaration(ObjectProperty(obo:PREFER_8000002))
+Declaration(ObjectProperty(obo:PREFER_8000003))
+Declaration(ObjectProperty(obo:PREFER_8000004))
+Declaration(ObjectProperty(obo:PREFER_8000005))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_cultivation_condition>))
@@ -234,7 +240,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_cultur
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_ingredient>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_compound>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit>))
@@ -282,7 +287,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -310,6 +315,59 @@ AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:id "id")
 
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:PREFER_8000000 (has fermentation experiment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000000 "inverse of is fermentation experiment of.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000000 "has fermentation experiment"@en)
+SubObjectPropertyOf(obo:PREFER_8000000 obo:BFO_0000051)
+InverseObjectProperties(obo:PREFER_8000000 obo:PREFER_8000001)
+TransitiveObjectProperty(obo:PREFER_8000000)
+
+# Object Property: obo:PREFER_8000001 (is fermentation experiment of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000001 "x is_fermentation_experiment_of y iff x is a fermentation experiment, y is a precision fermentation process, and x is part of y.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000001 "is fermentation experiment of"@en)
+SubObjectPropertyOf(obo:PREFER_8000001 obo:BFO_0000050)
+TransitiveObjectProperty(obo:PREFER_8000001)
+ObjectPropertyDomain(obo:PREFER_8000001 obo:PREFER_0000003)
+ObjectPropertyRange(obo:PREFER_8000001 obo:PREFER_9000003)
+
+# Object Property: obo:PREFER_8000002 (is fermentation run of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000002 "x is_fermentation_experiment_of y iff x is a fermentation run, y is a precision fermentation process, and x is part of y.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000002 "is fermentation run of"@en)
+SubObjectPropertyOf(obo:PREFER_8000002 obo:BFO_0000050)
+InverseObjectProperties(obo:PREFER_8000002 obo:PREFER_8000003)
+TransitiveObjectProperty(obo:PREFER_8000002)
+ObjectPropertyDomain(obo:PREFER_8000002 obo:PREFER_0000004)
+ObjectPropertyRange(obo:PREFER_8000002 obo:PREFER_9000003)
+
+# Object Property: obo:PREFER_8000003 (has fermentation run)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000003 "inverse of is fermentation run of")
+AnnotationAssertion(rdfs:label obo:PREFER_8000003 "has fermentation run"@en)
+SubObjectPropertyOf(obo:PREFER_8000003 obo:BFO_0000051)
+TransitiveObjectProperty(obo:PREFER_8000003)
+
+# Object Property: obo:PREFER_8000004 (has medium ingredient)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000004 "inverse of is medium ingredient of")
+AnnotationAssertion(rdfs:label obo:PREFER_8000004 "has medium ingredient")
+SubObjectPropertyOf(obo:PREFER_8000004 obo:BFO_0000051)
+InverseObjectProperties(obo:PREFER_8000004 obo:PREFER_8000005)
+
+# Object Property: obo:PREFER_8000005 (is medium ingredient of)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000005 "is medium ingredient of"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_8000005 "x is_medium_ingredient_of y iff x is a chemical entity, y is a assay medium, and x is part of y.")
+SubObjectPropertyOf(obo:PREFER_8000005 obo:BFO_0000050)
+ObjectPropertyDomain(obo:PREFER_8000005 obo:CHEBI_24431)
+ObjectPropertyRange(obo:PREFER_8000005 <http://www.bioassayontology.org/bao#BAO_0000596>)
 
 
 
@@ -416,7 +474,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000011 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000011 "PREFER:0000011")
 AnnotationAssertion(rdfs:label obo:PREFER_0000011 "fermentation medium")
 EquivalentClasses(obo:PREFER_0000011 ObjectIntersectionOf(<http://www.bioassayontology.org/bao#BAO_0000596> ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000004)))
-SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_ingredient> obo:CHEBI_24431))
+SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(obo:PREFER_8000004 obo:CHEBI_24431))
 
 # Class: obo:PREFER_0000012 (cell biocatalyst)
 
