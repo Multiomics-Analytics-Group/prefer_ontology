@@ -282,7 +282,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -416,7 +416,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000011 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000011 "PREFER:0000011")
 AnnotationAssertion(rdfs:label obo:PREFER_0000011 "fermentation medium")
 SubClassOf(obo:PREFER_0000011 obo:BFO_0000040)
-SubClassOf(obo:PREFER_0000011 <http://www.bioassayontology.org/bao#BAO_0000596>)
 SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_ingredient> obo:CHEBI_24431))
 
 # Class: obo:PREFER_0000012 (cell biocatalyst)
@@ -1942,7 +1941,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_UNIT_0000164 "mole of ca
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000164 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000164 "PREFER_UNIT:0000164")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000164 "carbon mole")
-SubClassOf(obo:PREFER_UNIT_0000164 obo:CHEBI_64708)
+SubClassOf(obo:PREFER_UNIT_0000164 <http://semanticscience.org/resource/SIO_000074>)
 SubClassOf(obo:PREFER_UNIT_0000164 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_UNIT_0000165 (mole per carbon mole)
