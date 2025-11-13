@@ -455,7 +455,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000014 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
-SubClassOf(obo:PREFER_0000014 <http://www.bioassayontology.org/bao#BAO_0003118>)
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000181))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000182))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000183))
@@ -1889,6 +1888,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000206 "microbiological
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000206 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000206 "PREFER:0000206")
 AnnotationAssertion(rdfs:label obo:PREFER_0000206 "microbial culture")
+SubClassOf(obo:PREFER_0000206 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000207 (tissue culture)
 
@@ -1896,6 +1896,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000207 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000207 "PREFER:0000207")
 AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
+SubClassOf(obo:PREFER_0000207 obo:BFO_0000040)
 
 # Class: obo:PREFER_UNIT_0000161 (gram per gram)
 
