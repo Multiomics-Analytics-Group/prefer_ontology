@@ -237,10 +237,10 @@ Declaration(ObjectProperty(obo:PREFER_8000006))
 Declaration(ObjectProperty(obo:PREFER_8000007))
 Declaration(ObjectProperty(obo:PREFER_8000008))
 Declaration(ObjectProperty(obo:PREFER_8000009))
+Declaration(ObjectProperty(obo:PREFER_8000010))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_cultivation_condition>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_data_acquisition_mode>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type>))
@@ -288,15 +288,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (alternative_term)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -399,6 +399,13 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000009 "inverse of has bioreacto
 AnnotationAssertion(rdfs:label obo:PREFER_8000009 "is bioreactor scale of"@en)
 SubObjectPropertyOf(obo:PREFER_8000009 obo:IAO_0000136)
 
+# Object Property: obo:PREFER_8000010 (has fermentation culture type)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000010 "x has fermentation culture type y iff x is a fermentation culture and y is the fermentation type of x.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000010 "has fermentation culture type")
+ObjectPropertyDomain(obo:PREFER_8000010 obo:PREFER_0000010)
+ObjectPropertyRange(obo:PREFER_8000010 obo:PREFER_0000200)
+
 
 
 ############################
@@ -493,9 +500,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000010 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000010 "PREFER:0000010")
 AnnotationAssertion(rdfs:label obo:PREFER_0000010 "fermentation culture")
 SubClassOf(obo:PREFER_0000010 obo:PREFER_0000008)
-SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000201))
-SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000202))
-SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000203))
+SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:PREFER_8000010 obo:PREFER_0000200))
 
 # Class: obo:PREFER_0000011 (fermentation medium)
 
