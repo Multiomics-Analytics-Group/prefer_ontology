@@ -240,10 +240,10 @@ Declaration(ObjectProperty(obo:PREFER_8000009))
 Declaration(ObjectProperty(obo:PREFER_8000010))
 Declaration(ObjectProperty(obo:PREFER_8000011))
 Declaration(ObjectProperty(obo:PREFER_8000012))
+Declaration(ObjectProperty(obo:PREFER_8000013))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_compound>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit>))
@@ -419,6 +419,13 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000012 "x has data acquisition m
 AnnotationAssertion(rdfs:label obo:PREFER_8000012 "has data acquisition mode")
 ObjectPropertyDomain(obo:PREFER_8000012 obo:PREFER_0000009)
 ObjectPropertyRange(obo:PREFER_8000012 obo:PREFER_0000150)
+
+# Object Property: obo:PREFER_8000013 (has feed profile type)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000013 "x has feed profile type y iff x is a feed and y is the type of feed profile used in x.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000013 "has feed profile type")
+ObjectPropertyDomain(obo:PREFER_8000013 obo:PREFER_0000037)
+ObjectPropertyRange(obo:PREFER_8000013 obo:PREFER_0000189)
 
 
 
@@ -799,12 +806,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000037 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000037 "PREFER:0000037")
 AnnotationAssertion(rdfs:label obo:PREFER_0000037 "feed")
 SubClassOf(obo:PREFER_0000037 obo:PREFER_0000008)
-SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000190))
-SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000191))
-SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000192))
-SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000193))
-SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000194))
-SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_feed_profile_type> obo:PREFER_0000195))
+SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(obo:PREFER_8000013 obo:PREFER_0000189))
 
 # Class: obo:PREFER_0000038 (fermentation medium pH)
 
