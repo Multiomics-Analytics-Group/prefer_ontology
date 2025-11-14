@@ -235,6 +235,8 @@ Declaration(ObjectProperty(obo:PREFER_8000004))
 Declaration(ObjectProperty(obo:PREFER_8000005))
 Declaration(ObjectProperty(obo:PREFER_8000006))
 Declaration(ObjectProperty(obo:PREFER_8000007))
+Declaration(ObjectProperty(obo:PREFER_8000008))
+Declaration(ObjectProperty(obo:PREFER_8000009))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_cultivation_condition>))
@@ -246,11 +248,9 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measur
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_scale>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
-Declaration(ObjectProperty(prefer1:refers_to_variable))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -384,6 +384,20 @@ ObjectPropertyRange(obo:PREFER_8000006 obo:PREFER_0000014)
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000007 "inverse of uses bioreactor")
 AnnotationAssertion(rdfs:label obo:PREFER_8000007 "bioreactor used in"@en)
 SubObjectPropertyOf(obo:PREFER_8000007 obo:RO_0000056)
+
+# Object Property: obo:PREFER_8000008 (has bioreactor scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000008 "x has_bioreactor_scale y iff x is a bioreactor and y is the scale that the bioreactor supports.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000008 "has bioreactor scale")
+InverseObjectProperties(obo:PREFER_8000008 obo:PREFER_8000009)
+ObjectPropertyDomain(obo:PREFER_8000008 obo:PREFER_0000014)
+ObjectPropertyRange(obo:PREFER_8000008 obo:PREFER_0000185)
+
+# Object Property: obo:PREFER_8000009 (is bioreactor scale of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000009 "inverse of has bioreactor scale.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000009 "is bioreactor scale of"@en)
+SubObjectPropertyOf(obo:PREFER_8000009 obo:IAO_0000136)
 
 
 
@@ -528,13 +542,11 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000014 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 <http://www.bioassayontology.org/bao#BAO_0003118>)
+SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000185))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000181))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000182))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000183))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000184))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_scale> obo:PREFER_0000186))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_scale> obo:PREFER_0000187))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_scale> obo:PREFER_0000188))
 
 # Class: obo:PREFER_0000015 (operational parameter)
 
@@ -660,8 +672,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000027 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000027 "PREFER:0000027")
 AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint")
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000026))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000054))
-SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(prefer1:refers_to_variable obo:PREFER_0000026))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000028 (minimum stirring setpoint)
@@ -675,8 +687,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000028 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000028 "PREFER:0000028")
 AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint")
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000026))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000054))
-SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(prefer1:refers_to_variable obo:PREFER_0000026))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000030 (aeration gas type)
@@ -686,7 +698,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000030 "aeration gas")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000030 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000030 "PREFER:0000030")
 AnnotationAssertion(rdfs:label obo:PREFER_0000030 "aeration gas type")
-SubClassOf(obo:PREFER_0000030 ObjectSomeValuesFrom(prefer1:refers_to_variable obo:PREFER_0000026))
+SubClassOf(obo:PREFER_0000030 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000026))
 
 # Class: obo:PREFER_0000031 (maximum aeration setpoint)
 
