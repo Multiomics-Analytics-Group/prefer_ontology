@@ -1,3 +1,4 @@
 http://www.bioassayontology.org/bao#BAO_0002874 # has_unit
 http://www.bioassayontology.org/bao#BAO_0000596 # medium
 http://www.bioassayontology.org/bao#BAO_0002922 # has_assay_medium
+http://www.bioassayontology.org/bao#BAO_0002009 # involves_biological_process
