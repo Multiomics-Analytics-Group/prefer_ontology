@@ -241,6 +241,7 @@ Declaration(ObjectProperty(obo:PREFER_8000010))
 Declaration(ObjectProperty(obo:PREFER_8000011))
 Declaration(ObjectProperty(obo:PREFER_8000012))
 Declaration(ObjectProperty(obo:PREFER_8000013))
+Declaration(ObjectProperty(obo:PREFER_8000014))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit>))
@@ -403,6 +404,8 @@ SubObjectPropertyOf(obo:PREFER_8000009 obo:IAO_0000136)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000010 "x has fermentation culture type y iff x is a fermentation culture and y is the fermentation type of x.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000010 "has fermentation culture type")
+SubObjectPropertyOf(obo:PREFER_8000010 obo:RO_0000087)
+InverseObjectProperties(obo:PREFER_8000010 obo:PREFER_8000014)
 ObjectPropertyDomain(obo:PREFER_8000010 obo:PREFER_0000010)
 ObjectPropertyRange(obo:PREFER_8000010 obo:PREFER_0000200)
 
@@ -415,9 +418,9 @@ ObjectPropertyRange(obo:PREFER_8000011 obo:PREFER_0000008)
 
 # Object Property: obo:PREFER_8000012 (has data acquisition mode)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000012 "x has data acquisition mode y iff x is a process variable and y is the data acquistion mode in which x is acquired.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000012 "x has data acquisition mode y iff x is a measured variable and y is the data acquistion mode in which x is acquired.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000012 "has data acquisition mode")
-ObjectPropertyDomain(obo:PREFER_8000012 obo:PREFER_0000009)
+ObjectPropertyDomain(obo:PREFER_8000012 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000012 obo:PREFER_0000150)
 
 # Object Property: obo:PREFER_8000013 (has feed profile type)
@@ -426,6 +429,12 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000013 "x has feed profile type 
 AnnotationAssertion(rdfs:label obo:PREFER_8000013 "has feed profile type")
 ObjectPropertyDomain(obo:PREFER_8000013 obo:PREFER_0000037)
 ObjectPropertyRange(obo:PREFER_8000013 obo:PREFER_0000189)
+
+# Object Property: obo:PREFER_8000014 (is fermentation culture type of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000014 "inverse of has fermentation culture type")
+AnnotationAssertion(rdfs:label obo:PREFER_8000014 "is fermentation culture type of"@en)
+SubObjectPropertyOf(obo:PREFER_8000014 obo:RO_0000081)
 
 
 
@@ -1940,6 +1949,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000200 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000200 "PREFER:0000200")
 AnnotationAssertion(rdfs:label obo:PREFER_0000200 "fermentation culture type")
+SubClassOf(obo:PREFER_0000200 obo:BFO_0000023)
 
 # Class: obo:PREFER_0000201 (pre-optional culture)
 
