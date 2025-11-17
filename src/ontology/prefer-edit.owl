@@ -279,7 +279,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -401,7 +401,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0100060") oboInOwl:hasNar
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000010 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000010 "PREFER:0000010")
 AnnotationAssertion(rdfs:label obo:PREFER_0000010 "fermentation culture")
-SubClassOf(obo:PREFER_0000010 obo:PREFER_0000008)
+SubClassOf(obo:PREFER_0000010 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000201))
 SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000202))
 SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_culture_type> obo:PREFER_0000203))
@@ -429,6 +429,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasNarrowSy
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000012 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
+EquivalentClasses(obo:PREFER_0000012 ObjectIntersectionOf(obo:CL_0000000 ObjectSomeValuesFrom(obo:RO_0000087 obo:CHEBI_35223)))
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000206))
 SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000207))
@@ -496,6 +497,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIO") oboInOwl:hasExactSynony
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000018 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
+SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000018 <http://semanticscience.org/resource/SIO_001050>)
 
 # Class: obo:PREFER_0000019 (temperature setpoint)
@@ -1833,6 +1835,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000200 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000200 "PREFER:0000200")
 AnnotationAssertion(rdfs:label obo:PREFER_0000200 "fermentation culture type")
+SubClassOf(obo:PREFER_0000200 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000201 (pre-optional culture)
 

@@ -22,6 +22,8 @@ import_group:
   use_base_merging: TRUE
   products:
     - id: iao
+    - id: cl
+      use_base: TRUE
     - id: ro
       use_base: TRUE
     - id: chebi
