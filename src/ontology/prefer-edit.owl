@@ -42,7 +42,7 @@ Declaration(Class(obo:PREFER_0000000))
 Declaration(Class(obo:PREFER_0000002))
 Declaration(Class(obo:PREFER_0000003))
 Declaration(Class(obo:PREFER_0000004))
-Declaration(Class(obo:PREFER_0000007))
+Declaration(Class(obo:PREFER_0000006))
 Declaration(Class(obo:PREFER_0000008))
 Declaration(Class(obo:PREFER_0000009))
 Declaration(Class(obo:PREFER_0000010))
@@ -365,10 +365,10 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_bioreactor> obo:PREFER_0000014))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
 
-# Class: obo:PREFER_0000007 (process calculated variable unclassified)
+# Class: obo:PREFER_0000006 (calculated offline sample)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000007 "process calculated variable unclassified"@en)
-SubClassOf(obo:PREFER_0000007 obo:PREFER_9000002)
+AnnotationAssertion(rdfs:label obo:PREFER_0000006 "calculated offline sample"@en)
+SubClassOf(obo:PREFER_0000006 obo:PREFER_9000002)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
 
@@ -1371,7 +1371,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000111 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000111 "PREFER:0000111")
 AnnotationAssertion(rdfs:label obo:PREFER_0000111 "residual compound amount")
-SubClassOf(obo:PREFER_0000111 obo:PREFER_0000007)
+SubClassOf(obo:PREFER_0000111 obo:PREFER_0000006)
 SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000113 (compound production rate)
@@ -1533,7 +1533,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000136 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000136 "PREFER:0000136")
 AnnotationAssertion(rdfs:label obo:PREFER_0000136 "biomass lost in sampling")
-SubClassOf(obo:PREFER_0000136 obo:PREFER_0000007)
+SubClassOf(obo:PREFER_0000136 obo:PREFER_0000006)
 SubClassOf(obo:PREFER_0000136 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
 # Class: obo:PREFER_0000137 (biomass production)
