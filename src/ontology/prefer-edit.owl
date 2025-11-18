@@ -249,6 +249,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_biore
 Declaration(ObjectProperty(prefer1:refers_to_variable))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
+Declaration(NamedIndividual(obo:PREFER_0000005))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -1137,7 +1138,7 @@ SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000077 (dilution rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000077 "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000077 "D")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000077 "D")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000077 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000077 "\"Rate expressed in reciprocal hours (h⁻¹ or 1/h).\"")
@@ -2092,6 +2093,16 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000176 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000176 "PREFER_UNIT:0000176")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000176 "mole per mole")
 SubClassOf(obo:PREFER_UNIT_0000176 obo:UO_0000076)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:PREFER_0000005 (acronym)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000005 "acronym"@en)
+ClassAssertion(oboInOwl:SynonymType obo:PREFER_0000005)
 
 
 )
