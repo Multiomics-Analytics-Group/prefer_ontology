@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/prefer/releases/2025-11-06/imports/merged_import.owl>
-Annotation(owl:versionInfo "2025-11-06")
+<http://purl.obolibrary.org/obo/prefer/releases/2025-11-20/imports/merged_import.owl>
+Annotation(owl:versionInfo "2025-11-20")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -697,6 +697,7 @@ Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000421>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000423>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000428>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/OMO_0001000>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/OMO_0001002>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/UO_0000008>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/UO_0000009>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/UO_0000010>))
@@ -974,6 +975,7 @@ Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/UO_0010067>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/UO_0010068>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0003012>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
@@ -988,6 +990,7 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
 Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:label))
@@ -1011,6 +1014,12 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "tex
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000700> "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000700> "has ontology root term"@en)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/OMO_0003012> (acronym)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMO_0003012> "A synonym type for describing abbreviations that are a part of the full name's words, such as initialisms or alphabetisms.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/OMO_0003012> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMO_0003012> "acronym")
 
 # Annotation Property: <http://purl.org/dc/terms/contributor> (contributor)
 
@@ -6110,7 +6119,10 @@ ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibr
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000103> (failed exploratory term)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000103> "The term was initially used in an attempt to structure part of the ontology, but in retrospect failed to do a good job."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000103> "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000103> <https://orcid.org/0000-0001-6875-5360>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000103> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000103> "failed exploratory term"@en)
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000103>)
 
@@ -6123,6 +6135,7 @@ ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibr
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000121> (organizational term)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000121> "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000121> "The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000121> "organizational term"@en)
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000121>)
 
@@ -6152,21 +6165,33 @@ ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibr
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000226> (placeholder removed)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000226> "The term was created to temporarily stand in for a semantic purpose, but is no longer needed, typically due to another permanent term being defined."@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000226> <https://orcid.org/0000-0001-6875-5360>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000226> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000226> "placeholder removed"@en)
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000226>)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000227> (terms merged)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000227> "The term has been combined with one or more other terms to create a more encompassing (merged) term."@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000227> <https://orcid.org/0000-0001-6875-5360>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000227> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000227> "terms merged"@en)
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000227>)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000228> (term imported)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000228> "The term has been replaced by a term imported from another ontology."@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000228> <https://orcid.org/0000-0001-6875-5360>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000228> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000228> "term imported"@en)
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000228>)
 
 # Individual: <http://purl.obolibrary.org/obo/IAO_0000229> (term split)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000229> "The term has been split into two or more new terms."@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000229> <https://orcid.org/0000-0001-6875-5360>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/IAO_0000229> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000229> "term split"@en)
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000229>)
 
@@ -6202,8 +6227,16 @@ ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibr
 # Individual: <http://purl.obolibrary.org/obo/OMO_0001000> (out of scope)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMO_0001000> "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/OMO_0001000> <https://orcid.org/0000-0001-6875-5360>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/OMO_0001000> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMO_0001000> "out of scope")
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/OMO_0001000>)
+
+# Individual: <http://purl.obolibrary.org/obo/OMO_0001002> (domain entity does not exist)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMO_0001002> "The term was added to the ontology on the assumption it was a valid domain entity, but it turns out the entity does not exist in reality."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMO_0001002> "domain entity does not exist")
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/OMO_0001002>)
 
 
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002131>)

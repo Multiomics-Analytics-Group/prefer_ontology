@@ -249,7 +249,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#uses_biore
 Declaration(ObjectProperty(prefer1:refers_to_variable))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
-Declaration(NamedIndividual(obo:PREFER_0000005))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -285,15 +284,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (has_dbxref)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (alternative_term)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -992,8 +991,8 @@ SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000061 (oxygen uptake rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000061 "Determination of the rate at which O2 is consumed by the cell culture.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000061 "OUR")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000061 "o2 uptake rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000061 "OUR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000061 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000061 "PREFER:0000061")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000061 "Biorespiration. Dynamic respiratory metric")
@@ -1007,8 +1006,8 @@ SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000062 (carbon dioxide evolution rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000062 "Determination of the rate at which CO2 is released by the cell culture.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType "acronym") oboInOwl:hasExactSynonym obo:PREFER_0000062 "CER")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000062 "co2 evolution rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000062 "CER")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000062 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000062 "PREFER:0000062")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000062 "Physical gas transfer. Dynamic respiratory metric")
@@ -1022,7 +1021,7 @@ SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000063 (oxygen transfer rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000063 "Rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000063 "OTR")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000063 "OTR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000063 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000063 "PREFER:0000063")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000063 "Physical gas transfer. Dynamic respiratory metric")
@@ -1033,7 +1032,7 @@ SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000064 (carbon dioxide transfer rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000064 "Rate at which CO2 is transferred out of the fermenter.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000064 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "\"Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.\" [PREFER]")
@@ -1045,7 +1044,7 @@ SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000065 (respiratory quotient)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000065 "Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/fermentation run, commmonly used to assess the metabolic state of cells.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000065 "RQ")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000065 "RQ")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000065 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000065 "PREFER:0000065")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000065 "Derived metabolic indicator.")
@@ -1138,7 +1137,7 @@ SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000077 (dilution rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000077 "The rate at which fresh medium is fed into a main culture relative to the culture volume, representing the rate at which the culture is diluted.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000077 "D")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000077 "D")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000077 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000077 "\"Rate expressed in reciprocal hours (h⁻¹ or 1/h).\"")
@@ -1189,7 +1188,7 @@ SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000082 (degree of reduction yields)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000082 "The degree of reduction calculated based on the yields of different products. This helps understand how efficiently the system is converting substrate into desired products, taking into account the redox state of each component.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000082 "DoR yields")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000082 "DoR yields")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000082 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000082 "PREFER:0000082")
 AnnotationAssertion(rdfs:label obo:PREFER_0000082 "degree of reduction yields")
@@ -1210,7 +1209,7 @@ SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000087 (substrate uptake rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000087 "The rate at which substrate is taken up by the cells during the bioprocess.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000087 "QS")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000087 "QS")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000087 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000087 "PREFER:0000087")
 AnnotationAssertion(rdfs:label obo:PREFER_0000087 "substrate uptake rate")
@@ -1378,7 +1377,7 @@ SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000113 (compound production rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000113 "Speed at which the compound is produced over time.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000113 "QP")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000113 "QP")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000113 "precision_fermentation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound formation rate")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000113 "PREFER:0000113")
@@ -1497,8 +1496,8 @@ SubClassOf(obo:PREFER_0000130 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000131 (carbon dioxide yield (substrate))
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000131 "The yield of CO2 produced per mole of substrate consumed (S), quantifying how much CO2 is produced relative to the substrate consumed in the bioprocess.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000131 "co2 yield (S)")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000131 "carbon dioxide yield (S)")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000131 "co2 yield (S)")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000131 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000131 "PREFER:0000131")
 AnnotationAssertion(rdfs:label obo:PREFER_0000131 "carbon dioxide yield (substrate)")
@@ -1509,8 +1508,8 @@ SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000133 (carbon dioxide yield (biomass))
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000133 "The yield of CO2 produced per carbon mole of biomass (X), describing how much CO2 is produced relative to the amount of biomass generated.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000133 "co2 yield (X)")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000133 "carbo dioxide yield (X)")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000133 "co2 yield (X)")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000133 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000133 "PREFER:0000133")
 AnnotationAssertion(rdfs:label obo:PREFER_0000133 "carbon dioxide yield (biomass)")
@@ -1552,7 +1551,7 @@ SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000140 " The rate at which the biomass is produced over time.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000140 "Biomass formation rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000140 "Rx")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000140 "Rx")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000140 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000140 "PREFER:0000140")
 AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass production rate")
@@ -1566,7 +1565,7 @@ SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000142 "The rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000142 "growth rate")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000142 "specific biomass growth rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000142 "μ")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000142 "μ")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000142 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
 AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific growth rate")
@@ -1620,7 +1619,7 @@ SubClassOf(obo:PREFER_0000146 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000147 (biomass yield (substrate))
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000147 "The biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:PREFER_0000005) oboInOwl:hasExactSynonym obo:PREFER_0000147 "Ysx")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000147 "Ysx")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000147 "biomass yield (S)")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000147 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000147 "PREFER:0000147")
@@ -2093,16 +2092,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000176 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000176 "PREFER_UNIT:0000176")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000176 "mole per mole")
 SubClassOf(obo:PREFER_UNIT_0000176 obo:UO_0000076)
-
-
-############################
-#   Named Individuals
-############################
-
-# Individual: obo:PREFER_0000005 (acronym)
-
-AnnotationAssertion(rdfs:label obo:PREFER_0000005 "acronym"@en)
-ClassAssertion(oboInOwl:SynonymType obo:PREFER_0000005)
 
 
 )
