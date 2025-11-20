@@ -373,7 +373,7 @@ ObjectPropertyRange(obo:PREFER_8000005 <http://www.bioassayontology.org/bao#BAO_
 
 # Object Property: obo:PREFER_8000006 (uses bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000006 "x uses bioreactor y iff x is a process, y is a bioreactor, and y is somewhat used or involved in y.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000006 "x uses bioreactor y iff x is a process, y is a bioreactor, and x is somewhat used or involved in y.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000006 "uses bioreactor")
 SubObjectPropertyOf(obo:PREFER_8000006 obo:RO_0000057)
 InverseObjectProperties(obo:PREFER_8000006 obo:PREFER_8000007)
