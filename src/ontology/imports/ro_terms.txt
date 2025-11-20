@@ -1,3 +1,5 @@
-RO:0000052 # characteristic_of
-BFO:0000051 # has_part
 BFO:0000050 # part_of
+BFO:0000051 # has_part
+RO:0000052 # characteristic_of
+RO:0000056 # participates_in
+RO:0000057 # has_participant 
