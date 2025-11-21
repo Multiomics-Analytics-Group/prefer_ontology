@@ -491,9 +491,9 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable> obo:PREFER_0000009))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
 
-# Class: obo:PREFER_0000005 (culture alkalinity)
+# Class: obo:PREFER_0000005 (cultivation alkalinity variable)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000005 "culture alkalinity"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000005 "cultivation alkalinity variable"@en)
 SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000006 (calculated offline sample)
