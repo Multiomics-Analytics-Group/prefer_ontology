@@ -24,6 +24,7 @@ import_group:
     - id: iao
     - id: cl
       use_base: TRUE
+    - id: omo
     - id: ro
       use_base: TRUE
     - id: chebi
