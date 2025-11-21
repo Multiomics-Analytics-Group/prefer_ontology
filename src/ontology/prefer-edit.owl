@@ -289,7 +289,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has_dbxref)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -632,7 +632,6 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIO") oboInOwl:hasExactSynony
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000018 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
-SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000018 <http://semanticscience.org/resource/SIO_001050>)
 
 # Class: obo:PREFER_0000019 (temperature setpoint)
