@@ -501,9 +501,9 @@ SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 AnnotationAssertion(rdfs:label obo:PREFER_0000006 "calculated offline sample"@en)
 SubClassOf(obo:PREFER_0000006 obo:PREFER_9000002)
 
-# Class: obo:PREFER_0000007 (culture temperature)
+# Class: obo:PREFER_0000007 (cultivation temperature variable)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000007 "culture temperature"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000007 "cultivation temperature variable"@en)
 SubClassOf(obo:PREFER_0000007 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
