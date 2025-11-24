@@ -1831,6 +1831,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000150 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000150 "PREFER:0000150")
 AnnotationAssertion(rdfs:label obo:PREFER_0000150 "data acquisition mode")
+SubClassOf(obo:PREFER_0000150 obo:IAO_0000030)
 
 # Class: obo:PREFER_0000151 (inline measurement)
 
