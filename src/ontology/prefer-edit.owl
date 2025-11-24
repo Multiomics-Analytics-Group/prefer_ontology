@@ -144,7 +144,11 @@ Declaration(Class(obo:PREFER_0000104))
 Declaration(Class(obo:PREFER_0000105))
 Declaration(Class(obo:PREFER_0000106))
 Declaration(Class(obo:PREFER_0000107))
+Declaration(Class(obo:PREFER_0000108))
+Declaration(Class(obo:PREFER_0000109))
+Declaration(Class(obo:PREFER_0000110))
 Declaration(Class(obo:PREFER_0000111))
+Declaration(Class(obo:PREFER_0000112))
 Declaration(Class(obo:PREFER_0000113))
 Declaration(Class(obo:PREFER_0000115))
 Declaration(Class(obo:PREFER_0000117))
@@ -655,6 +659,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIO") oboInOwl:hasExactSynony
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000018 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
+SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000018 <http://semanticscience.org/resource/SIO_001050>)
 
 # Class: obo:PREFER_0000019 (temperature setpoint)
@@ -1607,6 +1612,23 @@ SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.
 SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
+# Class: obo:PREFER_0000108 (fermentation medium type)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000108 "fermentation medium type"@en)
+SubClassOf(obo:PREFER_0000108 obo:BFO_0000023)
+
+# Class: obo:PREFER_0000109 (batch medium)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000109 "BM")
+AnnotationAssertion(rdfs:label obo:PREFER_0000109 "batch medium"@en)
+SubClassOf(obo:PREFER_0000109 obo:PREFER_0000108)
+
+# Class: obo:PREFER_0000110 (feed medium)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000110 "FM")
+AnnotationAssertion(rdfs:label obo:PREFER_0000110 "feed medium"@en)
+SubClassOf(obo:PREFER_0000110 obo:PREFER_0000108)
+
 # Class: obo:PREFER_0000111 (residual compound amount)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000111 "The remaining amount of 'compound' left in the fermenter. It is calculated substracting the compound concentration measured offline, multiplied by the liquid volume downscaled to get the amount.")
@@ -1615,6 +1637,12 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000111 "PREFER:0000111")
 AnnotationAssertion(rdfs:label obo:PREFER_0000111 "residual compound amount")
 SubClassOf(obo:PREFER_0000111 obo:PREFER_0000006)
 SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
+
+# Class: obo:PREFER_0000112 (seed medium)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000112 "SM")
+AnnotationAssertion(rdfs:label obo:PREFER_0000112 "seed medium"@en)
+SubClassOf(obo:PREFER_0000112 obo:PREFER_0000108)
 
 # Class: obo:PREFER_0000113 (compound production rate)
 
