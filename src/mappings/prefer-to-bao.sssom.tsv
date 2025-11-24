@@ -1,0 +1,13 @@
+#curie_map:					
+#  PREFER: http://purl.obolibrary.org/obo/PREFER_					
+#  BAO: http://www.bioassayontology.org/bao#BAO_					
+#  ORCID: https://orcid.org/					
+#  obo: http://purl.obolibrary.org/obo/									
+#mapping_set_description: Mappings between the PREFER ontology and BAO.					
+#  - ORCID:0000-0001-7258-9596					
+#license: https://creativecommons.org/licenses/by/4.0/					
+#subject_source: obo:prefer.owl					
+#object_source: http://www.bioassayontology.org/bao/bao_complete.owl					
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+PREFER:0000011	fermentation medium	skos:narrowMatch	BAO:0000596	assay medium	semapv:ManualMappingCuration
+PREFER:0000014	bioreactor	skos:narrowMatch	BAO:0003118	instrument	semapv:ManualMappingCuration
