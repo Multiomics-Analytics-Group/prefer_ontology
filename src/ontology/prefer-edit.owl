@@ -407,7 +407,6 @@ SubObjectPropertyOf(obo:PREFER_8000009 obo:IAO_0000136)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000010 "x has fermentation culture type y iff x is a fermentation culture and y is the fermentation type of x.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000010 "has fermentation culture type")
-SubObjectPropertyOf(obo:PREFER_8000010 obo:RO_0000087)
 InverseObjectProperties(obo:PREFER_8000010 obo:PREFER_8000014)
 ObjectPropertyDomain(obo:PREFER_8000010 obo:PREFER_0000010)
 ObjectPropertyRange(obo:PREFER_8000010 obo:PREFER_0000200)
@@ -437,7 +436,7 @@ ObjectPropertyRange(obo:PREFER_8000013 obo:PREFER_0000189)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000014 "inverse of has fermentation culture type")
 AnnotationAssertion(rdfs:label obo:PREFER_8000014 "is fermentation culture type of"@en)
-SubObjectPropertyOf(obo:PREFER_8000014 obo:RO_0000081)
+SubObjectPropertyOf(obo:PREFER_8000014 obo:IAO_0000136)
 
 
 
@@ -867,7 +866,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") Annotation(oboInOwl:ha
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000038 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
 AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH")
-EquivalentClasses(obo:PREFER_0000038 ObjectIntersectionOf(obo:PATO_0001842 ObjectSomeValuesFrom(obo:RO_0000052 obo:PREFER_0000011)))
+EquivalentClasses(obo:PREFER_0000038 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(obo:PATO_0001842 ObjectSomeValuesFrom(obo:RO_0000052 obo:PREFER_0000011)))))
 SubClassOf(obo:PREFER_0000038 obo:PREFER_0000008)
 SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
