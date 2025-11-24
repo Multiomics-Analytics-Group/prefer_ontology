@@ -45,7 +45,6 @@ Declaration(Class(obo:PREFER_0000005))
 Declaration(Class(obo:PREFER_0000006))
 Declaration(Class(obo:PREFER_0000007))
 Declaration(Class(obo:PREFER_0000008))
-Declaration(Class(obo:PREFER_0000009))
 Declaration(Class(obo:PREFER_0000010))
 Declaration(Class(obo:PREFER_0000011))
 Declaration(Class(obo:PREFER_0000012))
@@ -109,6 +108,7 @@ Declaration(Class(obo:PREFER_0000069))
 Declaration(Class(obo:PREFER_0000070))
 Declaration(Class(obo:PREFER_0000071))
 Declaration(Class(obo:PREFER_0000072))
+Declaration(Class(obo:PREFER_0000073))
 Declaration(Class(obo:PREFER_0000075))
 Declaration(Class(obo:PREFER_0000077))
 Declaration(Class(obo:PREFER_0000078))
@@ -295,7 +295,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has_dbxref)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -489,7 +489,6 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000011 obo:PREFER
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell> obo:PREFER_0000012))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected> obo:PREFER_0000018))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_compound> obo:CHEBI_24431))
-SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable> obo:PREFER_0000009))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
 
 # Class: obo:PREFER_0000005 (cultivation alkalinity variable)
@@ -524,21 +523,6 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000008 "\"This condition, which may
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "cultivation condition")
 SubClassOf(obo:PREFER_0000008 obo:IAO_0000030)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
-
-# Class: obo:PREFER_0000009 (process variable)
-
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000009 "A technical parameter measured during a bioprocess, either through real-time (online, inline) or delayed (offline, atline) measurements, depending on the bioreactor setup. These variables are typically time-series data and are crucial for controlling and adjusting the initial parameters from cultivation conditions.")
-AnnotationAssertion(prefer1:BROADER obo:PREFER_0000009 "bioprocess observed variable")
-AnnotationAssertion(prefer1:BROADER obo:PREFER_0000009 "measured variable")
-AnnotationAssertion(prefer1:BROADER obo:PREFER_0000009 "observed variable")
-AnnotationAssertion(prefer1:BROADER obo:PREFER_0000009 "variable")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000009 "BAO:0002070")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000009 "bioprocess measured variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000009 "bioprocess variable")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000009 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000009 "PREFER:0000009")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000009 "\"These data typically include compound groups categorized as substrates, products, by-products, and chemical ingredients from the medium.\"")
-AnnotationAssertion(rdfs:label obo:PREFER_0000009 "process variable")
 
 # Class: obo:PREFER_0000010 (fermentation culture)
 
@@ -830,16 +814,14 @@ SubClassOf(obo:PREFER_0000034 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
 SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
-# Class: obo:PREFER_0000035 (final seed OD)
+# Class: obo:PREFER_0000035 (final seed optical density measurement)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000035 "The cell density of the seed culture for the actual experiment at the time it is inoculated to the bioreactor.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000035 "final seed culture OD")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000035 "final seed OD measurement")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000035 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000035 "PREFER:0000035")
-AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed OD")
-SubClassOf(obo:PREFER_0000035 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000010))
-SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
+AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed optical density measurement")
+SubClassOf(obo:PREFER_0000035 obo:PREFER_0000073)
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000036 (initial culture volume measurement)
@@ -1298,7 +1280,12 @@ SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(rdfs:label obo:PREFER_0000072 "cultivation respiratory metrics variable"@en)
 SubClassOf(obo:PREFER_0000072 obo:PREFER_0000008)
-SubClassOf(obo:PREFER_0000072 obo:PREFER_9000001)
+
+# Class: obo:PREFER_0000073 (cultivation seed variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000073 "cultivation seed variable"@en)
+SubClassOf(obo:PREFER_0000073 obo:PREFER_0000008)
+SubClassOf(obo:PREFER_0000073 obo:PREFER_9000001)
 
 # Class: obo:PREFER_0000075 (feed rate gravimetric)
 
