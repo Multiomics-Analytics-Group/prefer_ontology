@@ -141,6 +141,7 @@ Declaration(Class(obo:PREFER_0000101))
 Declaration(Class(obo:PREFER_0000102))
 Declaration(Class(obo:PREFER_0000103))
 Declaration(Class(obo:PREFER_0000104))
+Declaration(Class(obo:PREFER_0000105))
 Declaration(Class(obo:PREFER_0000106))
 Declaration(Class(obo:PREFER_0000107))
 Declaration(Class(obo:PREFER_0000111))
@@ -1576,6 +1577,14 @@ SubClassOf(obo:PREFER_0000104 obo:PREFER_0000156)
 SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
 SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000176))
 
+# Class: obo:PREFER_0000105 (seed culture)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "inoculum culture")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "pre-culture")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "starter culture")
+AnnotationAssertion(rdfs:label obo:PREFER_0000105 "seed culture"@en)
+SubClassOf(obo:PREFER_0000105 obo:PREFER_0000200)
+
 # Class: obo:PREFER_0000106 (oxygen yield (biomass))
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000106 "The yield of O2 consumed per carbon mole of biomass (X), describing how much O2 is consumed relative to the amount of biomass generated.")
@@ -2103,7 +2112,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000201 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000201 "PREFER:0000201")
 AnnotationAssertion(rdfs:label obo:PREFER_0000201 "pre-optional culture")
-SubClassOf(obo:PREFER_0000201 obo:PREFER_0000200)
+SubClassOf(obo:PREFER_0000201 obo:PREFER_0000105)
 
 # Class: obo:PREFER_0000202 (pre-final culture)
 
@@ -2111,14 +2120,15 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000202 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000202 "PREFER:0000202")
 AnnotationAssertion(rdfs:label obo:PREFER_0000202 "pre-final culture")
-SubClassOf(obo:PREFER_0000202 obo:PREFER_0000200)
+SubClassOf(obo:PREFER_0000202 obo:PREFER_0000105)
 
-# Class: obo:PREFER_0000203 (main culture)
+# Class: obo:PREFER_0000203 (production culture)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000203 "The culture seed used for the actual experiment, usually in a bioreactor.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000203 "The main culture used for the actual experiment, usually in a bioreactor.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000203 "main culture")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000203 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000203 "PREFER:0000203")
-AnnotationAssertion(rdfs:label obo:PREFER_0000203 "main culture")
+AnnotationAssertion(rdfs:label obo:PREFER_0000203 "production culture")
 SubClassOf(obo:PREFER_0000203 obo:PREFER_0000200)
 
 # Class: obo:PREFER_0000204 (strain)
