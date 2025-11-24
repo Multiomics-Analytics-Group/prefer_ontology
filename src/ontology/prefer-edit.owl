@@ -1921,6 +1921,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSyn
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000180 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000180 "PREFER:0000180")
 AnnotationAssertion(rdfs:label obo:PREFER_0000180 "operational mode")
+SubClassOf(obo:PREFER_0000180 obo:IAO_0000030)
 
 # Class: obo:PREFER_0000181 (batch)
 
