@@ -81,6 +81,7 @@ Declaration(Class(obo:PREFER_0000041))
 Declaration(Class(obo:PREFER_0000042))
 Declaration(Class(obo:PREFER_0000043))
 Declaration(Class(obo:PREFER_0000044))
+Declaration(Class(obo:PREFER_0000045))
 Declaration(Class(obo:PREFER_0000047))
 Declaration(Class(obo:PREFER_0000048))
 Declaration(Class(obo:PREFER_0000049))
@@ -292,7 +293,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has_dbxref)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -815,13 +816,15 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000033 "PREFER:0000033")
 AnnotationAssertion(rdfs:label obo:PREFER_0000033 "cultivation dissolved oxygen variable")
 SubClassOf(obo:PREFER_0000033 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000034 (starting OD)
+# Class: obo:PREFER_0000034 (starting optical density)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000034 "The initial optical density (OD) of the fermentation. It is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600nm or 900nm wavelength) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume).")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000034 "starting OD")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000034 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000034 "PREFER:0000034")
-AnnotationAssertion(rdfs:label obo:PREFER_0000034 "starting OD")
-SubClassOf(obo:PREFER_0000034 obo:PREFER_0000009)
+AnnotationAssertion(rdfs:label obo:PREFER_0000034 "starting optical density")
+SubClassOf(obo:PREFER_0000034 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000034 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
 SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
@@ -946,6 +949,11 @@ SubClassOf(obo:PREFER_0000044 obo:PREFER_0000018)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000022))
+
+# Class: obo:PREFER_0000045 (cultivation optical density variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000045 "cultivation optical density variable"@en)
+SubClassOf(obo:PREFER_0000045 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000047 (acid volume)
 
@@ -1128,15 +1136,16 @@ SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER
 SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000040))
 SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
-# Class: obo:PREFER_0000060 (OD measurement)
+# Class: obo:PREFER_0000060 (optical density measurement)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C85776") Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000060 "Absorbance measurement of the culture's turbidity at a specified wavelength, commonly used as a proxy for biomass concentration.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000060 "NCIT:C85776")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000060 "optical density measurement")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000060 "OD measurement")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000060 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000060 "PREFER:0000060")
-AnnotationAssertion(rdfs:label obo:PREFER_0000060 "OD measurement")
-SubClassOf(obo:PREFER_0000060 obo:PREFER_0000018)
+AnnotationAssertion(rdfs:label obo:PREFER_0000060 "optical density measurement")
+SubClassOf(obo:PREFER_0000060 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000060 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000061 (oxygen uptake rate)
