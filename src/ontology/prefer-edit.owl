@@ -38,6 +38,7 @@ Declaration(Class(obo:NCIT_C48569))
 Declaration(Class(obo:NCIT_C70469))
 Declaration(Class(obo:NCIT_C73681))
 Declaration(Class(obo:PREFER_0000000))
+Declaration(Class(obo:PREFER_0000001))
 Declaration(Class(obo:PREFER_0000002))
 Declaration(Class(obo:PREFER_0000003))
 Declaration(Class(obo:PREFER_0000004))
@@ -45,6 +46,7 @@ Declaration(Class(obo:PREFER_0000005))
 Declaration(Class(obo:PREFER_0000006))
 Declaration(Class(obo:PREFER_0000007))
 Declaration(Class(obo:PREFER_0000008))
+Declaration(Class(obo:PREFER_0000009))
 Declaration(Class(obo:PREFER_0000010))
 Declaration(Class(obo:PREFER_0000011))
 Declaration(Class(obo:PREFER_0000012))
@@ -453,6 +455,11 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "umbrella term for online gr
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "microbial kinetic"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_9000002)
 
+# Class: obo:PREFER_0000001 (offline sample measurement)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000001 "offline sample measurement"@en)
+SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
+
 # Class: obo:PREFER_0000002 (fermentation project)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments.")
@@ -523,6 +530,11 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000008 "\"This condition, which may
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "cultivation condition")
 SubClassOf(obo:PREFER_0000008 obo:IAO_0000030)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
+
+# Class: obo:PREFER_0000009 (seed culture measurement variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000009 "seed culture measurement variable"@en)
+SubClassOf(obo:PREFER_0000009 obo:PREFER_9000001)
 
 # Class: obo:PREFER_0000010 (fermentation culture)
 
@@ -821,6 +833,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000035 "final seed OD m
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000035 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000035 "PREFER:0000035")
 AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed optical density measurement")
+SubClassOf(obo:PREFER_0000035 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000035 obo:PREFER_0000073)
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
@@ -925,13 +938,13 @@ SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
-# Class: obo:PREFER_0000044 (sample mass)
+# Class: obo:PREFER_0000044 (sample mass measurement)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000044 "The mass of the sample taken from a single run to quantify the amount of biomass, product, and other compounds.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000044 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000044 "PREFER:0000044")
-AnnotationAssertion(rdfs:label obo:PREFER_0000044 "sample mass")
-SubClassOf(obo:PREFER_0000044 obo:PREFER_0000018)
+AnnotationAssertion(rdfs:label obo:PREFER_0000044 "sample mass measurement")
+SubClassOf(obo:PREFER_0000044 obo:PREFER_0000001)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000022))
@@ -1262,7 +1275,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000070 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000070 "PREFER:0000070")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000070 "\"Gases such as O2 and CO2 are considered compounds but independently.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000070 "gas concentration")
-SubClassOf(obo:PREFER_0000070 obo:PREFER_0000018)
+SubClassOf(obo:PREFER_0000070 obo:PREFER_0000001)
 SubClassOf(obo:PREFER_0000070 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000070 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000175))
 
@@ -1272,7 +1285,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000071 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000071 "PREFER:0000071")
 AnnotationAssertion(rdfs:label obo:PREFER_0000071 "biomass concentration")
-SubClassOf(obo:PREFER_0000071 obo:PREFER_0000018)
+SubClassOf(obo:PREFER_0000071 obo:PREFER_0000001)
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000175))
 
@@ -1285,7 +1298,6 @@ SubClassOf(obo:PREFER_0000072 obo:PREFER_0000008)
 
 AnnotationAssertion(rdfs:label obo:PREFER_0000073 "cultivation seed variable"@en)
 SubClassOf(obo:PREFER_0000073 obo:PREFER_0000008)
-SubClassOf(obo:PREFER_0000073 obo:PREFER_9000001)
 
 # Class: obo:PREFER_0000075 (feed rate gravimetric)
 
