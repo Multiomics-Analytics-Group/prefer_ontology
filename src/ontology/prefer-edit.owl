@@ -15,7 +15,6 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Ontology(<http://purl.obolibrary.org/obo/prefer.owl>
 Import(<http://purl.obolibrary.org/obo/prefer/components/foundation.owl>)
 Import(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>)
-Import(<http://www.geneontology.org/formats/oboInOwl>)
 Annotation(obo:IAO_0000700 obo:BFO_0000019)
 Annotation(obo:IAO_0000700 obo:BFO_0000023)
 Annotation(obo:IAO_0000700 obo:BFO_0000040)
@@ -229,6 +228,7 @@ Declaration(Class(obo:UO_0000270))
 Declaration(Class(obo:XCO_0000000))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001050>))
+Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0000596>))
 Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0003118>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
@@ -257,8 +257,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operat
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
-Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
-Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002922>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -294,7 +292,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has_dbxref)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -582,6 +580,8 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasNarrowSy
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000012 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
+EquivalentClasses(obo:PREFER_0000012 ObjectIntersectionOf(obo:CL_0000000 ObjectSomeValuesFrom(obo:RO_0000087 obo:CHEBI_35223)))
+SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000206))
 SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000207))
 
@@ -690,6 +690,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000021 "pH control base
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000021 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000021 "PREFER:0000021")
 AnnotationAssertion(rdfs:label obo:PREFER_0000021 "pH base solution")
+SubClassOf(obo:PREFER_0000021 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000021 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000038))
 
 # Class: obo:PREFER_0000022 (pH acid solution)
@@ -699,6 +700,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000022 "pH control acid
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000022 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000022 "PREFER:0000022")
 AnnotationAssertion(rdfs:label obo:PREFER_0000022 "pH acid solution")
+SubClassOf(obo:PREFER_0000022 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000022 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000038))
 
 # Class: obo:PREFER_0000023 (core balance)
@@ -2053,6 +2055,7 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000205 "ENVO:02000008")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000205 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000205 "PREFER:0000205")
 AnnotationAssertion(rdfs:label obo:PREFER_0000205 "cell culture")
+SubClassOf(obo:PREFER_0000205 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000206 (microbial culture)
 
@@ -2061,6 +2064,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000206 "microbiological
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000206 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000206 "PREFER:0000206")
 AnnotationAssertion(rdfs:label obo:PREFER_0000206 "microbial culture")
+SubClassOf(obo:PREFER_0000206 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000207 (tissue culture)
 
@@ -2068,6 +2072,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000207 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000207 "PREFER:0000207")
 AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
+SubClassOf(obo:PREFER_0000207 obo:BFO_0000040)
 
 # Class: obo:PREFER_9000002 (process calculated variable)
 
@@ -2117,7 +2122,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_UNIT_0000164 "mole of ca
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000164 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000164 "PREFER_UNIT:0000164")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000164 "carbon mole")
-SubClassOf(obo:PREFER_UNIT_0000164 obo:CHEBI_64708)
+SubClassOf(obo:PREFER_UNIT_0000164 <http://semanticscience.org/resource/SIO_000074>)
 SubClassOf(obo:PREFER_UNIT_0000164 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_UNIT_0000165 (mole per carbon mole)
