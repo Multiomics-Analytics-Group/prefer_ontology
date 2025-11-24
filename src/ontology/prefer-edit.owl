@@ -121,6 +121,8 @@ Declaration(Class(obo:PREFER_0000081))
 Declaration(Class(obo:PREFER_0000082))
 Declaration(Class(obo:PREFER_0000083))
 Declaration(Class(obo:PREFER_0000084))
+Declaration(Class(obo:PREFER_0000085))
+Declaration(Class(obo:PREFER_0000086))
 Declaration(Class(obo:PREFER_0000087))
 Declaration(Class(obo:PREFER_0000089))
 Declaration(Class(obo:PREFER_0000091))
@@ -1399,6 +1401,16 @@ SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.
 AnnotationAssertion(rdfs:label obo:PREFER_0000084 "offline sample measurement carbon dioxide"@en)
 SubClassOf(obo:PREFER_0000084 obo:PREFER_0000001)
 
+# Class: obo:PREFER_0000085 (micro scale bioreactor)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000085 "micro scale bioreactor"@en)
+SubClassOf(obo:PREFER_0000085 obo:PREFER_0000186)
+
+# Class: obo:PREFER_0000086 (bench-top scale bioreactor)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000086 "bench-top scale bioreactor"@en)
+SubClassOf(obo:PREFER_0000086 obo:PREFER_0000186)
+
 # Class: obo:PREFER_0000087 (substrate uptake rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000087 "The rate at which substrate is taken up by the cells during the bioprocess.")
@@ -1965,30 +1977,31 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000185 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000185 "PREFER:0000185")
 AnnotationAssertion(rdfs:label obo:PREFER_0000185 "bioreactor scale")
+SubClassOf(obo:PREFER_0000185 obo:BFO_0000019)
 
-# Class: obo:PREFER_0000186 (lab-scale)
+# Class: obo:PREFER_0000186 (lab-scale bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale typically used for small-scale experiments and research, ranging from a few milliliters to several liters in volume.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000186 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000186 "PREFER:0000186")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000186 "\"For instance, minibioreactors (50-500 mL) such as Ambr or Pioreactors, or micro bioreactors (< 10 mL) fall within this category.\" [PREFER]")
-AnnotationAssertion(rdfs:label obo:PREFER_0000186 "lab-scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000186 "lab-scale bioreactor")
 SubClassOf(obo:PREFER_0000186 obo:PREFER_0000185)
 
-# Class: obo:PREFER_0000187 (pilot-scale)
+# Class: obo:PREFER_0000187 (pilot-scale bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000187 "A bioreactor scale that serves as an intermediate step between lab-scale and industrial-scale, typically ranging from several liters to a few hundred liters in volume.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000187 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000187 "PREFER:0000187")
-AnnotationAssertion(rdfs:label obo:PREFER_0000187 "pilot-scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000187 "pilot-scale bioreactor")
 SubClassOf(obo:PREFER_0000187 obo:PREFER_0000185)
 
-# Class: obo:PREFER_0000188 (industrial-scale)
+# Class: obo:PREFER_0000188 (industrial-scale bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in volume.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000188 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000188 "PREFER:0000188")
-AnnotationAssertion(rdfs:label obo:PREFER_0000188 "industrial-scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000188 "industrial-scale bioreactor")
 SubClassOf(obo:PREFER_0000188 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000189 (feed profile)
