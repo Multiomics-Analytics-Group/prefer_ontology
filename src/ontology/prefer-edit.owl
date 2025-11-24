@@ -82,6 +82,7 @@ Declaration(Class(obo:PREFER_0000042))
 Declaration(Class(obo:PREFER_0000043))
 Declaration(Class(obo:PREFER_0000044))
 Declaration(Class(obo:PREFER_0000045))
+Declaration(Class(obo:PREFER_0000046))
 Declaration(Class(obo:PREFER_0000047))
 Declaration(Class(obo:PREFER_0000048))
 Declaration(Class(obo:PREFER_0000049))
@@ -840,7 +841,7 @@ SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000039))
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
-# Class: obo:PREFER_0000036 (initial culture volume)
+# Class: obo:PREFER_0000036 (initial culture volume measurement)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000036 "The total volume of the culture at the beginning of the bioprocess, representing the sum of culture medium and inoculum.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "initial volume")
@@ -848,8 +849,9 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting cultur
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting volume")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000036 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000036 "PREFER:0000036")
-AnnotationAssertion(rdfs:label obo:PREFER_0000036 "initial culture volume")
-SubClassOf(obo:PREFER_0000036 obo:PREFER_0000009)
+AnnotationAssertion(rdfs:label obo:PREFER_0000036 "initial culture volume measurement")
+SubClassOf(obo:PREFER_0000036 obo:PREFER_0000046)
+SubClassOf(obo:PREFER_0000036 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
 SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000099))
 
@@ -933,7 +935,8 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000043 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000043 "PREFER:0000043")
 AnnotationAssertion(rdfs:label obo:PREFER_0000043 "volume measurement")
-SubClassOf(obo:PREFER_0000043 obo:PREFER_0000009)
+SubClassOf(obo:PREFER_0000043 obo:PREFER_0000046)
+SubClassOf(obo:PREFER_0000043 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000152))
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000098))
@@ -954,6 +957,11 @@ SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(rdfs:label obo:PREFER_0000045 "cultivation optical density variable"@en)
 SubClassOf(obo:PREFER_0000045 obo:PREFER_0000008)
+
+# Class: obo:PREFER_0000046 (cultivation volume variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000046 "cultivation volume variable"@en)
+SubClassOf(obo:PREFER_0000046 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000047 (acid volume)
 
