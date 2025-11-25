@@ -580,7 +580,6 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000011 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000011 "PREFER:0000011")
 AnnotationAssertion(rdfs:label obo:PREFER_0000011 "fermentation medium")
-EquivalentClasses(obo:PREFER_0000011 ObjectIntersectionOf(<http://www.bioassayontology.org/bao#BAO_0000596> ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000004)))
 SubClassOf(obo:PREFER_0000011 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(obo:PREFER_8000004 obo:CHEBI_24431))
 
@@ -735,8 +734,8 @@ SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
 # Class: obo:PREFER_0000025 (dissolved oxygen setpoint)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000025 "The target value for dissolved oxygen.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "dissolved oxygen control setpoint")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000025 "DO setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "dissolved oxygen control setpoint")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000025 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000025 "PREFER:0000025")
 AnnotationAssertion(rdfs:label obo:PREFER_0000025 "dissolved oxygen setpoint")
