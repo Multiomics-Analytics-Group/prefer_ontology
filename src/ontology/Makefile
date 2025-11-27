@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                0871e4d0588447e5cb165eb9ede0ade3d9e748b3ec601c943a66940238947696
+CONFIG_HASH=                4ad239467f360fa1d9fd6ee90c6803354a4dc4fae921bfce8cd68ffb4e3d08ad
 
 
 # ----------------------------------------
@@ -216,7 +216,7 @@ all_subsets: $(SUBSET_FILES)
 # ----------------------------------------
 
 
-MAPPINGS =  prefer-external
+MAPPINGS = 
 
 
 MAPPING_FILES = $(foreach p, $(MAPPINGS), $(MAPPINGDIR)/$(p).sssom.tsv)

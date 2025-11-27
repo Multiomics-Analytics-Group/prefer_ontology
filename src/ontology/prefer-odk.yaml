@@ -11,10 +11,10 @@ export_formats:
   - owl
   - obo
   - json
-sssom_mappingset_group:
-  products:
-    - id: prefer-external
-      maintainance: manual
+#sssom_mappingset_group:
+#  products:
+#    - id: prefer-external
+#      maintainance: manual
 components:
   products:
       - filename: foundation.owl
