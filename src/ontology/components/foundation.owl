@@ -65,5 +65,6 @@ SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:UO_0000000 (unit)
 
+AnnotationAssertion(rdfs:label obo:UO_0000000 "unit")
 SubClassOf(obo:UO_0000000 obo:IAO_0000030)
 )
