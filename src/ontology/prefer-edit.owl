@@ -249,7 +249,6 @@ Declaration(Class(obo:UO_0000190))
 Declaration(Class(obo:UO_0000195))
 Declaration(Class(obo:UO_0000196))
 Declaration(Class(obo:UO_0000270))
-Declaration(Class(obo:XCO_0000000))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001050>))
 Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0000596>))
@@ -2294,7 +2293,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_UNIT_0000164 "mole of ca
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000164 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000164 "PREFER_UNIT:0000164")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000164 "carbon mole")
-SubClassOf(obo:PREFER_UNIT_0000164 <http://semanticscience.org/resource/SIO_000074>)
+SubClassOf(obo:PREFER_UNIT_0000164 obo:UO_0000000)
 SubClassOf(obo:PREFER_UNIT_0000164 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 
 # Class: obo:PREFER_UNIT_0000165 (mole per carbon mole)
@@ -2331,7 +2330,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C85601") oboInOwl:hasExa
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000169 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000169 "PREFER_UNIT:0000169")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000169 "gram per hour")
-SubClassOf(obo:PREFER_UNIT_0000169 obo:NCIT_C48569)
+SubClassOf(obo:PREFER_UNIT_0000169 obo:UO_0000000)
 
 # Class: obo:PREFER_UNIT_0000170 (mole per hour)
 
@@ -2341,7 +2340,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynon
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000170 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000170 "PREFER_UNIT:0000170")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000170 "mole per hour")
-SubClassOf(obo:PREFER_UNIT_0000170 obo:NCIT_C179816)
+SubClassOf(obo:PREFER_UNIT_0000170 obo:UO_0000000)
 
 # Class: obo:PREFER_UNIT_0000171 (millimole per hour)
 
@@ -2351,7 +2350,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynon
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000171 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000171 "PREFER_UNIT:0000171")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000171 "millimole per hour")
-SubClassOf(obo:PREFER_UNIT_0000171 obo:NCIT_C179816)
+SubClassOf(obo:PREFER_UNIT_0000171 obo:UO_0000000)
 
 # Class: obo:PREFER_UNIT_0000172 (liters per minute)
 
@@ -2406,7 +2405,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_UNIT_0000175 "cmol/h")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000175 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000175 "PREFER_UNIT:0000175")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000175 "carbon mole per hour")
-SubClassOf(obo:PREFER_UNIT_0000175 obo:NCIT_C48569)
+SubClassOf(obo:PREFER_UNIT_0000175 obo:UO_0000000)
 SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:UO_0000032))
 SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000164))
 
