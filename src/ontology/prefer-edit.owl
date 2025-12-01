@@ -597,7 +597,6 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasNarrowSy
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000012 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
-EquivalentClasses(obo:PREFER_0000012 ObjectIntersectionOf(obo:CL_0000000 ObjectSomeValuesFrom(obo:RO_0000087 obo:CHEBI_35223)))
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000206))
 SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000207))
@@ -608,8 +607,9 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000013 "NCBITaxon:1")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000013 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000013 "PREFER:0000013")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18586729") rdfs:comment obo:PREFER_0000013 "Taxon in PREFER refers to the quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon")
-SubClassOf(obo:PREFER_0000013 obo:NCBITaxon_131567)
+SubClassOf(obo:PREFER_0000013 obo:BFO_0000019)
 
 # Class: obo:PREFER_0000014 (bioreactor)
 
@@ -621,7 +621,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000014 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
-SubClassOf(obo:PREFER_0000014 <http://www.bioassayontology.org/bao#BAO_0003118>)
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000185))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000181))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000182))
@@ -2218,7 +2217,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000204 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000204 "PREFER:0000204")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000204 "\"Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics.\" [doi:10.1093/jaoac/85.2.524, PREFER]")
 AnnotationAssertion(rdfs:label obo:PREFER_0000204 "strain")
-SubClassOf(obo:PREFER_0000204 <http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>)
+SubClassOf(obo:PREFER_0000204 obo:BFO_0000019)
 
 # Class: obo:PREFER_0000205 (cell culture)
 
