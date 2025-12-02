@@ -30,9 +30,6 @@ Annotation(terms:contributor <https://orcid.org/0000-0002-9163-7730>)
 Annotation(terms:contributor <https://orcid.org/0009-0009-0018-4253>)
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
 
-Declaration(Class(obo:CHEBI_24431))
-Declaration(Class(obo:CHEBI_64708))
-Declaration(Class(obo:NCBITaxon_131567))
 Declaration(Class(obo:NCIT_C179816))
 Declaration(Class(obo:NCIT_C48569))
 Declaration(Class(obo:NCIT_C70469))
@@ -251,9 +248,6 @@ Declaration(Class(obo:UO_0000196))
 Declaration(Class(obo:UO_0000270))
 Declaration(Class(obo:XCO_0000000))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_001050>))
-Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0000596>))
-Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0003118>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:PREFER_8000000))
@@ -316,7 +310,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -396,7 +390,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000005 "x is_medium_ingredient_o
 AnnotationAssertion(rdfs:label obo:PREFER_8000005 "is medium ingredient of"@en)
 SubObjectPropertyOf(obo:PREFER_8000005 obo:BFO_0000050)
 ObjectPropertyDomain(obo:PREFER_8000005 obo:CHEBI_24431)
-ObjectPropertyRange(obo:PREFER_8000005 <http://www.bioassayontology.org/bao#BAO_0000596>)
+ObjectPropertyRange(obo:PREFER_8000005 obo:PREFER_0000011)
 
 # Object Property: obo:PREFER_8000006 (uses bioreactor)
 
@@ -621,7 +615,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000014 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
-SubClassOf(obo:PREFER_0000014 <http://www.bioassayontology.org/bao#BAO_0003118>)
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000185))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000181))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000182))
@@ -666,7 +659,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000018 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
 SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
-SubClassOf(obo:PREFER_0000018 <http://semanticscience.org/resource/SIO_001050>)
 
 # Class: obo:PREFER_0000019 (temperature setpoint)
 
