@@ -310,7 +310,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -1618,9 +1618,9 @@ SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.
 SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000013))
 SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000021))
 
-# Class: obo:PREFER_0000108 (fermentation medium type)
+# Class: obo:PREFER_0000108 (fermentation medium role)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000108 "fermentation medium type"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000108 "fermentation medium role"@en)
 SubClassOf(obo:PREFER_0000108 obo:BFO_0000023)
 
 # Class: obo:PREFER_0000109 (batch medium)
@@ -2168,12 +2168,12 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000195 "PREFER:0000195")
 AnnotationAssertion(rdfs:label obo:PREFER_0000195 "exponential-linear feeding rate")
 SubClassOf(obo:PREFER_0000195 obo:PREFER_0000189)
 
-# Class: obo:PREFER_0000200 (fermentation culture type)
+# Class: obo:PREFER_0000200 (fermentation culture role)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000200 "")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000200 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000200 "PREFER:0000200")
-AnnotationAssertion(rdfs:label obo:PREFER_0000200 "fermentation culture type")
+AnnotationAssertion(rdfs:label obo:PREFER_0000200 "fermentation culture role")
 SubClassOf(obo:PREFER_0000200 obo:BFO_0000023)
 
 # Class: obo:PREFER_0000201 (pre-optional culture)
