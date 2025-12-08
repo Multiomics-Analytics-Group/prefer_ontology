@@ -466,10 +466,6 @@ SubObjectPropertyOf(obo:PREFER_8000014 obo:IAO_0000136)
 #   Classes
 ############################
 
-# Class: obo:BFO_0000023 (role)
-
-SubClassOf(obo:BFO_0000023 obo:BFO_0000015)
-
 # Class: obo:PREFER_0000000 (microbial kinetic)
 
 AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "umbrella term for online growth tracking, specifically cell mass fluxes as rates.")
