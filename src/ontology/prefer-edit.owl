@@ -202,8 +202,6 @@ Declaration(Class(obo:PREFER_0000193))
 Declaration(Class(obo:PREFER_0000194))
 Declaration(Class(obo:PREFER_0000195))
 Declaration(Class(obo:PREFER_0000200))
-Declaration(Class(obo:PREFER_0000201))
-Declaration(Class(obo:PREFER_0000202))
 Declaration(Class(obo:PREFER_0000203))
 Declaration(Class(obo:PREFER_0000204))
 Declaration(Class(obo:PREFER_0000205))
@@ -1594,6 +1592,7 @@ SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000105 (seed culture)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000105 "A fermentation culture that serves as the inoculum for initiating or scaling up another fermentation culture.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "inoculum culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "pre-culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "starter culture")
@@ -2174,31 +2173,15 @@ SubClassOf(obo:PREFER_0000195 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000200 (fermentation culture role)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000200 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000200 "A role that inheres in a fermentation culture and that involves the culture participating in, enabling or initiating a fermentation process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000200 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000200 "PREFER:0000200")
 AnnotationAssertion(rdfs:label obo:PREFER_0000200 "fermentation culture role")
 SubClassOf(obo:PREFER_0000200 obo:BFO_0000023)
 
-# Class: obo:PREFER_0000201 (pre-optional culture)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000201 "The first ssed, optional, usually cultivated in a flask.")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000201 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000201 "PREFER:0000201")
-AnnotationAssertion(rdfs:label obo:PREFER_0000201 "pre-optional culture")
-SubClassOf(obo:PREFER_0000201 obo:PREFER_0000105)
-
-# Class: obo:PREFER_0000202 (pre-final culture)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000202 "The second seed, usually cultivated in a flask but it could also be in a bioreactor.")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000202 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000202 "PREFER:0000202")
-AnnotationAssertion(rdfs:label obo:PREFER_0000202 "pre-final culture")
-SubClassOf(obo:PREFER_0000202 obo:PREFER_0000105)
-
 # Class: obo:PREFER_0000203 (production culture)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000203 "The main culture used for the actual experiment, usually in a bioreactor.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000203 "A fermentation culture that is involved in carrying out the main fermentation process to generate the desired product or cell biomass.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000203 "main culture")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000203 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000203 "PREFER:0000203")
