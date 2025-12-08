@@ -864,8 +864,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000035 "final seed OD m
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000035 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000035 "PREFER:0000035")
 AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed optical density measurement")
-SubClassOf(obo:PREFER_0000035 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000035 obo:PREFER_0000073)
+SubClassOf(obo:PREFER_0000035 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000036 (initial culture volume measurement)
