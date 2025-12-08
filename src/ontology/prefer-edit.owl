@@ -61,6 +61,7 @@ Declaration(Class(obo:PREFER_0000020))
 Declaration(Class(obo:PREFER_0000021))
 Declaration(Class(obo:PREFER_0000022))
 Declaration(Class(obo:PREFER_0000023))
+Declaration(Class(obo:PREFER_0000024))
 Declaration(Class(obo:PREFER_0000025))
 Declaration(Class(obo:PREFER_0000026))
 Declaration(Class(obo:PREFER_0000027))
@@ -730,6 +731,11 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000023 "balance metric"
 AnnotationAssertion(rdfs:label obo:PREFER_0000023 "core balance"@en)
 SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
 
+# Class: obo:PREFER_0000024 (cultivation fermentation medium variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000024 "cultivation fermentation medium variable"@en)
+SubClassOf(obo:PREFER_0000024 obo:PREFER_0000008)
+
 # Class: obo:PREFER_0000025 (dissolved oxygen setpoint)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000025 "The target value for dissolved oxygen.")
@@ -886,13 +892,14 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000037 "cultivation feed variable")
 SubClassOf(obo:PREFER_0000037 obo:PREFER_0000008)
 SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(obo:PREFER_8000013 obo:PREFER_0000189))
 
-# Class: obo:PREFER_0000038 (fermentation medium pH)
+# Class: obo:PREFER_0000038 (fermentation medium pH measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000038 "The negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") obo:IAO_0000115 obo:PREFER_0000038 "The negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000038 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
-AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH")
-EquivalentClasses(obo:PREFER_0000038 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(obo:PATO_0001842 ObjectSomeValuesFrom(obo:RO_0000052 obo:PREFER_0000011)))))
+AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH measurement")
+SubClassOf(obo:PREFER_0000038 obo:PREFER_0000024)
+SubClassOf(obo:PREFER_0000038 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
 # Class: obo:PREFER_0000039 (dissolved oxygen measurement)
