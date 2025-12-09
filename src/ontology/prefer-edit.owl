@@ -1623,18 +1623,21 @@ SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000108 (fermentation medium role)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000108 "A role that inheres in a fermentation medium and that involves the medium supporting the growth of a fermentation culture by providing nutrients, physicochemical conditions, or specific additives.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000108 "fermentation medium role"@en)
 SubClassOf(obo:PREFER_0000108 obo:BFO_0000023)
 
 # Class: obo:PREFER_0000109 (batch medium)
 
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000109 "BM")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000109 "A fermentation medium role that, when realized, involves supporting a batch fermentation process in which all nutrients are provided at the start of the process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000109 "BM")
 AnnotationAssertion(rdfs:label obo:PREFER_0000109 "batch medium"@en)
 SubClassOf(obo:PREFER_0000109 obo:PREFER_0000108)
 
 # Class: obo:PREFER_0000110 (feed medium)
 
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000110 "FM")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000110 "A fermentation medium role that, when realized, involves supporting a fed-batch fermentation process by providing nutrients or substrates in a rate based on the feed profile type (e.g. constant, exponential,etc).")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000110 "FM")
 AnnotationAssertion(rdfs:label obo:PREFER_0000110 "feed medium"@en)
 SubClassOf(obo:PREFER_0000110 obo:PREFER_0000108)
 
@@ -1649,7 +1652,9 @@ SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000112 (seed medium)
 
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000112 "SM")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000112 "A fermentation medium role that, when realized, involves supporting the growth and propagation of a seed culture used to inoculate to the production culture(main experimental culture).")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000112 "SM")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000112 "starter medium")
 AnnotationAssertion(rdfs:label obo:PREFER_0000112 "seed medium"@en)
 SubClassOf(obo:PREFER_0000112 obo:PREFER_0000108)
 
