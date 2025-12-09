@@ -1592,7 +1592,7 @@ SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000105 (seed culture)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000105 "A fermentation culture that serves as the inoculum for initiating or scaling up another fermentation culture.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000105 "A fermentation culture role that serves as the inoculum for initiating or scaling up another fermentation culture.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "inoculum culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "pre-culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "starter culture")
@@ -2186,7 +2186,7 @@ SubClassOf(obo:PREFER_0000200 obo:BFO_0000023)
 
 # Class: obo:PREFER_0000203 (production culture)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000203 "A fermentation culture that is involved in carrying out the main fermentation process to generate the desired product or cell biomass.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000203 "A fermentation culture role that is involved in carrying out the main fermentation process to generate the desired product or cell biomass.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000203 "main culture")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000203 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000203 "PREFER:0000203")
