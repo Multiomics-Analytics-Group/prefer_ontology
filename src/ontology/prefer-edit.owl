@@ -549,7 +549,7 @@ SubClassOf(obo:PREFER_0000009 obo:PREFER_9000001)
 
 # Class: obo:PREFER_0000010 (fermentation culture)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI") Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000010 "Cultured cell population.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI") obo:IAO_0000115 obo:PREFER_0000010 "Cultured cell population.")
 AnnotationAssertion(prefer:culture_id obo:PREFER_0000010 " ")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0001876") oboInOwl:hasBroadSynonym obo:PREFER_0000010 "cell culture")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ENVO:03600040") oboInOwl:hasBroadSynonym obo:PREFER_0000010 "culture")
@@ -568,7 +568,7 @@ SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:PREFER_8000010 obo:PREFER
 
 # Class: obo:PREFER_0000011 (fermentation medium)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000011 "An aqueous solution used for ferementation containing macronutrients, micronutrients and buffering agents.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000011 "An aqueous solution used for ferementation containing macronutrients, micronutrients and buffering agents.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000011 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000011 "PREFER:0000011")
 AnnotationAssertion(rdfs:label obo:PREFER_0000011 "fermentation medium")
@@ -577,17 +577,18 @@ SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(obo:PREFER_8000004 obo:CHEBI_
 
 # Class: obo:PREFER_0000012 (cell biocatalyst)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000012 "A living cell used as a catalyst for bioproduction. In a biotransformation process or bioprocess, it converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintencance.")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasBroadSynonym obo:PREFER_0000012 "catalyst")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI: 10.1201/9781003413134") oboInOwl:hasExactSynonym obo:PREFER_0000012 "WCB")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000012 "biocatalyst")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000012 "biological catalyst")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000012 "cell catalyst")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000012 "cell factory")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000012 "A material entity consisting of a whole living cell that is used as a catalyst for bioproduction, catalyzing a biochemical reaction or transformation through their intrinsec or genetically modified metabolic activity.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "catalyst")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "biocatalyst")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "biological catalyst")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000012 "cell catalyst")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000012 "cell factory")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI: 10.1186/s12934-017-0724-7") oboInOwl:hasExactSynonym obo:PREFER_0000012 "whole-cell biocatalyst")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasNarrowSynonym obo:PREFER_0000012 "microbial cell factory")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI: 10.1201/9781003413134") Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000012 "WCB")
+AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:PREFER_0000012 "microbial cell factory")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000012 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000012 "In a biotransformation process or bioprocess, a cell biocatalyst converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintenance.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
 EquivalentClasses(obo:PREFER_0000012 ObjectIntersectionOf(obo:CL_0000000 ObjectSomeValuesFrom(obo:RO_0000087 obo:CHEBI_35223)))
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
@@ -605,7 +606,7 @@ SubClassOf(obo:PREFER_0000013 obo:NCBITaxon_131567)
 
 # Class: obo:PREFER_0000014 (bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0001046") Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000014 "A device or system that supports a biologically active environemnt to run a bioprocess, including lab-scale, pilot plant, and industrial-scale systems.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0001046") obo:IAO_0000115 obo:PREFER_0000014 "A device or system that is a material entity designed to support the run of a biological and biochemical process by controlling regulated environmental and cultivation conditions, such as temperature, agitation or nutrient injection at different scales, including lab-scale, pilot plant, and industrial-scale systems.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000014 "OBI:0001046")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000014 "bioreactor system")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MSIO:0000167") oboInOwl:hasNarrowSynonym obo:PREFER_0000014 "fermenter")
@@ -650,9 +651,9 @@ SubClassOf(obo:PREFER_0000017 obo:PREFER_9000003)
 
 # Class: obo:PREFER_0000018 (offline sample)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000018 "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as substrates, products, and by-products, and biomass.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000018 "A sample taken from the bioreactor at a specific time point during the fermentation run for subsequent offline analysis of various compounds, such as substrates, products, and by-products, and biomass.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIO") oboInOwl:hasBroadSynonym obo:PREFER_0000018 "sample")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000018 "collected sample")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIO") oboInOwl:hasExactSynonym obo:PREFER_0000018 "sample")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000018 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
@@ -697,7 +698,7 @@ SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000021 (pH base solution)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000021 "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000021 "The alkaline (base) solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000021 "pH control base solution")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000021 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000021 "PREFER:0000021")
@@ -707,7 +708,7 @@ SubClassOf(obo:PREFER_0000021 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 
 # Class: obo:PREFER_0000022 (pH acid solution)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000022 "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000022 "The acidic solution automatically added during the fermentation run to control and maintain the pH at the defined setpoint.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000022 "pH control acid solution")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000022 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000022 "PREFER:0000022")
@@ -2215,7 +2216,7 @@ SubClassOf(obo:PREFER_0000204 <http://purl.obolibrary.org/obo/NCBITaxon_#_taxono
 
 # Class: obo:PREFER_0000205 (cell culture)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000205 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000205 "A material entity consisting of prokaryotic or eukaryotic living cells, whether unicellular or multicellular, that are maintaned, cultivated, or propagated under controlled environmental conditions.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000205 "ENVO:02000008")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000205 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000205 "PREFER:0000205")
@@ -2224,7 +2225,7 @@ SubClassOf(obo:PREFER_0000205 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000206 (microbial culture)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000206 "A culture consisting of live microbial cells or microorganisms, such as bacteria, yeast, or fungi, used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000206 "A culture consisting of live microbial cells or microorganisms, such as bacteria, yeast, or fungi, used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000206 "microbiological culture")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000206 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000206 "PREFER:0000206")
@@ -2233,7 +2234,7 @@ SubClassOf(obo:PREFER_0000206 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000207 (tissue culture)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000207 "A culture consisting of live plant or animal cells (including mammalian cells), used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000207 "A culture consisting of live plant or animal cells (including mammalian cells), used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000207 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000207 "PREFER:0000207")
 AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
