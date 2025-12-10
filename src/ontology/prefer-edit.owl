@@ -58,6 +58,7 @@ Declaration(Class(obo:PREFER_0000020))
 Declaration(Class(obo:PREFER_0000021))
 Declaration(Class(obo:PREFER_0000022))
 Declaration(Class(obo:PREFER_0000023))
+Declaration(Class(obo:PREFER_0000024))
 Declaration(Class(obo:PREFER_0000025))
 Declaration(Class(obo:PREFER_0000026))
 Declaration(Class(obo:PREFER_0000027))
@@ -147,9 +148,7 @@ Declaration(Class(obo:PREFER_0000110))
 Declaration(Class(obo:PREFER_0000111))
 Declaration(Class(obo:PREFER_0000112))
 Declaration(Class(obo:PREFER_0000113))
-Declaration(Class(obo:PREFER_0000114))
 Declaration(Class(obo:PREFER_0000115))
-Declaration(Class(obo:PREFER_0000116))
 Declaration(Class(obo:PREFER_0000117))
 Declaration(Class(obo:PREFER_0000118))
 Declaration(Class(obo:PREFER_0000119))
@@ -310,7 +309,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -660,7 +659,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
 SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
 
-# Class: obo:PREFER_0000019 (temperature setpoint)
+# Class: obo:PREFER_0000019 (temperature setpoint control variable)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000019 "The target temperature value to be maintained within the bioreactor.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000019 "AFO_/result#AFR:0001255")
@@ -673,14 +672,14 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSyn
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature reference value")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000019 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000019 "PREFER:0000019")
-AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint")
+AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint control variable")
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000019 obo:PREFER_0000114)
+SubClassOf(obo:PREFER_0000019 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000041))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000027))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000195))
 
-# Class: obo:PREFER_0000020 (pH setpoint)
+# Class: obo:PREFER_0000020 (pH setpoint control variable)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000020 "Target pH value to be maintained within the fermenter throught the process.")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000020 "pH control setpoint")
@@ -690,9 +689,10 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSyn
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") oboInOwl:hasExactSynonym obo:PREFER_0000020 "target ph")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000020 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000020 "PREFER:0000020")
-AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint")
+AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint control variable")
+SubClassOf(obo:PREFER_0000020 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000020 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000020 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000038))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000040))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
@@ -722,6 +722,11 @@ SubClassOf(obo:PREFER_0000022 ObjectSomeValuesFrom(<http://purl.obolibrary.org/o
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000023 "balance metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000023 "core balance"@en)
 SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
+
+# Class: obo:PREFER_0000024 (cultivation fermentation medium variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000024 "cultivation fermentation medium variable"@en)
+SubClassOf(obo:PREFER_0000024 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000025 (dissolved oxygen setpoint)
 
@@ -851,8 +856,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000035 "final seed OD m
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000035 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000035 "PREFER:0000035")
 AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed optical density measurement")
-SubClassOf(obo:PREFER_0000035 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000035 obo:PREFER_0000073)
+SubClassOf(obo:PREFER_0000035 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C73681))
 
 # Class: obo:PREFER_0000036 (initial culture volume measurement)
@@ -879,13 +884,14 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000037 "cultivation feed variable")
 SubClassOf(obo:PREFER_0000037 obo:PREFER_0000008)
 SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(obo:PREFER_8000013 obo:PREFER_0000189))
 
-# Class: obo:PREFER_0000038 (fermentation medium pH)
+# Class: obo:PREFER_0000038 (fermentation medium pH measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000038 "The negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") obo:IAO_0000115 obo:PREFER_0000038 "The negative decadic logarithm of the hydrogen ion concentration in aqueous solution, here the fermentation medium.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000038 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
-AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH")
-EquivalentClasses(obo:PREFER_0000038 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(obo:PATO_0001842 ObjectSomeValuesFrom(obo:RO_0000052 obo:PREFER_0000011)))))
+AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH measurement")
+SubClassOf(obo:PREFER_0000038 obo:PREFER_0000024)
+SubClassOf(obo:PREFER_0000038 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
 # Class: obo:PREFER_0000039 (dissolved oxygen measurement)
@@ -1662,12 +1668,6 @@ SubClassOf(obo:PREFER_0000113 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000169))
 SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
-# Class: obo:PREFER_0000114 (temperature control variable)
-
-AnnotationAssertion(rdfs:label obo:PREFER_0000114 "temperature control variable"@en)
-SubClassOf(obo:PREFER_0000114 obo:PREFER_0000007)
-SubClassOf(obo:PREFER_0000114 obo:PREFER_9000000)
-
 # Class: obo:PREFER_0000115 (specific compound production rate)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000115 "The rate of compound production per unit of biomass, providing the efficiency of compound production relative to biomass.")
@@ -1679,12 +1679,6 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000115 "specific compound production 
 SubClassOf(obo:PREFER_0000115 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000173))
 SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000174))
-
-# Class: obo:PREFER_0000116 (alkalinity control variable)
-
-AnnotationAssertion(rdfs:label obo:PREFER_0000116 "alkalinity control variable"@en)
-SubClassOf(obo:PREFER_0000116 obo:PREFER_0000005)
-SubClassOf(obo:PREFER_0000116 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000117 (compound yield (substrate))
 
@@ -1723,9 +1717,10 @@ SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.
 SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000163))
 SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000165))
 
-# Class: obo:PREFER_0000121 (pressure control variable)
+# Class: obo:PREFER_0000121 (pressure setpoint control variable)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure control variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure setpoint control variable"@en)
+SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
 
