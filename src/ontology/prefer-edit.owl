@@ -627,13 +627,13 @@ SubClassOf(obo:PREFER_0000011 ObjectSomeValuesFrom(obo:PREFER_8000004 obo:CHEBI_
 # Class: obo:PREFER_0000012 (cell biocatalyst)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000012 "A material entity consisting of a whole living cell that is used as a catalyst for bioproduction, catalyzing a biochemical reaction or transformation through their intrinsec or genetically modified metabolic activity.")
-AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "catalyst")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "biocatalyst")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "biological catalyst")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000012 "catalyst")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI: 10.1201/9781003413134") Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000012 "WCB")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000012 "cell catalyst")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000012 "cell factory")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI: 10.1186/s12934-017-0724-7") oboInOwl:hasExactSynonym obo:PREFER_0000012 "whole-cell biocatalyst")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "DOI: 10.1201/9781003413134") Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000012 "WCB")
 AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:PREFER_0000012 "microbial cell factory")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000012 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
@@ -2070,40 +2070,48 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000180 "operational mode")
 SubClassOf(obo:PREFER_0000180 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000180 obo:PREFER_9000000)
 
-# Class: obo:PREFER_0000181 (batch)
+# Class: obo:PREFER_0000181 (batch fermentation mode)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000181 "An operational mode in which all nutrients are supplied at the start of cultivation, with no further input or removal of medium until the end of the process.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000181 "MSIO:0000181")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000181 "batch bioprocess mode")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MSIO:0000181") oboInOwl:hasExactSynonym obo:PREFER_0000181 "batch cell culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000181 "batch culture")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID: 38806369") oboInOwl:hasExactSynonym obo:PREFER_0000181 "batch cutivation")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000181 "batch mode")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000181 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000181 "PREFER:0000181")
-AnnotationAssertion(rdfs:label obo:PREFER_0000181 "batch")
+AnnotationAssertion(rdfs:label obo:PREFER_0000181 "batch fermentation mode")
 SubClassOf(obo:PREFER_0000181 obo:PREFER_0000180)
 
-# Class: obo:PREFER_0000182 (fed-batch)
+# Class: obo:PREFER_0000182 (fed-batch fermentation mode)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000182 "An operational mode in which additional nutrients are intermittently or continuously supplied to the culture during cultivation, without removal of culture fluid, until termination of the process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000182 "fed-batch bioprocess mode")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000182 "fed-batch mode")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000182 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000182 "PREFER:0000182")
-AnnotationAssertion(rdfs:label obo:PREFER_0000182 "fed-batch")
+AnnotationAssertion(rdfs:label obo:PREFER_0000182 "fed-batch fermentation mode")
 SubClassOf(obo:PREFER_0000182 obo:PREFER_0000180)
 
-# Class: obo:PREFER_0000183 (continuous-chemostat)
+# Class: obo:PREFER_0000183 (continuous fermentation mode-chemostat)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000183 "A continuous operational mode in which fresh medium is supplied and culture fluid removed at a constant rate, such that the specific growth rate of the biomass is controlled by the limiting nutrient concentration and equals the dilution rate.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000183 "continuous bioprocess mode, chemostat")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000183 "continuous mode, cheomstat")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000183 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000183 "PREFER:0000183")
-AnnotationAssertion(rdfs:label obo:PREFER_0000183 "continuous-chemostat")
+AnnotationAssertion(rdfs:label obo:PREFER_0000183 "continuous fermentation mode-chemostat")
 SubClassOf(obo:PREFER_0000183 obo:PREFER_0000180)
 
-# Class: obo:PREFER_0000184 (continuous-turbidostat)
+# Class: obo:PREFER_0000184 (continuous fermentation mode-turbidostat)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000184 "A continuous operational mode in which fresh medium is supplied and culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000184 "continuous bioprocess mode, turbidostat")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000184 "continuous mode, turbidostat")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000184 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000184 "PREFER:0000184")
-AnnotationAssertion(rdfs:label obo:PREFER_0000184 "continuous-turbidostat")
+AnnotationAssertion(rdfs:label obo:PREFER_0000184 "continuous fermentation mode-turbidostat")
 SubClassOf(obo:PREFER_0000184 obo:PREFER_0000180)
 
 # Class: obo:PREFER_0000185 (bioreactor scale)
@@ -2283,8 +2291,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000162 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000162 "PREFER_UNIT:0000162")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000162 "carbon mole per gram")
 SubClassOf(obo:PREFER_UNIT_0000162 obo:UO_0000190)
-SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
 SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000021))
+SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
 
 # Class: obo:PREFER_UNIT_0000163 (carbon mole per carbon mole)
 
@@ -2295,8 +2303,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000163 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000163 "PREFER_UNIT:0000163")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000163 "carbon mole per carbon mole")
 SubClassOf(obo:PREFER_UNIT_0000163 obo:UO_0000190)
-SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
 SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
 
 # Class: obo:PREFER_UNIT_0000164 (carbon mole)
 
@@ -2319,8 +2327,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000165 "PREFER_UNIT:0000165")
 AnnotationAssertion(rdfs:comment obo:PREFER_UNIT_0000165 "\"A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass(X) generated or substrate(S) consumed (mol/cmol).\" [PREFER]")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000165 "mole per carbon mole")
 SubClassOf(obo:PREFER_UNIT_0000165 obo:UO_0000190)
-SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:UO_0000013))
 SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:UO_0000013))
 
 # Class: obo:PREFER_UNIT_0000167 (liters per hour)
 
@@ -2395,8 +2403,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000173 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000173 "PREFER_UNIT:0000173")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000173 "mole per carbon mole per hour")
 SubClassOf(obo:PREFER_UNIT_0000173 obo:UO_0000051)
-SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000165))
 SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000032))
+SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000165))
 
 # Class: obo:PREFER_UNIT_0000174 (gram per gram per hour)
 
@@ -2408,8 +2416,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000174 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000174 "PREFER_UNIT:0000174")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000174 "gram per gram per hour")
 SubClassOf(obo:PREFER_UNIT_0000174 obo:UO_0000051)
-SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000161))
 SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000032))
+SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000161))
 
 # Class: obo:PREFER_UNIT_0000175 (carbon mole per hour)
 
@@ -2420,8 +2428,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000175 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000175 "PREFER_UNIT:0000175")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000175 "carbon mole per hour")
 SubClassOf(obo:PREFER_UNIT_0000175 obo:NCIT_C48569)
-SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
 SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000032))
+SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
 
 # Class: obo:PREFER_UNIT_0000176 (mole per mole)
 
