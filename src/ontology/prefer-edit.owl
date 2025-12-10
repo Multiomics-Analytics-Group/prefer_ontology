@@ -1328,7 +1328,7 @@ SubClassOf(obo:PREFER_0000073 obo:PREFER_0000008)
 
 AnnotationAssertion(rdfs:label obo:PREFER_0000074 "offline sample compound concentration"@en)
 SubClassOf(obo:PREFER_0000074 obo:PREFER_0000001)
-SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000001))
+SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000175))
 
 # Class: obo:PREFER_0000075 (feed rate gravimetric)
