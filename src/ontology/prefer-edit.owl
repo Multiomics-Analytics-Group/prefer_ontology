@@ -316,7 +316,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -442,10 +442,10 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000011 "has cultivation condition")
 ObjectPropertyDomain(obo:PREFER_8000011 obo:BFO_0000015)
 ObjectPropertyRange(obo:PREFER_8000011 obo:PREFER_0000008)
 
-# Object Property: obo:PREFER_8000012 (has data acquisition mode)
+# Object Property: obo:PREFER_8000012 (has data acquisition quality)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000012 "x has data acquisition mode y iff x is a measured variable and y is the data acquistion mode in which x is acquired.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000012 "has data acquisition mode")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000012 "x has data acquisition quality y iff x is data and y is the mode in which x is acquired.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000012 "has data acquisition quality")
 ObjectPropertyDomain(obo:PREFER_8000012 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000012 obo:PREFER_0000150)
 
@@ -1950,18 +1950,17 @@ SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.
 SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000162))
 SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000163))
 
-# Class: obo:PREFER_0000150 (data acquisition mode)
+# Class: obo:PREFER_0000150 (data acquisition quality)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000150 "How, where, and when process data or samples are collected and measured during a bioprocess. The modes included are inline, online, atline, and offline.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000150 "A quality that inheres in data which informs how, where, and when process data or samples are collected and measured during a bioprocess.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000150 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000150 "PREFER:0000150")
-AnnotationAssertion(rdfs:label obo:PREFER_0000150 "data acquisition mode")
-SubClassOf(obo:PREFER_0000150 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000150 obo:PREFER_9000000)
+AnnotationAssertion(rdfs:label obo:PREFER_0000150 "data acquisition quality")
+SubClassOf(obo:PREFER_0000150 obo:BFO_0000019)
 
 # Class: obo:PREFER_0000151 (inline measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000151 "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000151 "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000151 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000151 "PREFER:0000151")
 AnnotationAssertion(rdfs:label obo:PREFER_0000151 "inline measurement")
@@ -1969,7 +1968,7 @@ SubClassOf(obo:PREFER_0000151 obo:PREFER_0000150)
 
 # Class: obo:PREFER_0000152 (online measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000152 "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000152 "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000152 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000152 "PREFER:0000152")
 AnnotationAssertion(rdfs:label obo:PREFER_0000152 "online measurement")
@@ -1977,7 +1976,7 @@ SubClassOf(obo:PREFER_0000152 obo:PREFER_0000150)
 
 # Class: obo:PREFER_0000153 (atline measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000153 "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000153 "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000153 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000153 "PREFER:0000153")
 AnnotationAssertion(rdfs:label obo:PREFER_0000153 "atline measurement")
@@ -1985,7 +1984,7 @@ SubClassOf(obo:PREFER_0000153 obo:PREFER_0000150)
 
 # Class: obo:PREFER_0000154 (offline measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000154 "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000154 "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000154 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000154 "PREFER:0000154")
 AnnotationAssertion(rdfs:label obo:PREFER_0000154 "offline measurement")
