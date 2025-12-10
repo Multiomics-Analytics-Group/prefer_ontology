@@ -309,7 +309,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -2196,15 +2196,13 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000203 "PREFER:0000203")
 AnnotationAssertion(rdfs:label obo:PREFER_0000203 "production culture")
 SubClassOf(obo:PREFER_0000203 obo:PREFER_0000200)
 
-# Class: obo:PREFER_0000204 (strain)
+# Class: obo:PREFER_0000204 (unpublished strain)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") Annotation(oboInOwl:hasDbXref "doi:10.1093/jaoac/85.2.524") obo:IAO_0000115 obo:PREFER_0000204 "An isolate or group of isolates that can be distinguished from other isoletes of the same species by phenotypic and/or genotypic characteristics.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000204 "NCBITaxon:strain")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "doi:10.1093/jaoac/85.2.524") oboInOwl:hasExactSynonym obo:PREFER_0000204 "subtype")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000204 "An isolate or group of isolates that have not been published (it is not available in deposits or collections nor do you know the strain history) and hence do not yet have a universal identifier.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000204 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000204 "PREFER:0000204")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000204 "\"Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics.\" [doi:10.1093/jaoac/85.2.524, PREFER]")
-AnnotationAssertion(rdfs:label obo:PREFER_0000204 "strain")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "doi:10.1093/jaoac/85.2.524") rdfs:comment obo:PREFER_0000204 "Unpublished strain is a quality used to tag strains that do not yet have a universal identifier. If or when they get published, this tag should be removed. All strains should still be under taxon. Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000204 "unpublished strain")
 SubClassOf(obo:PREFER_0000204 obo:BFO_0000019)
 
 # Class: obo:PREFER_0000205 (cell culture)
