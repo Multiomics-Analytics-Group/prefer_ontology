@@ -262,16 +262,16 @@ Declaration(ObjectProperty(obo:PREFER_8000011))
 Declaration(ObjectProperty(obo:PREFER_8000012))
 Declaration(ObjectProperty(obo:PREFER_8000013))
 Declaration(ObjectProperty(obo:PREFER_8000014))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_compound>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_process_variable>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode>))
+Declaration(ObjectProperty(obo:PREFER_8000015))
+Declaration(ObjectProperty(obo:PREFER_8000016))
+Declaration(ObjectProperty(obo:PREFER_8000017))
+Declaration(ObjectProperty(obo:PREFER_8000018))
+Declaration(ObjectProperty(obo:PREFER_8000019))
+Declaration(ObjectProperty(obo:PREFER_8000020))
+Declaration(ObjectProperty(obo:PREFER_8000021))
+Declaration(ObjectProperty(obo:PREFER_8000022))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -311,11 +311,11 @@ AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (alternative_term)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -454,6 +454,55 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000014 "inverse of has fermentat
 AnnotationAssertion(rdfs:label obo:PREFER_8000014 "is fermentation culture type of"@en)
 SubObjectPropertyOf(obo:PREFER_8000014 obo:IAO_0000136)
 
+# Object Property: obo:PREFER_8000015 (cultures cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000015 "x cultures_cell y iff x is a process and y is a cell that x cultures.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000015 "cultures cell"@en)
+ObjectPropertyDomain(obo:PREFER_8000015 obo:BFO_0000015)
+ObjectPropertyRange(obo:PREFER_8000015 obo:CL_0000000)
+
+# Object Property: obo:PREFER_8000016 (has collected)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000016 "x has_collected y iff x is a process and y is a material that is collected as part of the process x.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000016 "has collected"@en)
+ObjectPropertyDomain(obo:PREFER_8000016 obo:BFO_0000015)
+ObjectPropertyRange(obo:PREFER_8000016 obo:BFO_0000040)
+
+# Object Property: obo:PREFER_8000017 (has measured compound)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000017 "x has_measured_compound y iff x is a process and y is a chemical entity that is being or will be measured.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000017 "has measured compound"@en)
+ObjectPropertyDomain(obo:PREFER_8000017 obo:BFO_0000015)
+ObjectPropertyRange(obo:PREFER_8000017 obo:CHEBI_24431)
+
+# Object Property: obo:PREFER_8000018 (has operational mode)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000018 "x has_operational_mode y iff x is a bioreactor and y is an operational mode in which the bioreactor is operating in.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000018 "has operational mode"@en)
+
+# Object Property: obo:PREFER_8000019 (is cell culture type)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000019 "is cell culture type"@en)
+
+# Object Property: obo:PREFER_8000020 (setpoint of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000020 "x is setpoint_of y iff x and y are information content entities, and x is a specified numerical value or target parameter that defines the desired state or threshold that y is designed to regulate, maintain, or reference.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000020 "setpoint of"@en)
+ObjectPropertyDomain(obo:PREFER_8000020 obo:IAO_0000030)
+ObjectPropertyRange(obo:PREFER_8000020 obo:IAO_0000030)
+
+# Object Property: obo:PREFER_8000021 (has denominator unit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000021 "x has_denominator_unit y iff x and y are units, and x is ratio unit where y is the denominator of it.")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000021 "Not using RO:0020203 as range/domain does not fit with modelling.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000021 "has denominator unit"@en)
+
+# Object Property: obo:PREFER_8000022 (has numerator unit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000022 "x has_numerator_unit y iff x and y are units, and x is ratio unit where y is the numerator of it.")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000022 "Not using RO:0020202 as range/domain does not fit with modelling.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000022 "has numerator unit"@en)
+
 
 
 ############################
@@ -504,9 +553,9 @@ SubClassOf(obo:PREFER_0000004 obo:PREFER_9000003)
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000003))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000006 obo:PREFER_0000014))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000011 obo:PREFER_0000008))
-SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#cultures_cell> obo:PREFER_0000012))
-SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_collected> obo:PREFER_0000018))
-SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_measured_compound> obo:CHEBI_24431))
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000015 obo:PREFER_0000012))
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000016 obo:PREFER_0000018))
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000017 obo:CHEBI_24431))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
 
 # Class: obo:PREFER_0000005 (cultivation alkalinity variable)
@@ -615,10 +664,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000185))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000181))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000182))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000183))
-SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_operational_mode> obo:PREFER_0000184))
+SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000018 obo:PREFER_0000180))
 
 # Class: obo:PREFER_0000015 (operational parameter)
 
@@ -675,7 +721,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000019 "PREFER:0000019")
 AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint control variable")
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000019 obo:PREFER_9000000)
-SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000041))
+SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000041))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000027))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000195))
 
@@ -693,8 +739,8 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint control variable"
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_9000000)
+SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000040))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000038))
-SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000040))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000196))
 
 # Class: obo:PREFER_0000021 (pH base solution)
@@ -738,8 +784,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000025 "PREFER:0000025")
 AnnotationAssertion(rdfs:label obo:PREFER_0000025 "dissolved oxygen setpoint")
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000039))
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000033))
-SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000039))
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
 
 # Class: obo:PREFER_0000026 (dissolved oxygen cascade level)
@@ -764,8 +810,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000027 "PREFER:0000027")
 AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint")
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000026))
-SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000028 (minimum stirring setpoint)
@@ -780,8 +826,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000028 "PREFER:0000028")
 AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint")
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000026))
-SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:NCIT_C70469))
 
 # Class: obo:PREFER_0000029 (cultivation pressure variable)
@@ -808,8 +854,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000031 "PREFER:0000031")
 AnnotationAssertion(rdfs:label obo:PREFER_0000031 "maximum aeration setpoint")
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000030))
-SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000055))
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000032 (minimum aeration setpoint)
@@ -821,8 +867,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000032 "PREFER:0000032")
 AnnotationAssertion(rdfs:label obo:PREFER_0000032 "minimum aeration setpoint")
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable> obo:PREFER_0000030))
-SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#setpoint_of> obo:PREFER_0000055))
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000172))
 
 # Class: obo:PREFER_0000033 (cultivation dissolved oxygen variable)
@@ -1852,7 +1898,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000140 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000140 "PREFER:0000140")
 AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass production rate")
 SubClassOf(obo:PREFER_0000140 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000175))
+SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000175))
 SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000169))
 SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
@@ -2237,8 +2283,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000162 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000162 "PREFER_UNIT:0000162")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000162 "carbon mole per gram")
 SubClassOf(obo:PREFER_UNIT_0000162 obo:UO_0000190)
-SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:UO_0000021))
-SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000162 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000021))
 
 # Class: obo:PREFER_UNIT_0000163 (carbon mole per carbon mole)
 
@@ -2249,8 +2295,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000163 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000163 "PREFER_UNIT:0000163")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000163 "carbon mole per carbon mole")
 SubClassOf(obo:PREFER_UNIT_0000163 obo:UO_0000190)
-SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:PREFER_UNIT_0000164))
-SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000163 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:PREFER_UNIT_0000164))
 
 # Class: obo:PREFER_UNIT_0000164 (carbon mole)
 
@@ -2273,8 +2319,8 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000165 "PREFER_UNIT:0000165")
 AnnotationAssertion(rdfs:comment obo:PREFER_UNIT_0000165 "\"A unit representing a mol-based ratio, typically used to express product, output substance or input - such as compound and substrate -  in moles per carbon mole of biomass(X) generated or substrate(S) consumed (mol/cmol).\" [PREFER]")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000165 "mole per carbon mole")
 SubClassOf(obo:PREFER_UNIT_0000165 obo:UO_0000190)
-SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:PREFER_UNIT_0000164))
-SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:UO_0000013))
+SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:UO_0000013))
+SubClassOf(obo:PREFER_UNIT_0000165 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:PREFER_UNIT_0000164))
 
 # Class: obo:PREFER_UNIT_0000167 (liters per hour)
 
@@ -2349,8 +2395,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000173 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000173 "PREFER_UNIT:0000173")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000173 "mole per carbon mole per hour")
 SubClassOf(obo:PREFER_UNIT_0000173 obo:UO_0000051)
-SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:UO_0000032))
-SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000165))
+SubClassOf(obo:PREFER_UNIT_0000173 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000032))
 
 # Class: obo:PREFER_UNIT_0000174 (gram per gram per hour)
 
@@ -2362,8 +2408,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000174 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000174 "PREFER_UNIT:0000174")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000174 "gram per gram per hour")
 SubClassOf(obo:PREFER_UNIT_0000174 obo:UO_0000051)
-SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:UO_0000032))
-SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000161))
+SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000161))
+SubClassOf(obo:PREFER_UNIT_0000174 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000032))
 
 # Class: obo:PREFER_UNIT_0000175 (carbon mole per hour)
 
@@ -2374,8 +2420,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_UNIT_0000175 "precision_
 AnnotationAssertion(oboInOwl:id obo:PREFER_UNIT_0000175 "PREFER_UNIT:0000175")
 AnnotationAssertion(rdfs:label obo:PREFER_UNIT_0000175 "carbon mole per hour")
 SubClassOf(obo:PREFER_UNIT_0000175 obo:NCIT_C48569)
-SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_denominator_unit> obo:UO_0000032))
-SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#has_numerator_unit> obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_UNIT_0000164))
+SubClassOf(obo:PREFER_UNIT_0000175 ObjectSomeValuesFrom(obo:PREFER_8000021 obo:UO_0000032))
 
 # Class: obo:PREFER_UNIT_0000176 (mole per mole)
 
