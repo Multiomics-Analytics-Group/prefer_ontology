@@ -446,6 +446,7 @@ ObjectPropertyRange(obo:PREFER_8000011 obo:PREFER_0000008)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000012 "x has data acquisition quality y iff x is data and y is the mode in which x is acquired.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000012 "has data acquisition quality")
+SubObjectPropertyOf(obo:PREFER_8000012 obo:RO_0000086)
 ObjectPropertyDomain(obo:PREFER_8000012 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000012 obo:PREFER_0000150)
 
