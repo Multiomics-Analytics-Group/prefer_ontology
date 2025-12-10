@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/prefer/releases/2025-11-20/imports/merged_import.owl>
-Annotation(owl:versionInfo "2025-11-20")
+<http://purl.obolibrary.org/obo/prefer/releases/2025-12-10/imports/merged_import.owl>
+Annotation(owl:versionInfo "2025-12-10")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -23,38 +23,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_10545>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_23367>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24432>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_25585>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27594>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33233>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33250>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33252>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33253>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33284>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33306>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33318>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33560>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33579>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33582>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33675>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33937>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_35223>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36338>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36339>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36340>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36342>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36343>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36344>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36347>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_50860>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_50906>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_51086>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_52211>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_64708>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_78295>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006091>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006113>))
@@ -613,32 +585,19 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UO_1010049>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_1010051>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_1010060>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000000>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_000004>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000015>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_000037>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000052>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000070>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000074>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000075>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000257>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000258>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_000279>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_000289>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000366>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_000616>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_000776>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_001050>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_001428>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001429>))
 Declaration(Class(<http://semanticscience.org/resource/SIO_001431>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_010004>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_010462>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_010463>))
-Declaration(Class(<http://semanticscience.org/resource/SIO_011126>))
-Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0002753>))
 Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0002929>))
 Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0003114>))
-Declaration(Class(<http://www.bioassayontology.org/bao#BAO_0003116>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
@@ -667,22 +626,15 @@ Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000001>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000008>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000011>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000028>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000059>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000061>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000068>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000095>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000145>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000215>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000216>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000221>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000222>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000243>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000244>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000245>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000294>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000322>))
 Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000325>))
-Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000352>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002009>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002872>))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002874>))
@@ -1043,7 +995,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.gen
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has broad synonym"@en)
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has_broad_synonym")
 
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (has cross-reference)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "An annotation property that links an ontology entity or a statement to a prefixed identifier or URI.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Reference database or publication source.")
@@ -1304,14 +1256,6 @@ InverseObjectProperties(<http://semanticscience.org/resource/SIO_000028> <http:/
 TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000028>)
 ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000028>)
 
-# Object Property: <http://semanticscience.org/resource/SIO_000059> (has member)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000059> "has member"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000059> <http://semanticscience.org/resource/SIO_000008>)
-InverseObjectProperties(<http://semanticscience.org/resource/SIO_000059> <http://semanticscience.org/resource/SIO_000095>)
-IrreflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000059>)
-ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000059> <http://semanticscience.org/resource/SIO_000616>)
-
 # Object Property: <http://semanticscience.org/resource/SIO_000061> (is located in)
 
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000061> "is located in"@en)
@@ -1325,11 +1269,6 @@ AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000068> 
 SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000068> <http://semanticscience.org/resource/SIO_000061>)
 TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000068>)
 ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000068>)
-
-# Object Property: <http://semanticscience.org/resource/SIO_000095> (is member of)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000095> "is member of"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000095> <http://semanticscience.org/resource/SIO_000011>)
 
 # Object Property: <http://semanticscience.org/resource/SIO_000145> (is location of)
 
@@ -1365,34 +1304,6 @@ AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000222> 
 SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000222> <http://semanticscience.org/resource/SIO_000011>)
 ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000222> <http://semanticscience.org/resource/SIO_000074>)
 
-# Object Property: <http://semanticscience.org/resource/SIO_000243> (is causally related with)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000243> "is causally related with"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000243> <http://semanticscience.org/resource/SIO_000322>)
-SymmetricObjectProperty(<http://semanticscience.org/resource/SIO_000243>)
-TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000243>)
-
-# Object Property: <http://semanticscience.org/resource/SIO_000244> (is derived from)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000244> "is derived from"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000244> <http://semanticscience.org/resource/SIO_000352>)
-InverseObjectProperties(<http://semanticscience.org/resource/SIO_000244> <http://semanticscience.org/resource/SIO_000245>)
-TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000244>)
-
-# Object Property: <http://semanticscience.org/resource/SIO_000245> (derives into)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000245> "derives into"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000245> <http://semanticscience.org/resource/SIO_000294>)
-TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000245>)
-ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000245> <http://semanticscience.org/resource/SIO_000776>)
-ObjectPropertyRange(<http://semanticscience.org/resource/SIO_000245> <http://semanticscience.org/resource/SIO_000776>)
-
-# Object Property: <http://semanticscience.org/resource/SIO_000294> (is causally related to)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000294> "is causally related to"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000294> <http://semanticscience.org/resource/SIO_000243>)
-InverseObjectProperties(<http://semanticscience.org/resource/SIO_000294> <http://semanticscience.org/resource/SIO_000352>)
-
 # Object Property: <http://semanticscience.org/resource/SIO_000322> (is spatiotemporally related to)
 
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000322> "is spatiotemporally related to"@en)
@@ -1405,11 +1316,6 @@ AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000325> 
 SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000325> <http://semanticscience.org/resource/SIO_000322>)
 SymmetricObjectProperty(<http://semanticscience.org/resource/SIO_000325>)
 ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000325>)
-
-# Object Property: <http://semanticscience.org/resource/SIO_000352> (is causally related from)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000352> "is causally related from"@en)
-SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000352> <http://semanticscience.org/resource/SIO_000243>)
 
 # Object Property: <http://www.bioassayontology.org/bao#BAO_0002009> (involves biological process)
 
@@ -1527,25 +1433,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000040> "material entity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000040> <http://purl.obolibrary.org/obo/BFO_0000004>)
 
-# Class: <http://purl.obolibrary.org/obo/CHEBI_10545> (electron)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_10545> "Elementary particle not affected by the strong force having a spin 1/2, a negative elementary charge and a rest mass of 0.000548579903(13) u, or 0.51099906(15) MeV.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CHEBI_10545> "KEGG:C05359")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CHEBI_10545> "Wikipedia:Electron")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_10545> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_10545> "CHEBI:10545")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_10545> "electron")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_10545> <http://purl.obolibrary.org/obo/CHEBI_36338>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_23367> (molecular entity)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_23367> "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_23367> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_23367> "CHEBI:23367")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_23367> "molecular entity")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_23367> <http://purl.obolibrary.org/obo/CHEBI_24431>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_23367> <http://www.bioassayontology.org/bao#BAO_0003116>)
-
 # Class: <http://purl.obolibrary.org/obo/CHEBI_24431> (chemical entity)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_24431> "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.")
@@ -1554,134 +1441,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24431> "chemical entity")
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24431> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Class: <http://purl.obolibrary.org/obo/CHEBI_24432> (biological role)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_24432> "A role played by the molecular entity or part thereof within a biological context.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_24432> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_24432> "CHEBI:24432")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24432> "biological role")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24432> <http://purl.obolibrary.org/obo/CHEBI_50906>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24432> <http://www.bioassayontology.org/bao#BAO_0002929>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_25585> (nonmetal atom)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_25585> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_25585> "CHEBI:25585")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_25585> "nonmetal atom")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_25585> <http://purl.obolibrary.org/obo/CHEBI_33250>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_27594> (carbon atom)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CHEBI_27594> "KEGG:C06265")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CHEBI_27594> "WebElements:C")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_27594> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_27594> "CHEBI:27594")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_27594> "carbon atom")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_27594> <http://purl.obolibrary.org/obo/CHEBI_25585>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_27594> <http://purl.obolibrary.org/obo/CHEBI_33306>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_27594> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_33937>))
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33233> (fundamental particle)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33233> "A particle not known to have substructure.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33233> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33233> "CHEBI:33233")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33233> "fundamental particle")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33233> <http://purl.obolibrary.org/obo/CHEBI_36342>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33250> (atom)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33250> "A chemical entity constituting the smallest component of an element having the chemical properties of the element.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33250> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33250> "CHEBI:33250")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33250> "atom")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33250> <http://purl.obolibrary.org/obo/CHEBI_24431>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33250> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_10545>))
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33250> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33252>))
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33252> (atomic nucleus)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33252> "A nucleus is the positively charged central portion of an atom, excluding the orbital electrons.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33252> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33252> "CHEBI:33252")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33252> "atomic nucleus")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33252> <http://purl.obolibrary.org/obo/CHEBI_36347>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33252> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33253>))
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33253> (nucleon)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33253> "Heavy nuclear particle: proton or neutron.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33253> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33253> "CHEBI:33253")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33253> "nucleon")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33253> <http://purl.obolibrary.org/obo/CHEBI_36339>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33253> <http://purl.obolibrary.org/obo/CHEBI_36347>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33284> (nutrient)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33284> "A nutrient is a food component that an organism uses to survive and grow.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33284> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33284> "CHEBI:33284")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33284> "nutrient")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33284> <http://purl.obolibrary.org/obo/CHEBI_78295>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33306> (carbon group element atom)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33306> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33306> "CHEBI:33306")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33306> "carbon group element atom")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33306> <http://purl.obolibrary.org/obo/CHEBI_33560>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33318> (main group element atom)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33318> "An atom belonging to one of the main groups (found in the s- and p- blocks) of the periodic table.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33318> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33318> "CHEBI:33318")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33318> "main group element atom")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33318> <http://purl.obolibrary.org/obo/CHEBI_33250>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33560> (p-block element atom)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33560> "Any main group element atom belonging to the p-block of the periodic table.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33560> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33560> "CHEBI:33560")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33560> "p-block element atom")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33560> <http://purl.obolibrary.org/obo/CHEBI_33318>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33579> (main group molecular entity)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33579> "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33579> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33579> "CHEBI:33579")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33579> "main group molecular entity")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33579> <http://purl.obolibrary.org/obo/CHEBI_23367>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33579> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33318>))
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33582> (carbon group molecular entity)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33582> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33582> "CHEBI:33582")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33582> "carbon group molecular entity")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33582> <http://purl.obolibrary.org/obo/CHEBI_33675>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33306>))
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33675> (p-block molecular entity)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33675> "A main group molecular entity that contains one or more atoms of a p-block element.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33675> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33675> "CHEBI:33675")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33675> "p-block molecular entity")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33675> <http://purl.obolibrary.org/obo/CHEBI_33579>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33675> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33560>))
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_33937> (macronutrient)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33937> "Any nutrient required in large quantities by organisms throughout their life in order to orchestrate a range of physiological functions. Macronutrients are usually chemical elements (carbon, hydrogen, nitrogen, oxygen, phosphorus and sulfur) that humans consume in the largest quantities. Calcium, sodium, magnesium and potassium are sometimes included as macronutrients because they are required in relatively large quantities compared with other vitamins and minerals.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_33937> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_33937> "CHEBI:33937")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33937> "macronutrient")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33937> <http://purl.obolibrary.org/obo/CHEBI_33284>)
-
 # Class: <http://purl.obolibrary.org/obo/CHEBI_35223> (catalyst)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_35223> "A substance that increases the rate of a reaction without modifying the overall standard Gibbs energy change in the reaction.")
@@ -1689,73 +1448,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_35223> "CHEBI:35223")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_35223> "catalyst")
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_35223> <http://purl.obolibrary.org/obo/CHEBI_51086>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36338> (lepton)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36338> "Lepton is a fermion that does not experience the strong force (strong interaction). The term is derived from the Greek lambdaepsilonpitauomicronsigma (small, thin).")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36338> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36338> "CHEBI:36338")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36338> "lepton")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36338> <http://purl.obolibrary.org/obo/CHEBI_33233>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36338> <http://purl.obolibrary.org/obo/CHEBI_36340>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36339> (baryon)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36339> "Baryon is a fermion that does experience the strong force (strong interaction). The term is derived from the Greek betaalpharhoupsilonsigma (heavy).")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36339> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36339> "CHEBI:36339")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36339> "baryon")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36339> <http://purl.obolibrary.org/obo/CHEBI_36340>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36339> <http://purl.obolibrary.org/obo/CHEBI_36344>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36340> (fermion)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36340> "Particle of half-integer spin quantum number following Fermi-Dirac statistics. Fermions are named after Enrico Fermi.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36340> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36340> "CHEBI:36340")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36340> "fermion")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36340> <http://purl.obolibrary.org/obo/CHEBI_36342>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36342> (subatomic particle)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36342> "A particle smaller than an atom.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CHEBI_36342> "Wikipedia:Subatomic_particle")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36342> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36342> "CHEBI:36342")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36342> "subatomic particle")
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36343> (composite particle)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36343> "A subatomic particle known to have substructure (i.e. consisting of smaller particles).")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36343> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36343> "CHEBI:36343")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36343> "composite particle")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36343> <http://purl.obolibrary.org/obo/CHEBI_36342>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36344> (hadron)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36344> "Hadron is a subatomic particle which experiences the strong force.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36344> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36344> "CHEBI:36344")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36344> "hadron")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36344> <http://purl.obolibrary.org/obo/CHEBI_36343>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_36347> (nuclear particle)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36347> "A nucleus or any of its constituents in any of their energy states.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_36347> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_36347> "CHEBI:36347")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36347> "nuclear particle")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36347> <http://purl.obolibrary.org/obo/CHEBI_36342>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_50860> (organic molecular entity)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_50860> "Any molecular entity that contains carbon.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_50860> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_50860> "CHEBI:50860")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_50860> "organic molecular entity")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_50860> <http://purl.obolibrary.org/obo/CHEBI_33582>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_50860> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_27594>))
 
 # Class: <http://purl.obolibrary.org/obo/CHEBI_50906> (role)
 
@@ -1772,29 +1464,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_51086> "chemical role")
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_51086> <http://purl.obolibrary.org/obo/CHEBI_50906>)
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_51086> <http://www.bioassayontology.org/bao#BAO_0002929>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_52211> (physiological role)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_52211> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_52211> "CHEBI:52211")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_52211> "physiological role")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_52211> <http://purl.obolibrary.org/obo/CHEBI_24432>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_64708> (one-carbon compound)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_64708> "An organic molecular entity containing a single carbon atom (C1).")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_64708> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_64708> "CHEBI:64708")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_64708> "one-carbon compound")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_64708> <http://purl.obolibrary.org/obo/CHEBI_50860>)
-
-# Class: <http://purl.obolibrary.org/obo/CHEBI_78295> (food component)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_78295> "A physiological role played by any substance that is distributed in foodstuffs. It includes materials derived from plants or animals, such as vitamins or minerals, as well as environmental contaminants.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_78295> "chebi_ontology")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_78295> "CHEBI:78295")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_78295> "food component")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_78295> <http://purl.obolibrary.org/obo/CHEBI_52211>)
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000000> (cell)
 
@@ -6092,23 +5761,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/UO_1010060> <http://purl.obolibrary.o
 
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000000> "entity"@en)
 
-# Class: <http://semanticscience.org/resource/SIO_000004> (material entity)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000004> "material entity"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_000004> <http://semanticscience.org/resource/SIO_000776>)
-SubClassOf(<http://semanticscience.org/resource/SIO_000004> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000008> <http://semanticscience.org/resource/SIO_000279>))
-
 # Class: <http://semanticscience.org/resource/SIO_000015> (information content entity)
 
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000015> "information content entity"@en)
 SubClassOf(<http://semanticscience.org/resource/SIO_000015> <http://semanticscience.org/resource/SIO_000776>)
-
-# Class: <http://semanticscience.org/resource/SIO_000037> (spatial quantity)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000037> "spatial quantity"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_000037> <http://semanticscience.org/resource/SIO_000258>)
-SubClassOf(<http://semanticscience.org/resource/SIO_000037> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000011> <http://semanticscience.org/resource/SIO_000776>))
-SubClassOf(<http://semanticscience.org/resource/SIO_000037> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000216> <http://semanticscience.org/resource/SIO_000052>))
 
 # Class: <http://semanticscience.org/resource/SIO_000052> (quantity)
 
@@ -6147,45 +5803,15 @@ AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000258> 
 SubClassOf(<http://semanticscience.org/resource/SIO_000258> <http://semanticscience.org/resource/SIO_000052>)
 SubClassOf(<http://semanticscience.org/resource/SIO_000258> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000074>))
 
-# Class: <http://semanticscience.org/resource/SIO_000279> (mass)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000279> "mass"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_000279> <http://semanticscience.org/resource/SIO_000037>)
-SubClassOf(<http://semanticscience.org/resource/SIO_000279> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000011> <http://semanticscience.org/resource/SIO_000004>))
-
-# Class: <http://semanticscience.org/resource/SIO_000289> (set)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000289> "set"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_000289> <http://semanticscience.org/resource/SIO_000075>)
-SubClassOf(<http://semanticscience.org/resource/SIO_000289> ObjectAllValuesFrom(<http://semanticscience.org/resource/SIO_000059> <http://semanticscience.org/resource/SIO_000000>))
-
 # Class: <http://semanticscience.org/resource/SIO_000366> (number)
 
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000366> "number"@en)
 SubClassOf(<http://semanticscience.org/resource/SIO_000366> <http://semanticscience.org/resource/SIO_001431>)
 
-# Class: <http://semanticscience.org/resource/SIO_000616> (collection)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000616> "collection"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_000616> <http://semanticscience.org/resource/SIO_000289>)
-SubClassOf(<http://semanticscience.org/resource/SIO_000616> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000059> <http://semanticscience.org/resource/SIO_000000>))
-
 # Class: <http://semanticscience.org/resource/SIO_000776> (object)
 
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000776> "object"@en)
 SubClassOf(<http://semanticscience.org/resource/SIO_000776> <http://semanticscience.org/resource/SIO_000000>)
-
-# Class: <http://semanticscience.org/resource/SIO_001050> (sample)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_001050> "sample"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_001050> <http://semanticscience.org/resource/SIO_010462>)
-SubClassOf(<http://semanticscience.org/resource/SIO_001050> ObjectUnionOf(ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000095> <http://semanticscience.org/resource/SIO_000616>) ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000244> <http://semanticscience.org/resource/SIO_000776>)))
-
-# Class: <http://semanticscience.org/resource/SIO_001428> (ingredient)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_001428> "ingredient"@en)
-EquivalentClasses(<http://semanticscience.org/resource/SIO_001428> ObjectIntersectionOf(<http://semanticscience.org/resource/SIO_011126> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000245> <http://semanticscience.org/resource/SIO_011126>)))
-SubClassOf(<http://semanticscience.org/resource/SIO_001428> <http://semanticscience.org/resource/SIO_011126>)
 
 # Class: <http://semanticscience.org/resource/SIO_001429> (tensor)
 
@@ -6197,32 +5823,6 @@ SubClassOf(<http://semanticscience.org/resource/SIO_001429> <http://semanticscie
 AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_001431> "scalar"@en)
 SubClassOf(<http://semanticscience.org/resource/SIO_001431> <http://semanticscience.org/resource/SIO_001429>)
 
-# Class: <http://semanticscience.org/resource/SIO_010004> (chemical entity)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_010004> "chemical entity"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_010004> <http://semanticscience.org/resource/SIO_000004>)
-
-# Class: <http://semanticscience.org/resource/SIO_010462> (heterogeneous substance)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_010462> "heterogeneous substance"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_010462> <http://semanticscience.org/resource/SIO_011126>)
-DisjointClasses(<http://semanticscience.org/resource/SIO_010462> <http://semanticscience.org/resource/SIO_010463>)
-
-# Class: <http://semanticscience.org/resource/SIO_010463> (homogeneous substance)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_010463> "homogeneous substance"@en)
-SubClassOf(<http://semanticscience.org/resource/SIO_010463> <http://semanticscience.org/resource/SIO_011126>)
-
-# Class: <http://semanticscience.org/resource/SIO_011126> (chemical substance)
-
-AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_011126> "chemical substance"@en)
-EquivalentClasses(<http://semanticscience.org/resource/SIO_011126> ObjectUnionOf(<http://semanticscience.org/resource/SIO_010462> <http://semanticscience.org/resource/SIO_010463>))
-SubClassOf(<http://semanticscience.org/resource/SIO_011126> <http://semanticscience.org/resource/SIO_010004>)
-
-# Class: <http://www.bioassayontology.org/bao#BAO_0002753> (assay method component)
-
-AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0002753> "assay method component")
-
 # Class: <http://www.bioassayontology.org/bao#BAO_0002929> (role)
 
 AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0002929> "role")
@@ -6230,11 +5830,6 @@ AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0002929>
 # Class: <http://www.bioassayontology.org/bao#BAO_0003114> (assay biology component)
 
 AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0003114> "assay biology component")
-
-# Class: <http://www.bioassayontology.org/bao#BAO_0003116> (material entity)
-
-AnnotationAssertion(rdfs:label <http://www.bioassayontology.org/bao#BAO_0003116> "material entity")
-SubClassOf(<http://www.bioassayontology.org/bao#BAO_0003116> <http://www.bioassayontology.org/bao#BAO_0002753>)
 
 
 ############################
@@ -6360,12 +5955,6 @@ AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.o
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.obolibrary.org/obo/OMO_0001000> <https://orcid.org/0000-0002-7356-1779>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMO_0001000> "out of scope")
 ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/OMO_0001000>)
-
-# Individual: <http://purl.obolibrary.org/obo/OMO_0001002> (domain entity does not exist)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMO_0001002> "The term was added to the ontology on the assumption it was a valid domain entity, but it turns out the entity does not exist in reality."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMO_0001002> "domain entity does not exist")
-ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/OMO_0001002>)
 
 # Individual: <http://purl.obolibrary.org/obo/OMO_0001002> (domain entity does not exist)
 

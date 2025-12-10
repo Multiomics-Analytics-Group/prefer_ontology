@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                0871e4d0588447e5cb165eb9ede0ade3d9e748b3ec601c943a66940238947696
+CONFIG_HASH=                2f78d73a4b44d9bdb4576de044043ea260aa1b969bffa306d50e9ef0da2ada3b
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao cl omo ro chebi bao uo pato sio go
+IMPORTS =  iao cl omo ro chebi bao uo pato go
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -216,7 +216,7 @@ all_subsets: $(SUBSET_FILES)
 # ----------------------------------------
 
 
-MAPPINGS =  prefer-external
+MAPPINGS = 
 
 
 MAPPING_FILES = $(foreach p, $(MAPPINGS), $(MAPPINGDIR)/$(p).sssom.tsv)
@@ -545,13 +545,6 @@ mirror-uo: | $(TMPDIR)
 mirror-pato: | $(TMPDIR)
 	curl -L $(OBOBASE)/pato/pato-base.owl --create-dirs -o $(TMPDIR)/pato-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/pato-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: sio
-.PHONY: mirror-sio
-.PRECIOUS: $(MIRRORDIR)/sio.owl
-mirror-sio: | $(TMPDIR)
-	$(ROBOT) remove -I http://semanticscience.org/ontology/sio.owl --base-iri http://semanticscience.org/resource/SIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: go
