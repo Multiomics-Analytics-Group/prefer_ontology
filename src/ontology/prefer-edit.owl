@@ -2252,10 +2252,12 @@ SubClassOf(obo:PREFER_0000205 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000206 (microbial culture)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000206 "A culture consisting of live microbial cells or microorganisms, such as bacteria, yeast, or fungi, used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000206 "A material entity consisting of microorganisms-unicellular microbial cell cultures- either prokaryotic (such as bacteria, archaea, or cyanobactreia) or eukaryotic (such as yeast, microalgae and protozoa), that are maintaned, cultivated, or propagated under controlled environmental conditions.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000206 "microbiological culture")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000206 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000206 "PREFER:0000206")
+AnnotationAssertion(oboInOwl:synoymn obo:PREFER_0000206 "microbial cell culture")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000206 "Microbial cultures are used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000206 "microbial culture")
 SubClassOf(obo:PREFER_0000206 obo:BFO_0000040)
 
