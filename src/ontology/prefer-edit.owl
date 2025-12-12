@@ -1624,6 +1624,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000105 "A fermentation culture r
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "inoculum culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "pre-culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "starter culture")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ENVO:03600040") oboInOwl:hasNarrowSynonym obo:PREFER_0000105 "fermentation starter")
 AnnotationAssertion(rdfs:label obo:PREFER_0000105 "seed culture"@en)
 SubClassOf(obo:PREFER_0000105 obo:PREFER_0000200)
 
@@ -2241,6 +2242,7 @@ SubClassOf(obo:PREFER_0000204 obo:BFO_0000019)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000205 "A material entity consisting of prokaryotic or eukaryotic living cells, whether unicellular or multicellular, that are maintaned, cultivated, or propagated under controlled environmental conditions.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000205 "ENVO:02000008")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000205 "OBI:0001876")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000205 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000205 "PREFER:0000205")
 AnnotationAssertion(rdfs:label obo:PREFER_0000205 "cell culture")
