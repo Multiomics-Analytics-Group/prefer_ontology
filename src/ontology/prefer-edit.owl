@@ -518,10 +518,10 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000022 "has numerator unit"@en)
 #   Classes
 ############################
 
-# Class: obo:PREFER_0000000 (microbial kinetic)
+# Class: obo:PREFER_0000000 (microbial kinetic metric variable)
 
-AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "umbrella term for online growth tracking, specifically cell mass fluxes as rates.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000000 "microbial kinetic"@en)
+AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "A process calculated variable that represents a quantitative kinetic metric derived from online process data, describing rates or fluxes associated wiht microbial growth, product formation, or respiration during the process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000000 "microbial kinetic metric variable"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_9000002)
 
 # Class: obo:PREFER_0000001 (offline sample measurement variable)
@@ -1501,7 +1501,7 @@ SubClassOf(obo:PREFER_0000090 obo:PREFER_0000016)
 
 # Class: obo:PREFER_0000091 (average specific substrate uptake rate in feed phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000091 "The average specific uptake rate of substrate during the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000091 "A bioproduction metric variable that represents the average specific uptake rate of substrate during the feeding phase, in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000091 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000091 "PREFER:0000091")
 AnnotationAssertion(rdfs:label obo:PREFER_0000091 "average specific substrate uptake rate in feed phase")
@@ -1510,7 +1510,7 @@ SubClassOf(obo:PREFER_0000091 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000092 (maximum specific substrate uptake rate in feed phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000092 "The maximum specific uptake rate of substrate during the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000092 "A bioproduction metric variable that represents the maximum specific uptake rate of substrate during the feeding phase, in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000092 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000092 "PREFER:0000092")
 AnnotationAssertion(rdfs:label obo:PREFER_0000092 "maximum specific substrate uptake rate in feed phase")
@@ -1519,7 +1519,7 @@ SubClassOf(obo:PREFER_0000092 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000093 (minimum specific substrate uptake rate in feed phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000093 "The minimum specific uptake rate of substrate during the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000093 "A bioproduction metric variable that represents the minimum specific uptake rate of substrate during the feeding phase, in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000093 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000093 "PREFER:0000093")
 AnnotationAssertion(rdfs:label obo:PREFER_0000093 "minimum specific substrate uptake rate in feed phase")
@@ -2088,32 +2088,31 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000157 "A phenomics core balance
 AnnotationAssertion(rdfs:label obo:PREFER_0000157 "phenomics carbon balance metric variable"@en)
 SubClassOf(obo:PREFER_0000157 obo:PREFER_0000023)
 
-# Class: obo:PREFER_0000158 (respiratory metric)
+# Class: obo:PREFER_0000158 (respiratory metric variable)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000158 "Computed variable that quantifies respiratory activity in the bioprocess, providing indications of metabolic states and gas exchange efficiency.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000158 "A mirobial kinetic metric variable that represents a rate describing respiratory activity of a production culture in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "gas echange metric")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "metabolic metric")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000158 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000158 "PREFER:0000158")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000158 "\"For instance, oxygen uptake rate (OUR), carbon dioxide evolution rate (CER), respiratory quotient (RQ), and related metrics. Umbrella term for monitoring metablism in real time, specifically cellular energy metabolis describing the metabolic state of the cell.\"")
-AnnotationAssertion(rdfs:label obo:PREFER_0000158 "respiratory metric")
+AnnotationAssertion(rdfs:label obo:PREFER_0000158 "respiratory metric variable")
 SubClassOf(obo:PREFER_0000158 obo:PREFER_0000000)
 
-# Class: obo:PREFER_0000159 (bioproduction metric)
+# Class: obo:PREFER_0000159 (bioproduction metric variable)
 
-AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000159 "production metric")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000159 "A mirobial kinetic metric variable that represents a rate describing compounds, substrate and products, and biomass production in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000159 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000159 "PREFER:0000159")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000159 "\"Mass fluxes linked to compounds (substrate, product) and biomass production rates\"")
-AnnotationAssertion(rdfs:label obo:PREFER_0000159 "bioproduction metric")
+AnnotationAssertion(rdfs:label obo:PREFER_0000159 "bioproduction metric variable")
 SubClassOf(obo:PREFER_0000159 obo:PREFER_0000000)
 
-# Class: obo:PREFER_0000160 (growth metric)
+# Class: obo:PREFER_0000160 (growth metric variable)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000160 "A mirobial kinetic metric variable that represents a rate describing biomass formation or growth in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000160 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000160 "PREFER:0000160")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000160 "\"Describe biomass dynamics. For instance, specific growth rate.\"")
-AnnotationAssertion(rdfs:label obo:PREFER_0000160 "growth metric")
+AnnotationAssertion(rdfs:label obo:PREFER_0000160 "growth metric variable")
 SubClassOf(obo:PREFER_0000160 obo:PREFER_0000000)
 
 # Class: obo:PREFER_0000161 (phenomics biomass balance metric variable)
