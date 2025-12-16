@@ -1240,7 +1240,7 @@ SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000063 (oxygen transfer rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000063 "Rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000063 "Rate at which O2 is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000063 "OTR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000063 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000063 "PREFER:0000063")
@@ -1251,19 +1251,19 @@ SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000064 (carbon dioxide transfer rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000064 "Rate at which CO2 is transferred out of the fermenter.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000064 "Rate at which CO2 is transferred out of the fermenter.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000064 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "\"Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.\" [PREFER]")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Physical gas transfer. Dynamic respiratory metric")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "\"Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000064 "carbon dioxide transfer rate")
 SubClassOf(obo:PREFER_0000064 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_UNIT_0000170))
 
 # Class: obo:PREFER_0000065 (respiratory quotient)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000065 "Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/fermentation run, commmonly used to assess the metabolic state of cells.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000065 "Ratio of CO2 produced to O2 consumed during cellular metabolism throught the bioprocess/fermentation run, commmonly used to assess the metabolic state of cells.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000065 "RQ")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000065 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000065 "PREFER:0000065")
@@ -1274,11 +1274,11 @@ SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000066 (produced carbon dioxide)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000066 "Amount of CO2 generated during the bioprocess.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000066 "co2 formed")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000066 "Amount of CO2 generated during the bioprocess.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000066 "co2 formed")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000066 "formed carbon dioxide")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000066 "formed co2")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000066 "produced co2")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000066 "formed co2")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000066 "produced co2")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000066 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000066 "PREFER:0000066")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000066 "Cumulative respiratory metric")
@@ -1288,7 +1288,7 @@ SubClassOf(obo:PREFER_0000066 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000067 (consumed carbon dioxide)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000067 "Amount of CO2 consumed during the bioprocess.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000067 "Amount of CO2 consumed during the bioprocess.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000067 "consumed co2")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000067 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000067 "PREFER:0000067")
@@ -1468,7 +1468,7 @@ SubClassOf(obo:PREFER_0000086 obo:PREFER_0000186)
 
 # Class: obo:PREFER_0000087 (substrate uptake rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000087 "The rate at which substrate is taken up by the cells during the bioprocess.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000087 "The rate at which substrate is taken up by the cells during the bioprocess.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000087 "QS")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000087 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000087 "PREFER:0000087")
@@ -1485,7 +1485,7 @@ SubClassOf(obo:PREFER_0000088 obo:PREFER_0000016)
 
 # Class: obo:PREFER_0000089 (specific substrate uptake rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000089 "The rate of substrate uptake per unit of biomass.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000089 "The rate of substrate uptake per unit of biomass.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000089 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000089 "PREFER:0000089")
 AnnotationAssertion(rdfs:label obo:PREFER_0000089 "specific substrate uptake rate")
@@ -1702,7 +1702,7 @@ SubClassOf(obo:PREFER_0000112 obo:PREFER_0000108)
 
 # Class: obo:PREFER_0000113 (compound production rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000113 "Speed at which the compound is produced over time.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000113 "Speed at which the compound is produced over time.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000113 "QP")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000113 "precision_fermentation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound formation rate")
@@ -1714,7 +1714,7 @@ SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000115 (specific compound production rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000115 "The rate of compound production per unit of biomass, providing the efficiency of compound production relative to biomass.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000115 "The rate of compound production per unit of biomass, providing the efficiency of compound production relative to biomass.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000115 "specific compound formation rate")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000115 "specific formation rate")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000115 "precision_fermentation")
@@ -1935,7 +1935,7 @@ SubClassOf(obo:PREFER_0000139 obo:PREFER_0000116)
 
 # Class: obo:PREFER_0000140 (biomass production rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000140 " The rate at which the biomass is produced over time.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000140 " The rate at which the biomass is produced over time.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000140 "Biomass formation rate")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000140 "Rx")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000140 "precision_fermentation")
@@ -1954,10 +1954,10 @@ SubClassOf(obo:PREFER_0000141 obo:PREFER_0000116)
 
 # Class: obo:PREFER_0000142 (specific growth rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000142 "The rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000142 "The rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000142 "growth rate")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasBroadSynonym obo:PREFER_0000142 "μ")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000142 "specific biomass growth rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000142 "μ")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000142 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
 AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific growth rate")
@@ -1966,9 +1966,8 @@ SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000143 (average specific biomass growth rate in feed phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000143 "The average specific growth rate of biomass during the feeding phase.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000143 "μ mean in feed")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000143 "μ mean in feed phase")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000143 "The average specific growth rate of biomass during the feeding phase.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000143 "μ mean in feed phase")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000143 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000143 "PREFER:0000143")
 AnnotationAssertion(rdfs:label obo:PREFER_0000143 "average specific biomass growth rate in feed phase")
@@ -1977,9 +1976,8 @@ SubClassOf(obo:PREFER_0000143 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000144 (average specific biomass growth rate in batch phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000144 "The average specific growth rate of biomass during the batch phase.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000144 "μ mean in batch")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000144 "μ mean in batch phase")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000144 "The average specific growth rate of biomass during the batch phase.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000144 "μ mean in batch phase")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000144 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000144 "PREFER:0000144")
 AnnotationAssertion(rdfs:label obo:PREFER_0000144 "average specific biomass growth rate in batch phase")
@@ -1988,9 +1986,8 @@ SubClassOf(obo:PREFER_0000144 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000145 (maximum specific biomass growth rate in feed phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000145 "The maximum specific growth rate of biomass during the feeding phase.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000145 "μ max in feed")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000145 "μ max in feed phase")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000145 "The maximum specific growth rate of biomass during the feeding phase.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000145 "μ max in feed phase")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000145 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000145 "PREFER:0000145")
 AnnotationAssertion(rdfs:label obo:PREFER_0000145 "maximum specific biomass growth rate in feed phase")
@@ -1999,9 +1996,8 @@ SubClassOf(obo:PREFER_0000145 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000146 (minimum specific biomass growth rate in feed phase)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000146 "The minimum specific growth rate of biomass during the feeding phase.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000146 "μ min in feed")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000146 "μ min in feed phase")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000146 "The minimum specific growth rate of biomass during the feeding phase.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000146 "μ min in feed phase")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000146 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000146 "PREFER:0000146")
 AnnotationAssertion(rdfs:label obo:PREFER_0000146 "minimum specific biomass growth rate in feed phase")
@@ -2091,17 +2087,16 @@ SubClassOf(obo:PREFER_0000157 obo:PREFER_0000023)
 # Class: obo:PREFER_0000158 (respiratory metric variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000158 "A mirobial kinetic metric variable that represents a rate describing respiratory activity of a production culture in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "gas echange metric")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "metabolic metric")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "gas exchange metric")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000158 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000158 "PREFER:0000158")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000158 "\"For instance, oxygen uptake rate (OUR), carbon dioxide evolution rate (CER), respiratory quotient (RQ), and related metrics. Umbrella term for monitoring metablism in real time, specifically cellular energy metabolis describing the metabolic state of the cell.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000158 "respiratory metric variable")
 SubClassOf(obo:PREFER_0000158 obo:PREFER_0000000)
 
 # Class: obo:PREFER_0000159 (bioproduction metric variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000159 "A mirobial kinetic metric variable that represents a rate describing compounds, substrate and products, and biomass production in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000159 "A mirobial kinetic metric variable that represents a rate describing substrate consumptions, compound production (e.g. product formation) and biomass production in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000159 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000159 "PREFER:0000159")
 AnnotationAssertion(rdfs:label obo:PREFER_0000159 "bioproduction metric variable")
