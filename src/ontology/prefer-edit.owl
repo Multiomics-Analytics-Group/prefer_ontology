@@ -219,7 +219,6 @@ Declaration(Class(obo:PREFER_7000006))
 Declaration(Class(obo:PREFER_7000007))
 Declaration(Class(obo:PREFER_7000008))
 Declaration(Class(obo:PREFER_9000003))
-Declaration(Class(obo:PREFER_UNIT_0000168))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
@@ -291,7 +290,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -931,10 +930,9 @@ SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000040 (pH measurement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "REFER") obo:IAO_0000115 obo:PREFER_0000040 "Bioreactor Potential of Hydrogen (pH) reading.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000040 "Bioreactor Potential of Hydrogen (pH) reading.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000040 "NCIT:C205029")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000040 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000040 uom:ph)
 AnnotationAssertion(rdfs:label obo:PREFER_0000040 "pH measurement")
 SubClassOf(obo:PREFER_0000040 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000040 obo:PREFER_9000001)
