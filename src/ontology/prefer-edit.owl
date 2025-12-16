@@ -271,11 +271,9 @@ Declaration(ObjectProperty(obo:PREFER_8000015))
 Declaration(ObjectProperty(obo:PREFER_8000016))
 Declaration(ObjectProperty(obo:PREFER_8000017))
 Declaration(ObjectProperty(obo:PREFER_8000018))
-Declaration(ObjectProperty(obo:PREFER_8000019))
 Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/PREFER_RE_#refers_to_variable>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
@@ -485,10 +483,6 @@ ObjectPropertyRange(obo:PREFER_8000017 obo:CHEBI_24431)
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000018 "x has_operational_mode y iff x is a bioreactor and y is an operational mode in which the bioreactor is operating in.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000018 "has operational mode"@en)
 
-# Object Property: obo:PREFER_8000019 (is cell culture type)
-
-AnnotationAssertion(rdfs:label obo:PREFER_8000019 "is cell culture type"@en)
-
 # Object Property: obo:PREFER_8000020 (setpoint of)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000020 "x is setpoint_of y iff x and y are information content entities, and x is a specified numerical value or target parameter that defines the desired state or threshold that y is designed to regulate, maintain, or reference.")
@@ -637,8 +631,6 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000012 "In a biotransformation process or bioprocess, a cell biocatalyst converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintenance.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
-SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000206))
-SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/PREFER_RE_#is_cell_culture_type> obo:PREFER_0000207))
 
 # Class: obo:PREFER_0000013 (taxon)
 
