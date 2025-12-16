@@ -286,7 +286,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -534,9 +534,10 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000016 obo:PREFER
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000017 obo:CHEBI_24431))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
 
-# Class: obo:PREFER_0000005 (cultivation alkalinity variable)
+# Class: obo:PREFER_0000005 (alkalinity cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000005 "cultivation alkalinity variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000005 "A cultivation condition that represents the alkalinity related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the pH and buffering state of the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000005 "alkalinity cultivation condition"@en)
 SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000006 (calculated offline sample)
@@ -544,25 +545,19 @@ SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 AnnotationAssertion(rdfs:label obo:PREFER_0000006 "calculated offline sample"@en)
 SubClassOf(obo:PREFER_0000006 obo:PREFER_9000002)
 
-# Class: obo:PREFER_0000007 (cultivation temperature variable)
+# Class: obo:PREFER_0000007 (temperature cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000007 "cultivation temperature variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000007 "A cultivation condition that represents the temperature related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the thermal state of the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000007 "temperature cultivation condition"@en)
 SubClassOf(obo:PREFER_0000007 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000008 "An environmental setting or an initial experimental condition related to inoculation established prior to or at the start of a fermentation process.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000008 "AFO_/property#AFX:0001732")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of variables describing the environmental and physicochemical conditions under which a fermentation process is carried out, grouping relevant process control variables and process measurement variables associated with the process condition.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000008 "EDAM:3724")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000008 "culture condition")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000008 "fermentation culture condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000008 "precision_fermentation")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000008 "environmental setting")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000008 "incoulation condition")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000008 "reference value")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000008 "setpoint value")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000008 "target variable")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000008 "PREFER:0000008")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000008 "\"This condition, which may be categorical or scalar variable, can include key environmental setpoints such as pH, temperature, initial volume, and optical density (OD) of the seed culture.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "cultivation condition")
 SubClassOf(obo:PREFER_0000008 obo:IAO_0000030)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
@@ -730,9 +725,10 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000023 "balance metric"
 AnnotationAssertion(rdfs:label obo:PREFER_0000023 "core balance"@en)
 SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
 
-# Class: obo:PREFER_0000024 (cultivation fermentation medium variable)
+# Class: obo:PREFER_0000024 (fermentation medium cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000024 "cultivation fermentation medium variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000024 "A cultivation condition that represents the fermentation medium related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the state of the fermentation medium within the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000024 "fermentation medium cultivation condition"@en)
 SubClassOf(obo:PREFER_0000024 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000025 (dissolved oxygen setpoint control variable)
@@ -786,14 +782,15 @@ SubClassOf(obo:PREFER_0000028 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000008))
 
-# Class: obo:PREFER_0000029 (cultivation pressure variable)
+# Class: obo:PREFER_0000029 (pressure cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000029 "cultivation pressure variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000029 "A cultivation condition that represents the pressure related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the pressure state within the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000029 "pressure cultivation condition"@en)
 SubClassOf(obo:PREFER_0000029 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000030 (aeration gas type)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000030 "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000030 "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen or nitrogen.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000030 "aeration gas")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000030 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000030 "PREFER:0000030")
@@ -824,16 +821,13 @@ SubClassOf(obo:PREFER_0000032 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
 
-# Class: obo:PREFER_0000033 (cultivation dissolved oxygen variable)
+# Class: obo:PREFER_0000033 (dissolved oxygen cultivation condition)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000033 "Concentration of oxygen molecules (O₂) dissolved in the aqueous fermentation medium.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000033 "GENEPIO:0000035")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000033 "MIXS:0000119")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000033 "PRIDE:0000788")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000033 "cultivation DO variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000033 "A cultivation condition that represents the dissolved oxygen related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the concentration of oxygen dissolved in the cultivation environment.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000033 "DO cultivation condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000033 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000033 "PREFER:0000033")
-AnnotationAssertion(rdfs:label obo:PREFER_0000033 "cultivation dissolved oxygen variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000033 "dissolved oxygen cultivation condition")
 SubClassOf(obo:PREFER_0000033 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000034 (starting optical density measurement)
@@ -863,8 +857,8 @@ SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000036 (initial culture volume measurement)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000036 "A process measurement variable that indicates the total volume of the culture of a bioreactor or fermentation system, at the beginning of the process, representing the sum of fermentation medium and seed culture.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting culture volume")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "initial production culture volume")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting culture volume")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting production culture volume")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000036 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000036 "PREFER:0000036")
@@ -873,13 +867,12 @@ SubClassOf(obo:PREFER_0000036 obo:PREFER_0000046)
 SubClassOf(obo:PREFER_0000036 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000037 (cultivation feed variable)
+# Class: obo:PREFER_0000037 (feed cultivation condition)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000037 "The input of fresh media supplied into the bioreactor.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000037 "feed solution")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000037 "A cultivation condition that represents the feed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the addition and state of fresh feed media within the cultivation environment.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000037 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000037 "PREFER:0000037")
-AnnotationAssertion(rdfs:label obo:PREFER_0000037 "cultivation feed variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000037 "feed cultivation condition")
 SubClassOf(obo:PREFER_0000037 obo:PREFER_0000008)
 SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(obo:PREFER_8000013 obo:PREFER_0000189))
 
@@ -959,14 +952,16 @@ SubClassOf(obo:PREFER_0000044 obo:PREFER_0000001)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000045 (cultivation optical density variable)
+# Class: obo:PREFER_0000045 (optical density cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000045 "cultivation optical density variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000045 "A cultivation condition that represents the optical density related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the optical density state of the fermentation culture.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000045 "optical density cultivation condition"@en)
 SubClassOf(obo:PREFER_0000045 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000046 (cultivation volume variable)
+# Class: obo:PREFER_0000046 (volume cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000046 "cultivation volume variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000046 "A cultivation condition that represents the volume related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the working or total fermentation volume of the cultivation system.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000046 "volume cultivation condition"@en)
 SubClassOf(obo:PREFER_0000046 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000047 (acid volume measurement)
@@ -1267,14 +1262,16 @@ SubClassOf(obo:PREFER_0000071 obo:PREFER_0000001)
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.L-1))
 
-# Class: obo:PREFER_0000072 (cultivation respiratory metrics variable)
+# Class: obo:PREFER_0000072 (respiratory metrics cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000072 "cultivation respiratory metrics variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000072 "A cultivation condition that represents the respiratory related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the respiratory metabolic state of the fermentation culture.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000072 "respiratory metrics cultivation condition"@en)
 SubClassOf(obo:PREFER_0000072 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000073 (cultivation seed variable)
+# Class: obo:PREFER_0000073 (seed cultivation condition)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000073 "cultivation seed variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000073 "A cultivation condition that represents the seed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the inoculum or seed state within the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000073 "seed cultivation condition"@en)
 SubClassOf(obo:PREFER_0000073 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000074 (offline sample compound concentration)
@@ -1760,8 +1757,8 @@ SubClassOf(obo:PREFER_0000127 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000128 (offline sample carbon dioxide rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "The volumetric rate of CO2 produced by the bioprocess over time.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000128 "carbon dioxide volumetric rate")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000128 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000128 "PREFER:0000128")
 AnnotationAssertion(rdfs:label obo:PREFER_0000128 "offline sample carbon dioxide rate")
