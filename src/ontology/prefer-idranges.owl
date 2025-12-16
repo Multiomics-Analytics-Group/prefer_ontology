@@ -56,7 +56,7 @@ Datatype: idrange:4
         xsd:integer[>= 7000000 , <= 7099999]
 
 
-Datatype: idrange:4
+Datatype: idrange:5
 
     Annotations: 
         allocatedto: "Relations"
@@ -64,7 +64,7 @@ Datatype: idrange:4
     EquivalentTo: 
         xsd:integer[>= 8000000 , <= 8999999]
 
-Datatype: idrange:5
+Datatype: idrange:6
 
     Annotations: 
         allocatedto: "Foundations"
