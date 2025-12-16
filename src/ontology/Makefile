@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                2f78d73a4b44d9bdb4576de044043ea260aa1b969bffa306d50e9ef0da2ada3b
+CONFIG_HASH=                30c951b8e58fda0e575ac698f7fc5ad1cc5f4f27cb30efa0770e890783de7e22
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/foundation.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/foundation.owl $(COMPONENTSDIR)/units.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao cl omo ro chebi bao uo pato go
+IMPORTS =  iao cl omo ro chebi bao pato go
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -450,11 +450,13 @@ all_components: $(OTHER_SRC)
 .PHONY: recreate-components
 recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-foundation.owl \
+		--assume-new=$(TMPDIR)/stamp-component-units.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
 .PHONY: no-mirror-recreate-components
 no-mirror-recreate-components:
 	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-foundation.owl \
+		--assume-new=$(TMPDIR)/stamp-component-units.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
 .PHONY: recreate-%
@@ -474,6 +476,12 @@ $(COMPONENTSDIR)/%.owl: $(TMPDIR)/stamp-component-%.owl | $(COMPONENTSDIR)
 $(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
 	touch $@
 .PRECIOUS: $(TMPDIR)/stamp-component-%.owl
+
+$(COMPONENTSDIR)/units.owl: $(TEMPLATEDIR)/units.tsv $(TMPDIR)/stamp-component-units.owl
+	$(ROBOT) template  \
+		 --template $(TEMPLATEDIR)/units.tsv \
+		 $(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(COMPONENTSDIR)/units.owl
 
 endif # COMP=true
 # ----------------------------------------
@@ -529,14 +537,6 @@ endif
 .PRECIOUS: $(MIRRORDIR)/bao.owl
 mirror-bao: | $(TMPDIR)
 	$(ROBOT) remove -I http://www.bioassayontology.org/bao/bao_complete.owl --base-iri http://purl.obolibrary.org/obo/BAO  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: uo
-.PHONY: mirror-uo
-.PRECIOUS: $(MIRRORDIR)/uo.owl
-mirror-uo: | $(TMPDIR)
-	curl -L $(OBOBASE)/uo.owl --create-dirs -o $(TMPDIR)/uo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/uo-download.owl --base-iri http://purl.obolibrary.org/obo/UO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: pato

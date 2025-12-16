@@ -18,6 +18,10 @@ export_formats:
 components:
   products:
       - filename: foundation.owl
+      - filename: units.owl
+        use_template: True
+        templates:
+          - units.tsv
 import_group:
   use_base_merging: TRUE
   products:
@@ -35,8 +39,6 @@ import_group:
       make_base: TRUE
       base_irirs:
         - http://www.bioassayontology.org/
-    - id: uo
-      make_base: TRUE
     - id: pato
       use_base: TRUE
     - id: go
