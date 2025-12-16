@@ -1,0 +1,219 @@
+Prefix(:=<http://purl.obolibrary.org/obo/prefer/components/units.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/prefer/components/units.owl>
+<http://purl.obolibrary.org/obo/prefer/releases/2025-12-16/components/units.owl>
+Annotation(owl:versionInfo "2025-12-16")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_7000008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PREFER_9000004>))
+Declaration(Class(<https://w3id.org/uom/Cel>))
+Declaration(Class(<https://w3id.org/uom/L>))
+Declaration(Class(<https://w3id.org/uom/L.h-1>))
+Declaration(Class(<https://w3id.org/uom/L.min-1>))
+Declaration(Class(<https://w3id.org/uom/Pa>))
+Declaration(Class(<https://w3id.org/uom/bar>))
+Declaration(Class(<https://w3id.org/uom/g>))
+Declaration(Class(<https://w3id.org/uom/g.L-1>))
+Declaration(Class(<https://w3id.org/uom/g.g-1>))
+Declaration(Class(<https://w3id.org/uom/g.g-1.h-1>))
+Declaration(Class(<https://w3id.org/uom/g.h-1>))
+Declaration(Class(<https://w3id.org/uom/h>))
+Declaration(Class(<https://w3id.org/uom/h-1>))
+Declaration(Class(<https://w3id.org/uom/kg>))
+Declaration(Class(<https://w3id.org/uom/mL>))
+Declaration(Class(<https://w3id.org/uom/mg>))
+Declaration(Class(<https://w3id.org/uom/mmol>))
+Declaration(Class(<https://w3id.org/uom/mmol.h-1>))
+Declaration(Class(<https://w3id.org/uom/mol>))
+Declaration(Class(<https://w3id.org/uom/mol.h-1>))
+Declaration(Class(<https://w3id.org/uom/mol.mol-1>))
+Declaration(Class(<https://w3id.org/uom/%25>))
+Declaration(Class(<https://w3id.org/uom/%5BdegF%5D>))
+Declaration(Class(<https://w3id.org/uom/%5BpH%5D>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000000> (mole per carbon mole)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000000> "mole per carbon mole")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000000> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000001> (mole per carbon mole per hour)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000001> "mole per carbon mole per hour")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000001> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000002> (carbon mole)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000002> "carbon mole")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000002> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000003> (carbon mole per gram)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000003> "carbon mole per gram")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000003> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000004> (carbon mole per carbon mole)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000004> "carbon mole per carbon mole")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000004> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000005> (carbon mole per hour)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000005> "carbon mole per hour")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000005> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000006> (unit of optical density)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000006> "unit of optical density")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000006> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000007> (dimensionless unit)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000007> "dimensionless unit")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000007> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <http://purl.obolibrary.org/obo/PREFER_7000008> (revolution per minute)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PREFER_7000008> "revolution per minute")
+SubClassOf(<http://purl.obolibrary.org/obo/PREFER_7000008> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/Cel> (degree Celsius)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/Cel> "degree Celsius")
+SubClassOf(<https://w3id.org/uom/Cel> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/L> (liter)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/L> "liter")
+SubClassOf(<https://w3id.org/uom/L> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/L.h-1> (liters per hour)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/L.h-1> "liters per hour")
+SubClassOf(<https://w3id.org/uom/L.h-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/L.min-1> (liter per minute)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/L.min-1> "liter per minute")
+SubClassOf(<https://w3id.org/uom/L.min-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/Pa> (pascal)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/Pa> "pascal")
+SubClassOf(<https://w3id.org/uom/Pa> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/bar> (bar)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/bar> "bar")
+SubClassOf(<https://w3id.org/uom/bar> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/g> (gram)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/g> "gram")
+SubClassOf(<https://w3id.org/uom/g> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/g.L-1> (gram per litre)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/g.L-1> "gram per litre")
+SubClassOf(<https://w3id.org/uom/g.L-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/g.g-1> (gram per gram)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/g.g-1> "gram per gram")
+SubClassOf(<https://w3id.org/uom/g.g-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/g.g-1.h-1> (gram per gram per hour)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/g.g-1.h-1> "gram per gram per hour")
+SubClassOf(<https://w3id.org/uom/g.g-1.h-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/g.h-1> (gram per hour)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/g.h-1> "gram per hour")
+SubClassOf(<https://w3id.org/uom/g.h-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/h> (hour)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/h> "hour")
+SubClassOf(<https://w3id.org/uom/h> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/h-1> (per hour (h⁻¹ or 1/h))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/h-1> "per hour (h⁻¹ or 1/h)")
+SubClassOf(<https://w3id.org/uom/h-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/kg> (kilogram)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/kg> "kilogram")
+SubClassOf(<https://w3id.org/uom/kg> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mL> (milliliter)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mL> "milliliter")
+SubClassOf(<https://w3id.org/uom/mL> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mg> (milligram)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mg> "milligram")
+SubClassOf(<https://w3id.org/uom/mg> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mmol> (millimole)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mmol> "millimole")
+SubClassOf(<https://w3id.org/uom/mmol> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mmol.h-1> (millimole per hour)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mmol.h-1> "millimole per hour")
+SubClassOf(<https://w3id.org/uom/mmol.h-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mol> (mole)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mol> "mole")
+SubClassOf(<https://w3id.org/uom/mol> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mol.h-1> (mole per hour)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mol.h-1> "mole per hour")
+SubClassOf(<https://w3id.org/uom/mol.h-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/mol.mol-1> (mole per mole)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/mol.mol-1> "mole per mole")
+SubClassOf(<https://w3id.org/uom/mol.mol-1> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/%25> (percent)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/%25> "percent")
+SubClassOf(<https://w3id.org/uom/%25> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/%5BdegF%5D> (degree Fahrenheit based unit)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/%5BdegF%5D> "degree Fahrenheit based unit")
+SubClassOf(<https://w3id.org/uom/%5BdegF%5D> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+# Class: <https://w3id.org/uom/%5BpH%5D> (pH based unit)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/uom/%5BpH%5D> "pH based unit")
+SubClassOf(<https://w3id.org/uom/%5BpH%5D> <http://purl.obolibrary.org/obo/PREFER_9000004>)
+
+
+)

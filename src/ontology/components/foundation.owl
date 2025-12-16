@@ -63,5 +63,10 @@ AnnotationAssertion(rdfs:label obo:PREFER_9000003 "precision fermentation proces
 SubClassOf(obo:PREFER_9000003 obo:BFO_0000015)
 SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002009> obo:GO_0006113))
 
+# Class: obo:PREFER_9000004 (unit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000004 "An information content entity that represents a standard quantity or measurement used to express the magnitude of a quantity.")
+AnnotationAssertion(rdfs:label obo:PREFER_9000004 "unit"@en)
+SubClassOf(obo:PREFER_9000004 obo:IAO_0000030)
 
 )
