@@ -216,6 +216,7 @@ Declaration(Class(obo:PREFER_0000205))
 Declaration(Class(obo:PREFER_0000206))
 Declaration(Class(obo:PREFER_0000207))
 Declaration(Class(obo:PREFER_0000208))
+Declaration(Class(obo:PREFER_0000209))
 Declaration(Class(obo:PREFER_7000000))
 Declaration(Class(obo:PREFER_7000001))
 Declaration(Class(obo:PREFER_7000002))
@@ -294,7 +295,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -867,8 +868,8 @@ SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000036 (initial culture volume measurement)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000036 "A process measurement variable that indicates the total volume of the culture of a bioreactor or fermentation system, at the beginning of the process, representing the sum of fermentation medium and seed culture.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting culture volume")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "initial production culture volume")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting culture volume")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000036 "starting production culture volume")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000036 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000036 "PREFER:0000036")
@@ -1324,7 +1325,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000078 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000078 "PREFER:0000078")
 AnnotationAssertion(rdfs:label obo:PREFER_0000078 "carbon balance variable")
 SubClassOf(obo:PREFER_0000078 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:UO_0000187))
+SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:%25))
 
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols variable)
 
@@ -1655,15 +1656,6 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000116 "A dissolved oxygen proce
 AnnotationAssertion(rdfs:label obo:PREFER_0000116 "inlet air carbon dioxide setpoint control variable"@en)
 SubClassOf(obo:PREFER_0000116 obo:PREFER_0000119)
 
-# Class: obo:PREFER_0000116 (calculated omics sample variable)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000116 "A process calculated variable that represents a set of values derived from computational analysis or omics data procesing from an offline sample associated with a process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000116 "calculated omics offline sample variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000116 "computed omics offline sample variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000116 "computed omics sample variable")
-AnnotationAssertion(rdfs:label obo:PREFER_0000116 "calculated omics sample variable"@en)
-SubClassOf(obo:PREFER_0000116 obo:PREFER_9000002)
-
 # Class: obo:PREFER_0000117 (compound produced yield (substrate) variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000117 "A phenomics performance indicator metric that represents the yield of a compound produced per substrate (S) consumed, quantifying how efficiently compound is produced relative to substrate consumption in a bioreactor or fermentation system, during the process.")
@@ -1778,8 +1770,8 @@ SubClassOf(obo:PREFER_0000127 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000128 (offline sample carbon dioxide rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "The volumetric rate of CO2 produced by the bioprocess over time.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000128 "carbon dioxide volumetric rate")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000128 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000128 "PREFER:0000128")
 AnnotationAssertion(rdfs:label obo:PREFER_0000128 "offline sample carbon dioxide rate")
@@ -1839,7 +1831,7 @@ SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000135 "A calculated omics sample variable that represents genomic values derived from computational analysis using DNA sequence data from an offline sample associated with a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000135 "calculated genomics sample variable"@en)
-SubClassOf(obo:PREFER_0000135 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000135 obo:PREFER_0000209)
 
 # Class: obo:PREFER_0000136 (biomass lost in sampling variable)
 
@@ -1865,13 +1857,13 @@ SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000138 "A calculated omics sample variable that represents transcript features derived from computational analysis using transcriptomics data from an offline sample associated with a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000138 "calculated transcriptomics sample variable"@en)
-SubClassOf(obo:PREFER_0000138 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000138 obo:PREFER_0000209)
 
 # Class: obo:PREFER_0000139 (calculated proteomics sample variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000139 "A calculated omics sample variable that represents protein features derived from computational analysis using proteomic data from an offline sample associated with a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000139 "calculated proteomics sample variable"@en)
-SubClassOf(obo:PREFER_0000139 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000139 obo:PREFER_0000209)
 
 # Class: obo:PREFER_0000140 (biomass production rate)
 
@@ -1889,7 +1881,7 @@ SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000141 "A calculated omics sample variable that represents metabolic flux values derived from computational analysis using experimental data from an offline sample associated with a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000141 "calculated fluxomics sample variable"@en)
-SubClassOf(obo:PREFER_0000141 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000141 obo:PREFER_0000209)
 
 # Class: obo:PREFER_0000142 (specific growth rate)
 
@@ -1958,7 +1950,7 @@ SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000148 "A calculated omics sample variable that represents metabolite features derived from computational analysis using metabolomic data from an offline sample associated with a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000148 "calculated metabolomics sample variable"@en)
-SubClassOf(obo:PREFER_0000148 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000148 obo:PREFER_0000209)
 
 # Class: obo:PREFER_0000149 (calculated metagenomics sample variable)
 
@@ -2046,18 +2038,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000160 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000160 "PREFER:0000160")
 AnnotationAssertion(rdfs:label obo:PREFER_0000160 "growth metric variable")
 SubClassOf(obo:PREFER_0000160 obo:PREFER_0000000)
-
-# Class: obo:PREFER_0000161 (phenomics biomass balance metric variable)
-
-AnnotationAssertion(rdfs:comment obo:PREFER_0000161 "A phenomics core balance metric variable that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000161 "phenomics biomass balance metric variable"@en)
-SubClassOf(obo:PREFER_0000161 obo:PREFER_0000023)
-
-# Class: obo:PREFER_0000162 (phenomics compound balance metric variable)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000162 "A phenomics core balance metric variable that represents a quantitative metric derived from compound balance calculations over a process, used to characterize the compound balabce within a bioreactor or fermenter system during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000162 "phenomics compound balance metric variable"@en)
-SubClassOf(obo:PREFER_0000162 obo:PREFER_0000023)
 
 # Class: obo:PREFER_0000161 (phenomics biomass balance metric variable)
 
@@ -2285,13 +2265,16 @@ SubClassOf(obo:PREFER_0000207 obo:BFO_0000040)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000208 "A calculated omics sample variable that represents phenotypic characteristics derived from computational analysis using phenotype-related data from an offline sample associated with a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000208 "calculated phenomics sample variable"@en)
-SubClassOf(obo:PREFER_0000208 obo:PREFER_0000116)
+SubClassOf(obo:PREFER_0000208 obo:PREFER_0000209)
 
-# Class: obo:PREFER_0000208 (calculated phenomics sample variable)
+# Class: obo:PREFER_0000209 (calculated omics sample variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000208 "A calculated omics sample variable that represents phenotypic characteristics derived from computational analysis using phenotype-related data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000208 "calculated phenomics sample variable"@en)
-SubClassOf(obo:PREFER_0000208 obo:PREFER_0000116)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000209 "A process calculated variable that represents a set of values derived from computational analysis or omics data procesing from an offline sample associated with a process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "calculated omics offline sample variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "computed omics offline sample variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "computed omics sample variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000209 "calculated omics sample variable")
+SubClassOf(obo:PREFER_0000209 obo:PREFER_9000002)
 
 # Class: obo:PREFER_7000000 (mole per carbon mole)
 
