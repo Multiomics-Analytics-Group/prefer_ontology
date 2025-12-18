@@ -1290,7 +1290,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000077 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000077 "\"Rate expressed in reciprocal hours (h⁻¹ or 1/h).\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution rate")
-SubClassOf(obo:PREFER_0000077 obo:PREFER_0000023)
+SubClassOf(obo:PREFER_0000077 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
 
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols variable)
