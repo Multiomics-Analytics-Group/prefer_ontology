@@ -123,7 +123,6 @@ Declaration(Class(obo:PREFER_0000087))
 Declaration(Class(obo:PREFER_0000088))
 Declaration(Class(obo:PREFER_0000089))
 Declaration(Class(obo:PREFER_0000090))
-Declaration(Class(obo:PREFER_0000091))
 Declaration(Class(obo:PREFER_0000092))
 Declaration(Class(obo:PREFER_0000093))
 Declaration(Class(obo:PREFER_0000094))
@@ -174,8 +173,6 @@ Declaration(Class(obo:PREFER_0000139))
 Declaration(Class(obo:PREFER_0000140))
 Declaration(Class(obo:PREFER_0000141))
 Declaration(Class(obo:PREFER_0000142))
-Declaration(Class(obo:PREFER_0000143))
-Declaration(Class(obo:PREFER_0000144))
 Declaration(Class(obo:PREFER_0000145))
 Declaration(Class(obo:PREFER_0000146))
 Declaration(Class(obo:PREFER_0000147))
@@ -295,7 +292,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -549,7 +546,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000005 "A cultivation condition 
 AnnotationAssertion(rdfs:label obo:PREFER_0000005 "alkalinity cultivation condition"@en)
 SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000007 (cultivation temperature variable)
+# Class: obo:PREFER_0000007 (temperature cultivation condition)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000007 "A cultivation condition that represents the temperature related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the thermal state of the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000007 "temperature cultivation condition"@en)
@@ -1322,7 +1319,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000078 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000078 "PREFER:0000078")
 AnnotationAssertion(rdfs:label obo:PREFER_0000078 "carbon balance variable")
 SubClassOf(obo:PREFER_0000078 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:%25))
+SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols variable)
 
@@ -1424,15 +1421,6 @@ SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://www.bioassayontology.
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000090 "A time interval of a feed within a fermentation process")
 AnnotationAssertion(rdfs:label obo:PREFER_0000090 "feed phase"@en)
 SubClassOf(obo:PREFER_0000090 obo:PREFER_0000016)
-
-# Class: obo:PREFER_0000091 (average specific substrate uptake rate in feed phase)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000091 "A bioproduction metric variable that represents the average specific uptake rate of substrate during the feeding phase, in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000091 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000091 "PREFER:0000091")
-AnnotationAssertion(rdfs:label obo:PREFER_0000091 "average specific substrate uptake rate in feed phase")
-SubClassOf(obo:PREFER_0000091 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000091 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.g-1.h-1))
 
 # Class: obo:PREFER_0000092 (maximum specific substrate uptake rate in feed phase)
 
@@ -1896,26 +1884,6 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific growth rate")
 SubClassOf(obo:PREFER_0000142 obo:PREFER_0000160)
 SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
 
-# Class: obo:PREFER_0000143 (average specific biomass growth rate in feed phase)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000143 "The average specific growth rate of biomass during the feeding phase.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000143 "μ mean in feed phase")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000143 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000143 "PREFER:0000143")
-AnnotationAssertion(rdfs:label obo:PREFER_0000143 "average specific biomass growth rate in feed phase")
-SubClassOf(obo:PREFER_0000143 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000143 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
-
-# Class: obo:PREFER_0000144 (average specific biomass growth rate in batch phase)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000144 "The average specific growth rate of biomass during the batch phase.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000144 "μ mean in batch phase")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000144 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000144 "PREFER:0000144")
-AnnotationAssertion(rdfs:label obo:PREFER_0000144 "average specific biomass growth rate in batch phase")
-SubClassOf(obo:PREFER_0000144 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000144 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
-
 # Class: obo:PREFER_0000145 (maximum specific biomass growth rate in feed phase)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000145 "The maximum specific growth rate of biomass during the feeding phase.")
@@ -2117,13 +2085,13 @@ SubClassOf(obo:PREFER_0000185 obo:BFO_0000019)
 # Class: obo:PREFER_0000186 (laboratory bioreactor scale)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale that refers to small volume bioreactor systems used for laboratory scale experimentation, research, development, and process optimization, typically ranging from a few milliliters to several liters in working volume.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab bioreactor scale")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab-scale")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab bioreactor scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab-scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000186 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000186 "PREFER:0000186")
 AnnotationAssertion(rdfs:label obo:PREFER_0000186 "laboratory bioreactor scale")
@@ -2145,8 +2113,8 @@ SubClassOf(obo:PREFER_0000187 obo:PREFER_0000185)
 # Class: obo:PREFER_0000188 (industrial bioreactor scale)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in working volume.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial-scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial-scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000188 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000188 "PREFER:0000188")
 AnnotationAssertion(rdfs:label obo:PREFER_0000188 "industrial bioreactor scale")
