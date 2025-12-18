@@ -1150,8 +1150,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000061 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000061 "PREFER:0000061")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000061 "Biorespiration. Dynamic respiratory metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000061 "oxygen uptake rate")
-SubClassOf(obo:PREFER_0000061 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+SubClassOf(obo:PREFER_0000061 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mmol.h-1))
 
 # Class: obo:PREFER_0000062 (carbon dioxide evolution rate)
@@ -1163,8 +1162,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000062 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000062 "PREFER:0000062")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000062 "Physical gas transfer. Dynamic respiratory metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000062 "carbon dioxide evolution rate")
-SubClassOf(obo:PREFER_0000062 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+SubClassOf(obo:PREFER_0000062 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mmol.h-1))
 
 # Class: obo:PREFER_0000063 (oxygen transfer rate)
