@@ -110,7 +110,6 @@ Declaration(Class(obo:PREFER_0000074))
 Declaration(Class(obo:PREFER_0000075))
 Declaration(Class(obo:PREFER_0000076))
 Declaration(Class(obo:PREFER_0000077))
-Declaration(Class(obo:PREFER_0000078))
 Declaration(Class(obo:PREFER_0000079))
 Declaration(Class(obo:PREFER_0000080))
 Declaration(Class(obo:PREFER_0000081))
@@ -1310,16 +1309,6 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000077 "\"Rate expressed in recipro
 AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution rate")
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000023)
 SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
-
-# Class: obo:PREFER_0000078 (carbon balance variable)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000078 "A phenomics carbon balance metric variable that represents the general carbon balance which compares the total amount of carbon entering a bioreactor or fermenter system, through the substrate, to the total carbon leaving the system (in products, biomass or by-products like carbon dioxide.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000078 "C balance variable")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000078 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000078 "PREFER:0000078")
-AnnotationAssertion(rdfs:label obo:PREFER_0000078 "carbon balance variable")
-SubClassOf(obo:PREFER_0000078 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols variable)
 
