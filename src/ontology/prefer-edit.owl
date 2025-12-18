@@ -112,6 +112,7 @@ Declaration(Class(obo:PREFER_0000074))
 Declaration(Class(obo:PREFER_0000075))
 Declaration(Class(obo:PREFER_0000076))
 Declaration(Class(obo:PREFER_0000077))
+Declaration(Class(obo:PREFER_0000078))
 Declaration(Class(obo:PREFER_0000079))
 Declaration(Class(obo:PREFER_0000080))
 Declaration(Class(obo:PREFER_0000081))
@@ -487,11 +488,11 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000022 "has numerator unit"@en)
 #   Classes
 ############################
 
-# Class: obo:PREFER_0000000 (microbial kinetic metric variable)
+# Class: obo:PREFER_0000000 (microbial kinetic metric)
 
-AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "A process calculated variable that represents a quantitative kinetic metric derived from online process data, describing rates or fluxes associated wiht microbial growth, product formation, or respiration during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000000 "microbial kinetic metric variable"@en)
-SubClassOf(obo:PREFER_0000000 obo:PREFER_9000002)
+AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "A key process indicator variable that represents a quantitative kinetic metric, describing rates or fluxes associated, for instance, wiht microbial growth, product formation, or respiration during the process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000000 "microbial kinetic metric"@en)
+SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
 # Class: obo:PREFER_0000001 (offline sample measurement variable)
 
@@ -1318,6 +1319,18 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution rate")
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
 
+# Class: obo:PREFER_0000078 (key process indicator)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000078 "A calculated phenomics variable that represents a quantitative process indicator used to assess the.....
+
+
+
+
+ efficiency or performance of a process.  Such metrics are tipically expressed as yield coefficients that quantify the efficiency of converting inputs(e.g. substrates) into desired outputs(e.g. products), expressed as the ratio of output formed per unit of substrate or biomass consumed.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000078 "process indicator variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000078 "key process indicator"@en)
+SubClassOf(obo:PREFER_0000078 obo:PREFER_0000208)
+
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000079 "A phenomics carbon balance metric variable that represents the general carbon balance in carbon moles, which compares the total amount of carbon entering a bioreactor or fermenter system, through the substrate, to the total carbon leaving the system (in products, biomass or by-products like carbon dioxide.")
@@ -1923,15 +1936,13 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000154 "PREFER:0000154")
 AnnotationAssertion(rdfs:label obo:PREFER_0000154 "offline measurement")
 SubClassOf(obo:PREFER_0000154 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000155 (phenomics performance indicator metric)
+# Class: obo:PREFER_0000155 (performance metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000155 "A calculated phenomics sample variable that represents a quantitative performance indicator used to assess the efficiency or performance of a process.  Such metrics are tipically expressed as yield coefficients that quantify the efficiency of converting inputs(e.g. substrates) into desired outputs(e.g. products), expressed as the ratio of output formed per unit of substrate or biomass consumed.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000155 "phenomics performance indicator")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000155 "A phenomics key process indicator variable that represents a quantitative metric used to assess the efficiency or performance of a process.  Such metrics are tipically expressed as yield coefficients that quantify the efficiency of converting inputs(e.g. substrates) into desired outputs(e.g. products), expressed as the ratio of output formed per unit of substrate or biomass consumed.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000155 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000155 "PREFER:0000155")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000155 "key process indicator")
-AnnotationAssertion(rdfs:label obo:PREFER_0000155 "phenomics performance indicator metric")
-SubClassOf(obo:PREFER_0000155 obo:PREFER_0000208)
+AnnotationAssertion(rdfs:label obo:PREFER_0000155 "performance metric")
+SubClassOf(obo:PREFER_0000155 obo:PREFER_0000078)
 
 # Class: obo:PREFER_0000157 (phenomics carbon balance metric variable)
 
