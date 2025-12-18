@@ -106,6 +106,7 @@ Declaration(Class(obo:PREFER_0000068))
 Declaration(Class(obo:PREFER_0000069))
 Declaration(Class(obo:PREFER_0000070))
 Declaration(Class(obo:PREFER_0000071))
+Declaration(Class(obo:PREFER_0000072))
 Declaration(Class(obo:PREFER_0000073))
 Declaration(Class(obo:PREFER_0000074))
 Declaration(Class(obo:PREFER_0000075))
@@ -1093,12 +1094,12 @@ SubClassOf(obo:PREFER_0000056 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
 SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
 
-# Class: obo:PREFER_0000057 (oxygen flow measurement)
+# Class: obo:PREFER_0000057 (oxygen flow rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000057 "A process measurement variable that indicates the rate at which oxygen is supplied to a bioreactor or fermentation system during a process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000057 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000057 "PREFER:0000057")
-AnnotationAssertion(rdfs:label obo:PREFER_0000057 "oxygen flow measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000057 "oxygen flow rate")
 SubClassOf(obo:PREFER_0000057 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000057 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
@@ -1268,6 +1269,15 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000071 "offline sample biomass concen
 SubClassOf(obo:PREFER_0000071 obo:PREFER_0000001)
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.L-1))
+
+# Class: obo:PREFER_0000072 (carbon dioxide flow rate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000072 "A process measurement variable that indicates the rate at which carbon dioxide is supplied to a bioreactor or fermentation system during a process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000072 "carbon dioxide flow rate"@en)
+SubClassOf(obo:PREFER_0000072 obo:PREFER_0000033)
+SubClassOf(obo:PREFER_0000072 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000072 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+SubClassOf(obo:PREFER_0000072 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
 
 # Class: obo:PREFER_0000073 (seed cultivation condition)
 
