@@ -628,13 +628,13 @@ SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000018 obo:PREFER
 
 # Class: obo:PREFER_0000015 (operational parameter)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000015 "An operational setting related to the operational mode of the bioreactor and the type of fermentation or cultivation carried out.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000015 "An information content entity that represents a set of configurable settings used to operate and control a fermentation process, grouping process control variables and mode dependent parameters that define how cultivation conditions are regulated in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000015 "operational setting")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") oboInOwl:hasBroadSynonym obo:PREFER_0000015 "parameter")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000015 "REPR:InstrumentSetting")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000015 "precision_fermentation")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") Annotation(oboInOwl:hasDbXref "REPR:Parameter") oboInOwl:hasRelatedSynonym obo:PREFER_0000015 "parameter")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AFR:0001505") oboInOwl:hasRelatedSynonym obo:PREFER_0000015 "setting")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000015 "PREFER:0000015")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000015 "\"Such as dissolved oxygen (DO) control setpoints and feeding strategies.\" [PREFER]")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000015 "Operational parameters may vary depending on the selected fermentation operational mode (e.g. batch, fed-batch, continuous) and are realized through instrument or system configuration.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000015 "operational parameter")
 SubClassOf(obo:PREFER_0000015 obo:IAO_0000030)
 
@@ -1380,14 +1380,18 @@ SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.
 AnnotationAssertion(rdfs:label obo:PREFER_0000084 "offline sample measurement carbon dioxide"@en)
 SubClassOf(obo:PREFER_0000084 obo:PREFER_0000001)
 
-# Class: obo:PREFER_0000085 (micro scale bioreactor)
+# Class: obo:PREFER_0000085 (microbioreactor scale)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000085 "micro scale bioreactor"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000085 "A laboratory bioreactor scale that refers to very small volume bioreactor systems designed for high-throughput screening, typically operated at working volumes in the range of approximately a few microliters.")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000085 "For instance, microtiter plates (MTPs) fall within this category.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000085 "microbioreactor scale"@en)
 SubClassOf(obo:PREFER_0000085 obo:PREFER_0000186)
 
-# Class: obo:PREFER_0000086 (bench-top scale bioreactor)
+# Class: obo:PREFER_0000086 (minibioreactor scale)
 
-AnnotationAssertion(rdfs:label obo:PREFER_0000086 "bench-top scale bioreactor"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000086 "A laboratory bioreactor scale that refers to small volume bioreactor systems designed for parallelized process development and experimentation, typically operated at working volumes in the range of approximately 10 milliliters to a few liters.")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000086 "For instance, Ambr250 or Pioreactors fall within this category.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000086 "minibioreactor scale"@en)
 SubClassOf(obo:PREFER_0000086 obo:PREFER_0000186)
 
 # Class: obo:PREFER_0000087 (substrate uptake rate)
@@ -2104,7 +2108,7 @@ SubClassOf(obo:PREFER_0000184 obo:PREFER_0000180)
 
 # Class: obo:PREFER_0000185 (bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000185 "A quality that inheres in a bioreactor and that characterizes its culture volume or working volume, and used to classify bioreactors based on their intended application, ranging from laboratory research to industrial production.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000185 "A quality that inheres in a bioreactor and that characterizes its working volume, and used to classify bioreactors based on their intended application, ranging from laboratory research to industrial production.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000185 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000185 "PREFER:0000185")
 AnnotationAssertion(rdfs:label obo:PREFER_0000185 "bioreactor scale")
@@ -2112,19 +2116,22 @@ SubClassOf(obo:PREFER_0000185 obo:BFO_0000019)
 
 # Class: obo:PREFER_0000186 (laboratory bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale typically used for small-scale experiments and research, ranging from a few milliliters to several liters in volume.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale that refers to small volume bioreactor systems used for laboratory scale experimentation, research, development, and process optimization, typically ranging from a few milliliters to several liters in working volume.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab-scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench bioreactor scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop bioreactor scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000186 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000186 "PREFER:0000186")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000186 "\"For instance, minibioreactors (50-500 mL) such as Ambr or Pioreactors, or micro bioreactors (< 10 mL) fall within this category.\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000186 "laboratory bioreactor scale")
 SubClassOf(obo:PREFER_0000186 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000187 (pilot bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000187 "A bioreactor scale that serves as an intermediate step between lab-scale and industrial-scale, typically ranging from several liters to a few hundred liters in volume.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000187 "A bioreactor scale that serves as an intermediate step between laboratory scale and industrial scale, typically ranging from several liters to a few hundred liters in working volume.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000187 "pilont plant bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000187 "pilot-scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000187 "pre pilot plant-scale")
@@ -2137,8 +2144,9 @@ SubClassOf(obo:PREFER_0000187 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000188 (industrial bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in volume.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in working volume.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial-scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000188 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000188 "PREFER:0000188")
 AnnotationAssertion(rdfs:label obo:PREFER_0000188 "industrial bioreactor scale")
@@ -2146,18 +2154,18 @@ SubClassOf(obo:PREFER_0000188 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000189 (feed profile type)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000189 "The feeding strategies typically found in a fed-batch fermentation type. The type of feeding profiles applied is process specific.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000189 "The feeding strategies typically found in a fed-batch fermentation type.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding profile")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding strategy")
-AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:PREFER_0000189 "feed stream profile")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000189 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000189 "PREFER:0000189")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000189 "The type of feeding profiles applied is process specific.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000189 "feed profile type")
 SubClassOf(obo:PREFER_0000189 obo:PREFER_0000015)
 
 # Class: obo:PREFER_0000190 (constant feeding rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000190 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000190 "A feed profile type in which the feed rate is maintained at a constant value throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000190 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000190 "PREFER:0000190")
 AnnotationAssertion(rdfs:label obo:PREFER_0000190 "constant feeding rate")
@@ -2165,7 +2173,7 @@ SubClassOf(obo:PREFER_0000190 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000191 (linear feeding rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000191 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000191 "A feed profile type in which the feed rate changes linearly with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000191 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000191 "PREFER:0000191")
 AnnotationAssertion(rdfs:label obo:PREFER_0000191 "linear feeding rate")
@@ -2173,7 +2181,7 @@ SubClassOf(obo:PREFER_0000191 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000192 (exponential feeding rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000192 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000192 "A feed profile type in which the feed rate increases exponentially with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000192 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000192 "PREFER:0000192")
 AnnotationAssertion(rdfs:label obo:PREFER_0000192 "exponential feeding rate")
@@ -2181,7 +2189,7 @@ SubClassOf(obo:PREFER_0000192 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000193 (constant-linear feeding rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000193 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000193 "A feed profile type in which the feed rate begins at a constant rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000193 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000193 "PREFER:0000193")
 AnnotationAssertion(rdfs:label obo:PREFER_0000193 "constant-linear feeding rate")
@@ -2189,7 +2197,7 @@ SubClassOf(obo:PREFER_0000193 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000194 (constant-exponential feeding rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000194 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000194 "A feed profile type in which the feed rate begins at a constant rate and subsequently transitions to a exponentially increasing feed rate with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000194 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000194 "PREFER:0000194")
 AnnotationAssertion(rdfs:label obo:PREFER_0000194 "constant-exponential feeding rate")
@@ -2197,7 +2205,7 @@ SubClassOf(obo:PREFER_0000194 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000195 (exponential-linear feeding rate)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000195 "")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000195 "A feed profile type in which the feed rate begins with an exponentially increasing rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000195 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000195 "PREFER:0000195")
 AnnotationAssertion(rdfs:label obo:PREFER_0000195 "exponential-linear feeding rate")
