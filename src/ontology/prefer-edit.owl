@@ -40,6 +40,7 @@ Declaration(Class(obo:PREFER_0000002))
 Declaration(Class(obo:PREFER_0000003))
 Declaration(Class(obo:PREFER_0000004))
 Declaration(Class(obo:PREFER_0000005))
+Declaration(Class(obo:PREFER_0000006))
 Declaration(Class(obo:PREFER_0000007))
 Declaration(Class(obo:PREFER_0000008))
 Declaration(Class(obo:PREFER_0000010))
@@ -539,6 +540,13 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000005 "A cultivation condition that represents the alkalinity related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the pH and buffering state of the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000005 "alkalinity cultivation condition"@en)
 SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
+
+# Class: obo:PREFER_0000006 (gravimetric feed rate control variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000006 "A process control variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000006 "gravimetric feed rate control variable"@en)
+SubClassOf(obo:PREFER_0000006 obo:PREFER_0000037)
+SubClassOf(obo:PREFER_0000006 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000007 (temperature cultivation condition)
 
@@ -1655,10 +1663,11 @@ SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
 
-# Class: obo:PREFER_0000122 (feed volumetric rate control variable)
+# Class: obo:PREFER_0000122 (volumetric feed rate control variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A process control variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000122 "feed volumetric rate control variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate control variable"@en)
+SubClassOf(obo:PREFER_0000122 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000124 (offline sample carbon dioxide molar rate)
