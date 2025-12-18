@@ -1832,7 +1832,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000140 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000140 "PREFER:0000140")
 AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass production rate")
 SubClassOf(obo:PREFER_0000140 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000005))
 SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000141 (calculated fluxomics sample variable)
