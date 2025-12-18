@@ -43,6 +43,7 @@ Declaration(Class(obo:PREFER_0000005))
 Declaration(Class(obo:PREFER_0000006))
 Declaration(Class(obo:PREFER_0000007))
 Declaration(Class(obo:PREFER_0000008))
+Declaration(Class(obo:PREFER_0000009))
 Declaration(Class(obo:PREFER_0000010))
 Declaration(Class(obo:PREFER_0000011))
 Declaration(Class(obo:PREFER_0000012))
@@ -545,8 +546,7 @@ SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000006 "A process control variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000006 "gravimetric feed rate control variable"@en)
-SubClassOf(obo:PREFER_0000006 obo:PREFER_0000037)
-SubClassOf(obo:PREFER_0000006 obo:PREFER_9000000)
+SubClassOf(obo:PREFER_0000006 obo:PREFER_0000009)
 
 # Class: obo:PREFER_0000007 (temperature cultivation condition)
 
@@ -564,6 +564,12 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000008 "PREFER:0000008")
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "cultivation condition")
 SubClassOf(obo:PREFER_0000008 obo:IAO_0000030)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
+
+# Class: obo:PREFER_0000009 (feed process control variable)
+
+AnnotationAssertion(rdfs:label obo:PREFER_0000009 "feed process control variable"@en)
+SubClassOf(obo:PREFER_0000009 obo:PREFER_0000037)
+SubClassOf(obo:PREFER_0000009 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000010 (fermentation culture)
 
@@ -1667,8 +1673,7 @@ SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A process control variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate control variable"@en)
-SubClassOf(obo:PREFER_0000122 obo:PREFER_0000037)
-SubClassOf(obo:PREFER_0000122 obo:PREFER_9000000)
+SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
 
 # Class: obo:PREFER_0000124 (offline sample carbon dioxide molar rate)
 
