@@ -227,7 +227,6 @@ Declaration(Class(obo:PREFER_7000006))
 Declaration(Class(obo:PREFER_7000007))
 Declaration(Class(obo:PREFER_7000008))
 Declaration(Class(obo:PREFER_9000003))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
 Declaration(Class(uom:g.g-1))
@@ -549,7 +548,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000005 "A cultivation condition 
 AnnotationAssertion(rdfs:label obo:PREFER_0000005 "alkalinity cultivation condition"@en)
 SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000007 (cultivation temperature variable)
+# Class: obo:PREFER_0000007 (temperature cultivation condition)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000007 "A cultivation condition that represents the temperature related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the thermal state of the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000007 "temperature cultivation condition"@en)
@@ -602,6 +601,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000012 "In a biotransformation process or bioprocess, a cell biocatalyst converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintenance.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000012 obo:CL_0000000)
 
 # Class: obo:PREFER_0000013 (taxon)
 
@@ -1322,7 +1322,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000078 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000078 "PREFER:0000078")
 AnnotationAssertion(rdfs:label obo:PREFER_0000078 "carbon balance variable")
 SubClassOf(obo:PREFER_0000078 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:%25))
+SubClassOf(obo:PREFER_0000078 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000079 (carbon balance using carbon mols variable)
 
@@ -2117,13 +2117,13 @@ SubClassOf(obo:PREFER_0000185 obo:BFO_0000019)
 # Class: obo:PREFER_0000186 (laboratory bioreactor scale)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale that refers to small volume bioreactor systems used for laboratory scale experimentation, research, development, and process optimization, typically ranging from a few milliliters to several liters in working volume.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab bioreactor scale")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab-scale")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab bioreactor scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab-scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000186 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000186 "PREFER:0000186")
 AnnotationAssertion(rdfs:label obo:PREFER_0000186 "laboratory bioreactor scale")
@@ -2145,8 +2145,8 @@ SubClassOf(obo:PREFER_0000187 obo:PREFER_0000185)
 # Class: obo:PREFER_0000188 (industrial bioreactor scale)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in working volume.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial-scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial-scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000188 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000188 "PREFER:0000188")
 AnnotationAssertion(rdfs:label obo:PREFER_0000188 "industrial bioreactor scale")
@@ -2246,6 +2246,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000205 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000205 "PREFER:0000205")
 AnnotationAssertion(rdfs:label obo:PREFER_0000205 "cell culture")
 SubClassOf(obo:PREFER_0000205 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000205 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
 # Class: obo:PREFER_0000206 (microbial culture)
 
@@ -2257,6 +2258,7 @@ AnnotationAssertion(oboInOwl:synoymn obo:PREFER_0000206 "microbial cell culture"
 AnnotationAssertion(rdfs:comment obo:PREFER_0000206 "")
 AnnotationAssertion(rdfs:label obo:PREFER_0000206 "microbial culture")
 SubClassOf(obo:PREFER_0000206 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000206 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
 # Class: obo:PREFER_0000207 (tissue culture)
 
@@ -2265,6 +2267,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000207 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000207 "PREFER:0000207")
 AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
 SubClassOf(obo:PREFER_0000207 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000207 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
 # Class: obo:PREFER_0000208 (calculated phenomics sample variable)
 
