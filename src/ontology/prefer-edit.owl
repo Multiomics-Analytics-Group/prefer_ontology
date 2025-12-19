@@ -35,7 +35,6 @@ Annotation(terms:contributor <https://orcid.org/0009-0009-0018-4253>)
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
 
 Declaration(Class(obo:PREFER_0000000))
-Declaration(Class(obo:PREFER_0000001))
 Declaration(Class(obo:PREFER_0000002))
 Declaration(Class(obo:PREFER_0000003))
 Declaration(Class(obo:PREFER_0000004))
@@ -107,13 +106,11 @@ Declaration(Class(obo:PREFER_0000072))
 Declaration(Class(obo:PREFER_0000073))
 Declaration(Class(obo:PREFER_0000074))
 Declaration(Class(obo:PREFER_0000075))
-Declaration(Class(obo:PREFER_0000076))
 Declaration(Class(obo:PREFER_0000077))
 Declaration(Class(obo:PREFER_0000078))
 Declaration(Class(obo:PREFER_0000079))
 Declaration(Class(obo:PREFER_0000081))
 Declaration(Class(obo:PREFER_0000083))
-Declaration(Class(obo:PREFER_0000084))
 Declaration(Class(obo:PREFER_0000085))
 Declaration(Class(obo:PREFER_0000086))
 Declaration(Class(obo:PREFER_0000087))
@@ -125,7 +122,6 @@ Declaration(Class(obo:PREFER_0000094))
 Declaration(Class(obo:PREFER_0000095))
 Declaration(Class(obo:PREFER_0000096))
 Declaration(Class(obo:PREFER_0000101))
-Declaration(Class(obo:PREFER_0000102))
 Declaration(Class(obo:PREFER_0000103))
 Declaration(Class(obo:PREFER_0000104))
 Declaration(Class(obo:PREFER_0000105))
@@ -146,7 +142,6 @@ Declaration(Class(obo:PREFER_0000119))
 Declaration(Class(obo:PREFER_0000120))
 Declaration(Class(obo:PREFER_0000121))
 Declaration(Class(obo:PREFER_0000122))
-Declaration(Class(obo:PREFER_0000124))
 Declaration(Class(obo:PREFER_0000128))
 Declaration(Class(obo:PREFER_0000129))
 Declaration(Class(obo:PREFER_0000130))
@@ -480,12 +475,6 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "A key process metric that r
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "process rate metric"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
-# Class: obo:PREFER_0000001 (offline sample measurement variable)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000001 "A process measurement variable that indicates a measured variable obtained from a sample withrawn from a bioreactor or fermenter system and analyzed offline, externally to the process line.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000001 "offline sample measurement variable"@en)
-SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
-
 # Class: obo:PREFER_0000002 (fermentation project)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments.")
@@ -544,7 +533,7 @@ SubClassOf(obo:PREFER_0000007 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of variables describing the environmental and physicochemical conditions under which a fermentation process is carried out, grouping relevant process control variables and process measurement variables associated with the process condition.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions describing the environmental and physicochemical conditions under which cells are cultivated\"")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000008 "EDAM:3724")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000008 "fermentation culture condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000008 "precision_fermentation")
@@ -572,7 +561,8 @@ SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:PREFER_8000010 obo:PREFER
 
 # Class: obo:PREFER_0000011 (fermentation medium)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000011 "A material entity consisting of an aqueous mixture of macronutrients, micronturients, and buffering agents that is used to support cell growth and metabolic activity during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000011 "A material entity consisting of an aqueous mixture of macronutrients, micronturients, and buffering agents that is used to support cell growth, metabolic activity and product formation during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000011 "cultivation medium")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000011 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000011 "PREFER:0000011")
 AnnotationAssertion(rdfs:label obo:PREFER_0000011 "fermentation medium")
@@ -944,11 +934,11 @@ SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000044 (offline sample mass compound measurement)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000044 "A offline sample measurement variable that indicates the mass present in a withdrawn process sample from a bioreactor or fermentation system during a process, used to quantify the amount of biomass, product, and other compounds.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000044 "A process measurement variable that indicates the mass of a compound present in a withdrawn process sample from a bioreactor or fermentation system during a process, used to quantify the amount of biomass, product, and other compounds.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000044 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000044 "PREFER:0000044")
 AnnotationAssertion(rdfs:label obo:PREFER_0000044 "offline sample mass compound measurement")
-SubClassOf(obo:PREFER_0000044 obo:PREFER_0000001)
+SubClassOf(obo:PREFER_0000044 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1242,7 +1232,7 @@ SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000075 (gravimetric feed rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000075 "A process measurement variable that indicates the rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000075 "A process measurement variable that indicates the amount of feed fed per unit time or the mass flow rate of the feed solution added to a bioreactor or fermentation system during a process.\"")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000075 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000075 "PREFER:0000075")
 AnnotationAssertion(rdfs:label obo:PREFER_0000075 "gravimetric feed rate")
@@ -1250,11 +1240,6 @@ SubClassOf(obo:PREFER_0000075 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000075 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000151))
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000152))
-
-# Class: obo:PREFER_0000076 (offline sample oxygen measurement variable)
-
-AnnotationAssertion(rdfs:label obo:PREFER_0000076 "offline sample oxygen measurement variable"@en)
-SubClassOf(obo:PREFER_0000076 obo:PREFER_0000001)
 
 # Class: obo:PREFER_0000077 (dilution rate)
 
@@ -1302,11 +1287,6 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000083 "PREFER:0000083")
 AnnotationAssertion(rdfs:label obo:PREFER_0000083 "compound consumed variable")
 SubClassOf(obo:PREFER_0000083 obo:PREFER_0000162)
 SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
-
-# Class: obo:PREFER_0000084 (offline sample carbon dioxide measurement variable)
-
-AnnotationAssertion(rdfs:label obo:PREFER_0000084 "offline sample carbon dioxide measurement variable"@en)
-SubClassOf(obo:PREFER_0000084 obo:PREFER_0000001)
 
 # Class: obo:PREFER_0000085 (microbioreactor scale)
 
@@ -1381,25 +1361,16 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000096 "A fermentation phase tha
 AnnotationAssertion(rdfs:label obo:PREFER_0000096 "production phase"@en)
 SubClassOf(obo:PREFER_0000096 obo:PREFER_0000016)
 
-# Class: obo:PREFER_0000101 (offline sample oxygen rate)
+# Class: obo:PREFER_0000101 (oxygen production rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000101 "The volumetric rate of O2 consumed by the bioprocess over time.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000101 "A bioproduction metric variable that represents the rate of oxygen consumed over time, in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000101 "Oxygen volumetric rate")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000101 "o2 Q")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000101 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000101 "PREFER:0000101")
-AnnotationAssertion(rdfs:label obo:PREFER_0000101 "offline sample oxygen rate")
-SubClassOf(obo:PREFER_0000101 obo:PREFER_0000076)
-SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
-
-# Class: obo:PREFER_0000102 (offline sample oxygen molar rate)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000102 "The molar rate of O2 production, measuring the quantity of O2 generated by the bioprocess in terms of moles.")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000102 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000102 "PREFER:0000102")
-AnnotationAssertion(rdfs:label obo:PREFER_0000102 "offline sample oxygen molar rate")
-SubClassOf(obo:PREFER_0000102 obo:PREFER_0000076)
-SubClassOf(obo:PREFER_0000102 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
+AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen production rate")
+SubClassOf(obo:PREFER_0000101 obo:PREFER_0000159)
+SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000103 (specific oxygen uptake rate)
 
@@ -1456,6 +1427,7 @@ SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000108 (fermentation medium role)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000108 "A role that inheres in a fermentation medium and that involves the medium supporting the growth of a fermentation culture by providing nutrients, physicochemical conditions, or specific additives.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000108 "cultivation medium role")
 AnnotationAssertion(rdfs:label obo:PREFER_0000108 "fermentation medium role"@en)
 SubClassOf(obo:PREFER_0000108 obo:BFO_0000023)
 
@@ -1494,7 +1466,7 @@ SubClassOf(obo:PREFER_0000112 obo:PREFER_0000108)
 # Class: obo:PREFER_0000113 (compound production rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000113 "A bioproduction metric variable that represents the rate of compound produced over time, in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000113 "QP")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000113 "Qcompound")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000113 "precision_fermentation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound formation rate")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000113 "PREFER:0000113")
@@ -1585,26 +1557,15 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A process control variab
 AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate control variable"@en)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
 
-# Class: obo:PREFER_0000124 (offline sample carbon dioxide molar rate)
+# Class: obo:PREFER_0000128 (carbon dioxide production rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000124 "The molar rate of CO2 production, measuring the quantity of CO2 generated by the bioprocess in terms of moles.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000124 "CO2 molar")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000124 "precision_fermentation")
-AnnotationAssertion(oboInOwl:id obo:PREFER_0000124 "PREFER:0000124")
-AnnotationAssertion(rdfs:label obo:PREFER_0000124 "offline sample carbon dioxide molar rate")
-SubClassOf(obo:PREFER_0000124 obo:PREFER_0000084)
-SubClassOf(obo:PREFER_0000124 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
-
-# Class: obo:PREFER_0000128 (offline sample carbon dioxide rate)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "The volumetric rate of CO2 produced by the bioprocess over time.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000128 "carbon dioxide volumetric rate")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "A bioproduction metric variable that represents the rate of carbon dioxide produced over time, in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000128 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000128 "PREFER:0000128")
-AnnotationAssertion(rdfs:label obo:PREFER_0000128 "offline sample carbon dioxide rate")
-SubClassOf(obo:PREFER_0000128 obo:PREFER_0000084)
-SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
+AnnotationAssertion(rdfs:label obo:PREFER_0000128 "carbon dioxide production rate")
+SubClassOf(obo:PREFER_0000128 obo:PREFER_0000159)
+SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000129 (inlet air nitrogen setpoint control variable)
 
@@ -1937,7 +1898,7 @@ SubClassOf(obo:PREFER_0000188 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000189 (feed profile type)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000189 "The feeding strategies typically found in a fed-batch fermentation type.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000189 "The feeding strategies typically found in a fed-batch or continuous fermentation types.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding profile")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding strategy")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000189 "precision_fermentation")
