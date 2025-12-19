@@ -1334,7 +1334,7 @@ SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000088 (batch phase)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000088 "A time interval of a batch fermentation process")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000088 "A fermentation phase that is a time interval of a batch fermentation process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000088 "batch phase"@en)
 SubClassOf(obo:PREFER_0000088 obo:PREFER_0000016)
 
@@ -1349,7 +1349,7 @@ SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000090 (feed phase)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000090 "A time interval of a feed within a fermentation process")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000090 "A fermentation phase that is a time interval within a fermentation process, where feed medium injection is observed.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000090 "feed phase"@en)
 SubClassOf(obo:PREFER_0000090 obo:PREFER_0000016)
 
@@ -1371,13 +1371,13 @@ SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000095 (growth phase)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000095 "A time interval of a culture growth within a fermentation process")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000095 "A fermentation phase that is a time interval within a fermentation process, where culture growth is observed.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000095 "growth phase"@en)
 SubClassOf(obo:PREFER_0000095 obo:PREFER_0000016)
 
 # Class: obo:PREFER_0000096 (production phase)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000096 "A time interval of a production strain within a fermentation process")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000096 "A fermentation phase that is a time interval within a fermentation process, where product formation is observed.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000096 "production phase"@en)
 SubClassOf(obo:PREFER_0000096 obo:PREFER_0000016)
 
