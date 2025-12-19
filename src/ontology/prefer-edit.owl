@@ -222,7 +222,6 @@ Declaration(Class(obo:PREFER_7000006))
 Declaration(Class(obo:PREFER_7000007))
 Declaration(Class(obo:PREFER_7000008))
 Declaration(Class(obo:PREFER_9000003))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_#_taxonomic_rank>))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
 Declaration(Class(uom:g.g-1))
@@ -609,6 +608,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000012 "PREFER:0000012")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000012 "In a biotransformation process or bioprocess, a cell biocatalyst converts substrates (organic or inorganic compounds) into outputs such as products, by-products, and cell biomass. Energy derived from substrate conversion is used for product formation, growth and cellular maintenance.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000012 obo:CL_0000000)
 
 # Class: obo:PREFER_0000013 (taxon)
 
@@ -2181,6 +2181,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000205 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000205 "PREFER:0000205")
 AnnotationAssertion(rdfs:label obo:PREFER_0000205 "cell culture")
 SubClassOf(obo:PREFER_0000205 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000205 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
 # Class: obo:PREFER_0000206 (microbial culture)
 
@@ -2192,6 +2193,7 @@ AnnotationAssertion(oboInOwl:synoymn obo:PREFER_0000206 "microbial cell culture"
 AnnotationAssertion(rdfs:comment obo:PREFER_0000206 "")
 AnnotationAssertion(rdfs:label obo:PREFER_0000206 "microbial culture")
 SubClassOf(obo:PREFER_0000206 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000206 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
 # Class: obo:PREFER_0000207 (tissue culture)
 
@@ -2200,6 +2202,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000207 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000207 "PREFER:0000207")
 AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
 SubClassOf(obo:PREFER_0000207 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000207 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
 # Class: obo:PREFER_0000208 (calculated phenomics sample variable)
 
