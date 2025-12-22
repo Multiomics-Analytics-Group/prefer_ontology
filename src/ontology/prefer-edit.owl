@@ -546,6 +546,7 @@ SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_00
 
 # Class: obo:PREFER_0000009 (feed process control variable)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000009 "A process control variable that defines the feed control of a bioreactor or fermentation system during the process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000009 "feed process control variable"@en)
 SubClassOf(obo:PREFER_0000009 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000009 obo:PREFER_9000000)
