@@ -592,11 +592,10 @@ SubClassOf(obo:PREFER_0000012 obo:CL_0000000)
 
 # Class: obo:PREFER_0000013 (taxon)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000013 "A specific biological classification(taxonomy) within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18586729") obo:IAO_0000115 obo:PREFER_0000013 "A quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000013 "NCBITaxon:1")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000013 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000013 "PREFER:0000013")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18586729") rdfs:comment obo:PREFER_0000013 "Taxon in PREFER refers to the quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon")
 SubClassOf(obo:PREFER_0000013 obo:BFO_0000019)
 
