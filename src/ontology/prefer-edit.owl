@@ -1716,42 +1716,43 @@ SubClassOf(obo:PREFER_0000149 obo:PREFER_0000135)
 
 # Class: obo:PREFER_0000150 (data acquisition quality)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000150 "A quality that inheres in data which informs how, where, and when process data or samples are collected and measured during a bioprocess.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000150 "A quality that inheres in data or samples and specifies how, where, and when measurements are obtained in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000150 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000150 "PREFER:0000150")
 AnnotationAssertion(rdfs:label obo:PREFER_0000150 "data acquisition quality")
 SubClassOf(obo:PREFER_0000150 obo:BFO_0000019)
 
-# Class: obo:PREFER_0000151 (inline measurement)
+# Class: obo:PREFER_0000151 (inline data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000151 "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000151 "A data acquisition quality in which the analyzer or sensor is physically integrated into the bioreactor or process stream, allowing continuous measurement without removal of samples, typically providing high-frequency or real-time data for process monitoring and control.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000151 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000151 "PREFER:0000151")
-AnnotationAssertion(rdfs:label obo:PREFER_0000151 "inline measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000151 "inline data acquisition")
 SubClassOf(obo:PREFER_0000151 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000152 (online measurement)
+# Class: obo:PREFER_0000152 (online data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000152 "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000152 "A data acquisition quality in which samples are automatically withdrawn from the bioreactor or process stream and introduced into a measurement zone, with measurement results made available in near real time for monitoring and control. The analyzed sample may be discarded or returned to the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000152 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000152 "PREFER:0000152")
-AnnotationAssertion(rdfs:label obo:PREFER_0000152 "online measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000152 "online data acquisition")
 SubClassOf(obo:PREFER_0000152 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000153 (atline measurement)
+# Class: obo:PREFER_0000153 (atline data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000153 "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000153 "A data acquisition quality in which samples are withdrawn from the process stream and transported a short distance to a nearby analytical device for measurement, involving a short delay between sampling and data availability. The analyzed sample is discarded and not returned to the process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000153 "at-line data acquisition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000153 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000153 "PREFER:0000153")
-AnnotationAssertion(rdfs:label obo:PREFER_0000153 "atline measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000153 "atline data acquisition")
 SubClassOf(obo:PREFER_0000153 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000154 (offline measurement)
+# Class: obo:PREFER_0000154 (offline data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000154 "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000154 "A data acquisition quality in which samples are collected from the process and transported to an external laboratory or analysis location for measurement, with the sample not returned to the process line and with a significant delay between sampling and data availability.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000154 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000154 "PREFER:0000154")
-AnnotationAssertion(rdfs:label obo:PREFER_0000154 "offline measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000154 "offline data acquisition")
 SubClassOf(obo:PREFER_0000154 obo:PREFER_0000150)
 
 # Class: obo:PREFER_0000155 (process yield metric)
