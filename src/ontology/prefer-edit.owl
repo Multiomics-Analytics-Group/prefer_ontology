@@ -471,7 +471,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000022 "has numerator unit"@en)
 
 # Class: obo:PREFER_0000000 (process rate metric)
 
-AnnotationAssertion(rdfs:comment obo:PREFER_0000000 "A key process metric that represents a quantitative metric, describing rates or fluxes associated, for instance, wiht growth, product formation, substrate consumption, or respiration, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000000 "A key process metric that represents a quantitative metric, describing rates or fluxes associated, for instance, wiht growth, product formation, substrate consumption, or respiration, during the process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "process rate metric"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
@@ -535,7 +535,7 @@ SubClassOf(obo:PREFER_0000007 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions describing the environmental and physicochemical conditions under which cells are cultivated\"")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions, grouping relevant process control variables and process measurement variables, describing the environmental and physicochemical conditions under which cells are cultivated.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000008 "EDAM:3724")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000008 "fermentation culture condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000008 "precision_fermentation")
@@ -546,6 +546,7 @@ SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_00
 
 # Class: obo:PREFER_0000009 (feed process control variable)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000009 "A process control variable that defines the feed control of a bioreactor or fermentation system during the process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000009 "feed process control variable"@en)
 SubClassOf(obo:PREFER_0000009 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000009 obo:PREFER_9000000)
@@ -591,11 +592,10 @@ SubClassOf(obo:PREFER_0000012 obo:CL_0000000)
 
 # Class: obo:PREFER_0000013 (taxon)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PREFER") obo:IAO_0000115 obo:PREFER_0000013 "A specific biological classification(taxonomy) within the database, generally species, but it could also be genus, family, order, class, phylum, kingdom, and domain.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18586729") obo:IAO_0000115 obo:PREFER_0000013 "A quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000013 "NCBITaxon:1")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000013 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000013 "PREFER:0000013")
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18586729") rdfs:comment obo:PREFER_0000013 "Taxon in PREFER refers to the quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon")
 SubClassOf(obo:PREFER_0000013 obo:BFO_0000019)
 
@@ -874,7 +874,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000038 "A process measurement va
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000038 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
 AnnotationAssertion(rdfs:label obo:PREFER_0000038 "batch medium pH measurement")
-SubClassOf(obo:PREFER_0000038 obo:PREFER_0000097)
+SubClassOf(obo:PREFER_0000038 obo:PREFER_0000024)
 SubClassOf(obo:PREFER_0000038 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%5BpH%5D>))
 
@@ -1162,8 +1162,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000064 "A respiratory metric var
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000064 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "\"Important as CO2 is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.\"")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Physical gas transfer. Dynamic respiratory metric")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000064 "carbon dioxide transfer rate")
 SubClassOf(obo:PREFER_0000064 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
@@ -1716,42 +1716,43 @@ SubClassOf(obo:PREFER_0000149 obo:PREFER_0000135)
 
 # Class: obo:PREFER_0000150 (data acquisition quality)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000150 "A quality that inheres in data which informs how, where, and when process data or samples are collected and measured during a bioprocess.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000150 "A quality that inheres in data or samples and specifies how, where, and when measurements are obtained in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000150 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000150 "PREFER:0000150")
 AnnotationAssertion(rdfs:label obo:PREFER_0000150 "data acquisition quality")
 SubClassOf(obo:PREFER_0000150 obo:BFO_0000019)
 
-# Class: obo:PREFER_0000151 (inline measurement)
+# Class: obo:PREFER_0000151 (inline data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000151 "The analyzer is integrated into the bioreactor and the measurement is taken continuosly into the bioreactor. The sample flows continuously through the analyzer. The measurament is real-time with high frequency data, enabling real-time process monitoring and control.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000151 "A data acquisition quality in which the analyzer or sensor is physically integrated into the bioreactor or process stream, allowing continuous measurement without removal of samples, typically providing high-frequency or real-time data for process monitoring and control.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000151 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000151 "PREFER:0000151")
-AnnotationAssertion(rdfs:label obo:PREFER_0000151 "inline measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000151 "inline data acquisition")
 SubClassOf(obo:PREFER_0000151 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000152 (online measurement)
+# Class: obo:PREFER_0000152 (online data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000152 "Analysis method that extracts a sample from the bioreactor and introduces it into the measurement zone. Sample can either be discarded or returned to the bioreactor.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000152 "A data acquisition quality in which samples are automatically withdrawn from the bioreactor or process stream and introduced into a measurement zone, with measurement results made available in near real time for monitoring and control. The analyzed sample may be discarded or returned to the process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000152 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000152 "PREFER:0000152")
-AnnotationAssertion(rdfs:label obo:PREFER_0000152 "online measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000152 "online data acquisition")
 SubClassOf(obo:PREFER_0000152 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000153 (atline measurement)
+# Class: obo:PREFER_0000153 (atline data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000153 "Analysis method that extracts a sample from the process line and transporte it to a nerby analyzer. There is delay between sampling and measurment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000153 "A data acquisition quality in which samples are withdrawn from the process stream and transported a short distance to a nearby analytical device for measurement, involving a short delay between sampling and data availability. The analyzed sample is discarded and not returned to the process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000153 "at-line data acquisition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000153 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000153 "PREFER:0000153")
-AnnotationAssertion(rdfs:label obo:PREFER_0000153 "atline measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000153 "atline data acquisition")
 SubClassOf(obo:PREFER_0000153 obo:PREFER_0000150)
 
-# Class: obo:PREFER_0000154 (offline measurement)
+# Class: obo:PREFER_0000154 (offline data acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000154 "Analysis method that collects a sample from the process line and transports it to the analyzis laboratory. The sample is not returned to the process line.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000154 "A data acquisition quality in which samples are collected from the process and transported to an external laboratory or analysis location for measurement, with the sample not returned to the process line and with a significant delay between sampling and data availability.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000154 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000154 "PREFER:0000154")
-AnnotationAssertion(rdfs:label obo:PREFER_0000154 "offline measurement")
+AnnotationAssertion(rdfs:label obo:PREFER_0000154 "offline data acquisition")
 SubClassOf(obo:PREFER_0000154 obo:PREFER_0000150)
 
 # Class: obo:PREFER_0000155 (process yield metric)
@@ -1796,7 +1797,7 @@ SubClassOf(obo:PREFER_0000160 obo:PREFER_0000000)
 
 # Class: obo:PREFER_0000161 (biomass balance metric variable)
 
-AnnotationAssertion(rdfs:comment obo:PREFER_0000161 "A core balance metric variable that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000161 "A core balance metric variable that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000161 "biomass balance metric variable"@en)
 SubClassOf(obo:PREFER_0000161 obo:PREFER_0000023)
 
@@ -2091,6 +2092,10 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_7000005 "precision_ferme
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000005 "carbon mole per hour")
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000021 uom:h))
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000002))
+
+# Class: obo:PREFER_9000001 (process measurement variable)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "process measured variable")
 
 # Class: obo:PREFER_9000002 (process calculated variable)
 
