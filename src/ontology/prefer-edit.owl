@@ -535,7 +535,7 @@ SubClassOf(obo:PREFER_0000007 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions describing the environmental and physicochemical conditions under which cells are cultivated\"")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions, grouping relevant process control variables and process measurement variables, describing the environmental and physicochemical conditions under which cells are cultivated.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000008 "EDAM:3724")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000008 "fermentation culture condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000008 "precision_fermentation")
@@ -2092,6 +2092,10 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_7000005 "precision_ferme
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000005 "carbon mole per hour")
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000021 uom:h))
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000002))
+
+# Class: obo:PREFER_9000001 (process measurement variable)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "process measured variable")
 
 # Class: obo:PREFER_9000002 (process calculated variable)
 
