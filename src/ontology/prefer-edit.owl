@@ -524,6 +524,8 @@ SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000006 "A process control variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000006 "gravimetric feed rate control variable"@en)
 SubClassOf(obo:PREFER_0000006 obo:PREFER_0000009)
+SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000075))
+SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.h-1))
 
 # Class: obo:PREFER_0000007 (temperature cultivation condition)
 
@@ -780,12 +782,12 @@ SubClassOf(obo:PREFER_0000029 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000030 (aeration gas type)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000030 "Type of gas used for aeration in the bioreactor, which may include aire or specific gases such as pure oxygen, nitrogen or carbon dioxide.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000030 "aeration gas")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000030 "A dissolved oxygen process control variable that represents the type of gas used for aeration in a bioreactor or fermentation system during a process, which may include aire or specific gases such as pure oxygen, nitrogen or carbon dioxide.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000030 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000030 "PREFER:0000030")
 AnnotationAssertion(rdfs:label obo:PREFER_0000030 "aeration gas type")
-SubClassOf(obo:PREFER_0000030 obo:PREFER_0000033)
+SubClassOf(obo:PREFER_0000030 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000030 obo:PREFER_0000119)
 
 # Class: obo:PREFER_0000031 (maximum aeration setpoint control variable)
 
@@ -857,22 +859,22 @@ SubClassOf(obo:PREFER_0000036 obo:PREFER_0000046)
 SubClassOf(obo:PREFER_0000036 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000037 (feed cultivation condition)
+# Class: obo:PREFER_0000037 (feed medium cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000037 "A cultivation condition that represents the feed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the addition and state of fresh feed media within the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000037 "A fermentation medium cultivation condition that represents the feed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the addition and state of fresh feed media within the cultivation environment.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000037 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000037 "PREFER:0000037")
-AnnotationAssertion(rdfs:label obo:PREFER_0000037 "feed cultivation condition")
-SubClassOf(obo:PREFER_0000037 obo:PREFER_0000008)
+AnnotationAssertion(rdfs:label obo:PREFER_0000037 "feed medium cultivation condition")
+SubClassOf(obo:PREFER_0000037 obo:PREFER_0000024)
 SubClassOf(obo:PREFER_0000037 ObjectSomeValuesFrom(obo:PREFER_8000013 obo:PREFER_0000189))
 
-# Class: obo:PREFER_0000038 (fermentation medium pH measurement)
+# Class: obo:PREFER_0000038 (batch medium pH measurement)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000038 "A process measurement variable that indicates the negative decadic logarithm of the hydrogen ion concentration in the fermentation medium of a bioreactor or fermentation system during a process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000038 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
-AnnotationAssertion(rdfs:label obo:PREFER_0000038 "fermentation medium pH measurement")
-SubClassOf(obo:PREFER_0000038 obo:PREFER_0000024)
+AnnotationAssertion(rdfs:label obo:PREFER_0000038 "batch medium pH measurement")
+SubClassOf(obo:PREFER_0000038 obo:PREFER_0000097)
 SubClassOf(obo:PREFER_0000038 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%5BpH%5D>))
 
@@ -1238,17 +1240,17 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000075 "PREFER:0000075")
 AnnotationAssertion(rdfs:label obo:PREFER_0000075 "gravimetric feed rate")
 SubClassOf(obo:PREFER_0000075 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000075 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000151))
-SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000152))
+SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.h-1))
 
 # Class: obo:PREFER_0000077 (dilution rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000077 "The rate at which fresh feed medium is fed into a production culture relative to the total volume of the fermentation culture, representing the rate at which the production culture is diluted.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000077 "A feed process control variable that represents the target rate at which fresh feed medium is fed into a production culture relative to the total volume of the fermentation culture, representing the rate at which the production culture is diluted.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000077 "D")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000077 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000077 "\"Rate expressed in reciprocal hours (h⁻¹ or 1/h).\"")
 AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution rate")
+SubClassOf(obo:PREFER_0000077 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
 
@@ -1516,8 +1518,11 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target OD")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target optical density")
 AnnotationAssertion(rdfs:label obo:PREFER_0000118 "optical density control variable"@en)
+SubClassOf(obo:PREFER_0000118 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_9000000)
+SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000060))
+SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000006))
 
 # Class: obo:PREFER_0000119 (dissolved oxygen process control variable)
 
@@ -1550,12 +1555,17 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure setpoint control var
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
+SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000042))
+SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000122 (volumetric feed rate control variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A process control variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate control variable"@en)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
+SubClassOf(obo:PREFER_0000122 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
+SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
 
 # Class: obo:PREFER_0000128 (carbon dioxide production rate)
 
@@ -1905,6 +1915,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000189 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000189 "PREFER:0000189")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000189 "The type of feeding profiles applied is process specific.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000189 "feed profile type")
+SubClassOf(obo:PREFER_0000189 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000189 obo:PREFER_0000015)
 
 # Class: obo:PREFER_0000190 (constant feeding rate)
