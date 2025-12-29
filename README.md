@@ -2,9 +2,7 @@
 ![Build Status](https://github.com/Multiomics-Analytics-Group/prefer_ontology/actions/workflows/qc.yml/badge.svg)
 # PREFER Ontology
 
-Description: None
-
-More information can be found at http://obofoundry.org/ontology/prefer
+Description: PREFER is an ontology designed to integrate high-throughput bioprocess data, covering operational, environmental and process parameters across different scales of a precision fermentation process, to accelerate the development and scaling of biosustainable production processes.
 
 ## Versions
 
@@ -12,9 +10,7 @@ More information can be found at http://obofoundry.org/ontology/prefer
 
 The latest version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/prefer.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
+https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl
 
 ### Editors' version
 
