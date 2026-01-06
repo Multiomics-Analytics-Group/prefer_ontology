@@ -271,7 +271,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -478,7 +478,7 @@ SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 # Class: obo:PREFER_0000002 (fermentation project)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000002 "OBI_0000066")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000002 "OBI:0000066")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000002 "project")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000002 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000002 "PREFER:0000002")
@@ -488,7 +488,7 @@ SubClassOf(obo:PREFER_0000002 obo:PREFER_9000003)
 # Class: obo:PREFER_0000003 (fermentation experiment)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000003 "A precision fermentation process that consists of sets of fermentation runs conducted within the same project, all following a shared experimental approach or protocol.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000003 "OBI_0000070")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000003 "OBI:0000070")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000003 "experiment")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000003 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000003 "PREFER:0000003")
@@ -712,8 +712,8 @@ SubClassOf(obo:PREFER_0000022 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000023 (core balance metric)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000023 "A calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000023 "elemental balance metric")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000023 "A calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000023 "core balance metric"@en)
 SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
 
@@ -1162,8 +1162,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000064 "A respiratory metric var
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000064 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Physical gas transfer. Dynamic respiratory metric")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Physical gas transfer. Dynamic respiratory metric. Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000064 "carbon dioxide transfer rate")
 SubClassOf(obo:PREFER_0000064 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
