@@ -236,6 +236,7 @@ Declaration(ObjectProperty(obo:PREFER_8000018))
 Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
+Declaration(ObjectProperty(obo:PREFER_8000030))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -271,7 +272,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -448,6 +449,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000018 "has operational mode"@en)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000020 "x is setpoint_of y iff x and y are information content entities, and x is a specified numerical value or target parameter that defines the desired state or threshold that y is designed to regulate, maintain, or reference.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000020 "setpoint of"@en)
+InverseObjectProperties(obo:PREFER_8000020 obo:PREFER_8000030)
 ObjectPropertyDomain(obo:PREFER_8000020 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000020 obo:IAO_0000030)
 
@@ -462,6 +464,13 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000021 "has denominator unit"@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000022 "x has_numerator_unit y iff x and y are units, and x is ratio unit where y is the numerator of it.")
 AnnotationAssertion(rdfs:comment obo:PREFER_8000022 "Not using RO:0020202 as range/domain does not fit with modelling.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000022 "has numerator unit"@en)
+
+# Object Property: obo:PREFER_8000030 (has setpoint)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000030 "Inverse of setpoint of.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000030 "has setpoint"@en)
+ObjectPropertyDomain(obo:PREFER_8000030 obo:IAO_0000030)
+ObjectPropertyRange(obo:PREFER_8000030 obo:IAO_0000030)
 
 
 
