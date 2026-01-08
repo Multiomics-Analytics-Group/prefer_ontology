@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2025-12-22
+data-version: releases/2026-01-08
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: swrl http://www.w3.org/2003/11/swrl# 
@@ -19,7 +19,7 @@ property_value: IAO:0000700 PREFER:9000000
 property_value: IAO:0000700 PREFER:9000001
 property_value: IAO:0000700 PREFER:9000002
 property_value: IAO:0000700 PREFER:9000003
-property_value: owl:versionInfo "2025-12-22" xsd:string
+property_value: owl:versionInfo "2026-01-08" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0001-7258-9596
 property_value: terms:contributor https://orcid.org/0000-0002-9163-7730
 property_value: terms:contributor https://orcid.org/0009-0009-0018-4253
@@ -321,7 +321,7 @@ name: fermentation project
 namespace: precision_fermentation
 def: "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments." []
 synonym: "project" EXACT []
-xref: OBI_0000066
+xref: OBI:0000066
 is_a: PREFER:9000003 ! precision fermentation process
 
 [Term]
@@ -330,7 +330,7 @@ name: fermentation experiment
 namespace: precision_fermentation
 def: "A precision fermentation process that consists of sets of fermentation runs conducted within the same project, all following a shared experimental approach or protocol." []
 synonym: "experiment" EXACT []
-xref: OBI_0000070
+xref: OBI:0000070
 is_a: PREFER:9000003 ! precision fermentation process
 relationship: BFO:0000050 PREFER:0000002 ! part of fermentation project
 
@@ -532,7 +532,7 @@ is_a: BFO:0000040 ! material entity
 [Term]
 id: PREFER:0000023
 name: core balance metric
-comment: A calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the process.
+def: "A calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the process." []
 synonym: "elemental balance metric" EXACT []
 is_a: PREFER:9000002 ! process calculated variable
 
@@ -944,7 +944,7 @@ id: PREFER:0000064
 name: carbon dioxide transfer rate
 namespace: precision_fermentation
 def: "A respiratory metric variable that represents the rate at which carbon dioxide is transferred out of the bioreactor or fermentation system during the process." []
-comment: Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.
+comment: Physical gas transfer. Dynamic respiratory metric. Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.
 synonym: "CTR" EXACT OMO:0003012 []
 is_a: PREFER:0000158 ! respiratory metric variable
 relationship: BAO_0002874 uom:mol.h-1 ! mole per hour
@@ -2266,6 +2266,7 @@ name: setpoint of
 def: "x is setpoint_of y iff x and y are information content entities, and x is a specified numerical value or target parameter that defines the desired state or threshold that y is designed to regulate, maintain, or reference." []
 domain: IAO:0000030 ! information content entity
 range: IAO:0000030 ! information content entity
+inverse_of: PREFER:8000030 ! has setpoint
 
 [Typedef]
 id: PREFER:8000021
@@ -2278,6 +2279,13 @@ id: PREFER:8000022
 name: has numerator unit
 def: "x has_numerator_unit y iff x and y are units, and x is ratio unit where y is the numerator of it." []
 comment: Not using RO:0020202 as range/domain does not fit with modelling.
+
+[Typedef]
+id: PREFER:8000030
+name: has setpoint
+def: "Inverse of setpoint of." []
+domain: IAO:0000030 ! information content entity
+range: IAO:0000030 ! information content entity
 
 [Typedef]
 id: RO:0000052
