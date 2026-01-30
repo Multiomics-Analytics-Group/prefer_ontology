@@ -485,7 +485,7 @@ ObjectPropertyRange(obo:PREFER_8000030 obo:IAO_0000030)
 
 AnnotationAssertion(rdfs:label obo:PREFER_8000038 "has target product"@en)
 ObjectPropertyDomain(obo:PREFER_8000038 obo:PREFER_0000010)
-ObjectPropertyRange(obo:PREFER_8000038 obo:BFO_0000040)
+ObjectPropertyRange(obo:PREFER_8000038 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:PREFER_8000035)))
 
 
 
