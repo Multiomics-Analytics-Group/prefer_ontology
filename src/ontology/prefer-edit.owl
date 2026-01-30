@@ -203,6 +203,12 @@ Declaration(Class(obo:PREFER_7000005))
 Declaration(Class(obo:PREFER_7000006))
 Declaration(Class(obo:PREFER_7000007))
 Declaration(Class(obo:PREFER_7000008))
+Declaration(Class(obo:PREFER_8000031))
+Declaration(Class(obo:PREFER_8000032))
+Declaration(Class(obo:PREFER_8000033))
+Declaration(Class(obo:PREFER_8000034))
+Declaration(Class(obo:PREFER_8000035))
+Declaration(Class(obo:PREFER_8000036))
 Declaration(Class(obo:PREFER_9000003))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
@@ -237,6 +243,9 @@ Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
 Declaration(ObjectProperty(obo:PREFER_8000030))
+Declaration(ObjectProperty(obo:PREFER_8000038))
+Declaration(NamedIndividual(obo:PREFER_8000039))
+Declaration(NamedIndividual(obo:PREFER_8000040))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -272,7 +281,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -472,6 +481,12 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000030 "has setpoint"@en)
 ObjectPropertyDomain(obo:PREFER_8000030 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000030 obo:IAO_0000030)
 
+# Object Property: obo:PREFER_8000038 (has target product)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000038 "has target product"@en)
+ObjectPropertyDomain(obo:PREFER_8000038 obo:PREFER_0000010)
+ObjectPropertyRange(obo:PREFER_8000038 obo:BFO_0000040)
+
 
 
 ############################
@@ -515,6 +530,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000004 "PREFER:0000004")
 AnnotationAssertion(rdfs:label obo:PREFER_0000004 "fermentation run")
 SubClassOf(obo:PREFER_0000004 obo:PREFER_9000003)
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000003))
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000010))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000006 obo:PREFER_0000014))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000011 obo:PREFER_0000008))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000015 obo:PREFER_0000012))
@@ -568,8 +584,9 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000010 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000010 "PREFER:0000010")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000010 "Fermentation cultures are used in bioprocesses for various applications including precision fermentation, bioremediation, and production of biofuels and pharmaceuticals.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000010 "fermentation culture")
-SubClassOf(obo:PREFER_0000010 obo:BFO_0000040)
+SubClassOf(obo:PREFER_0000010 obo:PREFER_0000205)
 SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:PREFER_8000010 obo:PREFER_0000200))
+SubClassOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:RO_0000086 obo:PREFER_8000031))
 
 # Class: obo:PREFER_0000011 (fermentation medium)
 
@@ -606,7 +623,7 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000013 "NCBITaxon:1")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000013 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000013 "PREFER:0000013")
 AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon")
-SubClassOf(obo:PREFER_0000013 obo:BFO_0000019)
+SubClassOf(obo:PREFER_0000013 obo:PREFER_8000031)
 
 # Class: obo:PREFER_0000014 (bioreactor)
 
@@ -1999,7 +2016,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000204 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000204 "PREFER:0000204")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "doi:10.1093/jaoac/85.2.524") rdfs:comment obo:PREFER_0000204 "Unpublished strain is a quality used to tag strains that do not yet have a universal identifier. If or when they get published, this tag should be removed. All strains should still be under taxon. Strain and subtype are often used interchangeably, although the term strain is often used to describe a set of isolates with common biochemical and/or physiological characteristics, while the term subtype is often used to describe a set of isolates with common genetic or molecular characteristics.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000204 "unpublished strain")
-SubClassOf(obo:PREFER_0000204 obo:BFO_0000019)
+SubClassOf(obo:PREFER_0000204 obo:PREFER_8000031)
 
 # Class: obo:PREFER_0000205 (cell culture)
 
@@ -2101,6 +2118,37 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000005 "carbon mole p
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000021 uom:h))
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000002))
 
+# Class: obo:PREFER_8000031 (strain quality)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000031 "strain quality"@en)
+SubClassOf(obo:PREFER_8000031 obo:BFO_0000019)
+
+# Class: obo:PREFER_8000032 (production output)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000032 "production output"@en)
+EquivalentClasses(obo:PREFER_8000032 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:RO_0000087 obo:PREFER_0000203)))))))
+SubClassOf(obo:PREFER_8000032 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:PREFER_8000034))))
+
+# Class: obo:PREFER_8000033 (tyrosine production strain)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000033 "tyrosine production strain"@en)
+EquivalentClasses(obo:PREFER_8000033 ObjectIntersectionOf(obo:PREFER_0000010 ObjectSomeValuesFrom(obo:PREFER_8000038 obo:CHEBI_18186)))
+
+# Class: obo:PREFER_8000034 (product role)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000034 "product role"@en)
+SubClassOf(obo:PREFER_8000034 obo:BFO_0000023)
+
+# Class: obo:PREFER_8000035 (target product)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000035 "target product"@en)
+SubClassOf(obo:PREFER_8000035 obo:PREFER_8000034)
+
+# Class: obo:PREFER_8000036 (byproduct)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000036 "byproduct"@en)
+SubClassOf(obo:PREFER_8000036 obo:PREFER_8000034)
+
 # Class: obo:PREFER_9000001 (process measurement variable)
 
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "process measured variable")
@@ -2160,6 +2208,23 @@ AnnotationAssertion(obo:IAO_0000115 uom:mol.mol-1 "A unit representing a mol-bas
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "Mole per Mole")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "Mole/Mole")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "mol/mol")
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:PREFER_8000039 (test experiment)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000039 "test experiment"@en)
+ClassAssertion(obo:PREFER_0000004 obo:PREFER_8000039)
+ClassAssertion(ObjectHasValue(obo:BFO_0000051 obo:PREFER_8000040) obo:PREFER_8000039)
+
+# Individual: obo:PREFER_8000040 (test strain)
+
+AnnotationAssertion(rdfs:label obo:PREFER_8000040 "test strain"@en)
+ClassAssertion(ObjectIntersectionOf(obo:PREFER_0000205 ObjectSomeValuesFrom(obo:RO_0000086 obo:PREFER_0000204)) obo:PREFER_8000040)
+ClassAssertion(ObjectSomeValuesFrom(obo:PREFER_8000038 obo:CHEBI_18186) obo:PREFER_8000040)
 
 
 )
