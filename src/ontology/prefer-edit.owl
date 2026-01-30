@@ -2218,7 +2218,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynon
 
 AnnotationAssertion(rdfs:label obo:PREFER_8000039 "test experiment"@en)
 ClassAssertion(obo:PREFER_0000004 obo:PREFER_8000039)
-ClassAssertion(ObjectHasValue(obo:BFO_0000051 obo:PREFER_8000040) obo:PREFER_8000039)
+ClassAssertion(ObjectHasValue(obo:RO_0000057 obo:PREFER_8000040) obo:PREFER_8000039)
 
 # Individual: obo:PREFER_8000040 (test strain)
 
