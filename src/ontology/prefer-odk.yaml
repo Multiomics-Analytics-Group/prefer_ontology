@@ -43,6 +43,7 @@ import_group:
     - id: go
       use_base: TRUE
     - id: obi
+      use_base: TRUE
 robot_java_args: "-Xmx16G"
 robot_report:
   use_labels: TRUE
