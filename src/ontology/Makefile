@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                30c951b8e58fda0e575ac698f7fc5ad1cc5f4f27cb30efa0770e890783de7e22
+CONFIG_HASH=                cd234805d989b48fd35d1c24ba2dcaa28bb5c84f24a3f5dd1a3557d600feaa20
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao cl omo ro chebi bao pato go
+IMPORTS =  iao cl omo ro chebi bao pato go obi
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -526,10 +526,8 @@ mirror-ro: | $(TMPDIR)
 ## ONTOLOGY: chebi
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
-ifeq ($(IMP_LARGE),true)
 mirror-chebi: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl -o $(TMPDIR)/$@.owl
-endif
+	$(ROBOT) convert -I https://github.com/obophenotype/chebi_obo_slim/releases/latest/download/chebi_slim.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: bao
@@ -553,6 +551,14 @@ mirror-pato: | $(TMPDIR)
 mirror-go: | $(TMPDIR)
 	curl -L $(OBOBASE)/go/go-base.owl --create-dirs -o $(TMPDIR)/go-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/go-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true
