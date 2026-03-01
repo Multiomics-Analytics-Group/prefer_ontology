@@ -3,3 +3,5 @@ BFO:0000051 # has_part
 RO:0000052 # characteristic_of
 RO:0000056 # participates_in
 RO:0000057 # has_participant 
+RO:0000080 # quality_of
+RO:0000086 # has_quality

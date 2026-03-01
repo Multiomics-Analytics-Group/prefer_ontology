@@ -272,7 +272,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -373,6 +373,7 @@ SubObjectPropertyOf(obo:PREFER_8000007 obo:RO_0000056)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000008 "x has_bioreactor_scale y iff x is a bioreactor and y is the scale that the bioreactor supports.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000008 "has bioreactor scale")
+SubObjectPropertyOf(obo:PREFER_8000008 obo:RO_0000086)
 InverseObjectProperties(obo:PREFER_8000008 obo:PREFER_8000009)
 ObjectPropertyDomain(obo:PREFER_8000008 obo:PREFER_0000014)
 ObjectPropertyRange(obo:PREFER_8000008 obo:PREFER_0000185)
@@ -381,7 +382,7 @@ ObjectPropertyRange(obo:PREFER_8000008 obo:PREFER_0000185)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000009 "inverse of has bioreactor scale.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000009 "is bioreactor scale of"@en)
-SubObjectPropertyOf(obo:PREFER_8000009 obo:IAO_0000136)
+SubObjectPropertyOf(obo:PREFER_8000009 obo:RO_0000080)
 
 # Object Property: obo:PREFER_8000010 (has fermentation culture type)
 
