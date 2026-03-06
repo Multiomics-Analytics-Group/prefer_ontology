@@ -617,7 +617,6 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000014 "bioreactor syst
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MSIO:0000167") oboInOwl:hasNarrowSynonym obo:PREFER_0000014 "fermenter")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000014 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000014 "")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000014 "While this term is equivalent to OBI:0001046, PREFER has specific modelling that makes it more difficult to maintain if used directly. A decision was hence made to create this new term in PREFER and map it to OBI:0001046 instead.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
