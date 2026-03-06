@@ -272,7 +272,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -373,6 +373,7 @@ SubObjectPropertyOf(obo:PREFER_8000007 obo:RO_0000056)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000008 "x has_bioreactor_scale y iff x is a bioreactor and y is the scale that the bioreactor supports.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000008 "has bioreactor scale")
+SubObjectPropertyOf(obo:PREFER_8000008 obo:RO_0000086)
 InverseObjectProperties(obo:PREFER_8000008 obo:PREFER_8000009)
 ObjectPropertyDomain(obo:PREFER_8000008 obo:PREFER_0000014)
 ObjectPropertyRange(obo:PREFER_8000008 obo:PREFER_0000185)
@@ -381,7 +382,7 @@ ObjectPropertyRange(obo:PREFER_8000008 obo:PREFER_0000185)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000009 "inverse of has bioreactor scale.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000009 "is bioreactor scale of"@en)
-SubObjectPropertyOf(obo:PREFER_8000009 obo:IAO_0000136)
+SubObjectPropertyOf(obo:PREFER_8000009 obo:RO_0000080)
 
 # Object Property: obo:PREFER_8000010 (has fermentation culture type)
 
@@ -487,21 +488,21 @@ SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 # Class: obo:PREFER_0000002 (fermentation project)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000002 "OBI:0000066")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000002 "project")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000002 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000002 "PREFER:0000002")
 AnnotationAssertion(rdfs:label obo:PREFER_0000002 "fermentation project")
+SubClassOf(obo:PREFER_0000002 obo:OBI_0000066)
 SubClassOf(obo:PREFER_0000002 obo:PREFER_9000003)
 
 # Class: obo:PREFER_0000003 (fermentation experiment)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000003 "A precision fermentation process that consists of sets of fermentation runs conducted within the same project, all following a shared experimental approach or protocol.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000003 "OBI:0000070")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000003 "experiment")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000003 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000003 "PREFER:0000003")
 AnnotationAssertion(rdfs:label obo:PREFER_0000003 "fermentation experiment")
+SubClassOf(obo:PREFER_0000003 obo:OBI_0000070)
 SubClassOf(obo:PREFER_0000003 obo:PREFER_9000003)
 SubClassOf(obo:PREFER_0000003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_0000002))
 
@@ -616,6 +617,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000014 "bioreactor syst
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MSIO:0000167") oboInOwl:hasNarrowSynonym obo:PREFER_0000014 "fermenter")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000014 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000014 "PREFER:0000014")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000014 "While this term is equivalent to OBI:0001046, PREFER has specific modelling that makes it more difficult to maintain if used directly. A decision was hence made to create this new term in PREFER and map it to OBI:0001046 instead.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000014 "bioreactor")
 SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000185))
@@ -2108,6 +2110,10 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "process measure
 # Class: obo:PREFER_9000002 (process calculated variable)
 
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process computed variable")
+
+# Class: obo:PREFER_9000004 (unit)
+
+AnnotationAssertion(rdfs:comment obo:PREFER_9000004 "The decision to utilise https://units-of-measurement.org/ meant that we did not want to commit to any unit ontologies. We hence created our own parent class to parent units. Interoperability of units can be achieved by the matches in units-of-measurement, and this term should only be used to constraining in modelling.")
 
 # Class: uom:L.h-1 (liters per hour)
 

@@ -32,8 +32,7 @@ import_group:
     - id: ro
       use_base: TRUE
     - id: chebi
-      mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl
-      is_large: TRUE
+      mirror_from: https://github.com/obophenotype/chebi_obo_slim/releases/latest/download/chebi_slim.owl
     - id: bao
       mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
       make_base: TRUE
@@ -42,6 +41,8 @@ import_group:
     - id: pato
       use_base: TRUE
     - id: go
+      use_base: TRUE
+    - id: obi
       use_base: TRUE
 robot_java_args: "-Xmx16G"
 robot_report:
