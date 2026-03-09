@@ -602,13 +602,14 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000012 obo:CL_0000000)
 
-# Class: obo:PREFER_0000013 (taxon)
+# Class: obo:PREFER_0000013 (taxon quality)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18586729") obo:IAO_0000115 obo:PREFER_0000013 "A quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon.")
-AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000013 "NCBITaxon:1")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCBITaxon:1") oboInOwl:hasBroadSynonym obo:PREFER_0000013 "taxon")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000013 "http://purl.org/biotop/btl2.owl#TaxonQuality")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000013 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000013 "PREFER:0000013")
-AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon")
+AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon quality")
 SubClassOf(obo:PREFER_0000013 obo:BFO_0000019)
 
 # Class: obo:PREFER_0000014 (bioreactor)
