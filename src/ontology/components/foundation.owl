@@ -49,11 +49,11 @@ AnnotationAssertion(dc:contributor obo:PREFER_9000001 "https://orcid.org/0000-00
 AnnotationAssertion(rdfs:label obo:PREFER_9000001 "precision fermentation process measurement variable"@en)
 SubClassOf(obo:PREFER_9000001 obo:IAO_0000030)
 
-# Class: obo:PREFER_9000002 (process calculated variable)
+# Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the fermentation process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000002 "https://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(rdfs:label obo:PREFER_9000002 "process calculated variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_9000002 "precision fermentation process calculated variable"@en)
 SubClassOf(obo:PREFER_9000002 obo:IAO_0000030)
 
 # Class: obo:PREFER_9000003 (precision fermentation process)

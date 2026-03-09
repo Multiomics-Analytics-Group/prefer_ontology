@@ -272,7 +272,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -481,7 +481,8 @@ ObjectPropertyRange(obo:PREFER_8000030 obo:IAO_0000030)
 
 # Class: obo:PREFER_0000000 (process rate metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000000 "A key process metric that represents a quantitative metric, describing rates or fluxes associated, for instance, wiht growth, product formation, substrate consumption, or respiration, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000000 "A key process metric that represents a quantitative metric, describing rates or fluxes associated, for instance, wiht growth, product formation, substrate consumption, or respiration, during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000000 "key precision fermentation process rate metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "process rate metric"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
@@ -667,6 +668,7 @@ SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000019 "A precision fermentation process control variable that represents the target temperature value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "Tº setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "precision fermentation process temperature setpoint control variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "target Tº")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "target temperature")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "target temperature value")
@@ -674,7 +676,6 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature con
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature reference point")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature reference value")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AFO_/result#AFR:0001255") oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature setting")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "precision fermentation process temperature setpoint control variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000019 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000019 "PREFER:0000019")
 AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint control variable")
@@ -690,9 +691,9 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000020 "A precision fermentation
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "pH control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "ph control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "ph setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "precision fermentation process pH setpoint control variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "target pH")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "target ph")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "precision fermentation process pH setpoint control variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000020 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000020 "PREFER:0000020")
 AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint control variable")
@@ -726,7 +727,7 @@ SubClassOf(obo:PREFER_0000022 obo:BFO_0000040)
 
 # Class: obo:PREFER_0000023 (core balance metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000023 "A calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000023 "A precision fermentation process calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000023 "elemental balance metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000023 "core balance metric"@en)
 SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
@@ -1168,60 +1169,60 @@ SubClassOf(obo:PREFER_0000060 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000060 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000006))
 
-# Class: obo:PREFER_0000061 (oxygen uptake rate)
+# Class: obo:PREFER_0000061 (oxygen uptake rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000061 "A respiratory metric variable that represents the rate at which oxygen is consumed by the cell culture from a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000061 "OUR")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000061 "o2 uptake rate")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000061 "A respiratory rate metric that represents the rate at which oxygen is consumed by the cell culture from a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000061 "OUR variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000061 "o2 uptake rate variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000061 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000061 "PREFER:0000061")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000061 "Biorespiration. Dynamic respiratory metric")
-AnnotationAssertion(rdfs:label obo:PREFER_0000061 "oxygen uptake rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000061 "oxygen uptake rate variable")
 SubClassOf(obo:PREFER_0000061 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mmol.h-1))
 
-# Class: obo:PREFER_0000062 (carbon dioxide evolution rate)
+# Class: obo:PREFER_0000062 (carbon dioxide evolution rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000062 "A respiratory metric variable that represents the rate at which carbon dioxide is released by the cell culture in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000062 "CER")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000062 "co2 evolution rate")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000062 "A respiratory rate metric that represents the rate at which carbon dioxide is released by the cell culture in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000062 "CER variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000062 "co2 evolution rate variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000062 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000062 "PREFER:0000062")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000062 "Physical gas transfer. Dynamic respiratory metric")
-AnnotationAssertion(rdfs:label obo:PREFER_0000062 "carbon dioxide evolution rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000062 "carbon dioxide evolution rate variable")
 SubClassOf(obo:PREFER_0000062 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mmol.h-1))
 
-# Class: obo:PREFER_0000063 (oxygen transfer rate)
+# Class: obo:PREFER_0000063 (oxygen transfer rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000063 "A respiratory metric variable that represents the rate at which oxygen is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000063 "OTR")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000063 "A respiratory rate metric variable that represents the rate at which oxygen is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000063 "OTR variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000063 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000063 "PREFER:0000063")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000063 "Physical gas transfer. Dynamic respiratory metric")
-AnnotationAssertion(rdfs:label obo:PREFER_0000063 "oxygen transfer rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000063 "oxygen transfer rate variable")
 SubClassOf(obo:PREFER_0000063 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
 
-# Class: obo:PREFER_0000064 (carbon dioxide transfer rate)
+# Class: obo:PREFER_0000064 (carbon dioxide transfer rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000064 "A respiratory metric variable that represents the rate at which carbon dioxide is transferred out of the bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000064 "A respiratory rate metric that represents the rate at which carbon dioxide is transferred out of the bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000064 "CTR variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000064 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Physical gas transfer. Dynamic respiratory metric. Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000064 "carbon dioxide transfer rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000064 "carbon dioxide transfer rate variable")
 SubClassOf(obo:PREFER_0000064 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
 
-# Class: obo:PREFER_0000065 (respiratory quotient)
+# Class: obo:PREFER_0000065 (respiratory quotient variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000065 "A respiratory metric variable that represent the ratio of carbon dioxide produced/formed to oxygen consumed during cellular metabolism in a bioreactor or fermentation system during the process, commmonly used to assess the metabolic state of cells.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000065 "RQ")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000065 "A respiratory rate metric that represent the ratio of carbon dioxide produced/formed to oxygen consumed during cellular metabolism in a bioreactor or fermentation system during a fermentation process, commmonly used to assess the metabolic state of cells.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000065 "RQ variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000065 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000065 "PREFER:0000065")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000065 "Derived metabolic indicator.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000065 "respiratory quotient")
+AnnotationAssertion(rdfs:label obo:PREFER_0000065 "respiratory quotient variable")
 SubClassOf(obo:PREFER_0000065 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000007))
 
@@ -1249,12 +1250,13 @@ SubClassOf(obo:PREFER_0000069 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
 
-# Class: obo:PREFER_0000071 (biomass concentration)
+# Class: obo:PREFER_0000071 (biomass concentration variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000071 "A process titer metric variable that represents the concentration of biomass present in a withdrawn process sample from a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000071 "A process titer metric that represents the concentration of biomass present in a withdrawn process sample from a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000071 "biomass concentracion calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000071 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000071 "PREFER:0000071")
-AnnotationAssertion(rdfs:label obo:PREFER_0000071 "biomass concentration")
+AnnotationAssertion(rdfs:label obo:PREFER_0000071 "biomass concentration variable")
 SubClassOf(obo:PREFER_0000071 obo:PREFER_0000091)
 SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.L-1))
 
@@ -1274,10 +1276,11 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000073 "A cultivation condition 
 AnnotationAssertion(rdfs:label obo:PREFER_0000073 "seed cultivation condition"@en)
 SubClassOf(obo:PREFER_0000073 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000074 (compound concentration)
+# Class: obo:PREFER_0000074 (compound concentration variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000074 "A process titer metric variable that represents the concentration of a specific compound present in a withdrawn process sample from a bioreactor or fermentation system during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000074 "compound concentration"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000074 "A process titer metric that represents the concentration of a specific compound present in a withdrawn process sample from a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000074 "compound concentration calculated variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000074 "compound concentration variable"@en)
 SubClassOf(obo:PREFER_0000074 obo:PREFER_0000091)
 SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.L-1))
 
@@ -1307,15 +1310,17 @@ SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000078 (key process metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000078 "A process calculated variable that represents a set of quantitative metrics used to asses the efficiency or performance of the process impacting technoeconomic analysis.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000078 "A precision fermentation process calculated variable that represents a set of quantitative metrics used to asses the efficiency or performance of the fermentation process impacting technoeconomic analysis.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000078 "key performance metric")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000078 "key precision fermentation process metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000078 "key process metric"@en)
 SubClassOf(obo:PREFER_0000078 obo:PREFER_9000002)
 
 # Class: obo:PREFER_0000079 (carbon balance variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000079 "A carbon balance metric variable that represents the general carbon balance, which compares the total amount of carbon entering a bioreactor or fermenter system (through the substrate) to the total carbon leaving the system (through products, biomass or by-products).")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000079 "C balance")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000079 "A carbon balance metric that represents the general carbon balance, which compares the total amount of carbon entering a bioreactor or fermenter system (through the substrate) to the total carbon leaving the system (through products, biomass or by-products).")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000079 "C balance variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000079 "carbon balance calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000079 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000079 "PREFER:0000079")
 AnnotationAssertion(rdfs:label obo:PREFER_0000079 "carbon balance variable")
@@ -1324,8 +1329,9 @@ SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000081 (degree of reduction balance variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000081 "A carbon balance metric variable that quantifies the redox state in a bioreactor or fermentar system during a process, by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000081 "A carbon balance metric that quantifies the redox state in a bioreactor or fermentar system during a fermentation process, by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000081 "DoR balance variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000081 "degree of reduction balance calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000081 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000081 "PREFER:0000081")
 AnnotationAssertion(rdfs:label obo:PREFER_0000081 "degree of reduction balance variable")
@@ -1334,7 +1340,8 @@ SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000083 (compound consumed variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000083 "A compound balance metric variable that represents the total amount of compound consumed, substrate taken up by the cells, in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000083 "A compound balance metric that represents the total amount of compound consumed, substrate taken up by the cells, in a bioreactor or fermentation system, during the fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000083 "compound consumed calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000083 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000083 "PREFER:0000083")
 AnnotationAssertion(rdfs:label obo:PREFER_0000083 "compound consumed variable")
@@ -1355,13 +1362,13 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000086 "For instance, Ambr250 or Pi
 AnnotationAssertion(rdfs:label obo:PREFER_0000086 "minibioreactor scale"@en)
 SubClassOf(obo:PREFER_0000086 obo:PREFER_0000186)
 
-# Class: obo:PREFER_0000087 (substrate uptake rate)
+# Class: obo:PREFER_0000087 (substrate uptake rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000087 "A bioproduction metric variable that represents the rate at which substrate is taken up by the cells, in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000087 "QS")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000087 "A bioproduction rate metric that represents the rate at which substrate is taken up by the cells, in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000087 "QS variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000087 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000087 "PREFER:0000087")
-AnnotationAssertion(rdfs:label obo:PREFER_0000087 "substrate uptake rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000087 "substrate uptake rate variable")
 SubClassOf(obo:PREFER_0000087 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1371,12 +1378,12 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000088 "A fermentation phase tha
 AnnotationAssertion(rdfs:label obo:PREFER_0000088 "batch phase"@en)
 SubClassOf(obo:PREFER_0000088 obo:PREFER_0000016)
 
-# Class: obo:PREFER_0000089 (specific substrate uptake rate)
+# Class: obo:PREFER_0000089 (specific substrate uptake rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000089 "A bioproduction metric variable that represents the rate of substrate uptake per unit of biomass, in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000089 "A bioproduction rate metric that represents the rate of substrate uptake per unit of biomass, in a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000089 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000089 "PREFER:0000089")
-AnnotationAssertion(rdfs:label obo:PREFER_0000089 "specific substrate uptake rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000089 "specific substrate uptake rate variable")
 SubClassOf(obo:PREFER_0000089 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1388,13 +1395,14 @@ SubClassOf(obo:PREFER_0000090 obo:PREFER_0000016)
 
 # Class: obo:PREFER_0000091 (process titer metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000091 "A key process metric that represents a quantitative metric of the final concentration of the product or biomass in the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000091 "A key process metric that represents a quantitative metric of the final concentration of the product or biomass in a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000091 "key precision fermentation process titer metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000091 "process titer metric"@en)
 SubClassOf(obo:PREFER_0000091 obo:PREFER_0000078)
 
 # Class: obo:PREFER_0000094 (substrate yield (biomass) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000094 "A process yield metric variable that represents the yield of a compound consumed (substrate) per biomass (X), quantifying how efficiently substrate compound is consumed relative to biomass produced in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000094 "A process yield metric that represents the yield of a compound consumed (substrate) per biomass (X), quantifying how efficiently substrate compound is consumed relative to biomass produced in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000094 "substrate yield (X) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000094 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000094 "PREFER:0000094")
@@ -1414,14 +1422,15 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000096 "A fermentation phase tha
 AnnotationAssertion(rdfs:label obo:PREFER_0000096 "production phase"@en)
 SubClassOf(obo:PREFER_0000096 obo:PREFER_0000016)
 
-# Class: obo:PREFER_0000101 (oxygen production rate)
+# Class: obo:PREFER_0000101 (oxygen production rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000101 "A bioproduction metric variable that represents the rate of oxygen consumed over time, in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000101 "Oxygen volumetric rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000101 "o2 Q")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000101 "A bioproduction rate metric that represents the rate of oxygen consumed over time, in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000101 "o2 Q variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000101 "oxygen bioproduction rate variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000101 "oxygen volumetric rate variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000101 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000101 "PREFER:0000101")
-AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen production rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen production rate variable")
 SubClassOf(obo:PREFER_0000101 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1438,7 +1447,7 @@ SubClassOf(obo:PREFER_0000103 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000104 (oxygen yield (substrate) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000104 "A process yield metric variablec that represents the yield of oxygen consumed per substrate (S) consumed, describing how much oxygen is consumed relative to the substrate used in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000104 "A process yield metric that represents the yield of oxygen consumed per substrate (S) consumed, describing how much oxygen is consumed relative to the substrate used in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000104 "o2 yield (S) variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000104 "oxygen yield (S) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000104 "precision_fermentation")
@@ -1459,7 +1468,7 @@ SubClassOf(obo:PREFER_0000105 obo:PREFER_0000200)
 
 # Class: obo:PREFER_0000106 (oxygen yield (biomass) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000106 "A process yield metric variable that represents the yield of oxygen consumed per biomass (X), describing how much oxygen is consumed relative to the amount of biomass generated in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000106 "A process yield metric that represents the yield of oxygen consumed per biomass (X), describing how much oxygen is consumed relative to the amount of biomass generated in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000106 "o2 yield (X) variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000106 "oxygen yield (X) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000106 "precision_fermentation")
@@ -1470,8 +1479,10 @@ SubClassOf(obo:PREFER_0000106 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000107 (compound formed variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000107 "A compound balance metric variable that represents the total amount of compound produced or formed in a bioreactor or fermentation system, representing the cumulative production of the compound during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000107 "A compound balance metric that represents the total amount of compound produced or formed in a bioreactor or fermentation system, representing the cumulative production of the compound during the fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound produced variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound formed calculated variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound produced calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000107 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000107 "PREFER:0000107")
 AnnotationAssertion(rdfs:label obo:PREFER_0000107 "compound formed variable")
@@ -1499,13 +1510,14 @@ AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl
 AnnotationAssertion(rdfs:label obo:PREFER_0000110 "feed medium"@en)
 SubClassOf(obo:PREFER_0000110 obo:PREFER_0000108)
 
-# Class: obo:PREFER_0000111 (residual compound amount)
+# Class: obo:PREFER_0000111 (residual compound amount variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000111 "A compound balance metric variable that represents the remaining amount of compound left in a bioreactor or fermentation system during a process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000111 "A compound balance metric that represents the remaining amount of compound left in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000111 "residual compound amount calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000111 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000111 "PREFER:0000111")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000111 "It is calculated substracting the compound concentration measured offline, multiplied by the liquid volume downscaled to get the residual amount.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000111 "residual compound amount")
+AnnotationAssertion(rdfs:label obo:PREFER_0000111 "residual compound amount variable")
 SubClassOf(obo:PREFER_0000111 obo:PREFER_0000162)
 SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g))
 
@@ -1517,14 +1529,14 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000112 "starter medium"
 AnnotationAssertion(rdfs:label obo:PREFER_0000112 "seed medium"@en)
 SubClassOf(obo:PREFER_0000112 obo:PREFER_0000108)
 
-# Class: obo:PREFER_0000113 (compound production rate)
+# Class: obo:PREFER_0000113 (compound production rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000113 "A bioproduction metric variable that represents the rate of compound produced over time, in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000113 "A bioproduction rate metric that represents the rate of compound produced over time, in a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000113 "Qcompound")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000113 "precision_fermentation")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound formation rate")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound formation rate variable")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000113 "PREFER:0000113")
-AnnotationAssertion(rdfs:label obo:PREFER_0000113 "compound production rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000113 "compound production rate variable")
 SubClassOf(obo:PREFER_0000113 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1535,13 +1547,14 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000114 "precision ferme
 AnnotationAssertion(rdfs:label obo:PREFER_0000114 "inlet air oxygen setpoint control variable"@en)
 SubClassOf(obo:PREFER_0000114 obo:PREFER_0000119)
 
-# Class: obo:PREFER_0000115 (specific compound production rate)
+# Class: obo:PREFER_0000115 (specific compound production rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000115 "A bioproduction metric variable that represents the rate of compound produced per unit of biomass, in a bioreactor or fermentation system during the process, providing the efficiency of compound production relative to biomass.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000115 "specific compound formation rate")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000115 "A bioproduction rate metric that represents the rate of compound produced per unit of biomass, in a bioreactor or fermentation system during a fermentation process, providing the efficiency of compound production relative to biomass.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000115 "specific compound bioproduction rate variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000115 "specific compound formation rate variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000115 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000115 "PREFER:0000115")
-AnnotationAssertion(rdfs:label obo:PREFER_0000115 "specific compound production rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000115 "specific compound production rate variable")
 SubClassOf(obo:PREFER_0000115 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1554,7 +1567,7 @@ SubClassOf(obo:PREFER_0000116 obo:PREFER_0000119)
 
 # Class: obo:PREFER_0000117 (compound produced yield (substrate) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000117 "A process yield metric variable that represents the yield of a compound produced per substrate (S) consumed, quantifying how efficiently compound is produced relative to substrate consumption in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000117 "A process yield metric that represents the yield of a compound produced per substrate (S) consumed, quantifying how efficiently compound is produced relative to substrate consumption in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000117 "compound yield (S) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000117 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000117 "PREFER:0000117")
@@ -1569,9 +1582,9 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD control setp
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "precision fermentation process optical density control variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target OD")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target optical density")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "precision fermentation process optical density control variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000118 "optical density control variable"@en)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000045)
@@ -1590,7 +1603,7 @@ SubClassOf(obo:PREFER_0000119 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000120 (compound produced yield (biomass) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000120 "A process yield metric variable that represents the yield of a compound produced per biomass (X), quantifying how efficiently compound is produced relative to biomass generation in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000120 "A process yield metric that represents the yield of a compound produced per biomass (X), quantifying how efficiently compound is produced relative to biomass generation in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000120 "compound produced yield (X) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000120 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000120 "PREFER:0000120")
@@ -1601,13 +1614,13 @@ SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.
 # Class: obo:PREFER_0000121 (pressure setpoint control variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000121 "A precision fermentation process control variable that represents the target pressure value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "precision fermentation process pressure setpoint control variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure reference point")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure reference value")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "target pressure")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "target pressure value")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "precision fermentation process pressure setpoint control variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure setpoint control variable"@en)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
@@ -1624,13 +1637,14 @@ SubClassOf(obo:PREFER_0000122 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
 
-# Class: obo:PREFER_0000128 (carbon dioxide production rate)
+# Class: obo:PREFER_0000128 (carbon dioxide production rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "A bioproduction metric variable that represents the rate of carbon dioxide produced over time, in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "A bioproduction rate metric that represents the rate of carbon dioxide produced over time, in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000128 "carbon dioxide bioproduction rate variable")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000128 "co2 Q variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000128 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000128 "PREFER:0000128")
-AnnotationAssertion(rdfs:label obo:PREFER_0000128 "carbon dioxide production rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000128 "carbon dioxide production rate variable")
 SubClassOf(obo:PREFER_0000128 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
@@ -1655,9 +1669,9 @@ SubClassOf(obo:PREFER_0000130 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000131 (carbon dioxide yield (substrate) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000131 "A process yield metric variable that represents the yield of carbon dioxide produced per substrate consumed (S), describing how much carbon dioxide is produced relative to the amount of substrate consumed in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000131 "A process yield metric that represents the yield of carbon dioxide produced per substrate consumed (S), describing how much carbon dioxide is produced relative to the amount of substrate consumed in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000131 "carbon dioxide yield (S) variable")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000131 "co2 yield (S)")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000131 "co2 yield (S) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000131 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000131 "PREFER:0000131")
 AnnotationAssertion(rdfs:label obo:PREFER_0000131 "carbon dioxide yield (substrate) variable")
@@ -1666,33 +1680,35 @@ SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000133 (carbon dioxide yield (biomass) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000133 "A process yield metric variable that represents the yield of carbon dioxide produced per biomass (X), describing how much carbon dioxide is produced relative to the amount of biomass generated in a bioreactor or fermentation system, during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000133 "A process yield metric that represents the yield of carbon dioxide produced per biomass (X), describing how much carbon dioxide is produced relative to the amount of biomass generated in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000133 "carbo dioxide yield (X) variable")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000133 "co2 yield (X)")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000133 "co2 yield (X) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000133 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000133 "PREFER:0000133")
 AnnotationAssertion(rdfs:label obo:PREFER_0000133 "carbon dioxide yield (biomass) variable")
 SubClassOf(obo:PREFER_0000133 obo:PREFER_0000155)
 SubClassOf(obo:PREFER_0000133 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000000))
 
-# Class: obo:PREFER_0000134 (biomass amount)
+# Class: obo:PREFER_0000134 (biomass amount variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000134 "A biomass balance metric variable that represents the absolute quantity of cellular biomass present in a bioreactor or fermentation system, at a certain time point, during a process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000134 "A biomass balance metric that represents the absolute quantity of cellular biomass present in a bioreactor or fermentation system, at a certain time point, during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000134 "biomass amount calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000134 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000134 "PREFER:0000134")
-AnnotationAssertion(rdfs:label obo:PREFER_0000134 "biomass amount")
+AnnotationAssertion(rdfs:label obo:PREFER_0000134 "biomass amount variable")
 SubClassOf(obo:PREFER_0000134 obo:PREFER_0000161)
 SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000135 (calculated genomics sample variable)
+# Class: obo:PREFER_0000135 (genomics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000135 "A calculated omics sample variable that represents genomic values derived from computational analysis using DNA sequence data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000135 "calculated genomics sample variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000135 "An omics sample calculated variable that represents genomic values derived from computational analysis using DNA sequence data from an offline sample associated with a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000135 "genomics sample calculated variable"@en)
 SubClassOf(obo:PREFER_0000135 obo:PREFER_0000209)
 
 # Class: obo:PREFER_0000136 (biomass lost in sampling variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000136 "A biomass balance metric variable that represents the amount of biomass removed from a bioreactor or fermentation system, at a certain sampling time point, during a process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000136 "A biomass balance metric that represents the amount of biomass removed from a bioreactor or fermentation system, at a certain sampling time point, during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000136 "biomass lost in sampling calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000136 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000136 "PREFER:0000136")
 AnnotationAssertion(rdfs:label obo:PREFER_0000136 "biomass lost in sampling variable")
@@ -1701,76 +1717,78 @@ SubClassOf(obo:PREFER_0000136 ObjectSomeValuesFrom(<http://www.bioassayontology.
 
 # Class: obo:PREFER_0000137 (biomass formed variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000137 "A biomass balance metric variable that represents the cumulative quantity of cellular biomass generated in a bioreactor or fermentation system, during a process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000137 "A biomass balance metric that represents the cumulative quantity of cellular biomass generated in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass production variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass formed calculated variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass production calculated variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000137 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000137 "PREFER:0000137")
 AnnotationAssertion(rdfs:label obo:PREFER_0000137 "biomass formed variable")
 SubClassOf(obo:PREFER_0000137 obo:PREFER_0000161)
 SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000138 (calculated transcriptomics sample variable)
+# Class: obo:PREFER_0000138 (transcriptomics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000138 "A calculated omics sample variable that represents transcript features derived from computational analysis using transcriptomics data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000138 "calculated transcriptomics sample variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000138 "An omics sample calculated variable that represents transcript features derived from computational analysis using transcriptomics data from an offline sample associated with a process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000138 "transcriptomics sample calculated variable"@en)
 SubClassOf(obo:PREFER_0000138 obo:PREFER_0000209)
 
-# Class: obo:PREFER_0000139 (calculated proteomics sample variable)
+# Class: obo:PREFER_0000139 (proteomics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000139 "A calculated omics sample variable that represents protein features derived from computational analysis using proteomic data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000139 "calculated proteomics sample variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000139 "An omics sample calculated variable that represents protein features derived from computational analysis using proteomic data from an offline sample associated with a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000139 "proteomics sample calculated variable"@en)
 SubClassOf(obo:PREFER_0000139 obo:PREFER_0000209)
 
-# Class: obo:PREFER_0000140 (biomass formation rate)
+# Class: obo:PREFER_0000140 (biomass formation rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000140 "A growth metric variable that represents the rate at which the biomass is formed over time in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000140 "Rx")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000140 "biomass production rate")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000140 "A growth rate metric that represents the rate at which the biomass is formed over time in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000140 "Rx variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000140 "biomass production rate variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000140 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000140 "PREFER:0000140")
-AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass formation rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass formation rate variable")
 SubClassOf(obo:PREFER_0000140 obo:PREFER_0000160)
 SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000141 (calculated fluxomics sample variable)
+# Class: obo:PREFER_0000141 (fluxomics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000141 "A calculated omics sample variable that represents metabolic flux values derived from computational analysis using experimental data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000141 "calculated fluxomics sample variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000141 "An omics sample calculated variable that represents metabolic flux values derived from computational analysis using experimental data from an offline sample associated with a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000141 "fluxomics sample calculated variable"@en)
 SubClassOf(obo:PREFER_0000141 obo:PREFER_0000209)
 
-# Class: obo:PREFER_0000142 (specific biomass formation rate)
+# Class: obo:PREFER_0000142 (specific biomass formation rate variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000142 "A growth metric variable that represents the rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time, in a bioreactor or fermentation system during the process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000142 "growth rate")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000142 "specific biomass production rate")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000142 "μ")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000142 "A growth rate metric that represents the rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time, in a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000142 "growth rate variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000142 "specific biomass production rate variable")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000142 "μ variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000142 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
-AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific biomass formation rate")
+AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific biomass formation rate variable")
 SubClassOf(obo:PREFER_0000142 obo:PREFER_0000160)
 SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
 
 # Class: obo:PREFER_0000147 (biomass yield (substrate) variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000147 "A process yield metric variable that represents the yield of biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass in a bioreactor or fermentation system, during the process.")
-AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000147 "Ysx")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000147 "A process yield metric that represents the yield of biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass in a bioreactor or fermentation system, during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000147 "biomass yield (S) variable")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000147 "Ysx variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000147 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000147 "PREFER:0000147")
 AnnotationAssertion(rdfs:label obo:PREFER_0000147 "biomass yield (substrate) variable")
 SubClassOf(obo:PREFER_0000147 obo:PREFER_0000155)
 SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000148 (calculated metabolomics sample variable)
+# Class: obo:PREFER_0000148 (metabolomics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000148 "A calculated omics sample variable that represents metabolite features derived from computational analysis using metabolomic data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000148 "calculated metabolomics sample variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000148 "An omics sample calculated variable that represents metabolite features derived from computational analysis using metabolomic data from an offline sample associated with a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000148 "metabolomics sample calculated variable"@en)
 SubClassOf(obo:PREFER_0000148 obo:PREFER_0000209)
 
-# Class: obo:PREFER_0000149 (calculated metagenomics sample variable)
+# Class: obo:PREFER_0000149 (metagenomics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000149 "A calculated genomics sample variable that represents metagenomic features derived from computational analysis using DNA sequence data from an offline sample associated with a process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000149 "calculated metagenomics sample variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000149 "A genomics sample calculated variable that represents metagenomic features derived from computational analysis using DNA sequence data from an offline sample associated with a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000149 "metagenomics sample calculated variable"@en)
 SubClassOf(obo:PREFER_0000149 obo:PREFER_0000135)
 
 # Class: obo:PREFER_0000150 (data acquisition quality)
@@ -1817,53 +1835,54 @@ SubClassOf(obo:PREFER_0000154 obo:PREFER_0000150)
 # Class: obo:PREFER_0000155 (process yield metric)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000155 "A key process metric that represents a quantitative metric, tipically expressed as yield coefficients, that quantify the efficiency of converting inputs(e.g. substrates) into desired outputs(e.g. products), expressed as the ratio of output formed per unit of substrate or biomass consumed.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000155 "key precision fermentation process yield metric")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000155 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000155 "PREFER:0000155")
 AnnotationAssertion(rdfs:label obo:PREFER_0000155 "process yield metric")
 SubClassOf(obo:PREFER_0000155 obo:PREFER_0000078)
 
-# Class: obo:PREFER_0000157 (carbon balance metric variable)
+# Class: obo:PREFER_0000157 (carbon balance metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000157 "A core balance metric variable that represents a quantitative metric derived from carbon balance calculations over a process, used to characterize the carbon flow within a bioreactor or fermenter system during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000157 "carbon balance metric variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000157 "A core balance metric that represents a quantitative metric derived from carbon balance calculations over a process, used to characterize the carbon flow within a bioreactor or fermenter system during the fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000157 "carbon balance metric"@en)
 SubClassOf(obo:PREFER_0000157 obo:PREFER_0000023)
 
-# Class: obo:PREFER_0000158 (respiratory metric variable)
+# Class: obo:PREFER_0000158 (respiratory rate metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000158 "A process rate metric variable that represents a rate describing respiratory activity of a production culture in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000158 "A process rate metric variable that represents a rate describing respiratory activity of a production culture in a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "gas exchange metric")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000158 "metabolic metric")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000158 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000158 "PREFER:0000158")
-AnnotationAssertion(rdfs:label obo:PREFER_0000158 "respiratory metric variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000158 "respiratory rate metric")
 SubClassOf(obo:PREFER_0000158 obo:PREFER_0000000)
 
-# Class: obo:PREFER_0000159 (bioproduction metric variable)
+# Class: obo:PREFER_0000159 (bioproduction rate metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000159 "A process rate metric variable that represents a rate describing substrate consumptions, compound production (e.g. product formation) and biomass production in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000159 "A process rate metric that represents a rate describing substrate consumptions, compound production (e.g. product formation) and biomass production in a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000159 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000159 "PREFER:0000159")
-AnnotationAssertion(rdfs:label obo:PREFER_0000159 "bioproduction metric variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000159 "bioproduction rate metric")
 SubClassOf(obo:PREFER_0000159 obo:PREFER_0000000)
 
-# Class: obo:PREFER_0000160 (growth metric variable)
+# Class: obo:PREFER_0000160 (growth rate metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000160 "A process rate metric variable that represents a rate describing biomass formation or growth in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000160 "A process rate metric that represents a rate describing biomass formation or growth in a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000160 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000160 "PREFER:0000160")
-AnnotationAssertion(rdfs:label obo:PREFER_0000160 "growth metric variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000160 "growth rate metric")
 SubClassOf(obo:PREFER_0000160 obo:PREFER_0000000)
 
-# Class: obo:PREFER_0000161 (biomass balance metric variable)
+# Class: obo:PREFER_0000161 (biomass balance metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000161 "A core balance metric variable that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000161 "biomass balance metric variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000161 "A core balance metric that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the fermentation fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000161 "biomass balance metric"@en)
 SubClassOf(obo:PREFER_0000161 obo:PREFER_0000023)
 
-# Class: obo:PREFER_0000162 (compound balance metric variable)
+# Class: obo:PREFER_0000162 (compound balance metric)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000162 "A core balance metric variable that represents a quantitative metric derived from compound balance calculations over a process, used to characterize the compound balabce within a bioreactor or fermenter system during the process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000162 "compound balance metric variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000162 "A core balance metric that represents a quantitative metric derived from compound balance calculations over a process, used to characterize the compound balabce within a bioreactor or fermenter system during the fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000162 "compound balance metric"@en)
 SubClassOf(obo:PREFER_0000162 obo:PREFER_0000023)
 
 # Class: obo:PREFER_0000180 (operation mode control variable)
@@ -1970,9 +1989,9 @@ SubClassOf(obo:PREFER_0000188 obo:PREFER_0000185)
 # Class: obo:PREFER_0000189 (feed profile type control variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000189 "The feeding strategies typically found in a fed-batch or continuous fermentation types.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feed profile type")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding profile")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding strategy")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feed profile type")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000189 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000189 "PREFER:0000189")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000189 "The type of feeding profiles applied is process specific.")
@@ -2086,13 +2105,13 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000207 "tissue culture")
 SubClassOf(obo:PREFER_0000207 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000207 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CL_0000000))
 
-# Class: obo:PREFER_0000209 (calculated omics sample variable)
+# Class: obo:PREFER_0000209 (omics sample calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000209 "A process calculated variable that represents a set of values derived from computational analysis or omics data procesing from an offline sample associated with a process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000209 "A precision fermentation process calculated variable that represents a set of values derived from computational analysis or omics data procesing from an offline sample associated with a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "calculated omics offline sample variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "computed omics offline sample variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "computed omics sample variable")
-AnnotationAssertion(rdfs:label obo:PREFER_0000209 "calculated omics sample variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000209 "omics sample calculated variable")
 SubClassOf(obo:PREFER_0000209 obo:PREFER_9000002)
 
 # Class: obo:PREFER_7000000 (mole per carbon mole)
@@ -2159,9 +2178,10 @@ SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "process measurement variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "PREcision FERmentation process measurement variable")
 
-# Class: obo:PREFER_9000002 (process calculated variable)
+# Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process computed variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process calculated variable")
 
 # Class: obo:PREFER_9000004 (unit)
 
