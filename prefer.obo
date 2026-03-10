@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2026-01-08
+data-version: releases/2026-03-10
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: swrl http://www.w3.org/2003/11/swrl# 
@@ -19,11 +19,64 @@ property_value: IAO:0000700 PREFER:9000000
 property_value: IAO:0000700 PREFER:9000001
 property_value: IAO:0000700 PREFER:9000002
 property_value: IAO:0000700 PREFER:9000003
-property_value: owl:versionInfo "2026-01-08" xsd:string
+property_value: owl:versionInfo "2026-03-10" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0001-7258-9596
 property_value: terms:contributor https://orcid.org/0000-0002-9163-7730
 property_value: terms:contributor https://orcid.org/0009-0009-0018-4253
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
+
+[Term]
+id: APOLLO_SV:00000008
+name: software development
+def: "A planned process that has specified output a software product and that involves the creation of source code." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+
+[Term]
+id: APOLLO_SV:00000796
+name: dataset creating
+def: "A planned process that has a data set as its specified output." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+intersection_of: OBI:0000011 ! obsolete planned process
+intersection_of: OBI:0000299 IAO:0000100 ! has specified output data set
+relationship: OBI:0000299 IAO:0000100 ! has specified output data set
+
+[Term]
+id: BAO_0000362
+name: mammalian
+def: "This includes animal models typically used in drug discovery for toxicity or pharmacology studies, such as mouse, rat (mammals)." []
+is_a: BAO_0000510 ! vertebrate
+
+[Term]
+id: BAO_0000509
+name: eukaryote
+def: "This includes fungi, vertebrates and invertebrates. Eukaryotic cells have a well-defined nucleus and membrane enveloped organelles namely, mitochondria, endoplasmic reticulum, golgi apparatus, and lysosomes." []
+is_a: BAO_0000658 ! cellular organisms
+
+[Term]
+id: BAO_0000510
+name: vertebrate
+def: "This includes animals having a vertebral column, and model organisms from this group include the zebrafish, mouse, rat, etc" []
+is_a: BAO_0000659 ! metazoa
+
+[Term]
+id: BAO_0000551
+name: organism
+def: "The organism related to the target / meta-target of the bioassay. It includes both bacterium and eukaryote." []
+is_a: BAO_0003114 ! assay biology component
+
+[Term]
+id: BAO_0000658
+name: cellular organisms
+def: "This includes all organisms which are made up of cells, e.g. bacteria, plants and animals." []
+is_a: BAO_0000551 ! organism
+
+[Term]
+id: BAO_0000659
+name: metazoa
+def: "Metazoa comprises of animals, which are multicellular eukaryotic organisms. This includes those having a vertebral column (e.g. fish, frog, snake, bird, human) and those that do not (e.g. worm, fly, star fish, etc)." []
+is_a: BAO_0000509 ! eukaryote
 
 [Term]
 id: BAO_0003114
@@ -134,6 +187,19 @@ is_a: UBERON:0000061 ! anatomical structure
 relationship: RO:0002162 NCBITaxon:131567 ! in taxon
 
 [Term]
+id: COB:0000035
+disjoint_from: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0003674
+name: molecular_function
+namespace: molecular_function
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+synonym: "molecular function" EXACT []
+is_a: BFO:0000015 ! process
+disjoint_from: GO:0008150 ! biological_process
+
+[Term]
 id: GO:0006091
 name: generation of precursor metabolites and energy
 namespace: biological_process
@@ -145,7 +211,7 @@ is_a: GO:0008152 ! metabolic process
 id: GO:0006113
 name: fermentation
 namespace: biological_process
-comment: PMID:38821505 mentions exceptions regarding organic compounds and ETC. Fermentation sub-processes exclude glycolysis to prevent redundancy with the glycolytic pathway.
+comment: PMID:38821505 mentions exceptions regarding organic compounds and electron transport chain. Fermentation sub-processes exclude glycolysis to prevent redundancy with the glycolytic pathway.
 xref: MetaCyc:Fermentation
 xref: Wikipedia:Fermentation_(biochemistry)
 is_a: GO:0015980 ! energy derivation by oxidation of organic compounds
@@ -161,6 +227,7 @@ synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
 is_a: BFO:0000015 ! process
+relationship: BFO:0000051 GO:0003674 ! has part molecular_function
 
 [Term]
 id: GO:0008152
@@ -196,10 +263,37 @@ def: "A measurement unit label is as a label that is part of a scalar measuremen
 is_a: IAO:0000009 ! datum label
 
 [Term]
+id: IAO:0000005
+name: objective specification
+def: "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved." []
+is_a: IAO:0000033 ! directive information entity
+
+[Term]
+id: IAO:0000007
+name: action specification
+def: "A directive information entity that describes an action the bearer will take." []
+is_a: IAO:0000033 ! directive information entity
+
+[Term]
 id: IAO:0000009
 name: datum label
 def: "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label" []
 is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: IAO:0000010
+name: software
+def: "Software is a plan specification composed of a series of instructions that can be \ninterpreted by or directly executed by a processing unit." []
+is_a: IAO:0000104 ! plan specification
+
+[Term]
+id: IAO:0000015
+name: information carrier
+def: "A quality of an information bearer that imparts the information content" []
+is_a: BFO:0000019 ! quality
+intersection_of: BFO:0000019 ! quality
+intersection_of: RO:0000059 IAO:0000030 ! concretizes information content entity
+relationship: RO:0000059 IAO:0000030 ! concretizes information content entity
 
 [Term]
 id: IAO:0000027
@@ -215,10 +309,59 @@ is_a: BFO:0000031 ! generically dependent continuant
 relationship: IAO:0000136 BFO:0000001 ! is about entity
 
 [Term]
+id: IAO:0000033
+name: directive information entity
+def: "An information content entity whose concretizations indicate to their bearer how to realize them in a process." []
+is_a: IAO:0000030 ! information content entity
+relationship: IAO:0000136 BFO:0000017 ! is about realizable entity
+
+[Term]
+id: IAO:0000037
+name: dot plot
+def: "A dot plot is a report graph which is a graphical representation of data where each data point is represented by a single dot placed on coordinates corresponding to data point values in particular dimensions." []
+is_a: IAO:0000038 ! graph
+
+[Term]
+id: IAO:0000038
+name: graph
+def: "A diagram that presents one or more tuples of information by mapping those tuples in to a two dimensional space in a non arbitrary way." []
+is_a: IAO:0000309 ! diagram
+
+[Term]
+id: IAO:0000064
+name: algorithm
+def: "A plan specification which describes the inputs and output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata." []
+is_a: IAO:0000104 ! plan specification
+
+[Term]
 id: IAO:0000078
 name: curation status specification
 def: "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value." []
 is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: IAO:0000096
+name: source code module
+def: "A source code module is a directive information entity that specifies, using a programming language, some algorithm." []
+is_a: IAO:0000033 ! directive information entity
+
+[Term]
+id: IAO:0000098
+name: data format specification
+def: "A data format specification is the information content borne by the document published defining the specification.\nExample: The ISO document specifying what encompasses an XML document; The instructions in a XSD file" []
+is_a: IAO:0000033 ! directive information entity
+
+[Term]
+id: IAO:0000100
+name: data set
+def: "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets." []
+is_a: IAO:0000027 ! data item
+
+[Term]
+id: IAO:0000101
+name: image
+def: "An image is an affine projection to a two dimensional surface, of measurements of some quality of an entity or entities repeated at regular intervals across a spatial range, where the measurements are represented as color and luminosity on the projected on surface." []
+is_a: IAO:0000308 ! figure
 
 [Term]
 id: IAO:0000102
@@ -227,10 +370,76 @@ def: "Data about an ontology part is a data item about a part of an ontology, fo
 is_a: IAO:0000027 ! data item
 
 [Term]
+id: IAO:0000104
+name: plan specification
+def: "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified." []
+comment: 2/3/2009 Comment from OBI review.\n\nAction specification not well enough specified.\nConditional specification not well enough specified.\nQuestion whether all plan specifications have objective specifications.\n\nRequest that IAO either clarify these or change definitions not to use them
+is_a: IAO:0000033 ! directive information entity
+relationship: BFO:0000051 IAO:0000005 ! has part objective specification
+relationship: BFO:0000051 IAO:0000007 ! has part action specification
+
+[Term]
+id: IAO:0000178
+name: material information bearer
+def: "A material entity in which a concretization of an information content entity inheres." []
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: IAO:0000179
+name: histogram
+def: "A histogram is a report graph which is a statistical description of a\ndistribution in terms of occurrence frequencies of different event classes." []
+is_a: IAO:0000038 ! graph
+
+[Term]
+id: IAO:0000180
+name: heatmap
+def: "A heatmap is a report graph which is a graphical representation of data\nwhere the values taken by a variable(s) are shown as colors in a\ntwo-dimensional map." []
+is_a: IAO:0000038 ! graph
+
+[Term]
+id: IAO:0000183
+name: dendrogram
+def: "A dendrogram is a report graph which is a tree diagram\nfrequently used to illustrate the arrangement of the clusters produced by a\nclustering algorithm." []
+is_a: IAO:0000038 ! graph
+
+[Term]
+id: IAO:0000184
+name: scatter plot
+def: "A scatterplot is a graph which uses Cartesian coordinates to display values for two variables for a set of data. The data is displayed as a collection of points, each having the value of one variable determining the position on the horizontal axis and the value of the other variable determining the position on the vertical axis." []
+is_a: IAO:0000038 ! graph
+
+[Term]
 id: IAO:0000225
 name: obsolescence reason specification
 def: "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value." []
 is_a: IAO:0000102 ! data about an ontology part
+
+[Term]
+id: IAO:0000308
+name: figure
+def: "An information content entity consisting of a two dimensional arrangement of information content entities such that the arrangement itself is about something." []
+is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: IAO:0000309
+name: diagram
+def: "A figure that expresses one or more propositions" []
+is_a: IAO:0000308 ! figure
+
+[Term]
+id: IAO:0000310
+name: document
+def: "A collection of information content entities intended to be understood together as a whole" []
+is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: IAO:0000311
+name: publication
+def: "A document that is the output of a publishing process." []
+comment: Revisit the term in Octorber 2020. Improve the defintion.
+is_a: IAO:0000310 ! document
+intersection_of: IAO:0000310 ! document
+intersection_of: OBI:0000312 IAO:0000444 {all_only="true"} ! is specified output of publishing process
 
 [Term]
 id: IAO:0000409
@@ -239,8 +448,23 @@ def: "A denotator type indicates how a term should be interpreted from an ontolo
 is_a: IAO:0000102 ! data about an ontology part
 
 [Term]
+id: IAO:0000444
+name: publishing process
+def: "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free." []
+is_a: OBI:0000011 ! obsolete planned process
+
+[Term]
+id: IAO:0000572
+name: documenting
+def: "A planned process in which a document is created or added to by including the specified input in it." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+relationship: OBI:0000293 IAO:0000030 ! has specified input information content entity
+relationship: OBI:0000299 IAO:0000310 ! has specified output document
+
+[Term]
 id: NCBITaxon:1
-is_a: OBI:0100026
+is_a: COB:0000022
 
 [Term]
 id: NCBITaxon:10239
@@ -251,11 +475,603 @@ id: NCBITaxon:131567
 is_a: NCBITaxon_Union:0000030 ! cellular organisms or viruses
 
 [Term]
+id: NCBITaxon:9606
+name: Homo sapiens
+is_a: BAO_0000362 ! mammalian
+
+[Term]
 id: NCBITaxon_Union:0000030
 name: cellular organisms or viruses
 is_a: NCBITaxon:1
 union_of: NCBITaxon:10239
 union_of: NCBITaxon:131567
+
+[Term]
+id: OBI:0000011
+name: obsolete planned process
+def: "A process that realizes a plan which is the concretization of a plan specification." []
+is_a: BFO:0000015 ! process
+is_a: oboInOwl:ObsoleteClass ! Obsolete Class
+
+[Term]
+id: OBI:0000014
+name: regulator role
+def: "a regulatory role involved with making and/or enforcing relevant legislation and governmental orders" []
+is_a: OBI:0000017 ! regulatory role
+
+[Term]
+id: OBI:0000017
+name: regulatory role
+def: "a role which inheres in material entities and is realized in the processes of making, enforcing or being defined by legislation or orders issued by a governmental body." []
+is_a: BFO:0000023 ! role
+
+[Term]
+id: OBI:0000018
+name: material supplier role
+def: "a role realized through the process of supplying materials such as animal subjects, reagents or other materials used in an investigation." []
+is_a: OBI:0000947 ! service provider role
+
+[Term]
+id: OBI:0000023
+name: classified data set
+def: "A data set that is produced as the output of a class prediction data transformation and consists of a data set with assigned class labels." []
+is_a: IAO:0000100 ! data set
+relationship: OBI:0000312 OBI:0000663 ! is specified output of class prediction data transformation
+
+[Term]
+id: OBI:0000066
+name: investigation
+def: "a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s)." []
+is_a: COB:0000082
+is_a: OBI:0000011 ! obsolete planned process
+relationship: BFO:0000051 IAO:0000572 ! has part documenting
+relationship: BFO:0000051 OBI:0000338 ! has part drawing a conclusion based on data
+relationship: BFO:0000051 OBI:0000471 ! has part study design execution
+
+[Term]
+id: OBI:0000067
+name: evaluant role
+def: "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role" []
+is_a: BFO:0000023 ! role
+relationship: BFO:0000054 OBI:0000070 {all_only="true"} ! realized in
+relationship: RO:0000052 BFO:0000040 ! characteristic of material entity
+
+[Term]
+id: OBI:0000070
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+disjoint_from: OBI:0000339 ! planning
+disjoint_from: OBI:0200000 ! data transformation
+relationship: BFO:0000055 OBI:0000067 ! realizes evaluant role
+relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+
+[Term]
+id: OBI:0000112
+name: specimen role
+def: "A role borne by a material entity that is obtained during a specimen collection process and that can be realized by performing measurements or observations on the specimen." []
+is_a: BFO:0000023 ! role
+
+[Term]
+id: OBI:0000202
+name: investigation agent role
+def: "A role borne by an entity and that is realized in a process that is part of an investigation in which an objective is achieved. These processes include, among others: planning, overseeing, funding, reviewing." []
+comment: Philly2013: Historically, this role would have been borne only by humans or organizations. However, we now also want to enable investigations run by robot scientists such as ADAM (King et al, Science, 2009)
+is_a: BFO:0000023 ! role
+relationship: BFO:0000054 OBI:0000066 {all_only="true"} ! realized in investigation
+
+[Term]
+id: OBI:0000245
+name: organization
+def: "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members." []
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: OBI:0000272
+name: protocol
+def: "A plan specification which has sufficient level of detail and quantitative information to communicate it between investigation agents, so that different investigation agents will reliably be able to independently reproduce the process." []
+is_a: IAO:0000104 ! plan specification
+
+[Term]
+id: OBI:0000338
+name: drawing a conclusion based on data
+def: "A planned process in which data gathered in an investigation is evaluated in the context of existing knowledge with the objective to generate more general conclusions or to conclude that the data does not allow one to draw general conclusion" []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+relationship: OBI:0000293 IAO:0000027 ! has specified input data item
+relationship: OBI:0000299 OBI:0001909 ! has specified output conclusion based on data
+
+[Term]
+id: OBI:0000339
+name: planning
+def: "a process of creating or modifying a plan specification" []
+
+[Term]
+id: OBI:0000441
+name: assay objective
+def: "an objective specification to determine a specified type of information about an evaluated entity (the material entity bearing evaluant role)" []
+is_a: IAO:0000005 ! objective specification
+
+[Term]
+id: OBI:0000450
+name: regulatory agency
+def: "A regulatory agency is a organization that has responsibility over or for  the legislation (acts and regulations) for a given sector of the government." []
+is_a: OBI:0000245 ! organization
+intersection_of: OBI:0000245 ! organization
+intersection_of: RO:0000087 OBI:0000014 ! has role regulator role
+relationship: RO:0000087 OBI:0000014 ! has role regulator role
+
+[Term]
+id: OBI:0000456
+name: material transformation objective
+def: "an objective specifiction that creates an specific output object from input materials." []
+is_a: IAO:0000005 ! objective specification
+
+[Term]
+id: OBI:0000457
+name: manufacturing
+def: "A planned process with the objective to produce a processed material which will have a function for future use." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+relationship: OBI:0000293 BFO:0000040 ! has specified input material entity
+relationship: OBI:0000299 COB:0000026 ! has specified output
+relationship: OBI:0000417 OBI:0000458 ! achieves_planned_objective manufacturing objective
+
+[Term]
+id: OBI:0000458
+name: manufacturing objective
+def: "is the objective to manufacture a material of a certain function (device)" []
+is_a: OBI:0000456 ! material transformation objective
+
+[Term]
+id: OBI:0000471
+name: study design execution
+def: "a planned process that carries out a study design" []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+
+[Term]
+id: OBI:0000571
+name: manufacturer role
+def: "Manufacturer role is a role which inheres in a person or organization and which is realized by a manufacturing process." []
+is_a: BFO:0000023 ! role
+relationship: BFO:0000054 OBI:0000457 {all_only="true"} ! realized in manufacturing
+
+[Term]
+id: OBI:0000648
+name: clustered data set
+def: "A data set that is produced as the output of a class discovery data transformation and consists of a data set with assigned discovered class labels." []
+is_a: IAO:0000100 ! data set
+relationship: OBI:0000312 OBI:0200175 ! is specified output of class discovery data transformation
+
+[Term]
+id: OBI:0000659
+name: specimen collection process
+def: "A planned process with the objective to obtain a material entity for potential use as an input upon which measurements or observations are performed." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+intersection_of: COB:0000035
+intersection_of: OBI:0000417 OBI:0000684 ! achieves_planned_objective specimen collection objective
+relationship: OBI:0000293 BFO:0000040 ! has specified input material entity
+relationship: OBI:0000299 OBI:0100051 ! has specified output specimen
+relationship: OBI:0000417 OBI:0000684 ! achieves_planned_objective specimen collection objective
+
+[Term]
+id: OBI:0000663
+name: class prediction data transformation
+def: "A class prediction data transformation (sometimes called supervised classification) is a data transformation that has objective class prediction." []
+is_a: OBI:0200000 ! data transformation
+
+[Term]
+id: OBI:0000684
+name: specimen collection objective
+def: "A objective specification that is fulfilled by obtaining a material entity for potential use as an input upon which measurements or observations are performed." []
+is_a: IAO:0000005 ! objective specification
+
+[Term]
+id: OBI:0000700
+name: support vector machine
+def: "A support vector machine is a data transformation with a class prediction objective based on the construction of a separating hyperplane that maximizes the margin between two data sets of vectors in n-dimensional space." []
+is_a: OBI:0000663 ! class prediction data transformation
+relationship: OBI:0000417 OBI:0200179 ! achieves_planned_objective class prediction objective
+
+[Term]
+id: OBI:0000704
+name: decision tree induction objective
+def: "A decision tree induction objective is a data transformation objective in which a tree-like graph of edges and nodes is created and from which the selection of each branch requires that some type of logical decision is made." []
+is_a: OBI:0200166 ! data transformation objective
+
+[Term]
+id: OBI:0000707
+name: decision tree building data transformation
+def: "A decision tree building data transformation is a data transformation that has objective decision tree induction." []
+is_a: OBI:0200000 ! data transformation
+relationship: OBI:0000417 OBI:0000704 ! achieves_planned_objective decision tree induction objective
+
+[Term]
+id: OBI:0000713
+name: GenePattern software
+def: "a software that provides access to more than 100 tools for gene expression analysis, proteomics, SNP analysis and common data processing tasks." []
+is_a: IAO:0000010 ! software
+
+[Term]
+id: OBI:0000726
+name: peak matching
+def: "Peak matching is a data transformation performed on a dataset of a graph of ordered data points (e.g. a spectrum) with the objective of pattern matching local maxima above a noise threshold" []
+is_a: OBI:0200000 ! data transformation
+
+[Term]
+id: OBI:0000727
+name: k-nearest neighbors
+def: "A k-nearest neighbors is a data transformation which achieves a class discovery or partitioning objective, in which an input data object with vector y is assigned to a class label based upon the k closest training data set points to y; where k is the largest value that class label is assigned." []
+is_a: APOLLO_SV:00000796 ! dataset creating
+is_a: OBI:0200171 ! partitioning data transformation
+is_a: OBI:0200175 ! class discovery data transformation
+relationship: OBI:0000299 OBI:0000648 ! has specified output clustered data set
+relationship: OBI:0000417 OBI:0200178 ! achieves_planned_objective class discovery objective
+
+[Term]
+id: OBI:0000749
+name: CART
+def: "A CART (classification and regression trees) is a data transformation method for producing a classification or regression model with a tree-based structure." []
+is_a: OBI:0000707 ! decision tree building data transformation
+
+[Term]
+id: OBI:0000792
+name: statistical model validation
+def: "A data transformation which assesses how the results of a statistical analysis will generalize to an independent data set." []
+is_a: OBI:0200171 ! partitioning data transformation
+relationship: OBI:0000417 OBI:0200188 ! achieves_planned_objective cross validation objective
+
+[Term]
+id: OBI:0000835
+name: manufacturer
+def: "A person or organization that has a manufacturer role." []
+is_a: BFO:0000040 ! material entity
+relationship: RO:0000087 OBI:0000571 ! has role manufacturer role
+
+[Term]
+id: OBI:0000947
+name: service provider role
+def: "is a role which inheres in a person or organization and is realized in in a planned process which provides access to training, materials or execution of protocols for an organization or person" []
+is_a: BFO:0000023 ! role
+relationship: BFO:0000054 COB:0000035 {all_only="true"} ! realized in
+
+[Term]
+id: OBI:0000953
+name: processed specimen
+def: "A specimen that has been intentionally physically modified." []
+is_a: COB:0000026
+is_a: OBI:0100051 ! specimen
+
+[Term]
+id: OBI:0000963
+name: categorical label
+def: "A label that is part of a categorical datum and that indicates the value of the data item on the categorical scale." []
+is_a: IAO:0000009 ! datum label
+
+[Term]
+id: OBI:0001000
+name: questionnaire
+def: "A document with a set of printed or written questions with a choice of answers, devised for the purposes of a survey or statistical study." []
+is_a: IAO:0000310 ! document
+
+[Term]
+id: OBI:0001468
+name: cell specimen
+def: "A specimen primarily composed of a cell or cells collected from a multicellular organism or a cell culture." []
+is_a: OBI:0001479 ! specimen from organism
+intersection_of: OBI:0001479 ! specimen from organism
+intersection_of: BFO:0000051 CL:0000000 ! has part cell
+relationship: BFO:0000051 CL:0000000 ! has part cell
+
+[Term]
+id: OBI:0001479
+name: specimen from organism
+def: "A specimen that derives from an anatomical part or substance arising from an organism. Examples of tissue specimen include tissue, organ, physiological system, blood, or body location (arm)." []
+is_a: OBI:0100051 ! specimen
+
+[Term]
+id: OBI:0001909
+name: conclusion based on data
+def: "An information content entity that is inferred from data." []
+is_a: IAO:0000030 ! information content entity
+relationship: OBI:0000124 IAO:0000027 ! is_supported_by_data data item
+relationship: OBI:0000312 OBI:0000338 ! is specified output of drawing a conclusion based on data
+
+[Term]
+id: OBI:0001930
+name: categorical value specification
+def: "A value specification that is specifies one category out of a fixed number of nominal categories" []
+is_a: OBI:0001933 ! value specification
+
+[Term]
+id: OBI:0001933
+name: value specification
+def: "An information content entity that specifies a value within a classification scheme or on a quantitative scale." []
+is_a: IAO:0000030 ! information content entity
+
+[Term]
+id: OBI:0001977
+name: cytometry assay
+def: "An assay that counts and/or measures characteristics of cells." []
+is_a: OBI:0000070
+
+[Term]
+id: OBI:0002076
+name: collection of specimens
+def: "A material entity that has two or more specimens as its parts." []
+is_a: BFO:0000040 ! material entity
+intersection_of: BFO:0000040 ! material entity
+intersection_of: RO:0002351 OBI:0100051 {all_only="true"} ! has member specimen
+
+[Term]
+id: OBI:0002205
+name: histologic grade according to AJCC 7th edition
+def: "A categorical value specification that is a histologic grade assigned to a tumor slide specimen according to the American Joint Committee on Cancer (AJCC) 7th Edition grading system." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002210
+name: histologic grade according to the Fuhrman Nuclear Grading System
+def: "A categorical value specification that is a histologic grade assigned to a tumor slide specimen according to the Fuhrman Nuclear Grading System." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002215
+name: histologic grade for ovarian tumor
+def: "A categorical value specification that is a histologic grade assigned to a ovarian tumor." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002216
+name: histologic grade for ovarian tumor according to a two-tier grading system
+def: "A histologic grade for ovarian tumor that is from a two-tier histological classification of tumors." []
+is_a: OBI:0002215 ! histologic grade for ovarian tumor
+
+[Term]
+id: OBI:0002219
+name: histologic grade for ovarian tumor according to the World Health Organization
+def: "A histologic grade for ovarian tumor that is from a histological classification by the World Health Organization (WHO)." []
+is_a: OBI:0002215 ! histologic grade for ovarian tumor
+
+[Term]
+id: OBI:0002224
+name: pathologic primary tumor stage for colon and rectum according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of colorectal cancer following the rules of the TNM American Joint Committee on Cancer (AJCC) version 7 classification system as they pertain to staging of the primary tumor. TNM pathologic primary tumor findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002232
+name: pathologic primary tumor stage for lung according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of lung cancer following the rules of the TNM American Joint Committee on Cancer (AJCC) version 7 classification system as they pertain to staging of the primary tumor. TNM pathologic primary tumor findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002243
+name: pathologic primary tumor stage for kidney according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of renal cancer following the rules of the TNM AJCC v7 classification system as they pertain to staging of the primary tumor. TNM pathologic primary tumor findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002256
+name: pathologic primary tumor stage for ovary according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of ovarian cancer following the rules of the TNM AJCC v7 classification system as they pertain to staging of the primary tumor. TNM pathologic primary tumor findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002270
+name: pathologic lymph node stage for colon and rectum according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of colorectal cancer following the rules of the TNM AJCC v7 classification system as they pertain to staging of regional lymph nodes." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002279
+name: pathologic lymph node stage for lung according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of lung cancer following the rules of the TNM AJCC v7 classification system as they pertain to staging of regional lymph nodes." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002284
+name: pathologic lymph node stage for kidney according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of renal cancer following the rules of the TNM AJCC v7 classification system as they pertain to staging of regional lymph nodes." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002287
+name: pathologic lymph node stage for ovary according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of ovarian cancer following the rules of the TNM AJCC v7 classification system as they pertain to staging of regional lymph nodes." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002290
+name: pathologic distant metastases stage for colon according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of colon cancer following the rules of the TNM AJCC v7 classification system as they pertain to distant metastases. TNM pathologic distant metastasis findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002298
+name: pathologic distant metastases stage for lung according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of lung cancer following the rules of the TNM AJCC v7 classification system as they pertain to distant metastases. TNM pathologic distant metastasis findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002306
+name: pathologic distant metastases stage for kidney according to AJCC 7th edition
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of renal cancer following the rules of the TNM AJCC v7 classification system as they pertain to distant metastases. TNM pathologic distant metastasis findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002310
+name: pathologic distant metastases stage for ovary according to AJCC 7th edition
+def: "A categorical value specification that is a  pathologic finding about one or more characteristics of ovarian cancer following the rules of the TNM AJCC v7 classification system as they pertain to distant metastases. TNM pathologic distant metastasis findings are based on clinical findings supplemented by histopathologic examination of one or more tissue specimens acquired during surgery." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002314
+name: clinical tumor stage group according to AJCC 7th edition
+def: "A categorical value specification that is an assessment of the stage of a cancer according to the American Joint Committee on Cancer (AJCC) v7 staging systems." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002326
+name: International Federation of Gynecology and Obstetrics cervical cancer stage value specification
+def: "A categorical value specification that is an assessment of the stage of a gynecologic cancer according to the International Federation of Gynecology and Obstetrics (FIGO) staging systems." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002341
+name: International Federation of Gynecology and Obstetrics ovarian cancer stage value specification
+def: "A categorical value specification that is a pathologic finding about one or more characteristics of ovarian cancer following the rules of the FIGO classification system." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002356
+name: performance status value specification
+def: "A categorical value specification that is an assessment of a participant's performance status (general well-being and activities of daily life)." []
+is_a: OBI:0001930 ! categorical value specification
+
+[Term]
+id: OBI:0002357
+name: Eastern Cooperative Oncology Group score value specification
+def: "A performance status value specification designed by the Eastern Cooperative Oncology Group to assess disease progression and its affect on the daily living abilities of the patient." []
+is_a: OBI:0002356 ! performance status value specification
+
+[Term]
+id: OBI:0002363
+name: Karnofsky score vaue specification
+def: "A performance status value specification designed for classifying patients 16 years of age or older by their functional impairment." []
+is_a: OBI:0002356 ! performance status value specification
+
+[Term]
+id: OBI:0002989
+name: material supplier
+def: "A person or organization that provides material supplies to other people or organizations." []
+is_a: BFO:0000040 ! material entity
+relationship: RO:0000087 OBI:0000018 ! has role material supplier role
+
+[Term]
+id: OBI:0100051
+name: specimen
+def: "A material entity that is collected for potential use as an input upon which measurements or observations are performed." []
+is_a: BFO:0000040 ! material entity
+intersection_of: BFO:0000040 ! material entity
+intersection_of: RO:0000087 OBI:0000112 ! has role specimen role
+relationship: RO:0000087 OBI:0000112 ! has role specimen role
+
+[Term]
+id: OBI:0200000
+name: data transformation
+def: "A completely executed planned process that produces output data from input data." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+relationship: OBI:0000293 IAO:0000027 {all_only="true"} ! has specified input data item
+relationship: OBI:0000417 OBI:0200166 ! achieves_planned_objective data transformation objective
+
+[Term]
+id: OBI:0200033
+name: leave one out cross validation method
+def: "is a data transformation :  leave-one-out cross-validation (LOOCV) involves using a single observation from the original sample as the validation data, and the remaining observations as the training data. This is repeated such that each observation in the sample is used once as the validation data" []
+is_a: OBI:0000792 ! statistical model validation
+
+[Term]
+id: OBI:0200041
+name: k-means clustering
+def: "A k-means clustering is a data transformation which achieves a class discovery or partitioning objective, which takes as input a collection of objects (represented as points in multidimensional space) and which partitions them into a specified number k of clusters. The algorithm attempts to find the centers of natural clusters in the data. The most common form of the algorithm starts by partitioning the input points into k initial sets, either at random or using some heuristic data. It then calculates the mean point, or centroid, of each set. It constructs a new partition by associating each point with the closest centroid. Then the centroids are recalculated for the new clusters, and the algorithm repeated by alternate applications of these two steps until convergence, which is obtained when the points no longer switch clusters (or alternatively centroids are no longer changed)." []
+is_a: APOLLO_SV:00000796 ! dataset creating
+is_a: OBI:0200171 ! partitioning data transformation
+is_a: OBI:0200175 ! class discovery data transformation
+relationship: OBI:0000299 OBI:0000648 ! has specified output clustered data set
+relationship: OBI:0000417 OBI:0200178 ! achieves_planned_objective class discovery objective
+
+[Term]
+id: OBI:0200042
+name: hierarchical clustering
+def: "A hierarchical clustering is a data transformation which achieves a class discovery objective, which takes as input data item and builds a hierarchy of clusters. The traditional representation of this hierarchy is a tree (visualized by a dendrogram), with the individual input objects at one end (leaves) and a single cluster containing every object at the other (root)." []
+is_a: APOLLO_SV:00000796 ! dataset creating
+is_a: OBI:0200175 ! class discovery data transformation
+relationship: OBI:0000299 OBI:0000648 ! has specified output clustered data set
+relationship: OBI:0000417 OBI:0200178 ! achieves_planned_objective class discovery objective
+
+[Term]
+id: OBI:0200050
+name: dimensionality reduction
+def: "A dimensionality reduction is data partitioning which transforms each input m-dimensional vector (x_1, x_2, ..., x_m) into an output n-dimensional vector (y_1, y_2, ..., y_n), where n is smaller than m." []
+is_a: APOLLO_SV:00000796 ! dataset creating
+is_a: OBI:0200175 ! class discovery data transformation
+relationship: OBI:0000299 OBI:0000648 ! has specified output clustered data set
+relationship: OBI:0000417 OBI:0200178 ! achieves_planned_objective class discovery objective
+
+[Term]
+id: OBI:0200051
+name: principal components analysis dimensionality reduction
+def: "A principal components analysis dimensionality reduction is a dimensionality reduction achieved by applying principal components analysis and by keeping low-order principal components and excluding higher-order ones." []
+is_a: OBI:0200050 ! dimensionality reduction
+
+[Term]
+id: OBI:0200111
+name: data visualization
+def: "A planned process with the objective to graphically represent some data by inputing the data and outputting images, diagrams or animations." []
+is_a: COB:0000035
+is_a: OBI:0000011 ! obsolete planned process
+relationship: OBI:0000293 IAO:0000027 ! has specified input data item
+relationship: OBI:0000293 IAO:0000027 {all_only="true"} ! has specified input data item
+
+[Term]
+id: OBI:0200166
+name: data transformation objective
+def: "An objective specification to transformation input data into output data" []
+is_a: IAO:0000005 ! objective specification
+
+[Term]
+id: OBI:0200171
+name: partitioning data transformation
+def: "A partitioning data transformation is a data transformation that has objective partitioning." []
+is_a: OBI:0200000 ! data transformation
+relationship: OBI:0000417 OBI:0200172 ! achieves_planned_objective partitioning objective
+
+[Term]
+id: OBI:0200172
+name: partitioning objective
+def: "A partitioning objective is a data transformation objective where the aim is to generate a collection of disjoint non-empty subsets whose union equals a non-empty input set." []
+is_a: OBI:0200166 ! data transformation objective
+
+[Term]
+id: OBI:0200175
+name: class discovery data transformation
+def: "A class discovery data transformation (sometimes called unsupervised classification) is a data transformation that has objective class discovery." []
+is_a: OBI:0200000 ! data transformation
+
+[Term]
+id: OBI:0200178
+name: class discovery objective
+def: "A class discovery objective (sometimes called unsupervised classification) is a data transformation objective where the aim is to organize input data  (typically vectors of attributes) into classes, where the number of classes and their specifications are not known a priori. Depending on usage, the class assignment can be definite or probabilistic." []
+is_a: OBI:0200166 ! data transformation objective
+
+[Term]
+id: OBI:0200179
+name: class prediction objective
+def: "A class prediction objective (sometimes called supervised classification) is a data transformation objective where the aim is to create a predictor from training data through a machine learning technique. The training data consist of pairs of objects (typically vectors of attributes) and\nclass labels for these objects. The resulting predictor can be used to attach class labels to any valid novel input object. Depending on usage, the prediction can be definite or probabilistic. A classification is learned from the training data and can then be tested on test data." []
+is_a: OBI:0200166 ! data transformation objective
+
+[Term]
+id: OBI:0200188
+name: cross validation objective
+def: "A cross validation objective is a data transformation objective in which the aim is to partition a sample of data into subsets such that the analysis is initially performed on a single subset, while the other subset(s) are retained for subsequent use in confirming and validating the initial analysis." []
+is_a: OBI:0200172 ! partitioning objective
+
+[Term]
+id: OBI:0200190
+name: clustered data visualization
+def: "A data visualization which has input of a clustered data set and produces an output of a report graph which is capable of rendering data of this type." []
+is_a: OBI:0200111 ! data visualization
+relationship: OBI:0000293 OBI:0000648 {all_only="true"} ! has specified input clustered data set
+
+[Term]
+id: OBI:0500000
+name: study design
+def: "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution." []
+is_a: IAO:0000104 ! plan specification
+relationship: BFO:0000051 OBI:0000272 ! has part protocol
 
 [Term]
 id: PATO:0000001
@@ -312,7 +1128,8 @@ is_a: PATO:0000001 ! quality
 [Term]
 id: PREFER:0000000
 name: process rate metric
-def: "A key process metric that represents a quantitative metric, describing rates or fluxes associated, for instance, wiht growth, product formation, substrate consumption, or respiration, during the process." []
+def: "A key process metric that represents a quantitative metric, describing rates or fluxes associated, for instance, wiht growth, product formation, substrate consumption, or respiration, during a fermentation process." []
+synonym: "key precision fermentation process rate metric" EXACT []
 is_a: PREFER:0000078 ! key process metric
 
 [Term]
@@ -321,7 +1138,7 @@ name: fermentation project
 namespace: precision_fermentation
 def: "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments." []
 synonym: "project" EXACT []
-xref: OBI:0000066
+is_a: OBI:0000066 ! investigation
 is_a: PREFER:9000003 ! precision fermentation process
 
 [Term]
@@ -330,7 +1147,7 @@ name: fermentation experiment
 namespace: precision_fermentation
 def: "A precision fermentation process that consists of sets of fermentation runs conducted within the same project, all following a shared experimental approach or protocol." []
 synonym: "experiment" EXACT []
-xref: OBI:0000070
+is_a: OBI:0000070
 is_a: PREFER:9000003 ! precision fermentation process
 relationship: BFO:0000050 PREFER:0000002 ! part of fermentation project
 
@@ -352,17 +1169,17 @@ relationship: PREFER:8000017 CHEBI:24431 ! has measured compound chemical entity
 
 [Term]
 id: PREFER:0000005
-name: alkalinity cultivation condition
+name: alkaline cultivation condition
 def: "A cultivation condition that represents the alkalinity related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the pH and buffering state of the cultivation environment." []
 is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000006
 name: gravimetric feed rate control variable
-def: "A process control variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000009 ! feed process control variable
+def: "A process control variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a fermentation process." []
+is_a: PREFER:0000009 ! feed control variable
 relationship: BAO_0002874 uom:g.h-1 ! gram per hour
-relationship: PREFER:8000020 PREFER:0000075 ! setpoint of gravimetric feed rate
+relationship: PREFER:8000020 PREFER:0000075 ! setpoint of gravimetric feed rate measurement variable
 
 [Term]
 id: PREFER:0000007
@@ -382,10 +1199,11 @@ relationship: BFO:0000051 PREFER:0000015 ! has part operational parameter
 
 [Term]
 id: PREFER:0000009
-name: feed process control variable
-def: "A process control variable that defines the feed control of a bioreactor or fermentation system during the process." []
+name: feed control variable
+def: "A precision fermentation process control variable that defines the feed control of a bioreactor or fermentation system during the fermentation process." []
+synonym: "precision fermentation process feed control variable" EXACT []
 is_a: PREFER:0000037 ! feed medium cultivation condition
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 
 [Term]
 id: PREFER:0000010
@@ -425,10 +1243,11 @@ is_a: CL:0000000 ! cell
 
 [Term]
 id: PREFER:0000013
-name: taxon
+name: taxon quality
 namespace: precision_fermentation
 def: "A quality of one or more biological organisms, as well as of parts of organism pertaining to a biological taxon." [PMID:18586729]
-xref: NCBITaxon:1
+synonym: "taxon" BROAD [NCBITaxon:1]
+xref: http://purl.org/biotop/btl2.owl#TaxonQuality
 is_a: BFO:0000019 ! quality
 
 [Term]
@@ -436,12 +1255,13 @@ id: PREFER:0000014
 name: bioreactor
 namespace: precision_fermentation
 def: "A device or system that is a material entity designed to support the run of a biological and biochemical process by controlling regulated environmental and cultivation conditions, such as temperature, agitation or nutrient injection at different scales, including lab-scale, pilot plant, and industrial-scale systems." [OBI:0001046]
+comment: While this term is equivalent to OBI:0001046, PREFER has specific modelling that makes it more difficult to maintain if used directly. A decision was hence made to create this new term in PREFER and map it to OBI:0001046 instead.
 synonym: "bioreactor system" EXACT []
 synonym: "fermenter" NARROW [MSIO:0000167]
 xref: OBI:0001046
 is_a: BFO:0000040 ! material entity
 relationship: PREFER:8000008 PREFER:0000185 ! has bioreactor scale bioreactor scale
-relationship: PREFER:8000018 PREFER:0000180 ! has operational mode operation mode
+relationship: PREFER:8000018 PREFER:0000180 ! has operational mode operation mode control variable
 
 [Term]
 id: PREFER:0000015
@@ -482,7 +1302,8 @@ is_a: BFO:0000040 ! material entity
 id: PREFER:0000019
 name: temperature setpoint control variable
 namespace: precision_fermentation
-def: "A process control variable that represents the target temperature value to be regulated and maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process control variable that represents the target temperature value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process temperature setpoint control variable" EXACT []
 synonym: "target temperature" EXACT []
 synonym: "target temperature value" EXACT []
 synonym: "target Tº" EXACT []
@@ -493,25 +1314,26 @@ synonym: "temperature setting" EXACT [AFO_/result#AFR:0001255]
 synonym: "Tº setpoint" EXACT []
 is_a: PREFER:0000007 ! temperature cultivation condition
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
-relationship: PREFER:8000020 PREFER:0000041 ! setpoint of temperature measurement
+relationship: PREFER:8000020 PREFER:0000041 ! setpoint of temperature measurement variable
 
 [Term]
 id: PREFER:0000020
 name: pH setpoint control variable
 namespace: precision_fermentation
-def: "A process control variable that represents the target ph value to be regulated and maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process control variable that represents the target pH value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process." []
 synonym: "pH control setpoint" EXACT []
 synonym: "ph control setpoint" EXACT []
 synonym: "ph setpoint" EXACT []
+synonym: "precision fermentation process pH setpoint control variable" EXACT []
 synonym: "target pH" EXACT []
 synonym: "target ph" EXACT []
-is_a: PREFER:0000005 ! alkalinity cultivation condition
+is_a: PREFER:0000005 ! alkaline cultivation condition
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 relationship: BAO_0002874 uom:%5BpH%5D ! pH based unit
-relationship: PREFER:8000020 PREFER:0000040 ! setpoint of pH measurement
+relationship: PREFER:8000020 PREFER:0000040 ! setpoint of pH measurement variable
 
 [Term]
 id: PREFER:0000021
@@ -532,9 +1354,9 @@ is_a: BFO:0000040 ! material entity
 [Term]
 id: PREFER:0000023
 name: core balance metric
-def: "A calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the process." []
+def: "A precision fermentation process calculated variable that represents a quantitative metric derived from balance calculations over a process, used to characterize the balance of inputs and outputs within a bioreactor or fermenter system during the fermentation process." []
 synonym: "elemental balance metric" EXACT []
-is_a: PREFER:9000002 ! process calculated variable
+is_a: PREFER:9000002 ! precision fermentation process calculated variable
 
 [Term]
 id: PREFER:0000024
@@ -546,48 +1368,55 @@ is_a: PREFER:0000008 ! cultivation condition
 id: PREFER:0000025
 name: dissolved oxygen setpoint control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the target dissolved oxygen value to be regulated and maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process dissolved oxygen control variable that represents the target dissolved oxygen value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process." []
 synonym: "dissolved oxygen setpoint" EXACT []
 synonym: "DO setpoint" EXACT OMO:0003012 []
+synonym: "precision fermentation process dissolved oxygen setpoint control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 relationship: BAO_0002874 uom:%25 ! percent
-relationship: PREFER:8000020 PREFER:0000039 ! setpoint of dissolved oxygen measurement
+relationship: PREFER:8000020 PREFER:0000039 ! setpoint of dissolved oxygen measurement variable
 
 [Term]
 id: PREFER:0000026
 name: dissolved oxygen cascade level control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the cascade control system linked to a parameter to achieve the desired dissolved oxygen level within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process dissolved oxygen control variable that represents the cascade control system linked to a parameter to achieve the desired dissolved oxygen level within a bioreactor or fermentation system during a fermentation process." []
 comment: For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter.
-synonym: "dissolved oxygen control strategy" EXACT []
+synonym: "dissolved oxygen control strategy variable" EXACT []
 synonym: "DO cascade level control variable" EXACT []
+synonym: "precision fermentation process dissolved oxygen cascade level control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 
 [Term]
 id: PREFER:0000027
 name: maximum stirring setpoint control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the target maximum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process dissolved oxygen control variable that represents the target maximum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process." []
 synonym: "maximum shaking speed setpoint" EXACT []
+synonym: "maximum shaking speed setpoint control variable" EXACT []
 synonym: "maximum stirring speed setpoint" EXACT []
+synonym: "precision fermentation process maximum stirring setpoint control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 relationship: BAO_0002874 PREFER:7000008 ! revolution per minute
-relationship: PREFER:8000020 PREFER:0000054 ! setpoint of stirrer speed measurement
+relationship: PREFER:8000020 PREFER:0000054 ! setpoint of stirrer speed measurement variable
 
 [Term]
 id: PREFER:0000028
 name: minimum stirring setpoint control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the target minimum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a process." []
-synonym: "minimum shaking speed setpoint" EXACT []
-synonym: "minimum stirring speed setpoint" EXACT []
+def: "A precision fermentation process dissolved oxygen control variable that represents the target minimum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process." []
+synonym: "minimum shaking speed setpoin" EXACT []
+synonym: "minimum shaking speed setpoint control variable" EXACT []
+synonym: "minimum stirring speed setpoin" EXACT []
+synonym: "minimum stirring speed setpoint control variable" EXACT []
+synonym: "precision fermentation process minimum aeration setpoint control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 relationship: BAO_0002874 PREFER:7000008 ! revolution per minute
-relationship: PREFER:8000020 PREFER:0000054 ! setpoint of stirrer speed measurement
+relationship: PREFER:8000020 PREFER:0000054 ! setpoint of stirrer speed measurement variable
 
 [Term]
 id: PREFER:0000029
@@ -597,33 +1426,36 @@ is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000030
-name: aeration gas type
+name: aeration gas type control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the type of gas used for aeration in a bioreactor or fermentation system during a process, which may include aire or specific gases such as pure oxygen, nitrogen or carbon dioxide." []
+def: "A precision fermentation process dissolved oxygen control variable that represents the type of gas used for aeration in a bioreactor or fermentation system during a fermentation process, which may include aire or specific gases such as pure oxygen, nitrogen or carbon dioxide." []
+synonym: "precision fermentation process aeration gas type control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 
 [Term]
 id: PREFER:0000031
 name: maximum aeration setpoint control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the target maximum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process dissolved oxygen control variable that represents the target maximum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process." []
 synonym: "maximum aeration setpoint" EXACT []
+synonym: "precision fermentation process maximum aeration setpoint control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 relationship: BAO_0002874 uom:L.min-1 ! liter per minute
-relationship: PREFER:8000020 PREFER:0000055 ! setpoint of air flow rate
+relationship: PREFER:8000020 PREFER:0000055 ! setpoint of air flow rate measurement variable
 
 [Term]
 id: PREFER:0000032
 name: minimum aeration setpoint control variable
 namespace: precision_fermentation
-def: "A dissolved oxygen process control variable that represents the target minimum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process dissolved oxygen control variable that represents the target minimum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process." []
 synonym: "minimum aeration setpoint" EXACT []
+synonym: "precision fermentation process minimum aeration setpoint control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 relationship: BAO_0002874 uom:L.min-1 ! liter per minute
-relationship: PREFER:8000020 PREFER:0000055 ! setpoint of air flow rate
+relationship: PREFER:8000020 PREFER:0000055 ! setpoint of air flow rate measurement variable
 
 [Term]
 id: PREFER:0000033
@@ -635,35 +1467,38 @@ is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000034
-name: starting optical density measurement
+name: starting optical density measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the initial optical density (OD) of the fermentation culture from a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the initial optical density (OD) of the fermentation culture from a bioreactor or fermentation system during a fermentation process." []
 comment: The starting OD measurement is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600nm or 900nm wavelength) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume).
-synonym: "starting OD" EXACT OMO:0003012 []
+synonym: "precision fermentation process starting optical density measurement variable" EXACT []
+synonym: "starting OD measurement variable" EXACT OMO:0003012 []
 is_a: PREFER:0000045 ! optical density cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000006 ! unit of optical density
 
 [Term]
 id: PREFER:0000035
-name: final seed optical density measurement
+name: final seed optical density measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the cell density of the seed culture \nfor the process at the time it is inoculated  to the bioreactor or fermentation system." []
-synonym: "final seed OD measurement" EXACT []
+def: "A precision fermentation process measurement variable that indicates the cell density of the seed culture for the process at the time it is inoculated  to the bioreactor or fermentation system." []
+synonym: "final seed OD measurement variable" EXACT []
+synonym: "precision fermentation project final seed optical density measurement variable" EXACT []
 is_a: PREFER:0000073 ! seed cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000006 ! unit of optical density
 
 [Term]
 id: PREFER:0000036
-name: initial culture volume measurement
+name: initial culture volume measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the total volume of the culture of a bioreactor or fermentation system, at the beginning of the process, representing the sum of fermentation medium and seed culture." []
-synonym: "initial production culture volume" EXACT []
-synonym: "starting culture volume" EXACT []
-synonym: "starting production culture volume" EXACT []
+def: "A precision fermentation process measurement variable that indicates the total volume of the culture of a bioreactor or fermentation system, at the beginning of the process, representing the sum of fermentation medium and seed culture." []
+synonym: "initial production culture volume measurement variable" EXACT []
+synonym: "precision fermentation process initial culture volume measurement variable" EXACT []
+synonym: "starting culture volume measurement variable" EXACT []
+synonym: "starting production culture volume measurement variable" EXACT []
 is_a: PREFER:0000046 ! volume cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
@@ -672,75 +1507,82 @@ name: feed medium cultivation condition
 namespace: precision_fermentation
 def: "A fermentation medium cultivation condition that represents the feed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the addition and state of fresh feed media within the cultivation environment." []
 is_a: PREFER:0000024 ! fermentation medium cultivation condition
-relationship: PREFER:8000013 PREFER:0000189 ! has feed profile type feed profile type
+relationship: PREFER:8000013 PREFER:0000189 ! has feed profile type feed profile type control variable
 
 [Term]
 id: PREFER:0000038
-name: batch medium pH measurement
+name: batch medium pH measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the negative decadic logarithm of the hydrogen ion concentration in the fermentation medium of a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the negative decadic logarithm of the hydrogen ion concentration in the batch fermentation medium of a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation project batch medium pH measurement variable" EXACT []
 is_a: PREFER:0000024 ! fermentation medium cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:%5BpH%5D ! pH based unit
 
 [Term]
 id: PREFER:0000039
-name: dissolved oxygen measurement
+name: dissolved oxygen measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the concentration of oxygen molecules (O₂) dissolved in the fermentation medium of a bioreactor or fermentation system during a process." []
-synonym: "DO measurement" EXACT OMO:0003012 []
+def: "A precision fermentation process measurement variable that indicates the concentration of oxygen molecules (O₂) dissolved in the fermentation medium of a bioreactor or fermentation system during a fermentation process." []
+synonym: "DO measurement variable" EXACT OMO:0003012 []
+synonym: "precision fermentation process dissolved oxygen measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000007 ! dimensionless unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000040
-name: pH measurement
+name: pH measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the potential of hydrogen of the production culture from a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the potential of hydrogen of the production culture from a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process pH measurement variable" EXACT []
 xref: NCIT:C205029
-is_a: PREFER:0000005 ! alkalinity cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:0000005 ! alkaline cultivation condition
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:%5BpH%5D ! pH based unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000041
-name: temperature measurement
+name: temperature measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the temerature of the production culture from a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the temerature of the production culture from a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process temperature measurement variable" EXACT []
 is_a: PREFER:0000007 ! temperature cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000042
-name: pressure measurement
+name: pressure measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the pressure in a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the pressure in a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process pressure measurement variable" EXACT []
 is_a: PREFER:0000029 ! pressure cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000043
-name: volume measurement
+name: volume measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the total volume of aqueous solution in the bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the total volume of aqueous solution in the bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process volume measurement variable" EXACT []
 is_a: PREFER:0000046 ! volume cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000044
-name: offline sample mass compound measurement
+name: offline sample mass compound measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the mass of a compound present in a withdrawn process sample from a bioreactor or fermentation system during a process, used to quantify the amount of biomass, product, and other compounds." []
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the mass of a compound present in a withdrawn process sample from a bioreactor or fermentation system during a fermentation process, used to quantify the amount of biomass, product, and other compounds." []
+synonym: "precision fermentation process offline sample mass compound measurement variable" EXACT []
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000154 ! has data acquisition quality offline data acquisition
 
@@ -758,241 +1600,259 @@ is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000047
-name: acid volume measurement
+name: acid volume measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the volume of the acidic solution added to a bioreactor or fermenetation system to maintain the pH of cultivation at a setpoint or desired value during a process." []
-synonym: "acid added volume" EXACT []
-synonym: "acid consumption volume" EXACT []
-synonym: "acid solution volume" EXACT []
-synonym: "acid used volume" EXACT []
-is_a: PREFER:0000005 ! alkalinity cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the volume of the acidic solution added to a bioreactor or fermenetation system to maintain the pH of cultivation at a setpoint or desired value during a fermentation process." []
+synonym: "acid added volume measurement variable" EXACT []
+synonym: "acid consumption volume measurement variable" EXACT []
+synonym: "acid solution volume measurement variable" EXACT []
+synonym: "acid used volume measurement variable" EXACT []
+synonym: "precision fermentation process acid volume measurement variable" EXACT []
+is_a: PREFER:0000005 ! alkaline cultivation condition
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000048
-name: base volume measurement
+name: base volume measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the volume of the basic solution added to a bioreactor or fermentation system to maintain the pH of cultivation at a setpoint or desired value during a process." []
-synonym: "base added volume" EXACT []
-synonym: "base consumption volume" EXACT []
-synonym: "base solution volume" EXACT []
-synonym: "base used volume" EXACT []
-is_a: PREFER:0000005 ! alkalinity cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the volume of the basic solution added to a bioreactor or fermentation system to maintain the pH of cultivation at a setpoint or desired value during a fermentation process." []
+synonym: "base added volume measurement variable" EXACT []
+synonym: "base consumption volume measurement variable" EXACT []
+synonym: "base solution volume measurement variable" EXACT []
+synonym: "base used volume measurement variable" EXACT []
+synonym: "precision fermentation process base volume measurement variable" EXACT []
+is_a: PREFER:0000005 ! alkaline cultivation condition
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000049
-name: acid rate
+name: acid rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the flow rate at which an acid solution is added to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000005 ! alkalinity cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the flow rate at which an acid solution is added to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process acid rate measurement variable" EXACT []
+is_a: PREFER:0000005 ! alkaline cultivation condition
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.h-1 ! liters per hour
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000050
-name: base rate
+name: base rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the flow rate at which the base solution is added to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000005 ! alkalinity cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the flow rate at which the base solution is added to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process base rate measurement variable" EXACT []
+is_a: PREFER:0000005 ! alkaline cultivation condition
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.h-1 ! liters per hour
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000051
-name: feed amount
+name: feed amount measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the quantity of feed added to a bioreactor or fermentation system, at a certain time point, during a process." []
+def: "A precision fermentation process measurement variable that indicates the quantity of feed added to a bioreactor or fermentation system, during a fermentation process." []
+synonym: "precision fermentation process feed amount measurement variable" EXACT []
 is_a: PREFER:0000037 ! feed medium cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000052
-name: feed volume measurement
+name: feed volume measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the volume of the feed solution added to a bioreactor or fermentation system during a process, at a certain time point." []
+def: "A precision fermentation process measurement variable that indicates the volume of the feed solution added to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process feed volume measurement variable" EXACT []
 is_a: PREFER:0000037 ! feed medium cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000053
-name: volumetric feed rate
+name: volumetric feed rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process volumetric feed rate measurement variable" EXACT []
 is_a: PREFER:0000037 ! feed medium cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.h-1 ! liters per hour
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000054
-name: stirrer speed measurement
+name: stirrer speed measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the speed at which the impeller shaft of a bioreactor or fermentation system shaft rotates during a process." []
+def: "A precision fermentation process measurement variable that indicates the speed at which the impeller shaft of a bioreactor or fermentation system shaft rotates during a fermentation process." []
+synonym: "precision fermentation process stirrer speed measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000008 ! revolution per minute
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000055
-name: air flow rate
+name: air flow rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the rate at which air is supplied to a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the rate at which air is supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process air flow rate measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.min-1 ! liter per minute
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000056
-name: nitrogen flow rate
+name: nitrogen flow rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the rate at which nitrogen, in form of a ammonium solution, is supplied to a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the rate at which nitrogen, in form of a ammonium solution, is supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process nitrogen flow rate measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.min-1 ! liter per minute
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000057
-name: oxygen flow rate
+name: oxygen flow rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the rate at which oxygen is supplied to a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process measurement variable that indicates the rate at which oxygen is supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process oxygen flow rate measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.min-1 ! liter per minute
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000058
-name: inlet air oxygen measurement
+name: inlet air oxygen measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the percentage of oxygen in the gas mixture that is being supplied to a bioreactor or fermentation system during a process." []
-synonym: "inlet air o2" EXACT []
+def: "A precision fermentation process measurement variable that indicates the percentage of oxygen in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "inlet air o2 measurement variable" EXACT []
+synonym: "precision fermentation project inlet air oxygen measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:%25 ! percent
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000059
-name: inlet air carbon dioxide measurement
+name: inlet air carbon dioxide measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the percentage of carbon dioxide in the gas mixture that is being supplied to a bioreactor or fermentation system during a process." []
-synonym: "inlet air co2" EXACT []
+def: "A precision fermentation process measurement variable that indicates the percentage of carbon dioxide in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "inlet air co2 measurement variable" EXACT []
+synonym: "precision fermentation process inlet air carbon dioxide measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:%25 ! percent
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000060
-name: optical density measurement
+name: optical density measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the absorbance of the culture's turbidity at a specified wavelength of a bioreactor or fermentation system during a process." []
-synonym: "OD measurement" EXACT OMO:0003012 []
+def: "A precision fermentation process measurement variable that indicates the absorbance of the culture's turbidity at a specified wavelength of a bioreactor or fermentation system during a fermentation process." []
+synonym: "OD measurement variable" EXACT OMO:0003012 []
+synonym: "precision fermentation process optical density measurement variable" EXACT []
 xref: NCIT:C85776
 is_a: PREFER:0000045 ! optical density cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000006 ! unit of optical density
 
 [Term]
 id: PREFER:0000061
-name: oxygen uptake rate
+name: oxygen uptake rate variable
 namespace: precision_fermentation
-def: "A respiratory metric variable that represents the rate at which oxygen is consumed by the cell culture from a bioreactor or fermentation system during the process." []
+def: "A respiratory rate metric that represents the rate at which oxygen is consumed by the cell culture from a bioreactor or fermentation system during a fermentation process." []
 comment: Biorespiration. Dynamic respiratory metric
-synonym: "o2 uptake rate" EXACT []
-synonym: "OUR" EXACT OMO:0003012 []
-is_a: PREFER:0000158 ! respiratory metric variable
+synonym: "o2 uptake rate variable" EXACT []
+synonym: "OUR variable" EXACT OMO:0003012 []
+is_a: PREFER:0000158 ! respiratory rate metric
 relationship: BAO_0002874 uom:mmol.h-1 ! millimole per hour
 
 [Term]
 id: PREFER:0000062
-name: carbon dioxide evolution rate
+name: carbon dioxide evolution rate variable
 namespace: precision_fermentation
-def: "A respiratory metric variable that represents the rate at which carbon dioxide is released by the cell culture in a bioreactor or fermentation system during the process." []
+def: "A respiratory rate metric that represents the rate at which carbon dioxide is released by the cell culture in a bioreactor or fermentation system during a fermentation process." []
 comment: Physical gas transfer. Dynamic respiratory metric
-synonym: "CER" EXACT OMO:0003012 []
-synonym: "co2 evolution rate" EXACT []
-is_a: PREFER:0000158 ! respiratory metric variable
+synonym: "CER variable" EXACT OMO:0003012 []
+synonym: "co2 evolution rate variable" EXACT []
+is_a: PREFER:0000158 ! respiratory rate metric
 relationship: BAO_0002874 uom:mmol.h-1 ! millimole per hour
 
 [Term]
 id: PREFER:0000063
-name: oxygen transfer rate
+name: oxygen transfer rate variable
 namespace: precision_fermentation
-def: "A respiratory metric variable that represents the rate at which oxygen is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor or fermentation system during the process." []
+def: "A respiratory rate metric variable that represents the rate at which oxygen is transferred from the gas phase or fermenter air into the liquid phase within a bioreactor or fermentation system during a fermentation process." []
 comment: Physical gas transfer. Dynamic respiratory metric
-synonym: "OTR" EXACT OMO:0003012 []
-is_a: PREFER:0000158 ! respiratory metric variable
+synonym: "OTR variable" EXACT OMO:0003012 []
+is_a: PREFER:0000158 ! respiratory rate metric
 relationship: BAO_0002874 uom:mol.h-1 ! mole per hour
 
 [Term]
 id: PREFER:0000064
-name: carbon dioxide transfer rate
+name: carbon dioxide transfer rate variable
 namespace: precision_fermentation
-def: "A respiratory metric variable that represents the rate at which carbon dioxide is transferred out of the bioreactor or fermentation system during the process." []
+def: "A respiratory rate metric that represents the rate at which carbon dioxide is transferred out of the bioreactor or fermentation system during a fermentation process." []
 comment: Physical gas transfer. Dynamic respiratory metric. Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.
-synonym: "CTR" EXACT OMO:0003012 []
-is_a: PREFER:0000158 ! respiratory metric variable
+synonym: "CTR variable" EXACT OMO:0003012 []
+is_a: PREFER:0000158 ! respiratory rate metric
 relationship: BAO_0002874 uom:mol.h-1 ! mole per hour
 
 [Term]
 id: PREFER:0000065
-name: respiratory quotient
+name: respiratory quotient variable
 namespace: precision_fermentation
-def: "A respiratory metric variable that represent the ratio of carbon dioxide produced/formed to oxygen consumed during cellular metabolism in a bioreactor or fermentation system during the process, commmonly used to assess the metabolic state of cells." []
+def: "A respiratory rate metric that represent the ratio of carbon dioxide produced/formed to oxygen consumed during cellular metabolism in a bioreactor or fermentation system during a fermentation process, commmonly used to assess the metabolic state of cells." []
 comment: Derived metabolic indicator.
-synonym: "RQ" EXACT OMO:0003012 []
-is_a: PREFER:0000158 ! respiratory metric variable
+synonym: "RQ variable" EXACT OMO:0003012 []
+is_a: PREFER:0000158 ! respiratory rate metric
 relationship: BAO_0002874 PREFER:7000007 ! dimensionless unit
 
 [Term]
 id: PREFER:0000068
-name: offgas carbon dioxide measurement
+name: offgas carbon dioxide measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the percentage of carbon dioxide present in the exhaust stream leaving the bioreactor or fermentation system during a process." []
-synonym: "offgas co2" EXACT []
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the percentage of carbon dioxide present in the exhaust stream leaving the bioreactor or fermentation system during a fermentation process." []
+synonym: "offgas co2 measurement variable" EXACT []
+synonym: "pecision fermentation process offgas carbon dioxide measurement variable" EXACT []
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:%25 ! percent
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000069
-name: offgas oxygen measurement
+name: offgas oxygen measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the percentage of oxygen present in the exhaust stream leaving the bioreactor or fermentation system during a process." []
-synonym: "offgas o2" EXACT []
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the percentage of oxygen present in the exhaust stream leaving the bioreactor or fermentation system during a fermentation process." []
+synonym: "offgas o2 measurement variable" EXACT []
+synonym: "precision fermentation process offgas oxygen measurement variable" EXACT []
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:%25 ! percent
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000071
-name: biomass concentration
+name: biomass concentration variable
 namespace: precision_fermentation
-def: "A process titer metric variable that represents the concentration of biomass present in a withdrawn process sample from a bioreactor or fermentation system during the process." []
+def: "A process titer metric that represents the concentration of biomass present in a withdrawn process sample from a bioreactor or fermentation system during a fermentation process." []
+synonym: "biomass concentracion calculated variable" EXACT []
 is_a: PREFER:0000091 ! process titer metric
 relationship: BAO_0002874 uom:g.L-1 ! gram per litre
 
 [Term]
 id: PREFER:0000072
-name: carbon dioxide flow rate
-def: "A process measurement variable that indicates the rate at which carbon dioxide is supplied to a bioreactor or fermentation system during a process." []
+name: carbon dioxide flow rate measurement variable
+def: "A precision fermentation process measurement variable that indicates the rate at which carbon dioxide is supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process carbon dioxide flow rate measurement variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:L.min-1 ! liter per minute
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
@@ -1004,62 +1864,69 @@ is_a: PREFER:0000008 ! cultivation condition
 
 [Term]
 id: PREFER:0000074
-name: compound concentration
-def: "A process titer metric variable that represents the concentration of a specific compound present in a withdrawn process sample from a bioreactor or fermentation system during the process." []
+name: compound concentration variable
+def: "A process titer metric that represents the concentration of a specific compound present in a withdrawn process sample from a bioreactor or fermentation system during a fermentation process." []
+synonym: "compound concentration calculated variable" EXACT []
 is_a: PREFER:0000091 ! process titer metric
 relationship: BAO_0002874 uom:g.L-1 ! gram per litre
 
 [Term]
 id: PREFER:0000075
-name: gravimetric feed rate
+name: gravimetric feed rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the amount of feed fed per unit time or the mass flow rate of the feed solution added to a bioreactor or fermentation system during a process.\"" []
+def: "A precision fermentation process measurement variable that indicates the amount of feed fed per unit time or the mass flow rate of the feed solution added to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process gravimetric feed rate measurement variable" EXACT []
 is_a: PREFER:0000037 ! feed medium cultivation condition
-is_a: PREFER:9000001 ! process measurement variable
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 uom:g.h-1 ! gram per hour
 relationship: PREFER:8000012 PREFER:0000150 ! has data acquisition quality data acquisition quality
 
 [Term]
 id: PREFER:0000077
-name: dilution rate
+name: dilution feed rate control variable
 namespace: precision_fermentation
 def: "A feed process control variable that represents the target rate at which fresh feed medium is fed into a production culture relative to the total volume of the fermentation culture, representing the rate at which the production culture is diluted." []
 synonym: "D" EXACT OMO:0003012 []
-is_a: PREFER:0000009 ! feed process control variable
+synonym: "dilution feed rate" EXACT []
+is_a: PREFER:0000009 ! feed control variable
 is_a: PREFER:0000015 ! operational parameter
 relationship: BAO_0002874 uom:h-1 ! per hour (h⁻¹ or 1/h)
 
 [Term]
 id: PREFER:0000078
 name: key process metric
-def: "A process calculated variable that represents a set of quantitative metrics used to asses the efficiency or performance of the process impacting technoeconomic analysis." []
+def: "A precision fermentation process calculated variable that represents a set of quantitative metrics used to asses the efficiency or performance of the fermentation process impacting technoeconomic analysis." []
 synonym: "key performance metric" EXACT []
-is_a: PREFER:9000002 ! process calculated variable
+synonym: "key precision fermentation process metric" EXACT []
+is_a: PREFER:9000002 ! precision fermentation process calculated variable
 
 [Term]
 id: PREFER:0000079
 name: carbon balance variable
 namespace: precision_fermentation
-def: "A carbon balance metric variable that represents the general carbon balance, which compares the total amount of carbon entering a bioreactor or fermenter system (through the substrate) to the total carbon leaving the system (through products, biomass or by-products)." []
-synonym: "C balance" EXACT OMO:0003012 []
-is_a: PREFER:0000157 ! carbon balance metric variable
+def: "A carbon balance metric that represents the general carbon balance, which compares the total amount of carbon entering a bioreactor or fermenter system (through the substrate) to the total carbon leaving the system (through products, biomass or by-products)." []
+synonym: "C balance variable" EXACT OMO:0003012 []
+synonym: "carbon balance calculated variable" EXACT []
+is_a: PREFER:0000157 ! carbon balance metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000081
 name: degree of reduction balance variable
 namespace: precision_fermentation
-def: "A carbon balance metric variable that quantifies the redox state in a bioreactor or fermentar system during a process, by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation." []
+def: "A carbon balance metric that quantifies the redox state in a bioreactor or fermentar system during a fermentation process, by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation." []
+synonym: "degree of reduction balance calculated variable" EXACT []
 synonym: "DoR balance variable" EXACT OMO:0003012 []
-is_a: PREFER:0000157 ! carbon balance metric variable
+is_a: PREFER:0000157 ! carbon balance metric
 relationship: BAO_0002874 uom:%25 ! percent
 
 [Term]
 id: PREFER:0000083
 name: compound consumed variable
 namespace: precision_fermentation
-def: "A compound balance metric variable that represents the total amount of compound consumed, substrate taken up by the cells, in a bioreactor or fermentation system, during the process." []
-is_a: PREFER:0000162 ! compound balance metric variable
+def: "A compound balance metric that represents the total amount of compound consumed, substrate taken up by the cells, in a bioreactor or fermentation system, during the fermentation process." []
+synonym: "compound consumed calculated variable" EXACT []
+is_a: PREFER:0000162 ! compound balance metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
@@ -1078,11 +1945,11 @@ is_a: PREFER:0000186 ! laboratory bioreactor scale
 
 [Term]
 id: PREFER:0000087
-name: substrate uptake rate
+name: substrate uptake rate variable
 namespace: precision_fermentation
-def: "A bioproduction metric variable that represents the rate at which substrate is taken up by the cells, in a bioreactor or fermentation system during the process." []
-synonym: "QS" EXACT OMO:0003012 []
-is_a: PREFER:0000159 ! bioproduction metric variable
+def: "A bioproduction rate metric that represents the rate at which substrate is taken up by the cells, in a bioreactor or fermentation system during a fermentation process." []
+synonym: "QS variable" EXACT OMO:0003012 []
+is_a: PREFER:0000159 ! bioproduction rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
@@ -1093,10 +1960,10 @@ is_a: PREFER:0000016 ! fermentation phase
 
 [Term]
 id: PREFER:0000089
-name: specific substrate uptake rate
+name: specific substrate uptake rate variable
 namespace: precision_fermentation
-def: "A bioproduction metric variable that represents the rate of substrate uptake per unit of biomass, in a bioreactor or fermentation system during the process." []
-is_a: PREFER:0000159 ! bioproduction metric variable
+def: "A bioproduction rate metric that represents the rate of substrate uptake per unit of biomass, in a bioreactor or fermentation system during a fermentation process." []
+is_a: PREFER:0000159 ! bioproduction rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
@@ -1108,14 +1975,15 @@ is_a: PREFER:0000016 ! fermentation phase
 [Term]
 id: PREFER:0000091
 name: process titer metric
-def: "A key process metric that represents a quantitative metric of the final concentration of the product or biomass in the process." []
+def: "A key process metric that represents a quantitative metric of the final concentration of the product or biomass in a fermentation process." []
+synonym: "key precision fermentation process titer metric" EXACT []
 is_a: PREFER:0000078 ! key process metric
 
 [Term]
 id: PREFER:0000094
 name: substrate yield (biomass) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of a compound consumed (substrate) per biomass (X), quantifying how efficiently substrate compound is consumed relative to biomass produced in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of a compound consumed (substrate) per biomass (X), quantifying how efficiently substrate compound is consumed relative to biomass produced in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "substrate yield (X) variable" EXACT []
 is_a: PREFER:0000155 ! process yield metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
@@ -1134,28 +2002,30 @@ is_a: PREFER:0000016 ! fermentation phase
 
 [Term]
 id: PREFER:0000101
-name: oxygen production rate
+name: oxygen production rate variable
 namespace: precision_fermentation
-def: "A bioproduction metric variable that represents the rate of oxygen consumed over time, in a bioreactor or fermentation system during the process." []
-synonym: "o2 Q" EXACT OMO:0003012 []
-synonym: "Oxygen volumetric rate" EXACT []
-is_a: PREFER:0000159 ! bioproduction metric variable
+def: "A bioproduction rate metric that represents the rate of oxygen consumed over time, in a bioreactor or fermentation system during a fermentation process." []
+synonym: "o2 Q variable" EXACT OMO:0003012 []
+synonym: "oxygen bioproduction rate variable" EXACT []
+synonym: "oxygen volumetric rate variable" EXACT []
+is_a: PREFER:0000159 ! bioproduction rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000103
-name: specific oxygen uptake rate
+name: specific oxygen uptake rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the specific rate at which oxygen is consumed in a bioreactor or fermentation system during a process, normalized per unit of biomass (X), reflecting how efficiently oxygen is consumed in relation to biomass production." []
-synonym: "specific OUR" EXACT []
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the specific rate at which oxygen is consumed in a bioreactor or fermentation system during a fermentation process, normalized per unit of biomass (X), reflecting how efficiently oxygen is consumed in relation to biomass production." []
+synonym: "precision fermentation process specific oxygen uptake rate measurement variable" EXACT []
+synonym: "specific OUR measurement variable" EXACT OMO:0003012 []
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000001 ! mole per carbon mole per hour
 
 [Term]
 id: PREFER:0000104
 name: oxygen yield (substrate) variable
 namespace: precision_fermentation
-def: "A process yield metric variablec that represents the yield of oxygen consumed per substrate (S) consumed, describing how much oxygen is consumed relative to the substrate used in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of oxygen consumed per substrate (S) consumed, describing how much oxygen is consumed relative to the substrate used in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "o2 yield (S) variable" EXACT []
 synonym: "oxygen yield (S) variable" EXACT []
 is_a: PREFER:0000155 ! process yield metric
@@ -1175,7 +2045,7 @@ is_a: PREFER:0000200 ! fermentation culture role
 id: PREFER:0000106
 name: oxygen yield (biomass) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of oxygen consumed per biomass (X), describing how much oxygen is consumed relative to the amount of biomass generated in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of oxygen consumed per biomass (X), describing how much oxygen is consumed relative to the amount of biomass generated in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "o2 yield (X) variable" EXACT []
 synonym: "oxygen yield (X) variable" EXACT []
 is_a: PREFER:0000155 ! process yield metric
@@ -1185,9 +2055,11 @@ relationship: BAO_0002874 PREFER:7000000 ! mole per carbon mole
 id: PREFER:0000107
 name: compound formed variable
 namespace: precision_fermentation
-def: "A compound balance metric variable that represents the total amount of compound produced or formed in a bioreactor or fermentation system, representing the cumulative production of the compound during the process." []
+def: "A compound balance metric that represents the total amount of compound produced or formed in a bioreactor or fermentation system, representing the cumulative production of the compound during the fermentation process." []
+synonym: "compound formed calculated variable" EXACT []
+synonym: "compound produced calculated variable" EXACT []
 synonym: "compound produced variable" EXACT []
-is_a: PREFER:0000162 ! compound balance metric variable
+is_a: PREFER:0000162 ! compound balance metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
@@ -1213,11 +2085,12 @@ is_a: PREFER:0000108 ! fermentation medium role
 
 [Term]
 id: PREFER:0000111
-name: residual compound amount
+name: residual compound amount variable
 namespace: precision_fermentation
-def: "A compound balance metric variable that represents the remaining amount of compound left in a bioreactor or fermentation system during a process." []
+def: "A compound balance metric that represents the remaining amount of compound left in a bioreactor or fermentation system during a fermentation process." []
 comment: It is calculated substracting the compound concentration measured offline, multiplied by the liquid volume downscaled to get the residual amount.
-is_a: PREFER:0000162 ! compound balance metric variable
+synonym: "residual compound amount calculated variable" EXACT []
+is_a: PREFER:0000162 ! compound balance metric
 relationship: BAO_0002874 uom:g ! gram
 
 [Term]
@@ -1230,40 +2103,43 @@ is_a: PREFER:0000108 ! fermentation medium role
 
 [Term]
 id: PREFER:0000113
-name: compound production rate
+name: compound production rate variable
 namespace: precision_fermentation
-def: "A bioproduction metric variable that represents the rate of compound produced over time, in a bioreactor or fermentation system during the process." []
-synonym: "compound formation rate" RELATED []
+def: "A bioproduction rate metric that represents the rate of compound produced over time, in a bioreactor or fermentation system during a fermentation process." []
+synonym: "compound formation rate variable" RELATED []
 synonym: "Qcompound" EXACT OMO:0003012 []
-is_a: PREFER:0000159 ! bioproduction metric variable
+is_a: PREFER:0000159 ! bioproduction rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000114
 name: inlet air oxygen setpoint control variable
-def: "A dissolved oxygen process control variable that indicates the target percentage of oxygen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+def: "A precision fermentation process dissolved oxygen control variable indicates the target percentage of oxygen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process inlet air oxygen setpoint control variable" EXACT []
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 
 [Term]
 id: PREFER:0000115
-name: specific compound production rate
+name: specific compound production rate variable
 namespace: precision_fermentation
-def: "A bioproduction metric variable that represents the rate of compound produced per unit of biomass, in a bioreactor or fermentation system during the process, providing the efficiency of compound production relative to biomass." []
-synonym: "specific compound formation rate" EXACT []
-is_a: PREFER:0000159 ! bioproduction metric variable
+def: "A bioproduction rate metric that represents the rate of compound produced per unit of biomass, in a bioreactor or fermentation system during a fermentation process, providing the efficiency of compound production relative to biomass." []
+synonym: "specific compound bioproduction rate variable" EXACT []
+synonym: "specific compound formation rate variable" EXACT []
+is_a: PREFER:0000159 ! bioproduction rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000116
 name: inlet air carbon dioxide setpoint control variable
-def: "A dissolved oxygen process control variable that indicates the target percentage of carbon dioxide value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+def: "A precision fermentation process dissolved oxygen control variable that indicates the target percentage of carbon dioxide value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process inlet air carbon dioxide setpoint control variable" EXACT []
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 
 [Term]
 id: PREFER:0000117
 name: compound produced yield (substrate) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of a compound produced per substrate (S) consumed, quantifying how efficiently compound is produced relative to substrate consumption in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of a compound produced per substrate (S) consumed, quantifying how efficiently compound is produced relative to substrate consumption in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "compound yield (S) variable" EXACT []
 is_a: PREFER:0000155 ! process yield metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
@@ -1271,32 +2147,34 @@ relationship: BAO_0002874 PREFER:9000004 ! unit
 [Term]
 id: PREFER:0000118
 name: optical density control variable
-def: "A process control variable that represents the target optical density value to be regulated and or maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process control variable that represents the target optical density value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process." []
 synonym: "OD control setpoint" EXACT []
 synonym: "OD setpoint" EXACT []
 synonym: "optical density control setpoint" EXACT []
 synonym: "optical density setpoint" EXACT []
+synonym: "precision fermentation process optical density control variable" EXACT []
 synonym: "target OD" EXACT []
 synonym: "target optical density" EXACT []
 is_a: PREFER:0000015 ! operational parameter
 is_a: PREFER:0000045 ! optical density cultivation condition
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 relationship: BAO_0002874 PREFER:7000006 ! unit of optical density
-relationship: PREFER:8000020 PREFER:0000060 ! setpoint of optical density measurement
+relationship: PREFER:8000020 PREFER:0000060 ! setpoint of optical density measurement variable
 
 [Term]
 id: PREFER:0000119
-name: dissolved oxygen process control variable
-def: "A process control variable that represents the dissolved oxygen control variables of a bioreactor or fermentation system during a process." []
+name: dissolved oxygen control variable
+def: "A precision fermentation process control variable that represents the dissolved oxygen control variables of a bioreactor or fermentation system during a fermentation process." []
 synonym: "DO process control variable" EXACT []
+synonym: "precision fermentation process dissolved oxygen control variable" EXACT []
 is_a: PREFER:0000033 ! dissolved oxygen cultivation condition
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 
 [Term]
 id: PREFER:0000120
 name: compound produced yield (biomass) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of a compound produced per biomass (X), quantifying how efficiently compound is produced relative to biomass generation in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of a compound produced per biomass (X), quantifying how efficiently compound is produced relative to biomass generation in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "compound produced yield (X) variable" EXACT []
 is_a: PREFER:0000155 ! process yield metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
@@ -1304,7 +2182,8 @@ relationship: BAO_0002874 PREFER:9000004 ! unit
 [Term]
 id: PREFER:0000121
 name: pressure setpoint control variable
-def: "A process control variable that represents the target pressure value to be regulated and maintained within a bioreactor or fermentation system during a process." []
+def: "A precision fermentation process control variable that represents the target pressure value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process pressure setpoint control variable" EXACT []
 synonym: "pressure control setpoint" EXACT []
 synonym: "pressure reference point" EXACT []
 synonym: "pressure reference value" EXACT []
@@ -1313,51 +2192,54 @@ synonym: "target pressure" EXACT []
 synonym: "target pressure value" EXACT []
 is_a: PREFER:0000015 ! operational parameter
 is_a: PREFER:0000029 ! pressure cultivation condition
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 relationship: BAO_0002874 PREFER:9000004 ! unit
-relationship: PREFER:8000020 PREFER:0000042 ! setpoint of pressure measurement
+relationship: PREFER:8000020 PREFER:0000042 ! setpoint of pressure measurement variable
 
 [Term]
 id: PREFER:0000122
 name: volumetric feed rate control variable
-def: "A process control variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000009 ! feed process control variable
+def: "A process control variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a fermentation process." []
+is_a: PREFER:0000009 ! feed control variable
 is_a: PREFER:0000015 ! operational parameter
 relationship: BAO_0002874 uom:L.h-1 ! liters per hour
-relationship: PREFER:8000020 PREFER:0000053 ! setpoint of volumetric feed rate
+relationship: PREFER:8000020 PREFER:0000053 ! setpoint of volumetric feed rate measurement variable
 
 [Term]
 id: PREFER:0000128
-name: carbon dioxide production rate
+name: carbon dioxide production rate variable
 namespace: precision_fermentation
-def: "A bioproduction metric variable that represents the rate of carbon dioxide produced over time, in a bioreactor or fermentation system during the process." []
-synonym: "co2 Q" EXACT OMO:0003012 []
-is_a: PREFER:0000159 ! bioproduction metric variable
+def: "A bioproduction rate metric that represents the rate of carbon dioxide produced over time, in a bioreactor or fermentation system during a fermentation process." []
+synonym: "carbon dioxide bioproduction rate variable" EXACT []
+synonym: "co2 Q variable" EXACT OMO:0003012 []
+is_a: PREFER:0000159 ! bioproduction rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000129
 name: inlet air nitrogen setpoint control variable
-def: "A dissolved oxygen process control variable that indicates the target percentage of nitrogen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a process." []
-is_a: PREFER:0000119 ! dissolved oxygen process control variable
+def: "A precision fermentation process dissolved oxygen control variable that indicates the target percentage of nitrogen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation process inlet air nitrogen setpoint control variable" EXACT []
+is_a: PREFER:0000119 ! dissolved oxygen control variable
 
 [Term]
 id: PREFER:0000130
-name: specific carbon dioxide evolution rate
+name: specific carbon dioxide evolution rate measurement variable
 namespace: precision_fermentation
-def: "A process measurement variable that indicates the specific rate at which carbon dioxide is produced in a bioreactor or fermentation system during a process, normalized per unit of biomass (X) allowing metabolic efficiency comparisions between production strains." []
-synonym: "specific CER" EXACT []
-synonym: "specific co2 evolution rate" EXACT []
-is_a: PREFER:9000001 ! process measurement variable
+def: "A precision fermentation process measurement variable that indicates the specific rate at which carbon dioxide is produced in a bioreactor or fermentation system during a fermentation process, normalized per unit of biomass (X) allowing metabolic efficiency comparisions between production strains." []
+synonym: "precision fermentation process specific carbon dioxide evolution rate measurement variable" EXACT []
+synonym: "specific CER measurement variable" EXACT OMO:0003012 []
+synonym: "specific co2 evolution rate measurement variable" EXACT []
+is_a: PREFER:9000001 ! precision fermentation process measurement variable
 relationship: BAO_0002874 PREFER:7000001 ! mole per carbon mole per hour
 
 [Term]
 id: PREFER:0000131
 name: carbon dioxide yield (substrate) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of carbon dioxide produced per substrate consumed (S), describing how much carbon dioxide is produced relative to the amount of substrate consumed in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of carbon dioxide produced per substrate consumed (S), describing how much carbon dioxide is produced relative to the amount of substrate consumed in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "carbon dioxide yield (S) variable" EXACT []
-synonym: "co2 yield (S)" EXACT OMO:0003012 []
+synonym: "co2 yield (S) variable" EXACT OMO:0003012 []
 is_a: PREFER:0000155 ! process yield metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
@@ -1365,103 +2247,107 @@ relationship: BAO_0002874 PREFER:9000004 ! unit
 id: PREFER:0000133
 name: carbon dioxide yield (biomass) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of carbon dioxide produced per biomass (X), describing how much carbon dioxide is produced relative to the amount of biomass generated in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of carbon dioxide produced per biomass (X), describing how much carbon dioxide is produced relative to the amount of biomass generated in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "carbo dioxide yield (X) variable" EXACT []
-synonym: "co2 yield (X)" EXACT OMO:0003012 []
+synonym: "co2 yield (X) variable" EXACT OMO:0003012 []
 is_a: PREFER:0000155 ! process yield metric
 relationship: BAO_0002874 PREFER:7000000 ! mole per carbon mole
 
 [Term]
 id: PREFER:0000134
-name: biomass amount
+name: biomass amount variable
 namespace: precision_fermentation
-def: "A biomass balance metric variable that represents the absolute quantity of cellular biomass present in a bioreactor or fermentation system, at a certain time point, during a process." []
-is_a: PREFER:0000161 ! biomass balance metric variable
+def: "A biomass balance metric that represents the absolute quantity of cellular biomass present in a bioreactor or fermentation system, at a certain time point, during a fermentation process." []
+synonym: "biomass amount calculated variable" EXACT []
+is_a: PREFER:0000161 ! biomass balance metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000135
-name: calculated genomics sample variable
-def: "A calculated omics sample variable that represents genomic values derived from computational analysis using DNA sequence data from an offline sample associated with a process." []
-is_a: PREFER:0000209 ! calculated omics sample variable
+name: genomics sample calculated variable
+def: "An omics sample calculated variable that represents genomic values derived from computational analysis using DNA sequence data from an offline sample associated with a fermentation process." []
+is_a: PREFER:0000209 ! omics sample calculated variable
 
 [Term]
 id: PREFER:0000136
 name: biomass lost in sampling variable
 namespace: precision_fermentation
-def: "A biomass balance metric variable that represents the amount of biomass removed from a bioreactor or fermentation system, at a certain sampling time point, during a process." []
-is_a: PREFER:0000161 ! biomass balance metric variable
+def: "A biomass balance metric that represents the amount of biomass removed from a bioreactor or fermentation system, at a certain sampling time point, during a fermentation process." []
+synonym: "biomass lost in sampling calculated variable" EXACT []
+is_a: PREFER:0000161 ! biomass balance metric
 relationship: BAO_0002874 uom:g ! gram
 
 [Term]
 id: PREFER:0000137
 name: biomass formed variable
 namespace: precision_fermentation
-def: "A biomass balance metric variable that represents the cumulative quantity of cellular biomass generated in a bioreactor or fermentation system, during a process." []
+def: "A biomass balance metric that represents the cumulative quantity of cellular biomass generated in a bioreactor or fermentation system, during a fermentation process." []
+synonym: "biomass formed calculated variable" EXACT []
+synonym: "biomass production calculated variable" EXACT []
 synonym: "biomass production variable" EXACT []
-is_a: PREFER:0000161 ! biomass balance metric variable
+is_a: PREFER:0000161 ! biomass balance metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000138
-name: calculated transcriptomics sample variable
-def: "A calculated omics sample variable that represents transcript features derived from computational analysis using transcriptomics data from an offline sample associated with a process." []
-is_a: PREFER:0000209 ! calculated omics sample variable
+name: transcriptomics sample calculated variable
+def: "An omics sample calculated variable that represents transcript features derived from computational analysis using transcriptomics data from an offline sample associated with a process." []
+is_a: PREFER:0000209 ! omics sample calculated variable
 
 [Term]
 id: PREFER:0000139
-name: calculated proteomics sample variable
-def: "A calculated omics sample variable that represents protein features derived from computational analysis using proteomic data from an offline sample associated with a process." []
-is_a: PREFER:0000209 ! calculated omics sample variable
+name: proteomics sample calculated variable
+def: "An omics sample calculated variable that represents protein features derived from computational analysis using proteomic data from an offline sample associated with a fermentation process." []
+is_a: PREFER:0000209 ! omics sample calculated variable
 
 [Term]
 id: PREFER:0000140
-name: biomass formation rate
+name: biomass formation rate variable
 namespace: precision_fermentation
-def: "A growth metric variable that represents the rate at which the biomass is formed over time in a bioreactor or fermentation system during the process." []
-synonym: "biomass production rate" EXACT []
-synonym: "Rx" EXACT OMO:0003012 []
-is_a: PREFER:0000160 ! growth metric variable
+def: "A growth rate metric that represents the rate at which the biomass is formed over time in a bioreactor or fermentation system during a fermentation process." []
+synonym: "biomass production rate variable" EXACT []
+synonym: "Rx variable" EXACT OMO:0003012 []
+is_a: PREFER:0000160 ! growth rate metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000141
-name: calculated fluxomics sample variable
-def: "A calculated omics sample variable that represents metabolic flux values derived from computational analysis using experimental data from an offline sample associated with a process." []
-is_a: PREFER:0000209 ! calculated omics sample variable
+name: fluxomics sample calculated variable
+def: "An omics sample calculated variable that represents metabolic flux values derived from computational analysis using experimental data from an offline sample associated with a fermentation process." []
+is_a: PREFER:0000209 ! omics sample calculated variable
 
 [Term]
 id: PREFER:0000142
-name: specific biomass formation rate
+name: specific biomass formation rate variable
 namespace: precision_fermentation
-def: "A growth metric variable that represents the rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time, in a bioreactor or fermentation system during the process." []
-synonym: "growth rate" EXACT []
-synonym: "specific biomass production rate" EXACT []
-synonym: "μ" EXACT OMO:0003012 []
-is_a: PREFER:0000160 ! growth metric variable
+def: "A growth rate metric that represents the rate of increase of biomass per unit of exisitng biomass, typically expressed as the fractional increase in biomass concentration per unit time, in a bioreactor or fermentation system during a fermentation process." []
+synonym: "growth rate variable" EXACT []
+synonym: "specific biomass production rate variable" EXACT []
+synonym: "μ variable" EXACT OMO:0003012 []
+is_a: PREFER:0000160 ! growth rate metric
 relationship: BAO_0002874 uom:h-1 ! per hour (h⁻¹ or 1/h)
 
 [Term]
 id: PREFER:0000147
 name: biomass yield (substrate) variable
 namespace: precision_fermentation
-def: "A process yield metric variable that represents the yield of biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass in a bioreactor or fermentation system, during the process." []
+def: "A process yield metric that represents the yield of biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass in a bioreactor or fermentation system, during a fermentation process." []
 synonym: "biomass yield (S) variable" EXACT []
-synonym: "Ysx" EXACT OMO:0003012 []
+synonym: "Ysx variable" EXACT OMO:0003012 []
 is_a: PREFER:0000155 ! process yield metric
 relationship: BAO_0002874 PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:0000148
-name: calculated metabolomics sample variable
-def: "A calculated omics sample variable that represents metabolite features derived from computational analysis using metabolomic data from an offline sample associated with a process." []
-is_a: PREFER:0000209 ! calculated omics sample variable
+name: metabolomics sample calculated variable
+def: "An omics sample calculated variable that represents metabolite features derived from computational analysis using metabolomic data from an offline sample associated with a fermentation process." []
+is_a: PREFER:0000209 ! omics sample calculated variable
 
 [Term]
 id: PREFER:0000149
-name: calculated metagenomics sample variable
-def: "A calculated genomics sample variable that represents metagenomic features derived from computational analysis using DNA sequence data from an offline sample associated with a process." []
-is_a: PREFER:0000135 ! calculated genomics sample variable
+name: metagenomics sample calculated variable
+def: "A genomics sample calculated variable that represents metagenomic features derived from computational analysis using DNA sequence data from an offline sample associated with a fermentation process." []
+is_a: PREFER:0000135 ! genomics sample calculated variable
 
 [Term]
 id: PREFER:0000150
@@ -1504,97 +2390,99 @@ id: PREFER:0000155
 name: process yield metric
 namespace: precision_fermentation
 def: "A key process metric that represents a quantitative metric, tipically expressed as yield coefficients, that quantify the efficiency of converting inputs(e.g. substrates) into desired outputs(e.g. products), expressed as the ratio of output formed per unit of substrate or biomass consumed." []
+synonym: "key precision fermentation process yield metric" EXACT []
 is_a: PREFER:0000078 ! key process metric
 
 [Term]
 id: PREFER:0000157
-name: carbon balance metric variable
-def: "A core balance metric variable that represents a quantitative metric derived from carbon balance calculations over a process, used to characterize the carbon flow within a bioreactor or fermenter system during the process." []
+name: carbon balance metric
+def: "A core balance metric that represents a quantitative metric derived from carbon balance calculations over a process, used to characterize the carbon flow within a bioreactor or fermenter system during the fermentation process." []
 is_a: PREFER:0000023 ! core balance metric
 
 [Term]
 id: PREFER:0000158
-name: respiratory metric variable
+name: respiratory rate metric
 namespace: precision_fermentation
-def: "A process rate metric variable that represents a rate describing respiratory activity of a production culture in a bioreactor or fermentation system during the process." []
+def: "A process rate metric variable that represents a rate describing respiratory activity of a production culture in a bioreactor or fermentation system during a fermentation process." []
 synonym: "gas exchange metric" EXACT []
 synonym: "metabolic metric" EXACT []
 is_a: PREFER:0000000 ! process rate metric
 
 [Term]
 id: PREFER:0000159
-name: bioproduction metric variable
+name: bioproduction rate metric
 namespace: precision_fermentation
-def: "A process rate metric variable that represents a rate describing substrate consumptions, compound production (e.g. product formation) and biomass production in a bioreactor or fermentation system during the process." []
+def: "A process rate metric that represents a rate describing substrate consumptions, compound production (e.g. product formation) and biomass production in a bioreactor or fermentation system during a fermentation process." []
 is_a: PREFER:0000000 ! process rate metric
 
 [Term]
 id: PREFER:0000160
-name: growth metric variable
+name: growth rate metric
 namespace: precision_fermentation
-def: "A process rate metric variable that represents a rate describing biomass formation or growth in a bioreactor or fermentation system during the process." []
+def: "A process rate metric that represents a rate describing biomass formation or growth in a bioreactor or fermentation system during a fermentation process." []
 is_a: PREFER:0000000 ! process rate metric
 
 [Term]
 id: PREFER:0000161
-name: biomass balance metric variable
-def: "A core balance metric variable that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the process." []
+name: biomass balance metric
+def: "A core balance metric that represents a quantitative metric derived from biomass balance calculations over a process, used to characterize the balance of biomass output within a bioreactor or fermenter system during the fermentation fermentation process." []
 is_a: PREFER:0000023 ! core balance metric
 
 [Term]
 id: PREFER:0000162
-name: compound balance metric variable
-def: "A core balance metric variable that represents a quantitative metric derived from compound balance calculations over a process, used to characterize the compound balabce within a bioreactor or fermenter system during the process." []
+name: compound balance metric
+def: "A core balance metric that represents a quantitative metric derived from compound balance calculations over a process, used to characterize the compound balabce within a bioreactor or fermenter system during the fermentation process." []
 is_a: PREFER:0000023 ! core balance metric
 
 [Term]
 id: PREFER:0000180
-name: operation mode
+name: operation mode control variable
 namespace: precision_fermentation
-def: "A process control variable that defines the operating stategy of a bioreactor or fermentation system, specifying how substrate, products and biomass are introduced, maintained, and removed during a process." []
-synonym: "fermentation cultivation mode" EXACT []
-synonym: "operational mode" BROAD []
+def: "A precision fermentation process control variable that defines the operating stategy of a bioreactor or fermentation system, specifying how substrate, products and biomass are introduced, maintained, and removed during a fermentation process." []
+synonym: "fermentation cultivation mode control variable" EXACT []
+synonym: "operational mode control variable" BROAD []
+synonym: "precision fermenation process feed control variable" EXACT []
 is_a: PREFER:0000015 ! operational parameter
-is_a: PREFER:9000000 ! process control variable
+is_a: PREFER:9000000 ! precision fermentation process control variable
 
 [Term]
 id: PREFER:0000181
 name: batch operation mode
 namespace: precision_fermentation
-def: "An operation mode in which all required medium components and the inoculum are supplied at the start of the fermentation process, with no subsequent addition of medium components during operation, and in which products are harvested only at the end of the process." []
+def: "An operation mode control variable in which all required medium components and the inoculum are supplied at the start of the fermentation process, with no subsequent addition of medium components during operation, and in which products are harvested only at the end of the fermentation process." []
 synonym: "batch bioprocess mode" EXACT []
 synonym: "batch cell culture" RELATED [MSIO:0000181]
 synonym: "batch cultivation" BROAD [PMID: 38806369]
 synonym: "batch mode" BROAD []
-is_a: PREFER:0000180 ! operation mode
+is_a: PREFER:0000180 ! operation mode control variable
 
 [Term]
 id: PREFER:0000182
 name: fed-batch operation mode
 namespace: precision_fermentation
-def: "An operation mode in which additional nutrients, through feed medium, are intermittently or continuously supplied to the bioreactor or fermentar system during a fermentation process, without removal of production culture fluid, until termination of the process." []
+def: "An operation mode control variable in which additional nutrients, through feed medium, are intermittently or continuously supplied to the bioreactor or fermentar system during a fermentation process, without removal of production culture fluid, until termination of the fermentation process." []
 synonym: "fed-batch cultivation" BROAD []
 synonym: "fed-batch fermentation mode" EXACT []
 synonym: "fed-batch mode" BROAD []
-is_a: PREFER:0000180 ! operation mode
+is_a: PREFER:0000180 ! operation mode control variable
 
 [Term]
 id: PREFER:0000183
 name: continuous operation mode-chemostat
 namespace: precision_fermentation
-def: "A continuous operation mode in which fresh fermentation medium is supplied and fermentation culture fluid removed at a constant rate, such that the specific growth rate of the biomass is controlled by the limiting nutrient concentration and equals the dilution rate." []
+def: "An operation mode control variable in which fresh fermentation medium is supplied and fermentation culture fluid removed at a constant rate, such that the specific growth rate of the biomass is controlled by the limiting nutrient concentration and equals the dilution rate." []
 synonym: "continuous fermentation mode, chemostat" EXACT []
 synonym: "continuous mode, chemostat" BROAD []
-is_a: PREFER:0000180 ! operation mode
+is_a: PREFER:0000180 ! operation mode control variable
 
 [Term]
 id: PREFER:0000184
 name: continuous operation mode-turbidostat
 namespace: precision_fermentation
-def: "A continuous operation mode in which fresh fermentation medium is supplied and fermentation culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density." []
+def: "An operation mode control variable in which fresh fermentation medium is supplied and fermentation culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density." []
 synonym: "continuous fermentation mode, turbidostat" EXACT []
 synonym: "continuous mode, turbidostat" BROAD []
-is_a: PREFER:0000180 ! operation mode
+is_a: PREFER:0000180 ! operation mode control variable
 
 [Term]
 id: PREFER:0000185
@@ -1640,56 +2528,57 @@ is_a: PREFER:0000185 ! bioreactor scale
 
 [Term]
 id: PREFER:0000189
-name: feed profile type
+name: feed profile type control variable
 namespace: precision_fermentation
 def: "The feeding strategies typically found in a fed-batch or continuous fermentation types." []
 comment: The type of feeding profiles applied is process specific.
+synonym: "feed profile type" EXACT []
 synonym: "feeding profile" EXACT []
 synonym: "feeding strategy" EXACT []
-is_a: PREFER:0000009 ! feed process control variable
+is_a: PREFER:0000009 ! feed control variable
 is_a: PREFER:0000015 ! operational parameter
 
 [Term]
 id: PREFER:0000190
 name: constant feeding rate
 namespace: precision_fermentation
-def: "A feed profile type in which the feed rate is maintained at a constant value throughout the feeding phase." []
-is_a: PREFER:0000189 ! feed profile type
+def: "A feed profile type control variable in which the feed rate is maintained at a constant value throughout the feeding phase." []
+is_a: PREFER:0000189 ! feed profile type control variable
 
 [Term]
 id: PREFER:0000191
 name: linear feeding rate
 namespace: precision_fermentation
-def: "A feed profile type in which the feed rate changes linearly with time throughout the feeding phase." []
-is_a: PREFER:0000189 ! feed profile type
+def: "A feed profile type control variable in which the feed rate changes linearly with time throughout the feeding phase." []
+is_a: PREFER:0000189 ! feed profile type control variable
 
 [Term]
 id: PREFER:0000192
 name: exponential feeding rate
 namespace: precision_fermentation
-def: "A feed profile type in which the feed rate increases exponentially with time throughout the feeding phase." []
-is_a: PREFER:0000189 ! feed profile type
+def: "A feed profile type control variable in which the feed rate increases exponentially with time throughout the feeding phase." []
+is_a: PREFER:0000189 ! feed profile type control variable
 
 [Term]
 id: PREFER:0000193
 name: constant-linear feeding rate
 namespace: precision_fermentation
-def: "A feed profile type in which the feed rate begins at a constant rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase." []
-is_a: PREFER:0000189 ! feed profile type
+def: "A feed profile type control variable in which the feed rate begins at a constant rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase." []
+is_a: PREFER:0000189 ! feed profile type control variable
 
 [Term]
 id: PREFER:0000194
 name: constant-exponential feeding rate
 namespace: precision_fermentation
-def: "A feed profile type in which the feed rate begins at a constant rate and subsequently transitions to a exponentially increasing feed rate with time throughout the feeding phase." []
-is_a: PREFER:0000189 ! feed profile type
+def: "A feed profile type control variable in which the feed rate begins at a constant rate and subsequently transitions to a exponentially increasing feed rate with time throughout the feeding phase." []
+is_a: PREFER:0000189 ! feed profile type control variable
 
 [Term]
 id: PREFER:0000195
 name: exponential-linear feeding rate
 namespace: precision_fermentation
-def: "A feed profile type in which the feed rate begins with an exponentially increasing rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase." []
-is_a: PREFER:0000189 ! feed profile type
+def: "A feed profile type control variable in which the feed rate begins with an exponentially increasing rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase." []
+is_a: PREFER:0000189 ! feed profile type control variable
 
 [Term]
 id: PREFER:0000200
@@ -1744,12 +2633,12 @@ relationship: BFO:0000051 CL:0000000 ! has part cell
 
 [Term]
 id: PREFER:0000209
-name: calculated omics sample variable
-def: "A process calculated variable that represents a set of values derived from computational analysis or omics data procesing from an offline sample associated with a process." []
+name: omics sample calculated variable
+def: "A precision fermentation process calculated variable that represents a set of values derived from computational analysis or omics data procesing from an offline sample associated with a fermentation process." []
 synonym: "calculated omics offline sample variable" EXACT []
 synonym: "computed omics offline sample variable" EXACT []
 synonym: "computed omics sample variable" EXACT []
-is_a: PREFER:9000002 ! process calculated variable
+is_a: PREFER:9000002 ! precision fermentation process calculated variable
 
 [Term]
 id: PREFER:7000000
@@ -1839,24 +2728,27 @@ is_a: PREFER:9000004 ! unit
 
 [Term]
 id: PREFER:9000000
-name: process control variable
-def: "An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a process, thereby affecting the behavior, operation, or outcome of that process." []
+name: precision fermentation process control variable
+def: "An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a fermentation process, thereby affecting the behavior, operation, or outcome of that process." []
 comment: A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.
 is_a: IAO:0000030 ! information content entity
 property_value: dc:contributor "https://orcid.org/0000-0001-7258-9596" xsd:string
 
 [Term]
 id: PREFER:9000001
-name: process measurement variable
-def: "An information content entity about a process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process." []
-synonym: "process measured variable" EXACT []
+name: precision fermentation process measurement variable
+def: "An information content entity about a precision fermentation process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process." []
+synonym: "PREcision FERmentation process measurement variable" EXACT []
+synonym: "process measurement variable" BROAD []
+xref: VO:0010241
 is_a: IAO:0000030 ! information content entity
 property_value: dc:contributor "https://orcid.org/0000-0001-7258-9596" xsd:string
 
 [Term]
 id: PREFER:9000002
-name: process calculated variable
-def: "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the process." []
+name: precision fermentation process calculated variable
+def: "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the fermentation process." []
+synonym: "process calculated variable" EXACT []
 synonym: "process computed variable" EXACT []
 is_a: IAO:0000030 ! information content entity
 property_value: dc:contributor "https://orcid.org/0000-0001-7258-9596" xsd:string
@@ -1873,6 +2765,7 @@ relationship: BAO_0002009 GO:0006113 ! fermentation
 id: PREFER:9000004
 name: unit
 def: "An information content entity that represents a standard quantity or measurement used to express the magnitude of a quantity." []
+comment: The decision to utilise https://units-of-measurement.org/ meant that we did not want to commit to any unit ontologies. We hence created our own parent class to parent units. Interoperability of units can be achieved by the matches in units-of-measurement, and this term should only be used to constraining in modelling.
 is_a: IAO:0000030 ! information content entity
 
 [Term]
@@ -1928,6 +2821,10 @@ xref: WBbt:0000100
 xref: XAO:0000000
 xref: ZFA:0100000
 is_a: BAO_0003114 ! assay biology component
+
+[Term]
+id: oboInOwl:ObsoleteClass
+name: Obsolete Class
 
 [Term]
 id: uom:%25
@@ -2115,10 +3012,81 @@ is_transitive: true
 is_a: RO:0002131 ! overlaps
 
 [Typedef]
+id: BFO:0000054
+name: realized in
+comment: Paraphrase of elucidation: a relation between a realizable entity and a process, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process
+domain: BFO:0000017 ! realizable entity
+range: BFO:0000015 ! process
+inverse_of: BFO:0000055 ! realizes
+
+[Typedef]
+id: BFO:0000055
+name: realizes
+def: "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process" []
+comment: Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process
+domain: BFO:0000015 ! process
+range: BFO:0000017 ! realizable entity
+
+[Typedef]
 id: IAO:0000136
 name: is about
 def: "A (currently) primitive relation that relates an information artifact to an entity." []
 domain: IAO:0000030 ! information content entity
+
+[Typedef]
+id: OBI:0000124
+name: is_supported_by_data
+def: "The relation between a data item and a conclusion where the conclusion is the output of a data interpreting process and the data item is used as an input to that process" []
+domain: OBI:0001909 ! conclusion based on data
+range: IAO:0000027 ! data item
+
+[Typedef]
+id: OBI:0000293
+name: has specified input
+def: "The inverse property of is specified input of" []
+domain: COB:0000035
+domain: OBI:0000011 ! obsolete planned process
+is_a: RO:0000057 ! has participant
+inverse_of: OBI:0000295 ! is specified input of
+
+[Typedef]
+id: OBI:0000295
+name: is specified input of
+def: "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of." []
+range: COB:0000035
+is_a: RO:0000056 ! participates in
+
+[Typedef]
+id: OBI:0000299
+name: has specified output
+def: "The inverse property of is specified output of" []
+domain: COB:0000035
+domain: OBI:0000011 ! obsolete planned process
+is_a: RO:0000057 ! has participant
+inverse_of: OBI:0000312 ! is specified output of
+
+[Typedef]
+id: OBI:0000312
+name: is specified output of
+def: "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of." []
+range: COB:0000035
+range: OBI:0000011 ! obsolete planned process
+is_a: RO:0000056 ! participates in
+
+[Typedef]
+id: OBI:0000417
+name: achieves_planned_objective
+def: "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process." []
+domain: COB:0000035
+range: IAO:0000005 ! objective specification
+inverse_of: OBI:0000833 ! objective_achieved_by
+
+[Typedef]
+id: OBI:0000833
+name: objective_achieved_by
+def: "This relation obtains between an objective specification and a planned process when the criteria specified in the objective specification are met at the end of the planned process." []
+domain: IAO:0000005 ! objective specification
+range: COB:0000035
 
 [Typedef]
 id: PREFER:8000000
@@ -2190,13 +3158,14 @@ name: has bioreactor scale
 def: "x has_bioreactor_scale y iff x is a bioreactor and y is the scale that the bioreactor supports." []
 domain: PREFER:0000014 ! bioreactor
 range: PREFER:0000185 ! bioreactor scale
+is_a: RO:0000086 ! has quality
 inverse_of: PREFER:8000009 ! is bioreactor scale of
 
 [Typedef]
 id: PREFER:8000009
 name: is bioreactor scale of
 def: "inverse of has bioreactor scale." []
-is_a: IAO:0000136 ! is about
+is_a: RO:0000080 ! quality of
 
 [Typedef]
 id: PREFER:8000010
@@ -2226,7 +3195,7 @@ id: PREFER:8000013
 name: has feed profile type
 def: "x has feed profile type y iff x is a feed and y is the type of feed profile used in x." []
 domain: PREFER:0000037 ! feed medium cultivation condition
-range: PREFER:0000189 ! feed profile type
+range: PREFER:0000189 ! feed profile type control variable
 
 [Typedef]
 id: PREFER:8000014
@@ -2321,6 +3290,21 @@ range: BFO:0000002 ! continuant
 holds_over_chain: BFO:0000051 RO:0000057
 
 [Typedef]
+id: RO:0000058
+name: is concretized as
+def: "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes." []
+domain: BFO:0000031 ! generically dependent continuant
+range: BFO:0000020 ! specifically dependent continuant
+inverse_of: RO:0000059 ! concretizes
+
+[Typedef]
+id: RO:0000059
+name: concretizes
+def: "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant." []
+domain: BFO:0000020 ! specifically dependent continuant
+range: BFO:0000031 ! generically dependent continuant
+
+[Typedef]
 id: RO:0000079
 name: function of
 def: "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence" []
@@ -2402,7 +3386,7 @@ name: in taxon
 def: "x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed." []
 comment: Connects a biological entity to its taxon of origin.
 synonym: "life cycle stage of" NARROW []
-range: OBI:0100026
+range: COB:0000022
 holds_over_chain: RO:0002131 RO:0002162
 is_a: RO:0002320 ! evolutionarily related to
 
@@ -2424,8 +3408,39 @@ name: mereotopologically related to
 def: "A mereological relationship or a topological relationship" []
 
 [Typedef]
+id: RO:0002350
+name: member of
+def: "is member of is a mereological relation between a item and a collection." []
+is_a: BFO:0000050 ! part of
+inverse_of: RO:0002351 ! has member
+
+[Typedef]
+id: RO:0002351
+name: has member
+def: "has member is a mereological relation between a collection and an item." []
+is_a: BFO:0000051 ! has part
+
+[Typedef]
 id: RO:0002502
 name: depends on
+
+[Typedef]
+id: RO:0010001
+name: generically depends on
+def: "A generically dependent continuant *b* generically depends on an independent continuant *c* at time *t* means: there inheres in *c* a specifically deendent continuant which concretizes *b* at *t*." []
+synonym: "g-depends on" EXACT []
+domain: BFO:0000031 ! generically dependent continuant
+range: BFO:0000004 ! independent continuant
+holds_over_chain: RO:0000052 RO:0000058
+inverse_of: RO:0010002 ! is carrier of
+
+[Typedef]
+id: RO:0010002
+name: is carrier of
+def: "*b* is carrier of *c* at time *t* if and only if *c* *g-depends on* *b* at *t*" []
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000031 ! generically dependent continuant
+holds_over_chain: RO:0000059 RO:0000053
 
 [Typedef]
 id: RO:0015012
