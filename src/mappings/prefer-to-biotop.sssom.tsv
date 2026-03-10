@@ -1,0 +1,12 @@
+#curie_map:					
+#  PREFER: http://purl.obolibrary.org/obo/PREFER_					
+#  btl2: http://purl.org/biotop/btl2.owl#					
+#  ORCID: https://orcid.org/					
+#  obo: http://purl.obolibrary.org/obo/									
+#mapping_set_description: Mappings between the PREFER ontology and BioTop.					
+#  - ORCID:0009-0009-0018-4253					
+#license: https://creativecommons.org/licenses/by/4.0/					
+#subject_source: obo:prefer.owl					
+#object_source: http://purl.org/biotop/btl2.owl
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+PREFER:0000013  taxon quality	skos:exactMatch	btl2:TaxonQuality	taxon quality	semapv:ManualMappingCuration

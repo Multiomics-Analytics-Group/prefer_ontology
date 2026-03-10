@@ -23,6 +23,7 @@ Declaration(Class(obo:PREFER_9000000))
 Declaration(Class(obo:PREFER_9000001))
 Declaration(Class(obo:PREFER_9000002))
 Declaration(Class(obo:PREFER_9000003))
+Declaration(Class(obo:PREFER_9000004))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002009>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dc:contributor))
@@ -33,26 +34,27 @@ Declaration(AnnotationProperty(dc:contributor))
 #   Classes
 ############################
 
-# Class: obo:PREFER_9000000 (process control variable)
+# Class: obo:PREFER_9000000 (precision fermentation process control variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a process, thereby affecting the behavior, operation, or outcome of that process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "An information content entity that represents a parameter or setting about a system, which is realized as input or configuration in controlling or regulating a fermentation process, thereby affecting the behavior, operation, or outcome of that process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000000 "https://orcid.org/0000-0001-7258-9596")
 AnnotationAssertion(rdfs:comment obo:PREFER_9000000 "A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.")
-AnnotationAssertion(rdfs:label obo:PREFER_9000000 "process control variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_9000000 "precision fermentation process control variable"@en)
 SubClassOf(obo:PREFER_9000000 obo:IAO_0000030)
 
-# Class: obo:PREFER_9000001 (process measurement variable)
+# Class: obo:PREFER_9000001 (precision fermentation process measurement variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000001 "An information content entity about a process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000001 "An information content entity about a precision fermentation process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000001 "https://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(rdfs:label obo:PREFER_9000001 "process measurement variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_9000001 "precision fermentation process measurement variable"@en)
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_9000001 "VO:0010241")
 SubClassOf(obo:PREFER_9000001 obo:IAO_0000030)
 
-# Class: obo:PREFER_9000002 (process calculated variable)
+# Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the fermentation process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000002 "https://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(rdfs:label obo:PREFER_9000002 "process calculated variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_9000002 "precision fermentation process calculated variable"@en)
 SubClassOf(obo:PREFER_9000002 obo:IAO_0000030)
 
 # Class: obo:PREFER_9000003 (precision fermentation process)
@@ -68,5 +70,6 @@ SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(<http://www.bioassayontology.
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000004 "An information content entity that represents a standard quantity or measurement used to express the magnitude of a quantity.")
 AnnotationAssertion(rdfs:label obo:PREFER_9000004 "unit"@en)
 SubClassOf(obo:PREFER_9000004 obo:IAO_0000030)
+
 
 )
