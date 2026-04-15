@@ -70,6 +70,11 @@ src/patterns/all_pattern_terms.txt
 
 # These are my custom lines
 notes.txt
+<<<<<<< Updated upstream
+=======
+robot_cli.txt
+collabs/
+>>>>>>> Stashed changes
 # End of custom lines
 
 # Byte-compiled / optimized / DLL files
