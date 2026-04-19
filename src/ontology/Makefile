@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                8054a18864e26d5c71072513123dba25609e359f6932ada092391dac00ef7b47
+CONFIG_HASH=                9a0a3d76cec9c6340188e484630bcbd0bff7351fa8a0d651f0951fc3d74dea07
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao cl omo ro chebi bao pato go obi uberon cob
+IMPORTS =  iao cl omo ro chebi pato go obi uberon cob
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -512,7 +512,7 @@ mirror-cl: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/omo.owl
 mirror-omo: | $(TMPDIR)
 	curl -L $(OBOBASE)/omo.owl --create-dirs -o $(TMPDIR)/omo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/omo-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -i $(TMPDIR)/omo-download.owl --base-iri http://purl.obolibrary.org/obo/OMO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ro
@@ -528,13 +528,6 @@ mirror-ro: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
 	$(ROBOT) convert -I https://github.com/obophenotype/chebi_obo_slim/releases/latest/download/chebi_slim.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: bao
-.PHONY: mirror-bao
-.PRECIOUS: $(MIRRORDIR)/bao.owl
-mirror-bao: | $(TMPDIR)
-	$(ROBOT) remove -I http://www.bioassayontology.org/bao/bao_complete.owl --base-iri http://purl.obolibrary.org/obo/BAO  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: pato

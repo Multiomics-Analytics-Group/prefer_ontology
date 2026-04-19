@@ -29,15 +29,11 @@ import_group:
     - id: cl
       use_base: TRUE
     - id: omo
+      make_base: TRUE
     - id: ro
       use_base: TRUE
     - id: chebi
       mirror_from: https://github.com/obophenotype/chebi_obo_slim/releases/latest/download/chebi_slim.owl
-    - id: bao
-      mirror_from: http://www.bioassayontology.org/bao/bao_complete.owl
-      make_base: TRUE
-      base_irirs:
-        - http://www.bioassayontology.org/
     - id: pato
       use_base: TRUE
     - id: go
