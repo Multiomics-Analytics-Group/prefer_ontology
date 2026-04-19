@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                cf4c35b3e73f367edd71097fbd9dba1ceb3589e4b9ba2fa6c0c1f5cb68282c86
+CONFIG_HASH=                8054a18864e26d5c71072513123dba25609e359f6932ada092391dac00ef7b47
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao cl omo ro chebi bao pato go obi
+IMPORTS =  iao cl omo ro chebi bao pato go obi uberon cob
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -559,6 +559,22 @@ mirror-go: | $(TMPDIR)
 mirror-obi: | $(TMPDIR)
 	curl -L $(OBOBASE)/obi/obi-base.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: uberon
+.PHONY: mirror-uberon
+.PRECIOUS: $(MIRRORDIR)/uberon.owl
+mirror-uberon: | $(TMPDIR)
+	curl -L $(OBOBASE)/uberon/uberon-base.owl --create-dirs -o $(TMPDIR)/uberon-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/uberon-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: cob
+.PHONY: mirror-cob
+.PRECIOUS: $(MIRRORDIR)/cob.owl
+mirror-cob: | $(TMPDIR)
+	curl -L $(OBOBASE)/cob/cob-base.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/cob-download.owl -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true

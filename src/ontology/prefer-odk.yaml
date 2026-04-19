@@ -44,6 +44,10 @@ import_group:
       use_base: TRUE
     - id: obi
       use_base: TRUE
+    - id: uberon
+      use_base: TRUE
+    - id: cob
+      use_base: TRUE
 robot_java_args: "-Xmx16G"
 robot_report:
   use_labels: TRUE
