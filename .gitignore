@@ -71,6 +71,8 @@ src/patterns/all_pattern_terms.txt
 # These are my custom lines
 notes.txt
 robot_cli.txt
+collabs/
+
 # End of custom lines
 
 # Byte-compiled / optimized / DLL files
