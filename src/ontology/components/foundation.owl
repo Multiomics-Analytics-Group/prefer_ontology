@@ -24,9 +24,11 @@ Declaration(Class(obo:PREFER_9000001))
 Declaration(Class(obo:PREFER_9000002))
 Declaration(Class(obo:PREFER_9000003))
 Declaration(Class(obo:PREFER_9000004))
+Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(<http://www.bioassayontology.org/bao#BAO_0002009>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
 
 
 
@@ -46,8 +48,8 @@ SubClassOf(obo:PREFER_9000000 obo:IAO_0000030)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000001 "An information content entity about a precision fermentation process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000001 "https://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(rdfs:label obo:PREFER_9000001 "precision fermentation process measurement variable"@en)
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_9000001 "VO:0010241")
+AnnotationAssertion(rdfs:label obo:PREFER_9000001 "precision fermentation process measurement variable"@en)
 SubClassOf(obo:PREFER_9000001 obo:IAO_0000030)
 
 # Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
@@ -63,7 +65,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000003 "A process that involves 
 AnnotationAssertion(rdfs:comment obo:PREFER_9000003 "Precision fermentation is a biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively laboratory-evolved (ALE) microorganisms (such as bacteria, yeast, fungi or microalgae) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods.")
 AnnotationAssertion(rdfs:label obo:PREFER_9000003 "precision fermentation process"@en)
 SubClassOf(obo:PREFER_9000003 obo:BFO_0000015)
-SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002009> obo:GO_0006113))
+SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0006113))
 
 # Class: obo:PREFER_9000004 (unit)
 

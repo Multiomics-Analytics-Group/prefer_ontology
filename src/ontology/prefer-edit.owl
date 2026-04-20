@@ -237,6 +237,7 @@ Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
 Declaration(ObjectProperty(obo:PREFER_8000030))
+Declaration(ObjectProperty(obo:OBI_0001938))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -272,11 +273,11 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (alternative_term)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
@@ -292,7 +293,7 @@ AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_vers
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
-# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+# Annotation Property: oboInOwl:hasRelatedSynonym (has related synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
@@ -522,7 +523,7 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000011 obo:PREFER
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000015 obo:PREFER_0000012))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000016 obo:PREFER_0000018))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000017 obo:CHEBI_24431))
-SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002922> obo:PREFER_0000011))
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:RO_0000057 obo:PREFER_0000011))
 
 # Class: obo:PREFER_0000005 (alkaline cultivation condition)
 
@@ -536,7 +537,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000006 "A process control variab
 AnnotationAssertion(rdfs:label obo:PREFER_0000006 "gravimetric feed rate control variable"@en)
 SubClassOf(obo:PREFER_0000006 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000075))
-SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.h-1))
+SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.h-1))
 
 # Class: obo:PREFER_0000007 (temperature cultivation condition)
 
@@ -684,7 +685,7 @@ SubClassOf(obo:PREFER_0000019 obo:PREFER_0000007)
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000019 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000041))
-SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000020 (pH setpoint control variable)
 
@@ -702,7 +703,7 @@ SubClassOf(obo:PREFER_0000020 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000040))
-SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%5BpH%5D>))
+SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%5BpH%5D>))
 
 # Class: obo:PREFER_0000021 (pH base solution)
 
@@ -751,7 +752,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000025 "dissolved oxygen setpoint con
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000039))
-SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
+SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000026 (dissolved oxygen cascade level control variable)
 
@@ -779,7 +780,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint con
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
-SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000008))
+SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 
 # Class: obo:PREFER_0000028 (minimum stirring setpoint control variable)
 
@@ -795,7 +796,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint con
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
-SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000008))
+SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 
 # Class: obo:PREFER_0000029 (pressure cultivation condition)
 
@@ -824,7 +825,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000031 "maximum aeration setpoint con
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
-SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
+SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 
 # Class: obo:PREFER_0000032 (minimum aeration setpoint control variable)
 
@@ -837,7 +838,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000032 "minimum aeration setpoint con
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
-SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
+SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 
 # Class: obo:PREFER_0000033 (dissolved oxygen cultivation condition)
 
@@ -859,7 +860,7 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000034 "The starting OD measurement
 AnnotationAssertion(rdfs:label obo:PREFER_0000034 "starting optical density measurement variable")
 SubClassOf(obo:PREFER_0000034 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000034 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000006))
+SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 
 # Class: obo:PREFER_0000035 (final seed optical density measurement variable)
 
@@ -871,7 +872,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000035 "PREFER:0000035")
 AnnotationAssertion(rdfs:label obo:PREFER_0000035 "final seed optical density measurement variable")
 SubClassOf(obo:PREFER_0000035 obo:PREFER_0000073)
 SubClassOf(obo:PREFER_0000035 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000006))
+SubClassOf(obo:PREFER_0000035 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 
 # Class: obo:PREFER_0000036 (initial culture volume measurement variable)
 
@@ -885,7 +886,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000036 "PREFER:0000036")
 AnnotationAssertion(rdfs:label obo:PREFER_0000036 "initial culture volume measurement variable")
 SubClassOf(obo:PREFER_0000036 obo:PREFER_0000046)
 SubClassOf(obo:PREFER_0000036 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000037 (feed medium cultivation condition)
 
@@ -905,7 +906,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000038 "PREFER:0000038")
 AnnotationAssertion(rdfs:label obo:PREFER_0000038 "batch medium pH measurement variable")
 SubClassOf(obo:PREFER_0000038 obo:PREFER_0000024)
 SubClassOf(obo:PREFER_0000038 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%5BpH%5D>))
+SubClassOf(obo:PREFER_0000038 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%5BpH%5D>))
 
 # Class: obo:PREFER_0000039 (dissolved oxygen measurement variable)
 
@@ -918,7 +919,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000039 "dissolved oxygen measurement 
 SubClassOf(obo:PREFER_0000039 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000039 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000007))
+SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000007))
 
 # Class: obo:PREFER_0000040 (pH measurement variable)
 
@@ -930,7 +931,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000040 "pH measurement variable")
 SubClassOf(obo:PREFER_0000040 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000040 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%5BpH%5D>))
+SubClassOf(obo:PREFER_0000040 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%5BpH%5D>))
 
 # Class: obo:PREFER_0000041 (temperature measurement variable)
 
@@ -942,7 +943,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000041 "temperature measurement varia
 SubClassOf(obo:PREFER_0000041 obo:PREFER_0000007)
 SubClassOf(obo:PREFER_0000041 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000041 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000042 (pressure measurement variable)
 
@@ -954,7 +955,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000042 "pressure measurement variable
 SubClassOf(obo:PREFER_0000042 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000042 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000042 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000043 (volume measurement variable)
 
@@ -966,7 +967,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000043 "volume measurement variable")
 SubClassOf(obo:PREFER_0000043 obo:PREFER_0000046)
 SubClassOf(obo:PREFER_0000043 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000043 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000044 (offline sample mass compound measurement variable)
 
@@ -977,7 +978,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000044 "PREFER:0000044")
 AnnotationAssertion(rdfs:label obo:PREFER_0000044 "offline sample mass compound measurement variable")
 SubClassOf(obo:PREFER_0000044 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
-SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000045 (optical density cultivation condition)
 
@@ -1005,7 +1006,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000047 "acid volume measurement varia
 SubClassOf(obo:PREFER_0000047 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000047 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000047 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000048 (base volume measurement variable)
 
@@ -1021,7 +1022,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000048 "base volume measurement varia
 SubClassOf(obo:PREFER_0000048 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000048 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000048 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000049 (acid rate measurement variable)
 
@@ -1033,7 +1034,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000049 "acid rate measurement variabl
 SubClassOf(obo:PREFER_0000049 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000049 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
+SubClassOf(obo:PREFER_0000049 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 
 # Class: obo:PREFER_0000050 (base rate measurement variable)
 
@@ -1045,7 +1046,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000050 "base rate measurement variabl
 SubClassOf(obo:PREFER_0000050 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000050 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
+SubClassOf(obo:PREFER_0000050 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 
 # Class: obo:PREFER_0000051 (feed amount measurement variable)
 
@@ -1057,7 +1058,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000051 "feed amount measurement varia
 SubClassOf(obo:PREFER_0000051 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000051 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000051 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000052 (feed volume measurement variable)
 
@@ -1069,7 +1070,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000052 "feed volume measurement varia
 SubClassOf(obo:PREFER_0000052 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000052 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000052 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000053 (volumetric feed rate measurement variable)
 
@@ -1081,7 +1082,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000053 "volumetric feed rate measurem
 SubClassOf(obo:PREFER_0000053 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000053 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
+SubClassOf(obo:PREFER_0000053 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 
 # Class: obo:PREFER_0000054 (stirrer speed measurement variable)
 
@@ -1093,7 +1094,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000054 "stirrer speed measurement var
 SubClassOf(obo:PREFER_0000054 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000054 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000008))
+SubClassOf(obo:PREFER_0000054 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 
 # Class: obo:PREFER_0000055 (air flow rate measurement variable)
 
@@ -1105,7 +1106,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000055 "air flow rate measurement var
 SubClassOf(obo:PREFER_0000055 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000055 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
+SubClassOf(obo:PREFER_0000055 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 
 # Class: obo:PREFER_0000056 (nitrogen flow rate measurement variable)
 
@@ -1117,7 +1118,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000056 "nitrogen flow rate measuremen
 SubClassOf(obo:PREFER_0000056 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000056 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
+SubClassOf(obo:PREFER_0000056 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 
 # Class: obo:PREFER_0000057 (oxygen flow rate measurement variable)
 
@@ -1129,7 +1130,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000057 "oxygen flow rate measurement 
 SubClassOf(obo:PREFER_0000057 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000057 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
+SubClassOf(obo:PREFER_0000057 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 
 # Class: obo:PREFER_0000058 (inlet air oxygen measurement variable)
 
@@ -1142,7 +1143,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000058 "inlet air oxygen measurement 
 SubClassOf(obo:PREFER_0000058 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000058 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
+SubClassOf(obo:PREFER_0000058 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000059 (inlet air carbon dioxide measurement variable)
 
@@ -1155,7 +1156,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000059 "inlet air carbon dioxide meas
 SubClassOf(obo:PREFER_0000059 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000059 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
+SubClassOf(obo:PREFER_0000059 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000060 (optical density measurement variable)
 
@@ -1168,7 +1169,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000060 "PREFER:0000060")
 AnnotationAssertion(rdfs:label obo:PREFER_0000060 "optical density measurement variable")
 SubClassOf(obo:PREFER_0000060 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000060 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000006))
+SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 
 # Class: obo:PREFER_0000061 (oxygen uptake rate variable)
 
@@ -1180,7 +1181,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000061 "PREFER:0000061")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000061 "Biorespiration. Dynamic respiratory metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000061 "oxygen uptake rate variable")
 SubClassOf(obo:PREFER_0000061 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mmol.h-1))
+SubClassOf(obo:PREFER_0000061 ObjectSomeValuesFrom(obo:OBI_0001938 uom:mmol.h-1))
 
 # Class: obo:PREFER_0000062 (carbon dioxide evolution rate variable)
 
@@ -1192,7 +1193,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000062 "PREFER:0000062")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000062 "Physical gas transfer. Dynamic respiratory metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000062 "carbon dioxide evolution rate variable")
 SubClassOf(obo:PREFER_0000062 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mmol.h-1))
+SubClassOf(obo:PREFER_0000062 ObjectSomeValuesFrom(obo:OBI_0001938 uom:mmol.h-1))
 
 # Class: obo:PREFER_0000063 (oxygen transfer rate variable)
 
@@ -1203,7 +1204,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000063 "PREFER:0000063")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000063 "Physical gas transfer. Dynamic respiratory metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000063 "oxygen transfer rate variable")
 SubClassOf(obo:PREFER_0000063 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
+SubClassOf(obo:PREFER_0000063 ObjectSomeValuesFrom(obo:OBI_0001938 uom:mol.h-1))
 
 # Class: obo:PREFER_0000064 (carbon dioxide transfer rate variable)
 
@@ -1214,7 +1215,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000064 "PREFER:0000064")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000064 "Physical gas transfer. Dynamic respiratory metric. Important as carbon dioxide is considered a by-product in aerobic processes, and so is a parameter used for predicting biomass concentration, evaluating energetic efficiencies of growth, monitoring growth yields and controlling fed batch processes like airflow rates or stir speeds.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000064 "carbon dioxide transfer rate variable")
 SubClassOf(obo:PREFER_0000064 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:mol.h-1))
+SubClassOf(obo:PREFER_0000064 ObjectSomeValuesFrom(obo:OBI_0001938 uom:mol.h-1))
 
 # Class: obo:PREFER_0000065 (respiratory quotient variable)
 
@@ -1225,7 +1226,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000065 "PREFER:0000065")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000065 "Derived metabolic indicator.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000065 "respiratory quotient variable")
 SubClassOf(obo:PREFER_0000065 obo:PREFER_0000158)
-SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000007))
+SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000007))
 
 # Class: obo:PREFER_0000068 (offgas carbon dioxide measurement variable)
 
@@ -1237,7 +1238,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000068 "PREFER:0000068")
 AnnotationAssertion(rdfs:label obo:PREFER_0000068 "offgas carbon dioxide measurement variable")
 SubClassOf(obo:PREFER_0000068 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
+SubClassOf(obo:PREFER_0000068 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000069 (offgas oxygen measurement variable)
 
@@ -1249,7 +1250,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000069 "PREFER:0000069")
 AnnotationAssertion(rdfs:label obo:PREFER_0000069 "offgas oxygen measurement variable")
 SubClassOf(obo:PREFER_0000069 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
+SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000071 (biomass concentration variable)
 
@@ -1259,7 +1260,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000071 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000071 "PREFER:0000071")
 AnnotationAssertion(rdfs:label obo:PREFER_0000071 "biomass concentration variable")
 SubClassOf(obo:PREFER_0000071 obo:PREFER_0000091)
-SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.L-1))
+SubClassOf(obo:PREFER_0000071 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.L-1))
 
 # Class: obo:PREFER_0000072 (carbon dioxide flow rate measurement variable)
 
@@ -1269,7 +1270,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000072 "carbon dioxide flow rate meas
 SubClassOf(obo:PREFER_0000072 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000072 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000072 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000072 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.min-1))
+SubClassOf(obo:PREFER_0000072 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 
 # Class: obo:PREFER_0000073 (seed cultivation condition)
 
@@ -1283,7 +1284,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000074 "A process titer metric t
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000074 "compound concentration calculated variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000074 "compound concentration variable"@en)
 SubClassOf(obo:PREFER_0000074 obo:PREFER_0000091)
-SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.L-1))
+SubClassOf(obo:PREFER_0000074 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.L-1))
 
 # Class: obo:PREFER_0000075 (gravimetric feed rate measurement variable)
 
@@ -1295,7 +1296,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000075 "gravimetric feed rate measure
 SubClassOf(obo:PREFER_0000075 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000075 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
-SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g.h-1))
+SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.h-1))
 
 # Class: obo:PREFER_0000077 (dilution feed rate control variable)
 
@@ -1307,7 +1308,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
 AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution feed rate control variable")
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
+SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(obo:OBI_0001938 uom:h-1))
 
 # Class: obo:PREFER_0000078 (key process metric)
 
@@ -1326,7 +1327,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000079 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000079 "PREFER:0000079")
 AnnotationAssertion(rdfs:label obo:PREFER_0000079 "carbon balance variable")
 SubClassOf(obo:PREFER_0000079 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000081 (degree of reduction balance variable)
 
@@ -1337,7 +1338,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000081 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000081 "PREFER:0000081")
 AnnotationAssertion(rdfs:label obo:PREFER_0000081 "degree of reduction balance variable")
 SubClassOf(obo:PREFER_0000081 obo:PREFER_0000157)
-SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> <https://w3id.org/uom/%25>))
+SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000083 (compound consumed variable)
 
@@ -1347,7 +1348,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000083 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000083 "PREFER:0000083")
 AnnotationAssertion(rdfs:label obo:PREFER_0000083 "compound consumed variable")
 SubClassOf(obo:PREFER_0000083 obo:PREFER_0000162)
-SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000085 (microbioreactor scale)
 
@@ -1371,7 +1372,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000087 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000087 "PREFER:0000087")
 AnnotationAssertion(rdfs:label obo:PREFER_0000087 "substrate uptake rate variable")
 SubClassOf(obo:PREFER_0000087 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000087 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000088 (batch phase)
 
@@ -1386,7 +1387,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000089 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000089 "PREFER:0000089")
 AnnotationAssertion(rdfs:label obo:PREFER_0000089 "specific substrate uptake rate variable")
 SubClassOf(obo:PREFER_0000089 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000089 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000090 (feed phase)
 
@@ -1409,7 +1410,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000094 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000094 "PREFER:0000094")
 AnnotationAssertion(rdfs:label obo:PREFER_0000094 "substrate yield (biomass) variable")
 SubClassOf(obo:PREFER_0000094 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000094 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000095 (growth phase)
 
@@ -1433,7 +1434,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000101 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000101 "PREFER:0000101")
 AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen production rate variable")
 SubClassOf(obo:PREFER_0000101 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000103 (specific oxygen uptake rate measurement variable)
 
@@ -1444,7 +1445,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000103 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000103 "PREFER:0000103")
 AnnotationAssertion(rdfs:label obo:PREFER_0000103 "specific oxygen uptake rate measurement variable")
 SubClassOf(obo:PREFER_0000103 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000103 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000001))
+SubClassOf(obo:PREFER_0000103 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000001))
 
 # Class: obo:PREFER_0000104 (oxygen yield (substrate) variable)
 
@@ -1455,7 +1456,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000104 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000104 "PREFER:0000104")
 AnnotationAssertion(rdfs:label obo:PREFER_0000104 "oxygen yield (substrate) variable")
 SubClassOf(obo:PREFER_0000104 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000105 (seed culture)
 
@@ -1476,19 +1477,19 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000106 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000106 "PREFER:0000106")
 AnnotationAssertion(rdfs:label obo:PREFER_0000106 "oxygen yield (biomass) variable")
 SubClassOf(obo:PREFER_0000106 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000106 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000000))
+SubClassOf(obo:PREFER_0000106 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000000))
 
 # Class: obo:PREFER_0000107 (compound formed variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000107 "A compound balance metric that represents the total amount of compound produced or formed in a bioreactor or fermentation system, representing the cumulative production of the compound during the fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound produced variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound formed calculated variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound produced calculated variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000107 "compound produced variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000107 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000107 "PREFER:0000107")
 AnnotationAssertion(rdfs:label obo:PREFER_0000107 "compound formed variable")
 SubClassOf(obo:PREFER_0000107 obo:PREFER_0000162)
-SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000107 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000108 (fermentation medium role)
 
@@ -1520,7 +1521,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000111 "PREFER:0000111")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000111 "It is calculated substracting the compound concentration measured offline, multiplied by the liquid volume downscaled to get the residual amount.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000111 "residual compound amount variable")
 SubClassOf(obo:PREFER_0000111 obo:PREFER_0000162)
-SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g))
+SubClassOf(obo:PREFER_0000111 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g))
 
 # Class: obo:PREFER_0000112 (seed medium)
 
@@ -1539,7 +1540,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000113 "compound form
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000113 "PREFER:0000113")
 AnnotationAssertion(rdfs:label obo:PREFER_0000113 "compound production rate variable")
 SubClassOf(obo:PREFER_0000113 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000114 (inlet air oxygen setpoint control variable)
 
@@ -1557,7 +1558,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000115 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000115 "PREFER:0000115")
 AnnotationAssertion(rdfs:label obo:PREFER_0000115 "specific compound production rate variable")
 SubClassOf(obo:PREFER_0000115 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000116 (inlet air carbon dioxide setpoint control variable)
 
@@ -1574,7 +1575,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000117 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000117 "PREFER:0000117")
 AnnotationAssertion(rdfs:label obo:PREFER_0000117 "compound produced yield (substrate) variable")
 SubClassOf(obo:PREFER_0000117 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000118 (optical density control variable)
 
@@ -1591,7 +1592,7 @@ SubClassOf(obo:PREFER_0000118 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000060))
-SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000006))
+SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 
 # Class: obo:PREFER_0000119 (dissolved oxygen control variable)
 
@@ -1610,7 +1611,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000120 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000120 "PREFER:0000120")
 AnnotationAssertion(rdfs:label obo:PREFER_0000120 "compound produced yield (biomass) variable")
 SubClassOf(obo:PREFER_0000120 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000121 (pressure setpoint control variable)
 
@@ -1627,7 +1628,7 @@ SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000042))
-SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000122 (volumetric feed rate control variable)
 
@@ -1636,7 +1637,7 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate control 
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
-SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:L.h-1))
+SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 
 # Class: obo:PREFER_0000128 (carbon dioxide production rate variable)
 
@@ -1647,7 +1648,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000128 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000128 "PREFER:0000128")
 AnnotationAssertion(rdfs:label obo:PREFER_0000128 "carbon dioxide production rate variable")
 SubClassOf(obo:PREFER_0000128 obo:PREFER_0000159)
-SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000129 (inlet air nitrogen setpoint control variable)
 
@@ -1666,7 +1667,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000130 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000130 "PREFER:0000130")
 AnnotationAssertion(rdfs:label obo:PREFER_0000130 "specific carbon dioxide evolution rate measurement variable")
 SubClassOf(obo:PREFER_0000130 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000130 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000001))
+SubClassOf(obo:PREFER_0000130 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000001))
 
 # Class: obo:PREFER_0000131 (carbon dioxide yield (substrate) variable)
 
@@ -1677,7 +1678,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000131 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000131 "PREFER:0000131")
 AnnotationAssertion(rdfs:label obo:PREFER_0000131 "carbon dioxide yield (substrate) variable")
 SubClassOf(obo:PREFER_0000131 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000133 (carbon dioxide yield (biomass) variable)
 
@@ -1688,7 +1689,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000133 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000133 "PREFER:0000133")
 AnnotationAssertion(rdfs:label obo:PREFER_0000133 "carbon dioxide yield (biomass) variable")
 SubClassOf(obo:PREFER_0000133 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000133 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_7000000))
+SubClassOf(obo:PREFER_0000133 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000000))
 
 # Class: obo:PREFER_0000134 (biomass amount variable)
 
@@ -1698,7 +1699,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000134 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000134 "PREFER:0000134")
 AnnotationAssertion(rdfs:label obo:PREFER_0000134 "biomass amount variable")
 SubClassOf(obo:PREFER_0000134 obo:PREFER_0000161)
-SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000134 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000135 (genomics sample calculated variable)
 
@@ -1714,19 +1715,19 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000136 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000136 "PREFER:0000136")
 AnnotationAssertion(rdfs:label obo:PREFER_0000136 "biomass lost in sampling variable")
 SubClassOf(obo:PREFER_0000136 obo:PREFER_0000161)
-SubClassOf(obo:PREFER_0000136 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:g))
+SubClassOf(obo:PREFER_0000136 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g))
 
 # Class: obo:PREFER_0000137 (biomass formed variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000137 "A biomass balance metric that represents the cumulative quantity of cellular biomass generated in a bioreactor or fermentation system, during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass production variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass formed calculated variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass production calculated variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000137 "biomass production variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000137 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000137 "PREFER:0000137")
 AnnotationAssertion(rdfs:label obo:PREFER_0000137 "biomass formed variable")
 SubClassOf(obo:PREFER_0000137 obo:PREFER_0000161)
-SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000137 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000138 (transcriptomics sample calculated variable)
 
@@ -1749,7 +1750,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000140 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000140 "PREFER:0000140")
 AnnotationAssertion(rdfs:label obo:PREFER_0000140 "biomass formation rate variable")
 SubClassOf(obo:PREFER_0000140 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000140 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000141 (fluxomics sample calculated variable)
 
@@ -1767,18 +1768,18 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000142 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
 AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific biomass formation rate variable")
 SubClassOf(obo:PREFER_0000142 obo:PREFER_0000160)
-SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> uom:h-1))
+SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(obo:OBI_0001938 uom:h-1))
 
 # Class: obo:PREFER_0000147 (biomass yield (substrate) variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000147 "A process yield metric that represents the yield of biomass produced per substrate consumed, describing the efficiency of substrate conversion into biomass in a bioreactor or fermentation system, during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000147 "biomass yield (S) variable")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000147 "Ysx variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000147 "biomass yield (S) variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000147 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000147 "PREFER:0000147")
 AnnotationAssertion(rdfs:label obo:PREFER_0000147 "biomass yield (substrate) variable")
 SubClassOf(obo:PREFER_0000147 obo:PREFER_0000155)
-SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(<http://www.bioassayontology.org/bao#BAO_0002874> obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000147 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000148 (metabolomics sample calculated variable)
 
@@ -2181,8 +2182,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "PREcision FERme
 
 # Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process computed variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process calculated variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process computed variable")
 
 # Class: obo:PREFER_9000004 (unit)
 
