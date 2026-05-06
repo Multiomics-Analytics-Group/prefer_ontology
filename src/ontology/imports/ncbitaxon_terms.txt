@@ -1,0 +1,5 @@
+NCBITaxon:4951 # Yarrowia
+NCBITaxon:562 # Escherichia coli
+NCBITaxon:1888 # Streptomyces albus
+NCBITaxon:1598 # Limosilactobacillus reuteri
+NCBITaxon:1760 # Actinomycetes

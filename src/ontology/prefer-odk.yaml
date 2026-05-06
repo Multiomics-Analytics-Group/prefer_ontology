@@ -44,6 +44,8 @@ import_group:
       use_base: TRUE
     - id: cob
       use_base: TRUE
+    - id: ncbitaxon
+      mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
 robot_java_args: "-Xmx16G"
 robot_report:
   use_labels: TRUE
