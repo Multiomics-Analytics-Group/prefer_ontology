@@ -208,6 +208,7 @@ Declaration(Class(obo:PREFER_8000045))
 Declaration(Class(obo:PREFER_8000046))
 Declaration(Class(obo:PREFER_8000047))
 Declaration(Class(obo:PREFER_8000048))
+Declaration(Class(obo:PREFER_8000049))
 Declaration(Class(obo:PREFER_9000003))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
@@ -243,6 +244,8 @@ Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
 Declaration(ObjectProperty(obo:PREFER_8000030))
+Declaration(NamedIndividual(obo:PREFER_8000050))
+Declaration(NamedIndividual(obo:PREFER_8000052))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -2217,6 +2220,12 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000048 "Actinomycetes quality"@en)
 SubClassOf(obo:PREFER_8000048 obo:PREFER_0000013)
 SubClassOf(obo:PREFER_8000048 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_1760))
 
+# Class: obo:PREFER_8000049 (Biofoundry)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33817343") obo:IAO_0000115 obo:PREFER_8000049 "An organisation that is an integrated molecular biology facility that includes robotic liquid-handling equipment, high-throughput analytical equipment, and the software, personnel and data management systems required to run the equipment and broader biofoundry capabilities.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000049 "Biofoundry"@en)
+SubClassOf(obo:PREFER_8000049 obo:OBI_0000245)
+
 # Class: obo:PREFER_9000001 (precision fermentation process measurement variable)
 
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "process measurement variable")
@@ -2282,6 +2291,26 @@ AnnotationAssertion(obo:IAO_0000115 uom:mol.mol-1 "A unit representing a mol-bas
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "Mole per Mole")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "Mole/Mole")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "mol/mol")
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:PREFER_8000050 (London Biofoundry)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000050 "A biofoundry based in London")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_8000050 "LBF")
+AnnotationAssertion(rdfs:label obo:PREFER_8000050 "London Biofoundry"@en)
+ClassAssertion(obo:PREFER_8000049 obo:PREFER_8000050)
+
+# Individual: obo:PREFER_8000052 (BRIGHT Biofoundry)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000052 "A biofoundry hosted by he Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition (BRIGHT)")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_8000052 "BBF")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_8000052 "Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition Biofoundry")
+AnnotationAssertion(rdfs:label obo:PREFER_8000052 "BRIGHT Biofoundry"@en)
+ClassAssertion(obo:PREFER_8000049 obo:PREFER_8000052)
 
 
 )
