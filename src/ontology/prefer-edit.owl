@@ -244,6 +244,7 @@ Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
 Declaration(ObjectProperty(obo:PREFER_8000030))
+Declaration(ObjectProperty(obo:PREFER_8000059))
 Declaration(NamedIndividual(obo:PREFER_8000050))
 Declaration(NamedIndividual(obo:PREFER_8000052))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -481,6 +482,14 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000030 "Inverse of setpoint of."
 AnnotationAssertion(rdfs:label obo:PREFER_8000030 "has setpoint"@en)
 ObjectPropertyDomain(obo:PREFER_8000030 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000030 obo:IAO_0000030)
+
+# Object Property: obo:PREFER_8000059 (measured at time datum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000059 "x is measured_at_time_datum y iff x and y are information content entities, and x is a measurement and y is a time datum at which x is measured")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_8000059 "SIO:000793")
+AnnotationAssertion(rdfs:label obo:PREFER_8000059 "measured at time datum"@en)
+ObjectPropertyDomain(obo:PREFER_8000059 obo:IAO_0000030)
+ObjectPropertyRange(obo:PREFER_8000059 obo:IAO_0000030)
 
 
 
@@ -2231,6 +2240,7 @@ SubClassOf(obo:PREFER_8000049 obo:OBI_0000245)
 
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "process measurement variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "PREcision FERmentation process measurement variable")
+SubClassOf(obo:PREFER_9000001 ObjectSomeValuesFrom(obo:PREFER_8000059 obo:OBI_0001508))
 
 # Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
