@@ -281,15 +281,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -2231,7 +2231,6 @@ SubClassOf(obo:PREFER_8000049 obo:OBI_0000245)
 
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "process measurement variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "PREcision FERmentation process measurement variable")
-SubClassOf(obo:PREFER_9000001 ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000793> obo:OBI_0001508))
 
 # Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
