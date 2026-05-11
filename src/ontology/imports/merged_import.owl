@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/prefer/releases/2026-05-06/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-05-06")
+<http://purl.obolibrary.org/obo/prefer/releases/2026-05-11/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-05-11")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000796>))
@@ -6703,6 +6703,19 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_8600138>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_8600140>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_8850001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000003>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000000>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000015>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000052>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000070>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000074>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000075>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000257>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000258>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000366>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000391>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000776>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_001429>))
+Declaration(Class(<http://semanticscience.org/resource/SIO_001431>))
 Declaration(Class(owl:Thing))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
@@ -6958,9 +6971,25 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/uberon/core#subdivisi
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/uberon/core#transitively_anteriorly_connected_to>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/uberon/core#transitively_distally_connected_to>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/uberon/core#transitively_proximally_connected_to>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000001>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000008>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000011>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000028>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000061>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000068>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000145>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000215>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000216>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000221>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000222>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000322>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000325>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000687>))
+Declaration(ObjectProperty(<http://semanticscience.org/resource/SIO_000793>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/IAO_0000004>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0002135>))
+Declaration(DataProperty(<http://semanticscience.org/resource/SIO_000300>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000002>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000103>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000120>))
@@ -7240,6 +7269,8 @@ Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(Datatype(rdf:PlainLiteral))
 Declaration(Datatype(rdfs:Literal))
+Declaration(Datatype(xsd:float))
+Declaration(Datatype(xsd:integer))
 ############################
 #   Annotation Properties
 ############################
@@ -7358,7 +7389,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.gen
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has broad synonym"@en)
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has_broad_synonym")
 
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (has cross-reference)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "An annotation property that links an ontology entity or a statement to a prefixed identifier or URI.")
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://orcid.org/0000-0002-7356-1779>)
@@ -9172,6 +9203,106 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/uberon/core#transitively_proximally_connected_to> "transitively proximally connected to")
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/uberon/core#transitively_proximally_connected_to>)
 
+# Object Property: <http://semanticscience.org/resource/SIO_000001> (is related to)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000001> "is related to"@en)
+SymmetricObjectProperty(<http://semanticscience.org/resource/SIO_000001>)
+ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000001> <http://semanticscience.org/resource/SIO_000000>)
+ObjectPropertyRange(<http://semanticscience.org/resource/SIO_000001> <http://semanticscience.org/resource/SIO_000000>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000008> (has attribute)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000008> "has attribute"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000008> <http://semanticscience.org/resource/SIO_000001>)
+InverseObjectProperties(<http://semanticscience.org/resource/SIO_000008> <http://semanticscience.org/resource/SIO_000011>)
+ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000008> <http://semanticscience.org/resource/SIO_000000>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000011> (is attribute of)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000011> "is attribute of"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000011> <http://semanticscience.org/resource/SIO_000001>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000028> (has part)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000028> "has part"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000028> <http://semanticscience.org/resource/SIO_000145>)
+InverseObjectProperties(<http://semanticscience.org/resource/SIO_000028> <http://semanticscience.org/resource/SIO_000068>)
+TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000028>)
+ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000028>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000061> (is located in)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000061> "is located in"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000061> <http://semanticscience.org/resource/SIO_000322>)
+InverseObjectProperties(<http://semanticscience.org/resource/SIO_000061> <http://semanticscience.org/resource/SIO_000145>)
+TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000061>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000068> (is part of)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000068> "is part of"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000068> <http://semanticscience.org/resource/SIO_000061>)
+TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000068>)
+ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000068>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000145> (is location of)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000145> "is location of"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000145> <http://semanticscience.org/resource/SIO_000322>)
+TransitiveObjectProperty(<http://semanticscience.org/resource/SIO_000145>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000215> (is measurement value of)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000215> "is measurement value of"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000215> <http://semanticscience.org/resource/SIO_000011>)
+InverseObjectProperties(<http://semanticscience.org/resource/SIO_000215> <http://semanticscience.org/resource/SIO_000216>)
+ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000215> <http://semanticscience.org/resource/SIO_000070>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000216> (has measurement value)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000216> "has measurement value"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000216> <http://semanticscience.org/resource/SIO_000008>)
+ObjectPropertyRange(<http://semanticscience.org/resource/SIO_000216> <http://semanticscience.org/resource/SIO_000070>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000221> (has unit)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000221> "has unit"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000008>)
+InverseObjectProperties(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000222>)
+FunctionalObjectProperty(<http://semanticscience.org/resource/SIO_000221>)
+ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000075>)
+ObjectPropertyRange(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000074>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000222> (is unit of)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000222> "is unit of"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000222> <http://semanticscience.org/resource/SIO_000011>)
+ObjectPropertyDomain(<http://semanticscience.org/resource/SIO_000222> <http://semanticscience.org/resource/SIO_000074>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000322> (is spatiotemporally related to)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000322> "is spatiotemporally related to"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000322> <http://semanticscience.org/resource/SIO_000001>)
+SymmetricObjectProperty(<http://semanticscience.org/resource/SIO_000322>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000325> (overlaps with)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000325> "overlaps with"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000325> <http://semanticscience.org/resource/SIO_000322>)
+SymmetricObjectProperty(<http://semanticscience.org/resource/SIO_000325>)
+ReflexiveObjectProperty(<http://semanticscience.org/resource/SIO_000325>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000687> (exists at)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000687> "exists at"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000687> <http://semanticscience.org/resource/SIO_000322>)
+ObjectPropertyRange(<http://semanticscience.org/resource/SIO_000687> <http://semanticscience.org/resource/SIO_000391>)
+
+# Object Property: <http://semanticscience.org/resource/SIO_000793> (measured at)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000793> "measured at"@en)
+SubObjectPropertyOf(<http://semanticscience.org/resource/SIO_000793> <http://semanticscience.org/resource/SIO_000687>)
+ObjectPropertyRange(<http://semanticscience.org/resource/SIO_000793> <http://semanticscience.org/resource/SIO_000391>)
+
 
 ############################
 #   Data Properties
@@ -9197,6 +9328,11 @@ DataPropertyRange(<http://purl.obolibrary.org/obo/OBI_0001937> owl:real)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0002135> "A relation between a value specification and a literal."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0002135> "has specified value"@en)
 DataPropertyDomain(<http://purl.obolibrary.org/obo/OBI_0002135> <http://purl.obolibrary.org/obo/OBI_0001933>)
+
+# Data Property: <http://semanticscience.org/resource/SIO_000300> (has value)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000300> "has value"@en)
+FunctionalDataProperty(<http://semanticscience.org/resource/SIO_000300>)
 
 
 
@@ -106862,6 +106998,77 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000003> "time unit")
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000003> <http://purl.obolibrary.org/obo/IAO_0000003>)
 
+# Class: <http://semanticscience.org/resource/SIO_000000> (entity)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000000> "entity"@en)
+
+# Class: <http://semanticscience.org/resource/SIO_000015> (information content entity)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000015> "information content entity"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000015> <http://semanticscience.org/resource/SIO_000776>)
+
+# Class: <http://semanticscience.org/resource/SIO_000052> (quantity)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000052> "quantity"@en)
+EquivalentClasses(<http://semanticscience.org/resource/SIO_000052> ObjectUnionOf(<http://semanticscience.org/resource/SIO_000257> <http://semanticscience.org/resource/SIO_000258>))
+SubClassOf(<http://semanticscience.org/resource/SIO_000052> <http://semanticscience.org/resource/SIO_000070>)
+SubClassOf(<http://semanticscience.org/resource/SIO_000052> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000011> <http://semanticscience.org/resource/SIO_000000>))
+SubClassOf(<http://semanticscience.org/resource/SIO_000052> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000215> <http://semanticscience.org/resource/SIO_000000>))
+
+# Class: <http://semanticscience.org/resource/SIO_000070> (measurement value)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000070> "measurement value"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000070> <http://semanticscience.org/resource/SIO_000366>)
+SubClassOf(<http://semanticscience.org/resource/SIO_000070> ObjectUnionOf(DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000300> xsd:boolean) DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000300> xsd:dateTime) DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000300> xsd:double) DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000300> xsd:float) DataSomeValuesFrom(<http://semanticscience.org/resource/SIO_000300> xsd:integer)))
+
+# Class: <http://semanticscience.org/resource/SIO_000074> (unit of measurement)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000074> "unit of measurement"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000074> <http://semanticscience.org/resource/SIO_000052>)
+
+# Class: <http://semanticscience.org/resource/SIO_000075> (mathematical entity)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000075> "mathematical entity"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000075> <http://semanticscience.org/resource/SIO_000015>)
+
+# Class: <http://semanticscience.org/resource/SIO_000257> (dimensionless quantity)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000257> "dimensionless quantity"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000257> <http://semanticscience.org/resource/SIO_000052>)
+SubClassOf(<http://semanticscience.org/resource/SIO_000257> ObjectComplementOf(ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000074>)))
+DisjointClasses(<http://semanticscience.org/resource/SIO_000257> <http://semanticscience.org/resource/SIO_000258>)
+
+# Class: <http://semanticscience.org/resource/SIO_000258> (dimensional quantity)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000258> "dimensional quantity"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000258> <http://semanticscience.org/resource/SIO_000052>)
+SubClassOf(<http://semanticscience.org/resource/SIO_000258> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000221> <http://semanticscience.org/resource/SIO_000074>))
+
+# Class: <http://semanticscience.org/resource/SIO_000366> (number)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000366> "number"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000366> <http://semanticscience.org/resource/SIO_001431>)
+
+# Class: <http://semanticscience.org/resource/SIO_000391> (time measurement)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000391> "time measurement"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000391> <http://semanticscience.org/resource/SIO_000258>)
+
+# Class: <http://semanticscience.org/resource/SIO_000776> (object)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000776> "object"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_000776> <http://semanticscience.org/resource/SIO_000000>)
+
+# Class: <http://semanticscience.org/resource/SIO_001429> (tensor)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_001429> "tensor"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_001429> <http://semanticscience.org/resource/SIO_000075>)
+
+# Class: <http://semanticscience.org/resource/SIO_001431> (scalar)
+
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_001431> "scalar"@en)
+SubClassOf(<http://semanticscience.org/resource/SIO_001431> <http://semanticscience.org/resource/SIO_001429>)
+
 
 ############################
 #   Named Individuals
@@ -108421,6 +108628,7 @@ SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_00030
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0003001> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0009501> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0004028>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0020104> <http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/RO_0020105>) <http://purl.obolibrary.org/obo/RO_0002100>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://semanticscience.org/resource/SIO_000325> <http://semanticscience.org/resource/SIO_000068>) <http://semanticscience.org/resource/SIO_000325>)
 SubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(<http://purl.obolibrary.org/obo/BFO_0000066>) <http://purl.obolibrary.org/obo/RO_0002234>) <http://purl.obolibrary.org/obo/RO_0003000>)
 SubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002176>) <http://purl.obolibrary.org/obo/RO_0002176>) <http://purl.obolibrary.org/obo/RO_0002170>)
 DLSafeRule(Body(ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000016> Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000091> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))

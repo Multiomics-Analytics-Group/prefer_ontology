@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                070d68b7814ec1a079915a1a120643420fbd6f0abb04a304095e2a033c6764f4
+CONFIG_HASH=                72f53c8901e8e7215bba07aa563fdef8fbaddffc90e8dccd4e3a5702194e161b
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao cl omo ro chebi pato go obi uberon cob ncbitaxon
+IMPORTS =  iao cl omo ro chebi pato go obi uberon cob ncbitaxon sio
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -575,6 +575,13 @@ mirror-cob: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/ncbitaxon.owl
 mirror-ncbitaxon: | $(TMPDIR)
 	$(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: sio
+.PHONY: mirror-sio
+.PRECIOUS: $(MIRRORDIR)/sio.owl
+mirror-sio: | $(TMPDIR)
+	$(ROBOT) remove -I http://semanticscience.org/ontology/sio.owl --base-iri http://semanticscience.org/resource/SIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true

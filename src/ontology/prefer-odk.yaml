@@ -46,6 +46,11 @@ import_group:
       use_base: TRUE
     - id: ncbitaxon
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+    - id: sio
+      make_base: TRUE
+      mirror_from: http://semanticscience.org/ontology/sio.owl 
+      base_iris:
+        - http://semanticscience.org/resource/SIO_
 robot_java_args: "-Xmx16G"
 robot_report:
   use_labels: TRUE
