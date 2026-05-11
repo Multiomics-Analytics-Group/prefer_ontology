@@ -504,6 +504,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000002 "PREFER:0000002")
 AnnotationAssertion(rdfs:label obo:PREFER_0000002 "fermentation project")
 SubClassOf(obo:PREFER_0000002 obo:OBI_0000066)
 SubClassOf(obo:PREFER_0000002 obo:PREFER_9000003)
+SubClassOf(obo:PREFER_0000002 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000245))
 
 # Class: obo:PREFER_0000003 (fermentation experiment)
 
