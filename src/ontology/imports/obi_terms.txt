@@ -1,3 +1,4 @@
 OBI:0000066 # investigation
 OBI:0000070 # assay
 OBI:0001938 # has value specification
+OBI:0001508 # sampling time measurement datum

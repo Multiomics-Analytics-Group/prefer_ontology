@@ -205,6 +205,12 @@ Declaration(Class(obo:PREFER_7000007))
 Declaration(Class(obo:PREFER_7000008))
 Declaration(Class(obo:PREFER_8000041))
 Declaration(Class(obo:PREFER_8000042))
+Declaration(Class(obo:PREFER_8000044))
+Declaration(Class(obo:PREFER_8000045))
+Declaration(Class(obo:PREFER_8000046))
+Declaration(Class(obo:PREFER_8000047))
+Declaration(Class(obo:PREFER_8000048))
+Declaration(Class(obo:PREFER_8000049))
 Declaration(Class(obo:PREFER_8000053))
 Declaration(Class(obo:PREFER_8000054))
 Declaration(Class(obo:PREFER_8000055))
@@ -246,6 +252,11 @@ Declaration(ObjectProperty(obo:PREFER_8000020))
 Declaration(ObjectProperty(obo:PREFER_8000021))
 Declaration(ObjectProperty(obo:PREFER_8000022))
 Declaration(ObjectProperty(obo:PREFER_8000030))
+Declaration(ObjectProperty(obo:PREFER_8000059))
+Declaration(ObjectProperty(obo:PREFER_8000060))
+Declaration(ObjectProperty(obo:PREFER_8000061))
+Declaration(NamedIndividual(obo:PREFER_8000050))
+Declaration(NamedIndividual(obo:PREFER_8000052))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
 Declaration(AnnotationProperty(obo:dc_creator))
@@ -301,7 +312,7 @@ AnnotationAssertion(rdfs:label oboInOwl:hasOBOFormatVersion "has_obo_format_vers
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
-# Annotation Property: oboInOwl:hasRelatedSynonym (has related synonym)
+# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
@@ -482,6 +493,27 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000030 "has setpoint"@en)
 ObjectPropertyDomain(obo:PREFER_8000030 obo:IAO_0000030)
 ObjectPropertyRange(obo:PREFER_8000030 obo:IAO_0000030)
 
+# Object Property: obo:PREFER_8000059 (measured at time datum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000059 "x is measured_at_time_datum y iff x and y are information content entities, and x is a measurement and y is a time datum at which x is measured")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_8000059 "SIO:000793")
+AnnotationAssertion(rdfs:label obo:PREFER_8000059 "measured at time datum"@en)
+ObjectPropertyDomain(obo:PREFER_8000059 obo:IAO_0000030)
+ObjectPropertyRange(obo:PREFER_8000059 obo:IAO_0000030)
+
+# Object Property: obo:PREFER_8000060 (has process measured variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000060 "x has_process_measurement_variable y iff x is a fermentation run, y is a precision fermentation process measurement variable, and y is about some material, condition, or process-associated attribute measured during x.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000060 "has process measured variable"@en)
+InverseObjectProperties(obo:PREFER_8000060 obo:PREFER_8000061)
+ObjectPropertyDomain(obo:PREFER_8000060 obo:PREFER_0000004)
+ObjectPropertyRange(obo:PREFER_8000060 obo:PREFER_9000001)
+
+# Object Property: obo:PREFER_8000061 (is process measurement variable of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000061 "The inverse of has process measurement variable.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000061 "is process measurement variable of"@en)
+
 
 
 ############################
@@ -504,6 +536,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000002 "PREFER:0000002")
 AnnotationAssertion(rdfs:label obo:PREFER_0000002 "fermentation project")
 SubClassOf(obo:PREFER_0000002 obo:OBI_0000066)
 SubClassOf(obo:PREFER_0000002 obo:PREFER_9000003)
+SubClassOf(obo:PREFER_0000002 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000245))
 
 # Class: obo:PREFER_0000003 (fermentation experiment)
 
@@ -531,6 +564,7 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000011 obo:PREFER
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000015 obo:PREFER_0000012))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000016 obo:PREFER_0000018))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000017 obo:CHEBI_24431))
+SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:PREFER_8000060 obo:PREFER_9000001))
 SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:RO_0000057 obo:PREFER_0000011))
 
 # Class: obo:PREFER_0000005 (alkaline cultivation condition)
@@ -610,6 +644,7 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000012 "In a biotransformation proc
 AnnotationAssertion(rdfs:label obo:PREFER_0000012 "cell biocatalyst")
 SubClassOf(obo:PREFER_0000012 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000012 obo:CL_0000000)
+SubClassOf(obo:PREFER_0000012 ObjectSomeValuesFrom(obo:RO_0000086 obo:PREFER_0000013))
 
 # Class: obo:PREFER_0000013 (taxon quality)
 
@@ -620,6 +655,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000013 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000013 "PREFER:0000013")
 AnnotationAssertion(rdfs:label obo:PREFER_0000013 "taxon quality")
 SubClassOf(obo:PREFER_0000013 obo:BFO_0000019)
+SubClassOf(obo:PREFER_0000013 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_1))
 
 # Class: obo:PREFER_0000014 (bioreactor)
 
@@ -2197,6 +2233,47 @@ AnnotationAssertion(rdfs:label obo:PREFER_8000042 "Ambr250 modular bioreactor"@e
 SubClassOf(obo:PREFER_8000042 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000042 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
+# Class: obo:PREFER_8000044 (Yarrowia quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000044 "A taxon quality that inheres in an organism belonging to the genus Yarrowia.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000044 "Yarrowia quality"@en)
+SubClassOf(obo:PREFER_8000044 obo:PREFER_0000013)
+SubClassOf(obo:PREFER_8000044 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_4951))
+
+# Class: obo:PREFER_8000045 (Escherichia coli quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000045 "A taxon quality that inheres in an organism belonging to the species Escherichia coli.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000045 "Escherichia coli quality"@en)
+SubClassOf(obo:PREFER_8000045 obo:PREFER_0000013)
+SubClassOf(obo:PREFER_8000045 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_562))
+
+# Class: obo:PREFER_8000046 (Streptomyces albus quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000046 "A taxon quality that inheres in an organism belonging to the species Streptomyces albus.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000046 "Streptomyces albus quality"@en)
+SubClassOf(obo:PREFER_8000046 obo:PREFER_0000013)
+SubClassOf(obo:PREFER_8000046 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_1888))
+
+# Class: obo:PREFER_8000047 (Limosilactobacillus reuteri quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000047 "A taxon quality that inheres in an organism belonging to the species Limosilactobacillus reuteri.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000047 "Limosilactobacillus reuteri quality"@en)
+SubClassOf(obo:PREFER_8000047 obo:PREFER_0000013)
+SubClassOf(obo:PREFER_8000047 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_1598))
+
+# Class: obo:PREFER_8000048 (Actinomycetes quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000048 "A taxon quality that inheres in an organism belonging to the genus Actinomycetes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000048 "Actinomycetes quality"@en)
+SubClassOf(obo:PREFER_8000048 obo:PREFER_0000013)
+SubClassOf(obo:PREFER_8000048 ObjectSomeValuesFrom(obo:RO_0000080 obo:NCBITaxon_1760))
+
+# Class: obo:PREFER_8000049 (Biofoundry)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33817343") obo:IAO_0000115 obo:PREFER_8000049 "An organisation that is an integrated molecular biology facility that includes robotic liquid-handling equipment, high-throughput analytical equipment, and the software, personnel and data management systems required to run the equipment and broader biofoundry capabilities.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000049 "Biofoundry"@en)
+SubClassOf(obo:PREFER_8000049 obo:OBI_0000245)
+
 # Class: obo:PREFER_8000053 (Growth Profiler 960 bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000053 "A bioreactor that has microbioreactor scale that cultivates and optically monitors up to 960 microbial or cell cultures in microtiter plates by combining orbital shaking incubation with time-resolved bottom imaging and automated image-based biomass quantification.")
@@ -2244,6 +2321,7 @@ SubClassOf(obo:PREFER_8000058 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER
 
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "process measurement variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "PREcision FERmentation process measurement variable")
+SubClassOf(obo:PREFER_9000001 ObjectSomeValuesFrom(obo:PREFER_8000059 obo:OBI_0001508))
 
 # Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
 
@@ -2305,6 +2383,26 @@ AnnotationAssertion(obo:IAO_0000115 uom:mol.mol-1 "A unit representing a mol-bas
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "Mole per Mole")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "Mole/Mole")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mol.mol-1 "mol/mol")
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: obo:PREFER_8000050 (London Biofoundry)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000050 "A biofoundry based in London")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_8000050 "LBF")
+AnnotationAssertion(rdfs:label obo:PREFER_8000050 "London Biofoundry"@en)
+ClassAssertion(obo:PREFER_8000049 obo:PREFER_8000050)
+
+# Individual: obo:PREFER_8000052 (BRIGHT Biofoundry)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000052 "A biofoundry hosted by the Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition (BRIGHT)")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_8000052 "BBF")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_8000052 "Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition Biofoundry")
+AnnotationAssertion(rdfs:label obo:PREFER_8000052 "BRIGHT Biofoundry"@en)
+ClassAssertion(obo:PREFER_8000049 obo:PREFER_8000052)
 
 
 )

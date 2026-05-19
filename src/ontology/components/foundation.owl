@@ -17,6 +17,7 @@ Ontology(<http://purl.obolibrary.org/obo/prefer/components/foundation.owl>
 
 Declaration(Class(obo:BFO_0000015))
 Declaration(Class(obo:BFO_0000017))
+Declaration(Class(obo:COB_0000082))
 Declaration(Class(obo:GO_0006113))
 Declaration(Class(obo:IAO_0000030))
 Declaration(Class(obo:PREFER_9000000))
@@ -64,7 +65,7 @@ SubClassOf(obo:PREFER_9000002 obo:IAO_0000030)
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000003 "A process that involves precision fermentation.")
 AnnotationAssertion(rdfs:comment obo:PREFER_9000003 "Precision fermentation is a biotechnological method used in industrial or research settings that employs genetically engineered or adaptatively laboratory-evolved (ALE) microorganisms (such as bacteria, yeast, fungi or microalgae) to produce specific, high-value compounds with precise molecular structures. This process involves controlled environments—such as operating bioreactor parameters(e.g., temperature, pH, dissolved oxygen, agitation, nutrient feed) and upstream preparation conditions(e.g., pre-culture growth, strain storage, and defined media composition)—where microbial metabolism is optimized to synthesize target products, such as proteins, enzymes, or bioactive molecules, often with greater efficiency, yield, and specificity than traditional fermentation methods.")
 AnnotationAssertion(rdfs:label obo:PREFER_9000003 "precision fermentation process"@en)
-SubClassOf(obo:PREFER_9000003 obo:BFO_0000015)
+SubClassOf(obo:PREFER_9000003 obo:COB_0000082)
 SubClassOf(obo:PREFER_9000003 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0006113))
 
 # Class: obo:PREFER_9000004 (unit)
