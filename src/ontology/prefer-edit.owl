@@ -2398,7 +2398,7 @@ ClassAssertion(obo:PREFER_8000049 obo:PREFER_8000050)
 
 # Individual: obo:PREFER_8000052 (BRIGHT Biofoundry)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000052 "A biofoundry hosted by he Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition (BRIGHT)")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000052 "A biofoundry hosted by the Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition (BRIGHT)")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_8000052 "BBF")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_8000052 "Novo Nordisk Foundation Biotechnology Research Institute for the Green Transition Biofoundry")
 AnnotationAssertion(rdfs:label obo:PREFER_8000052 "BRIGHT Biofoundry"@en)
