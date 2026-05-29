@@ -35,6 +35,7 @@ Annotation(terms:contributor <https://orcid.org/0009-0009-0018-4253>)
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
 
 Declaration(Class(obo:PREFER_0000000))
+Declaration(Class(obo:PREFER_0000001))
 Declaration(Class(obo:PREFER_0000002))
 Declaration(Class(obo:PREFER_0000003))
 Declaration(Class(obo:PREFER_0000004))
@@ -527,6 +528,16 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000000 "key precision f
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "process rate metric"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
+# Class: obo:PREFER_0000001 (reflectance measurement variable)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33573846") obo:IAO_0000115 obo:PREFER_0000001 "A precision fermentation process measurement variable that indicates the fraction of incident light that is reflected at a boundary from a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:PREFER_0000001 "backscatter measurement variable")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "Reflectance serves as an optical estimate of the cell density of a fermentation culture as an increase in cell density leads to an increase in rayleight scattering, thereby increasing the back-reflected light.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000001 "reflectance measurement variable"@en)
+SubClassOf(obo:PREFER_0000001 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
+
 # Class: obo:PREFER_0000002 (fermentation project)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000002 "A precision fermentation process that consist of a single fermentation experiment or multiple related experiments.")
@@ -969,6 +980,7 @@ SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000040 "A precision fermentation process measurement variable that indicates the potential of hydrogen of the production culture from a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000040 "NCIT:C205029")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000040 "A precision fermentation process measurement variable that indicates the fraction of incident light that is reflected at a boundary from a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000040 "precision fermentation process pH measurement variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000040 "precision_fermentation")
 AnnotationAssertion(rdfs:label obo:PREFER_0000040 "pH measurement variable")
