@@ -100,6 +100,7 @@ Declaration(Class(obo:PREFER_0000062))
 Declaration(Class(obo:PREFER_0000063))
 Declaration(Class(obo:PREFER_0000064))
 Declaration(Class(obo:PREFER_0000065))
+Declaration(Class(obo:PREFER_0000066))
 Declaration(Class(obo:PREFER_0000068))
 Declaration(Class(obo:PREFER_0000069))
 Declaration(Class(obo:PREFER_0000071))
@@ -536,7 +537,7 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "Reflectance serves as an op
 AnnotationAssertion(rdfs:label obo:PREFER_0000001 "reflectance measurement variable"@en)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
+SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
 
 # Class: obo:PREFER_0000002 (fermentation project)
 
@@ -1283,6 +1284,14 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000065 "Derived metabolic indicator
 AnnotationAssertion(rdfs:label obo:PREFER_0000065 "respiratory quotient variable")
 SubClassOf(obo:PREFER_0000065 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000007))
+
+# Class: obo:PREFER_0000066 (arbitrary unit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000066 "a unit representing a relative measurement value produced by an instrument, so instrument specific scale, setting or normalization.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000066 "a.u.")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000066 "Not absolute physical interpretation")
+AnnotationAssertion(rdfs:label obo:PREFER_0000066 "arbitrary unit"@en)
+SubClassOf(obo:PREFER_0000066 obo:PREFER_9000004)
 
 # Class: obo:PREFER_0000068 (offgas carbon dioxide measurement variable)
 
