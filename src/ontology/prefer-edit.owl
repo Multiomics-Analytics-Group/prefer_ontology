@@ -294,7 +294,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -529,12 +529,13 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000000 "key precision f
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "process rate metric"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
-# Class: obo:PREFER_0000001 (reflectance measurement variable)
+# Class: obo:PREFER_0000001 (scattered light measurement variable)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33573846") obo:IAO_0000115 obo:PREFER_0000001 "A precision fermentation process measurement variable that indicates the fraction of incident light that is reflected at a boundary from a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:PREFER_0000001 "backscatter measurement variable")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "Reflectance serves as an optical estimate of the cell density of a fermentation culture as an increase in cell density leads to an increase in rayleight scattering, thereby increasing the back-reflected light.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000001 "reflectance measurement variable"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33573846") obo:IAO_0000115 obo:PREFER_0000001 "A precision fermentation process measurement variable that indicates the intensity of optical radiation detected after a light beam interacts with a fermentation culture and is redirected by scattering processes within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "backscatter measurement variable")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "reflectance measurement variable")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "The measurement variable is an instrument-derived signal recorded under a defined optical geometry and  reported as relative detector response.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000001 "scattered light measurement variable"@en)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
@@ -1289,6 +1290,7 @@ SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_70
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000066 "a unit representing a relative measurement value produced by an instrument, so instrument specific scale, setting or normalization.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000066 "a.u.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000066 "instrument specific unit")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000066 "Not absolute physical interpretation")
 AnnotationAssertion(rdfs:label obo:PREFER_0000066 "arbitrary unit"@en)
 SubClassOf(obo:PREFER_0000066 obo:PREFER_9000004)
