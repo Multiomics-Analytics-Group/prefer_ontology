@@ -2242,17 +2242,19 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000005 "carbon mole p
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000021 uom:h))
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000002))
 
-# Class: obo:PREFER_8000041 (Ambr250 high throughput bioreactor)
+# Class: obo:PREFER_8000041 (Ambr250 - Satorius bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-high-throughput") obo:IAO_0000115 obo:PREFER_8000041 "A bioreactor produced by Sartorius called Ambr250 that has a minbioreactor scale and is a multi-parallel bioreactor system that can handle 12-24 parallel cultivation, and has a vessel working volume of 100-250ml. It is able to handle insect and mammalian cell culture, microbial cuilture, and has automated liquid handling.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000041 "Ambr250 high throughput bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-high-throughput") obo:IAO_0000115 obo:PREFER_8000041 "A bench-scale bioreactor system produced by Sartorius with individual vessel working volumes ranging from 100 to 250 mL. The Ambr250 is an automated, high-throughput, parallel  mini-bioreactor platform that can handle 12-24 independent vessels simultaneously. It supports mammalian, insect, and microbial cell cultures, and includes automated liquid handling for process monitoring and control.
+The system provides a highly controlled cultivation environment, and an efficient and rapid scale-down platform for evaluating a wide range of process conditions and strains, with scalability to both bench-scale and larger stirred tank bioreactors.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000041 "Ambr250 - Satorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000041 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000041 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
-# Class: obo:PREFER_8000042 (Ambr250 modular bioreactor)
+# Class: obo:PREFER_8000042 (Ambr250 modular - Sartorius bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-modular") obo:IAO_0000115 obo:PREFER_8000042 "A bioreactor produced by Sartorius called Ambr250 that has a minbioreactor scale and is a expandable benchtop system that can handle 2-8 fully integrated single use 100-250ml mini bioreactors. It is able to handle insect and mammalian cell culture, microbial cuilture, but does not have automated liquid handling.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000042 "Ambr250 modular bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-modular") obo:IAO_0000115 obo:PREFER_8000042 "A bench-scale bioreactor system produced by Sartorius with individual vessel working volumes ranging from 100 to 250 mL. The Ambr250 is a high-throughput, parallel mini-bioreactor platform that can handle 2-8 fully integrated single use vessels simultaneously. It supports mammalian, insect, and microbial cell cultures, but does not have automated liquid handling.
+The system provides a highly controlled cultivation environment, and an efficient and rapid scale-down platform for evaluating a wide range of process conditions and strains, with scalability to both bench-scale and larger stirred tank bioreactors.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000042 "Ambr250 modular - Sartorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000042 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000042 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
@@ -2297,46 +2299,48 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33817343") obo:IAO_00001
 AnnotationAssertion(rdfs:label obo:PREFER_8000049 "Biofoundry"@en)
 SubClassOf(obo:PREFER_8000049 obo:OBI_0000245)
 
-# Class: obo:PREFER_8000053 (Growth Profiler 960 bioreactor)
+# Class: obo:PREFER_8000053 (Growth Profiler 960 - Enzyscreen bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000053 "A bioreactor that has microbioreactor scale that cultivates and optically monitors up to 960 microbial or cell cultures in microtiter plates by combining orbital shaking incubation with time-resolved bottom imaging and automated image-based biomass quantification.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000053 "Growth Profiler 960 bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000053 "A microbioreactor-scale bioreactor produced by Enzyscreen that cultivates and optically monitors up to 960 microbial or cell cultures simultaneously in ten 96-square-well microtiter plates (MTPs), each with a culture volume of 0.25 mL. the system combines orbital shaking incubation with time-resolved bottom imaging and automated image-based biomass quantification.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000053 "Growth Profiler 960 - Enzyscreen bioreactor"@en)
 SubClassOf(obo:PREFER_8000053 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000053 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000085))
 
-# Class: obo:PREFER_8000054 (Kuhner TOM bioreactor)
+# Class: obo:PREFER_8000054 (TOM - Kuhner bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000054 "A shaken bioreactor online monitoring system called TOM that is produced by Kuhner. It has minibioreactor scale that measures oxygen transfer rate, carbon dioxide transfer rate, and respiratory quotient in parallel shake flask or microtiter plate cultivations by automated analysis of respiratory gas exchange during orbital shaking incubation.")
-AnnotationAssertion(rdfs:comment obo:PREFER_8000054 "This system is classified under bioreactor because of its use in conjunction with biological cultivation workflows. The Kuhner TOM is not strictly a bioreactor in the Rather, it is an online respiratory gas monitoring and analytical system that measures oxygen transfer rate, carbon dioxide transfer rate, and respiratory quotient in cultures grown in orbitally shaken vessels such as shake flasks or microtiter plates.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000054 "Kuhner TOM bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://kuhner.com/wAssets/docs/download/Maschinendokumentation/Information-Flyer-KuhnerTOM-en-_2025.pdf") obo:IAO_0000115 obo:PREFER_8000054 "A bench-scale shaken bioreactor online monitoring system produced by Kuhner that enables parallel monitoring of up to 16 individual shake flasks. The system measures oxygen transfer rate (OTR), carbon dioxide transfer rate (CTR), and respiratory quotient (RQ) through automated analysis of respiratory gas exchange during orbital shaking incubation.")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000054 "This system is classified under bioreactor because of its use in conjunction with biological cultivation workflows. However, the Kuhner TOM is not strictly a bioreactor. Rather, it is an online respiratory gas monitoring and analytical system that measures oxygen transfer rate (OTR), carbon dioxide transfer rate (CTR), and respiratory quotient (RQ) in cultures grown in orbitally shaken vessels such as shake flasks.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000054 "TOM - Kuhner bioreactor"@en)
 SubClassOf(obo:PREFER_8000054 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000054 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
-# Class: obo:PREFER_8000055 (Livit Flex Bioreactor)
+# Class: obo:PREFER_8000055 (Livit Flex - Getinge bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/livit-flex/") obo:IAO_0000115 obo:PREFER_8000055 "A bioreactor with minibioreactor scale called Livit Flex that monitors and regulates cultivation parameters in connected single-use or reusable bioreactors through integrated control software, sensor interfaces, fluid handling components, and gas management functions.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000055 "Livit Flex Bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/livit-flex/") obo:IAO_0000115 obo:PREFER_8000055 "A bench-scale bioreactor bioprocess control system produced by Getingen that monitors and regulates cultivation parameters in connected single-use or reusable bioreactors through integrated control software, sensor interfaces, fluid handling components, and gas management functions. It can be configured as single or dual control system with vessel total volumes ranging from 2 to 20 L.")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "Former manufacturer is Applikon Biotechnology")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the Livit Flex is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000055 "Livit Flex - Getinge bioreactor"@en)
 SubClassOf(obo:PREFER_8000055 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000055 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
-# Class: obo:PREFER_8000056 (5L-Lucullus)
+# Class: obo:PREFER_8000056 (BioBench single - Biostream bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000056 "A 5 liter minibioreactor scale stirred-tank bioreactor integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during laboratory-scale biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000056 "5L-Lucullus"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.biostream-international.com/biobench/") obo:IAO_0000115 obo:PREFER_8000056 "A bench-scale stirred-tank bioreactor produced by Biostream with a working volume of approximately 5 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000056 "BioBench single - Biostream bioreactor"@en)
 SubClassOf(obo:PREFER_8000056 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000056 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
-# Class: obo:PREFER_8000057 (30L-Lucullus)
+# Class: obo:PREFER_8000057 (Biostat Cplus - Sartorius bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000057 "A 30 liter pilot bioreactor scale stirred-tank bioreactor integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during laboratory-scale biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000057 "30L-Lucullus"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/stainless-steel-bioreactors/biostat-cplus") obo:IAO_0000115 obo:PREFER_8000057 "A pilot-scale stirred-tank bioreactor produced by Sartorius with a working volume of approximately 30 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000057 "Biostat Cplus - Sartorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000057 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000057 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000187))
 
-# Class: obo:PREFER_8000058 (100L-Lucullus)
+# Class: obo:PREFER_8000058 (Proreact P15 - Frings bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000058 "A 100 liter pilot bioreactor scale stirred-tank bioreactor integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during laboratory-scale biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000058 "100L-Lucullus"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://frings.com/en/produkte/proreact-p-production-bioreactors/") obo:IAO_0000115 obo:PREFER_8000058 "A pilot-scale stirred-tank bioreactor produced by Frings with a working volume of approximately 100 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes. The system is intended for research, process development, and scale-up studies and is designed with automation and operational concepts comparable to industrial production processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000058 "Proreact P15 - Frings bioreactor"@en)
 SubClassOf(obo:PREFER_8000058 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000058 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000187))
 
