@@ -101,6 +101,7 @@ Declaration(Class(obo:PREFER_0000063))
 Declaration(Class(obo:PREFER_0000064))
 Declaration(Class(obo:PREFER_0000065))
 Declaration(Class(obo:PREFER_0000066))
+Declaration(Class(obo:PREFER_0000067))
 Declaration(Class(obo:PREFER_0000068))
 Declaration(Class(obo:PREFER_0000069))
 Declaration(Class(obo:PREFER_0000071))
@@ -1295,6 +1296,15 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000066 "Not absolute physical inter
 AnnotationAssertion(rdfs:label obo:PREFER_0000066 "arbitrary unit"@en)
 SubClassOf(obo:PREFER_0000066 obo:PREFER_9000004)
 
+# Class: obo:PREFER_0000067 (ez2-Control - Getinge bioreactor)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/applikon-ez2-control/") obo:IAO_0000115 obo:PREFER_0000067 "A bench-scale bioprocess control system produced by Getinge that monitors and regulates cultivation parameters through integrated control software, sensor interfaces, fluid handling components, and gas management functions. The ez2-control is a conventional bioreactor control system designed to operate and regulate individual bioreactor units.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000067 "Applikon ez2-Control - Getinge bioreactor")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000067 "Former manufacturer is Applikon Biotechnology")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000067 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the ez2-Control is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000067 "ez2-Control - Getinge bioreactor"@en)
+SubClassOf(obo:PREFER_0000067 obo:PREFER_0000014)
+
 # Class: obo:PREFER_0000068 (offgas carbon dioxide measurement variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000068 "A precision fermentation process measurement variable that indicates the percentage of carbon dioxide present in the exhaust stream leaving the bioreactor or fermentation system during a fermentation process.")
@@ -2316,17 +2326,17 @@ SubClassOf(obo:PREFER_8000054 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER
 
 # Class: obo:PREFER_8000055 (Livit Flex - Getinge bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/livit-flex/") obo:IAO_0000115 obo:PREFER_8000055 "A bench-scale bioreactor bioprocess control system produced by Getingen that monitors and regulates cultivation parameters in connected single-use or reusable bioreactors through integrated control software, sensor interfaces, fluid handling components, and gas management functions. It can be configured as single or dual control system with vessel total volumes ranging from 2 to 20 L.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/livit-flex/") obo:IAO_0000115 obo:PREFER_8000055 "A bench-scale bioreactor bioprocess control system produced by Getinge that monitors and regulates cultivation parameters in connected single-use or reusable bioreactors through integrated control software, sensor interfaces, fluid handling components, and gas management functions. It can be configured as single or dual control system with vessel total volumes ranging from 2 to 20 L.")
 AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "Former manufacturer is Applikon Biotechnology")
 AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the Livit Flex is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000055 "Livit Flex - Getinge bioreactor"@en)
 SubClassOf(obo:PREFER_8000055 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000055 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
-# Class: obo:PREFER_8000056 (BioBench single - Biostream bioreactor)
+# Class: obo:PREFER_8000056 (BioBench - Biostream bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.biostream-international.com/biobench/") obo:IAO_0000115 obo:PREFER_8000056 "A bench-scale stirred-tank bioreactor produced by Biostream with a working volume of approximately 5 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000056 "BioBench single - Biostream bioreactor"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_8000056 "BioBench - Biostream bioreactor"@en)
 SubClassOf(obo:PREFER_8000056 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000056 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
 
