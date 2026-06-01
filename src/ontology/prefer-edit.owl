@@ -110,6 +110,7 @@ Declaration(Class(obo:PREFER_0000072))
 Declaration(Class(obo:PREFER_0000073))
 Declaration(Class(obo:PREFER_0000074))
 Declaration(Class(obo:PREFER_0000075))
+Declaration(Class(obo:PREFER_0000076))
 Declaration(Class(obo:PREFER_0000077))
 Declaration(Class(obo:PREFER_0000078))
 Declaration(Class(obo:PREFER_0000079))
@@ -1384,6 +1385,20 @@ SubClassOf(obo:PREFER_0000075 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000075 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.h-1))
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+
+# Class: obo:PREFER_0000076 (headspace oxygen concentration measurement variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000076 "A precision fermentation process measurement variable that indicates the 
+concentration of oxygen in the headspace atmosphere above a cultivation medium
+within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000076 "precision fermentation process headspace oxygen concentration measurement variablevariable")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000076 "precision_fermentation")
+AnnotationAssertion(oboInOwl:id obo:PREFER_0000076 "PREFER:0000060")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000076 "Typically expressed as a percentage of the total gas composition.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000076 "headspace oxygen concentration measurement variable"@en)
+SubClassOf(obo:PREFER_0000076 obo:PREFER_0000033)
+SubClassOf(obo:PREFER_0000076 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000076 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
 # Class: obo:PREFER_0000077 (dilution feed rate control variable)
 
