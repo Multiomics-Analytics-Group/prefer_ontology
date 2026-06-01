@@ -531,10 +531,10 @@ SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
 
 # Class: obo:PREFER_0000001 (scattered light measurement variable)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33573846") obo:IAO_0000115 obo:PREFER_0000001 "A precision fermentation process measurement variable that indicates the intensity of optical radiation detected after a light beam interacts with a fermentation culture and is redirected by scattering processes within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33573846") obo:IAO_0000115 obo:PREFER_0000001 "A precision fermentation process measurement variable that indicates the intensity of optical radiation detected after a light beam interacts with a fermentation culture and is redirected to a detector by scattering processes within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "backscatter measurement variable")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "reflectance measurement variable")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "The measurement variable is an instrument-derived signal recorded under a defined optical geometry and  reported as relative detector response.")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "The measurement variable is an instrument-derived signal recorded under a defined optical geometry and reported as arbitrary units (A.U.).")
 AnnotationAssertion(rdfs:label obo:PREFER_0000001 "scattered light measurement variable"@en)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_0000045)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
