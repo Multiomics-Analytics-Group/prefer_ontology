@@ -104,6 +104,7 @@ Declaration(Class(obo:PREFER_0000066))
 Declaration(Class(obo:PREFER_0000067))
 Declaration(Class(obo:PREFER_0000068))
 Declaration(Class(obo:PREFER_0000069))
+Declaration(Class(obo:PREFER_0000070))
 Declaration(Class(obo:PREFER_0000071))
 Declaration(Class(obo:PREFER_0000072))
 Declaration(Class(obo:PREFER_0000073))
@@ -1304,6 +1305,7 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000067 "Former manufacturer is Appl
 AnnotationAssertion(rdfs:comment obo:PREFER_0000067 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the ez2-Control is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000067 "ez2-Control - Getinge bioreactor"@en)
 SubClassOf(obo:PREFER_0000067 obo:PREFER_0000014)
+SubClassOf(obo:PREFER_0000067 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_0000068 (offgas carbon dioxide measurement variable)
 
@@ -1328,6 +1330,14 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000069 "offgas oxygen measurement var
 SubClassOf(obo:PREFER_0000069 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+
+# Class: obo:PREFER_0000070 (BioLector XT - Beckman Coulter bioreactor)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.mybeckman.dk/microbioreactor/biolector-xt") obo:IAO_0000115 obo:PREFER_0000070 "A microbioreactor-scale high-throughput bioreactor system produced by Beckman Coulter Life Sciences for parallel cultivation of microbial or cell cultures simultaneously in up to 48-well microtiter plates (MTPs), each with a culture volume in the microliter range. It provides online optical monitoring of biomass, fluorescence, pH, and dissolved oxygen (DO) under orbital shaking conditions, using integrated pre-calibrated sensor technology and optional microfluidic modules for automated feeding and pH control.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000070 "BioLector XT - Beckman Coulter Life Sciences bioreactor")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000070 "Former manufacturer is m2p-labs")
+AnnotationAssertion(rdfs:label obo:PREFER_0000070 "BioLector XT - Beckman Coulter bioreactor"@en)
+SubClassOf(obo:PREFER_0000070 obo:PREFER_0000014)
 
 # Class: obo:PREFER_0000071 (biomass concentration variable)
 
