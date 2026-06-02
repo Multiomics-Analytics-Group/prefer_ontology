@@ -116,7 +116,9 @@ Declaration(Class(obo:PREFER_0000078))
 Declaration(Class(obo:PREFER_0000079))
 Declaration(Class(obo:PREFER_0000080))
 Declaration(Class(obo:PREFER_0000081))
+Declaration(Class(obo:PREFER_0000082))
 Declaration(Class(obo:PREFER_0000083))
+Declaration(Class(obo:PREFER_0000084))
 Declaration(Class(obo:PREFER_0000085))
 Declaration(Class(obo:PREFER_0000086))
 Declaration(Class(obo:PREFER_0000087))
@@ -1458,6 +1460,12 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000081 "degree of reduction balance v
 SubClassOf(obo:PREFER_0000081 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
+# Class: obo:PREFER_0000082 (foaming cultivation condition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000082 "A cultivation condition that represents the foam related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the foaming state of the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000082 "foaming cultivation condition"@en)
+SubClassOf(obo:PREFER_0000082 obo:PREFER_0000008)
+
 # Class: obo:PREFER_0000083 (compound consumed variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000083 "A compound balance metric that represents the total amount of compound consumed, substrate taken up by the cells, in a bioreactor or fermentation system, during the fermentation process.")
@@ -1467,6 +1475,18 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000083 "PREFER:0000083")
 AnnotationAssertion(rdfs:label obo:PREFER_0000083 "compound consumed variable")
 SubClassOf(obo:PREFER_0000083 obo:PREFER_0000162)
 SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
+
+# Class: obo:PREFER_0000084 (foam level measurement variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000084 "A precision fermentation process measurement variable that indicates the foam level within a bioreactor or fermentation system, during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000084 "precision fermentation process foam level measurement variable")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000084 "precision_fermentation")
+AnnotationAssertion(oboInOwl:id obo:PREFER_0000084 "PREFER:0000051")
+AnnotationAssertion(rdfs:label obo:PREFER_0000084 "foam level measurement variable"@en)
+SubClassOf(obo:PREFER_0000084 obo:PREFER_0000037)
+SubClassOf(obo:PREFER_0000084 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000084 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000084 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
 
 # Class: obo:PREFER_0000085 (microbioreactor scale)
 
