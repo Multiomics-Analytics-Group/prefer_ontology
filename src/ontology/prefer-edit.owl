@@ -1483,7 +1483,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000084 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000084 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000084 "PREFER:0000051")
 AnnotationAssertion(rdfs:label obo:PREFER_0000084 "foam level measurement variable"@en)
-SubClassOf(obo:PREFER_0000084 obo:PREFER_0000037)
+SubClassOf(obo:PREFER_0000084 obo:PREFER_0000082)
 SubClassOf(obo:PREFER_0000084 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000084 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 SubClassOf(obo:PREFER_0000084 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
