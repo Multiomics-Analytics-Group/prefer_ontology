@@ -988,7 +988,6 @@ SubClassOf(obo:PREFER_0000039 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000040 "A precision fermentation process measurement variable that indicates the potential of hydrogen of the production culture from a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000040 "NCIT:C205029")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000040 "A precision fermentation process measurement variable that indicates the fraction of incident light that is reflected at a boundary from a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000040 "precision fermentation process pH measurement variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000040 "precision_fermentation")
 AnnotationAssertion(rdfs:label obo:PREFER_0000040 "pH measurement variable")
