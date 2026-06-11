@@ -218,6 +218,7 @@ Declaration(Class(obo:PREFER_8000056))
 Declaration(Class(obo:PREFER_8000057))
 Declaration(Class(obo:PREFER_8000058))
 Declaration(Class(obo:PREFER_9000003))
+Declaration(Class(obo:PREFER_9f5e48c2_1b1b_4d3e_875d_7267ab6d2e04))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
 Declaration(Class(uom:g.g-1))
@@ -292,7 +293,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -2331,6 +2332,12 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process compute
 # Class: obo:PREFER_9000004 (unit)
 
 AnnotationAssertion(rdfs:comment obo:PREFER_9000004 "The decision to utilise https://units-of-measurement.org/ meant that we did not want to commit to any unit ontologies. We hence created our own parent class to parent units. Interoperability of units can be achieved by the matches in units-of-measurement, and this term should only be used to constraining in modelling.")
+
+# Class: obo:PREFER_9f5e48c2_1b1b_4d3e_875d_7267ab6d2e04 (watt)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9f5e48c2_1b1b_4d3e_875d_7267ab6d2e04 "Standard international unit for power, measuring the rate at which energy is transferred")
+AnnotationAssertion(rdfs:label obo:PREFER_9f5e48c2_1b1b_4d3e_875d_7267ab6d2e04 "watt"@en)
+SubClassOf(obo:PREFER_9f5e48c2_1b1b_4d3e_875d_7267ab6d2e04 obo:PREFER_9000004)
 
 # Class: uom:L.h-1 (liters per hour)
 
