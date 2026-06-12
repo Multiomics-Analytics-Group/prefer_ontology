@@ -268,6 +268,7 @@ Declaration(NamedIndividual(obo:PREFER_8000050))
 Declaration(NamedIndividual(obo:PREFER_8000052))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
+Declaration(AnnotationProperty(obo:IAO_0100001))
 Declaration(AnnotationProperty(obo:dc_creator))
 Declaration(AnnotationProperty(obo:dc_description))
 Declaration(AnnotationProperty(obo:dc_title))
@@ -1497,12 +1498,13 @@ AnnotationAssertion(rdfs:comment obo:PREFER_0000085 "For instance, microfluidic 
 AnnotationAssertion(rdfs:label obo:PREFER_0000085 "micro bioreactor scale"@en)
 SubClassOf(obo:PREFER_0000085 obo:PREFER_0000185)
 
-# Class: obo:PREFER_0000086 (minibioreactor scale)
+# Class: obo:PREFER_0000086 (obsolete minibioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000086 "A laboratory bioreactor scale that refers to small volume bioreactor systems designed for parallelized process development and experimentation, typically operated at working volumes in the range of approximately 10 milliliters to a few liters.")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000086 "For instance, Ambr250 or Pioreactors fall within this category.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000086 "minibioreactor scale"@en)
-SubClassOf(obo:PREFER_0000086 obo:PREFER_0000186)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000086 "OBSOLETE. A laboratory bioreactor scale that refers to small volume bioreactor systems designed for parallelized process development and experimentation, typically operated at working volumes in the range of approximately 10 milliliters to a few liters.")
+AnnotationAssertion(obo:IAO_0100001 obo:PREFER_0000086 obo:PREFER_0000186)
+AnnotationAssertion(rdfs:comment obo:PREFER_0000086 "Merged into bench bioreactor scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000086 "obsolete minibioreactor scale"@en)
+AnnotationAssertion(owl:deprecated obo:PREFER_0000086 "true"^^xsd:boolean)
 
 # Class: obo:PREFER_0000087 (substrate uptake rate variable)
 
@@ -2329,7 +2331,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/
 The system provides a highly controlled cultivation environment, and an efficient and rapid scale-down platform for evaluating a wide range of process conditions and strains, with scalability to both bench-scale and larger stirred tank bioreactors.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000041 "Ambr250 - Satorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000041 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000041 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000041 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_8000042 (Ambr250 modular - Sartorius bioreactor)
 
@@ -2337,7 +2339,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/
 The system provides a highly controlled cultivation environment, and an efficient and rapid scale-down platform for evaluating a wide range of process conditions and strains, with scalability to both bench-scale and larger stirred tank bioreactors.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000042 "Ambr250 modular - Sartorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000042 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000042 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000042 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_8000044 (Yarrowia quality)
 
@@ -2393,7 +2395,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://kuhner.com/wAssets/do
 AnnotationAssertion(rdfs:comment obo:PREFER_8000054 "This system is classified under bioreactor because of its use in conjunction with biological cultivation workflows. However, the Kuhner TOM is not strictly a bioreactor. Rather, it is an online respiratory gas monitoring and analytical system that measures oxygen transfer rate (OTR), carbon dioxide transfer rate (CTR), and respiratory quotient (RQ) in cultures grown in orbitally shaken vessels such as shake flasks.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000054 "TOM - Kuhner bioreactor"@en)
 SubClassOf(obo:PREFER_8000054 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000054 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000054 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_8000055 (Livit Flex - Getinge bioreactor)
 
@@ -2402,14 +2404,14 @@ AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "Former manufacturer is Appl
 AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the Livit Flex is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000055 "Livit Flex - Getinge bioreactor"@en)
 SubClassOf(obo:PREFER_8000055 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000055 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000055 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_8000056 (BioBench - Biostream bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.biostream-international.com/biobench/") obo:IAO_0000115 obo:PREFER_8000056 "A bench-scale stirred-tank bioreactor produced by Biostream with a working volume of approximately 5 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes.")
 AnnotationAssertion(rdfs:label obo:PREFER_8000056 "BioBench - Biostream bioreactor"@en)
 SubClassOf(obo:PREFER_8000056 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000056 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000056 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_8000057 (Biostat Cplus - Sartorius bioreactor)
 
