@@ -35,6 +35,7 @@ Annotation(terms:contributor <https://orcid.org/0009-0009-0018-4253>)
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
 
 Declaration(Class(obo:PREFER_0000000))
+Declaration(Class(obo:PREFER_0000001))
 Declaration(Class(obo:PREFER_0000002))
 Declaration(Class(obo:PREFER_0000003))
 Declaration(Class(obo:PREFER_0000004))
@@ -99,18 +100,25 @@ Declaration(Class(obo:PREFER_0000062))
 Declaration(Class(obo:PREFER_0000063))
 Declaration(Class(obo:PREFER_0000064))
 Declaration(Class(obo:PREFER_0000065))
+Declaration(Class(obo:PREFER_0000066))
+Declaration(Class(obo:PREFER_0000067))
 Declaration(Class(obo:PREFER_0000068))
 Declaration(Class(obo:PREFER_0000069))
+Declaration(Class(obo:PREFER_0000070))
 Declaration(Class(obo:PREFER_0000071))
 Declaration(Class(obo:PREFER_0000072))
 Declaration(Class(obo:PREFER_0000073))
 Declaration(Class(obo:PREFER_0000074))
 Declaration(Class(obo:PREFER_0000075))
+Declaration(Class(obo:PREFER_0000076))
 Declaration(Class(obo:PREFER_0000077))
 Declaration(Class(obo:PREFER_0000078))
 Declaration(Class(obo:PREFER_0000079))
+Declaration(Class(obo:PREFER_0000080))
 Declaration(Class(obo:PREFER_0000081))
+Declaration(Class(obo:PREFER_0000082))
 Declaration(Class(obo:PREFER_0000083))
+Declaration(Class(obo:PREFER_0000084))
 Declaration(Class(obo:PREFER_0000085))
 Declaration(Class(obo:PREFER_0000086))
 Declaration(Class(obo:PREFER_0000087))
@@ -118,6 +126,7 @@ Declaration(Class(obo:PREFER_0000088))
 Declaration(Class(obo:PREFER_0000089))
 Declaration(Class(obo:PREFER_0000090))
 Declaration(Class(obo:PREFER_0000091))
+Declaration(Class(obo:PREFER_0000092))
 Declaration(Class(obo:PREFER_0000094))
 Declaration(Class(obo:PREFER_0000095))
 Declaration(Class(obo:PREFER_0000096))
@@ -259,6 +268,7 @@ Declaration(NamedIndividual(obo:PREFER_8000050))
 Declaration(NamedIndividual(obo:PREFER_8000052))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000700))
+Declaration(AnnotationProperty(obo:IAO_0100001))
 Declaration(AnnotationProperty(obo:dc_creator))
 Declaration(AnnotationProperty(obo:dc_description))
 Declaration(AnnotationProperty(obo:dc_title))
@@ -292,7 +302,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -526,6 +536,17 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000000 "A key process metric tha
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000000 "key precision fermentation process rate metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000000 "process rate metric"@en)
 SubClassOf(obo:PREFER_0000000 obo:PREFER_0000078)
+
+# Class: obo:PREFER_0000001 (scattered light measurement variable)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33573846") obo:IAO_0000115 obo:PREFER_0000001 "A precision fermentation process measurement variable that indicates the intensity of optical radiation detected after a light beam interacts with a fermentation culture and is redirected to a detector by scattering processes within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "backscatter measurement variable")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "reflectance measurement variable")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "The measurement variable is an instrument-derived signal recorded under a defined optical geometry and reported as arbitrary units (A.U.).")
+AnnotationAssertion(rdfs:label obo:PREFER_0000001 "scattered light measurement variable"@en)
+SubClassOf(obo:PREFER_0000001 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
 
 # Class: obo:PREFER_0000002 (fermentation project)
 
@@ -1272,6 +1293,25 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000065 "respiratory quotient variable
 SubClassOf(obo:PREFER_0000065 obo:PREFER_0000158)
 SubClassOf(obo:PREFER_0000065 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000007))
 
+# Class: obo:PREFER_0000066 (arbitrary unit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000066 "a unit representing a relative measurement value produced by an instrument, so instrument specific scale, setting or normalization.")
+AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000066 "a.u.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000066 "instrument specific unit")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000066 "Not absolute physical interpretation")
+AnnotationAssertion(rdfs:label obo:PREFER_0000066 "arbitrary unit"@en)
+SubClassOf(obo:PREFER_0000066 obo:PREFER_9000004)
+
+# Class: obo:PREFER_0000067 (ez2-Control - Getinge bioreactor)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/applikon-ez2-control/") obo:IAO_0000115 obo:PREFER_0000067 "A bench-scale bioprocess control system produced by Getinge that monitors and regulates cultivation parameters through integrated control software, sensor interfaces, fluid handling components, and gas management functions. The ez2-control is a conventional bioreactor control system designed to operate and regulate individual bioreactor units.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000067 "Applikon ez2-Control - Getinge bioreactor")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000067 "Former manufacturer is Applikon Biotechnology")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000067 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the ez2-Control is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000067 "ez2-Control - Getinge bioreactor"@en)
+SubClassOf(obo:PREFER_0000067 obo:PREFER_0000014)
+SubClassOf(obo:PREFER_0000067 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
+
 # Class: obo:PREFER_0000068 (offgas carbon dioxide measurement variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000068 "A precision fermentation process measurement variable that indicates the percentage of carbon dioxide present in the exhaust stream leaving the bioreactor or fermentation system during a fermentation process.")
@@ -1295,6 +1335,14 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000069 "offgas oxygen measurement var
 SubClassOf(obo:PREFER_0000069 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 SubClassOf(obo:PREFER_0000069 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
+
+# Class: obo:PREFER_0000070 (BioLector XT - Beckman Coulter bioreactor)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.mybeckman.dk/microbioreactor/biolector-xt") obo:IAO_0000115 obo:PREFER_0000070 "A microbioreactor-scale high-throughput bioreactor system produced by Beckman Coulter Life Sciences for parallel cultivation of microbial or cell cultures simultaneously in up to 48-well microtiter plates (MTPs), each with a culture volume in the microliter range. It provides online optical monitoring of biomass, fluorescence, pH, and dissolved oxygen (DO) under orbital shaking conditions, using integrated pre-calibrated sensor technology and optional microfluidic modules for automated feeding and pH control.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000070 "BioLector XT - Beckman Coulter Life Sciences bioreactor")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000070 "Former manufacturer is m2p-labs")
+AnnotationAssertion(rdfs:label obo:PREFER_0000070 "BioLector XT - Beckman Coulter bioreactor"@en)
+SubClassOf(obo:PREFER_0000070 obo:PREFER_0000014)
 
 # Class: obo:PREFER_0000071 (biomass concentration variable)
 
@@ -1342,6 +1390,20 @@ SubClassOf(obo:PREFER_0000075 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.h-1))
 SubClassOf(obo:PREFER_0000075 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
 
+# Class: obo:PREFER_0000076 (headspace oxygen concentration measurement variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000076 "A precision fermentation process measurement variable that indicates the 
+concentration of oxygen in the headspace atmosphere above a cultivation medium
+within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000076 "precision fermentation process headspace oxygen concentration measurement variablevariable")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000076 "precision_fermentation")
+AnnotationAssertion(oboInOwl:id obo:PREFER_0000076 "PREFER:0000060")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000076 "Typically expressed as a percentage of the total gas composition.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000076 "headspace oxygen concentration measurement variable"@en)
+SubClassOf(obo:PREFER_0000076 obo:PREFER_0000033)
+SubClassOf(obo:PREFER_0000076 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000076 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
+
 # Class: obo:PREFER_0000077 (dilution feed rate control variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000077 "A feed process control variable that represents the target rate at which fresh feed medium is fed into a production culture relative to the total volume of the fermentation culture, representing the rate at which the production culture is diluted.")
@@ -1373,6 +1435,21 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000079 "carbon balance variable")
 SubClassOf(obo:PREFER_0000079 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
+# Class: obo:PREFER_0000080 (target stirring setpoint control variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000080 "A precision fermentation process dissolved oxygen control variable that represents the target revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "precision fermentation process target stirring setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target shaking speed setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target shaking speed setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target stirring speed setpoint")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000080 "precision_fermentation")
+AnnotationAssertion(oboInOwl:id obo:PREFER_0000080 "PREFER:0000027")
+AnnotationAssertion(rdfs:label obo:PREFER_0000080 "target stirring setpoint control variable"@en)
+SubClassOf(obo:PREFER_0000080 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000080 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
+SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
+
 # Class: obo:PREFER_0000081 (degree of reduction balance variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000081 "A carbon balance metric that quantifies the redox state in a bioreactor or fermentar system during a fermentation process, by ensuring that the total electrons entering the system are equal to those leaving it, reflecting electron conservation.")
@@ -1384,6 +1461,12 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000081 "degree of reduction balance v
 SubClassOf(obo:PREFER_0000081 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
+# Class: obo:PREFER_0000082 (foaming cultivation condition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000082 "A cultivation condition that represents the foam related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the foaming state of the cultivation environment.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000082 "foaming cultivation condition"@en)
+SubClassOf(obo:PREFER_0000082 obo:PREFER_0000008)
+
 # Class: obo:PREFER_0000083 (compound consumed variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000083 "A compound balance metric that represents the total amount of compound consumed, substrate taken up by the cells, in a bioreactor or fermentation system, during the fermentation process.")
@@ -1394,19 +1477,34 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000083 "compound consumed variable")
 SubClassOf(obo:PREFER_0000083 obo:PREFER_0000162)
 SubClassOf(obo:PREFER_0000083 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000085 (microbioreactor scale)
+# Class: obo:PREFER_0000084 (foam level measurement variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000085 "A laboratory bioreactor scale that refers to very small volume bioreactor systems designed for high-throughput screening, typically operated at working volumes in the range of approximately a few microliters.")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000085 "For instance, microtiter plates (MTPs) fall within this category.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000085 "microbioreactor scale"@en)
-SubClassOf(obo:PREFER_0000085 obo:PREFER_0000186)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000084 "A precision fermentation process measurement variable that indicates the foam level within a bioreactor or fermentation system, during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000084 "precision fermentation process foam level measurement variable")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000084 "precision_fermentation")
+AnnotationAssertion(oboInOwl:id obo:PREFER_0000084 "PREFER:0000051")
+AnnotationAssertion(rdfs:label obo:PREFER_0000084 "foam level measurement variable"@en)
+SubClassOf(obo:PREFER_0000084 obo:PREFER_0000082)
+SubClassOf(obo:PREFER_0000084 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000084 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
+SubClassOf(obo:PREFER_0000084 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000150))
 
-# Class: obo:PREFER_0000086 (minibioreactor scale)
+# Class: obo:PREFER_0000085 (micro bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000086 "A laboratory bioreactor scale that refers to small volume bioreactor systems designed for parallelized process development and experimentation, typically operated at working volumes in the range of approximately 10 milliliters to a few liters.")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000086 "For instance, Ambr250 or Pioreactors fall within this category.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000086 "minibioreactor scale"@en)
-SubClassOf(obo:PREFER_0000086 obo:PREFER_0000186)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000085 "A bioreactor scale consisting of micro-scale systems used for high-throughput screening and optimization, typically characterized by a volume range of <1 mL.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000085 "microbioreactor scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000085 "miro-bioreactor scale")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000085 "For instance, microfluidic or microtiter plates (MTPs) fall within this category.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000085 "micro bioreactor scale"@en)
+SubClassOf(obo:PREFER_0000085 obo:PREFER_0000185)
+
+# Class: obo:PREFER_0000086 (obsolete minibioreactor scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000086 "OBSOLETE. A laboratory bioreactor scale that refers to small volume bioreactor systems designed for parallelized process development and experimentation, typically operated at working volumes in the range of approximately 10 milliliters to a few liters.")
+AnnotationAssertion(obo:IAO_0100001 obo:PREFER_0000086 obo:PREFER_0000186)
+AnnotationAssertion(rdfs:comment obo:PREFER_0000086 "Merged into bench bioreactor scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000086 "obsolete minibioreactor scale"@en)
+AnnotationAssertion(owl:deprecated obo:PREFER_0000086 "true"^^xsd:boolean)
 
 # Class: obo:PREFER_0000087 (substrate uptake rate variable)
 
@@ -1445,6 +1543,13 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000091 "A key process metric tha
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000091 "key precision fermentation process titer metric")
 AnnotationAssertion(rdfs:label obo:PREFER_0000091 "process titer metric"@en)
 SubClassOf(obo:PREFER_0000091 obo:PREFER_0000078)
+
+# Class: obo:PREFER_0000092 (commercial bioreactor scale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000092 "A bioreactor scale used for full commercial manufacturing, typically characterized by a volume range greater than 10,000 L.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000092 "production bioreactor scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000092 "commercial bioreactor scale"@en)
+SubClassOf(obo:PREFER_0000092 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000094 (substrate yield (biomass) variable)
 
@@ -1994,24 +2099,26 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000185 "PREFER:0000185")
 AnnotationAssertion(rdfs:label obo:PREFER_0000185 "bioreactor scale")
 SubClassOf(obo:PREFER_0000185 obo:BFO_0000019)
 
-# Class: obo:PREFER_0000186 (laboratory bioreactor scale)
+# Class: obo:PREFER_0000186 (bench bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale that refers to small volume bioreactor systems used for laboratory scale experimentation, research, development, and process optimization, typically ranging from a few milliliters to several liters in working volume.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench bioreactor scale")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000186 "A bioreactor scale used for early-stage process development and screening, typically characterized by a volume range of <10 L.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "bench scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "benchtop scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "lab-scale")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory bench bioreactor scale")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000186 "laboratory bench scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000186 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000186 "PREFER:0000186")
-AnnotationAssertion(rdfs:label obo:PREFER_0000186 "laboratory bioreactor scale")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000186 "For instance, Ambr250 or Pioreactors fall within this category.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000186 "bench bioreactor scale")
 SubClassOf(obo:PREFER_0000186 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000187 (pilot bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000187 "A bioreactor scale that serves as an intermediate step between laboratory scale and industrial scale, typically ranging from several liters to a few hundred liters in working volume.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000187 "A bioreactor scale used as an intermediate step between bench scale and demonstration scale for process development and optimization, typically 
+characterized by a volume range of 10-1,000L.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000187 "pilont plant bioreactor scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000187 "pilot-scale")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000187 "pre pilot plant-scale")
@@ -2022,14 +2129,13 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000187 "PREFER:0000187")
 AnnotationAssertion(rdfs:label obo:PREFER_0000187 "pilot bioreactor scale")
 SubClassOf(obo:PREFER_0000187 obo:PREFER_0000185)
 
-# Class: obo:PREFER_0000188 (industrial bioreactor scale)
+# Class: obo:PREFER_0000188 (demonstration bioreactor scale)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for large-scale production, typically ranging from several hundred liters to thousands of liters or more in working volume.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial scale")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "industrial-scale")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000188 "A bioreactor scale used for technology validation, typically associated with a volume range of 1,000-10,000L.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000188 "validation bioreactor scale")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000188 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000188 "PREFER:0000188")
-AnnotationAssertion(rdfs:label obo:PREFER_0000188 "industrial bioreactor scale")
+AnnotationAssertion(rdfs:label obo:PREFER_0000188 "demonstration bioreactor scale")
 SubClassOf(obo:PREFER_0000188 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000189 (feed profile type control variable)
@@ -2219,19 +2325,21 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000005 "carbon mole p
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000021 uom:h))
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000002))
 
-# Class: obo:PREFER_8000041 (Ambr250 high throughput bioreactor)
+# Class: obo:PREFER_8000041 (Ambr250 - Satorius bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-high-throughput") obo:IAO_0000115 obo:PREFER_8000041 "A bioreactor produced by Sartorius called Ambr250 that has a minbioreactor scale and is a multi-parallel bioreactor system that can handle 12-24 parallel cultivation, and has a vessel working volume of 100-250ml. It is able to handle insect and mammalian cell culture, microbial cuilture, and has automated liquid handling.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000041 "Ambr250 high throughput bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-high-throughput") obo:IAO_0000115 obo:PREFER_8000041 "A bench-scale bioreactor system produced by Sartorius with individual vessel working volumes ranging from 100 to 250 mL. The Ambr250 is an automated, high-throughput, parallel  mini-bioreactor platform that can handle 12-24 independent vessels simultaneously. It supports mammalian, insect, and microbial cell cultures, and includes automated liquid handling for process monitoring and control.
+The system provides a highly controlled cultivation environment, and an efficient and rapid scale-down platform for evaluating a wide range of process conditions and strains, with scalability to both bench-scale and larger stirred tank bioreactors.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000041 "Ambr250 - Satorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000041 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000041 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000041 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
-# Class: obo:PREFER_8000042 (Ambr250 modular bioreactor)
+# Class: obo:PREFER_8000042 (Ambr250 modular - Sartorius bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-modular") obo:IAO_0000115 obo:PREFER_8000042 "A bioreactor produced by Sartorius called Ambr250 that has a minbioreactor scale and is a expandable benchtop system that can handle 2-8 fully integrated single use 100-250ml mini bioreactors. It is able to handle insect and mammalian cell culture, microbial cuilture, but does not have automated liquid handling.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000042 "Ambr250 modular bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-modular") obo:IAO_0000115 obo:PREFER_8000042 "A bench-scale bioreactor system produced by Sartorius with individual vessel working volumes ranging from 100 to 250 mL. The Ambr250 is a high-throughput, parallel mini-bioreactor platform that can handle 2-8 fully integrated single use vessels simultaneously. It supports mammalian, insect, and microbial cell cultures, but does not have automated liquid handling.
+The system provides a highly controlled cultivation environment, and an efficient and rapid scale-down platform for evaluating a wide range of process conditions and strains, with scalability to both bench-scale and larger stirred tank bioreactors.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000042 "Ambr250 modular - Sartorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000042 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000042 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000042 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_8000044 (Yarrowia quality)
 
@@ -2274,46 +2382,48 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33817343") obo:IAO_00001
 AnnotationAssertion(rdfs:label obo:PREFER_8000049 "Biofoundry"@en)
 SubClassOf(obo:PREFER_8000049 obo:OBI_0000245)
 
-# Class: obo:PREFER_8000053 (Growth Profiler 960 bioreactor)
+# Class: obo:PREFER_8000053 (Growth Profiler 960 - Enzyscreen bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000053 "A bioreactor that has microbioreactor scale that cultivates and optically monitors up to 960 microbial or cell cultures in microtiter plates by combining orbital shaking incubation with time-resolved bottom imaging and automated image-based biomass quantification.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000053 "Growth Profiler 960 bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000053 "A microbioreactor-scale bioreactor produced by Enzyscreen that cultivates and optically monitors up to 960 microbial or cell cultures simultaneously in ten 96-square-well microtiter plates (MTPs), each with a culture volume of 0.25 mL. the system combines orbital shaking incubation with time-resolved bottom imaging and automated image-based biomass quantification.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000053 "Growth Profiler 960 - Enzyscreen bioreactor"@en)
 SubClassOf(obo:PREFER_8000053 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000053 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000085))
 
-# Class: obo:PREFER_8000054 (Kuhner TOM bioreactor)
+# Class: obo:PREFER_8000054 (TOM - Kuhner bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.enzyscreen.com/article/How-does-it-work/") obo:IAO_0000115 obo:PREFER_8000054 "A shaken bioreactor online monitoring system called TOM that is produced by Kuhner. It has minibioreactor scale that measures oxygen transfer rate, carbon dioxide transfer rate, and respiratory quotient in parallel shake flask or microtiter plate cultivations by automated analysis of respiratory gas exchange during orbital shaking incubation.")
-AnnotationAssertion(rdfs:comment obo:PREFER_8000054 "This system is classified under bioreactor because of its use in conjunction with biological cultivation workflows. The Kuhner TOM is not strictly a bioreactor in the Rather, it is an online respiratory gas monitoring and analytical system that measures oxygen transfer rate, carbon dioxide transfer rate, and respiratory quotient in cultures grown in orbitally shaken vessels such as shake flasks or microtiter plates.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000054 "Kuhner TOM bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://kuhner.com/wAssets/docs/download/Maschinendokumentation/Information-Flyer-KuhnerTOM-en-_2025.pdf") obo:IAO_0000115 obo:PREFER_8000054 "A bench-scale shaken bioreactor online monitoring system produced by Kuhner that enables parallel monitoring of up to 16 individual shake flasks. The system measures oxygen transfer rate (OTR), carbon dioxide transfer rate (CTR), and respiratory quotient (RQ) through automated analysis of respiratory gas exchange during orbital shaking incubation.")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000054 "This system is classified under bioreactor because of its use in conjunction with biological cultivation workflows. However, the Kuhner TOM is not strictly a bioreactor. Rather, it is an online respiratory gas monitoring and analytical system that measures oxygen transfer rate (OTR), carbon dioxide transfer rate (CTR), and respiratory quotient (RQ) in cultures grown in orbitally shaken vessels such as shake flasks.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000054 "TOM - Kuhner bioreactor"@en)
 SubClassOf(obo:PREFER_8000054 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000054 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000054 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
-# Class: obo:PREFER_8000055 (Livit Flex Bioreactor)
+# Class: obo:PREFER_8000055 (Livit Flex - Getinge bioreactor)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/livit-flex/") obo:IAO_0000115 obo:PREFER_8000055 "A bioreactor with minibioreactor scale called Livit Flex that monitors and regulates cultivation parameters in connected single-use or reusable bioreactors through integrated control software, sensor interfaces, fluid handling components, and gas management functions.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000055 "Livit Flex Bioreactor"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.getinge.com/int/products/livit-flex/") obo:IAO_0000115 obo:PREFER_8000055 "A bench-scale bioreactor bioprocess control system produced by Getinge that monitors and regulates cultivation parameters in connected single-use or reusable bioreactors through integrated control software, sensor interfaces, fluid handling components, and gas management functions. It can be configured as single or dual control system with vessel total volumes ranging from 2 to 20 L.")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "Former manufacturer is Applikon Biotechnology")
+AnnotationAssertion(rdfs:comment obo:PREFER_8000055 "This system is classified as a bioreactor due to its use in conjunction with biological cultivation workflows. However, the Livit Flex is not strictly a bioreactor. Rather, it is a bioprocess control system that enables customizable configurations for efficient control and optimization of fermentation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000055 "Livit Flex - Getinge bioreactor"@en)
 SubClassOf(obo:PREFER_8000055 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000055 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000055 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
-# Class: obo:PREFER_8000056 (5L-Lucullus)
+# Class: obo:PREFER_8000056 (BioBench - Biostream bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000056 "A 5 liter minibioreactor scale stirred-tank bioreactor integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during laboratory-scale biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000056 "5L-Lucullus"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.biostream-international.com/biobench/") obo:IAO_0000115 obo:PREFER_8000056 "A bench-scale stirred-tank bioreactor produced by Biostream with a working volume of approximately 5 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000056 "BioBench - Biostream bioreactor"@en)
 SubClassOf(obo:PREFER_8000056 obo:PREFER_0000014)
-SubClassOf(obo:PREFER_8000056 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000086))
+SubClassOf(obo:PREFER_8000056 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
-# Class: obo:PREFER_8000057 (30L-Lucullus)
+# Class: obo:PREFER_8000057 (Biostat Cplus - Sartorius bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000057 "A 30 liter pilot bioreactor scale stirred-tank bioreactor integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during laboratory-scale biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000057 "30L-Lucullus"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/stainless-steel-bioreactors/biostat-cplus") obo:IAO_0000115 obo:PREFER_8000057 "A pilot-scale stirred-tank bioreactor produced by Sartorius with a working volume of approximately 30 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000057 "Biostat Cplus - Sartorius bioreactor"@en)
 SubClassOf(obo:PREFER_8000057 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000057 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000187))
 
-# Class: obo:PREFER_8000058 (100L-Lucullus)
+# Class: obo:PREFER_8000058 (Proreact P15 - Frings bioreactor)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_8000058 "A 100 liter pilot bioreactor scale stirred-tank bioreactor integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during laboratory-scale biological cultivation processes.")
-AnnotationAssertion(rdfs:label obo:PREFER_8000058 "100L-Lucullus"@en)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://frings.com/en/produkte/proreact-p-production-bioreactors/") obo:IAO_0000115 obo:PREFER_8000058 "A pilot-scale stirred-tank bioreactor produced by Frings with a working volume of approximately 100 liters, integrated with the Lucullus process information management platform for automated monitoring, control, and data acquisition during biological cultivation processes. The system is intended for research, process development, and scale-up studies and is designed with automation and operational concepts comparable to industrial production processes.")
+AnnotationAssertion(rdfs:label obo:PREFER_8000058 "Proreact P15 - Frings bioreactor"@en)
 SubClassOf(obo:PREFER_8000058 obo:PREFER_0000014)
 SubClassOf(obo:PREFER_8000058 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000187))
 

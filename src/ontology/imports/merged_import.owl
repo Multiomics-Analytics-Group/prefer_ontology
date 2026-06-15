@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/prefer/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/prefer/releases/2026-05-19/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-05-19")
+<http://purl.obolibrary.org/obo/prefer/releases/2026-06-15/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-06-15")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000796>))
@@ -1358,7 +1358,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006027>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006082>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006083>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006091>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006094>))
@@ -1401,7 +1400,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006710>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006753>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006790>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006793>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006796>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006805>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006810>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006811>))
@@ -1410,7 +1408,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006814>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006817>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006835>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006836>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006837>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006839>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006846>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006847>))
@@ -1427,7 +1424,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006887>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006892>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006893>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006896>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006903>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006906>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006915>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006921>))
@@ -1562,6 +1558,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009163>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009164>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009165>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009166>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009200>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009202>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009204>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009250>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009251>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009265>))
@@ -1835,10 +1834,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015629>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015630>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015669>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015671>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015695>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015698>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015701>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015711>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015718>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015721>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015723>))
@@ -1848,14 +1845,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015750>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015774>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015833>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015837>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015844>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015849>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015850>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015851>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015858>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015859>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015870>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015874>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015931>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015932>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0015980>))
@@ -1866,8 +1861,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016049>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016050>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016051>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016052>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016053>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016054>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016057>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016070>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016078>))
@@ -1985,7 +1978,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022035>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022037>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022402>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022406>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022411>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022412>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022414>))
@@ -2640,8 +2632,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045931>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045932>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045933>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045934>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045936>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045937>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045939>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045940>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045947>))
@@ -2722,8 +2712,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048145>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048146>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048147>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048193>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048199>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048209>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048243>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048251>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048280>))
@@ -3020,7 +3008,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051904>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051905>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051930>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051931>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051937>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051952>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051953>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051954>))
@@ -3238,7 +3225,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060978>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060979>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060980>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060981>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060986>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0061007>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0061008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0061009>))
@@ -3569,7 +3555,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097474>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097512>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097576>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097708>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097711>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097712>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097734>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0098523>))
@@ -3725,7 +3710,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140013>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140014>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140029>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140053>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140056>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140096>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140097>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140098>))
@@ -3852,9 +3836,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901534>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901550>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901551>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901552>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901605>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901606>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901607>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901608>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901609>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901610>))
@@ -7198,6 +7179,7 @@ Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/OMO_0001000>))
 Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/OMO_0001002>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0003000>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0003002>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0003003>))
@@ -7253,6 +7235,13 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "def
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000700> "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000700> "has ontology root term"@en)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0100001> "Use on obsolete terms, relating the term to another term that can be used as a substitute"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0100001> "Add as annotation triples in the granting ontology"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by"@en)
 
 # Annotation Property: <http://purl.obolibrary.org/obo/OMO_0003000> (<http://purl.obolibrary.org/obo/OMO_0003000>)
 
@@ -7358,7 +7347,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.gen
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has broad synonym"@en)
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has_broad_synonym")
 
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (has cross-reference)
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "An annotation property that links an ontology entity or a statement to a prefixed identifier or URI.")
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://orcid.org/0000-0002-7356-1779>)
@@ -15468,7 +15457,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000006> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000007> (early embryonic cell (metazoa))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000007> "A cell found in the embryo before the formation of all the gem layers is complete.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000007> "A cell found in the embryo before the formation of all the germ layers is complete.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000007> "early embryonic cell (metazoa)")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000007> <http://purl.obolibrary.org/obo/CL_0002321>)
 
@@ -15732,7 +15721,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000052> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000056> (myoblast)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MESH:D032446") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:21849021") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000056> "A cell that is commited to differentiating into a muscle cell.  Embryonic myoblasts develop from the mesoderm. They undergo proliferation, migrate to their various sites, and then differentiate into the appropriate form of myocytes.  Myoblasts also occur as transient populations of cells in muscles undergoing repair.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MESH:D032446") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:21849021") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000056> "A cell that is committed to differentiating into a muscle cell.  Embryonic myoblasts develop from the mesoderm. They undergo proliferation, migrate to their various sites, and then differentiate into the appropriate form of myocytes.  Myoblasts also occur as transient populations of cells in muscles undergoing repair.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000056> "BTO:0000222")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000056> "CALOHA:TS-0650")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000056> "FMA:70335")
@@ -21555,8 +21544,10 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0001820> "GO:0001820")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0001820> "serotonin secretion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0001820> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0046903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_350546>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0001820> <http://purl.obolibrary.org/obo/GO_0006837>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0001820> <http://purl.obolibrary.org/obo/GO_0015850>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0001820> <http://purl.obolibrary.org/obo/GO_0023061>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0001820> <http://purl.obolibrary.org/obo/GO_0071705>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0001820> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_350546>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0001824> (blastocyst development)
 
@@ -24269,10 +24260,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0005310> "dicarboxylic acid permease activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0005310> "GO:0005310")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0005310> "dicarboxylic acid transmembrane transporter activity")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0005310> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0022857> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35692>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0005310> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0022857> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_28965>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0005310> <http://purl.obolibrary.org/obo/GO_0046943>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0005310> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0006835>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0005310> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35692>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0005310> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_28965>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0005315> (phosphate transmembrane transporter activity)
 
@@ -24350,7 +24341,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0005576> "extracellular")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0005576> "cellular_component")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0005576> "GO:0005576")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0005576> "Note that this term is intended to annotate gene products that are not attached to the cell surface. For gene products from multicellular organisms which are secreted from a cell but retained within the organism (i.e. released into the interstitial fluid or blood), consider the cellular component term 'extracellular space ; GO:0005615'.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0005576> "Note that this term is intended to annotate gene products that are not attached to the cell surface. For gene products at the cell surface, consider annotating to external side of plasma membrane ; GO:0009897.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0005576> "extracellular region")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0005576> <http://purl.obolibrary.org/obo/GO_0110165>)
 
@@ -24913,6 +24904,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0005977> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/GO_0005978> (glycogen biosynthetic process)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005978> "The chemical reactions and pathways resulting in the formation of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005978> "MetaCyc:GLYCOGENSYNTH-PWY")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005978> "MetaCyc:PWY-5067")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005978> "MetaCyc:PWY-7900")
 AnnotationAssertion(Annotation(rdfs:label "Glycogen synthesis") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005978> "Reactome:R-HSA-3322077")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0005978> "glycogen anabolism")
@@ -24945,6 +24938,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0005979> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/GO_0005980> (glycogen catabolic process)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005980> "The chemical reactions and pathways resulting in the breakdown of glycogen, a polydisperse, highly branched glucan composed of chains of D-glucose residues.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005980> "MetaCyc:GLYCOCAT-PWY")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005980> "MetaCyc:PWY-5941")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005980> "MetaCyc:PWY-7662")
 AnnotationAssertion(Annotation(rdfs:label "Glycogen breakdown (glycogenolysis)") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005980> "Reactome:R-HSA-70221")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0005980> "glycogen breakdown")
@@ -25084,17 +25079,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006027> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006027> <http://purl.obolibrary.org/obo/GO_0006026>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006027> <http://purl.obolibrary.org/obo/GO_0030203>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006027> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_18085>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0006082> (organic acid metabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006082> "The chemical reactions and pathways involving organic acids, any acidic compound containing carbon in covalent linkage.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0006082> "organic acid metabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006082> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006082> "GO:0006082")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006082> "organic acid metabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_64709>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006082> <http://purl.obolibrary.org/obo/GO_0044281>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006082> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_64709>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0006083> (acetate metabolic process)
 
@@ -25640,7 +25624,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006753> "GO:0006753")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006753> "nucleoside phosphate metabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006753> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_25608>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006753> <http://purl.obolibrary.org/obo/GO_0006796>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006753> <http://purl.obolibrary.org/obo/GO_0019637>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006753> <http://purl.obolibrary.org/obo/GO_0055086>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006753> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_25608>))
@@ -25669,18 +25652,6 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006793> "phos
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006793> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_26082>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006793> <http://purl.obolibrary.org/obo/GO_0008152>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006793> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_26082>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0006796> (phosphate-containing compound metabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006796> "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0006796> "phosphate metabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006796> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0006796> "phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006796> "GO:0006796")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006796> "phosphate-containing compound metabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006796> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_26020>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006796> <http://purl.obolibrary.org/obo/GO_0006793>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006796> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_26020>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0006805> (xenobiotic metabolic process)
 
@@ -25771,9 +25742,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0006835> "sodium:dicarboxylate transport")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006835> "GO:0006835")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006835> "dicarboxylic acid transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006835> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35693>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006835> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_28965>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006835> <http://purl.obolibrary.org/obo/GO_0046942>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006835> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35693>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0006835> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_28965>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0006836> (neurotransmitter transport)
 
@@ -25792,17 +25763,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006836> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006836> <http://purl.obolibrary.org/obo/GO_0006810>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006836> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_33208>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006836> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/GOCHE_25512>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0006837> (serotonin transport)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006837> "The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006837> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006837> "GO:0006837")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006837> "serotonin transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0006837> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_350546>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006837> <http://purl.obolibrary.org/obo/GO_0015844>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006837> <http://purl.obolibrary.org/obo/GO_0015850>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006837> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_350546>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0006839> (mitochondrial transport)
 
@@ -25990,17 +25950,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0006896> <http://purl.obolibrary.o
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002338> <http://purl.obolibrary.org/obo/GO_0005794>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/GO_0005773>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0006903> (vesicle targeting)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:17335816") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006903> "The process in which vesicles are directed to specific destination membranes. Targeting involves coordinated interactions among cytoskeletal elements (microtubules or actin filaments), motor proteins, molecules at the vesicle membrane and target membrane surfaces, and vesicle cargo.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006903> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006903> "GO:0006903")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006903> "vesicle targeting")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006903> <http://purl.obolibrary.org/obo/GO_0009987>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0016192>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0051650>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0006903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0006906> (vesicle fusion)
 
@@ -27243,10 +27192,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0008028> "molecular_function")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0008028> "GO:0008028")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008028> "monocarboxylic acid transmembrane transporter activity")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0008028> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0022857> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25384>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0008028> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0022857> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35757>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008028> <http://purl.obolibrary.org/obo/GO_0046943>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0015718>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0008028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25384>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0008028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35757>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008053> (mitochondrial fusion)
 
@@ -27545,7 +27494,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008504> "monoamine transmembrane transporter activity")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0008504> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0022857> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_63534>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008504> <http://purl.obolibrary.org/obo/GO_0022804>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0008504> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0015844>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008504> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_63534>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008544> (epidermis development)
@@ -27863,6 +27811,47 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0009166> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0009166> <http://purl.obolibrary.org/obo/GO_0009117>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0009166> <http://purl.obolibrary.org/obo/GO_1901292>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0009166> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_36976>))
+
+# Class: <http://purl.obolibrary.org/obo/GO_0009200> (deoxyribonucleoside triphosphate metabolic process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0009200> "The chemical reactions and pathways involving a deoxyribonucleoside triphosphate, a compound consisting of a nucleobase linked to a deoxyribose sugar esterified with triphosphate on the sugar.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009200> "deoxyribonucleoside triphosphate metabolism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0009200> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0009200> "GO:0009200")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0009200> "deoxyribonucleoside triphosphate metabolic process")
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0009200> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_61560>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009200> <http://purl.obolibrary.org/obo/GO_0009394>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009200> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_61560>))
+
+# Class: <http://purl.obolibrary.org/obo/GO_0009202> (deoxyribonucleoside triphosphate biosynthetic process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0009202> "The chemical reactions and pathways resulting in the formation of a deoxyribonucleoside triphosphate, a compound consisting of a nucleobase linked to a deoxyribose sugar esterified with triphosphate on the sugar.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009202> "deoxyribonucleoside triphosphate anabolism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009202> "deoxyribonucleoside triphosphate biosynthesis")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009202> "deoxyribonucleoside triphosphate formation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009202> "deoxyribonucleoside triphosphate synthesis")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0009202> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0009202> "GO:0009202")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0009202> "deoxyribonucleoside triphosphate biosynthetic process")
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0009202> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_61560>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009202> <http://purl.obolibrary.org/obo/GO_0009200>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009202> <http://purl.obolibrary.org/obo/GO_0009265>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009202> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_61560>))
+
+# Class: <http://purl.obolibrary.org/obo/GO_0009204> (deoxyribonucleoside triphosphate catabolic process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0009204> "The chemical reactions and pathways resulting in the breakdown of a deoxyribonucleoside triphosphate, a compound consisting of a nucleobase linked to a deoxyribose sugar esterified with triphosphate on the sugar.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009204> "deoxyribonucleoside triphosphate breakdown")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009204> "deoxyribonucleoside triphosphate catabolism")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0009204> "deoxyribonucleoside triphosphate degradation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0009204> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0009204> "GO:0009204")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0009204> "deoxyribonucleoside triphosphate catabolic process")
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0009204> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_61560>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009204> <http://purl.obolibrary.org/obo/GO_0009166>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009204> <http://purl.obolibrary.org/obo/GO_0009200>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009204> <http://purl.obolibrary.org/obo/GO_0046386>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009204> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_61560>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0009250> (glucan biosynthetic process)
 
@@ -31215,7 +31204,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015125> "GO:0015125")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015125> "bile acid transmembrane transporter activity")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015125> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0022857> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_3098>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015125> <http://purl.obolibrary.org/obo/GO_0008028>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0015125> <http://purl.obolibrary.org/obo/GO_0046943>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015125> <http://purl.obolibrary.org/obo/GO_0170055>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0015721>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_3098>))
@@ -31420,8 +31409,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015355> "GO:0015355")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015355> "secondary active monocarboxylate transmembrane transporter activity")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015355> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0015291> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25384>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015355> <http://purl.obolibrary.org/obo/GO_0008028>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015355> <http://purl.obolibrary.org/obo/GO_0015291>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0015355> <http://purl.obolibrary.org/obo/GO_0046943>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0015355> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25384>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0015605> (organophosphate ester transmembrane transporter activity)
 
@@ -31471,16 +31461,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015671> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015671> <http://purl.obolibrary.org/obo/GO_0015669>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015671> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_15379>))
 
-# Class: <http://purl.obolibrary.org/obo/GO_0015695> (organic cation transport)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0015695> "The directed movement of organic cations into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Organic cations are atoms or small molecules with a positive charge which contain carbon in covalent linkage.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0015695> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015695> "GO:0015695")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015695> "organic cation transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015695> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25697>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015695> <http://purl.obolibrary.org/obo/GO_0006810>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015695> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25697>))
-
 # Class: <http://purl.obolibrary.org/obo/GO_0015698> (inorganic anion transport)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:krc") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0015698> "The directed movement of inorganic anions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Inorganic anions are atoms or small molecules with a negative charge which do not contain carbon in covalent linkage.")
@@ -31502,19 +31482,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015701> "GO:0015701")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015701> "bicarbonate transport")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015701> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_17544>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015701> <http://purl.obolibrary.org/obo/GO_0015711>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0015701> <http://purl.obolibrary.org/obo/GO_0006810>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015701> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_17544>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0015711> (organic anion transport)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:krc") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0015711> "The directed movement of organic anions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Organic anions are atoms or small molecules with a negative charge which contain carbon in covalent linkage.")
-AnnotationAssertion(Annotation(rdfs:label "SLC-mediated transport of organic anions") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0015711> "Reactome:R-HSA-9955298")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0015711> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015711> "GO:0015711")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015711> "organic anion transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015711> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25696>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015711> <http://purl.obolibrary.org/obo/GO_0006810>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015711> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_25696>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0015718> (monocarboxylic acid transport)
 
@@ -31619,16 +31588,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015837> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015837> <http://purl.obolibrary.org/obo/GO_0071705>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015837> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_32952>))
 
-# Class: <http://purl.obolibrary.org/obo/GO_0015844> (monoamine transport)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0015844> "The directed movement of monoamines, organic compounds that contain one amino group that is connected to an aromatic ring by an ethylene group (-CH2-CH2-), into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0015844> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015844> "GO:0015844")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015844> "monoamine transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015844> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_63534>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015844> <http://purl.obolibrary.org/obo/GO_0071705>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015844> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_63534>))
-
 # Class: <http://purl.obolibrary.org/obo/GO_0015849> (organic acid transport)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0015849> "The directed movement of organic acids, any acidic compound containing carbon in covalent linkage, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.")
@@ -31690,23 +31649,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015870> "GO:0015870")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015870> "acetylcholine transport")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015870> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_15355>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015870> <http://purl.obolibrary.org/obo/GO_0015695>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015870> <http://purl.obolibrary.org/obo/GO_0071705>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015870> <http://purl.obolibrary.org/obo/GO_1901374>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0015870> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_15355>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0015874> (norepinephrine transport)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0015874> "The directed movement of norepinephrine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Norepinephrine (3,4-dihydroxyphenyl-2-aminoethanol) is a hormone secreted by the adrenal medulla and a neurotransmitter in the sympathetic peripheral nervous system and in some tracts of the CNS. It is also the biosynthetic precursor of epinephrine.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0015874> "levarterenol transport")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0015874> "noradrenaline transport")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0015874> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0015874> "GO:0015874")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0015874> "norepinephrine transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0015874> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_72587>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015874> <http://purl.obolibrary.org/obo/GO_0015695>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015874> <http://purl.obolibrary.org/obo/GO_0051937>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0015874> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_72587>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0015931> (nucleobase-containing compound transport)
 
@@ -31856,35 +31801,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0016052> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016052> <http://purl.obolibrary.org/obo/GO_0005975>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016052> <http://purl.obolibrary.org/obo/GO_0009056>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016052> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_16646>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0016053> (organic acid biosynthetic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0016053> "The chemical reactions and pathways resulting in the formation of organic acids, any acidic compound containing carbon in covalent linkage.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016053> "organic acid anabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016053> "organic acid biosynthesis")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016053> "organic acid formation")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016053> "organic acid synthesis")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0016053> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0016053> "GO:0016053")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016053> "organic acid biosynthetic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0016053> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_64709>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016053> <http://purl.obolibrary.org/obo/GO_0006082>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016053> <http://purl.obolibrary.org/obo/GO_0044283>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_64709>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0016054> (organic acid catabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0016054> "The chemical reactions and pathways resulting in the breakdown of organic acids, any acidic compound containing carbon in covalent linkage.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016054> "organic acid breakdown")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016054> "organic acid catabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016054> "organic acid degradation")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0016054> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0016054> "GO:0016054")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016054> "organic acid catabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0016054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_64709>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016054> <http://purl.obolibrary.org/obo/GO_0006082>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016054> <http://purl.obolibrary.org/obo/GO_0044282>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016054> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_64709>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0016057> (regulation of membrane potential in photoreceptor cell)
 
@@ -33386,14 +33302,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0022402> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0022402> <http://purl.obolibrary.org/obo/GO_0009987>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0022402> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007049>))
 
-# Class: <http://purl.obolibrary.org/obo/GO_0022406> (membrane docking)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:isa_complete") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:27875684") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0022406> "The initial attachment of a membrane or protein to a target membrane. Docking requires only that the proteins come close enough to interact and adhere.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0022406> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0022406> "GO:0022406")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0022406> "membrane docking")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0022406> <http://purl.obolibrary.org/obo/GO_0009987>)
-
 # Class: <http://purl.obolibrary.org/obo/GO_0022411> (cellular component disassembly)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:isa_complete") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0022411> "A cellular process that results in the breakdown of a cellular component.")
@@ -34006,6 +33914,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0030212> "hyaluronan metabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0030212> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_16336>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030212> <http://purl.obolibrary.org/obo/GO_0030203>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0030212> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4751>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0030212> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_6656>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030212> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_16336>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0030213> (hyaluronan biosynthetic process)
@@ -34021,6 +33931,8 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0030213> "hyal
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0030213> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_16336>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030213> <http://purl.obolibrary.org/obo/GO_0006024>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030213> <http://purl.obolibrary.org/obo/GO_0030212>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0030213> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4751>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0030213> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_6656>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030213> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_16336>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0030214> (hyaluronan catabolic process)
@@ -34037,6 +33949,8 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0030214> "hyal
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0030214> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_16336>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030214> <http://purl.obolibrary.org/obo/GO_0006027>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030214> <http://purl.obolibrary.org/obo/GO_0030212>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0030214> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4751>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0030214> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_6656>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0030214> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_16336>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0030218> (erythrocyte differentiation)
@@ -38486,10 +38400,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0035929> "GO:0035929")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0035929> "steroid hormone secretion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0035929> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0046903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_26764>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0035929> <http://purl.obolibrary.org/obo/GO_0060986>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0035929> <http://purl.obolibrary.org/obo/GO_0046879>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0035929> <http://purl.obolibrary.org/obo/GO_0140353>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0035929> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0035929> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2157>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0035929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_26764>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0035935> (androgen secretion)
@@ -38500,8 +38412,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0035935> "androgen secretion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0035935> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0046903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/GOCHE_50113>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0035935> <http://purl.obolibrary.org/obo/GO_0035929>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0035935> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0035935> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2157>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0035935> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/GOCHE_50113>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0035987> (endodermal cell differentiation)
@@ -40469,7 +40379,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0043436> "GO:0043436")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0043436> "oxoacid metabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043436> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_35406>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0043436> <http://purl.obolibrary.org/obo/GO_0006082>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0043436> <http://purl.obolibrary.org/obo/GO_0044281>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0043436> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_35406>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0043455> (regulation of secondary metabolic process)
@@ -40675,9 +40585,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0043648> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0043648> "GO:0043648")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0043648> "dicarboxylic acid metabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043648> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_35693>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043648> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_28965>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0043648> <http://purl.obolibrary.org/obo/GO_0019752>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0043648> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_35693>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0043648> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_28965>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0043649> (dicarboxylic acid catabolic process)
 
@@ -40690,10 +40600,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0043649> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0043649> "GO:0043649")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0043649> "dicarboxylic acid catabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043649> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35693>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043649> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_28965>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0043649> <http://purl.obolibrary.org/obo/GO_0043648>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0043649> <http://purl.obolibrary.org/obo/GO_0046395>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0043649> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_35693>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0043649> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_28965>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0043650> (dicarboxylic acid biosynthetic process)
 
@@ -40707,10 +40617,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0043650> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0043650> "GO:0043650")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0043650> "dicarboxylic acid biosynthetic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043650> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_35693>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0043650> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_28965>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0043650> <http://purl.obolibrary.org/obo/GO_0043648>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0043650> <http://purl.obolibrary.org/obo/GO_0046394>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0043650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_35693>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0043650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_28965>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0043931> (ossification involved in bone maturation)
 
@@ -42740,37 +42650,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0045934> <http://purl.obolibrary.o
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045934> <http://purl.obolibrary.org/obo/GO_0019219>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045934> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/GO_0006139>))
 
-# Class: <http://purl.obolibrary.org/obo/GO_0045936> (negative regulation of phosphate metabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0045936> "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving phosphates.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045936> "down regulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045936> "down-regulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045936> "downregulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045936> "negative regulation of phosphate metabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0045936> "inhibition of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0045936> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0045936> "GO:0045936")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0045936> "negative regulation of phosphate metabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0045936> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0065007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/GO_0006796>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045936> <http://purl.obolibrary.org/obo/GO_0010563>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045936> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/GO_0006796>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0045937> (positive regulation of phosphate metabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0045937> "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving phosphates.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045937> "positive regulation of phosphate metabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045937> "up regulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045937> "up-regulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0045937> "upregulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0045937> "activation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0045937> "stimulation of phosphate metabolic process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0045937> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0045937> "GO:0045937")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0045937> "positive regulation of phosphate metabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0045937> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0065007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002213> <http://purl.obolibrary.org/obo/GO_0006796>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045937> <http://purl.obolibrary.org/obo/GO_0010562>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045937> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002213> <http://purl.obolibrary.org/obo/GO_0006796>))
-
 # Class: <http://purl.obolibrary.org/obo/GO_0045939> (negative regulation of steroid metabolic process)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0045939> "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving steroids.")
@@ -42884,8 +42763,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0045980> "negative regulation of nucleotide metabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0045980> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0065007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/GO_0009117>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045980> <http://purl.obolibrary.org/obo/GO_0006140>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0045980> <http://purl.obolibrary.org/obo/GO_0010563>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045980> <http://purl.obolibrary.org/obo/GO_0045934>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045980> <http://purl.obolibrary.org/obo/GO_0045936>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045980> <http://purl.obolibrary.org/obo/GO_0062014>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045980> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/GO_0009117>))
 
@@ -42903,7 +42782,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0045981> "positive regulation of nucleotide metabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0045981> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0065007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002213> <http://purl.obolibrary.org/obo/GO_0009117>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045981> <http://purl.obolibrary.org/obo/GO_0006140>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045981> <http://purl.obolibrary.org/obo/GO_0045937>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0045981> <http://purl.obolibrary.org/obo/GO_0010562>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045981> <http://purl.obolibrary.org/obo/GO_0062013>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0045981> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002213> <http://purl.obolibrary.org/obo/GO_0009117>))
 
@@ -43112,7 +42991,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0046385> "GO:0046385")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0046385> "deoxyribose phosphate biosynthetic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0046385> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_19569>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0046385> <http://purl.obolibrary.org/obo/GO_0006796>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046385> <http://purl.obolibrary.org/obo/GO_0090407>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046385> <http://purl.obolibrary.org/obo/GO_1901137>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046385> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_19569>))
@@ -43127,7 +43005,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0046386> "GO:0046386")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0046386> "deoxyribose phosphate catabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0046386> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_19569>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0046386> <http://purl.obolibrary.org/obo/GO_0006796>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046386> <http://purl.obolibrary.org/obo/GO_0046434>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046386> <http://purl.obolibrary.org/obo/GO_1901136>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046386> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_19569>))
@@ -43143,8 +43020,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0046394> "GO:0046394")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0046394> "carboxylic acid biosynthetic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0046394> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_29067>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0046394> <http://purl.obolibrary.org/obo/GO_0016053>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046394> <http://purl.obolibrary.org/obo/GO_0019752>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0046394> <http://purl.obolibrary.org/obo/GO_0044283>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046394> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_29067>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0046395> (carboxylic acid catabolic process)
@@ -43157,8 +43034,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0046395> "GO:0046395")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0046395> "carboxylic acid catabolic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0046395> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_29067>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0046395> <http://purl.obolibrary.org/obo/GO_0016054>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046395> <http://purl.obolibrary.org/obo/GO_0019752>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0046395> <http://purl.obolibrary.org/obo/GO_0044282>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046395> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_29067>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0046434> (organophosphate catabolic process)
@@ -43769,7 +43646,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0046942> "GO:0046942")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0046942> "carboxylic acid transport")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0046942> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_29067>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0046942> <http://purl.obolibrary.org/obo/GO_0015711>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046942> <http://purl.obolibrary.org/obo/GO_0015849>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0046942> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_29067>))
 
@@ -43968,34 +43844,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0048193> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0048193> <http://purl.obolibrary.org/obo/GO_0016192>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0048193> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002344> <http://purl.obolibrary.org/obo/GO_0005798>))
 
-# Class: <http://purl.obolibrary.org/obo/GO_0048199> (vesicle targeting, to, from or within Golgi)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jid") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0716731363") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:10219233") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0048199> "The process in which vesicles are directed to specific destination membranes during transport to, from or within the Golgi apparatus; mediated by the addition of specific coat proteins, including COPI and COPII proteins and clathrin, to the membrane during vesicle formation.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0048199> "Golgi vesicle targeting")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0048199> "dictyosome vesicle targeting")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0048199> "vesicle targeting, to, from or within dictyosome")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0048199> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0048199> "GO:0048199")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0048199> "vesicle targeting, to, from or within Golgi")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0048199> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002344> <http://purl.obolibrary.org/obo/GO_0005794>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/GO_0005798>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048199> <http://purl.obolibrary.org/obo/GO_0006903>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048199> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0048193>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048199> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048199> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002344> <http://purl.obolibrary.org/obo/GO_0005794>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048199> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/GO_0005798>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0048209> (regulation of vesicle targeting, to, from or within Golgi)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jid") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0716731363") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:10219233") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0048209> "Any process that modulates the frequency, rate, or destination of vesicle-mediated transport to, from or within the Golgi apparatus.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0048209> "regulation of Golgi vesicle targeting")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0048209> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0048209> "GO:0048209")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0048209> "regulation of vesicle targeting, to, from or within Golgi")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0048209> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0065007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0048199>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048209> <http://purl.obolibrary.org/obo/GO_0060341>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048209> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048209> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0048199>))
-
 # Class: <http://purl.obolibrary.org/obo/GO_0048243> (norepinephrine secretion)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ef") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jid") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0048243> "The regulated release of norepinephrine by a cell. Norepinephrine is a catecholamine and it acts as a hormone and as a neurotransmitter of most of the sympathetic nervous system.")
@@ -44004,9 +43852,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0048243> "GO:0048243")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0048243> "norepinephrine secretion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0048243> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0046903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_72587>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048243> <http://purl.obolibrary.org/obo/GO_0015874>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0048243> <http://purl.obolibrary.org/obo/GO_0023061>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0048243> <http://purl.obolibrary.org/obo/GO_0050432>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0048243> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_72587>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0048251> (elastic fiber assembly)
 
@@ -45697,8 +45545,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0050432> "GO:0050432")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0050432> "catecholamine secretion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0050432> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0046903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_33567>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0050432> <http://purl.obolibrary.org/obo/GO_0015850>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0050432> <http://purl.obolibrary.org/obo/GO_0032940>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0050432> <http://purl.obolibrary.org/obo/GO_0051937>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0050432> <http://purl.obolibrary.org/obo/GO_0071705>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0050432> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_33567>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0050433> (regulation of catecholamine secretion)
 
@@ -47539,8 +47389,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0051620> "GO:0051620")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0051620> "norepinephrine uptake")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0051620> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002338> <http://purl.obolibrary.org/obo/GO_0005576>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/GO_0005622>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_72587>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0051620> <http://purl.obolibrary.org/obo/GO_0015874>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0051620> <http://purl.obolibrary.org/obo/GO_0090493>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0051620> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_72587>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0051621> (regulation of norepinephrine uptake)
 
@@ -48108,17 +47958,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0051931> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0051931> <http://purl.obolibrary.org/obo/GO_0031644>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0051931> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_33208>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0051931> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0007600>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0051937> (catecholamine transport)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0051937> "The directed movement of catecholamines, a group of physiologically important biogenic amines that possess a catechol (3,4-dihydroxyphenyl) nucleus and are derivatives of 3,4-dihydroxyphenylethylamine.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0051937> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0051937> "GO:0051937")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0051937> "catecholamine transport")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0051937> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_33567>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0051937> <http://purl.obolibrary.org/obo/GO_0015844>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0051937> <http://purl.obolibrary.org/obo/GO_0015850>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0051937> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_33567>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0051952> (regulation of amine transport)
 
@@ -48798,7 +48637,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0055082> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/GO_0055085> (transmembrane transport)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jid") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0055085> "The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other.")
-AnnotationAssertion(Annotation(rdfs:label "ABC-family proteins mediated transport") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0055085> "Reactome:R-HSA-382556")
+AnnotationAssertion(Annotation(rdfs:label "ABC-family protein mediated transport") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0055085> "Reactome:R-HSA-382556")
 AnnotationAssertion(Annotation(rdfs:label "SLC-mediated transmembrane transport") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0055085> "Reactome:R-HSA-425407")
 AnnotationAssertion(Annotation(rdfs:label "Miscellaneous transport and binding events") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0055085> "Reactome:R-HSA-5223345")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0055085> "membrane transport")
@@ -49220,6 +49059,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0060255> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:BHF") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:cilia") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:kmv") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pr") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:vw") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:13978319") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:27350441") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0060271> "The assembly of a cilium, a specialized eukaryotic organelle that consists of a filiform extrusion of the cell surface. Each cilium is bounded by an extrusion of the cytoplasmic membrane, and contains a regular longitudinal array of microtubules, anchored basally in a centriole.")
 AnnotationAssertion(Annotation(rdfs:label "Cilium Assembly") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0060271> "Reactome:R-HSA-5617833")
+AnnotationAssertion(Annotation(rdfs:label "Cargo trafficking to the periciliary membrane") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0060271> "Reactome:R-HSA-5620920")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0060271> "ciliogenesis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0060271> "cilium formation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0060271> "microtubule-based flagellum assembly")
@@ -49242,7 +49082,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0060271> ObjectSomeValuesFrom(<htt
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060271> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0097712>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060271> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_1905349>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060271> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060271> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002224> <http://purl.obolibrary.org/obo/GO_0097711>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060271> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002588> <http://purl.obolibrary.org/obo/GO_0005929>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0060281> (regulation of oocyte development)
@@ -50979,17 +50818,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0060981> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060981> <http://purl.obolibrary.org/obo/GO_0060973>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060981> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0060978>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0060981> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_7742>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0060986> (endocrine hormone secretion)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0060986> "The regulated release of a hormone into the circulatory system.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0060986> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0060986> "GO:0060986")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0060986> "endocrine hormone secretion")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060986> <http://purl.obolibrary.org/obo/GO_0046879>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060986> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060986> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2157>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060986> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0050886>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0061007> (hepaticobiliary system process)
 
@@ -53007,6 +52835,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0070507> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/GO_0070585> (protein localization to mitochondrion)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ecd") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0070585> "A process in which a protein is transported to, or maintained in, a location within the mitochondrion.")
+AnnotationAssertion(Annotation(rdfs:label "Mitochondrial protein import") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0070585> "Reactome:R-HSA-1268020")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0070585> "protein localisation in mitochondrion")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0070585> "protein localization in mitochondrion")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0070585> "biological_process")
@@ -54743,9 +54572,11 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0090493> "GO:0090493")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0090493> "catecholamine uptake")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0090493> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0006810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002338> <http://purl.obolibrary.org/obo/GO_0005576>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/GO_0005622>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_33567>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0090493> <http://purl.obolibrary.org/obo/GO_0051937>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0090493> <http://purl.obolibrary.org/obo/GO_0015850>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0090493> <http://purl.obolibrary.org/obo/GO_0071705>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0090493> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002338> <http://purl.obolibrary.org/obo/GO_0005576>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0090493> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/GO_0005622>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0090493> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_33567>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0090596> (sensory organ morphogenesis)
 
@@ -55069,29 +54900,14 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0097708> <http://purl.obolibrary.o
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0097708> <http://purl.obolibrary.org/obo/GO_0043231>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0097708> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
 
-# Class: <http://purl.obolibrary.org/obo/GO_0097711> (ciliary basal body-plasma membrane docking)
+# Class: <http://purl.obolibrary.org/obo/GO_0097712> (trans-Golgi to periciliary membrane compartment transport)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:cilia") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:13978319") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:23348840") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:23530209") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:25686250") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:26981235") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0097711> "The docking of a cytosolic centriole/basal body to the plasma membrane via the ciliary transition fibers. In some species this may happen via an intermediate step, by first docking to the ciliary vesicle via the ciliary transition fibers. The basal body-ciliary vesicle then relocates to the plasma membrane, followed by the ciliary vesicle fusing with the plasma membrane, effectively attaching the basal body to the plasma membrane.")
-AnnotationAssertion(Annotation(rdfs:label "Anchoring of the basal body to the plasma membrane") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0097711> "Reactome:R-HSA-5620912")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0097711> "ciliary basal body docking")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0097711> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0097711> "anchoring of the basal body to the plasma membrane")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0097711> "GO:0097711")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0097711> "Basal bodies in jawed vertebrates appear to first attach to a ciliary vesicle. It is unclear how specific this is to jawed vertebrates or if other organisms also employ this sequence. Some species like Giardia intestinalis do not relocate their basal bodies to the plasma membrane, but have their axonemes extend through the cytosol to then protrude out of the cell to form flagella.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0097711> "ciliary basal body-plasma membrane docking")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0097711> <http://purl.obolibrary.org/obo/GO_0140056>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0097711> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4890>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0097711> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_5782>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0097711> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0060271>))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0097711> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0097712> (vesicle targeting, trans-Golgi to periciliary membrane compartment)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:cilia") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20106869") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:23351793") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:24814148") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:26485645") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0097712> "The process in which vesicles formed at the trans-Golgi network are directed to the plasma membrane surrounding the base of the cilium, including the ciliary pocket, mediated by molecules at the vesicle membrane and target membrane surfaces.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20106869") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:23351793") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:24814148") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:26485645") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0097712> "The directed movement of substances from the trans-Golgi network to the periciliary membrane compartment, the specialized region of the plasma membrane surrounding the base of the cilium including the ciliary pocket, via vesicle-mediated transport.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0097712> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0097712> "vesicle targeting, trans-Golgi to periciliary membrane compartment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0097712> "GO:0097712")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0097712> "vesicle targeting, trans-Golgi to periciliary membrane compartment")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0097712> <http://purl.obolibrary.org/obo/GO_0048199>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0097712> "trans-Golgi to periciliary membrane compartment transport")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0097712> <http://purl.obolibrary.org/obo/GO_0006893>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0097712> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4890>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0097712> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_5782>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0097712> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0060271>))
@@ -55420,7 +55236,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0098858> "GO:0098858")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0098858> "actin-based cell projection")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0098858> <http://purl.obolibrary.org/obo/GO_0120025>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0098858> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005884>))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0098858> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0015629>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0098858> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0098867> (intramembranous bone growth)
@@ -56895,7 +56711,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0140029> ObjectSomeValuesFrom(<htt
 
 # Class: <http://purl.obolibrary.org/obo/GO_0140053> (mitochondrial gene expression)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:27058308") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0140053> "The process in which a mitochondrial gene's sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA or circRNA (for protein-coding genes) and the translation of that mRNA or circRNA into protein. Protein maturation is included when required to form an active form of a product from an inactive precursor form.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:27058308") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:31861673") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:38117001") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0140053> "The process of transcribing and translating the mitochondrial genome (mtDNA) to produce at least a subset of oxidative phosphorylation (OXPHOS) proteins, 2 rRNAs, and mitochondrial tRNAs, which are critical for ATP production. Protein maturation is included when required to form an active form of a product from an inactive precursor form.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0140053> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0140053> "GO:0140053")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0140053> "mitochondrial gene expression")
@@ -56903,16 +56719,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0140053> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0140053> <http://purl.obolibrary.org/obo/GO_0010467>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0140053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/GO_0005739>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0140053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_0140056> (organelle localization by membrane tethering)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:27875684") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0140056> "The process by which an organelle membrane interacts with another membrane via molecular tethers that physically bridge the two membranes and attach them to each other.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0140056> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0140056> "GO:0140056")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0140056> "organelle localization by membrane tethering")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0140056> <http://purl.obolibrary.org/obo/GO_0022406>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0140056> <http://purl.obolibrary.org/obo/GO_0051640>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0140056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_0140096> (catalytic activity, acting on a protein)
 
@@ -57201,9 +57007,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0140253> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0140318> (protein transporter activity)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:18706423") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0140318> "Directly binding to a specific protein and delivering it to a specific cellular location.")
-AnnotationAssertion(Annotation(rdfs:label "M6PR transports activated ARSA to the lysosome") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0140318> "Reactome:R-HSA-2248891")
-AnnotationAssertion(Annotation(rdfs:label "iRHOM2 transports ADAM17 from ER to the Golgi-network") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0140318> "Reactome:R-HSA-9662747")
-AnnotationAssertion(Annotation(rdfs:label "iRHOM2 transports ADAM17:Zn2+ from Golgi to the plasma membrane") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0140318> "Reactome:R-HSA-9662818")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0140318> "molecular_function")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0140318> "protein carrier activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0140318> "protein transport chaperone")
@@ -57727,6 +57530,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1900125> "regulation of hyaluronan biosynthetic process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1900125> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0065007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0030213>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900125> <http://purl.obolibrary.org/obo/GO_0032885>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1900125> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4751>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1900125> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_6656>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/GO_0030213>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_1900126> (negative regulation of hyaluronan biosynthetic process)
@@ -57763,6 +57568,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1900126> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900126> <http://purl.obolibrary.org/obo/GO_0010558>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900126> <http://purl.obolibrary.org/obo/GO_0045912>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900126> <http://purl.obolibrary.org/obo/GO_1900125>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1900126> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4751>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1900126> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_6656>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900126> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/GO_0030213>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_1900127> (positive regulation of hyaluronan biosynthetic process)
@@ -57799,6 +57606,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1900127> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900127> <http://purl.obolibrary.org/obo/GO_0010557>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900127> <http://purl.obolibrary.org/obo/GO_0045913>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900127> <http://purl.obolibrary.org/obo/GO_1900125>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1900127> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_4751>)))
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1900127> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_6656>)))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1900127> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002213> <http://purl.obolibrary.org/obo/GO_0030213>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_1900160> (plastid chromosome packaging)
@@ -58773,49 +58582,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_1901552> <http://purl.obolibrary.o
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1901552> <http://purl.obolibrary.org/obo/GO_1901550>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1901552> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/NCBITaxon_7742>))
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1901552> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002213> <http://purl.obolibrary.org/obo/GO_0001885>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_1901605> (alpha-amino acid metabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_1901605> "The chemical reactions and pathways involving an alpha-amino acid.")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901605> "alpha-amino acid metabolism")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_1901605> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_1901605> "GO:1901605")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1901605> "alpha-amino acid metabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1901605> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_78608>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901605> <http://purl.obolibrary.org/obo/GO_0006520>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901605> <http://purl.obolibrary.org/obo/GO_0019752>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901605> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/CHEBI_78608>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_1901606> (alpha-amino acid catabolic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_1901606> "The chemical reactions and pathways resulting in the breakdown of an alpha-amino acid.")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901606> "alpha-amino acid breakdown")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901606> "alpha-amino acid catabolism")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901606> "alpha-amino acid degradation")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_1901606> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_1901606> "GO:1901606")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1901606> "alpha-amino acid catabolic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1901606> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_78608>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901606> <http://purl.obolibrary.org/obo/GO_0009063>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901606> <http://purl.obolibrary.org/obo/GO_0046395>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901606> <http://purl.obolibrary.org/obo/GO_1901605>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901606> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/CHEBI_78608>))
-
-# Class: <http://purl.obolibrary.org/obo/GO_1901607> (alpha-amino acid biosynthetic process)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_1901607> "The chemical reactions and pathways resulting in the formation of an alpha-amino acid.")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901607> "alpha-amino acid anabolism")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901607> "alpha-amino acid biosynthesis")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901607> "alpha-amino acid formation")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_1901607> "alpha-amino acid synthesis")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_1901607> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_1901607> "GO:1901607")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1901607> "alpha-amino acid biosynthetic process")
-EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1901607> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009058> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_78608>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901607> <http://purl.obolibrary.org/obo/GO_0008652>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901607> <http://purl.obolibrary.org/obo/GO_0046394>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901607> <http://purl.obolibrary.org/obo/GO_1901605>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901607> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0004008> <http://purl.obolibrary.org/obo/CHEBI_78608>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_1901608> (regulation of vesicle transport along microtubule)
 
@@ -63091,7 +62857,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_1904106> "GO:1904106")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1904106> "protein localization to microvillus")
 EquivalentClasses(<http://purl.obolibrary.org/obo/GO_1904106> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008104> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/GO_0005902>)))
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1904106> <http://purl.obolibrary.org/obo/GO_0008104>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_1904106> <http://purl.obolibrary.org/obo/GO_1903119>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1904106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/GO_0005902>))
 
 # Class: <http://purl.obolibrary.org/obo/GO_1904145> (negative regulation of meiotic cell cycle process involved in oocyte maturation)
