@@ -127,10 +127,15 @@ Declaration(Class(obo:PREFER_0000089))
 Declaration(Class(obo:PREFER_0000090))
 Declaration(Class(obo:PREFER_0000091))
 Declaration(Class(obo:PREFER_0000092))
+Declaration(Class(obo:PREFER_0000093))
 Declaration(Class(obo:PREFER_0000094))
 Declaration(Class(obo:PREFER_0000095))
 Declaration(Class(obo:PREFER_0000096))
+Declaration(Class(obo:PREFER_0000097))
+Declaration(Class(obo:PREFER_0000099))
+Declaration(Class(obo:PREFER_0000100))
 Declaration(Class(obo:PREFER_0000101))
+Declaration(Class(obo:PREFER_0000102))
 Declaration(Class(obo:PREFER_0000103))
 Declaration(Class(obo:PREFER_0000104))
 Declaration(Class(obo:PREFER_0000105))
@@ -1045,11 +1050,11 @@ SubClassOf(obo:PREFER_0000044 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 
-# Class: obo:PREFER_0000045 (optical density cultivation condition)
+# Class: obo:PREFER_0000045 (optical cell density estimate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000045 "A cultivation condition that represents the optical density related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the optical density state of the fermentation culture.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000045 "optical density cultivation condition"@en)
-SubClassOf(obo:PREFER_0000045 obo:PREFER_0000008)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000045 "A cell density cultivation condition that represents the optical density related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the optical cell density state of the fermentation culture.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000045 "optical cell density estimate"@en)
+SubClassOf(obo:PREFER_0000045 obo:PREFER_0000093)
 
 # Class: obo:PREFER_0000046 (volume cultivation condition)
 
@@ -1551,6 +1556,12 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000092 "production bior
 AnnotationAssertion(rdfs:label obo:PREFER_0000092 "commercial bioreactor scale"@en)
 SubClassOf(obo:PREFER_0000092 obo:PREFER_0000185)
 
+# Class: obo:PREFER_0000093 (cell density cultivation condition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000093 "A cultivation condition that represents the cell density related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the cell density state of the fermentation culture.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000093 "cell density cultivation condition"@en)
+SubClassOf(obo:PREFER_0000093 obo:PREFER_0000008)
+
 # Class: obo:PREFER_0000094 (substrate yield (biomass) variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000094 "A process yield metric that represents the yield of a compound consumed (substrate) per biomass (X), quantifying how efficiently substrate compound is consumed relative to biomass produced in a bioreactor or fermentation system, during a fermentation process.")
@@ -1573,6 +1584,27 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000096 "A fermentation phase tha
 AnnotationAssertion(rdfs:label obo:PREFER_0000096 "production phase"@en)
 SubClassOf(obo:PREFER_0000096 obo:PREFER_0000016)
 
+# Class: obo:PREFER_0000097 (optical density base method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000097 "An optical cell density estimate that is based on optical density methods.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000097 "optical density base method"@en)
+SubClassOf(obo:PREFER_0000097 obo:PREFER_0000045)
+
+# Class: obo:PREFER_0000099 (scattered light base method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000099 "An optical cell density estimate that is based on scattered light methods.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000099 "scattered light base method"@en)
+SubClassOf(obo:PREFER_0000099 obo:PREFER_0000045)
+
+# Class: obo:PREFER_0000100 (reflectance process variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000100 "A precision fermentation process variable that indicates the fraction of incident light that is reflected at a boundry within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000100 "The process variable is an instrument-derived signal recorded under a defined optical geometry and reported as arbitrary units (A.U.).")
+AnnotationAssertion(rdfs:label obo:PREFER_0000100 "reflectance process variable"@en)
+SubClassOf(obo:PREFER_0000100 obo:PREFER_0000099)
+SubClassOf(obo:PREFER_0000100 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000100 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
+
 # Class: obo:PREFER_0000101 (oxygen production rate variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000101 "A bioproduction rate metric that represents the rate of oxygen consumed over time, in a bioreactor or fermentation system during a fermentation process.")
@@ -1584,6 +1616,14 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000101 "PREFER:0000101")
 AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen production rate variable")
 SubClassOf(obo:PREFER_0000101 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
+
+# Class: obo:PREFER_0000102 (G-value process variable)
+
+AnnotationAssertion(rdfs:comment obo:PREFER_0000102 "A precision fermentation process variable that indicates the value of the green pixel computed from a digital image analysis of a culture vessel, representing the estimated amount of biomass present in a microbial culture within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000102 "G-value process variable"@en)
+SubClassOf(obo:PREFER_0000102 obo:PREFER_9000001)
+SubClassOf(obo:PREFER_0000102 obo:PREFER_9000045)
+SubClassOf(obo:PREFER_0000102 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
 
 # Class: obo:PREFER_0000103 (specific oxygen uptake rate measurement variable)
 
@@ -1738,7 +1778,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target OD")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target optical density")
 AnnotationAssertion(rdfs:label obo:PREFER_0000118 "optical density control variable"@en)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000015)
-SubClassOf(obo:PREFER_0000118 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000118 obo:PREFER_0000097)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000060))
