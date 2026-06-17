@@ -1619,7 +1619,7 @@ SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_90
 
 # Class: obo:PREFER_0000102 (G-value process variable)
 
-AnnotationAssertion(rdfs:comment obo:PREFER_0000102 "A precision fermentation process variable that indicates the value of the green pixel computed from a digital image analysis of a culture vessel, representing the estimated amount of biomass present in a microbial culture within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000102 "A precision fermentation process variable that indicates the value of the green pixel computed from a digital image analysis of a culture vessel, representing the estimated amount of biomass present in a microbial culture within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000102 "G-value process variable"@en)
 SubClassOf(obo:PREFER_0000102 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000102 obo:PREFER_9000045)
