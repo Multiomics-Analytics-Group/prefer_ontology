@@ -549,7 +549,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "backscatter m
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000001 "reflectance measurement variable")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000001 "The measurement variable is an instrument-derived signal recorded under a defined optical geometry and reported as arbitrary units (A.U.).")
 AnnotationAssertion(rdfs:label obo:PREFER_0000001 "scattered light measurement variable"@en)
-SubClassOf(obo:PREFER_0000001 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000001 obo:PREFER_0000099)
 SubClassOf(obo:PREFER_0000001 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000001 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
 
@@ -928,7 +928,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000034 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000034 "PREFER:0000034")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000034 "The starting OD measurement is either measured (by taking a sample after inoculation and measuring the cell density spectophotometrically at 600nm or 900nm wavelength) or  calculated (by knowing the final OD of the seed culture, volume inoculated and final cultivation volume).")
 AnnotationAssertion(rdfs:label obo:PREFER_0000034 "starting optical density measurement variable")
-SubClassOf(obo:PREFER_0000034 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000034 obo:PREFER_0000097)
 SubClassOf(obo:PREFER_0000034 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000034 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 
@@ -1237,7 +1237,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000060 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000060 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000060 "PREFER:0000060")
 AnnotationAssertion(rdfs:label obo:PREFER_0000060 "optical density measurement variable")
-SubClassOf(obo:PREFER_0000060 obo:PREFER_0000045)
+SubClassOf(obo:PREFER_0000060 obo:PREFER_0000097)
 SubClassOf(obo:PREFER_0000060 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000060 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
 
@@ -1596,11 +1596,11 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000099 "An optical cell density 
 AnnotationAssertion(rdfs:label obo:PREFER_0000099 "scattered light base method"@en)
 SubClassOf(obo:PREFER_0000099 obo:PREFER_0000045)
 
-# Class: obo:PREFER_0000100 (reflectance process variable)
+# Class: obo:PREFER_0000100 (reflectance measured process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000100 "A precision fermentation process variable that indicates the fraction of incident light that is reflected at a boundry within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000100 "A precision fermentation measured process variable that indicates the fraction of incident light that is reflected at a boundry within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000100 "The process variable is an instrument-derived signal recorded under a defined optical geometry and reported as arbitrary units (A.U.).")
-AnnotationAssertion(rdfs:label obo:PREFER_0000100 "reflectance process variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000100 "reflectance measured process variable"@en)
 SubClassOf(obo:PREFER_0000100 obo:PREFER_0000099)
 SubClassOf(obo:PREFER_0000100 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000100 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
@@ -1617,12 +1617,12 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000101 "oxygen production rate variab
 SubClassOf(obo:PREFER_0000101 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000101 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000102 (G-value process variable)
+# Class: obo:PREFER_0000102 (G-value measured process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000102 "A precision fermentation process variable that indicates the value of the green pixel computed from a digital image analysis of a culture vessel, representing the estimated amount of biomass present in a microbial culture within a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000102 "G-value process variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000102 "A precision fermentation measured process variable that indicates the value of the green pixel computed from a digital image analysis of a culture vessel, representing the estimated amount of biomass present in a microbial culture within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000102 "G-value measured process variable"@en)
+SubClassOf(obo:PREFER_0000102 obo:PREFER_0000099)
 SubClassOf(obo:PREFER_0000102 obo:PREFER_9000001)
-SubClassOf(obo:PREFER_0000102 obo:PREFER_9000045)
 SubClassOf(obo:PREFER_0000102 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_0000066))
 
 # Class: obo:PREFER_0000103 (specific oxygen uptake rate measurement variable)
@@ -1773,9 +1773,9 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD control setp
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "precision fermentation optical density setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target OD")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target optical density")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "precision fermentation optical density setpoint process variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000118 "optical density setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000097)
