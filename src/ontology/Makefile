@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/foundation.owl $(COMPONENTSDIR)/units.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/units.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -449,14 +449,12 @@ all_components: $(OTHER_SRC)
 
 .PHONY: recreate-components
 recreate-components:
-	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-foundation.owl \
-		--assume-new=$(TMPDIR)/stamp-component-units.owl \
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-units.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
 .PHONY: no-mirror-recreate-components
 no-mirror-recreate-components:
-	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-foundation.owl \
-		--assume-new=$(TMPDIR)/stamp-component-units.owl \
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-units.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
 .PHONY: recreate-%
