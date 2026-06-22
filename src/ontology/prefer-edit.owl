@@ -605,27 +605,27 @@ SubClassOf(obo:PREFER_0000004 ObjectSomeValuesFrom(obo:RO_0000057 obo:PREFER_000
 
 # Class: obo:PREFER_0000005 (alkaline cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000005 "A cultivation condition that represents the alkalinity related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the pH and buffering state of the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000005 "A cultivation condition that represents the alkalinity related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the pH and buffering state of the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000005 "alkaline cultivation condition"@en)
 SubClassOf(obo:PREFER_0000005 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000006 (gravimetric feed rate control variable)
+# Class: obo:PREFER_0000006 (gravimetric feed rate setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000006 "A process control variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000006 "gravimetric feed rate control variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000006 "A setpoint process variable that represents the target rate at which the feed (based on its weight) is added to a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000006 "gravimetric feed rate setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000006 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(obo:OBI_0001938 uom:g.h-1))
 SubClassOf(obo:PREFER_0000006 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000075))
 
 # Class: obo:PREFER_0000007 (temperature cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000007 "A cultivation condition that represents the temperature related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the thermal state of the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000007 "A cultivation condition that represents the temperature related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the thermal state of the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000007 "temperature cultivation condition"@en)
 SubClassOf(obo:PREFER_0000007 obo:PREFER_0000008)
 
 # Class: obo:PREFER_0000008 (cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions, grouping relevant process control variables and process measurement variables, describing the environmental and physicochemical conditions under which cells are cultivated.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000008 "An information content entity that represents a set of process conditions, grouping relevant setpoint process variables and process measurement variables, describing the environmental and physicochemical conditions under which cells are cultivated.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000008 "EDAM:3724")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000008 "fermentation culture condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000008 "precision_fermentation")
@@ -634,11 +634,11 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000008 "cultivation condition")
 SubClassOf(obo:PREFER_0000008 obo:IAO_0000030)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
 
-# Class: obo:PREFER_0000009 (feed control variable)
+# Class: obo:PREFER_0000009 (feed setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000009 "A precision fermentation process control variable that defines the feed control of a bioreactor or fermentation system during the fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000009 "precision fermentation process feed control variable")
-AnnotationAssertion(rdfs:label obo:PREFER_0000009 "feed control variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000009 "A precision fermentation setpoint process variable that defines the feed setpoint process variables of a bioreactor or fermentation system during the fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000009 "precision fermentation feed setpoint process variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000009 "feed setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000009 obo:PREFER_0000037)
 SubClassOf(obo:PREFER_0000009 obo:PREFER_9000000)
 
@@ -709,7 +709,7 @@ SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000018 obo:PREFER
 
 # Class: obo:PREFER_0000015 (operational parameter)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000015 "An information content entity that represents a set of configurable settings used to operate and control a fermentation process, grouping process control variables and mode dependent parameters that define how cultivation conditions are regulated in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000015 "An information content entity that represents a set of configurable settings used to operate and control a fermentation process, grouping setpoint process variables and mode dependent parameters that define how cultivation conditions are regulated in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000015 "operational setting")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") oboInOwl:hasBroadSynonym obo:PREFER_0000015 "parameter")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000015 "REPR:InstrumentSetting")
@@ -746,11 +746,11 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000018 "PREFER:0000018")
 AnnotationAssertion(rdfs:label obo:PREFER_0000018 "offline sample")
 SubClassOf(obo:PREFER_0000018 obo:BFO_0000040)
 
-# Class: obo:PREFER_0000019 (temperature setpoint control variable)
+# Class: obo:PREFER_0000019 (temperature setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000019 "A precision fermentation process control variable that represents the target temperature value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000019 "A precision fermentation setpoint process variable that represents the target temperature value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "Tº setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "precision fermentation process temperature setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "precision fermentation temperature setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "target Tº")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "target temperature")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "target temperature value")
@@ -760,25 +760,25 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature ref
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "AFO_/result#AFR:0001255") oboInOwl:hasExactSynonym obo:PREFER_0000019 "temperature setting")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000019 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000019 "PREFER:0000019")
-AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint process variable")
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000007)
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000019 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000041))
 
-# Class: obo:PREFER_0000020 (pH setpoint control variable)
+# Class: obo:PREFER_0000020 (pH setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000020 "A precision fermentation process control variable that represents the target pH value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000020 "A precision fermentation setpoint process variable that represents the target pH value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "pH control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "ph control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "ph setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "precision fermentation process pH setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "precision fermentation pH setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "target pH")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000020 "target ph")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000020 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000020 "PREFER:0000020")
-AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint process variable")
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000005)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_9000000)
@@ -816,63 +816,63 @@ SubClassOf(obo:PREFER_0000023 obo:PREFER_9000002)
 
 # Class: obo:PREFER_0000024 (fermentation medium cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000024 "A cultivation condition that represents the fermentation medium related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the state of the fermentation medium within the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000024 "A cultivation condition that represents the fermentation medium related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the state of the fermentation medium within the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000024 "fermentation medium cultivation condition"@en)
 SubClassOf(obo:PREFER_0000024 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000025 (dissolved oxygen setpoint control variable)
+# Class: obo:PREFER_0000025 (target dissolved oxygen setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000025 "A precision fermentation process dissolved oxygen control variable that represents the target dissolved oxygen value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000025 "A precision fermentation dissolved oxygen setpoint process variable that represents the target dissolved oxygen value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000025 "DO setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "dissolved oxygen setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "precision fermentation process dissolved oxygen setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "precision fermentation dissolved oxygen setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "target dissolved oxygen setpoint")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000025 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000025 "PREFER:0000025")
-AnnotationAssertion(rdfs:label obo:PREFER_0000025 "dissolved oxygen setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000025 "target dissolved oxygen setpoint process variable")
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000039))
 
-# Class: obo:PREFER_0000026 (dissolved oxygen cascade level control variable)
+# Class: obo:PREFER_0000026 (dissolved oxygen cascade level setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000026 "A precision fermentation process dissolved oxygen control variable that represents the cascade control system linked to a parameter to achieve the desired dissolved oxygen level within a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "DO cascade level control variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000026 "A precision fermentation dissolved oxygen setpoint process variable that represents the cascade control system linked to a parameter to achieve the desired dissolved oxygen level within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "dissolved oxygen control strategy variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "precision fermentation process dissolved oxygen cascade level control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "precision fermentation dissolved oxygen cascade level setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "DO cascade level setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000026 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000026 "PREFER:0000026")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000026 "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000026 "dissolved oxygen cascade level control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000026 "dissolved oxygen cascade level setpoint process variable")
 SubClassOf(obo:PREFER_0000026 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000026 obo:PREFER_0000119)
 
-# Class: obo:PREFER_0000027 (maximum stirring setpoint control variable)
+# Class: obo:PREFER_0000027 (maximum stirring setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000027 "A precision fermentation process dissolved oxygen control variable that represents the target maximum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000027 "A precision fermentation dissolved oxygen setpoint process variable that represents the target maximum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "maximum shaking speed setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "maximum shaking speed setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "maximum shaking speed setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "maximum stirring speed setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "precision fermentation process maximum stirring setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "precision fermentation maximum stirring setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000027 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000027 "PREFER:0000027")
-AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint process variable")
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 
-# Class: obo:PREFER_0000028 (minimum stirring setpoint control variable)
+# Class: obo:PREFER_0000028 (minimum stirring setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000028 "A precision fermentation process dissolved oxygen control variable that represents the target minimum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000028 "A precision fermentation dissolved oxygen setpoint process variable that represents the target minimum revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "minimum shaking speed setpoin")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "minimum shaking speed setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "minimum shaking speed setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "minimum stirring speed setpoin")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "minimum stirring speed setpoint control variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "precision fermentation process minimum aeration setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "minimum stirring speed setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "precision fermentation minimum aeration setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000028 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000028 "PREFER:0000028")
-AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint process variable")
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
@@ -880,41 +880,41 @@ SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER
 
 # Class: obo:PREFER_0000029 (pressure cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000029 "A cultivation condition that represents the pressure related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the pressure state within the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000029 "A cultivation condition that represents the pressure related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the pressure state within the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000029 "pressure cultivation condition"@en)
 SubClassOf(obo:PREFER_0000029 obo:PREFER_0000008)
 
-# Class: obo:PREFER_0000030 (aeration gas type control variable)
+# Class: obo:PREFER_0000030 (aeration gas type setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000030 "A precision fermentation process dissolved oxygen control variable that represents the type of gas used for aeration in a bioreactor or fermentation system during a fermentation process, which may include aire or specific gases such as pure oxygen, nitrogen or carbon dioxide.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000030 "precision fermentation process aeration gas type control variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000030 "A precision fermentation dissolved oxygen setpoint process variable that represents the type of gas used for aeration in a bioreactor or fermentation system during a fermentation process, which may include aire or specific gases such as pure oxygen, nitrogen or carbon dioxide.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000030 "precision fermentation aeration gas type setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000030 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000030 "PREFER:0000030")
-AnnotationAssertion(rdfs:label obo:PREFER_0000030 "aeration gas type control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000030 "aeration gas type setpoint process variable")
 SubClassOf(obo:PREFER_0000030 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000030 obo:PREFER_0000119)
 
-# Class: obo:PREFER_0000031 (maximum aeration setpoint control variable)
+# Class: obo:PREFER_0000031 (maximum aeration setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000031 "A precision fermentation process dissolved oxygen control variable that represents the target maximum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000031 "A precision fermentation dissolved oxygen setpoint process variable that represents the target maximum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000031 "maximum aeration setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000031 "precision fermentation process maximum aeration setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000031 "precision fermentation maximum aeration setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000031 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000031 "PREFER:0000031")
-AnnotationAssertion(rdfs:label obo:PREFER_0000031 "maximum aeration setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000031 "maximum aeration setpoint process variable")
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
 
-# Class: obo:PREFER_0000032 (minimum aeration setpoint control variable)
+# Class: obo:PREFER_0000032 (minimum aeration setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000032 "A precision fermentation process dissolved oxygen control variable that represents the target minimum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000032 "A precision fermentation dissolved oxygen setpoint process variable that represents the target minimum rate of at which gas can be supplied to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000032 "minimum aeration setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000032 "precision fermentation process minimum aeration setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000032 "precision fermentation minimum aeration setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000032 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000032 "PREFER:0000032")
-AnnotationAssertion(rdfs:label obo:PREFER_0000032 "minimum aeration setpoint control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000032 "minimum aeration setpoint process variable")
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
@@ -922,7 +922,7 @@ SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER
 
 # Class: obo:PREFER_0000033 (dissolved oxygen cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000033 "A cultivation condition that represents the dissolved oxygen related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the concentration of oxygen dissolved in the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000033 "A cultivation condition that represents the dissolved oxygen related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the concentration of oxygen dissolved in the cultivation environment.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000033 "DO cultivation condition")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000033 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000033 "PREFER:0000033")
@@ -970,7 +970,7 @@ SubClassOf(obo:PREFER_0000036 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_90
 
 # Class: obo:PREFER_0000037 (feed medium cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000037 "A fermentation medium cultivation condition that represents the feed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the addition and state of fresh feed media within the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000037 "A fermentation medium cultivation condition that represents the feed related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the addition and state of fresh feed media within the cultivation environment.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000037 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000037 "PREFER:0000037")
 AnnotationAssertion(rdfs:label obo:PREFER_0000037 "feed medium cultivation condition")
@@ -1062,13 +1062,13 @@ SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER
 
 # Class: obo:PREFER_0000045 (optical cell density estimate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000045 "A cell density cultivation condition that represents the optical density related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the optical cell density state of the fermentation culture.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000045 "A cell density cultivation condition that represents the optical density related aspects of a fermentation cultivation process, grouping setpoint process variables and measured process variables that describe or regulate the optical cell density state of the fermentation culture.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000045 "optical cell density estimate"@en)
 SubClassOf(obo:PREFER_0000045 obo:PREFER_0000093)
 
 # Class: obo:PREFER_0000046 (volume cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000046 "A cultivation condition that represents the volume related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the working or total fermentation volume of the cultivation system.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000046 "A cultivation condition that represents the volume related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the working or total fermentation volume of the cultivation system.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000046 "volume cultivation condition"@en)
 SubClassOf(obo:PREFER_0000046 obo:PREFER_0000008)
 
@@ -1381,7 +1381,7 @@ SubClassOf(obo:PREFER_0000072 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER
 
 # Class: obo:PREFER_0000073 (seed cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000073 "A cultivation condition that represents the seed related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the inoculum or seed state within the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000073 "A cultivation condition that represents the seed related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the inoculum or seed state within the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000073 "seed cultivation condition"@en)
 SubClassOf(obo:PREFER_0000073 obo:PREFER_0000008)
 
@@ -1419,14 +1419,14 @@ SubClassOf(obo:PREFER_0000076 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000076 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000076 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 
-# Class: obo:PREFER_0000077 (dilution feed rate control variable)
+# Class: obo:PREFER_0000077 (dilution feed rate setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000077 "A feed process control variable that represents the target rate at which fresh feed medium is fed into a production culture relative to the total volume of the fermentation culture, representing the rate at which the production culture is diluted.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000077 "A feed setpoint process variable that represents the target rate at which fresh feed medium is fed into a production culture relative to the total volume of the fermentation culture, representing the rate at which the production culture is diluted.")
 AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003012) oboInOwl:hasExactSynonym obo:PREFER_0000077 "D")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000077 "dilution feed rate")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000077 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
-AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution feed rate control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution feed rate setpoint process variable")
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(obo:OBI_0001938 uom:h-1))
@@ -1450,16 +1450,16 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000079 "carbon balance variable")
 SubClassOf(obo:PREFER_0000079 obo:PREFER_0000157)
 SubClassOf(obo:PREFER_0000079 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000080 (target stirring setpoint control variable)
+# Class: obo:PREFER_0000080 (target stirring setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000080 "A precision fermentation process dissolved oxygen control variable that represents the target revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "precision fermentation process target stirring setpoint control variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000080 "A precision fermentation dissolved oxygen setpoint process variable that represents the target revolutions per minute (rpm) of the bioreactor stirrer to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "precision fermentation target stirring setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target shaking speed setpoint")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target shaking speed setpoint control variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target shaking speed setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target stirring speed setpoint")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000080 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000080 "PREFER:0000027")
-AnnotationAssertion(rdfs:label obo:PREFER_0000080 "target stirring setpoint control variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000080 "target stirring setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000080 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000080 obo:PREFER_0000119)
 SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
@@ -1478,7 +1478,7 @@ SubClassOf(obo:PREFER_0000081 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id
 
 # Class: obo:PREFER_0000082 (foaming cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000082 "A cultivation condition that represents the foam related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the foaming state of the cultivation environment.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000082 "A cultivation condition that represents the foam related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the foaming state of the cultivation environment.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000082 "foaming cultivation condition"@en)
 SubClassOf(obo:PREFER_0000082 obo:PREFER_0000008)
 
@@ -1568,7 +1568,7 @@ SubClassOf(obo:PREFER_0000092 obo:PREFER_0000185)
 
 # Class: obo:PREFER_0000093 (cell density cultivation condition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000093 "A cultivation condition that represents the cell density related aspects of a fermentation cultivation process, grouping process control varibales and process measurement variables that describe or regulate the cell density state of the fermentation culture.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000093 "A cultivation condition that represents the cell density related aspects of a fermentation cultivation process, grouping setpoint process variables and process measurement variables that describe or regulate the cell density state of the fermentation culture.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000093 "cell density cultivation condition"@en)
 SubClassOf(obo:PREFER_0000093 obo:PREFER_0000008)
 
@@ -1747,11 +1747,11 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000113 "compound production rate vari
 SubClassOf(obo:PREFER_0000113 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000113 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000114 (inlet air oxygen setpoint control variable)
+# Class: obo:PREFER_0000114 (inlet air oxygen setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000114 "A precision fermentation process dissolved oxygen control variable indicates the target percentage of oxygen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000114 "precision fermentation process inlet air oxygen setpoint control variable")
-AnnotationAssertion(rdfs:label obo:PREFER_0000114 "inlet air oxygen setpoint control variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000114 "A precision fermentation dissolved oxygen setpoint process variable indicates the target percentage of oxygen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000114 "precision fermentation inlet air oxygen setpoint process variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000114 "inlet air oxygen setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000114 obo:PREFER_0000119)
 
 # Class: obo:PREFER_0000115 (specific compound production rate variable)
@@ -1765,11 +1765,11 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000115 "specific compound production 
 SubClassOf(obo:PREFER_0000115 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000115 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000116 (inlet air carbon dioxide setpoint control variable)
+# Class: obo:PREFER_0000116 (inlet air carbon dioxide setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000116 "A precision fermentation process dissolved oxygen control variable that indicates the target percentage of carbon dioxide value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000116 "precision fermentation process inlet air carbon dioxide setpoint control variable")
-AnnotationAssertion(rdfs:label obo:PREFER_0000116 "inlet air carbon dioxide setpoint control variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000116 "A precision fermentation dissolved oxygen setpoint process variable that indicates the target percentage of carbon dioxide value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000116 "precision fermentation inlet air carbon dioxide setpoint process variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000116 "inlet air carbon dioxide setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000116 obo:PREFER_0000119)
 
 # Class: obo:PREFER_0000117 (compound produced yield (substrate) variable)
@@ -1784,7 +1784,7 @@ SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_90
 
 # Class: obo:PREFER_0000118 (optical density setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000118 "A precision fermentation process control variable that represents the target optical density value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000118 "A precision fermentation setpoint process variable that represents the target optical density value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density control setpoint")
@@ -1801,9 +1801,9 @@ SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER
 
 # Class: obo:PREFER_0000119 (dissolved oxygen setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000119 "A precision fermentation process control variable that represents the dissolved oxygen control variables of a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000119 "DO process control variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000119 "A precision fermentation setpoint process variable that represents the dissolved oxygen setpoint process variables of a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000119 "precision fermentation dissolved oxygen setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000119 "DO setpoint process variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000119 "dissolved oxygen setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000119 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000119 obo:PREFER_9000000)
@@ -1818,27 +1818,27 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000120 "compound produced yield (biom
 SubClassOf(obo:PREFER_0000120 obo:PREFER_0000155)
 SubClassOf(obo:PREFER_0000120 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000121 (pressure setpoint control variable)
+# Class: obo:PREFER_0000121 (pressure setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000121 "A precision fermentation process control variable that represents the target pressure value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "precision fermentation process pressure setpoint control variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000121 "A precision fermentation setpoint process variable that represents the target pressure value to be regulated and maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "precision fermentation pressure setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure reference point")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure reference value")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "target pressure")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "target pressure value")
-AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure setpoint control variable"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000042))
 
-# Class: obo:PREFER_0000122 (volumetric feed rate control variable)
+# Class: obo:PREFER_0000122 (volumetric feed rate setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A process control variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate control variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A setpoint process variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
@@ -1855,11 +1855,11 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000128 "carbon dioxide production rat
 SubClassOf(obo:PREFER_0000128 obo:PREFER_0000159)
 SubClassOf(obo:PREFER_0000128 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
-# Class: obo:PREFER_0000129 (inlet air nitrogen setpoint control variable)
+# Class: obo:PREFER_0000129 (inlet air nitrogen setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000129 "A precision fermentation process dissolved oxygen control variable that indicates the target percentage of nitrogen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000129 "precision fermentation process inlet air nitrogen setpoint control variable")
-AnnotationAssertion(rdfs:label obo:PREFER_0000129 "inlet air nitrogen setpoint control variable"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000129 "A precision fermentation dissolved oxygen setpoint process variable that indicates the target percentage of nitrogen value to be regulated and maintained in the gas mixture that is being supplied to a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000129 "precision fermentation inlet air nitrogen setpoint process variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000129 "inlet air nitrogen setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000129 obo:PREFER_0000119)
 
 # Class: obo:PREFER_0000130 (specific carbon dioxide evolution rate measurement variable)
@@ -2092,21 +2092,21 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000162 "A core balance metric th
 AnnotationAssertion(rdfs:label obo:PREFER_0000162 "compound balance metric"@en)
 SubClassOf(obo:PREFER_0000162 obo:PREFER_0000023)
 
-# Class: obo:PREFER_0000180 (operation mode control variable)
+# Class: obo:PREFER_0000180 (operation mode setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000180 "A precision fermentation process control variable that defines the operating stategy of a bioreactor or fermentation system, specifying how substrate, products and biomass are introduced, maintained, and removed during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000180 "operational mode control variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000180 "fermentation cultivation mode control variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000180 "precision fermenation process feed control variable")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000180 "A precision fermentation setpoint process variable that defines the operating stategy of a bioreactor or fermentation system, specifying how substrate, products and biomass are introduced, maintained, and removed during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000180 "operational mode setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000180 "fermentation cultivation mode setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000180 "precision fermentation operation mode setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000180 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000180 "PREFER:0000180")
-AnnotationAssertion(rdfs:label obo:PREFER_0000180 "operation mode control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000180 "operation mode setpoint process variable")
 SubClassOf(obo:PREFER_0000180 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000180 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000181 (batch operation mode)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000181 "An operation mode control variable in which all required medium components and the inoculum are supplied at the start of the fermentation process, with no subsequent addition of medium components during operation, and in which products are harvested only at the end of the fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000181 "An operation mode setpoint process variable in which all required medium components and the inoculum are supplied at the start of the fermentation process, with no subsequent addition of medium components during operation, and in which products are harvested only at the end of the fermentation process.")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID: 38806369") oboInOwl:hasBroadSynonym obo:PREFER_0000181 "batch cultivation")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000181 "batch mode")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000181 "batch bioprocess mode")
@@ -2118,7 +2118,7 @@ SubClassOf(obo:PREFER_0000181 obo:PREFER_0000180)
 
 # Class: obo:PREFER_0000182 (fed-batch operation mode)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000182 "An operation mode control variable in which additional nutrients, through feed medium, are intermittently or continuously supplied to the bioreactor or fermentar system during a fermentation process, without removal of production culture fluid, until termination of the fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000182 "An operation mode setpoint process variable in which additional nutrients, through feed medium, are intermittently or continuously supplied to the bioreactor or fermentar system during a fermentation process, without removal of production culture fluid, until termination of the fermentation process.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000182 "fed-batch cultivation")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000182 "fed-batch mode")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000182 "fed-batch fermentation mode")
@@ -2129,7 +2129,7 @@ SubClassOf(obo:PREFER_0000182 obo:PREFER_0000180)
 
 # Class: obo:PREFER_0000183 (continuous operation mode-chemostat)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000183 "An operation mode control variable in which fresh fermentation medium is supplied and fermentation culture fluid removed at a constant rate, such that the specific growth rate of the biomass is controlled by the limiting nutrient concentration and equals the dilution rate.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000183 "An operation mode setpoint process variable in which fresh fermentation medium is supplied and fermentation culture fluid removed at a constant rate, such that the specific growth rate of the biomass is controlled by the limiting nutrient concentration and equals the dilution rate.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000183 "continuous mode, chemostat")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000183 "continuous fermentation mode, chemostat")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000183 "precision_fermentation")
@@ -2139,7 +2139,7 @@ SubClassOf(obo:PREFER_0000183 obo:PREFER_0000180)
 
 # Class: obo:PREFER_0000184 (continuous operation mode-turbidostat)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000184 "An operation mode control variable in which fresh fermentation medium is supplied and fermentation culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000184 "An operation mode setpoint process variable in which fresh fermentation medium is supplied and fermentation culture fluid removed in response to feedback control, such that the biomass concentration is maintained constant at a predefined turbidity or optical density.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000184 "continuous mode, turbidostat")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000184 "continuous fermentation mode, turbidostat")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000184 "precision_fermentation")
@@ -2194,7 +2194,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000188 "PREFER:0000188")
 AnnotationAssertion(rdfs:label obo:PREFER_0000188 "demonstration bioreactor scale")
 SubClassOf(obo:PREFER_0000188 obo:PREFER_0000185)
 
-# Class: obo:PREFER_0000189 (feed profile type control variable)
+# Class: obo:PREFER_0000189 (feed profile type setpoint process variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000189 "The feeding strategies typically found in a fed-batch or continuous fermentation types.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feed profile type")
@@ -2203,13 +2203,13 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000189 "feeding strateg
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000189 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000189 "PREFER:0000189")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000189 "The type of feeding profiles applied is process specific.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000189 "feed profile type control variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000189 "feed profile type setpoint process variable")
 SubClassOf(obo:PREFER_0000189 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000189 obo:PREFER_0000015)
 
 # Class: obo:PREFER_0000190 (constant feeding rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000190 "A feed profile type control variable in which the feed rate is maintained at a constant value throughout the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000190 "A feed profile type setpoint process variable in which the feed rate is maintained at a constant value throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000190 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000190 "PREFER:0000190")
 AnnotationAssertion(rdfs:label obo:PREFER_0000190 "constant feeding rate")
@@ -2217,7 +2217,7 @@ SubClassOf(obo:PREFER_0000190 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000191 (linear feeding rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000191 "A feed profile type control variable in which the feed rate changes linearly with time throughout the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000191 "A feed profile type setpoint process variable in which the feed rate changes linearly with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000191 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000191 "PREFER:0000191")
 AnnotationAssertion(rdfs:label obo:PREFER_0000191 "linear feeding rate")
@@ -2225,7 +2225,7 @@ SubClassOf(obo:PREFER_0000191 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000192 (exponential feeding rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000192 "A feed profile type control variable in which the feed rate increases exponentially with time throughout the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000192 "A feed profile type setpoint process variable in which the feed rate increases exponentially with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000192 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000192 "PREFER:0000192")
 AnnotationAssertion(rdfs:label obo:PREFER_0000192 "exponential feeding rate")
@@ -2233,7 +2233,7 @@ SubClassOf(obo:PREFER_0000192 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000193 (constant-linear feeding rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000193 "A feed profile type control variable in which the feed rate begins at a constant rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000193 "A feed profile type setpoint process variable in which the feed rate begins at a constant rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000193 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000193 "PREFER:0000193")
 AnnotationAssertion(rdfs:label obo:PREFER_0000193 "constant-linear feeding rate")
@@ -2241,7 +2241,7 @@ SubClassOf(obo:PREFER_0000193 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000194 (constant-exponential feeding rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000194 "A feed profile type control variable in which the feed rate begins at a constant rate and subsequently transitions to a exponentially increasing feed rate with time throughout the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000194 "A feed profile type setpoint process variable in which the feed rate begins at a constant rate and subsequently transitions to a exponentially increasing feed rate with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000194 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000194 "PREFER:0000194")
 AnnotationAssertion(rdfs:label obo:PREFER_0000194 "constant-exponential feeding rate")
@@ -2249,7 +2249,7 @@ SubClassOf(obo:PREFER_0000194 obo:PREFER_0000189)
 
 # Class: obo:PREFER_0000195 (exponential-linear feeding rate)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000195 "A feed profile type control variable in which the feed rate begins with an exponentially increasing rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000195 "A feed profile type setpoint process variable in which the feed rate begins with an exponentially increasing rate and subsequently transitions to a linearly changing feed rate with time throughout the feeding phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000195 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000195 "PREFER:0000195")
 AnnotationAssertion(rdfs:label obo:PREFER_0000195 "exponential-linear feeding rate")
