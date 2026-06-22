@@ -33,6 +33,11 @@ Annotation(terms:contributor <https://orcid.org/0000-0002-9163-7730>)
 Annotation(terms:contributor <https://orcid.org/0009-0009-0018-4253>)
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
 
+Declaration(Class(obo:BFO_0000015))
+Declaration(Class(obo:BFO_0000017))
+Declaration(Class(obo:COB_0000082))
+Declaration(Class(obo:GO_0006113))
+Declaration(Class(obo:IAO_0000030))
 Declaration(Class(obo:PREFER_0000000))
 Declaration(Class(obo:PREFER_0000001))
 Declaration(Class(obo:PREFER_0000002))
@@ -131,6 +136,7 @@ Declaration(Class(obo:PREFER_0000094))
 Declaration(Class(obo:PREFER_0000095))
 Declaration(Class(obo:PREFER_0000096))
 Declaration(Class(obo:PREFER_0000097))
+Declaration(Class(obo:PREFER_0000098))
 Declaration(Class(obo:PREFER_0000099))
 Declaration(Class(obo:PREFER_0000100))
 Declaration(Class(obo:PREFER_0000101))
@@ -230,11 +236,6 @@ Declaration(Class(obo:PREFER_8000055))
 Declaration(Class(obo:PREFER_8000056))
 Declaration(Class(obo:PREFER_8000057))
 Declaration(Class(obo:PREFER_8000058))
-Declaration(Class(obo:BFO_0000015))
-Declaration(Class(obo:BFO_0000017))
-Declaration(Class(obo:COB_0000082))
-Declaration(Class(obo:GO_0006113))
-Declaration(Class(obo:IAO_0000030))
 Declaration(Class(obo:PREFER_9000000))
 Declaration(Class(obo:PREFER_9000001))
 Declaration(Class(obo:PREFER_9000002))
@@ -316,7 +317,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -1599,6 +1600,12 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000097 "An optical cell density 
 AnnotationAssertion(rdfs:label obo:PREFER_0000097 "optical density base method"@en)
 SubClassOf(obo:PREFER_0000097 obo:PREFER_0000045)
 
+# Class: obo:PREFER_0000098 (precision fermentation process variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000098 "An information content entity that represents a variable about a precision fermentation process.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000098 "precision fermentation process variable"@en)
+SubClassOf(obo:PREFER_0000098 obo:IAO_0000030)
+
 # Class: obo:PREFER_0000099 (scattered light base method)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000099 "An optical cell density estimate that is based on scattered light methods.")
@@ -2478,31 +2485,30 @@ SubClassOf(obo:PREFER_8000058 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER
 
 # Class: obo:PREFER_9000000 (precision fermentation setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "An information content entity that represents a target parameter, controller or setting about a system, which is realized as input or configuration in controlling or regulating a fermentation process, thereby affecting the behavior, operation, or outcome of that process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "A precision fermentation process variable that represents a target parameter, controller or setting about a system, which is realized as input or configuration in controlling or regulating a fermentation process, thereby affecting the behavior, operation, or outcome of that process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000000 "https://orcid.org/0000-0001-7258-9596")
 AnnotationAssertion(rdfs:comment obo:PREFER_9000000 "A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.")
 AnnotationAssertion(rdfs:label obo:PREFER_9000000 "precision fermentation setpoint process variable"@en)
-SubClassOf(obo:PREFER_9000000 obo:IAO_0000030)
+SubClassOf(obo:PREFER_9000000 obo:PREFER_0000098)
 
-# Class: obo:PREFER_9000001 (precision fermentation process measurement variable)
+# Class: obo:PREFER_9000001 (precision fermentation measured process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000001 "An information content entity about a precision fermentation process that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000001 "A precision fermentation process variable that specifically represents measurable attributes or values that are the outcomes of a measurement process aimed at determining characteristics of said process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000001 "https://orcid.org/0000-0001-7258-9596")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "measuremen variable")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_9000001 "VO:0010241")
-AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000001 "process measurement variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000001 "PREcision FERmentation process measurement variable")
-AnnotationAssertion(rdfs:label obo:PREFER_9000001 "precision fermentation process measurement variable"@en)
-SubClassOf(obo:PREFER_9000001 obo:IAO_0000030)
+AnnotationAssertion(rdfs:label obo:PREFER_9000001 "precision fermentation measured process variable"@en)
+SubClassOf(obo:PREFER_9000001 obo:PREFER_0000098)
 SubClassOf(obo:PREFER_9000001 ObjectSomeValuesFrom(obo:PREFER_8000059 obo:OBI_0001508))
 
-# Class: obo:PREFER_9000002 (precision fermentation process calculated variable)
+# Class: obo:PREFER_9000002 (precision fermentation calculated process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "An information content entity about a process that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000002 "A precision fermentation process variable that is the output of a calculation or computation based on one or more measured or other input variables, representing derived or computed attributes related to the fermentation process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000002 "https://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process calculated variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "process computed variable")
-AnnotationAssertion(rdfs:label obo:PREFER_9000002 "precision fermentation process calculated variable"@en)
-SubClassOf(obo:PREFER_9000002 obo:IAO_0000030)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "calculated process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_9000002 "computed process variable")
+AnnotationAssertion(rdfs:label obo:PREFER_9000002 "precision fermentation calculated process variable"@en)
+SubClassOf(obo:PREFER_9000002 obo:PREFER_0000098)
 
 # Class: obo:PREFER_9000003 (precision fermentation process)
 
