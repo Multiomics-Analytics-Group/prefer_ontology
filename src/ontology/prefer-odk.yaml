@@ -17,7 +17,6 @@ export_formats:
 #      maintainance: manual
 components:
   products:
-      - filename: foundation.owl
       - filename: units.owl
         use_template: True
         templates:
