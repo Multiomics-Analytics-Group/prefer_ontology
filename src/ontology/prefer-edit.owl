@@ -213,6 +213,7 @@ Declaration(Class(obo:PREFER_0000205))
 Declaration(Class(obo:PREFER_0000206))
 Declaration(Class(obo:PREFER_0000207))
 Declaration(Class(obo:PREFER_0000209))
+Declaration(Class(obo:PREFER_0010000))
 Declaration(Class(obo:PREFER_7000000))
 Declaration(Class(obo:PREFER_7000001))
 Declaration(Class(obo:PREFER_7000002))
@@ -837,9 +838,9 @@ SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER
 # Class: obo:PREFER_0000026 (dissolved oxygen cascade level setpoint process variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000026 "A precision fermentation dissolved oxygen setpoint process variable that represents the cascade control system linked to a parameter to achieve the desired dissolved oxygen level within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "DO cascade level setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "dissolved oxygen control strategy variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "precision fermentation dissolved oxygen cascade level setpoint process variable")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000026 "DO cascade level setpoint process variable")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000026 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000026 "PREFER:0000026")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000026 "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter.")
@@ -1802,8 +1803,8 @@ SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER
 # Class: obo:PREFER_0000119 (dissolved oxygen setpoint process variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000119 "A precision fermentation setpoint process variable that represents the dissolved oxygen setpoint process variables of a bioreactor or fermentation system during a fermentation process.")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000119 "precision fermentation dissolved oxygen setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000119 "DO setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000119 "precision fermentation dissolved oxygen setpoint process variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000119 "dissolved oxygen setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000119 obo:PREFER_0000033)
 SubClassOf(obo:PREFER_0000119 obo:PREFER_9000000)
@@ -2321,6 +2322,12 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "computed omics 
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000209 "computed omics sample process variable")
 AnnotationAssertion(rdfs:label obo:PREFER_0000209 "omics sample calculated process variable")
 SubClassOf(obo:PREFER_0000209 obo:PREFER_9000002)
+
+# Class: obo:PREFER_0010000 (watts)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0010000 "Standard international unit to represent the rate of transfer of energy (Jules-J-) per unit of time (seconds -s-).")
+AnnotationAssertion(rdfs:label obo:PREFER_0010000 "watts"@en)
+SubClassOf(obo:PREFER_0010000 obo:PREFER_9000004)
 
 # Class: obo:PREFER_7000000 (mole per carbon mole)
 

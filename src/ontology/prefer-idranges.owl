@@ -47,6 +47,16 @@ Datatype: idrange:2
     EquivalentTo: 
         xsd:integer[>= 0005000 , <= 0009999]
 
+    
+Datatype: idrange:3
+
+    Annotations: 
+        allocatedto: "Hao Zhang Liu"
+    
+    EquivalentTo: 
+        xsd:integer[>= 0010000 , <= 0014999]
+
+
 Datatype: idrange:4
 
     Annotations: 
