@@ -318,7 +318,7 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -1061,10 +1061,10 @@ SubClassOf(obo:PREFER_0000044 obo:PREFER_9000001)
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 SubClassOf(obo:PREFER_0000044 ObjectSomeValuesFrom(obo:PREFER_8000012 obo:PREFER_0000154))
 
-# Class: obo:PREFER_0000045 (optical cell density estimate)
+# Class: obo:PREFER_0000045 (optical cell density estimate variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000045 "A cell density cultivation condition that represents the optical density related aspects of a fermentation cultivation process, grouping setpoint process variables and measured process variables that describe or regulate the optical cell density state of the fermentation culture.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000045 "optical cell density estimate"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000045 "optical cell density estimate variable"@en)
 SubClassOf(obo:PREFER_0000045 obo:PREFER_0000093)
 
 # Class: obo:PREFER_0000046 (volume cultivation condition)
@@ -1595,10 +1595,10 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000096 "A fermentation phase tha
 AnnotationAssertion(rdfs:label obo:PREFER_0000096 "production phase"@en)
 SubClassOf(obo:PREFER_0000096 obo:PREFER_0000016)
 
-# Class: obo:PREFER_0000097 (optical density base method)
+# Class: obo:PREFER_0000097 (optical density base method variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000097 "An optical cell density estimate that is based on optical density methods.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000097 "optical density base method"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000097 "optical density base method variable"@en)
 SubClassOf(obo:PREFER_0000097 obo:PREFER_0000045)
 
 # Class: obo:PREFER_0000098 (precision fermentation process variable)
@@ -1607,10 +1607,10 @@ AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000098 "An information content e
 AnnotationAssertion(rdfs:label obo:PREFER_0000098 "precision fermentation process variable"@en)
 SubClassOf(obo:PREFER_0000098 obo:IAO_0000030)
 
-# Class: obo:PREFER_0000099 (scattered light base method)
+# Class: obo:PREFER_0000099 (scattered light base method variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000099 "An optical cell density estimate that is based on scattered light methods.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000099 "scattered light base method"@en)
+AnnotationAssertion(rdfs:label obo:PREFER_0000099 "scattered light base method variable"@en)
 SubClassOf(obo:PREFER_0000099 obo:PREFER_0000045)
 
 # Class: obo:PREFER_0000100 (reflectance measured process variable)
