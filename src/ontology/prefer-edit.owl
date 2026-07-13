@@ -717,7 +717,6 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") oboInOwl:hasBro
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000015 "REPR:InstrumentSetting")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000015 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000015 "PREFER:0000015")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000015 "Operational parameters may vary depending on the selected fermentation operational mode (e.g. batch, fed-batch, continuous) and are realized through instrument or system configuration.")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000015 "The 'operational parameter' entity was deprecated because it was merged into 'Precision Fermentation Setpoint Process Variable', as all operational parameters were identified as setpoints.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000015 "obsolete operational parameter")
 AnnotationAssertion(owl:deprecated obo:PREFER_0000015 "true"^^xsd:boolean)
