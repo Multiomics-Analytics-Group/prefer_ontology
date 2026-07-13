@@ -636,7 +636,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000008 "PREFER:0000008")
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "precision fermentation cultivation process variable")
 SubClassOf(obo:PREFER_0000008 obo:PREFER_0000098)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000000)
-SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER:9000001))
+SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000001))
 
 
 # Class: obo:PREFER_0000009 (feed setpoint process variable)
