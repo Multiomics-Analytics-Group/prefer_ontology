@@ -2494,7 +2494,6 @@ AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000000 "operational par
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000000 "operational setting")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") oboInOwl:hasBroadSynonym obo:PREFER_9000000 "parameter")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_9000000 "REPR:InstrumentSetting")
-AnnotationAssertion(oboInOwl:id obo:PREFER_9000000 "PREFER:0000015")
 AnnotationAssertion(rdfs:comment obo:PREFER_9000000 "A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.
 
 A setpoint process variable may vary depending on the selected fermentation operational mode (e.g. batch, fed-batch, continuous) and are realized through instrument or system configuration.")
