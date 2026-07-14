@@ -635,7 +635,9 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_0000008 "cultivation c
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000008 "PREFER:0000008")
 AnnotationAssertion(rdfs:label obo:PREFER_0000008 "precision fermentation cultivation process variable")
 SubClassOf(obo:PREFER_0000008 obo:PREFER_0000098)
-SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_0000015))
+SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000000))
+SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000001))
+
 
 # Class: obo:PREFER_0000009 (feed setpoint process variable)
 
@@ -710,17 +712,18 @@ SubClassOf(obo:PREFER_0000014 obo:BFO_0000040)
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000185))
 SubClassOf(obo:PREFER_0000014 ObjectSomeValuesFrom(obo:PREFER_8000018 obo:PREFER_0000180))
 
-# Class: obo:PREFER_0000015 (operational parameter)
+# Class: obo:PREFER_0000015 (obsolete operational parameter)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000015 "An information content entity that represents a set of configurable settings used to operate and control a fermentation process, grouping setpoint process variables and mode dependent parameters that define how cultivation conditions are regulated in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000015 "OBSOLETE. An information content entity that represents a set of configurable settings used to operate and control a fermentation process, grouping setpoint process variables and mode dependent parameters that define how cultivation conditions are regulated in a bioreactor or fermentation system during the process.")
+AnnotationAssertion(obo:IAO_0100001 obo:PREFER_0000015 obo:PREFER_9000000)
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000015 "operational setting")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") oboInOwl:hasBroadSynonym obo:PREFER_0000015 "parameter")
 AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000015 "REPR:InstrumentSetting")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000015 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000015 "PREFER:0000015")
-AnnotationAssertion(rdfs:comment obo:PREFER_0000015 "Operational parameters may vary depending on the selected fermentation operational mode (e.g. batch, fed-batch, continuous) and are realized through instrument or system configuration.")
-AnnotationAssertion(rdfs:label obo:PREFER_0000015 "operational parameter")
-SubClassOf(obo:PREFER_0000015 obo:IAO_0000030)
+AnnotationAssertion(rdfs:comment obo:PREFER_0000015 "The 'operational parameter' entity was deprecated because it was merged into 'Precision Fermentation Setpoint Process Variable', as all operational parameters were identified as setpoints.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000015 "obsolete operational parameter")
+AnnotationAssertion(owl:deprecated obo:PREFER_0000015 "true"^^xsd:boolean)
 
 # Class: obo:PREFER_0000016 (fermentation phase)
 
@@ -765,7 +768,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000019 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000019 "PREFER:0000019")
 AnnotationAssertion(rdfs:label obo:PREFER_0000019 "temperature setpoint process variable")
 SubClassOf(obo:PREFER_0000019 obo:PREFER_0000007)
-SubClassOf(obo:PREFER_0000019 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000019 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 SubClassOf(obo:PREFER_0000019 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000041))
@@ -783,7 +785,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000020 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000020 "PREFER:0000020")
 AnnotationAssertion(rdfs:label obo:PREFER_0000020 "pH setpoint process variable")
 SubClassOf(obo:PREFER_0000020 obo:PREFER_0000005)
-SubClassOf(obo:PREFER_0000020 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000020 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%5BpH%5D>))
 SubClassOf(obo:PREFER_0000020 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000040))
@@ -832,8 +833,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000025 "target dissolve
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000025 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000025 "PREFER:0000025")
 AnnotationAssertion(rdfs:label obo:PREFER_0000025 "target dissolved oxygen setpoint process variable")
-SubClassOf(obo:PREFER_0000025 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000025 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000025 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:OBI_0001938 <https://w3id.org/uom/%25>))
 SubClassOf(obo:PREFER_0000025 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000039))
 
@@ -847,8 +848,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000026 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000026 "PREFER:0000026")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000026 "For instance, in fed-batch operation mode there could be three different cascade levels. Level 1 involves adjusting the stirrer speed parameter. Level 2 involves adjusting the air flow parameter. Level 3 involves adjusting the oxygen flow parameter.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000026 "dissolved oxygen cascade level setpoint process variable")
-SubClassOf(obo:PREFER_0000026 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000026 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000026 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000027 (maximum stirring setpoint process variable)
 
@@ -860,8 +861,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000027 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000027 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000027 "PREFER:0000027")
 AnnotationAssertion(rdfs:label obo:PREFER_0000027 "maximum stirring setpoint process variable")
-SubClassOf(obo:PREFER_0000027 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000027 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000027 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 SubClassOf(obo:PREFER_0000027 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 
@@ -876,8 +877,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000028 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000028 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000028 "PREFER:0000028")
 AnnotationAssertion(rdfs:label obo:PREFER_0000028 "minimum stirring setpoint process variable")
-SubClassOf(obo:PREFER_0000028 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000028 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000028 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 SubClassOf(obo:PREFER_0000028 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 
@@ -894,8 +895,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000030 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000030 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000030 "PREFER:0000030")
 AnnotationAssertion(rdfs:label obo:PREFER_0000030 "aeration gas type setpoint process variable")
-SubClassOf(obo:PREFER_0000030 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000030 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000030 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000031 (maximum aeration setpoint process variable)
 
@@ -905,8 +906,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000031 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000031 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000031 "PREFER:0000031")
 AnnotationAssertion(rdfs:label obo:PREFER_0000031 "maximum aeration setpoint process variable")
-SubClassOf(obo:PREFER_0000031 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000031 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000031 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 SubClassOf(obo:PREFER_0000031 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
 
@@ -918,8 +919,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000032 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000032 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000032 "PREFER:0000032")
 AnnotationAssertion(rdfs:label obo:PREFER_0000032 "minimum aeration setpoint process variable")
-SubClassOf(obo:PREFER_0000032 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000032 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000032 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.min-1))
 SubClassOf(obo:PREFER_0000032 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000055))
 
@@ -1431,7 +1432,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000077 "precision_ferme
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000077 "PREFER:0000077")
 AnnotationAssertion(rdfs:label obo:PREFER_0000077 "dilution feed rate setpoint process variable")
 SubClassOf(obo:PREFER_0000077 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000077 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000077 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000077 ObjectSomeValuesFrom(obo:OBI_0001938 uom:h-1))
 
 # Class: obo:PREFER_0000078 (key process metric)
@@ -1463,8 +1464,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000080 "target stirring
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000080 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000080 "PREFER:0000027")
 AnnotationAssertion(rdfs:label obo:PREFER_0000080 "target stirring setpoint process variable"@en)
-SubClassOf(obo:PREFER_0000080 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000080 obo:PREFER_0000119)
+SubClassOf(obo:PREFER_0000080 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000008))
 SubClassOf(obo:PREFER_0000080 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000054))
 
@@ -1796,7 +1797,6 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "precision ferme
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target OD")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "target optical density")
 AnnotationAssertion(rdfs:label obo:PREFER_0000118 "optical density setpoint process variable"@en)
-SubClassOf(obo:PREFER_0000118 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_0000097)
 SubClassOf(obo:PREFER_0000118 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000118 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_7000006))
@@ -1832,7 +1832,6 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "pressure setpoi
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "target pressure")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000121 "target pressure value")
 AnnotationAssertion(rdfs:label obo:PREFER_0000121 "pressure setpoint process variable"@en)
-SubClassOf(obo:PREFER_0000121 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_0000029)
 SubClassOf(obo:PREFER_0000121 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
@@ -1843,7 +1842,7 @@ SubClassOf(obo:PREFER_0000121 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000122 "A setpoint process variable that represents the target rate at which the feed (based on its volume) is added to a bioreactor or fermentation system during a fermentation process.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000122 "volumetric feed rate setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000122 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000122 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
 
@@ -2104,7 +2103,6 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000180 "precision ferme
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000180 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000180 "PREFER:0000180")
 AnnotationAssertion(rdfs:label obo:PREFER_0000180 "operation mode setpoint process variable")
-SubClassOf(obo:PREFER_0000180 obo:PREFER_0000015)
 SubClassOf(obo:PREFER_0000180 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000181 (batch operation mode)
@@ -2208,7 +2206,7 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000189 "PREFER:0000189")
 AnnotationAssertion(rdfs:comment obo:PREFER_0000189 "The type of feeding profiles applied is process specific.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000189 "feed profile type setpoint process variable")
 SubClassOf(obo:PREFER_0000189 obo:PREFER_0000009)
-SubClassOf(obo:PREFER_0000189 obo:PREFER_0000015)
+SubClassOf(obo:PREFER_0000189 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000190 (constant feeding rate)
 
@@ -2494,9 +2492,15 @@ SubClassOf(obo:PREFER_8000058 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER
 
 # Class: obo:PREFER_9000000 (precision fermentation setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "A precision fermentation process variable that represents a target parameter, controller or setting about a system, which is realized as input or configuration in controlling or regulating a fermentation process, thereby affecting the behavior, operation, or outcome of that process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_9000000 "An information content entity that represents a collection of configurable control settings for a fermentation system, which is realized as configuration input used to regulate a fermentation process by specifying operational setpoints, controller parameters, target values, and other mode-dependent control parameters in a bioreactor or fermentation system during the process.")
 AnnotationAssertion(dc:contributor obo:PREFER_9000000 "https://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(rdfs:comment obo:PREFER_9000000 "A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000000 "operational parameter"@en)
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_9000000 "operational setting")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT:C44175") oboInOwl:hasBroadSynonym obo:PREFER_9000000 "parameter")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_9000000 "REPR:InstrumentSetting")
+AnnotationAssertion(rdfs:comment obo:PREFER_9000000 "A decision was made to classify this as a information content entity rather than realizable entity (a realizable entity that inheres in a system and is realized in processes of controlling or regulating a process, serving as a parameter or setting that affects or determines the behavior, operation, or outcome of that process) as the intention was to emphasize the informational role rather than physical realisation of the control.
+
+A setpoint process variable may vary depending on the selected fermentation operational mode (e.g. batch, fed-batch, continuous) and are realized through instrument or system configuration.")
 AnnotationAssertion(rdfs:label obo:PREFER_9000000 "precision fermentation setpoint process variable"@en)
 SubClassOf(obo:PREFER_9000000 obo:PREFER_0000098)
 
