@@ -19,5 +19,9 @@ $(DICTIONARY): $(ONT)-base.owl
 		--header "ID|LABEL|IAO:0000115|oboInOwl:hasExactSynonym|oboInOwl:hasNarrowSynonym|oboInOwl:hasBroadSynonym|oboInOwl:hasRelatedSynonym|rdfs:comment" \
 		--export $@
 
+# all_assets prerequisites are expanded before this file is included, so
+# ASSETS += alone does not make Make build the dictionary. Add it explicitly.
+all_assets: $(DICTIONARY)
+
 ASSETS += $(DICTIONARY)
 RELEASE_ASSETS += $(DICTIONARY)
