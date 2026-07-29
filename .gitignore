@@ -73,6 +73,10 @@ notes.txt
 robot_cli.txt
 collabs/
 
+# Dictionary CSV is a release asset only (not committed; see GitHub Releases)
+/prefer_dictionary*.csv
+src/ontology/prefer_dictionary*.csv
+
 # End of custom lines
 
 # Byte-compiled / optimized / DLL files
