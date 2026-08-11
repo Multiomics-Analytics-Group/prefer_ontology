@@ -1,5 +1,5 @@
 name: New Term or Class Request
-description: Propose new term or class for the ontology.
+description: Propose new term (class) for the ontology.
 title: "[NTR] "
 labels: ["new term request","triage"]
 body:
