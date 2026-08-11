@@ -6,7 +6,7 @@ body:
 - type: markdown
   attributes:
     value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose a change to a term's logical definition. If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."  
--type: textarea
+- type: textarea
   attributes:
     label: Term
     description: "The ID and label of the existing term."
