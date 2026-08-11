@@ -6,15 +6,6 @@ title: "[NTR] "
 labels: ["new term request","triage"]
 body:
 - type: checkboxes
-  id: operating-systems
-  attributes:
-    label: Which operating systems have you used?
-    description: You may select more than one.
-    options:
-      - label: macOS
-      - label: Windows
-      - label: Linux
-- type: checkboxes
   attributes:
     label: Does the term already exist?
     description: Please check OLS (https://www.ebi.ac.uk/ols4/ontologies/omo) to see if the term already exists.
