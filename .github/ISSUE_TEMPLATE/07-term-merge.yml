@@ -32,7 +32,7 @@ body:
     required: false
 - type: textarea
   attributes:
-    label: reason for merge
+    label: Reason for merge
     description: "Why do these terms represent the same concept and therefore should be combined?"
   validations:
     required: true
