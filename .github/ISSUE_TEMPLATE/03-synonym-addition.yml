@@ -30,9 +30,8 @@ body:
       - label: broad
       - label: narrow
       - label: related
-      - label: unknown
   validations:
-    required: true
+    required: false
 - type: textarea
   attributes:
     label: Synonym type
