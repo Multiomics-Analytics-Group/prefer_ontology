@@ -54,7 +54,7 @@ body:
     description: "Anything else relevant to the request that isn't captured above."
   validations:
     required: false
--type: textarea
+- type: textarea
   attributes:
     label: Contributor
     description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
