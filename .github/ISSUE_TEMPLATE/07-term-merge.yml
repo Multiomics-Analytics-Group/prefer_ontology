@@ -1,0 +1,59 @@
+name: Term Merge
+description: Request that two or more existing terms be merged into one
+title: "[Merge] "
+labels: ["merge request","triage"]
+body:
+- type: markdown
+  attributes:
+    value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose a merge of two or more existing terms. If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."
+- type: textarea
+  attributes:
+    label: Term(s) to be merged (and obsoleted)
+    description: "The ID(s) and label(s) of the term(s) that should be merged/obsoleted."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Term to merge into
+    description: "The ID and label of the term that should remain (the one the above term(s) should be merged into)."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Proposed new label
+    description: "If the merged term should have a new label, please provide it here."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Proposed new definition
+    description: "If the merged term should have a new definition, please provide it here."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: reason for merge
+    description: "Why do these terms represent the same concept and therefore should be combined?"
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Supporting reference(s)
+    description: "Any citation (e.g. `PMID:#######`) supporting the merge."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Additional information
+    description: "Anything else relevant to the request that isn't captured above."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file (link). All repositories used for inspiration for this template is referenced here: agro/mergeTerm.yml, cl/g_merge-term.md, go/term-merge.md, mondo/mergeTerm.md"
