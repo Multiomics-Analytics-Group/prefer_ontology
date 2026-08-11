@@ -6,14 +6,22 @@ title: "[NTR] "
 labels: ["new term request","triage"]
 body:
 - type: checkboxes
+  id: operating-systems
+  attributes:
+    label: Which operating systems have you used?
+    description: You may select more than one.
+    options:
+      - label: macOS
+      - label: Windows
+      - label: Linux
+- type: checkboxes
   attributes:
     label: Does the term already exist?
     description: Please check OLS (https://www.ebi.ac.uk/ols4/ontologies/omo) to see if the term already exists.
-  options:
-  - label: Term does not exist and I have checked OLS (https://www.ebi.ac.uk/ols4/ontologies/omo).
-    required: false
-  - label: Term does exist, but in another ontology than PREFER.
-    required: false
+    options:
+      - label: Term does not exist and I have checked OLS (https://www.ebi.ac.uk/ols4/ontologies/omo).
+      - label: Term does exist, but in another ontology than PREFER.
+    required: true
 - type: textarea
   attributes:
     label: Proposed term label
