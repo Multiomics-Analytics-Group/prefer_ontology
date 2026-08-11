@@ -31,8 +31,8 @@ body:
       - label: narrow
       - label: related
       - label: unknown
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   attributes:
     label: Synonym type
