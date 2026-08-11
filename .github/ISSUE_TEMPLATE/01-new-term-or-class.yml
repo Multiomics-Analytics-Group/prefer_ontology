@@ -12,6 +12,7 @@ body:
     options:
       - label: Term does not exist and I have checked OLS (https://www.ebi.ac.uk/ols4/ontologies/omo).
       - label: Term does exist, but in another ontology than PREFER.
+  validations:
     required: true
 - type: textarea
   attributes:
