@@ -62,7 +62,7 @@ body:
     required: false
 - type: markdown
   attributes:
-    value: Thank you for taking the time to fill out this template! A curator will review your request and follow up with you if any additional information is needed.
+    value: "Thank you for taking the time to fill out this template! A curator will review your request and follow up with you if any additional information is needed."
 - type: markdown
   attributes:
-    value: This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file (link). All repositories used for inspiration for this template is referenced here: omo/new_property.yml (OBO Metadata Ontology)
+    value: "This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file (link). All repositories used for inspiration for this template is referenced here: omo/new_property.yml (OBO Metadata Ontology)"
