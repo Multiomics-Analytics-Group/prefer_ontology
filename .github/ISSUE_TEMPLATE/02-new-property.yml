@@ -1,5 +1,5 @@
 name: New Property Request
-about: Propose that a new property (relation) be added to the ontology
+description: Propose that a new property (relation) be added to the ontology
 title: "Request for adding property [NAME]"
 labels: ["new property request","triage"]
 body:
