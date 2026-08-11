@@ -1,0 +1,41 @@
+name: Textual Definition Revision
+description: Propose a change to a term's human-readable (textual) definition or name/label
+title: "[Text def] "
+labels: ["textual definition revision","triage"]
+body:
+- type: markdown
+  attributes:
+    value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose a change to a term's human-readable (textual) definition or name/label. If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."
+- type: textarea
+  attributes:
+    label: Term
+    description: "The ID and label of the existing term."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Suggested revision
+    description: "The proposed new (or edited) textual definition and/or label. Please describe precisely what should change and why."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Supporting reference
+    description: "A source (e.g. a PubMed ID in the format `PMID:#######`, a DOI, or a website/permalink) supporting the revision."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Additional information
+    description: "Anything else relevant to the request that isn't captured above."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: agro/revise-textual-definition.yml, cl/c_revise_textual_def.md, mondo/revise-textual-definition.md, pbpko/revise-textual-definition.md, so/update-definition-or-name.md, uberon/c_revise_textual_def.md"
