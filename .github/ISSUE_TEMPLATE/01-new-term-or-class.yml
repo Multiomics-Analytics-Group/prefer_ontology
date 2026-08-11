@@ -1,23 +1,20 @@
 name: New Term or Class Request
-description: Propose that a new term (class) be added to the ontology.
+description: Propose new term (class) for the ontology.
 title: "[NTR] "
 labels: ["new term request","triage"]
 body:
 - type: markdown
   attributes:
-    value: |
-      Thank you for your interest in contributing to the ontology! Please fill out the
-      following template to propose a new term or class. If you are unsure about any
-      of the fields, please leave them blank and a curator will follow up with you.
+    value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose a new term (class). If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."
 - type: checkboxes
   attributes:
-  label: Does the term already exist?
-  description: Please check OLS (https://www.ebi.ac.uk/ols4/ontologies/omo) to see if the term already exists.
-  options:
-    - label: Term does not exist and I have checked OLS (https://www.ebi.ac.uk/ols4/ontologies/omo).
-      required: false
-    - label: Term does exist, but in another ontology than PREFER.
-      required: false
+    label: Does the term already exist?
+    description: Please check OLS (https://www.ebi.ac.uk/ols4/ontologies/omo) to see if the term already exists.
+    options:
+      - label: Term does not exist and I have checked OLS (https://www.ebi.ac.uk/ols4/ontologies/omo).
+      - label: Term does exist, but in another ontology than PREFER.
+  validations:
+    required: true
 - type: textarea
   attributes:
     label: Proposed term label
@@ -77,7 +74,7 @@ body:
     required: true
 - type: textarea
   attributes:
-    label: Additional information (optional)
+    label: Additional information
     description: Anything else relevant to the request that isn't captured above.
   validations:
     required: false
@@ -89,11 +86,8 @@ body:
     required: false
 - type: markdown
   attributes:
-    value: |
-      Thank you for taking the time to fill out this template! A curator will review your
-      request and follow up with you if any additional information is needed. You can
-      track the status of your request by checking back on this issue.
-      This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here:
-      
-      agro/add-term.yml, agro/import-term.yml, cl/a_adding_term.md, cl/a_adding_term_cellxgene.md, fbbi/a_adding_term.md, foodon/new-term-request--ntr-.md, fypo/new-term-request.md, go/metabolic-biosynthetic-catalytic-process---new-term-request.md, go/new-term-request.md, go/ntr--protein-containing-complex.md, mondo/add-gene-related-syndrome.md, mondo/add-term.yml, ms/new_term.yaml, pbpko/add-term.md, so/new-term-request.md, uberon/a_adding_term.md
+    value: "Thank you for taking the time to fill out this template! A curator will review your request and follow up with you if any additional information is needed. You can track the status of your request by checking back on this issue."
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: agro/add-term.yml, agro/import-term.yml, cl/a_adding_term.md, cl/a_adding_term_cellxgene.md, fbbi/a_adding_term.md, foodon/new-term-request--ntr-.md, fypo/new-term-request.md, go/metabolic-biosynthetic-catalytic-process---new-term-request.md, go/new-term-request.md, go/ntr--protein-containing-complex.md, mondo/add-gene-related-syndrome.md, mondo/add-term.yml, ms/new_term.yaml, pbpko/add-term.md, so/new-term-request.md, uberon/a_adding_term.md"
 
