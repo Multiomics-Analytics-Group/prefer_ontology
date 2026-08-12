@@ -162,6 +162,9 @@ Declaration(Class(obo:PREFER_0000120))
 Declaration(Class(obo:PREFER_0000121))
 Declaration(Class(obo:PREFER_0000122))
 Declaration(Class(obo:PREFER_0000123))
+Declaration(Class(obo:PREFER_0000125))
+Declaration(Class(obo:PREFER_0000126))
+Declaration(Class(obo:PREFER_0000127))
 Declaration(Class(obo:PREFER_0000128))
 Declaration(Class(obo:PREFER_0000129))
 Declaration(Class(obo:PREFER_0000130))
@@ -1854,6 +1857,24 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target biomass 
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target boimass setpoint")
 AnnotationAssertion(rdfs:label obo:PREFER_0000123 "target biomass setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000123 obo:PREFER_9000000)
+
+# Class: obo:PREFER_0000125 (dosing event)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000125 "An operational intervention set by user that involves the addition or removal of material from a fermentaton system.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000125 "dosing event"@en)
+SubClassOf(obo:PREFER_0000125 obo:PREFER_0000017)
+
+# Class: obo:PREFER_0000126 (media addition event)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000126 "A dosing event in which medium material is added to the fermentation system.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000126 "media addition event"@en)
+SubClassOf(obo:PREFER_0000126 obo:PREFER_0000125)
+
+# Class: obo:PREFER_0000127 (waste removal event)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000127 "A dosing event in which culture material is removed from the fermentation system as a waste.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000127 "waste removal event"@en)
+SubClassOf(obo:PREFER_0000127 obo:PREFER_0000125)
 
 # Class: obo:PREFER_0000128 (carbon dioxide production rate variable)
 
