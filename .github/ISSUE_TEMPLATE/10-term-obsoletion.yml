@@ -2,7 +2,7 @@ name: Term Obsoletion
 description: Request that an existing term be deprecated/obsoleted
 title: "[Obsolete] "
 labels: ["obsoletion","triage"]
-Body:
+body:
 - type: markdown
   attributes:
     value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose that an existing term be deprecated/obsoleted. If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."
