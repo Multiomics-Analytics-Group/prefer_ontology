@@ -161,6 +161,7 @@ Declaration(Class(obo:PREFER_0000119))
 Declaration(Class(obo:PREFER_0000120))
 Declaration(Class(obo:PREFER_0000121))
 Declaration(Class(obo:PREFER_0000122))
+Declaration(Class(obo:PREFER_0000123))
 Declaration(Class(obo:PREFER_0000128))
 Declaration(Class(obo:PREFER_0000129))
 Declaration(Class(obo:PREFER_0000130))
@@ -318,15 +319,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -637,7 +638,6 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000008 "precision fermentation cultiv
 SubClassOf(obo:PREFER_0000008 obo:PREFER_0000098)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000000))
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000001))
-
 
 # Class: obo:PREFER_0000009 (feed setpoint process variable)
 
@@ -1845,6 +1845,15 @@ SubClassOf(obo:PREFER_0000122 obo:PREFER_0000009)
 SubClassOf(obo:PREFER_0000122 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
+
+# Class: obo:PREFER_0000123 (target biomass setpoint process variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000123 "A precision fermentation setpoint process variable that represents the target biomass value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "precision fermentation target biomass setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target biomass control setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target boimass setpoint")
+AnnotationAssertion(rdfs:label obo:PREFER_0000123 "target biomass setpoint process variable"@en)
+SubClassOf(obo:PREFER_0000123 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000128 (carbon dioxide production rate variable)
 
