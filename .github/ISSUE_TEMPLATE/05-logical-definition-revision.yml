@@ -1,0 +1,41 @@
+name: Logical Definition Revision
+description: Propose a change to a term's formal/logical definition (axioms, equivalence class expressions)
+title: "[Logical def] "
+labels: ["logical definition", "triage"]
+body:
+- type: markdown
+  attributes:
+    value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose a change to a term's logical definition. If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."  
+- type: textarea
+  attributes:
+    label: Term
+    description: "The ID and label of the existing term."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Suggested revision of logical definition
+    description: "The proposed OWL-DL statement (e.g. `EquivalentTo`, `SubClassOf`) or description of the axioms that should change and why."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Motivation
+    description: "Please provide a rationale for the proposed change."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional information
+    description: "Anything else relevant to the request that isn't captured above."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: agro/revise-logical-definition.yml, cl/e_revise_logical_def.md, mondo/revise-logical-definition.md, pbpko/revise-logical-definition.md, uberon/e_revise_logical_def.md"
