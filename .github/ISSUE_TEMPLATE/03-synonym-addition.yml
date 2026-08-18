@@ -1,0 +1,76 @@
+name: Synonym Addition
+description: Suggest a new synonym for an existing term
+title: "[Synonym] "
+labels: ["synonym", "triage"]
+body:
+- type: markdown
+  attributes:
+    value: 
+      Thank you for your interest in contributing to the ontology! Please fill out the
+      following template to propose a new synonym. If you are unsure about any
+      of the fields, please leave them blank and a curator will follow up with you.
+- type: textarea
+  attributes:
+    label: Existing term
+    description: The ID and label of the term the synonym should be added to.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Synonym to be added
+    description: The proposed synonym text.
+  validations:
+    required: true
+- type: checkboxes
+  attributes:
+    label: Synonym scope
+    description: "Please indicate the scope of the synonym: exact / broad / narrow / related."
+    options:
+      - label: exact
+      - label: broad
+      - label: narrow
+      - label: related
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Synonym type
+    description: The type of synonym (e.g. "common name", "abbreviation", "acronym", "misspelling", etc.)
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Reference
+    description: A source (e.g. a PubMed ID, DOI, or cross-reference to another ontology) supporting this synonym, if available.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Example usage
+    description: A sentence or two showing how the synonym is used in context.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: If you would like to be credited, please provide your ORCID (or similar identifier).
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Motivation
+    description: Explain why this synonym should be added.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional information
+    description: Anything else relevant to the request that isn't captured above.
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "Thank you for taking the time to fill out this template! A curator will review your request and follow up with you if any additional information is needed."
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: agro/add-synonym.yml, cl/b_adding_synonym.md, fbbi/b_adding_synonym.md, mondo/add-synonym.yml, pbpko/add-synonym.md, uberon/b_adding_synonym.md"
