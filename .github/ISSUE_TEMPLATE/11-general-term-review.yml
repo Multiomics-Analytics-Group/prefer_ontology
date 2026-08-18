@@ -1,0 +1,48 @@
+name: General Term Review / Existing-Term Change
+description: Request general fixes to an existing term, such as fixing/updating a cross-reference (xref), adding a citation/PMID, or another change not covered by a more specific template
+title: "[Term review] "
+labels: term change
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to submit a term review request. Please fill out the following fields as completely as possible. If you are unsure about any of the fields, please leave them blank and we will follow up with you.
+- type: textarea
+  attributes:
+    label: Existing term
+    description: "The ID and label of the term to be reviewed/changed."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Describe the proposed change
+    description: "What should change about this term and why? For example: a cross-reference (xref) that needs fixing or adding, a citation/PMID to add to the term's annotations, or another correction that doesn't fit a more specific template."
+  validations:
+    required: true
+- type: textarea 
+  attributes:
+    label: Cross-reference affected
+    description: "The ID and label of the cross-reference to be fixed or added, if applicable."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Supporting reference(s)
+    description: "Any citation (e.g. `PMID:#######`) or database link supporting the change."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional information
+    description: "Anything else relevant to the request that isn't captured above."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: gro/fix-xref.yml, doid/term-review-request.md, mondo/fix-xref.md"
