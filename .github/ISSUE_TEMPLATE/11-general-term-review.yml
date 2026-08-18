@@ -30,7 +30,7 @@ body:
     label: Supporting reference(s)
     description: "Any citation (e.g. `PMID:#######`) or database link supporting the change."
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Additional information
