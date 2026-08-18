@@ -30,7 +30,6 @@ body:
       - label: broad
       - label: narrow
       - label: related
-      - label: unknown
   validations:
     required: false
 - type: textarea
