@@ -1,0 +1,47 @@
+name: Term Obsoletion
+description: Request that an existing term be deprecated/obsoleted
+title: "[Obsolete] "
+labels: ["obsoletion","triage"]
+body:
+- type: markdown
+  attributes:
+    value: "Thank you for your interest in contributing to the ontology! Please fill out the following template to propose that an existing term be deprecated/obsoleted. If you are unsure about any of the fields, please leave them blank and a curator will follow up with you."
+- type: textarea
+  attributes:
+    label: Term to obsolete
+    description: "The ID and label of the existing term."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Reason for deprecation
+    description: "Why should this term be obsoleted (e.g. it is unclear, a duplicate, was added in error, or is superseded by other terms)?"
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Supporting evidence
+    description: "Any citation (e.g. `PMID:#######`) or other evidence supporting the obsoletion."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Suggested replacement / term(s) to consider
+    description: "The ID and label of a term that could replace this one, or that users of this term should consider instead. Note, if there is one clear, direct replacement, consider using the Term Merge template instead."
+  validations:  
+    required: false
+- type: textarea
+  attributes:
+    label: Additional information
+    description: "Anything else relevant to the request that isn't captured above."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: agro/obsolete-a-term.yml, cl/f_obsolete_term.md, go/term-obsoletion.md, mondo/obsolete-a-term.md, pbpko/obsolete-a-term.md, uberon/f_obsolete_term.md "
