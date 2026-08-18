@@ -1,25 +1,36 @@
----
 name: Bug / Typo / Error in Ontology Content
-about: Report a bug, typo, or other error found in the ontology's content
+description: Report a bug, typo, or other error found in the ontology's content
 title: "[Typo/Bug] "
-labels: bug, typo
----
-
-## Term affected
-The ID and label of the term where the issue was found, if applicable.
-
-## Description of the bug, typo, or error
-A clear description of the problem.
-
-## Additional information (optional)
-Anything else relevant to the request that isn't captured above.
-
-## Contributor
-If you would like to be credited, please provide your ORCID (or similar
-identifier).
-
-## Source reference for template
-This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org)
-issue templates. The specific source of each block is specified in the PROVENANCE.md file (link). All repositories used for inspiration for this template is referenced here:
-
-agro/bugs-errors.yml, cl/h_typos_bugs.md, mondo/typos-bugs-errors.md, pbpko/typos-bugs-errors.md, uberon/g_typos_bugs.md
+labels: ["bug/typo/error", "triage"]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to submit a bug/typo/error report. Please fill out the following fields as completely as possible. If you are unsure about any of the fields, please leave them blank and we will follow up with you.
+- type: textarea
+  attributes:
+    label: Term affected
+    description: "The ID and label of the term where the issue was found, if applicable."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Description of the bug, typo, or error
+    description: "A clear description of the problem."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional information
+    description: "Anything else relevant to the request that isn't captured above."
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Contributor
+    description: "If you would like to be credited, please provide your ORCID (or similar identifier)."
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "*References* This template was synthesized from the templates for similar issue types of OBO Foundry (https://obofoundry.org) issue templates. The specific source of each block is specified in the PROVENANCE.md file. All repositories used for inspiration for this template is referenced here: agro/bugs-errors.yml, cl/h_typos_bugs.md, mondo/typos-bugs-errors.md, pbpko/typos-bugs-errors.md, uberon/g_typos_bugs.md"
