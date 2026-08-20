@@ -6,7 +6,7 @@ The following is a set of guidelines for contributing to PREFER.
 These guidelines are not strict rules. Use your best judgment, and feel free to propose 
 changes to this document in a pull request.
 
-**Most importantly**, do not be afraid of making mistakes, you will not be able to break anything! We are happy you want to contribute so please do not get overwhelmed with all the information on how to bes contribute, the issue forms will guide you depending on what you see can be improved. If something in your issue does not make sense to the curators, we will contact you for more information.
+**Most importantly**, do not be afraid of making mistakes, you will not be able to break anything! We are happy you want to contribute so please do not get overwhelmed with all the information on how to best contribute, the issue forms will guide you depending on what you see can be improved. If something in your issue does not make sense to the curators, we will contact you for more information.
 
 ## Table Of Contents
 
