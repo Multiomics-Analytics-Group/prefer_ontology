@@ -161,10 +161,15 @@ Declaration(Class(obo:PREFER_0000119))
 Declaration(Class(obo:PREFER_0000120))
 Declaration(Class(obo:PREFER_0000121))
 Declaration(Class(obo:PREFER_0000122))
+Declaration(Class(obo:PREFER_0000123))
+Declaration(Class(obo:PREFER_0000125))
+Declaration(Class(obo:PREFER_0000126))
+Declaration(Class(obo:PREFER_0000127))
 Declaration(Class(obo:PREFER_0000128))
 Declaration(Class(obo:PREFER_0000129))
 Declaration(Class(obo:PREFER_0000130))
 Declaration(Class(obo:PREFER_0000131))
+Declaration(Class(obo:PREFER_0000132))
 Declaration(Class(obo:PREFER_0000133))
 Declaration(Class(obo:PREFER_0000134))
 Declaration(Class(obo:PREFER_0000135))
@@ -175,6 +180,7 @@ Declaration(Class(obo:PREFER_0000139))
 Declaration(Class(obo:PREFER_0000140))
 Declaration(Class(obo:PREFER_0000141))
 Declaration(Class(obo:PREFER_0000142))
+Declaration(Class(obo:PREFER_0000143))
 Declaration(Class(obo:PREFER_0000147))
 Declaration(Class(obo:PREFER_0000148))
 Declaration(Class(obo:PREFER_0000149))
@@ -318,15 +324,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -637,7 +643,6 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000008 "precision fermentation cultiv
 SubClassOf(obo:PREFER_0000008 obo:PREFER_0000098)
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000000))
 SubClassOf(obo:PREFER_0000008 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PREFER_9000001))
-
 
 # Class: obo:PREFER_0000009 (feed setpoint process variable)
 
@@ -1846,6 +1851,33 @@ SubClassOf(obo:PREFER_0000122 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
 
+# Class: obo:PREFER_0000123 (target biomass setpoint process variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000123 "A precision fermentation setpoint process variable that represents the target biomass value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "precision fermentation target biomass setpoint process variable")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target biomass control setpoint")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target boimass setpoint")
+AnnotationAssertion(rdfs:label obo:PREFER_0000123 "target biomass setpoint process variable"@en)
+SubClassOf(obo:PREFER_0000123 obo:PREFER_9000000)
+
+# Class: obo:PREFER_0000125 (dosing event)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000125 "An operational intervention set by user that involves the addition or removal of material from a fermentaton system.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000125 "dosing event"@en)
+SubClassOf(obo:PREFER_0000125 obo:PREFER_0000017)
+
+# Class: obo:PREFER_0000126 (media addition event)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000126 "A dosing event in which medium material is added to the fermentation system.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000126 "media addition event"@en)
+SubClassOf(obo:PREFER_0000126 obo:PREFER_0000125)
+
+# Class: obo:PREFER_0000127 (waste removal event)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000127 "A dosing event in which culture material is removed from the fermentation system as a waste.")
+AnnotationAssertion(rdfs:label obo:PREFER_0000127 "waste removal event"@en)
+SubClassOf(obo:PREFER_0000127 obo:PREFER_0000125)
+
 # Class: obo:PREFER_0000128 (carbon dioxide production rate variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000128 "A bioproduction rate metric that represents the rate of carbon dioxide produced over time, in a bioreactor or fermentation system during a fermentation process.")
@@ -1886,6 +1918,19 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000131 "PREFER:0000131")
 AnnotationAssertion(rdfs:label obo:PREFER_0000131 "carbon dioxide yield (substrate) variable")
 SubClassOf(obo:PREFER_0000131 obo:PREFER_0000155)
 SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
+
+# Class: obo:PREFER_0000132 (Pioreactor 40ml - Pioreactor bioreactor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000132 "A bench-scale bioreactor system produced by Pioreactor, with individual vessel total volume of 40 mL and working volumes ranging from 10 to 30 mL. 
+
+The Pioreactor 40 mL is an open-source, automated bioreactor designed for mirobial cultivation, enabling researchers and professionals to monitor and control cultures. Multiple Pioreactors can be operated in parallel as a cluster, with each unit connected to a Raspberry Pi. 
+
+The system inclsudes temperature control, magnetic stirring, real-time optical density monitoring using an optical system, and liquid handling through a peristaltic pumping system. 
+The cultivation vessel is a borosilicat glass vial. It supports manual or automated temperature control and programmable liquid addition or remaval based on triggers. The Prioreactor can operate in different cultivation modes, including turbidostat, chemostat, and night/day photobioreactor modes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000132 "https://pioreactor.com/products/pioreactor-40ml?variant=51531633131576")
+AnnotationAssertion(rdfs:label obo:PREFER_0000132 "Pioreactor 40ml - Pioreactor bioreactor"@en)
+SubClassOf(obo:PREFER_0000132 obo:PREFER_0000014)
+SubClassOf(obo:PREFER_0000132 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_0000133 (carbon dioxide yield (biomass) variable)
 
@@ -1976,6 +2021,19 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
 AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific biomass formation rate variable")
 SubClassOf(obo:PREFER_0000142 obo:PREFER_0000160)
 SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(obo:OBI_0001938 uom:h-1))
+
+# Class: obo:PREFER_0000143 (Pioreactor 20ml - Pioreactor bioreactor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000143 "A bench-scale bioreactor system produced by Pioreactor, with individual vessel total volume of 20 mL and maximum working volume of 15 mL. 
+
+The Pioreactor 20 mL is an open-source, automated bioreactor designed for mirobial cultivation, enabling researchers and professionals to monitor and control cultures. Multiple Pioreactors can be operated in parallel as a cluster, with each unit connected to a Raspberry Pi. 
+
+The system inclsudes temperature control, magnetic stirring, real-time optical density monitoring using an optical system, and liquid handling through a peristaltic pumping system. 
+The cultivation vessel is a borosilicat glass vial. It supports manual or automated temperature control and programmable liquid addition or remaval based on triggers. The Prioreactor can operate in different cultivation modes, including turbidostat, chemostat, and night/day photobioreactor modes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000143 "https://pioreactor.com/products/pioreactor-20ml?variant=51531632771128")
+AnnotationAssertion(rdfs:label obo:PREFER_0000143 "Pioreactor 20ml - Pioreactor bioreactor"@en)
+SubClassOf(obo:PREFER_0000143 obo:PREFER_0000014)
+SubClassOf(obo:PREFER_0000143 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_0000147 (biomass yield (substrate) variable)
 
