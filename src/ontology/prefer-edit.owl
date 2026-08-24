@@ -169,6 +169,7 @@ Declaration(Class(obo:PREFER_0000128))
 Declaration(Class(obo:PREFER_0000129))
 Declaration(Class(obo:PREFER_0000130))
 Declaration(Class(obo:PREFER_0000131))
+Declaration(Class(obo:PREFER_0000132))
 Declaration(Class(obo:PREFER_0000133))
 Declaration(Class(obo:PREFER_0000134))
 Declaration(Class(obo:PREFER_0000135))
@@ -179,6 +180,7 @@ Declaration(Class(obo:PREFER_0000139))
 Declaration(Class(obo:PREFER_0000140))
 Declaration(Class(obo:PREFER_0000141))
 Declaration(Class(obo:PREFER_0000142))
+Declaration(Class(obo:PREFER_0000143))
 Declaration(Class(obo:PREFER_0000147))
 Declaration(Class(obo:PREFER_0000148))
 Declaration(Class(obo:PREFER_0000149))
@@ -1917,6 +1919,19 @@ AnnotationAssertion(rdfs:label obo:PREFER_0000131 "carbon dioxide yield (substra
 SubClassOf(obo:PREFER_0000131 obo:PREFER_0000155)
 SubClassOf(obo:PREFER_0000131 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
+# Class: obo:PREFER_0000132 (Pioreactor 40ml - Pioreactor bioreactor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000132 "A bench-scale bioreactor system produced by Pioreactor, with individual vessel total volume of 40 mL and working volumes ranging from 10 to 30 mL. 
+
+The Pioreactor 40 mL is an open-source, automated bioreactor designed for mirobial cultivation, enabling researchers and professionals to monitor and control cultures. Multiple Pioreactors can be operated in parallel as a cluster, with each unit connected to a Raspberry Pi. 
+
+The system inclsudes temperature control, magnetic stirring, real-time optical density monitoring using an optical system, and liquid handling through a peristaltic pumping system. 
+The cultivation vessel is a borosilicat glass vial. It supports manual or automated temperature control and programmable liquid addition or remaval based on triggers. The Prioreactor can operate in different cultivation modes, including turbidostat, chemostat, and night/day photobioreactor modes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000132 "https://pioreactor.com/products/pioreactor-40ml?variant=51531633131576")
+AnnotationAssertion(rdfs:label obo:PREFER_0000132 "Pioreactor 40ml - Pioreactor bioreactor"@en)
+SubClassOf(obo:PREFER_0000132 obo:PREFER_0000014)
+SubClassOf(obo:PREFER_0000132 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
+
 # Class: obo:PREFER_0000133 (carbon dioxide yield (biomass) variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000133 "A calculated process yield metric that represents the yield of carbon dioxide produced per biomass (X), describing how much carbon dioxide is produced relative to the amount of biomass generated in a bioreactor or fermentation system, during a fermentation process.")
@@ -2006,6 +2021,19 @@ AnnotationAssertion(oboInOwl:id obo:PREFER_0000142 "PREFER:0000142")
 AnnotationAssertion(rdfs:label obo:PREFER_0000142 "specific biomass formation rate variable")
 SubClassOf(obo:PREFER_0000142 obo:PREFER_0000160)
 SubClassOf(obo:PREFER_0000142 ObjectSomeValuesFrom(obo:OBI_0001938 uom:h-1))
+
+# Class: obo:PREFER_0000143 (Pioreactor 20ml - Pioreactor bioreactor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000143 "A bench-scale bioreactor system produced by Pioreactor, with individual vessel total volume of 20 mL and maximum working volume of 15 mL. 
+
+The Pioreactor 20 mL is an open-source, automated bioreactor designed for mirobial cultivation, enabling researchers and professionals to monitor and control cultures. Multiple Pioreactors can be operated in parallel as a cluster, with each unit connected to a Raspberry Pi. 
+
+The system inclsudes temperature control, magnetic stirring, real-time optical density monitoring using an optical system, and liquid handling through a peristaltic pumping system. 
+The cultivation vessel is a borosilicat glass vial. It supports manual or automated temperature control and programmable liquid addition or remaval based on triggers. The Prioreactor can operate in different cultivation modes, including turbidostat, chemostat, and night/day photobioreactor modes.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:PREFER_0000143 "https://pioreactor.com/products/pioreactor-20ml?variant=51531632771128")
+AnnotationAssertion(rdfs:label obo:PREFER_0000143 "Pioreactor 20ml - Pioreactor bioreactor"@en)
+SubClassOf(obo:PREFER_0000143 obo:PREFER_0000014)
+SubClassOf(obo:PREFER_0000143 ObjectSomeValuesFrom(obo:PREFER_8000008 obo:PREFER_0000186))
 
 # Class: obo:PREFER_0000147 (biomass yield (substrate) variable)
 
