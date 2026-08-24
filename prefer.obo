@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2026-07-14
+data-version: releases/2026-08-24
 synonymtypedef: blast_name ""
 synonymtypedef: DEPRECATED ""
 synonymtypedef: equivalent_name ""
@@ -39,7 +39,7 @@ property_value: IAO:0000700 PREFER:9000000
 property_value: IAO:0000700 PREFER:9000001
 property_value: IAO:0000700 PREFER:9000002
 property_value: IAO:0000700 PREFER:9000003
-property_value: owl:versionInfo "2026-07-14" xsd:string
+property_value: owl:versionInfo "2026-08-24" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0001-7258-9596
 property_value: terms:contributor https://orcid.org/0000-0002-9163-7730
 property_value: terms:contributor https://orcid.org/0009-0009-0018-4253
@@ -1391,6 +1391,14 @@ is_a: CHEBI:24835 ! inorganic molecular entity
 is_a: CHEBI:25741 ! oxide
 
 [Term]
+id: CHEBI:24852
+name: insecticide
+namespace: chebi_ontology
+def: "Strictly, a substance intended to kill members of the class <em>Insecta</em>.  In common usage, any substance used for preventing, destroying, repelling or controlling insects." []
+synonym: "insecticides" RELATED [chebi]
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
 id: CHEBI:24866
 name: salt
 namespace: chebi_ontology
@@ -1695,6 +1703,18 @@ is_a: CHEBI:16670 ! peptide
 relationship: RO:0000087 CHEBI:24621 ! has role hormone
 
 [Term]
+id: CHEBI:25944
+name: pesticide
+namespace: chebi_ontology
+def: "Strictly, a substance intended to kill pests. In common usage, any substance used for controlling, preventing, or destroying animal, microbiological or plant pests." []
+synonym: "pesticide" EXACT IUPAC:NAME [IUPAC]
+synonym: "pesticide" RELATED IUPAC:NAME [iupac]
+synonym: "pesticides" RELATED [chebi]
+synonym: "Pestizid" RELATED [chebi]
+synonym: "Pestizide" RELATED [chebi]
+is_a: CHEBI:33232 ! application
+
+[Term]
 id: CHEBI:26020
 name: phosphate
 namespace: chebi_ontology
@@ -1908,6 +1928,17 @@ synonym: "tetrapyrroles" EXACT IUPAC:NAME [IUPAC]
 synonym: "tetrapyrroles" RELATED IUPAC:NAME [iupac]
 is_a: CHEBI:33833 ! heteroarene
 is_a: CHEBI:38077 ! polypyrrole
+
+[Term]
+id: CHEBI:27026
+name: toxin
+namespace: chebi_ontology
+def: "Poisonous substance produced by a biological organism such as a microbe, animal or plant." []
+synonym: "toxin" EXACT IUPAC:NAME [IUPAC]
+synonym: "toxin" RELATED IUPAC:NAME [iupac]
+synonym: "toxins" RELATED [chebi]
+is_a: CHEBI:25212 ! metabolite
+is_a: CHEBI:64909 ! poison
 
 [Term]
 id: CHEBI:27027
@@ -3869,6 +3900,20 @@ synonym: "esters" RELATED [chebi]
 is_a: CHEBI:36963 ! organooxygen compound
 
 [Term]
+id: CHEBI:35703
+name: xenobiotic
+namespace: chebi_ontology
+def: "A xenobiotic (Greek, <em>xenos</em> \"foreign\"; <em>bios</em> \"life\") is a compound that is foreign to a living organism. Principal xenobiotics include: drugs, carcinogens and various compounds that have been introduced into the environment by artificial means." []
+synonym: "Xenobiotic" EXACT [KEGG_COMPOUND]
+synonym: "Xenobiotic" RELATED [kegg.compound]
+synonym: "xenobiotic" EXACT IUPAC:NAME [IUPAC]
+synonym: "xenobiotic" RELATED IUPAC:NAME [iupac]
+synonym: "xenobiotic compounds" RELATED [chebi]
+synonym: "xenobiotics" EXACT IUPAC:NAME [IUPAC]
+synonym: "xenobiotics" RELATED IUPAC:NAME [iupac]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
 id: CHEBI:35705
 name: immunosuppressive agent
 namespace: chebi_ontology
@@ -4984,6 +5029,34 @@ synonym: "organic amino compounds" RELATED [chebi]
 is_a: CHEBI:35352 ! organonitrogen compound
 relationship: RO:0000087 CHEBI:39142 ! has role Bronsted base
 relationship: RO:0018040 CHEBI:16134 ! has parent hydride ammonia
+
+[Term]
+id: CHEBI:50112
+name: sex hormone
+namespace: chebi_ontology
+def: "Any hormone that is responsible for controlling sexual characteristics and reproductive function." []
+synonym: "Geschlechtshormon" RELATED [chebi]
+synonym: "Geschlechtshormone" RELATED [chebi]
+synonym: "hormone sexuelle" RELATED [chebi]
+synonym: "hormones sexuelles" RELATED [chebi]
+synonym: "sex hormones" RELATED [chebi]
+synonym: "Sexualhormon" RELATED [chebi]
+synonym: "Sexualhormone" RELATED [chebi]
+is_a: CHEBI:24621 ! hormone
+
+[Term]
+id: CHEBI:50113
+name: androgen
+namespace: chebi_ontology
+def: "A sex hormone that stimulates or controls the development and maintenance of masculine characteristics in vertebrates by binding to androgen receptors." []
+synonym: "Androgen" RELATED [chebi]
+synonym: "Androgene" RELATED [chebi]
+synonym: "androgene" RELATED [chebi]
+synonym: "androgenes" RELATED [chebi]
+synonym: "androgeno" RELATED [chebi]
+synonym: "androgenos" RELATED [chebi]
+synonym: "androgens" RELATED [chebi]
+is_a: CHEBI:50112 ! sex hormone
 
 [Term]
 id: CHEBI:50160
@@ -12211,7 +12284,6 @@ is_a: GO:0048731 ! system development
 is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001434 ! results in development of skeletal system
-relationship: RO:0002162 NCBITaxon:33213 ! in taxon Bilateria
 relationship: RO:0002296 UBERON:0001434 ! results in development of skeletal system
 
 [Term]
@@ -12227,7 +12299,6 @@ xref: Wikipedia:Ossification
 is_a: GO:0032501 ! multicellular organismal process
 intersection_of: GO:0032501 ! multicellular organismal process
 intersection_of: RO:0002297 UBERON:0001474 ! results in formation of anatomical entity bone element
-relationship: RO:0002162 NCBITaxon:7742 ! in taxon Vertebrata <vertebrates>
 relationship: RO:0002297 UBERON:0001474 ! results in formation of anatomical entity bone element
 
 [Term]
@@ -15323,8 +15394,7 @@ namespace: cellular_component
 def: "A protein complex consisting of three collagen chains assembled into a left-handed triple helix. These trimers typically assemble into higher order structures." [GOC:dos, GOC:mah, PMID:19693541, PMID:21421911]
 xref: Wikipedia:Collagen
 is_a: GO:0032991 ! protein-containing complex
-relationship: RO:0002160 NCBITaxon:33208 ! only in taxon Metazoa
-relationship: RO:0002162 NCBITaxon:33208 {all_only="true"} ! in taxon Metazoa
+relationship: RO:0002162 NCBITaxon:33208 ! in taxon Metazoa
 
 [Term]
 id: GO:0005583
@@ -16817,7 +16887,6 @@ def: "The directed movement of substances from the Golgi to the vacuole." [GOC:a
 synonym: "Golgi to vacuole vesicle-mediated transport" EXACT []
 is_a: GO:0006892 ! post-Golgi vesicle-mediated transport
 is_a: GO:0007034 ! vacuolar transport
-is_a: GO:0010496 ! intercellular transport
 intersection_of: GO:0016192 ! vesicle-mediated transport
 intersection_of: BFO:0000066 GO:0005622 ! occurs in intracellular anatomical structure
 intersection_of: RO:0002338 GO:0005794 ! has target start location Golgi apparatus
@@ -17571,6 +17640,7 @@ name: ectoderm development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of the ectoderm over time, from its formation to the mature structure. In animal embryos, the ectoderm is the outer germ layer of the embryo, formed during gastrulation." [GOC:dph, GOC:tb]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000924 ! results in development of ectoderm
 relationship: RO:0002296 UBERON:0000924 ! results in development of ectoderm
@@ -17586,7 +17656,6 @@ is_a: GO:0048731 ! system development
 is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001016 ! results in development of nervous system
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002296 UBERON:0001016 ! results in development of nervous system
 
 [Term]
@@ -17644,7 +17713,6 @@ is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001017 ! results in development of central nervous system
 relationship: BFO:0000050 GO:0007399 ! part of nervous system development
-relationship: RO:0002162 NCBITaxon:33213 ! in taxon Bilateria
 relationship: RO:0002296 UBERON:0001017 ! results in development of central nervous system
 
 [Term]
@@ -17680,7 +17748,6 @@ synonym: "sense organ development" EXACT [GOC:dph]
 is_a: GO:0048513 ! animal organ development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000020 ! results in development of sense organ
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002296 UBERON:0000020 ! results in development of sense organ
 
 [Term]
@@ -17724,6 +17791,7 @@ name: endoderm development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of the endoderm over time, from its formation to the mature structure. The endoderm is the innermost germ layer that develops into the gastrointestinal tract, the lungs and associated tissues." [GOC:dph, GOC:tb]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000925 ! results in development of endoderm
 relationship: RO:0002296 UBERON:0000925 ! results in development of endoderm
@@ -17744,6 +17812,7 @@ name: mesoderm development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of the mesoderm over time, from its formation to the mature structure. The mesoderm is the middle germ layer that develops into muscle, bone, cartilage, blood and connective tissue." [GOC:dph, GOC:tb]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000926 ! results in development of mesoderm
 relationship: RO:0002296 UBERON:0000926 ! results in development of mesoderm
@@ -18260,6 +18329,7 @@ namespace: biological_process
 def: "The process whose specific outcome is the progression of the epidermis over time, from its formation to the mature structure. The epidermis is the outer epithelial layer of an animal, it may be a single layer that produces an extracellular material (e.g. the cuticle of arthropods) or a complex stratified squamous epithelium, as in the case of many vertebrate species." [GOC:curators, UBERON:0001003]
 synonym: "hypodermis development" RELATED [GOC:kmv, GOC:rk]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 
 [Term]
 id: GO:0008585
@@ -19199,7 +19269,6 @@ synonym: "embryonal development" EXACT []
 xref: Reactome:R-HSA-5619507 "Activation of HOX genes during differentiation"
 xref: Wikipedia:Embryogenesis
 is_a: GO:0007275 ! multicellular organism development
-is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000922 ! results in development of embryo
 relationship: RO:0002296 UBERON:0000922 ! results in development of embryo
@@ -19219,7 +19288,7 @@ namespace: biological_process
 def: "The process whose specific outcome is the progression of an embryo over time, from zygote formation until the end of the embryonic life stage. The end of the embryonic life stage is organism-specific and may be somewhat arbitrary; for mammals it is usually considered to be birth, for insects the hatching of the first instar larva from the eggshell." [GOC:curators, GOC:isa_complete, GOC:mtg_sensu]
 synonym: "embryogenesis" BROAD []
 is_a: GO:0009790 ! embryo development
-relationship: RO:0002162 NCBITaxon:33208 ! in taxon Metazoa
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 
 [Term]
 id: GO:0009820
@@ -19282,7 +19351,7 @@ def: "The process whose specific outcome is the progression of a tissue over tim
 synonym: "histogenesis" EXACT []
 synonym: "histogenesis and organogenesis" BROAD []
 xref: Wikipedia:Histogenesis
-is_a: GO:0160108 ! animal gross anatomical part developmental process
+is_a: GO:0048856 ! anatomical structure development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000479 ! results in development of tissue
 relationship: RO:0002162 NCBITaxon:2759 ! in taxon Eukaryota
@@ -19804,21 +19873,6 @@ is_a: GO:0051302 ! regulation of cell division
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0010481 ! regulates epidermal cell division
 relationship: RO:0002211 GO:0010481 ! regulates epidermal cell division
-
-[Term]
-id: GO:0010496
-name: intercellular transport
-namespace: biological_process
-def: "The movement of substances between cells." [GOC:dhl]
-synonym: "single organism intercellular transport" RELATED [GOC:TermGenie]
-synonym: "single-organism intercellular transport" RELATED []
-is_a: GO:0006810 ! transport
-is_a: GO:0009987 ! cellular process
-intersection_of: GO:0006810 ! transport
-intersection_of: RO:0002338 CL:0000000 ! has target start location cell
-intersection_of: RO:0002339 CL:0000000 ! has target end location cell
-relationship: RO:0002338 CL:0000000 ! has target start location cell
-relationship: RO:0002339 CL:0000000 ! has target end location cell
 
 [Term]
 id: GO:0010549
@@ -20924,6 +20978,7 @@ name: morula development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of the morula over time. The morula is a spherical embryonic mass of blastomeres formed before the blastula and resulting from cleavage of the fertilized ovum." [PMID:37935903, PMID:38386558, PMID:39361745]
 is_a: GO:0009790 ! embryo development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000085 ! results in development of morula
 relationship: RO:0002296 UBERON:0000085 ! results in development of morula
@@ -21059,7 +21114,6 @@ is_a: GO:0048646 ! anatomical structure formation involved in morphogenesis
 intersection_of: GO:0048646 ! anatomical structure formation involved in morphogenesis
 intersection_of: RO:0002297 UBERON:0002342 ! results in formation of anatomical entity neural crest
 relationship: BFO:0000050 GO:0043009 ! part of chordate embryonic development
-relationship: RO:0002162 NCBITaxon:89593 ! in taxon Craniata <chordates>
 relationship: RO:0002297 UBERON:0002342 ! results in formation of anatomical entity neural crest
 
 [Term]
@@ -21093,7 +21147,6 @@ is_a: GO:0048762 ! mesenchymal cell differentiation
 is_a: GO:0048863 ! stem cell differentiation
 intersection_of: GO:0030154 ! cell differentiation
 intersection_of: RO:0002315 CL:0000333 ! results in acquisition of features of migratory neural crest cell
-relationship: RO:0002162 NCBITaxon:89593 ! in taxon Craniata <chordates>
 relationship: RO:0002315 CL:0000333 ! results in acquisition of features of migratory neural crest cell
 
 [Term]
@@ -22915,7 +22968,6 @@ is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0002240 ! results in development of spinal cord
 relationship: BFO:0000050 GO:0007417 ! part of central nervous system development
-relationship: RO:0002162 NCBITaxon:89593 ! in taxon Craniata <chordates>
 relationship: RO:0002296 UBERON:0002240 ! results in development of spinal cord
 
 [Term]
@@ -24462,7 +24514,6 @@ intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0002048 ! results in development of lung
 relationship: BFO:0000050 GO:0030323 ! part of respiratory tube development
 relationship: BFO:0000050 GO:0060541 ! part of respiratory system development
-relationship: RO:0002162 NCBITaxon:7776 ! in taxon Gnathostomata <vertebrates>
 relationship: RO:0002296 UBERON:0002048 ! results in development of lung
 
 [Term]
@@ -24893,7 +24944,6 @@ is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001891 ! results in development of midbrain
 relationship: BFO:0000050 GO:0007420 ! part of brain development
-relationship: RO:0002162 NCBITaxon:89593 ! in taxon Craniata <chordates>
 relationship: RO:0002296 UBERON:0001891 ! results in development of midbrain
 
 [Term]
@@ -28075,11 +28125,10 @@ id: GO:0035295
 name: tube development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of a tube over time, from its initial formation to a mature structure. Epithelial and endothelial tubes transport gases, liquids and cells from one site to another and form the basic structure of many organs and tissues including lung and trachea, kidney, the mammary gland, the vascular system and the gastrointestinal and urinary-genital tracts." [PMID:12526790]
-is_a: GO:0160108 ! animal gross anatomical part developmental process
+is_a: GO:0048856 ! anatomical structure development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000025 ! results in development of tube
 relationship: BFO:0000050 GO:0007275 ! part of multicellular organism development
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002296 UBERON:0000025 ! results in development of tube
 
 [Term]
@@ -28525,7 +28574,6 @@ synonym: "sinew development" RELATED [UBERON:0000043]
 is_a: GO:0061448 ! connective tissue development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000043 ! results in development of tendon
-relationship: RO:0002162 NCBITaxon:7742 ! in taxon Vertebrata <vertebrates>
 relationship: RO:0002296 UBERON:0000043 ! results in development of tendon
 
 [Term]
@@ -28639,7 +28687,6 @@ namespace: cellular_component
 def: "The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon." [GOC:pad, GOC:PARL]
 is_a: GO:0110165 ! cellular anatomical structure
 relationship: BFO:0000050 CL:0000540 ! part of neuron
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 
 [Term]
 id: GO:0036504
@@ -29699,7 +29746,6 @@ is_a: GO:0120025 ! plasma membrane bounded cell projection
 intersection_of: GO:0120025 ! plasma membrane bounded cell projection
 intersection_of: BFO:0000050 CL:0000540 ! part of neuron
 relationship: BFO:0000050 CL:0000540 ! part of neuron
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 
 [Term]
 id: GO:0043009
@@ -34133,6 +34179,7 @@ synonym: "gut development" BROAD [GOC:dph]
 synonym: "intestinal development" NARROW []
 synonym: "intestine development" NARROW []
 is_a: GO:0035295 ! tube development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001555 ! results in development of digestive tract
 relationship: BFO:0000050 GO:0055123 ! part of digestive system development
@@ -35049,7 +35096,6 @@ xref: Wikipedia:Stem_cell_differentiation
 is_a: GO:0030154 ! cell differentiation
 intersection_of: GO:0030154 ! cell differentiation
 intersection_of: RO:0002315 CL:0000034 ! results in acquisition of features of stem cell
-relationship: RO:0002162 NCBITaxon:33208 ! in taxon Metazoa
 relationship: RO:0002315 CL:0000034 ! results in acquisition of features of stem cell
 
 [Term]
@@ -35117,7 +35163,6 @@ is_a: GO:0048731 ! system development
 is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001032 ! results in development of sensory system
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002296 UBERON:0001032 ! results in development of sensory system
 
 [Term]
@@ -37557,6 +37602,7 @@ def: "Any process that modulates the frequency, rate or extent of nervous system
 is_a: GO:2000026 ! regulation of multicellular organismal development
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0007399 ! regulates nervous system development
+relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002211 GO:0007399 ! regulates nervous system development
 
 [Term]
@@ -38153,7 +38199,6 @@ id: GO:0055107
 name: Golgi to secretory granule transport
 namespace: biological_process
 def: "The directed movement of proteins from the Golgi to a secretory granule. The secretory granule is a membrane-bounded particle, usually protein, formed in the granular endoplasmic reticulum and the Golgi complex." [GOC:curators]
-is_a: GO:0010496 ! intercellular transport
 is_a: GO:0046907 ! intracellular transport
 intersection_of: GO:0046907 ! intracellular transport
 intersection_of: RO:0002338 GO:0005794 ! has target start location Golgi apparatus
@@ -38730,7 +38775,6 @@ is_a: GO:0048513 ! animal organ development
 intersection_of: GO:0048513 ! animal organ development
 intersection_of: RO:0002296 UBERON:0001474 ! results in development of bone element
 relationship: BFO:0000050 GO:0001501 ! part of skeletal system development
-relationship: RO:0002162 NCBITaxon:7742 ! in taxon Vertebrata <vertebrates>
 relationship: RO:0002296 UBERON:0001474 ! results in development of bone element
 
 [Term]
@@ -38969,6 +39013,7 @@ name: epithelium development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of an epithelium over time, from its formation to the mature structure. An epithelium is a tissue that covers the internal or external surfaces of an anatomical structure." [GOC:dph, GOC:mtg_lung]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000483 ! results in development of epithelium
 relationship: RO:0002296 UBERON:0000483 ! results in development of epithelium
@@ -39275,10 +39320,10 @@ namespace: biological_process
 def: "The process whose specific outcome is the progression of a mesenchymal tissue over time, from its formation to the mature structure. A mesenchymal tissue is made up of loosely packed stellate cells." [GOC:dph]
 synonym: "mesenchymal development" EXACT [GOC:dph]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0003104 ! results in development of mesenchyme
 relationship: BFO:0000050 GO:0048513 ! part of animal organ development
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002296 UBERON:0003104 ! results in development of mesenchyme
 
 [Term]
@@ -39417,6 +39462,7 @@ name: muscle tissue development
 namespace: biological_process
 def: "The progression of muscle tissue over time, from its initial formation to its mature state. Muscle tissue is a contractile tissue made up of actin and myosin fibers." [GOC:dph]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0002385 ! results in development of muscle tissue
 relationship: RO:0002296 UBERON:0002385 ! results in development of muscle tissue
@@ -39429,7 +39475,6 @@ def: "The progression of a skeletal muscle organ over time from its initial form
 is_a: GO:0007517 ! muscle organ development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0014892 ! results in development of skeletal muscle organ, vertebrate
-relationship: RO:0002162 NCBITaxon:7742 ! in taxon Vertebrata <vertebrates>
 relationship: RO:0002296 UBERON:0014892 ! results in development of skeletal muscle organ, vertebrate
 
 [Term]
@@ -39441,7 +39486,6 @@ is_a: GO:0060538 ! skeletal muscle organ development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0001103 ! results in development of diaphragm
 relationship: BFO:0000050 GO:0060541 ! part of respiratory system development
-relationship: RO:0002162 NCBITaxon:40674 ! in taxon Mammalia
 relationship: RO:0002296 UBERON:0001103 ! results in development of diaphragm
 
 [Term]
@@ -40149,6 +40193,7 @@ synonym: "CBD development" EXACT [PMID:20614624]
 synonym: "EHBD development" BROAD [PMID:20614624]
 synonym: "extrahepatic bile duct development" BROAD [PMID:20614624]
 is_a: GO:0035295 ! tube development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0002394 ! results in development of bile duct
 relationship: BFO:0000050 GO:0061008 ! part of hepaticobiliary system development
@@ -40371,7 +40416,6 @@ is_a: GO:0060429 ! epithelium development
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0002329 ! results in development of somite
 relationship: BFO:0000050 GO:0009790 ! part of embryo development
-relationship: RO:0002162 NCBITaxon:7711 ! in taxon Chordata
 relationship: RO:0002296 UBERON:0002329 ! results in development of somite
 
 [Term]
@@ -40929,6 +40973,7 @@ name: connective tissue development
 namespace: biological_process
 def: "The progression of a connective tissue over time, from its formation to the mature structure." [GOC:BHF]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0002384 ! results in development of connective tissue
 relationship: RO:0002296 UBERON:0002384 ! results in development of connective tissue
@@ -40951,7 +40996,6 @@ name: reproductive system development
 namespace: biological_process
 def: "The progression of the reproductive system over time from its formation to the mature structure. The reproductive system consists of the organs that function in reproduction." [GOC:dph]
 is_a: GO:0048731 ! system development
-is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000990 ! results in development of reproductive system
 relationship: RO:0002296 UBERON:0000990 ! results in development of reproductive system
@@ -41050,6 +41094,7 @@ def: "The process whose specific outcome is the progression of a ganglion over t
 synonym: "ganglia development" RELATED [GOC:dph]
 synonym: "gangliogenesis" NARROW [GOC:BHF, GOC:rl]
 is_a: GO:0009888 ! tissue development
+is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0000045 ! results in development of ganglion
 relationship: BFO:0000050 GO:0007399 ! part of nervous system development
@@ -44096,7 +44141,6 @@ is_a: GO:0030016 ! myofibril
 intersection_of: GO:0030016 ! myofibril
 intersection_of: BFO:0000050 CL:0008002 ! part of skeletal muscle fiber
 relationship: BFO:0000050 CL:0008002 ! part of skeletal muscle fiber
-relationship: RO:0002162 NCBITaxon:7742 ! in taxon Vertebrata <vertebrates>
 
 [Term]
 id: GO:0098728
@@ -44159,7 +44203,6 @@ synonym: "presynaptic terminal" EXACT []
 is_a: GO:0110165 ! cellular anatomical structure
 relationship: BFO:0000050 CL:0000540 ! part of neuron
 relationship: BFO:0000050 GO:0045202 ! part of synapse
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 
 [Term]
 id: GO:0098794
@@ -44484,7 +44527,6 @@ is_a: GO:0031045 ! dense core granule
 intersection_of: GO:0031045 ! dense core granule
 intersection_of: BFO:0000050 CL:0000540 ! part of neuron
 relationship: BFO:0000050 CL:0000540 ! part of neuron
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 
 [Term]
 id: GO:0099003
@@ -45295,18 +45337,6 @@ is_a: GO:0110057 ! regulation of blood vessel endothelial cell differentiation
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002212 GO:0060837 ! negatively regulates blood vessel endothelial cell differentiation
 relationship: RO:0002212 GO:0060837 ! negatively regulates blood vessel endothelial cell differentiation
-
-[Term]
-id: GO:0110077
-name: vesicle-mediated intercellular transport
-namespace: biological_process
-def: "A cellular transport process in which transported substances are moved in extracellular vesicles between cells; transported substances are enclosed in the vesicle lumen or located in the extracellular vesicle membrane." [GOC:sp, PMID:29328915, PMID:29328916]
-synonym: "endosomal trafficking" RELATED []
-is_a: GO:0010496 ! intercellular transport
-is_a: GO:0016192 ! vesicle-mediated transport
-intersection_of: GO:0010496 ! intercellular transport
-intersection_of: RO:0002608 GO:1903561 ! process has causal agent extracellular vesicle
-relationship: RO:0002608 GO:1903561 ! process has causal agent extracellular vesicle
 
 [Term]
 id: GO:0110110
@@ -46338,9 +46368,7 @@ namespace: biological_process
 def: "A developmental process whose specific outcome is the progression of a gross anatomical part of an animal over time from an initial condition to a later condition." [GOC:pg]
 synonym: "animal development" RELATED []
 is_a: GO:0048856 ! anatomical structure development
-intersection_of: GO:0048856 ! anatomical structure development
-intersection_of: RO:0002296 UBERON:0010000 ! results in development of multicellular anatomical structure
-relationship: RO:0002296 UBERON:0010000 ! results in development of multicellular anatomical structure
+relationship: RO:0002162 NCBITaxon:33208 ! in taxon Metazoa
 
 [Term]
 id: GO:0160307
@@ -51078,7 +51106,6 @@ def: "The process whose specific outcome is the progression of an extraembryonic
 is_a: GO:0160108 ! animal gross anatomical part developmental process
 intersection_of: GO:0048856 ! anatomical structure development
 intersection_of: RO:0002296 UBERON:0005631 ! results in development of extraembryonic membrane
-relationship: RO:0002162 NCBITaxon:6072 ! in taxon Eumetazoa
 relationship: RO:0002296 UBERON:0005631 ! results in development of extraembryonic membrane
 
 [Term]
@@ -57696,74 +57723,88 @@ id: GOCHE:24432
 name: substance with biological role role
 is_a: CHEBI:24431 ! chemical entity
 is_a: GOCHE:50906 ! substance with role role
+relationship: RO:0000087 CHEBI:24432 ! has role biological role
 
 [Term]
 id: GOCHE:24621
 name: substance with hormone role
 is_a: GOCHE:33280 ! substance with molecular messenger role
 is_a: GOCHE:48705 ! substance with agonist role
+relationship: RO:0000087 CHEBI:24621 ! has role hormone
 
 [Term]
 id: GOCHE:24852
 name: substance with insecticide role
 is_a: GOCHE:25944 ! substance with pesticide role
+relationship: RO:0000087 CHEBI:24852 ! has role insecticide
 
 [Term]
 id: GOCHE:25212
 name: substance with metabolite role
 is_a: GOCHE:52206 ! substance with biochemical role role
+relationship: RO:0000087 CHEBI:25212 ! has role metabolite
 
 [Term]
 id: GOCHE:25512
 name: substance with neurotransmitter role
 is_a: GOCHE:33280 ! substance with molecular messenger role
+relationship: RO:0000087 CHEBI:25512 ! has role neurotransmitter
 
 [Term]
 id: GOCHE:25944
 name: substance with pesticide role
 is_a: GOCHE:33232 ! substance with application role
+relationship: RO:0000087 CHEBI:25944 ! has role pesticide
 
 [Term]
 id: GOCHE:27026
 name: substance with toxin role
 is_a: GOCHE:25212 ! substance with metabolite role
 is_a: GOCHE:64909 ! substance with poison role
+relationship: RO:0000087 CHEBI:27026 ! has role toxin
 
 [Term]
 id: GOCHE:33232
 name: substance with application role
 is_a: CHEBI:24431 ! chemical entity
 is_a: GOCHE:50906 ! substance with role role
+relationship: RO:0000087 CHEBI:33232 ! has role application
 
 [Term]
 id: GOCHE:33280
 name: substance with molecular messenger role
 is_a: GOCHE:24432 ! substance with biological role role
+relationship: RO:0000087 CHEBI:33280 ! has role molecular messenger
 
 [Term]
 id: GOCHE:35703
 name: substance with xenobiotic role
 is_a: GOCHE:24432 ! substance with biological role role
+relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 
 [Term]
 id: GOCHE:37527
 name: substance with acid role
 is_a: GOCHE:51086 ! substance with chemical role role
+relationship: RO:0000087 CHEBI:37527 ! has role acid
 
 [Term]
 id: GOCHE:48705
 name: substance with agonist role
 is_a: GOCHE:52210 ! substance with pharmacological role role
+relationship: RO:0000087 CHEBI:48705 ! has role agonist
 
 [Term]
 id: GOCHE:50112
 name: substance with sex hormone role
 is_a: GOCHE:24621 ! substance with hormone role
+relationship: RO:0000087 CHEBI:50112 ! has role sex hormone
 
 [Term]
 id: GOCHE:50113
 name: substance with androgen role
 is_a: GOCHE:50112 ! substance with sex hormone role
+relationship: RO:0000087 CHEBI:50113 ! has role androgen
 
 [Term]
 id: GOCHE:50906
@@ -57774,21 +57815,25 @@ id: GOCHE:51086
 name: substance with chemical role role
 is_a: CHEBI:24431 ! chemical entity
 is_a: GOCHE:50906 ! substance with role role
+relationship: RO:0000087 CHEBI:51086 ! has role chemical role
 
 [Term]
 id: GOCHE:52206
 name: substance with biochemical role role
 is_a: GOCHE:24432 ! substance with biological role role
+relationship: RO:0000087 CHEBI:52206 ! has role biochemical role
 
 [Term]
 id: GOCHE:52210
 name: substance with pharmacological role role
 is_a: GOCHE:24432 ! substance with biological role role
+relationship: RO:0000087 CHEBI:52210 ! has role pharmacological role
 
 [Term]
 id: GOCHE:64909
 name: substance with poison role
 is_a: GOCHE:24432 ! substance with biological role role
+relationship: RO:0000087 CHEBI:64909 ! has role poison
 
 [Term]
 id: IAO:0000003
@@ -58520,22 +58565,6 @@ xref: PMID:23020233
 xref: PMID:30257078
 is_a: NCBITaxon_Union:0000025 ! Archaea or Eukaryota
 disjoint_from: NCBITaxon_Union:0000004 ! Prokaryota
-
-[Term]
-id: NCBITaxon:28009
-name: Choanoflagellata
-namespace: ncbi_taxonomy
-synonym: "Choanoflagellatea" RELATED synonym []
-synonym: "choanoflagellates" EXACT genbank_common_name []
-synonym: "choanoflagellates" RELATED blast_name []
-synonym: "Choanoflagellida" RELATED synonym []
-synonym: "Choanomonada" RELATED synonym []
-synonym: "Choanozoa" RELATED synonym []
-xref: GC_ID:1
-xref: PMID:27765632
-is_a: NCBITaxon:33154 ! Opisthokonta
-disjoint_from: NCBITaxon_Union:0000022 ! Fungi or Dictyostelium
-disjoint_from: NCBITaxon_Union:0000023 ! Fungi or Bacteria or Archaea
 
 [Term]
 id: NCBITaxon:314146
@@ -61723,6 +61752,33 @@ relationship: OBI:0001938 uom:L.h-1 ! has value specification liters per hour
 relationship: PREFER:8000020 PREFER:0000053 ! setpoint of volumetric feed rate measured process variable
 
 [Term]
+id: PREFER:0000123
+name: target biomass setpoint process variable
+def: "A precision fermentation setpoint process variable that represents the target biomass value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process." []
+synonym: "precision fermentation target biomass setpoint process variable" EXACT []
+synonym: "target biomass control setpoint" EXACT []
+synonym: "target boimass setpoint" EXACT []
+is_a: PREFER:9000000 ! precision fermentation setpoint process variable
+
+[Term]
+id: PREFER:0000125
+name: dosing event
+def: "An operational intervention set by user that involves the addition or removal of material from a fermentaton system." []
+is_a: PREFER:0000017 ! phase event
+
+[Term]
+id: PREFER:0000126
+name: media addition event
+def: "A dosing event in which medium material is added to the fermentation system." []
+is_a: PREFER:0000125 ! dosing event
+
+[Term]
+id: PREFER:0000127
+name: waste removal event
+def: "A dosing event in which culture material is removed from the fermentation system as a waste." []
+is_a: PREFER:0000125 ! dosing event
+
+[Term]
 id: PREFER:0000128
 name: carbon dioxide production rate variable
 namespace: precision_fermentation
@@ -61759,6 +61815,14 @@ synonym: "carbon dioxide yield (S) variable" EXACT []
 synonym: "co2 yield (S) variable" EXACT OMO:0003012 []
 is_a: PREFER:0000155 ! yield process metric
 relationship: OBI:0001938 PREFER:9000004 ! has value specification unit
+
+[Term]
+id: PREFER:0000132
+name: Pioreactor 40ml - Pioreactor bioreactor
+def: "A bench-scale bioreactor system produced by Pioreactor, with individual vessel total volume of 40 mL and working volumes ranging from 10 to 30 mL. \n\nThe Pioreactor 40 mL is an open-source, automated bioreactor designed for mirobial cultivation, enabling researchers and professionals to monitor and control cultures. Multiple Pioreactors can be operated in parallel as a cluster, with each unit connected to a Raspberry Pi. \n\nThe system inclsudes temperature control, magnetic stirring, real-time optical density monitoring using an optical system, and liquid handling through a peristaltic pumping system. \nThe cultivation vessel is a borosilicat glass vial. It supports manual or automated temperature control and programmable liquid addition or remaval based on triggers. The Prioreactor can operate in different cultivation modes, including turbidostat, chemostat, and night/day photobioreactor modes." []
+xref: https://pioreactor.com/products/pioreactor-40ml?variant=51531633131576
+is_a: PREFER:0000014 ! bioreactor
+relationship: PREFER:8000008 PREFER:0000186 ! has bioreactor scale bench bioreactor scale
 
 [Term]
 id: PREFER:0000133
@@ -61843,6 +61907,14 @@ synonym: "specific biomass production rate variable" EXACT []
 synonym: "μ variable" EXACT OMO:0003012 []
 is_a: PREFER:0000160 ! growth rate metric
 relationship: OBI:0001938 uom:h-1 ! has value specification per hour (h⁻¹ or 1/h)
+
+[Term]
+id: PREFER:0000143
+name: Pioreactor 20ml - Pioreactor bioreactor
+def: "A bench-scale bioreactor system produced by Pioreactor, with individual vessel total volume of 20 mL and maximum working volume of 15 mL. \n\nThe Pioreactor 20 mL is an open-source, automated bioreactor designed for mirobial cultivation, enabling researchers and professionals to monitor and control cultures. Multiple Pioreactors can be operated in parallel as a cluster, with each unit connected to a Raspberry Pi. \n\nThe system inclsudes temperature control, magnetic stirring, real-time optical density monitoring using an optical system, and liquid handling through a peristaltic pumping system. \nThe cultivation vessel is a borosilicat glass vial. It supports manual or automated temperature control and programmable liquid addition or remaval based on triggers. The Prioreactor can operate in different cultivation modes, including turbidostat, chemostat, and night/day photobioreactor modes." []
+xref: https://pioreactor.com/products/pioreactor-20ml?variant=51531632771128
+is_a: PREFER:0000014 ! bioreactor
+relationship: PREFER:8000008 PREFER:0000186 ! has bioreactor scale bench bioreactor scale
 
 [Term]
 id: PREFER:0000147
@@ -97218,12 +97290,6 @@ domain: BFO:0000004 ! independent continuant
 range: BFO:0000004 ! independent continuant
 is_symmetric: true
 is_a: RO:0002323 ! mereotopologically related to
-
-[Typedef]
-id: RO:0002160
-name: only in taxon
-def: "x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z." []
-is_a: RO:0002162 ! in taxon
 
 [Typedef]
 id: RO:0002162
