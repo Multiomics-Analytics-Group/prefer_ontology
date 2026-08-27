@@ -162,6 +162,7 @@ Declaration(Class(obo:PREFER_0000120))
 Declaration(Class(obo:PREFER_0000121))
 Declaration(Class(obo:PREFER_0000122))
 Declaration(Class(obo:PREFER_0000123))
+Declaration(Class(obo:PREFER_0000124))
 Declaration(Class(obo:PREFER_0000125))
 Declaration(Class(obo:PREFER_0000126))
 Declaration(Class(obo:PREFER_0000127))
@@ -324,15 +325,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -1859,6 +1860,15 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target biomass 
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target boimass setpoint")
 AnnotationAssertion(rdfs:label obo:PREFER_0000123 "target biomass setpoint process variable"@en)
 SubClassOf(obo:PREFER_0000123 obo:PREFER_9000000)
+
+# Class: obo:PREFER_0000124 (volumetric exchange setpoint process variable)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000124 "A setpoint process variable that represents the volume added and removed from a culture during a dilution event, triggered when the target optical density is reached, in a turbidostat operation mode of a bioreactor or fermentaton system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000124 "exchange volume setpoint process variable")
+AnnotationAssertion(rdfs:label obo:PREFER_0000124 "volumetric exchange setpoint process variable"@en)
+SubClassOf(obo:PREFER_0000124 obo:PREFER_0000046)
+SubClassOf(obo:PREFER_0000124 obo:PREFER_9000000)
+SubClassOf(obo:PREFER_0000124 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_9000004))
 
 # Class: obo:PREFER_0000125 (dosing event)
 
