@@ -324,15 +324,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -1862,7 +1862,7 @@ SubClassOf(obo:PREFER_0000123 obo:PREFER_9000000)
 
 # Class: obo:PREFER_0000125 (dosing event)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000125 "An operational intervention set by user that involves the addition or removal of material from a fermentaton system.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000125 "An operational intervention set by user or automated that involves the addition or removal of material from a fermentaton system.")
 AnnotationAssertion(rdfs:label obo:PREFER_0000125 "dosing event"@en)
 SubClassOf(obo:PREFER_0000125 obo:PREFER_0000017)
 
