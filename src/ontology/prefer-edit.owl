@@ -324,15 +324,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -741,7 +741,7 @@ SubClassOf(obo:PREFER_0000016 ObjectSomeValuesFrom(obo:BFO_0000050 obo:PREFER_00
 
 # Class: obo:PREFER_0000017 (phase event)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000017 "An operational intervention set by user that triggers the start or end of the fermentation phase.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000017 "An operational intervention set by user or automated that triggers the start or end of a fermentation phase.")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_0000017 "precision_fermentation")
 AnnotationAssertion(oboInOwl:id obo:PREFER_0000017 "PREFER:0000017")
 AnnotationAssertion(rdfs:label obo:PREFER_0000017 "phase event")
