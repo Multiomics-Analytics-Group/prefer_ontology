@@ -324,15 +324,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -1875,6 +1875,7 @@ SubClassOf(obo:PREFER_0000126 obo:PREFER_0000125)
 # Class: obo:PREFER_0000127 (waste removal event)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000127 "A dosing event in which culture material is removed from the fermentation system as a waste.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000127 "culture removal event")
 AnnotationAssertion(rdfs:label obo:PREFER_0000127 "waste removal event"@en)
 SubClassOf(obo:PREFER_0000127 obo:PREFER_0000125)
 
