@@ -324,15 +324,15 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -1794,6 +1794,7 @@ SubClassOf(obo:PREFER_0000117 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_90
 # Class: obo:PREFER_0000118 (optical density setpoint process variable)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000118 "A precision fermentation setpoint process variable that represents the target optical density value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PREFER_0000118 "target biomass setpoint process variable"@en)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "OD setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000118 "optical density control setpoint")
@@ -1851,14 +1852,17 @@ SubClassOf(obo:PREFER_0000122 obo:PREFER_9000000)
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:OBI_0001938 uom:L.h-1))
 SubClassOf(obo:PREFER_0000122 ObjectSomeValuesFrom(obo:PREFER_8000020 obo:PREFER_0000053))
 
-# Class: obo:PREFER_0000123 (target biomass setpoint process variable)
+# Class: obo:PREFER_0000123 (obsolete target biomass setpoint process variable)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000123 "A precision fermentation setpoint process variable that represents the target biomass value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000123 "OBSOLETE. A precision fermentation setpoint process variable that represents the target biomass value to be regulated and or maintained within a bioreactor or fermentation system during a fermentation process.")
+AnnotationAssertion(obo:IAO_0100001 obo:PREFER_0000123 obo:PREFER_0000118)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "precision fermentation target biomass setpoint process variable")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target biomass control setpoint")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000123 "target boimass setpoint")
-AnnotationAssertion(rdfs:label obo:PREFER_0000123 "target biomass setpoint process variable"@en)
-SubClassOf(obo:PREFER_0000123 obo:PREFER_9000000)
+AnnotationAssertion(rdfs:comment obo:PREFER_0000123 "term was duplicated")
+AnnotationAssertion(rdfs:comment obo:PREFER_0000123 "the term was duplicated, refer to term PREFER_0000118")
+AnnotationAssertion(rdfs:label obo:PREFER_0000123 "obsolete target biomass setpoint process variable"@en)
+AnnotationAssertion(owl:deprecated obo:PREFER_0000123 "true"^^xsd:boolean)
 
 # Class: obo:PREFER_0000125 (dosing event)
 
