@@ -1,8 +1,11 @@
-
 ![Build Status](https://github.com/Multiomics-Analytics-Group/prefer_ontology/actions/workflows/qc.yml/badge.svg)
 # PREFER Ontology
 
 Description: PREFER is an ontology designed to integrate high-throughput bioprocess data, covering operational, environmental and process parameters across different scales of a precision fermentation process, to accelerate the development and scaling of biosustainable production processes.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on reporting ontology issues, requesting terms, and contributing changes.
 
 ## Versions
 
