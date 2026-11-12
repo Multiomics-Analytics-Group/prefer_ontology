@@ -30,11 +30,11 @@ Please use our [Issue Tracker](https://github.com/Multiomics-Analytics-Group/pre
 
 In general, to learn how to write a good issue [see here](#great-issues).
 
-Additionally, we have implemented a number of issue forms that will guide you through providing the necessary information. Please select the appropriate issue form for your request: [Select issue form](https://github.com/Multiomics-Analytics-Group/prefer_ontology/issues/new/choose)
+Additionally, we have implemented a number of issue forms that will help guide you depending on what you see can be improved. Please select the appropriate issue form for your need: [Select issue form](https://github.com/Multiomics-Analytics-Group/prefer_ontology/issues/new/choose)
 
-Specifically for requesting and/or creating new terms we have a detailed guideline below. Read it if you want to contribute by directly proposing an extension to the ontology: [requesting new terms](#requesting-terms).
+Specifically for requesting and/or creating new terms we have a detailed guideline below, this is in case you want to contribute by directly proposing an extension of the ontology: [requesting new terms](#requesting-terms).
 
-Otherwise, please follow the issue forms and provide as much information as possible to help us improve the ontology.
+Otherwise please follow the issue forms and provide as much information as possible to help us with improving the ontology as smoothly as possible.
 
 <a id="requesting-terms"></a>
 
@@ -42,13 +42,18 @@ Otherwise, please follow the issue forms and provide as much information as poss
 
 Before you write a new request, please consider the following: 
 
-- **Does the term already exist?** Before submitting suggestions for new ontology terms, check whether the term exists, either as a primary term or a synonym. You can search for your term using [OLS](http://www.ebi.ac.uk/ols/ontologies/prefer).
-- **Can you provide a definition for the term?** It should be very clear what the term means, and you should be able to provide a concise definition, ideally with a scientific reference.
-- **Is the ontology in scope for the term?** Sometimes, it is hard to tell whether a term "belongs" in an ontology. A rule of thumb is "if a similar term already exists, the new term is probably in scope." It can be very helpful to mention a similar concept in your term request!
+- **Does the term already exist?** Before submitting suggestions for new ontology terms, check whether the term exists, 
+either as a primary term or a synonym term. You can search for your term using [OLS](http://www.ebi.ac.uk/ols/ontologies/prefer).
+- **Can you provide a definition for the term?** It should be very clear what the term means, and you should be
+able to provide a concise definition, ideally with a scientific reference.
+- **Is the ontology in scope for the term?** Sometimes, it is hard to tell whether a term "belongs" in
+an ontology. A rule of thumb is "if a similar term already exists, the new term is probably in scope."
+It can be very helpful to mention a very similar concept as part of the term request!
 
 #### Who can request a term?
 
-Anyone can request new terms. However, there is no guarantee that your term will be added automatically. Since this is a community resource, it is often necessary to do at least some of the work of adding the term yourself; see below.
+Anyone can request new terms. However, there is no guarantee that your term will be added automatically. Since this is a 
+community resource, it is often necessary to do at least some of the work of adding the term yourself, see below.
 
 #### How to write a new term request
 
@@ -63,17 +68,17 @@ For how to write a good term request, please read the [best practices carefully]
 
 ### How to add a new term
 
-If you have never edited this ontology before, first follow a [general tutorial](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies).
+If you have never edited this ontology before, first follow a [general tutorial](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies)
 
 **Process**:
 
-1. Clone the repository (if you are not an official team member, create a fork first).
-1. Create a new branch in git, for example `git checkout -b issue123`.
-1. Open `src/ontology/prefer-edit.owl` in your favourite editor, such as [Protege](https://protege.stanford.edu/). **Careful:** double-check that you are editing the correct file. There are many ontology files in this repository, but only one _editors file_.
-1. Perform your edit and save your changes.
-1. Commit your changes to the branch.
-1. Push your changes upstream.
-1. Create a pull request.
+1. Clone the repository (In case you are not an official team member, create a fork first)
+1. Create new branch in git, for example `git checkout -b issue123`
+1. Open src/ontology/prefer-edit.owl in your favourite editor, i.e. [Protege](https://protege.stanford.edu/). **Careful:** double check you are editing the correct file. There are many ontology files in this repository, but only one _editors file_!
+1. Perform your edit and save your changes
+1. Commit changes to branch
+1. Push changes upstream
+1. Create pull request
 
 ## Best Practices
 
