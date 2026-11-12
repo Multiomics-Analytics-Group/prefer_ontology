@@ -1677,6 +1677,7 @@ SubClassOf(obo:PREFER_0000104 ObjectSomeValuesFrom(obo:OBI_0001938 obo:PREFER_90
 AnnotationAssertion(obo:IAO_0000115 obo:PREFER_0000105 "A fermentation culture role that serves as the inoculum for initiating or scaling up another fermentation culture.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "inoculum culture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "pre-culture")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "preculture")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_0000105 "starter culture")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ENVO:03600040") oboInOwl:hasNarrowSynonym obo:PREFER_0000105 "fermentation starter")
 AnnotationAssertion(rdfs:label obo:PREFER_0000105 "seed culture"@en)
