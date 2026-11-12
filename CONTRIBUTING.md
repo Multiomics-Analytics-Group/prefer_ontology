@@ -30,7 +30,7 @@ Please use our [Issue Tracker](https://github.com/Multiomics-Analytics-Group/pre
 
 In general, to learn how to write a good issue [see here](#great-issues).
 
-Additionally, we have implemented a number of issue forms that will help guide you depending on what you see can be improved. Please select the appropriate issue form for your need: [Select issue form](https://github.com/Multiomics-Analytics-Group/prefer_ontology/issues/new/choose)
+Additionally, we have implemented a number of issue forms that will help guide you to provide the necessary information depending on what you have found that needs to be changed. Please select the appropriate issue form for your need: [Select issue form](https://github.com/Multiomics-Analytics-Group/prefer_ontology/issues/new/choose)
 
 Specifically for requesting and/or creating new terms we have a detailed guideline below, this is in case you want to contribute by directly proposing an extension of the ontology: [requesting new terms](#requesting-terms).
 
