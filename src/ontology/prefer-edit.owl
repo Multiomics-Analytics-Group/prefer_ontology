@@ -248,11 +248,27 @@ Declaration(Class(obo:PREFER_9000001))
 Declaration(Class(obo:PREFER_9000002))
 Declaration(Class(obo:PREFER_9000003))
 Declaration(Class(obo:PREFER_9000004))
+Declaration(Class(<https://w3id.org/uom/%25>))
+Declaration(Class(<https://w3id.org/uom/%5BpH%5D>))
+Declaration(Class(uom:Cel))
+Declaration(Class(uom:L))
 Declaration(Class(uom:L.h-1))
 Declaration(Class(uom:L.min-1))
+Declaration(Class(uom:Pa))
+Declaration(Class(uom:bar))
+Declaration(Class(uom:g))
+Declaration(Class(uom:g.L-1))
 Declaration(Class(uom:g.g-1))
+Declaration(Class(uom:g.g-1.h-1))
 Declaration(Class(uom:g.h-1))
+Declaration(Class(uom:h))
+Declaration(Class(uom:h-1))
+Declaration(Class(uom:kg))
+Declaration(Class(uom:mL))
+Declaration(Class(uom:mg))
+Declaration(Class(uom:mmol))
 Declaration(Class(uom:mmol.h-1))
+Declaration(Class(uom:mol))
 Declaration(Class(uom:mol.h-1))
 Declaration(Class(uom:mol.mol-1))
 Declaration(Class(<https://w3id.org/uom/%5BdegF%5D>))
@@ -2451,6 +2467,26 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000005 "carbon mole p
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000021 uom:h))
 SubClassOf(obo:PREFER_7000005 ObjectSomeValuesFrom(obo:PREFER_8000022 obo:PREFER_7000002))
 
+# Class: obo:PREFER_7000006 (unit of optical density)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_7000006 "A unit representing optical density (absorbance), equal to the base 10 logarithm of the ratio of incident to transmitted light intensity through a sample at a stated wavelength, for example 600 nm. Commonly used to estimate the cell density of a culture (OD).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_7000006 "OD")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_7000006 "precision_fermentation")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000006 "unit of optical density")
+
+# Class: obo:PREFER_7000007 (dimensionless unit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_7000007 "A unit representing a quantity that has no physical dimension, such as a ratio of two quantities of the same kind, for example the respiratory quotient.")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_7000007 "precision_fermentation")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000007 "dimensionless unit")
+
+# Class: obo:PREFER_7000008 (revolution per minute)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PREFER_7000008 "A unit representing rotational frequency, equal to one complete revolution per minute. Commonly used for the stirrer speed of a bioreactor (rpm).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PREFER_7000008 "rpm")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PREFER_7000008 "precision_fermentation")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PREFER_7000008 "revolution per minute")
+
 # Class: obo:PREFER_8000041 (Ambr250 - Satorius bioreactor)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "https://www.sartorius.com/en/products/fermentation-bioreactors/ambr-multi-parallel-bioreactors/ambr-250-high-throughput") obo:IAO_0000115 obo:PREFER_8000041 "A bench-scale bioreactor system produced by Sartorius with individual vessel working volumes ranging from 100 to 250 mL. The Ambr250 is an automated, high-throughput, parallel  mini-bioreactor platform that can handle 12-24 independent vessels simultaneously. It supports mammalian, insect, and microbial cell cultures, and includes automated liquid handling for process monitoring and control.
@@ -2601,6 +2637,26 @@ AnnotationAssertion(rdfs:comment obo:PREFER_9000004 "The decision to utilise htt
 AnnotationAssertion(rdfs:label obo:PREFER_9000004 "unit"@en)
 SubClassOf(obo:PREFER_9000004 obo:IAO_0000030)
 
+# Class: <https://w3id.org/uom/%25> (percent)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/uom/%25> "A dimensionless unit representing a ratio expressed as parts per hundred (%).")
+
+# Class: <https://w3id.org/uom/%5BdegF%5D> (degree Fahrenheit based unit)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/uom/%5BdegF%5D> "A temperature unit on the Fahrenheit scale, on which water freezes at 32 degrees and boils at 212 degrees at standard atmospheric pressure (°F).")
+
+# Class: <https://w3id.org/uom/%5BpH%5D> (pH based unit)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/uom/%5BpH%5D> "A unit for pH, the negative base 10 logarithm of the hydrogen ion activity of an aqueous solution (pH).")
+
+# Class: uom:Cel (degree Celsius)
+
+AnnotationAssertion(obo:IAO_0000115 uom:Cel "A temperature unit equal in size to one kelvin, on a scale where 0 degrees Celsius corresponds to 273.15 kelvin (°C).")
+
+# Class: uom:L (liter)
+
+AnnotationAssertion(obo:IAO_0000115 uom:L "A volume unit equal to one cubic decimeter (L).")
+
 # Class: uom:L.h-1 (liters per hour)
 
 AnnotationAssertion(obo:IAO_0000115 uom:L.h-1 "A volumetric flow rate unit which is equal to one liter volume through a given surface in one hour (L/h).")
@@ -2625,21 +2681,69 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynon
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:L.min-1 "liter/minute")
 AnnotationAssertion(oboInOwl:hasExactSynonym uom:L.min-1 "litres per minute")
 
+# Class: uom:Pa (pascal)
+
+AnnotationAssertion(obo:IAO_0000115 uom:Pa "A pressure unit equal to one newton per square meter, the SI derived unit of pressure (Pa).")
+
+# Class: uom:bar (bar)
+
+AnnotationAssertion(obo:IAO_0000115 uom:bar "A pressure unit equal to 100000 pascal (bar).")
+
+# Class: uom:g (gram)
+
+AnnotationAssertion(obo:IAO_0000115 uom:g "A mass unit equal to one thousandth of a kilogram (g).")
+
+# Class: uom:g.L-1 (gram per litre)
+
+AnnotationAssertion(obo:IAO_0000115 uom:g.L-1 "A mass concentration unit representing one gram of substance per liter of solution or culture (g/L).")
+
 # Class: uom:g.g-1 (gram per gram)
 
 AnnotationAssertion(obo:IAO_0000115 uom:g.g-1 "A unit representing a mass ratio, typically used to express product or output substance - such as biomass or compound -  in grams per gram of initial material, input substrate consumed(S), or biomass(X) generated(cell dry weight(CDW))(g/g).")
 AnnotationAssertion(oboInOwl:hasExactSynonym uom:g.g-1 "Gram per Gram")
 AnnotationAssertion(oboInOwl:hasExactSynonym uom:g.g-1 "g/g")
 
+# Class: uom:g.g-1.h-1 (gram per gram per hour)
+
+AnnotationAssertion(obo:IAO_0000115 uom:g.g-1.h-1 "A specific rate unit representing grams of substance per gram of biomass or reference material per hour, typically used for specific uptake or production rates (g/g/h).")
+
 # Class: uom:g.h-1 (gram per hour)
 
 AnnotationAssertion(obo:IAO_0000115 uom:g.h-1 "A unit of mass flow rate representing one gram of substance passing through a given surface or system in one hour (g/h).")
 AnnotationAssertion(oboInOwl:hasExactSynonym uom:g.h-1 "g/h")
 
+# Class: uom:h (hour)
+
+AnnotationAssertion(obo:IAO_0000115 uom:h "A time unit equal to 60 minutes or 3600 seconds (h).")
+
+# Class: uom:h-1 (per hour (h⁻¹ or 1/h))
+
+AnnotationAssertion(obo:IAO_0000115 uom:h-1 "A rate unit equal to the reciprocal of one hour, typically used for specific growth rates or dilution rates (1/h).")
+
+# Class: uom:kg (kilogram)
+
+AnnotationAssertion(obo:IAO_0000115 uom:kg "A mass unit equal to 1000 grams, the SI base unit of mass (kg).")
+
+# Class: uom:mL (milliliter)
+
+AnnotationAssertion(obo:IAO_0000115 uom:mL "A volume unit equal to one thousandth of a liter (mL).")
+
+# Class: uom:mg (milligram)
+
+AnnotationAssertion(obo:IAO_0000115 uom:mg "A mass unit equal to one thousandth of a gram (mg).")
+
+# Class: uom:mmol (millimole)
+
+AnnotationAssertion(obo:IAO_0000115 uom:mmol "An amount of substance unit equal to one thousandth of a mole (mmol).")
+
 # Class: uom:mmol.h-1 (millimole per hour)
 
 AnnotationAssertion(obo:IAO_0000115 uom:mmol.h-1 "A unit of mass flow rate represenitn one millimole of substance passing through a given surface or system in one hour (mmol/h).")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NCIT") oboInOwl:hasExactSynonym uom:mmol.h-1 "mmol/h")
+
+# Class: uom:mol (mole)
+
+AnnotationAssertion(obo:IAO_0000115 uom:mol "The SI base unit of amount of substance, containing exactly 6.02214076 x 10^23 elementary entities (mol).")
 
 # Class: uom:mol.h-1 (mole per hour)
 
