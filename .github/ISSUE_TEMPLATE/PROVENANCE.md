@@ -4,6 +4,8 @@ This file records exactly where each section of the 12 generic issue templates c
 
 Sections that are not explicitly defined in this file has been identified after the review of other repository issue templates as being needed. Thus, sections not explicitly defined in this file are not directly influenced by what has been present in other repositories' issue templates and such have no references.
 
+A brief workflow description for how the issue templates were created is available at the bottom of the file.
+
 **Note:** ontologies with an unclear or no explicit license have not been used in spite of having issue templates. Every field below is drawn only from repos with an explicit, standard open license (CC BY or CC0).
 
 ## Source repositories and licenses
@@ -153,3 +155,14 @@ Note: this license is the licenses identified in the GitHub Repositories. Since 
 | Contributor | [`agro/bugs-errors.yml`](https://github.com/AgriculturalSemantics/agro) *(.github/ISSUE_TEMPLATE/bugs-errors.yml)*; [`mondo/typos-bugs-errors.md`](https://github.com/monarch-initiative/mondo) *(.github/ISSUE_TEMPLATE/typos-bugs-errors.md)* |
 
 ---
+
+
+## Workflow used to generate the issue templates
+
+Claude were used to identify GitHub repositories for the 187 active ontologies identified in OBO Foundry Community (per the OBOFoundry registry, registry/ontologies.yml ; date: August 5th 2026).
+
+.github/ISSUE_TEMPLATE/ were inspected for all repo's default branch and 20 of the 187 repos were identified to have issue templates. Issue templates were grouped to identify template types relevant for PREFER.
+
+Inspired by the groupings defined by Claude, we requested Claude to make generic templates for the issue types you can find in this repository, i.e. removing any domain specific descriptions from the templates.
+
+The creation of new generic templates were resricted to only allowing use of issue templates from repositories with a clear license allowing re-use and modification (CC-BY or CC0). The lisence of each of the 20 repositories with issue templates were manually checked. This resulted in the use of 13 repositories, where lisence were explicitly defined and which had lisences in the defined categories.
